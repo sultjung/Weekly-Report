@@ -46,6 +46,7 @@ input, select { height: 42px; border: 1px solid var(--line); border-radius: 12px
 button { min-height: 42px; border: 1px solid var(--line); border-radius: 12px; padding: 0 14px; font-weight: 900; cursor: pointer; }
 .primary-btn { background: var(--orange); color: white; border-color: var(--orange); }
 .primary-btn:hover { background: var(--orange-dark); }
+.big-action { min-width: 210px; box-shadow: 0 10px 22px rgba(243,115,33,.25); }
 .ghost-btn { background: white; color: var(--ink); }
 .danger-btn { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
 .action-row { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
