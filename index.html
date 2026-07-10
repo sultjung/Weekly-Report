@@ -25,7 +25,7 @@
   <main class="container">
     <section class="notice">
       <strong>중요</strong>
-      <span>이 화면은 정적 GitHub Pages입니다. 선택한 기사는 브라우저에 임시 저장되며, Word 보고서를 만들려면 선택 JSON을 복사하거나 다운로드한 뒤 GitHub Actions의 <b>Generate Weekly Report</b>에 입력하세요.</span>
+      <span>보고서에 넣을 기사를 선택한 뒤 <b>선택 기사로 보고서 생성</b> 버튼을 누르면 Word에서 열 수 있는 보고서 파일이 바로 다운로드됩니다. JSON 복사/다운로드 기능은 백업용입니다.</span>
     </section>
 
     <section class="stats-grid" id="categoryCards" aria-label="카테고리 필터">
@@ -62,8 +62,9 @@
       </div>
       <div class="action-row">
         <button id="resetFilters" class="ghost-btn">필터 초기화</button>
-        <button id="copySelection" class="primary-btn">선택 JSON 복사</button>
-        <button id="downloadSelection" class="primary-btn">선택 기사 JSON 다운로드</button>
+        <button id="generateReport" class="primary-btn big-action">선택 기사로 보고서 생성</button>
+        <button id="copySelection" class="ghost-btn">선택 JSON 복사</button>
+        <button id="downloadSelection" class="ghost-btn">선택 JSON 다운로드</button>
         <button id="clearSelection" class="danger-btn">선택 초기화</button>
       </div>
     </section>
@@ -73,9 +74,9 @@
         <div>
           <p class="eyebrow">Selection</p>
           <h2>선택 기사 기반 보고서 생성</h2>
-          <p>선택한 JSON을 GitHub Actions → <b>Generate Weekly Report</b>의 `selection_json` 입력칸에 붙여 넣으면 Word 보고서가 생성됩니다.</p>
+          <p>선택한 기사만 보고서에 반영됩니다. 보고서 안에서는 인간 보고서처럼 날짜 흐름순으로 배치됩니다.</p>
         </div>
-        <a class="download-link" href="./reports/latest.docx">최신 보고서 다운로드</a>
+        <a class="download-link" href="./reports/latest.docx">최신 Actions 보고서 다운로드</a>
       </div>
       <textarea id="selectionPreview" readonly placeholder="선택한 기사 JSON이 여기에 표시됩니다."></textarea>
     </section>
