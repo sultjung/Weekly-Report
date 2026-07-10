@@ -225,7 +225,7 @@ function toggleSelection(key) {
 async function copySelection() {
   const text = JSON.stringify(selectedPayload(), null, 2);
   await navigator.clipboard.writeText(text);
-  alert("선택 기사 JSON을 복사했습니다. GitHub Actions의 selection_json 입력칸에 붙여 넣으세요.");
+  alert("선택 기사 JSON을 복사했습니다. 백업용으로 보관하거나 GitHub Actions에 붙여 넣을 수 있습니다.");
 }
 
 function downloadSelection() {
@@ -234,6 +234,237 @@ function downloadSelection() {
   const a = document.createElement("a");
   a.href = url;
   a.download = `selected-news-${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function dateValue(article) {
+  const d = new Date(article.publishedAt || article.date || 0);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+function reportMonthDay(value) {
+  const d = value instanceof Date ? value : new Date(value || 0);
+  if (Number.isNaN(d.getTime())) return "-";
+  return `${d.getMonth() + 1}.${d.getDate()}`;
+}
+
+function koreanReportDate(date = new Date()) {
+  return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}.`;
+}
+
+function legacyShortDate(date) {
+  return `΄${String(date.getFullYear()).slice(2)}.${date.getMonth() + 1}.${date.getDate()}`;
+}
+
+function fileDateName(date = new Date()) {
+  return `${date.getMonth() + 1}월 ${date.getDate()}일`;
+}
+
+function stripFinalPeriod(text = "") {
+  return String(text || "").replace(/[.。]+$/g, "").trim();
+}
+
+function humanizeTerms(text = "") {
+  return String(text || "")
+    .replace(/국가투자위원회/g, "NIC")
+    .replace(/투자위원회/g, "NIC")
+    .replace(/투자청장/g, "NIC 의장")
+    .replace(/부패방지위원회/g, "청렴위원회")
+    .replace(/조정프레임워크/g, "시아조정기구(SCF)")
+    .replace(/바그다드/g, "Baghdad")
+    .replace(/테헤란/g, "Teheran");
+}
+
+function reportMain(article) {
+  let base = article.reportBullet || `${reportMonthDay(article.publishedAt)}, ${article.titleKo || article.title || "주요 동향"}`;
+  base = String(base).replace(/^[-·•\s]+/, "").trim();
+  if (!/^\d{1,2}\.\d{1,2},/.test(base)) base = `${reportMonthDay(article.publishedAt)}, ${base}`;
+  return `- ${stripFinalPeriod(humanizeTerms(base))}.`;
+}
+
+function reportSubs(article) {
+  const subs = Array.isArray(article.reportSubBullets) ? article.reportSubBullets : [];
+  if (subs.length) return subs.slice(0, 2).map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`);
+  const summary = String(article.summaryKo || "").split(/\n+/).map((x) => x.trim()).filter(Boolean).slice(0, 1);
+  return summary.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`);
+}
+
+function reportImplication(article) {
+  return article.reportImplication ? `☞ ${stripFinalPeriod(humanizeTerms(article.reportImplication))}.` : "";
+}
+
+function selectedArticlesSorted() {
+  return [...state.selected.values()].map(stripUiFields).sort((a, b) => {
+    const ad = dateValue(a);
+    const bd = dateValue(b);
+    if (ad && bd) return ad - bd;
+    return 0;
+  });
+}
+
+function resolveReportPeriod(articles) {
+  const dates = articles.map(dateValue).filter(Boolean).sort((a, b) => a - b);
+  const today = new Date();
+  if (!dates.length) {
+    const end = new Date(today);
+    end.setDate(end.getDate() - 1);
+    const start = new Date(end);
+    start.setDate(start.getDate() - 6);
+    return { start, end, reportDate: today };
+  }
+  return { start: dates[0], end: dates[dates.length - 1], reportDate: today };
+}
+
+function groupByCategory(articles, category) {
+  return articles.filter((x) => x.category3 === category).sort((a, b) => (dateValue(a) || 0) - (dateValue(b) || 0));
+}
+
+function renderReportItems(articles) {
+  if (!articles.length) return `<p class="item empty-line">- 특이사항 없음</p>`;
+  return articles.map((article) => {
+    const subs = reportSubs(article).map((x) => `<p class="sub">${escapeHtml(x)}</p>`).join("");
+    const implication = reportImplication(article) ? `<p class="implication">${escapeHtml(reportImplication(article))}</p>` : "";
+    return `<p class="item">${escapeHtml(reportMain(article))}</p>${subs}${implication}`;
+  }).join("");
+}
+
+function renderTerrorTable() {
+  return `
+    <table class="report-table">
+      <tr><th>구분</th><th>계</th><th>무장세력공격</th><th>IED</th><th>암 살</th><th>시 위</th><th>총 격</th><th>자살폭탄테러</th></tr>
+      <tr><td>건수</td><td>확인 필요</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+    </table>
+  `;
+}
+
+function renderOilTable(period) {
+  const d1 = new Date(period.reportDate);
+  d1.setDate(d1.getDate() - 2);
+  const d2 = new Date(period.reportDate);
+  d2.setDate(d2.getDate() - 1);
+  return `
+    <table class="report-table oil-table">
+      <tr><th>구 분</th><th>두바이유</th><th>브렌트유</th><th>서부텍사스유(WTI)</th></tr>
+      <tr><td>${escapeHtml(reportMonthDay(d1))}</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td>${escapeHtml(reportMonthDay(d2))}</td><td>-</td><td>-</td><td>-</td></tr>
+    </table>
+  `;
+}
+
+function buildImpactItems(articles) {
+  const top = articles.slice().sort((a, b) => Number(b.importanceScore || 0) - Number(a.importanceScore || 0)).slice(0, 8);
+  const safety = top.find((x) => x.category3 === "terror_security" || x.category3 === "regional");
+  const admin = top.find((x) => x.category3 === "politics" || x.category3 === "oil_economy");
+  const first = safety ? stripFinalPeriod(humanizeTerms(safety.reportImplication || safety.weeklyReportReason || "현장 이동·외부활동 관련 안전관리 강화 필요")) : "이라크 치안 및 주변국 긴장 동향에 따른 현장 이동·외부활동 관리 지속 필요";
+  const second = admin ? stripFinalPeriod(humanizeTerms(admin.reportImplication || admin.weeklyReportReason || "투자·행정 의사결정 변화 가능성 점검 필요")) : "정부·의회·투자기관 동향에 따른 인허가 및 사업 협의 일정 변동 가능성 점검 필요";
+  return [`• ${first}.`, `• ${second}.`];
+}
+
+function hasCabinetOrCom(article = {}) {
+  const text = [article.titleKo, article.title, article.summaryKo, article.reportBullet, article.weeklyReportReason].filter(Boolean).join(" ");
+  return /내각회의|COM|Council of Ministers|مجلس الوزراء|국무회의/i.test(text);
+}
+
+function renderOptionalCabinetTable(politicsArticles) {
+  const rows = politicsArticles.filter(hasCabinetOrCom).slice(0, 5);
+  if (!rows.length) return "";
+  return `
+    <table class="report-table cabinet-table">
+      <tr><th>구 분</th><th>주 제</th><th>내 용</th></tr>
+      ${rows.map((article, i) => `<tr><td>${i + 1}</td><td>${escapeHtml(article.titleKo || article.title || "내각회의")}</td><td class="left-cell">${escapeHtml((article.reportSubBullets || [article.summaryKo || article.weeklyReportReason || "주요 의결사항 확인 필요"]).join("\n"))}</td></tr>`).join("")}
+    </table>
+  `;
+}
+
+function buildWordHtml(articles) {
+  const period = resolveReportPeriod(articles);
+  const politics = groupByCategory(articles, "politics");
+  const security = groupByCategory(articles, "terror_security");
+  const economy = groupByCategory(articles, "oil_economy");
+  const regional = groupByCategory(articles, "regional");
+  const title = `건설, 이라크 주간 종합 상황보고(${legacyShortDate(period.start)} ~ ${legacyShortDate(period.end)})`;
+  const impact = buildImpactItems(articles).map((x) => `<p class="impact">${escapeHtml(x)}</p>`).join("");
+
+  return `
+<!doctype html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>${escapeHtml(title)}</title>
+<style>
+@page WordSection1 { size: 595.3pt 841.9pt; margin: 50pt 54pt 50pt 54pt; }
+div.WordSection1 { page: WordSection1; }
+body { font-family: Batang, serif; font-size: 14pt; color: #000; }
+p { margin: 0 0 6pt 0; line-height: 1.25; }
+.title { font-size: 16pt; font-weight: bold; text-decoration: underline; margin-bottom: 8pt; }
+.date { text-align: right; margin-bottom: 18pt; }
+.h1 { font-size: 16pt; font-weight: bold; margin: 14pt 0 10pt 0; }
+.h2 { font-size: 14pt; font-weight: bold; margin: 12pt 0 8pt 28pt; }
+.category { font-size: 14pt; font-weight: bold; margin: 10pt 0 7pt 42pt; }
+.item { margin-left: 64pt; }
+.sub, .implication { margin-left: 78pt; }
+.implication { font-style: italic; }
+.impact { margin-left: 42pt; }
+.empty-line { color: #555; }
+table.report-table { width: 100%; border-collapse: collapse; margin: 5pt 0 10pt 0; font-size: 11pt; }
+.report-table th, .report-table td { border: 1px solid #333; padding: 5pt; text-align: center; vertical-align: middle; }
+.report-table th { background: #f2f2f2; font-weight: bold; }
+.report-table .left-cell { text-align: left; white-space: pre-line; }
+.cabinet-table td:nth-child(1) { width: 10%; }
+.cabinet-table td:nth-child(2) { width: 30%; }
+.cabinet-table td:nth-child(3) { width: 60%; }
+.source-note { color: #666; font-size: 9pt; margin-top: 16pt; }
+</style>
+</head>
+<body>
+<div class="WordSection1">
+  <p class="title">${escapeHtml(title)}</p>
+  <p class="date">${escapeHtml(koreanReportDate(period.reportDate))}</p>
+
+  <p class="h1">1. 이라크 국내 상황</p>
+  <p class="h2">1) 정국 / 치안</p>
+  <p class="category">• 정치권 동향</p>
+  ${renderReportItems(politics)}
+  ${renderOptionalCabinetTable(politics)}
+
+  <p class="category">• 이라크 주간 테러 상황</p>
+  ${renderTerrorTable()}
+  ${renderReportItems(security)}
+
+  <p class="h2">2) 경제</p>
+  <p class="category">• 국제유가 관련 동향</p>
+  ${renderReportItems(economy)}
+  ${renderOilTable(period)}
+
+  <p class="h1">2. 국제사회</p>
+  <p class="category">• 이라크와 관련 있는 주변국·국제정세</p>
+  ${renderReportItems(regional)}
+
+  <p class="h1">3. 그룹 / 건설에 미치는 영향</p>
+  ${impact}
+
+  <p class="source-note">※ 본 보고서는 웹앱에서 사용자가 선택한 ${articles.length}건의 기사 후보를 기반으로 자동 생성됨.</p>
+</div>
+</body>
+</html>`;
+}
+
+function generateReportDocument() {
+  const articles = selectedArticlesSorted();
+  if (!articles.length) {
+    alert("보고서에 넣을 기사를 먼저 선택해주세요.");
+    return;
+  }
+  const period = resolveReportPeriod(articles);
+  const html = buildWordHtml(articles);
+  const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `건설_이라크 주간 종합상황보고(${fileDateName(period.reportDate)}).doc`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -293,6 +524,7 @@ function bindEvents() {
     state.activeCategory = "all";
     applyFilters();
   });
+  $("generateReport").addEventListener("click", generateReportDocument);
   $("copySelection").addEventListener("click", copySelection);
   $("downloadSelection").addEventListener("click", downloadSelection);
   $("clearSelection").addEventListener("click", () => {
