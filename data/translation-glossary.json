@@ -34,8 +34,8 @@
     {
       "source": "علي الزيدي",
       "preferredKo": "Ali Al-Zaidi 총리",
-      "aliases": ["Ali Al-Zaidi", "Ali al-Zaidi", "Ali Al Zaidi", "Ali al Zaidi", "علي الزيادي", "알자이디", "알-자이디", "알 자이디", "알리 알자이디"],
-      "note": "이라크 현 총리 표기",
+      "aliases": ["Ali Al-Zaidi", "Ali al-Zaidi", "Ali Al Zaidi", "Ali al Zaidi", "علي الزيادي", "알자이디", "알-자이디", "알 자이디", "알리 알자이디", "자이디", "이라크 대통령 자이디", "대통령 자이디", "자이디 대통령"],
+      "note": "이라크 현 총리 표기. 대통령이 아니라 총리로 고정",
       "enabled": true
     },
     {
@@ -176,6 +176,10 @@
     { "pattern": "NIC\\s*\\(\\s*NIC\\s*\\)", "replacement": "NIC" },
     { "pattern": "NIC\\s+의장\\s+의장", "replacement": "NIC 의장" },
     { "pattern": "시아조정기구\\(SCF\\)\\s*\\(SCF\\)", "replacement": "시아조정기구(SCF)" },
+    { "pattern": "이라크\\s+대통령\\s+자이디", "replacement": "Ali Al-Zaidi 총리" },
+    { "pattern": "대통령\\s+자이디", "replacement": "Ali Al-Zaidi 총리" },
+    { "pattern": "자이디\\s+대통령", "replacement": "Ali Al-Zaidi 총리" },
+    { "pattern": "Ali\\s+Al-Zaidi\\s+대통령", "replacement": "Ali Al-Zaidi 총리" },
     { "pattern": "Ali\\s+Al-Zaidi\\s+총리\\s+총리", "replacement": "Ali Al-Zaidi 총리" },
     { "pattern": "Ali\\s+Al-Zaidi\\s+前\\s*총리", "replacement": "Ali Al-Zaidi 총리" },
     { "pattern": "Al-Sudani\\s+총리\\s+前\\s*총리", "replacement": "Al-Sudani 前 총리" },
