@@ -1,0 +1,175 @@
+{
+  "version": "weekly-report-translation-glossary-v1",
+  "description": "이라크 주간 종합상황보고서용 누적 번역 용어집. 사용자가 지정한 용어는 여기에 추가하고, collect-news workflow가 뉴스 수집 후 자동 적용한다.",
+  "lastUpdated": "2026-07-10",
+  "terms": [
+    {
+      "source": "الهيئة الوطنية للاستثمار",
+      "preferredKo": "NIC",
+      "aliases": ["National Investment Commission", "국가투자위원회", "국가 투자위원회", "투자청", "투자위원회"],
+      "note": "이라크 국가투자위원회는 보고서 본문에서 NIC로 통일",
+      "enabled": true
+    },
+    {
+      "source": "رئيس الهيئة الوطنية للاستثمار",
+      "preferredKo": "NIC 의장",
+      "aliases": ["국가투자위원장", "국가투자위원회 위원장", "투자청장", "투자위원장", "투자위원회 위원장"],
+      "note": "NIC 기관장 표기",
+      "enabled": true
+    },
+    {
+      "source": "هيئة النزاهة الاتحادية",
+      "preferredKo": "연방청렴위원회",
+      "aliases": ["Federal Integrity Commission", "청렴위원회", "부패방지위원회", "반부패위원회", "무결성위원회"],
+      "note": "이라크 반부패/청렴 기관",
+      "enabled": true
+    },
+    {
+      "source": "الإطار التنسيقي",
+      "preferredKo": "시아조정기구(SCF)",
+      "aliases": ["Coordination Framework", "조정프레임워크", "조정 프레임워크", "코디네이션 프레임워크"],
+      "note": "시아 정치연합 표기",
+      "enabled": true
+    },
+    {
+      "source": "محمد شياع السوداني",
+      "preferredKo": "Al-Sudani 총리",
+      "aliases": ["Mohammed Shia Al-Sudani", "Mohammed Shia' Al Sudani", "Mohammed Shia al-Sudani", "알수다니", "수다니 총리", "모하메드 시아 알수다니"],
+      "note": "이라크 총리 표기",
+      "enabled": true
+    },
+    {
+      "source": "نوري المالكي",
+      "preferredKo": "Al-Maliki",
+      "aliases": ["Nouri al-Maliki", "Nouri Al-Maliki", "말리키", "누리 알말리키", "알말리키"],
+      "note": "전 총리/법치국가연합 관련 표기",
+      "enabled": true
+    },
+    {
+      "source": "مقتدى الصدر",
+      "preferredKo": "Al-Sadr",
+      "aliases": ["Muqtada al-Sadr", "Muqtada Al-Sadr", "사드르", "알사드르", "무크타다 알사드르"],
+      "note": "사드르 계열 지도자 표기",
+      "enabled": true
+    },
+    {
+      "source": "حيدر مكية",
+      "preferredKo": "Haider Makiya",
+      "aliases": ["حيدر مكيه", "Haider Makiya", "하이더 마키야", "하이데르 마키야"],
+      "note": "NIC 의장 인명 표기",
+      "enabled": true
+    },
+    {
+      "source": "الحشد الشعبي",
+      "preferredKo": "PMF",
+      "aliases": ["Popular Mobilization Forces", "Hashd al-Shaabi", "하시드 알샤비", "인민동원군", "동원군"],
+      "note": "이라크 민병대/인민동원군 표기",
+      "enabled": true
+    },
+    {
+      "source": "داعش",
+      "preferredKo": "IS",
+      "aliases": ["ISIS", "ISIL", "Daesh", "다에시", "이슬람국가"],
+      "note": "테러 조직 표기",
+      "enabled": true
+    },
+    {
+      "source": "مجلس الوزراء",
+      "preferredKo": "내각회의",
+      "aliases": ["Council of Ministers", "이라크 각료회의", "각료회의", "국무회의"],
+      "note": "이라크 내각회의/COM 관련 표기",
+      "enabled": true
+    },
+    {
+      "source": "مجلس النواب",
+      "preferredKo": "이라크 의회",
+      "aliases": ["Iraqi Parliament", "House of Representatives", "국회", "하원"],
+      "note": "이라크 의회 표기",
+      "enabled": true
+    },
+    {
+      "source": "وزارة الإعمار والإسكان",
+      "preferredKo": "건설주택부",
+      "aliases": ["Ministry of Construction and Housing", "Ministry of Construction, Housing", "재건주택부", "건설·주택부", "건설 및 주택부"],
+      "note": "이라크 건설주택부 표기",
+      "enabled": true
+    },
+    {
+      "source": "وزارة التخطيط",
+      "preferredKo": "기획부",
+      "aliases": ["Ministry of Planning", "계획부"],
+      "note": "이라크 기획부 표기",
+      "enabled": true
+    },
+    {
+      "source": "البنك المركزي العراقي",
+      "preferredKo": "이라크 중앙은행",
+      "aliases": ["Central Bank of Iraq", "CBI", "중앙은행"],
+      "note": "이라크 중앙은행 표기",
+      "enabled": true
+    },
+    {
+      "source": "بغداد",
+      "preferredKo": "Baghdad",
+      "aliases": ["Bagdad", "바그다드"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "البصرة",
+      "preferredKo": "Basra",
+      "aliases": ["Basrah", "바스라"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "كركوك",
+      "preferredKo": "Kirkuk",
+      "aliases": ["키르쿠크"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "ميسان",
+      "preferredKo": "Misan",
+      "aliases": ["Maysan", "마이산", "미산"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "ديالى",
+      "preferredKo": "Diyala",
+      "aliases": ["디얄라", "디알라"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "الأنبار",
+      "preferredKo": "Anbar",
+      "aliases": ["Anbar Province", "안바르"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "أربيل",
+      "preferredKo": "Erbil",
+      "aliases": ["Erbil", "Irbil", "아르빌", "에르빌"],
+      "note": "지명 영문 표기",
+      "enabled": true
+    },
+    {
+      "source": "البنك الدولي",
+      "preferredKo": "세계은행",
+      "aliases": ["World Bank", "월드뱅크"],
+      "note": "국제기구 표기",
+      "enabled": true
+    }
+  ],
+  "cleanupRules": [
+    { "pattern": "NIC\\s*\\(\\s*NIC\\s*\\)", "replacement": "NIC" },
+    { "pattern": "NIC\\s+의장\\s+의장", "replacement": "NIC 의장" },
+    { "pattern": "시아조정기구\\(SCF\\)\\s*\\(SCF\\)", "replacement": "시아조정기구(SCF)" },
+    { "pattern": "Al-Sudani\\s+총리\\s+총리", "replacement": "Al-Sudani 총리" },
+    { "pattern": "이라크\\s+이라크\\s+의회", "replacement": "이라크 의회" }
+  ]
+}
