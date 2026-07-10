@@ -1,0 +1,15 @@
+{
+  "generatedAt": "",
+  "source": "initial",
+  "files": {
+    "news": "data/news.json"
+  },
+  "counts": {
+    "total": 0,
+    "politics": 0,
+    "terror_security": 0,
+    "oil_economy": 0,
+    "regional": 0,
+    "exclude": 0
+  }
+}
