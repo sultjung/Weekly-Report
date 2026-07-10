@@ -32,10 +32,17 @@
       "enabled": true
     },
     {
+      "source": "علي الزيدي",
+      "preferredKo": "Ali Al-Zaidi 총리",
+      "aliases": ["Ali Al-Zaidi", "Ali al-Zaidi", "Ali Al Zaidi", "Ali al Zaidi", "علي الزيادي", "알자이디", "알-자이디", "알 자이디", "알리 알자이디"],
+      "note": "이라크 현 총리 표기",
+      "enabled": true
+    },
+    {
       "source": "محمد شياع السوداني",
-      "preferredKo": "Al-Sudani 총리",
-      "aliases": ["Mohammed Shia Al-Sudani", "Mohammed Shia' Al Sudani", "Mohammed Shia al-Sudani", "알수다니", "수다니 총리", "모하메드 시아 알수다니"],
-      "note": "이라크 현 총리 표기. '前 총리'를 붙이지 않음",
+      "preferredKo": "Al-Sudani 前 총리",
+      "aliases": ["Mohammed Shia Al-Sudani", "Mohammed Shia' Al Sudani", "Mohammed Shia al-Sudani", "Al-Sudani", "알수다니", "수다니 총리", "모하메드 시아 알수다니"],
+      "note": "이라크 前 총리 표기. 현 총리는 Ali Al-Zaidi 총리로 표기",
       "enabled": true
     },
     {
@@ -169,9 +176,11 @@
     { "pattern": "NIC\\s*\\(\\s*NIC\\s*\\)", "replacement": "NIC" },
     { "pattern": "NIC\\s+의장\\s+의장", "replacement": "NIC 의장" },
     { "pattern": "시아조정기구\\(SCF\\)\\s*\\(SCF\\)", "replacement": "시아조정기구(SCF)" },
-    { "pattern": "Al-Sudani\\s+총리\\s+총리", "replacement": "Al-Sudani 총리" },
-    { "pattern": "Al-Sudani\\s+총리\\s+前\\s*총리", "replacement": "Al-Sudani 총리" },
-    { "pattern": "Al-Sudani\\s+前\\s*총리", "replacement": "Al-Sudani 총리" },
+    { "pattern": "Ali\\s+Al-Zaidi\\s+총리\\s+총리", "replacement": "Ali Al-Zaidi 총리" },
+    { "pattern": "Ali\\s+Al-Zaidi\\s+前\\s*총리", "replacement": "Ali Al-Zaidi 총리" },
+    { "pattern": "Al-Sudani\\s+총리\\s+前\\s*총리", "replacement": "Al-Sudani 前 총리" },
+    { "pattern": "Al-Sudani\\s+前\\s*총리\\s+前\\s*총리", "replacement": "Al-Sudani 前 총리" },
+    { "pattern": "Al-Sudani\\s+총리", "replacement": "Al-Sudani 前 총리" },
     { "pattern": "Nouri\\s+Al-Maliki\\s+前\\s*총리\\s+前\\s*총리", "replacement": "Nouri Al-Maliki 前 총리" },
     { "pattern": "Nouri\\s+Al-Maliki\\s+총리", "replacement": "Nouri Al-Maliki 前 총리" },
     { "pattern": "이라크\\s+이라크\\s+의회", "replacement": "이라크 의회" }
