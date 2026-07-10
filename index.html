@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이라크 주간 종합상황보고 Builder</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Iraq Weekly Situation Report</p>
+        <h1>이라크 주간 종합상황보고<br />작성 보조 도구</h1>
+        <p class="hero-desc">매일 수집된 이라크 정치·치안·경제·국제정세 뉴스를 보고서 구조에 맞게 분류하고, 사용자가 선택한 기사만 기반으로 Word 보고서를 생성합니다.</p>
+      </div>
+      <div class="hero-card">
+        <span>최종 업데이트</span>
+        <strong id="updatedAt">-</strong>
+        <small>GitHub Actions 수집 결과 기준</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <strong>중요</strong>
+      <span>이 화면은 정적 GitHub Pages입니다. 선택한 기사는 브라우저에 임시 저장되며, Word 보고서를 만들려면 선택 JSON을 복사하거나 다운로드한 뒤 GitHub Actions의 <b>Generate Weekly Report</b>에 입력하세요.</span>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span>전체 기사</span><strong id="statTotal">0</strong></article>
+      <article class="stat-card"><span>정치권 동향</span><strong id="statPolitics">0</strong></article>
+      <article class="stat-card"><span>치안/테러</span><strong id="statSecurity">0</strong></article>
+      <article class="stat-card"><span>경제/유가</span><strong id="statEconomy">0</strong></article>
+      <article class="stat-card"><span>국제사회</span><strong id="statRegional">0</strong></article>
+      <article class="stat-card selected"><span>선택 기사</span><strong id="statSelected">0</strong></article>
+    </section>
+
+    <section class="filters panel">
+      <div class="filter-row">
+        <label>기간
+          <select id="periodFilter">
+            <option value="7">최근 7일</option>
+            <option value="30">최근 30일</option>
+            <option value="1">오늘</option>
+            <option value="all">전체</option>
+          </select>
+        </label>
+        <label>카테고리
+          <select id="categoryFilter">
+            <option value="all">전체</option>
+            <option value="politics">정치권 동향</option>
+            <option value="terror_security">이라크 주간 테러 상황</option>
+            <option value="oil_economy">경제 / 국제유가</option>
+            <option value="regional">국제사회</option>
+            <option value="exclude">제외/보류</option>
+          </select>
+        </label>
+        <label>중요도
+          <select id="importanceFilter">
+            <option value="0">전체</option>
+            <option value="70">70점 이상</option>
+            <option value="85">85점 이상</option>
+          </select>
+        </label>
+        <label>검색
+          <input id="searchInput" placeholder="키워드, 인물, 지역, 출처" />
+        </label>
+        <label class="checkbox-label"><input type="checkbox" id="selectedOnly" /> 선택 기사만</label>
+        <label class="checkbox-label"><input type="checkbox" id="hideExcluded" checked /> 제외 숨김</label>
+      </div>
+      <div class="action-row">
+        <button id="resetFilters" class="ghost-btn">필터 초기화</button>
+        <button id="copySelection" class="primary-btn">선택 JSON 복사</button>
+        <button id="downloadSelection" class="primary-btn">선택 기사 JSON 다운로드</button>
+        <button id="clearSelection" class="danger-btn">선택 초기화</button>
+      </div>
+    </section>
+
+    <section class="tabs" id="tabs">
+      <button data-tab="all" class="active">전체</button>
+      <button data-tab="politics">정치권 동향</button>
+      <button data-tab="terror_security">이라크 주간 테러 상황</button>
+      <button data-tab="oil_economy">경제 / 국제유가</button>
+      <button data-tab="regional">국제사회</button>
+      <button data-tab="exclude">제외/보류</button>
+    </section>
+
+    <section class="panel report-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Selection</p>
+          <h2>선택 기사 기반 보고서 생성</h2>
+          <p>선택한 JSON을 GitHub Actions → <b>Generate Weekly Report</b>의 `selection_json` 입력칸에 붙여 넣으면 Word 보고서가 생성됩니다.</p>
+        </div>
+        <a class="download-link" href="./reports/latest.docx">최신 보고서 다운로드</a>
+      </div>
+      <textarea id="selectionPreview" readonly placeholder="선택한 기사 JSON이 여기에 표시됩니다."></textarea>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">News Candidates</p>
+          <h2>수집 뉴스 목록</h2>
+        </div>
+        <span class="badge" id="visibleCount">0건 표시</span>
+      </div>
+      <div id="newsList" class="news-list loading">뉴스 데이터를 불러오는 중입니다.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Weekly-Report · GitHub Pages · API Key는 GitHub Actions에서만 사용
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
