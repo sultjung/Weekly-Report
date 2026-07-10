@@ -1,6 +1,7 @@
 // Browser-generated Word report format and article-merge tweaks.
 // Keeps app.js stable while matching the human weekly report's paragraph spacing/indent feel.
 // Also merges related selected articles into a single report item with follow-up bullets and analysis implications.
+// Adds Word-compatible numbering/list markup for 1. / 1) section headings.
 (function () {
   const originalBuildWordHtml = window.buildWordHtml;
   if (typeof originalBuildWordHtml !== "function") return;
@@ -215,15 +216,42 @@
     }).join("");
   }
 
+  function wordListMain(num, label) {
+    return `<p class="h1 word-list-main" style="mso-list:l0 level1 lfo1"><span style="mso-list:Ignore">${num}.<span style="font:7.0pt 'Times New Roman'">&nbsp;&nbsp;</span></span>${label}</p>`;
+  }
+
+  function wordListSub(num, label) {
+    return `<p class="h2 word-list-sub" style="mso-list:l1 level1 lfo2"><span style="mso-list:Ignore">${num})<span style="font:7.0pt 'Times New Roman'">&nbsp;&nbsp;</span></span>${label}</p>`;
+  }
+
+  function applyWordNumbering(html) {
+    let out = html;
+
+    const listStyle = `
+@list l0 { mso-list-id:1001001; mso-list-type:hybrid; mso-list-template-ids:1001001; }
+@list l0:level1 { mso-level-number-format:decimal; mso-level-text:"%1."; mso-level-tab-stop:24pt; mso-level-number-position:left; margin-left:24pt; text-indent:-24pt; }
+@list l1 { mso-list-id:1001002; mso-list-type:hybrid; mso-list-template-ids:1001002; }
+@list l1:level1 { mso-level-number-format:decimal; mso-level-text:"%1)"; mso-level-tab-stop:56pt; mso-level-number-position:left; margin-left:56pt; text-indent:-28pt; }
+.word-list-main { font-size:16pt; font-weight:bold; margin:14pt 0 10pt 0; mso-pagination:widow-orphan; }
+.word-list-sub { font-size:14pt; font-weight:bold; margin:12pt 0 8pt 28pt; mso-pagination:widow-orphan; }
+.category { font-size:14pt; font-weight:bold; margin:10pt 0 7pt 52pt; }
+.item { margin:8pt 0 5pt 76pt; text-indent:10pt; }
+.sub, .implication { margin:0 0 4pt 100pt; text-indent:8pt; }
+.impact { margin:7pt 0 4pt 66pt; text-indent:8pt; }`;
+
+    out = out.replace("</style>", `${listStyle}\n</style>`);
+
+    out = out.replace(/<p class="h1">1\. 이라크 국내 상황<\/p>/g, wordListMain(1, "이라크 국내 상황"));
+    out = out.replace(/<p class="h1">2\. 국제사회<\/p>/g, wordListMain(2, "국제사회"));
+    out = out.replace(/<p class="h1">3\. 그룹 \/ 건설에 미치는 영향<\/p>/g, wordListMain(3, "그룹 / 건설에 미치는 영향"));
+    out = out.replace(/<p class="h2">1\) 정국 \/ 치안<\/p>/g, wordListSub(1, "정국 / 치안"));
+    out = out.replace(/<p class="h2">2\) 경제<\/p>/g, wordListSub(2, "경제"));
+
+    return out;
+  }
+
   window.buildWordHtml = function buildWordHtmlWithMergedRelatedArticles(articles) {
     let html = originalBuildWordHtml(articles);
-
-    const categories = [
-      { key: "politics", marker: "${renderReportItems(politics)}" },
-      { key: "terror_security", marker: "${renderReportItems(security)}" },
-      { key: "oil_economy", marker: "${renderReportItems(economy)}" },
-      { key: "regional", marker: "${renderReportItems(regional)}" }
-    ];
 
     const byCat = (cat) => articles.filter((x) => x.category3 === cat).sort((a, b) => (dateOnly(a) || 0) - (dateOnly(b) || 0));
 
@@ -247,21 +275,21 @@
 
     html = html.replace(
       ".item { margin-left: 64pt; }",
-      ".item { margin: 8pt 0 5pt 64pt; text-indent: 10pt; }"
+      ".item { margin: 8pt 0 5pt 76pt; text-indent: 10pt; }"
     );
     html = html.replace(
       ".sub, .implication { margin-left: 78pt; }",
-      ".sub, .implication { margin: 0 0 4pt 88pt; text-indent: 8pt; }"
+      ".sub, .implication { margin: 0 0 4pt 100pt; text-indent: 8pt; }"
     );
     html = html.replace(
       ".impact { margin-left: 42pt; }",
-      ".impact { margin: 7pt 0 4pt 54pt; text-indent: 8pt; }"
+      ".impact { margin: 7pt 0 4pt 66pt; text-indent: 8pt; }"
     );
     html = html.replace(
       ".category { font-size: 14pt; font-weight: bold; margin: 10pt 0 7pt 42pt; }",
-      ".category { font-size: 14pt; font-weight: bold; margin: 12pt 0 8pt 42pt; }"
+      ".category { font-size: 14pt; font-weight: bold; margin: 10pt 0 7pt 52pt; }"
     );
 
-    return html;
+    return applyWordNumbering(html);
   };
 })();
