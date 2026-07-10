@@ -2,11 +2,11 @@ const state = {
   articles: [],
   filtered: [],
   selected: new Map(),
-  activeTab: "all"
+  activeCategory: "all"
 };
 
 const $ = (id) => document.getElementById(id);
-const STORAGE_KEY = "weekly-report-selected-v1";
+const STORAGE_KEY = "weekly-report-selected-v2";
 
 function formatDate(value) {
   if (!value) return "-";
@@ -32,8 +32,32 @@ function categoryLabel(category3) {
   }[category3] || "기타";
 }
 
+function baseArticleKey(article) {
+  return [
+    article.id,
+    article.url,
+    article.titleKo || article.title,
+    article.publishedAt || article.date,
+    article.source
+  ].filter(Boolean).join("|");
+}
+
+function simpleHash(value = "") {
+  let hash = 0;
+  const text = String(value || "");
+  for (let i = 0; i < text.length; i += 1) {
+    hash = ((hash << 5) - hash + text.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash).toString(36);
+}
+
 function getArticleKey(article) {
-  return article.id || article.url || `${article.titleKo || article.title}-${article.publishedAt}`;
+  return article.__uiKey || article.selectionKey || article.id || article.url || `${article.titleKo || article.title}-${article.publishedAt}`;
+}
+
+function stripUiFields(article = {}) {
+  const { __uiKey, selectionKey, aiCacheHit, ...rest } = article;
+  return rest;
 }
 
 function loadSelection() {
@@ -49,10 +73,13 @@ function saveSelection() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify([...state.selected.values()]));
   updateSelectionPreview();
   updateStats();
+  updateCategoryCards();
 }
 
 function selectedPayload() {
-  const selectedArticles = [...state.selected.values()].sort((a, b) => new Date(a.publishedAt || 0) - new Date(b.publishedAt || 0));
+  const selectedArticles = [...state.selected.values()]
+    .map(stripUiFields)
+    .sort((a, b) => new Date(a.publishedAt || 0) - new Date(b.publishedAt || 0));
   return {
     generatedAt: new Date().toISOString(),
     purpose: "iraq-weekly-report-selected-news",
@@ -93,19 +120,17 @@ function matchesSearch(article, query) {
 
 function applyFilters() {
   const period = $("periodFilter").value;
-  const category = $("categoryFilter").value;
   const minImportance = Number($("importanceFilter").value || 0);
   const query = $("searchInput").value.trim();
-  const selectedOnly = $("selectedOnly").checked;
+  const selectedOnly = $("selectedOnly").checked || state.activeCategory === "selected";
   const hideExcluded = $("hideExcluded").checked;
-  const tab = state.activeTab;
+  const activeCategory = state.activeCategory;
 
   state.filtered = state.articles.filter((article) => {
     const key = getArticleKey(article);
     const cat = article.category3 || "exclude";
     if (!inPeriod(article, period)) return false;
-    if (category !== "all" && cat !== category) return false;
-    if (tab !== "all" && cat !== tab) return false;
+    if (activeCategory !== "all" && activeCategory !== "selected" && cat !== activeCategory) return false;
     if (hideExcluded && (cat === "exclude" || article.reportUsefulness === "exclude")) return false;
     if (selectedOnly && !state.selected.has(key)) return false;
     if (Number(article.importanceScore || 0) < minImportance) return false;
@@ -119,6 +144,7 @@ function applyFilters() {
 
   renderNews();
   updateStats();
+  updateCategoryCards();
 }
 
 function updateStats() {
@@ -129,6 +155,13 @@ function updateStats() {
   $("statEconomy").textContent = all.filter((x) => x.category3 === "oil_economy").length;
   $("statRegional").textContent = all.filter((x) => x.category3 === "regional").length;
   $("statSelected").textContent = state.selected.size;
+}
+
+function updateCategoryCards() {
+  document.querySelectorAll("#categoryCards .stat-card").forEach((card) => {
+    card.classList.toggle("active", card.dataset.statFilter === state.activeCategory);
+  });
+  $("selectedOnly").checked = state.activeCategory === "selected" ? true : $("selectedOnly").checked;
 }
 
 function renderNews() {
@@ -184,7 +217,7 @@ function toggleSelection(key) {
   const article = state.articles.find((x) => getArticleKey(x) === key);
   if (!article) return;
   if (state.selected.has(key)) state.selected.delete(key);
-  else state.selected.set(key, { ...article, selected: true });
+  else state.selected.set(key, { ...article, selected: true, selectionKey: key });
   saveSelection();
   applyFilters();
 }
@@ -213,7 +246,10 @@ async function loadNews() {
     const res = await fetch(`./data/news.json?v=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    state.articles = Array.isArray(data.articles) ? data.articles : [];
+    state.articles = (Array.isArray(data.articles) ? data.articles : []).map((article, index) => {
+      const uniqueKey = `ui-${index}-${simpleHash(baseArticleKey(article))}`;
+      return { ...article, __uiKey: uniqueKey, selectionKey: uniqueKey };
+    });
     $("updatedAt").textContent = data.generatedAt ? formatDate(data.generatedAt) : "-";
   } catch (err) {
     $("newsList").className = "news-list empty";
@@ -223,20 +259,38 @@ async function loadNews() {
   applyFilters();
 }
 
+function setCategoryFilter(category) {
+  state.activeCategory = category || "all";
+  if (state.activeCategory !== "selected") $("selectedOnly").checked = false;
+  applyFilters();
+}
+
 function bindEvents() {
-  ["periodFilter", "categoryFilter", "importanceFilter", "searchInput", "selectedOnly", "hideExcluded"].forEach((id) => {
+  ["periodFilter", "importanceFilter", "searchInput", "selectedOnly", "hideExcluded"].forEach((id) => {
     $(id).addEventListener("input", applyFilters);
     $(id).addEventListener("change", applyFilters);
   });
+
+  $("categoryCards").addEventListener("click", (event) => {
+    const card = event.target.closest(".stat-card[data-stat-filter]");
+    if (!card) return;
+    setCategoryFilter(card.dataset.statFilter);
+  });
+  $("categoryCards").addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const card = event.target.closest(".stat-card[data-stat-filter]");
+    if (!card) return;
+    event.preventDefault();
+    setCategoryFilter(card.dataset.statFilter);
+  });
+
   $("resetFilters").addEventListener("click", () => {
     $("periodFilter").value = "7";
-    $("categoryFilter").value = "all";
     $("importanceFilter").value = "0";
     $("searchInput").value = "";
     $("selectedOnly").checked = false;
     $("hideExcluded").checked = true;
-    state.activeTab = "all";
-    document.querySelectorAll("#tabs button").forEach((btn) => btn.classList.toggle("active", btn.dataset.tab === "all"));
+    state.activeCategory = "all";
     applyFilters();
   });
   $("copySelection").addEventListener("click", copySelection);
@@ -245,13 +299,6 @@ function bindEvents() {
     if (!confirm("선택한 기사를 모두 초기화할까요?")) return;
     state.selected.clear();
     saveSelection();
-    applyFilters();
-  });
-  $("tabs").addEventListener("click", (event) => {
-    const btn = event.target.closest("button[data-tab]");
-    if (!btn) return;
-    state.activeTab = btn.dataset.tab;
-    document.querySelectorAll("#tabs button").forEach((x) => x.classList.toggle("active", x === btn));
     applyFilters();
   });
   $("newsList").addEventListener("click", (event) => {
