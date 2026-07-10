@@ -47,11 +47,11 @@
             <option value="all">전체</option>
           </select>
         </label>
-        <label>중요도
-          <select id="importanceFilter">
-            <option value="0">전체</option>
-            <option value="70">70점 이상</option>
-            <option value="85">85점 이상</option>
+        <label>정렬
+          <select id="sortFilter">
+            <option value="latest" selected>최신순</option>
+            <option value="oldest">오래된순</option>
+            <option value="importance">중요도순</option>
           </select>
         </label>
         <label>검색
@@ -67,6 +67,7 @@
       </div>
     </section>
 
+    <input id="importanceFilter" type="hidden" value="0" />
     <textarea id="selectionPreview" hidden></textarea>
     <button id="copySelection" hidden type="button">선택 JSON 복사</button>
     <button id="downloadSelection" hidden type="button">선택 JSON 다운로드</button>
@@ -94,5 +95,6 @@
   <script src="./report-writing-cleanup.js"></script>
   <script src="./report-human-sample-style.js"></script>
   <script src="./hide-untranslated-news.js"></script>
+  <script src="./sort-news-ui.js"></script>
 </body>
 </html>
