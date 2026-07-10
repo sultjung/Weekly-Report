@@ -58,13 +58,13 @@ button { min-height: 42px; border: 1px solid var(--line); border-radius: 12px; p
 #selectionPreview { width: 100%; min-height: 160px; border: 1px solid var(--line); border-radius: 16px; padding: 14px; resize: vertical; line-height: 1.5; background: #fafafa; }
 .news-list { display: grid; gap: 12px; }
 .loading, .empty { color: var(--muted); text-align: center; padding: 34px 0; }
-.news-card { border: 1px solid var(--line); border-radius: 18px; background: white; padding: 16px; display: grid; gap: 12px; }
+.news-card { border: 1px solid var(--line); border-radius: 18px; background: white; padding: 18px; display: grid; gap: 13px; }
 .news-card.selected { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,115,33,.12); }
 .news-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-.news-meta { display: flex; flex-wrap: wrap; gap: 7px; color: var(--muted); font-size: 12px; }
-.news-title { margin: 0; font-size: 18px; line-height: 1.45; }
-.news-summary { margin: 0; color: #4b5563; line-height: 1.65; white-space: pre-line; }
-.report-preview { border-left: 4px solid var(--orange); background: #fafafa; padding: 10px 12px; border-radius: 12px; color: #374151; line-height: 1.6; }
+.news-meta { display: flex; flex-wrap: wrap; gap: 7px; color: var(--muted); font-size: 13px; }
+.news-title { margin: 0; font-size: 21px; line-height: 1.42; letter-spacing: -0.025em; }
+.news-summary { margin: 0; color: #374151; font-size: 17px; line-height: 1.75; white-space: pre-line; }
+.report-preview { border-left: 4px solid var(--orange); background: #fafafa; padding: 12px 14px; border-radius: 12px; color: #374151; font-size: 16px; line-height: 1.7; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 7px; }
 .tag { border-radius: 999px; padding: 5px 8px; background: #f3f4f6; color: #4b5563; font-size: 12px; font-weight: 800; }
 .tag.politics { background: var(--blue-soft); color: #1d4ed8; }
@@ -89,4 +89,6 @@ button { min-height: 42px; border: 1px solid var(--line); border-radius: 12px; p
   .panel-head, .news-top { flex-direction: column; }
   .action-row { justify-content: stretch; }
   .action-row button { flex: 1 1 auto; }
+  .news-title { font-size: 19px; }
+  .news-summary { font-size: 16px; }
 }
