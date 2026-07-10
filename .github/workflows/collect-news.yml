@@ -1,0 +1,78 @@
+name: Collect Iraq Weekly News
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 06:17 primary, 06:47 backup retry
+    - cron: "17 21 * * *"
+    - cron: "47 21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-iraq-weekly-news
+  cancel-in-progress: false
+
+jobs:
+  collect-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Collect Iraq weekly news
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
+          NEWS_LOOKBACK_DAYS: "30"
+          MAX_PER_QUERY: "12"
+          MAX_TOTAL: "260"
+          FETCH_TIMEOUT_MS: "12000"
+          GOOGLE_QUERY_CONCURRENCY: "6"
+          SOURCE_CONCURRENCY: "3"
+          ARTICLE_FETCH_CONCURRENCY: "4"
+          AI_CONCURRENCY: "5"
+        run: |
+          for attempt in 1 2 3; do
+            echo "Collect Iraq weekly news attempt ${attempt}/3"
+            if npm run collect; then
+              echo "Collect Iraq weekly news succeeded"
+              exit 0
+            fi
+            if [ "$attempt" = "3" ]; then
+              echo "Collect Iraq weekly news failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 90))
+          done
+
+      - name: Sync latest main before commit
+        run: |
+          git config pull.rebase true
+          git pull --rebase --autostash origin main
+
+      - name: Commit updated news data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Iraq weekly news data"
+          file_pattern: "data/*.json"
