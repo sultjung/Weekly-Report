@@ -8,6 +8,7 @@
  *   construction/housing policy, cabinet formation delays, ministerial confidence votes,
  *   PM visit to the US, SCF internal conflict, NIC chair dismissal, and Integrity Commission referrals.
  * - Raise scoring for those weekly-report decision-risk themes.
+ * - Upgrade the AI writing prompt so report bullets follow the human-edited weekly report style.
  */
 
 import fs from "node:fs/promises";
@@ -95,13 +96,45 @@ code = replaceOnce(
 
 code = replaceOnce(
   code,
-  `    "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
+  `function hasReusableAiSummary(item = {}) { return !!(item.titleKo && item.summaryKo && !hasArabic(item.titleKo) && !hasArabic(item.summaryKo) && !item.translationFailed); }`,
+  `function hasReusableAiSummary(item = {}) { return !!(item.titleKo && item.summaryKo && item.aiSummaryVersion === "weekly-report-v2" && !hasArabic(item.titleKo) && !hasArabic(item.summaryKo) && !item.translationFailed); }`,
+  "force v2 AI summary refresh"
+);
+
+code = replaceOnce(
+  code,
+  `    "summaryKo는 3~5줄 한국어 요약. 제목 반복 금지.",
+    "reportBullet은 '- ' 없이 'M.D, 주체, 핵심행위 명사형.' 구조. 예: '7.4, 이라크 의회, NIC 의장 심문 결정.'",
+    "reportSubBullets는 '* ' 없이 0~2개.",
+    "reportImplication은 '☞' 없이 1문장 또는 빈 문자열.",
+    "보고서 문체는 '~하였다/했다/하고 있다'를 피하고 '~조치로 해석', '~가능성', '~필요', '~전망' 형태를 우선한다.",
+    "이라크와 무관한 국제뉴스, 스포츠, 연예, 광고성 기사는 exclude.",
+    "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
     "국가투자위원회는 NIC로 표기하고, 부패방지위원회보다 청렴위원회 표현을 사용하라."`,
-  `    "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
+  `    "summaryKo는 2~4줄 한국어 요약. 제목 문장을 그대로 반복하지 말고, 핵심 사실과 의미만 압축하라.",
+    "reportBullet은 '- ' 없이 'M.D, 주체, 핵심행위 명사형.' 구조로 1문장만 작성하라. 예: '7.5, 시아조정기구(SCF), 미국 방문 결과에 연계하여 장관 임명 결정.'",
+    "reportBullet에서는 '이라크 정치 조정 기구', '정치적 조정 기구'라고 쓰지 말고 반드시 '시아조정기구(SCF)'로 표기하라.",
+    "reportBullet과 reportSubBullets에서 '자이드 정부'라고 쓰지 말고 'Al-Zaidi 총리' 또는 'Al-Zaidi 총리 내각'으로 표기하라.",
+    "reportSubBullets는 '* ' 없이 0~1개만 작성하라. reportBullet을 다시 설명하지 말고, 그 사건이 의미하는 핵심 흐름만 1문장으로 작성하라.",
+    "reportSubBullets 예시: '이라크 내각 구성이 Al-Zaidi 총리의 미국 방문 이후로 미뤄짐에 따라 정치적 불확실성을 더욱 부각시키고 있음.'",
+    "reportImplication은 '☞' 없이 0~1문장만 작성하라. 분석 기사나 기사 본문에 근거가 있을 때만 작성하고, 근거가 약하면 빈 문자열로 둬라.",
+    "reportImplication은 '정치적 압박 강화 가능성', '정치적 의지 강화 가능성' 같은 일반론을 금지한다. 구체적 분석 축을 써라.",
+    "reportImplication 예시: '반부패 수사로 정치권 내 연정 합의가 흔들리며 내각 구성 지연 가능성 제기.'",
+    "보고서 문체는 '~하였다/했다/하고 있다'를 피하고 '~함', '~미뤄짐', '~부각', '~제기', '~전망', '~가능성' 형태를 우선한다.",
+    "한 문단 안에서 같은 사실을 두 번 반복하지 말라. reportBullet에 쓴 문장을 reportSubBullets에서 다시 풀어쓰지 말라.",
+    "이라크와 무관한 국제뉴스, 스포츠, 연예, 광고성 기사는 exclude.",
+    "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
     "시아조정기구(SCF) 내부 갈등, 장관 후보자 미확정, 내각 완성 지연, 총리 방미 이후 전망, 의회 본회의 재개, 장관 신임투표 미실시, NIC 의장 해임안, 청렴위원회 이관 관련 기사는 정치권 동향 핵심 후보로 적극 분류하라.",
     "건설주택부의 신규 주거도시, 환경기준, 도시계획 기준, 단열재, 녹지비율, 자국 건설자재 우선 사용 관련 기사는 주간보고서 경제/투자환경 후보로 적극 분류하라.",
     "국가투자위원회는 NIC로 표기하고, 부패방지위원회보다 청렴위원회 표현을 사용하라."`,
-  "AI classification instruction for cabinet/NIC and housing standards"
+  "weekly report writing style prompt"
+);
+
+code = replaceOnce(
+  code,
+  `aiSummaryVersion: "weekly-report-v1"`,
+  `aiSummaryVersion: "weekly-report-v2"`,
+  "bump AI summary version"
 );
 
 await fs.writeFile(OUT, code, "utf8");
