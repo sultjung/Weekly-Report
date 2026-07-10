@@ -66,6 +66,9 @@ jobs:
             sleep $((attempt * 90))
           done
 
+      - name: Apply translation glossary
+        run: node scripts/apply-glossary-to-news.mjs
+
       - name: Sync latest main before commit
         run: |
           git config pull.rebase true
