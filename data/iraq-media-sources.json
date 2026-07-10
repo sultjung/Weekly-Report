@@ -1,0 +1,96 @@
+[
+  {
+    "id": "alsumaria",
+    "name": "Al-Sumaria",
+    "baseUrl": "https://www.alsumaria.tv/",
+    "enabled": true,
+    "listPages": [
+      "https://www.alsumaria.tv/news/politics",
+      "https://www.alsumaria.tv/news/security",
+      "https://www.alsumaria.tv/news/economy"
+    ],
+    "rssUrls": [],
+    "sitemapUrls": ["https://www.alsumaria.tv/sitemap.xml"]
+  },
+  {
+    "id": "nina",
+    "name": "NINA",
+    "baseUrl": "https://ninanews.com/",
+    "enabled": true,
+    "listPages": ["https://ninanews.com/Website/News/Politics", "https://ninanews.com/Website/News/Security", "https://ninanews.com/Website/News/Economy"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://ninanews.com/sitemap.xml"]
+  },
+  {
+    "id": "imn",
+    "name": "Iraqi Media Network",
+    "baseUrl": "https://www.imn.iq/",
+    "enabled": true,
+    "listPages": ["https://www.imn.iq/archives/category/politics", "https://www.imn.iq/archives/category/security", "https://www.imn.iq/archives/category/economy"],
+    "rssUrls": ["https://www.imn.iq/feed"],
+    "sitemapUrls": ["https://www.imn.iq/sitemap.xml"]
+  },
+  {
+    "id": "alsabaah",
+    "name": "Al-Sabaah",
+    "baseUrl": "https://alsabaah.iq/",
+    "enabled": true,
+    "listPages": ["https://alsabaah.iq/", "https://alsabaah.iq/political", "https://alsabaah.iq/economy"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://alsabaah.iq/sitemap.xml"]
+  },
+  {
+    "id": "shafaq",
+    "name": "Shafaq News",
+    "baseUrl": "https://shafaq.com/",
+    "enabled": true,
+    "listPages": ["https://shafaq.com/ar/%D8%B3%DB%8C%D8%A7%D8%B3%D8%A9", "https://shafaq.com/ar/%D8%A3%D9%85%D9%86", "https://shafaq.com/ar/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://shafaq.com/sitemap.xml"]
+  },
+  {
+    "id": "iraqinews",
+    "name": "Iraqi News",
+    "baseUrl": "https://www.iraqinews.com/",
+    "enabled": true,
+    "listPages": ["https://www.iraqinews.com/iraq/", "https://www.iraqinews.com/business-iraqi-dinar/", "https://www.iraqinews.com/features/"],
+    "rssUrls": ["https://www.iraqinews.com/feed/"],
+    "sitemapUrls": ["https://www.iraqinews.com/sitemap.xml"]
+  },
+  {
+    "id": "hathalyoum",
+    "name": "Hath Alyoum",
+    "baseUrl": "https://hathalyoum.net/",
+    "enabled": true,
+    "listPages": ["https://hathalyoum.net/", "https://hathalyoum.net/political", "https://hathalyoum.net/security"],
+    "rssUrls": [],
+    "sitemapUrls": []
+  },
+  {
+    "id": "dijlah",
+    "name": "Dijlah TV",
+    "baseUrl": "https://www.dijlah.tv/",
+    "enabled": true,
+    "listPages": ["https://www.dijlah.tv/index.php?page=category&id=1", "https://www.dijlah.tv/index.php?page=category&id=2"],
+    "rssUrls": [],
+    "sitemapUrls": []
+  },
+  {
+    "id": "rudaw",
+    "name": "Rudaw Arabic",
+    "baseUrl": "https://www.rudaw.net/arabic/",
+    "enabled": true,
+    "listPages": ["https://www.rudaw.net/arabic/middleeast/iraq", "https://www.rudaw.net/arabic/business"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://www.rudaw.net/sitemap.xml"]
+  },
+  {
+    "id": "iraqi-parliament",
+    "name": "Iraqi Parliament",
+    "baseUrl": "https://parliament.iq/",
+    "enabled": true,
+    "listPages": ["https://parliament.iq/", "https://parliament.iq/category/%d8%a7%d8%ae%d8%a8%d8%a7%d8%b1-%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3/"],
+    "rssUrls": ["https://parliament.iq/feed/"],
+    "sitemapUrls": ["https://parliament.iq/sitemap.xml"]
+  }
+]
