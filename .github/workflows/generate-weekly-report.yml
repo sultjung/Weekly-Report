@@ -1,0 +1,78 @@
+name: Generate Weekly Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      selection_json:
+        description: "선택 기사 JSON. 웹앱의 '선택 JSON 복사' 내용을 붙여 넣으세요. 비우면 data/selected-news.json 또는 selected=true 기사 사용."
+        required: false
+        type: string
+      report_start_date:
+        description: "보고서 시작일 YYYY-MM-DD. 비우면 보고일 전 7일 자동 계산."
+        required: false
+        type: string
+      report_end_date:
+        description: "보고서 종료일 YYYY-MM-DD. 비우면 보고일 전날."
+        required: false
+        type: string
+      report_date:
+        description: "보고일 YYYY-MM-DD. 비우면 한국시간 오늘."
+        required: false
+        type: string
+      report_title:
+        description: "보고서 제목. 비우면 자동 생성."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-weekly-report
+  cancel-in-progress: false
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate selected-news DOCX report
+        env:
+          SELECTION_JSON: ${{ inputs.selection_json }}
+          REPORT_START_DATE: ${{ inputs.report_start_date }}
+          REPORT_END_DATE: ${{ inputs.report_end_date }}
+          REPORT_DATE: ${{ inputs.report_date }}
+          REPORT_TITLE: ${{ inputs.report_title }}
+        run: npm run report
+
+      - name: Sync latest main before commit
+        run: |
+          git config pull.rebase true
+          git pull --rebase --autostash origin main
+
+      - name: Commit generated report
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generate Iraq weekly report"
+          file_pattern: "reports/** data/selected-news.json"
