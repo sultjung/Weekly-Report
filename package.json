@@ -1,0 +1,14 @@
+{
+  "name": "iraq-weekly-report-builder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Iraq weekly situation report news collector and DOCX generator",
+  "scripts": {
+    "collect": "node scripts/collect-news.mjs",
+    "report": "node scripts/generate-weekly-report.mjs"
+  },
+  "dependencies": {
+    "docx": "^9.5.1"
+  }
+}
