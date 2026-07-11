@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-07-10T06:02:27.737Z",
+  "generatedAt": "2026-07-11T00:19:59.448Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
     "total": 260,
-    "politics": 103,
-    "terror_security": 50,
-    "oil_economy": 69,
-    "regional": 16,
-    "exclude": 22
+    "politics": 83,
+    "terror_security": 49,
+    "oil_economy": 27,
+    "regional": 57,
+    "exclude": 44
   },
-  "elapsedSeconds": 70
+  "elapsedSeconds": 280,
+  "untranslatedFilteredCount": 19,
+  "untranslatedFilteredAt": "2026-07-11T00:19:59.638Z"
 }
