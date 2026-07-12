@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-12T00:20:50.479Z",
+  "generatedAt": "2026-07-12T07:25:07.096Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 260,
-    "politics": 63,
-    "terror_security": 40,
-    "oil_economy": 26,
-    "regional": 71,
-    "exclude": 60
+    "total": 58,
+    "politics": 19,
+    "terror_security": 1,
+    "oil_economy": 3,
+    "regional": 9,
+    "exclude": 26
   },
-  "elapsedSeconds": 119,
-  "untranslatedFilteredCount": 22,
-  "untranslatedFilteredAt": "2026-07-12T00:20:50.670Z"
+  "elapsedSeconds": 186,
+  "untranslatedFilteredCount": 11,
+  "untranslatedFilteredAt": "2026-07-12T07:25:07.234Z"
 }
