@@ -27,7 +27,14 @@
     /에볼라[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
     /콩고[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
     /알리\s*파흘[\s\S]*?Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*역할/i,
-    /Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*역할\s*강조[\s\S]*?(?:내각|의회\s*본회의)/i
+    /Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*역할\s*강조[\s\S]*?(?:내각|의회\s*본회의)/i,
+
+    // NINA Hajj/Umrah electronic lottery notice hallucinated into an Al-Zaidi/cabinet/parliament item.
+    /Key=1305421/i,
+    /전자\s*하즈\s*추첨[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
+    /하지[\s\S]*?전자\s*추첨[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
+    /하즈\s*위원회[\s\S]*?전자\s*하즈\s*추첨[\s\S]*?Al-Zaidi\s*총리/i,
+    /내일\s*전자\s*하즈\s*추첨\s*신청\s*시작[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|정치적\s*맥락)/i
   ];
 
   function isCriticalBadText(text) {
