@@ -6,7 +6,14 @@
     /(?:Baghdad|바그다드)에서\s*여러\s*지역에서\s*폭발/i,
     /이란\s*방송[\s\S]*?내각\s*구성[\s\S]*?의회\s*활동/i,
     /이란\s*방송[\s\S]*?Al-Zaidi\s*총리/i,
-    /Key=1305445/i
+    /Key=1305445/i,
+
+    // NINA Najaf local-government story hallucinated into an Al-Zaidi/cabinet/parliament item.
+    /Al-Zaidi\s*총리[\s\S]*?나자프\s*주지사[\s\S]*?(?:내각\s*구성|의회\s*활동|정치적\s*맥락)/i,
+    /나자프\s*주지사[\s\S]*?정부\s*관계자[\s\S]*?Al-Zaidi\s*총리/i,
+    /Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*서비스\s*및\s*행정\s*역할/i,
+    /성스러운\s*알라위\s*성지[\s\S]*?나자프\s*주지사/i,
+    /Yusuf\s*Kanawi|유수프\s*카나위|يوسف\s*كناوي/i
   ];
 
   function isCriticalBadText(text) {
