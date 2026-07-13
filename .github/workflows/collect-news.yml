@@ -75,6 +75,9 @@ jobs:
       - name: Fix agency dateline location errors
         run: node scripts/fix-agency-dateline-location-errors.mjs
 
+      - name: Filter AI hallucinated actors
+        run: node scripts/filter-ai-hallucinated-actors.mjs
+
       - name: Filter irrelevant foreign news
         run: node scripts/filter-irrelevant-foreign-news.mjs
 
