@@ -14,6 +14,12 @@
       [/자이드\s+정부/g, "Al-Zaidi 총리 내각"],
       [/Ali\s+Al-Zaidi\s+총리/g, "Al-Zaidi 총리"],
       [/Al-Zaidi\s+총리\s+총리/g, "Al-Zaidi 총리"],
+      [/(?:Nouri\s+)+Al-Maliki(?:\s+前\s*총리)+/giu, "Nouri Al-Maliki 前 총리"],
+      [/Nouri\s+Al-Maliki\s+총리/giu, "Nouri Al-Maliki 前 총리"],
+      [/Nouri\s+Nouri\s+/giu, "Nouri "],
+      [/Nouri\s+Al-Maliki\s+前\s*총리(?:\s+前\s*총리)+/giu, "Nouri Al-Maliki 前 총리"],
+      [/前\s*총리(?:\s+前\s*총리)+/giu, "前 총리"],
+      [/총리(?:\s+총리)+/giu, "총리"],
       [/대규모\s*방문\s*위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
       [/대규모\s*방문위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
       [/대규모\s*방문\s*최고위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
@@ -21,7 +27,11 @@
       [/아르바인\s*기념일\s*준비/g, "아르바인 순례 준비"],
       [/아르바인\s*방문\s*준비/g, "아르바인 순례 준비"]
     ];
-    for (const [pattern, replacement] of replacements) out = out.replace(pattern, replacement);
+    for (let pass = 0; pass < 5; pass += 1) {
+      const before = out;
+      for (const [pattern, replacement] of replacements) out = out.replace(pattern, replacement);
+      if (out === before) break;
+    }
 
     out = out.replace(
       /이라크 내각 구성이 미국 방문 이후로 미뤄졌다\.\s*시아조정기구\(SCF\)(?:는|은)? 장관 임명 결정을 미국 방문 결과에 연계하고 있다\.\s*이는 정치적 불확실성을 더욱 부각시키고 있다\./g,
