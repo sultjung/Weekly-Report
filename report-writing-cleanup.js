@@ -13,7 +13,13 @@
       [/자이드\s+정부의\s+완성/g, "이라크 내각 구성"],
       [/자이드\s+정부/g, "Al-Zaidi 총리 내각"],
       [/Ali\s+Al-Zaidi\s+총리/g, "Al-Zaidi 총리"],
-      [/Al-Zaidi\s+총리\s+총리/g, "Al-Zaidi 총리"]
+      [/Al-Zaidi\s+총리\s+총리/g, "Al-Zaidi 총리"],
+      [/대규모\s*방문\s*위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
+      [/대규모\s*방문위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
+      [/대규모\s*방문\s*최고위원회\s*위원장/g, "대규모 순례행사 최고위원회 위원장"],
+      [/대규모\s*방문\s*위원회/g, "대규모 순례행사 최고위원회"],
+      [/아르바인\s*기념일\s*준비/g, "아르바인 순례 준비"],
+      [/아르바인\s*방문\s*준비/g, "아르바인 순례 준비"]
     ];
     for (const [pattern, replacement] of replacements) out = out.replace(pattern, replacement);
 
