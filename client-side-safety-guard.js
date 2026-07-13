@@ -20,7 +20,14 @@
     /Zurbatiya[\s\S]*?(?:아르바인|Arbaeen|순례|방문\s*준비)[\s\S]*?Al-Zaidi\s*총리/i,
     /Al-Zaidi\s*총리[\s\S]*?(?:아르바인|Arbaeen|순례|방문\s*준비)[\s\S]*?(?:내각\s*구성|의회|정치적\s*불확실성)/i,
     /Zurbatiya[\s\S]*?(?:내각\s*구성|의회\s*본회의|이라크\s*의회)[\s\S]*?Al-Zaidi\s*총리/i,
-    /Dijla\s*및\s*Euphrates\s*강의\s*오염/i
+    /Dijla\s*및\s*Euphrates\s*강의\s*오염/i,
+
+    // NINA foreign health/general news, especially Congo/Ebola, contaminated by sidebar politics links.
+    /Key=1305453/i,
+    /에볼라[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
+    /콩고[\s\S]*?(?:Al-Zaidi\s*총리|내각|의회|지방\s*정부)/i,
+    /알리\s*파흘[\s\S]*?Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*역할/i,
+    /Al-Zaidi\s*총리[\s\S]*?지방\s*정부의\s*역할\s*강조[\s\S]*?(?:내각|의회\s*본회의)/i
   ];
 
   function isCriticalBadText(text) {
