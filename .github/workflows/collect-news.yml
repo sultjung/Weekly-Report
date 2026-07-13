@@ -72,6 +72,9 @@ jobs:
       - name: Fix recursive glossary artifacts
         run: node scripts/fix-recursive-glossary-artifacts.mjs
 
+      - name: Fix known political summaries
+        run: node scripts/fix-known-political-summaries.mjs
+
       - name: Filter untranslated news
         run: node scripts/filter-untranslated-news.mjs
 
