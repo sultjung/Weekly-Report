@@ -31,7 +31,6 @@ function canonicalUrl(value = "") {
     const url = new URL(raw);
     const host = url.hostname.replace(/^www\./i, "").toLowerCase();
     let pathname = url.pathname.replace(/\/+$/g, "");
-    // Keep stable article identifiers, drop tracking/query/cache fragments.
     if (host.includes("964media.com")) {
       const m = pathname.match(/\/(\d+)(?:\/)?$/);
       if (m) pathname = `/${m[1]}`;
@@ -46,23 +45,45 @@ function canonicalUrl(value = "") {
   }
 }
 
+function fullArticleText(article = {}) {
+  return [
+    article.source,
+    article.titleKo,
+    article.title,
+    article.summaryKo,
+    article.description,
+    article.weeklyReportReason,
+    article.reportBullet,
+    ...(Array.isArray(article.reportSubBullets) ? article.reportSubBullets : []),
+    article.reportImplication,
+    ...(Array.isArray(article.actors) ? article.actors : []),
+    article.location
+  ].filter(Boolean).join(" ");
+}
+
+function isMalikiAntiCorruptionDuplicate(article = {}) {
+  const x = normalizeText(fullArticleText(article));
+  return /(?:nouri\s*)?al[- ]?maliki|말리키|المالكي/.test(x)
+    && /al[- ]?zaidi|자이디|الزيدي|반부패/.test(x)
+    && /al[- ]?sudani|前\s*정부|전\s*정부|السوداني|약탈|فرهود|부패|فساد/.test(x)
+    && /반부패|corruption|مكافحة الفساد|부패|فساد/.test(x);
+}
+
 function articleSignature(article = {}) {
   const source = normalizeText(article.source || "");
   const title = normalizeText(article.titleKo || article.title || "");
   const bullet = normalizeText(article.reportBullet || "");
   const summary = normalizeText(article.summaryKo || article.description || "");
 
-  // Exact URL is the strongest signal.
-  const url = canonicalUrl(article.url || article.link || "");
-  if (url) return `url:${url}`;
-
-  // Known duplicated high-value Maliki article, sometimes collected with variant dates/URLs.
-  const combo = `${title} ${bullet} ${summary}`;
-  if (/maliki|말리키|al maliki|al-maliki/.test(combo) && /반부패|corruption|فساد/.test(combo) && /zaidi|자이디|al zaidi|al-zaidi/.test(combo)) {
+  // Content-level known duplicates must be checked before URL.
+  // The same story may be collected with different URLs/dates/caches but should appear once.
+  if (isMalikiAntiCorruptionDuplicate(article)) {
     return "known:maliki-anti-corruption-interview";
   }
 
-  // Conservative content signature. Only collapse when title and report bullet are both effectively the same.
+  const url = canonicalUrl(article.url || article.link || "");
+  if (url) return `url:${url}`;
+
   if (source && title && bullet && title.length >= 14 && bullet.length >= 18) {
     return `content:${source}|${title}|${bullet}`;
   }
@@ -88,15 +109,19 @@ function qualityScore(article = {}) {
 }
 
 function chooseBetter(a, b) {
-  const aScore = qualityScore(a);
-  const bScore = qualityScore(b);
+  const aSig = articleSignature(a);
+  const bSig = articleSignature(b);
   const aTime = publishedTime(a);
   const bTime = publishedTime(b);
 
-  // If one entry is clearly higher quality, keep it.
-  if (Math.abs(aScore - bScore) >= 8) return bScore > aScore ? b : a;
+  // For known duplicate stories, earliest published date is usually the true source date.
+  if (aSig === "known:maliki-anti-corruption-interview" && bSig === aSig && aTime !== bTime) {
+    return bTime < aTime ? b : a;
+  }
 
-  // For duplicates, earlier published date is usually the true source date.
+  const aScore = qualityScore(a);
+  const bScore = qualityScore(b);
+  if (Math.abs(aScore - bScore) >= 8) return bScore > aScore ? b : a;
   if (aTime !== bTime) return bTime < aTime ? b : a;
   return bScore > aScore ? b : a;
 }
