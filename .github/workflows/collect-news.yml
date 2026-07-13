@@ -72,6 +72,9 @@ jobs:
       - name: Filter untranslated news
         run: node scripts/filter-untranslated-news.mjs
 
+      - name: Fix agency dateline location errors
+        run: node scripts/fix-agency-dateline-location-errors.mjs
+
       - name: Filter irrelevant foreign news
         run: node scripts/filter-irrelevant-foreign-news.mjs
 
