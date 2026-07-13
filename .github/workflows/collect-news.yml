@@ -55,7 +55,7 @@ jobs:
         run: |
           for attempt in 1 2 3; do
             echo "Collect Iraq weekly news attempt ${attempt}/3"
-            if node scripts/prepare-expanded-weekly-collector.mjs && node scripts/prepare-human-analysis-prompt-v4.mjs && node scripts/collect-news.expanded.mjs; then
+            if node scripts/prepare-expanded-weekly-collector.mjs && node scripts/prepare-bismayah-priority.mjs && node scripts/prepare-human-analysis-prompt-v4.mjs && node scripts/collect-news.expanded.mjs; then
               echo "Collect Iraq weekly news succeeded"
               exit 0
             fi
