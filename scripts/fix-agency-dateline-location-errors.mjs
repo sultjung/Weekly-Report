@@ -30,15 +30,32 @@ function stripAgencyDateline(value = "") {
 }
 
 function textOf(article = {}) {
-  return [article.title, article.description, article.cleanText, article.fullText, article.titleKo, article.summaryKo, article.reportBullet, ...(article.reportSubBullets || []), article.reportImplication, article.location]
-    .filter(Boolean)
-    .join("\n");
+  return [
+    article.url,
+    article.title,
+    article.description,
+    article.cleanText,
+    article.fullText,
+    article.titleKo,
+    article.summaryKo,
+    article.weeklyReportReason,
+    article.reportBullet,
+    ...(article.reportSubBullets || []),
+    article.reportImplication,
+    article.location,
+    ...(article.actors || [])
+  ].filter(Boolean).join("\n");
 }
 
 function isIranExplosionDatelineError(article = {}) {
   const raw = textOf(article);
-  const beginsWithDateline = [article.description, article.cleanText, article.fullText].some((v) => NINA_DATELINE_RE.test(String(v || "")) || INA_DATELINE_RE.test(String(v || "")));
-  return beginsWithDateline && IRAN_TV_RE.test(raw) && EXPLOSION_RE.test(raw) && IRAN_EXPLOSION_LOCATION_RE.test(raw);
+  const hasKnownBadUrl = /Key=1305445/i.test(String(article.url || ""));
+  const beginsWithDateline = [article.description, article.cleanText, article.fullText]
+    .some((v) => NINA_DATELINE_RE.test(String(v || "")) || INA_DATELINE_RE.test(String(v || "")));
+  const hasIranExplosionFacts = IRAN_TV_RE.test(raw) && EXPLOSION_RE.test(raw) && IRAN_EXPLOSION_LOCATION_RE.test(raw);
+  const hasKoreanBadSummary = /(?:이라크\s*)?(?:Baghdad|바그다드)에서\s*여러\s*지역에서\s*폭발|이란\s*방송.*(?:Baghdad|바그다드).*폭발/i.test(raw);
+  const hasHallucinatedIraqPolitics = /Al-Zaidi\s*총리|내각\s*구성|의회\s*활동\s*재개|이라크\s*주간\s*테러\s*상황|이라크의\s*치안\s*상황/i.test(raw);
+  return hasKnownBadUrl || (beginsWithDateline && hasIranExplosionFacts) || (hasIranExplosionFacts && hasKoreanBadSummary) || (hasIranExplosionFacts && hasHallucinatedIraqPolitics);
 }
 
 function cleanBaghdadFalseLocation(value = "") {
@@ -54,6 +71,9 @@ function cleanBaghdadFalseLocation(value = "") {
     .replace(/이라크\s*내각\s*구성\s*지연\s*및\s*의회\s*활동\s*재개와\s*관련된\s*정치적\s*동향을\s*반영하는\s*사건/g, "이란 남부 지역 폭발 관련 동향")
     .replace(/내각\s*구성\s*지연이\s*지속될\s*가능성\s*제기/g, "역내 안보 불확실성 확대 가능성 제기")
     .replace(/정치적\s*불안정성이\s*심화되며,?\s*/g, "역내 긴장 고조로 ")
+    .replace(/Al-Zaidi\s*총리/g, "")
+    .replace(/내각\s*구성(?:과| 및)?\s*의회\s*활동\s*재개[^.。]*[.。]?/g, "")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
@@ -88,14 +108,14 @@ function fixArticle(article = {}) {
     location: "Qeshm, Jask, Bandar Abbas, Sirik, Minab",
     sourceReliability: "NINA 인용 보도 / 이란 방송 발표",
     datelineLocationCorrected: true,
-    datelineCorrectionReason: "Baghdad/NINA dateline was source filing location, not incident location."
+    datelineCorrectionReason: "Baghdad/NINA dateline was source filing location, not incident location. AI hallucinated Baghdad/Iraq political context."
   };
 
   for (const field of ["summaryKo", "weeklyReportReason", "reportBullet", "reportImplication", "location"]) {
     fixed[field] = cleanBaghdadFalseLocation(fixed[field]);
   }
   fixed.reportSubBullets = (fixed.reportSubBullets || []).map(cleanBaghdadFalseLocation);
-  fixed.actors = (fixed.actors || []).filter((x) => !/Baghdad|바그다드/i.test(String(x || "")));
+  fixed.actors = (fixed.actors || []).filter((x) => !/Baghdad|바그다드|Al-Zaidi/i.test(String(x || "")));
 
   return fixed;
 }
