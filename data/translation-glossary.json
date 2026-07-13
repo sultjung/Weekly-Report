@@ -1,7 +1,7 @@
 {
   "version": "weekly-report-translation-glossary-v1",
   "description": "이라크 주간 종합상황보고서용 누적 번역 용어집. 사용자가 지정한 용어는 여기에 추가하고, collect-news workflow가 뉴스 수집 후 자동 적용한다.",
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-07-13",
   "terms": [
     {
       "source": "الهيئة الوطنية للاستثمار",
@@ -92,6 +92,27 @@
       "preferredKo": "이라크 의회",
       "aliases": ["Iraqi Parliament", "House of Representatives", "국회", "하원"],
       "note": "이라크 의회 표기",
+      "enabled": true
+    },
+    {
+      "source": "رئيس اللجنة العليا للزيارات المليونية",
+      "preferredKo": "대규모 순례행사 최고위원회 위원장",
+      "aliases": ["대규모 방문 위원회 위원장", "대규모 방문위원회 위원장", "대규모 방문 최고위원회 위원장", "백만 방문 위원회 위원장", "백만 방문 최고위원회 위원장", "대규모 순례 방문 위원회 위원장", "High Committee for Million-Man Visits Chairman", "Chairman of the Higher Committee for Million Pilgrimages", "رئيس اللجنة العليا للزيارة المليونية"],
+      "note": "아르바인 등 수백만 명 규모 종교순례 행사를 담당하는 최고위원회 위원장. 일반 방문이 아님",
+      "enabled": true
+    },
+    {
+      "source": "اللجنة العليا للزيارات المليونية",
+      "preferredKo": "대규모 순례행사 최고위원회",
+      "aliases": ["대규모 방문 위원회", "대규모 방문위원회", "대규모 방문 최고위원회", "백만 방문 위원회", "백만 방문 최고위원회", "대규모 순례 방문 위원회", "High Committee for Million-Man Visits", "Higher Committee for Million Pilgrimages", "اللجنة العليا للزيارة المليونية", "لجنة الزيارات المليونية"],
+      "note": "الزيارات المليونية는 일반 방문이 아니라 아르바인 등 대규모 종교순례 행사를 뜻함",
+      "enabled": true
+    },
+    {
+      "source": "الزيارة الأربعينية",
+      "preferredKo": "아르바인 순례",
+      "aliases": ["زيارة الأربعين", "أربعينية الإمام الحسين", "Arbaeen pilgrimage", "Arbaeen visit", "아르바인 기념일", "아르바인 방문", "아르바인 행사"],
+      "note": "아르바인 관련 زيارة는 일반 방문/기념일보다 순례 의미가 강함",
       "enabled": true
     },
     {
@@ -192,6 +213,12 @@
     { "pattern": "Al-Sudani\\s+총리", "replacement": "Al-Sudani 前 총리" },
     { "pattern": "Nouri\\s+Al-Maliki\\s+前\\s*총리\\s+前\\s*총리", "replacement": "Nouri Al-Maliki 前 총리" },
     { "pattern": "Nouri\\s+Al-Maliki\\s+총리", "replacement": "Nouri Al-Maliki 前 총리" },
-    { "pattern": "이라크\\s+이라크\\s+의회", "replacement": "이라크 의회" }
+    { "pattern": "이라크\\s+이라크\\s+의회", "replacement": "이라크 의회" },
+    { "pattern": "대규모\\s*방문\\s*위원회\\s*위원장", "replacement": "대규모 순례행사 최고위원회 위원장" },
+    { "pattern": "대규모\\s*방문위원회\\s*위원장", "replacement": "대규모 순례행사 최고위원회 위원장" },
+    { "pattern": "대규모\\s*방문\\s*최고위원회\\s*위원장", "replacement": "대규모 순례행사 최고위원회 위원장" },
+    { "pattern": "대규모\\s*방문\\s*위원회", "replacement": "대규모 순례행사 최고위원회" },
+    { "pattern": "아르바인\\s*기념일\\s*준비", "replacement": "아르바인 순례 준비" },
+    { "pattern": "아르바인\\s*방문\\s*준비", "replacement": "아르바인 순례 준비" }
   ]
 }
