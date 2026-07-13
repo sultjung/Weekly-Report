@@ -22,6 +22,76 @@
     "sitemapUrls": ["https://ninanews.com/sitemap.xml"]
   },
   {
+    "id": "ina",
+    "name": "Iraqi News Agency",
+    "baseUrl": "https://ina.iq/",
+    "enabled": true,
+    "focus": "politics",
+    "listPages": ["https://ina.iq/", "https://ina.iq/political", "https://ina.iq/security", "https://ina.iq/economy"],
+    "rssUrls": ["https://ina.iq/rss.php"],
+    "sitemapUrls": ["https://ina.iq/sitemap.xml"]
+  },
+  {
+    "id": "baghdad-today",
+    "name": "Baghdad Today",
+    "baseUrl": "https://baghdadtoday.news/",
+    "enabled": true,
+    "focus": "politics",
+    "listPages": ["https://baghdadtoday.news/", "https://baghdadtoday.news/news/politics", "https://baghdadtoday.news/news/security", "https://baghdadtoday.news/news/economy"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://baghdadtoday.news/sitemap.xml"]
+  },
+  {
+    "id": "media-964",
+    "name": "964media",
+    "baseUrl": "https://964media.com/",
+    "enabled": true,
+    "focus": "politics",
+    "listPages": ["https://964media.com/", "https://964media.com/politics/", "https://964media.com/security/", "https://964media.com/economy/"],
+    "rssUrls": ["https://964media.com/feed/"],
+    "sitemapUrls": ["https://964media.com/sitemap.xml"]
+  },
+  {
+    "id": "al-aalem",
+    "name": "Al-Aalem",
+    "baseUrl": "https://al-aalem.com/",
+    "enabled": true,
+    "focus": "opinion-analysis",
+    "listPages": ["https://al-aalem.com/", "https://al-aalem.com/opinion", "https://al-aalem.com/politics"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://al-aalem.com/sitemap.xml"]
+  },
+  {
+    "id": "face-iraq",
+    "name": "Face Iraq",
+    "baseUrl": "https://www.faceiraq.org/",
+    "enabled": true,
+    "focus": "security-terror-ied-aggregation",
+    "listPages": ["https://www.faceiraq.org/", "https://www.faceiraq.org/news/security", "https://www.faceiraq.org/news/politics"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://www.faceiraq.org/sitemap.xml"]
+  },
+  {
+    "id": "reuters-middle-east",
+    "name": "Reuters Middle East",
+    "baseUrl": "https://www.reuters.com/",
+    "enabled": true,
+    "focus": "regional-international",
+    "listPages": ["https://www.reuters.com/world/middle-east/", "https://www.reuters.com/world/"],
+    "rssUrls": [],
+    "sitemapUrls": ["https://www.reuters.com/arc/outboundfeeds/news-sitemap/?outputType=xml"]
+  },
+  {
+    "id": "middle-east-forum",
+    "name": "Middle East Forum",
+    "baseUrl": "https://www.meforum.org/",
+    "enabled": true,
+    "focus": "regional-opinion-analysis",
+    "listPages": ["https://www.meforum.org/", "https://www.meforum.org/middle-east-quarterly", "https://www.meforum.org/iraq", "https://www.meforum.org/syria", "https://www.meforum.org/iran"],
+    "rssUrls": ["https://www.meforum.org/feed"],
+    "sitemapUrls": ["https://www.meforum.org/sitemap.xml"]
+  },
+  {
     "id": "imn",
     "name": "Iraqi Media Network",
     "baseUrl": "https://www.imn.iq/",
