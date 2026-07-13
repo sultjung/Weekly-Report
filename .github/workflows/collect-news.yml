@@ -87,6 +87,9 @@ jobs:
       - name: Filter irrelevant foreign news
         run: node scripts/filter-irrelevant-foreign-news.mjs
 
+      - name: Deduplicate news articles
+        run: node scripts/deduplicate-news-articles.mjs
+
       - name: Sync latest main before commit
         run: |
           git config pull.rebase true
