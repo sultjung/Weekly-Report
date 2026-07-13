@@ -1,11 +1,26 @@
 // Client-side corrections for known high-value articles already present in data/news.json.
 // This updates visible cards until the next collection run rewrites data/news.json.
 (function () {
+  function canonicalUrl(url) {
+    const raw = String(url || "").trim();
+    if (!raw) return "";
+    try {
+      const u = new URL(raw);
+      const host = u.hostname.replace(/^www\./i, "").toLowerCase();
+      let path = u.pathname.replace(/\/+$/g, "");
+      const m = path.match(/\/(\d+)$/);
+      if (host.includes("964media.com") && m) path = `/${m[1]}`;
+      return `${host}${path}`.toLowerCase();
+    } catch {
+      return raw.toLowerCase().replace(/[?#].*$/g, "").replace(/\/+$/g, "");
+    }
+  }
+
   function isMalikiCard(card) {
-    const text = card.textContent || "";
     const sourceBtn = card.querySelector("button[data-url]");
-    const url = sourceBtn?.dataset?.url || "";
-    return /964media\.com\/696180/i.test(url) || (/Nouri\s+Al-Maliki|말리키|Al-Maliki/i.test(text) && /전투탱크|반부패|부패|Al-Zaidi/i.test(text));
+    const url = canonicalUrl(sourceBtn?.dataset?.url || "");
+    // Do not broadly rewrite every Maliki card. This correction is only for the known 964media article.
+    return url === "964media.com/696180";
   }
 
   function setText(el, text) {
