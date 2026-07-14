@@ -43,7 +43,7 @@ jobs:
       - name: Collect Iraq weekly news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "12"
           MAX_TOTAL: "260"
@@ -52,10 +52,19 @@ jobs:
           SOURCE_CONCURRENCY: "3"
           ARTICLE_FETCH_CONCURRENCY: "4"
           AI_CONCURRENCY: "5"
+          FULLTEXT_HYDRATION_CONCURRENCY: "4"
+          MIN_FULLTEXT_CHARS_FOR_AI: "500"
+          MIN_RSS_DESCRIPTION_CHARS_FOR_AI: "300"
+          HIGH_PRIORITY_RSS_FALLBACK_SCORE: "90"
+          MAX_NEW_AI_ITEMS: "120"
         run: |
           for attempt in 1 2 3; do
             echo "Collect Iraq weekly news attempt ${attempt}/3"
-            if node scripts/prepare-expanded-weekly-collector.mjs && node scripts/prepare-bismayah-priority.mjs && node scripts/prepare-human-analysis-prompt-v4.mjs && node scripts/collect-news.expanded.mjs; then
+            if node scripts/prepare-expanded-weekly-collector.mjs \
+              && node scripts/prepare-bismayah-priority.mjs \
+              && node scripts/prepare-human-analysis-prompt-v4.mjs \
+              && node scripts/prepare-evidence-first-summary.mjs \
+              && node scripts/collect-news.expanded.mjs; then
               echo "Collect Iraq weekly news succeeded"
               exit 0
             fi

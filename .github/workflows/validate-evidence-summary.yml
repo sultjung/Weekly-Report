@@ -1,0 +1,37 @@
+name: Validate Evidence-First Weekly Summary
+
+on:
+  pull_request:
+    paths:
+      - "scripts/collect-news.mjs"
+      - "scripts/prepare-expanded-weekly-collector.mjs"
+      - "scripts/prepare-bismayah-priority.mjs"
+      - "scripts/prepare-human-analysis-prompt-v4.mjs"
+      - "scripts/prepare-evidence-first-summary.mjs"
+      - ".github/workflows/collect-news.yml"
+      - ".github/workflows/validate-evidence-summary.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Generate and syntax-check collector
+        run: |
+          node --check scripts/prepare-evidence-first-summary.mjs
+          node scripts/prepare-expanded-weekly-collector.mjs
+          node scripts/prepare-bismayah-priority.mjs
+          node scripts/prepare-human-analysis-prompt-v4.mjs
+          node scripts/prepare-evidence-first-summary.mjs
+          node --check scripts/collect-news.expanded.mjs
