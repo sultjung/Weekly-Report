@@ -3,11 +3,13 @@ name: Validate Evidence-First Weekly Summary
 on:
   pull_request:
     paths:
+      - "data/iraq-media-sources.json"
       - "scripts/collect-news.mjs"
       - "scripts/prepare-expanded-weekly-collector.mjs"
       - "scripts/prepare-bismayah-priority.mjs"
       - "scripts/prepare-human-analysis-prompt-v4.mjs"
       - "scripts/prepare-evidence-first-summary.mjs"
+      - "scripts/prepare-exclude-nina.mjs"
       - ".github/workflows/collect-news.yml"
       - ".github/workflows/validate-evidence-summary.yml"
   workflow_dispatch:
@@ -30,8 +32,14 @@ jobs:
       - name: Generate and syntax-check collector
         run: |
           node --check scripts/prepare-evidence-first-summary.mjs
+          node --check scripts/prepare-exclude-nina.mjs
           node scripts/prepare-expanded-weekly-collector.mjs
           node scripts/prepare-bismayah-priority.mjs
           node scripts/prepare-human-analysis-prompt-v4.mjs
           node scripts/prepare-evidence-first-summary.mjs
+          node scripts/prepare-exclude-nina.mjs
           node --check scripts/collect-news.expanded.mjs
+          if grep -qiE 'ninanews\.com|"id"[[:space:]]*:[[:space:]]*"nina"' data/iraq-media-sources.json; then
+            echo "NINA still exists in the configured media source list"
+            exit 1
+          fi
