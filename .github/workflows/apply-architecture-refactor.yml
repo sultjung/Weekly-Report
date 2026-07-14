@@ -38,16 +38,17 @@ jobs:
           from pathlib import Path
           p = Path('scripts/apply-architecture-refactor.mjs')
           text = p.read_text()
+          dollar = '$'
           replacements = {
-            '${script}': r'\${script}',
-            '${required}': r'\${required}',
-            '${scriptRefs.join(", ")}': r'\${scriptRefs.join(", ")}',
-            '${queries.length}': r'\${queries.length}',
-            '${sources.length}': r'\${sources.length}',
-            '${syntaxFiles.length}': r'\${syntaxFiles.length}',
-            '${{ secrets.OPENAI_API_KEY }}': r'\${{ secrets.OPENAI_API_KEY }}',
-            "${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}": r"\${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}",
-            '${attempt}': r'\${attempt}',
+            dollar + '{script}': '\\' + dollar + '{script}',
+            dollar + '{required}': '\\' + dollar + '{required}',
+            dollar + '{scriptRefs.join(", ")}': '\\' + dollar + '{scriptRefs.join(", ")}',
+            dollar + '{queries.length}': '\\' + dollar + '{queries.length}',
+            dollar + '{sources.length}': '\\' + dollar + '{sources.length}',
+            dollar + '{syntaxFiles.length}': '\\' + dollar + '{syntaxFiles.length}',
+            dollar + '{{ secrets.OPENAI_API_KEY }}': '\\' + dollar + '{{ secrets.OPENAI_API_KEY }}',
+            dollar + "{{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}": '\\' + dollar + "{{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}",
+            dollar + '{attempt}': '\\' + dollar + '{attempt}',
           }
           for old, new in replacements.items():
             text = text.replace(old, new)
