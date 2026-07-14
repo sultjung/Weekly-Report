@@ -1,23 +1,16 @@
-name: Validate Evidence-First Weekly Summary
+name: Validate Weekly-Report Structure
 
 on:
   pull_request:
     paths:
-      - "data/iraq-media-sources.json"
-      - "data/search-keywords.json"
+      - "index.html"
+      - "app.js"
       - "package.json"
-      - "scripts/collect-news.mjs"
-      - "scripts/run-collector.mjs"
-      - "scripts/prepare-search-keywords.mjs"
-      - "scripts/prepare-expanded-weekly-collector.mjs"
-      - "scripts/prepare-bismayah-priority.mjs"
-      - "scripts/prepare-human-analysis-prompt-v4.mjs"
-      - "scripts/prepare-evidence-first-summary.mjs"
-      - "scripts/prepare-exclude-nina.mjs"
-      - "scripts/prepare-report-scope-guard.mjs"
-      - "scripts/filter-irrelevant-foreign-news.mjs"
-      - ".github/workflows/collect-news.yml"
-      - ".github/workflows/validate-evidence-summary.yml"
+      - "package-lock.json"
+      - "data/search-keywords.json"
+      - "data/iraq-media-sources.json"
+      - "scripts/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 permissions:
@@ -34,24 +27,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
+          cache: npm
 
-      - name: Generate and syntax-check collector
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate project structure and syntax
+        run: npm run validate
+
+      - name: Smoke-test DOCX generation
         run: |
-          node --check scripts/run-collector.mjs
-          node --check scripts/prepare-search-keywords.mjs
-          node --check scripts/prepare-evidence-first-summary.mjs
-          node --check scripts/prepare-exclude-nina.mjs
-          node --check scripts/prepare-report-scope-guard.mjs
-          node --check scripts/filter-irrelevant-foreign-news.mjs
-          npm run collect:prepare
-          node --check scripts/collect-news.expanded.mjs
-          node -e 'const fs=require("fs"); const j=JSON.parse(fs.readFileSync("data/search-keywords.json","utf8")); const q=Object.entries(j).filter(([k])=>!k.startsWith("_")).flatMap(([,v])=>v); if(q.length!==137) throw new Error(`Expected 137 queries, found ${q.length}`); if(new Set(q).size!==q.length) throw new Error("Duplicate search queries found");'
-          grep -q "شركة هانوا" scripts/collect-news.expanded.mjs
-          grep -q "بسماية" scripts/collect-news.expanded.mjs
-          grep -q "제3국의 현지 치안 사건" scripts/collect-news.expanded.mjs
-          grep -q "if (!hasWeeklyReportScope(item)) continue" scripts/collect-news.expanded.mjs
-          grep -q '"collect": "node scripts/run-collector.mjs"' package.json
-          if grep -qiE 'ninanews\.com|"id"[[:space:]]*:[[:space:]]*"nina"' data/iraq-media-sources.json; then
-            echo "NINA still exists in the configured media source list"
-            exit 1
-          fi
+          node - <<'NODE' > /tmp/selection.json
+          const fs = require('fs');
+          const payload = JSON.parse(fs.readFileSync('data/news.json', 'utf8'));
+          const article = (payload.articles || []).find((item) => item.titleKo && ['politics','terror_security','oil_economy','regional'].includes(item.category3));
+          if (!article) throw new Error('No report article available for smoke test');
+          process.stdout.write(JSON.stringify([article]));
+          NODE
+          SELECTION_JSON="$(cat /tmp/selection.json)" REPORT_DATE="2026-07-14" REPORT_START_DATE="2026-07-07" REPORT_END_DATE="2026-07-13" npm run report
+          test -s reports/latest.docx
