@@ -65,6 +65,7 @@ jobs:
               && node scripts/prepare-human-analysis-prompt-v4.mjs \
               && node scripts/prepare-evidence-first-summary.mjs \
               && node scripts/prepare-exclude-nina.mjs \
+              && node scripts/prepare-report-scope-guard.mjs \
               && node scripts/collect-news.expanded.mjs; then
               echo "Collect Iraq weekly news succeeded"
               exit 0
