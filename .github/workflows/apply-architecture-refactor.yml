@@ -38,6 +38,16 @@ jobs:
       - name: Apply architecture refactor
         run: node scripts/apply-architecture-refactor.mjs
 
+      - name: Correct generated collector typo
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/collect-news.mjs')
+          text = p.read_text()
+          text = text.replace('.filter(Bolean));', '.filter(Boolean);')
+          p.write_text(text)
+          PY
+
       - name: Install dependencies and create lockfile
         run: npm install --no-audit --no-fund
 
