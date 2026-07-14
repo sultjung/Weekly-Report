@@ -42,7 +42,20 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Validate structure and syntax
-        run: npm run validate
+        run: |
+          set +e
+          npm run validate > /tmp/validate.log 2>&1
+          status=$?
+          cat /tmp/validate.log
+          exit $status
+
+      - name: Upload validation diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: architecture-validation-error
+          path: /tmp/validate.log
+          if-no-files-found: error
 
       - name: Smoke-test DOCX generation
         run: |
