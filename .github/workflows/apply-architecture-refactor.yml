@@ -49,26 +49,27 @@ jobs:
               raise RuntimeError(f'{label}: expected 1 block, found {count}')
             return updated
 
-          text = escape_block(
-            r'(await write\("scripts/postprocess-news\.mjs", `)(.*?)(`\);)',
-            text,
-            'postprocess template'
-          )
-          text = escape_block(
-            r'(await write\("scripts/validate-project\.mjs", `)(.*?)(`\);)',
-            text,
-            'validation template'
-          )
-          text = escape_block(
-            r'(collectWorkflow = collectWorkflow\.slice\(0, collectStart\) \+ `)(.*?)(` \+ collectWorkflow\.slice\(collectEnd\);)',
-            text,
-            'collect workflow template'
-          )
+          text = escape_block(r'(await write\("scripts/postprocess-news\.mjs", `)(.*?)(`\);)', text, 'postprocess template')
+          text = escape_block(r'(await write\("scripts/validate-project\.mjs", `)(.*?)(`\);)', text, 'validation template')
+          text = escape_block(r'(collectWorkflow = collectWorkflow\.slice\(0, collectStart\) \+ `)(.*?)(` \+ collectWorkflow\.slice\(collectEnd\);)', text, 'collect workflow template')
           p.write_text(text)
           PY
 
       - name: Apply architecture refactor
-        run: node scripts/apply-architecture-refactor.mjs
+        run: |
+          set +e
+          node scripts/apply-architecture-refactor.mjs > /tmp/refactor.log 2>&1
+          status=$?
+          cat /tmp/refactor.log
+          exit $status
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: architecture-refactor-error
+          path: /tmp/refactor.log
+          if-no-files-found: error
 
       - name: Install dependencies and create lockfile
         run: npm install --no-audit --no-fund
