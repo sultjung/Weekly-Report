@@ -32,6 +32,28 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Escape generated template expressions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/apply-architecture-refactor.mjs')
+          text = p.read_text()
+          replacements = {
+            '${script}': r'\${script}',
+            '${required}': r'\${required}',
+            '${scriptRefs.join(", ")}': r'\${scriptRefs.join(", ")}',
+            '${queries.length}': r'\${queries.length}',
+            '${sources.length}': r'\${sources.length}',
+            '${syntaxFiles.length}': r'\${syntaxFiles.length}',
+            '${{ secrets.OPENAI_API_KEY }}': r'\${{ secrets.OPENAI_API_KEY }}',
+            "${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}": r"\${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}",
+            '${attempt}': r'\${attempt}',
+          }
+          for old, new in replacements.items():
+            text = text.replace(old, new)
+          p.write_text(text)
+          PY
+
       - name: Apply architecture refactor
         run: node scripts/apply-architecture-refactor.mjs
 
