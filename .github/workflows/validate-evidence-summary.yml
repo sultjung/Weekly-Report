@@ -10,6 +10,8 @@ on:
       - "scripts/prepare-human-analysis-prompt-v4.mjs"
       - "scripts/prepare-evidence-first-summary.mjs"
       - "scripts/prepare-exclude-nina.mjs"
+      - "scripts/prepare-report-scope-guard.mjs"
+      - "scripts/filter-irrelevant-foreign-news.mjs"
       - ".github/workflows/collect-news.yml"
       - ".github/workflows/validate-evidence-summary.yml"
   workflow_dispatch:
@@ -33,12 +35,17 @@ jobs:
         run: |
           node --check scripts/prepare-evidence-first-summary.mjs
           node --check scripts/prepare-exclude-nina.mjs
+          node --check scripts/prepare-report-scope-guard.mjs
+          node --check scripts/filter-irrelevant-foreign-news.mjs
           node scripts/prepare-expanded-weekly-collector.mjs
           node scripts/prepare-bismayah-priority.mjs
           node scripts/prepare-human-analysis-prompt-v4.mjs
           node scripts/prepare-evidence-first-summary.mjs
           node scripts/prepare-exclude-nina.mjs
+          node scripts/prepare-report-scope-guard.mjs
           node --check scripts/collect-news.expanded.mjs
+          grep -q "제3국의 현지 치안 사건" scripts/collect-news.expanded.mjs
+          grep -q "if (!hasWeeklyReportScope(item)) continue" scripts/collect-news.expanded.mjs
           if grep -qiE 'ninanews\.com|"id"[[:space:]]*:[[:space:]]*"nina"' data/iraq-media-sources.json; then
             echo "NINA still exists in the configured media source list"
             exit 1
