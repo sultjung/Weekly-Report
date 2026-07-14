@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   refactor:
-    if: github.head_ref == 'agent/simplify-weekly-report-architecture' || github.ref_name == 'agent/simplify-weekly-report-architecture'
+    if: (github.head_ref == 'agent/simplify-weekly-report-architecture' || github.ref_name == 'agent/simplify-weekly-report-architecture') && !contains(github.event.head_commit.message, 'Simplify Weekly-Report architecture')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -65,32 +65,19 @@ jobs:
           SELECTION_JSON="$(cat /tmp/selection.json)" REPORT_DATE="2026-07-14" REPORT_START_DATE="2026-07-07" REPORT_END_DATE="2026-07-13" npm run report
           test -s reports/latest.docx
 
-      - name: Remove smoke-test and one-time helper files
+      - name: Prepare non-workflow refactor commit
         run: |
           rm -f reports/latest.docx reports/latest.json
           find reports/generated -type f ! -name '.gitkeep' -delete
           git checkout -- data/selected-news.json reports || true
           rm -f scripts/apply-architecture-refactor.mjs.b64
+          git checkout HEAD -- .github/workflows
 
-      - name: Commit refactored architecture
+      - name: Commit and push refactored code
         run: |
-          set +e
-          {
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git diff --cached --stat
-            git commit -m "Simplify Weekly-Report architecture"
-            git push origin HEAD:agent/simplify-weekly-report-architecture
-          } > /tmp/push.log 2>&1
-          status=$?
-          cat /tmp/push.log
-          exit $status
-
-      - name: Upload push diagnostics
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: architecture-push-error
-          path: /tmp/push.log
-          if-no-files-found: error
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --stat
+          git commit -m "Simplify Weekly-Report architecture"
+          git push origin HEAD:agent/simplify-weekly-report-architecture
