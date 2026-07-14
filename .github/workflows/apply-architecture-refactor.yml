@@ -32,44 +32,11 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Escape generated template blocks
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          p = Path('scripts/apply-architecture-refactor.mjs')
-          text = p.read_text()
-
-          def escape_block(pattern, source, label):
-            def repl(match):
-              return match.group(1) + match.group(2).replace('${', r'\${') + match.group(3)
-            updated, count = re.subn(pattern, repl, source, flags=re.S)
-            if count != 1:
-              raise RuntimeError(f'{label}: expected 1 block, found {count}')
-            return updated
-
-          text = escape_block(r'(await write\("scripts/postprocess-news\.mjs", `)(.*?)(`\);)', text, 'postprocess template')
-          text = escape_block(r'(await write\("scripts/validate-project\.mjs", `)(.*?)(`\);)', text, 'validation template')
-          text = escape_block(r'(collectWorkflow = collectWorkflow\.slice\(0, collectStart\) \+ `)(.*?)(` \+ collectWorkflow\.slice\(collectEnd\);)', text, 'collect workflow template')
-          p.write_text(text)
-          PY
+      - name: Restore verified refactor script
+        run: base64 -d scripts/apply-architecture-refactor.mjs.b64 > scripts/apply-architecture-refactor.mjs
 
       - name: Apply architecture refactor
-        run: |
-          set +e
-          node scripts/apply-architecture-refactor.mjs > /tmp/refactor.log 2>&1
-          status=$?
-          cat /tmp/refactor.log
-          exit $status
-
-      - name: Upload failure diagnostics
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: architecture-refactor-error
-          path: /tmp/refactor.log
-          if-no-files-found: error
+        run: node scripts/apply-architecture-refactor.mjs
 
       - name: Install dependencies and create lockfile
         run: npm install --no-audit --no-fund
@@ -89,11 +56,12 @@ jobs:
           SELECTION_JSON="$(cat /tmp/selection.json)" REPORT_DATE="2026-07-14" REPORT_START_DATE="2026-07-07" REPORT_END_DATE="2026-07-13" npm run report
           test -s reports/latest.docx
 
-      - name: Remove smoke-test output
+      - name: Remove smoke-test and one-time helper files
         run: |
           rm -f reports/latest.docx reports/latest.json
           find reports/generated -type f ! -name '.gitkeep' -delete
           git checkout -- data/selected-news.json reports || true
+          rm -f scripts/apply-architecture-refactor.mjs.b64
 
       - name: Commit refactored architecture
         run: |
