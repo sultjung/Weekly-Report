@@ -18,6 +18,4 @@ data/search-keywords.json
 - GitHub Actions의 `Collect Iraq Weekly News`
 - 로컬 또는 수동 실행의 `npm run collect`
 
-두 실행 방식 모두 `scripts/run-collector.mjs`를 사용하며, 실행 과정에서 `scripts/prepare-search-keywords.mjs`가 위 JSON 파일의 검색어를 최종 수집기에 적용합니다.
-
-기존 `scripts/collect-news.mjs`와 패치 파일 안의 검색어 배열은 실행 과정에서 JSON 내용으로 교체되므로 관리 대상으로 보지 않습니다.
+`scripts/collect-news.mjs`가 실행할 때 이 JSON을 직접 읽으므로 자동·수동 실행에 동일하게 반영됩니다.
