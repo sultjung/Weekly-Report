@@ -36,9 +36,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Collect Iraq weekly news
         env:
@@ -60,9 +61,9 @@ jobs:
         run: |
           for attempt in 1 2 3; do
             echo "Collect Iraq weekly news attempt ${attempt}/3"
-            if node scripts/run-collector.mjs; then
+            if npm run collect; then
               echo "Collect Iraq weekly news succeeded"
-              exit 0
+              break
             fi
             if [ "$attempt" = "3" ]; then
               echo "Collect Iraq weekly news failed after 3 attempts"
@@ -71,32 +72,8 @@ jobs:
             sleep $((attempt * 90))
           done
 
-      - name: Apply translation glossary
-        run: node scripts/apply-glossary-to-news.mjs
-
-      - name: Fix recursive glossary artifacts
-        run: node scripts/fix-recursive-glossary-artifacts.mjs
-
-      - name: Fix known political summaries
-        run: node scripts/fix-known-political-summaries.mjs
-
-      - name: Filter untranslated news
-        run: node scripts/filter-untranslated-news.mjs
-
-      - name: Fix agency dateline location errors
-        run: node scripts/fix-agency-dateline-location-errors.mjs
-
-      - name: Filter AI hallucinated actors
-        run: node scripts/filter-ai-hallucinated-actors.mjs
-
-      - name: Filter NINA sidebar contaminated health news
-        run: node scripts/filter-nina-contaminated-health-news.mjs
-
-      - name: Filter irrelevant foreign news
-        run: node scripts/filter-irrelevant-foreign-news.mjs
-
-      - name: Deduplicate news articles
-        run: node scripts/deduplicate-news-articles.mjs
+      - name: Post-process collected news
+        run: npm run postprocess
 
       - name: Sync latest main before commit
         run: |
