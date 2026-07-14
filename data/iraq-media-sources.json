@@ -13,15 +13,6 @@
     "sitemapUrls": ["https://www.alsumaria.tv/sitemap.xml"]
   },
   {
-    "id": "nina",
-    "name": "NINA",
-    "baseUrl": "https://ninanews.com/",
-    "enabled": true,
-    "listPages": ["https://ninanews.com/Website/News/Politics", "https://ninanews.com/Website/News/Security", "https://ninanews.com/Website/News/Economy"],
-    "rssUrls": [],
-    "sitemapUrls": ["https://ninanews.com/sitemap.xml"]
-  },
-  {
     "id": "ina",
     "name": "Iraqi News Agency",
     "baseUrl": "https://ina.iq/",
