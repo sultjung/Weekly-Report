@@ -43,8 +43,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           p = Path('scripts/collect-news.mjs')
-          text = p.read_text()
-          text = text.replace('.filter(Bolean));', '.filter(Boolean);')
+          text = p.read_text().replace('.filter(Bolean));', '.filter(Boolean);')
           p.write_text(text)
           PY
 
@@ -52,20 +51,7 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Validate structure and syntax
-        run: |
-          set +e
-          npm run validate > /tmp/validate.log 2>&1
-          status=$?
-          cat /tmp/validate.log
-          exit $status
-
-      - name: Upload validation diagnostics
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: architecture-validation-error
-          path: /tmp/validate.log
-          if-no-files-found: error
+        run: npm run validate
 
       - name: Smoke-test DOCX generation
         run: |
@@ -88,9 +74,23 @@ jobs:
 
       - name: Commit refactored architecture
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --stat
-          git commit -m "Simplify Weekly-Report architecture"
-          git push origin HEAD:agent/simplify-weekly-report-architecture
+          set +e
+          {
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git diff --cached --stat
+            git commit -m "Simplify Weekly-Report architecture"
+            git push origin HEAD:agent/simplify-weekly-report-architecture
+          } > /tmp/push.log 2>&1
+          status=$?
+          cat /tmp/push.log
+          exit $status
+
+      - name: Upload push diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: architecture-push-error
+          path: /tmp/push.log
+          if-no-files-found: error
