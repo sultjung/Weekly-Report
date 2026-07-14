@@ -1,0 +1,65 @@
+name: Apply Weekly-Report Architecture Refactor
+
+on:
+  push:
+    branches:
+      - agent/simplify-weekly-report-architecture
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-report-architecture-refactor
+  cancel-in-progress: false
+
+jobs:
+  refactor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout refactor branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/simplify-weekly-report-architecture
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Apply architecture refactor
+        run: node scripts/apply-architecture-refactor.mjs
+
+      - name: Install dependencies and create lockfile
+        run: npm install --no-audit --no-fund
+
+      - name: Validate structure and syntax
+        run: npm run validate
+
+      - name: Smoke-test DOCX generation
+        run: |
+          node - <<'NODE' > /tmp/selection.json
+          const fs = require('fs');
+          const payload = JSON.parse(fs.readFileSync('data/news.json', 'utf8'));
+          const article = (payload.articles || []).find((item) => item.titleKo && ['politics','terror_security','oil_economy','regional'].includes(item.category3));
+          if (!article) throw new Error('No report article available for smoke test');
+          process.stdout.write(JSON.stringify([article]));
+          NODE
+          SELECTION_JSON="$(cat /tmp/selection.json)" REPORT_DATE="2026-07-14" REPORT_START_DATE="2026-07-07" REPORT_END_DATE="2026-07-13" npm run report
+          test -s reports/latest.docx
+
+      - name: Remove smoke-test output
+        run: |
+          rm -f reports/latest.docx reports/latest.json
+          find reports/generated -type f ! -name '.gitkeep' -delete
+          git checkout -- data/selected-news.json reports || true
+
+      - name: Commit refactored architecture
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --stat
+          git commit -m "Simplify Weekly-Report architecture"
+          git push origin HEAD:agent/simplify-weekly-report-architecture
