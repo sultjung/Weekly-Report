@@ -32,6 +32,7 @@ if (scriptRefs.length !== 1 || scriptRefs[0] !== "app.js") {
 const syntaxFiles = [
   "app.js",
   "scripts/collect-news.mjs",
+  "scripts/run-report-style-collector.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
   "scripts/validate-project.mjs",
