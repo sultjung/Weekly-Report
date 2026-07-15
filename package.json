@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Iraq weekly situation report news collector and DOCX generator",
   "scripts": {
-    "collect": "node scripts/collect-news.mjs",
+    "collect": "node scripts/run-report-style-collector.mjs",
     "postprocess": "node scripts/postprocess-news.mjs",
     "report": "node scripts/generate-weekly-report.mjs",
     "validate": "node scripts/validate-project.mjs"
