@@ -87,6 +87,13 @@ function hardenReportScope(source) {
 
   source = replaceExactlyOnce(
     source,
+    `  articles = articles.map((item) => reuseFromPrevious(item, previousMap));`,
+    `  articles = articles.map((item) => reuseFromPrevious(item, previousMap)).filter((item) => scoreCandidate(item).reportUsefulness !== "exclude");`,
+    "cached article scope recheck"
+  );
+
+  source = replaceExactlyOnce(
+    source,
     `.filter((item) => !item.aiCacheHit && canSummarizeFromEvidence(item))`,
     `.filter((item) => !item.aiCacheHit && item.reportUsefulness !== "exclude" && item.category3 !== "exclude" && canSummarizeFromEvidence(item))`,
     "pre-AI exclusion"
