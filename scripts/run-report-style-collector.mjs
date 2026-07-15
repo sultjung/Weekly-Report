@@ -69,9 +69,42 @@ function bumpSummaryVersion(source) {
   return source.replaceAll(OLD_VERSION, NEW_VERSION);
 }
 
+function replaceExactlyOnce(source, search, replacement, label) {
+  const matches = source.split(search).length - 1;
+  if (matches !== 1) {
+    throw new Error(`Expected exactly one ${label} anchor, found ${matches}`);
+  }
+  return source.replace(search, replacement);
+}
+
+function hardenReportScope(source) {
+  source = replaceExactlyOnce(
+    source,
+    `const regionalIraqLink = hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "الولايات المتحدة", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"]);`,
+    `const regionalIraqLink = hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"]);`,
+    "regional scope"
+  );
+
+  source = replaceExactlyOnce(
+    source,
+    `.filter((item) => !item.aiCacheHit && canSummarizeFromEvidence(item))`,
+    `.filter((item) => !item.aiCacheHit && item.reportUsefulness !== "exclude" && item.category3 !== "exclude" && canSummarizeFromEvidence(item))`,
+    "pre-AI exclusion"
+  );
+
+  source = replaceExactlyOnce(
+    source,
+    `  }).filter((item) => item.reportUsefulness !== "exclude" || item.category3 === "exclude");`,
+    `  }).filter((item) => item.reportUsefulness !== "exclude" && item.category3 !== "exclude");`,
+    "final exclusion"
+  );
+
+  return source;
+}
+
 async function run() {
   const original = await fs.readFile(SOURCE_FILE, "utf8");
-  const patched = bumpSummaryVersion(replaceStyleBlock(original));
+  const patched = hardenReportScope(bumpSummaryVersion(replaceStyleBlock(original)));
   const tempFile = path.join(os.tmpdir(), `weekly-report-collector-${process.pid}.mjs`);
 
   try {
