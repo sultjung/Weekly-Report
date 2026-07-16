@@ -33,6 +33,7 @@ const syntaxFiles = [
   "app.js",
   "scripts/collect-news.mjs",
   "scripts/run-report-style-collector.mjs",
+  "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
   "scripts/validate-project.mjs",
