@@ -12,7 +12,7 @@ import { spawn } from "node:child_process";
 const ROOT = process.cwd();
 const SOURCE_FILE = path.join(ROOT, "scripts", "collect-news.mjs");
 const OLD_VERSION = "weekly-report-v5-evidence";
-const NEW_VERSION = "weekly-report-v6-user-style";
+const NEW_VERSION = "weekly-report-v7-purpose-fit-models";
 
 const STYLE_START = `    "summaryKo는 3~5줄 한국어 요약. 제목 문장을 그대로 반복하지 말고, 기사 본문에서 확인되는 핵심 주장·비판 대상·조건·정치적 의미를 압축하라.",`;
 const STYLE_END = `    "국가투자위원회는 NIC로 표기하고, 부패방지위원회보다 청렴위원회 표현을 사용하라."`;
