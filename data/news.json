@@ -1,74 +1,53 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-17T06:05:59.435Z",
+  "generatedAt": "2026-07-17T06:26:12.226Z",
   "lookbackDays": 30,
-  "count": 67,
+  "count": 70,
   "cacheHits": 0,
   "model": "gpt-5.6-terra",
   "counts": {
-    "total": 5,
+    "total": 3,
     "politics": 0,
     "terror_security": 0,
     "oil_economy": 0,
     "regional": 0,
-    "exclude": 5
+    "exclude": 3
   },
   "articles": [
     {
-      "id": "direct-aHR0cHM6Ly9zaGFm",
-      "title": "ترامب يعلن رفع السرية عن وثائق بشأن الانتخابات ويتهم الصين بالتدخل - شفق نيوز | آخر الأخبار العاجلة في العراق وكوردستان والعالم",
-      "source": "Shafaq News",
-      "publishedAt": "2026-07-17T02:56:38.000Z",
-      "url": "https://shafaq.com/ar/bbc-arabic/cjwx355070zo",
-      "description": "Reuters اتهم الرئيس الأمريكي دونالد ترامب الصين الخميس، بالقيام بأكبر عملية اختراق لبيانات انتخابية في التاريخ، معلناً أنه سيرفع السرية عن معلومات است Fri, 17 Jul 2026 02:56:38 GMT اتهم الرئيس الأمريكي دونالد ترامب الصين الخميس، بالقيام بأكبر عملية اختراق لبيانات انتخابية في التاريخ، معلناً أنه سيرفع السرية عن معلومات استخباراتية تكشف \"نقاط ضعف صادمة\" في النظام الانتخابي الأمريكي. وقال ترامب في خطاب إلى الأمة ألقاه في البيت الأبيض ونقله التلفزيون \"على مدى سنوات، بدءا من الدورة الانتخابية لعام 2020، نفذت جمهورية الصين الشعبية ما يُعتقد أنه أكبر اختراق لبيانات انتخابية في التاريخ، ما أدى إلى استحواذها بشكل غير مشروع على ملفات 220 مليون ناخب أمريكي\". ولم تسفر أكثر من 60 دعوى قضائية رفعها ترامب وحلفاؤه عن أي حكم يثبت وجود تزوير قادر على تغيير نتيجة انتخابات 2020، كما لم تتوصل عمليات إعادة فرز الأصوات والتدقيق من قبل وزارة العدل إلى أي نتيجة تدعم مزاعمه. ترامب ينهي مقابلة تلفزيونية فجأة بعد مشادة حول مزاعم \"تزوير الانتخابات\" وبين ترامب أن معلومات استخبارية بشأن التدخل في الانتخابات \"تم التكتم عليها لسنوات\"، متهماً ما وصفهم بـ\"عناصر في الدولة العميقة\" داخل وكالات الاستخبارات بالتواطؤ والتستر على التدخل الصيني، وفق تصريحاته. وأضاف أن تقارير استخبارية، بحسب قوله، تشير إلى أن \"سياسة الحزب الشيوعي الصيني منذ عام 2018 كانت تهدف إلى دعم أي طرف معارض له ودفعه إلى الاستقالة\". واتهم ترامب بكين بالضغط على صحفيين لكتابة تقارير ضده، وبإنشاء وحدة خاصة لاستغلال بيانات ناخبين أمريكيين قال إنها تعرضت للقرصنة. يوم الحرية: كيف يراه دونالد ترامب؟ وأكد الرئيس الأمريكي أن نزاهة الانتخابات تمثل شرطاً أساسياً لقوة الولايات المتحدة، قائلاً: \"لا يمكن لأي دولة أن تكون عظيمة ما لم تكن انتخاباتها نزيهة\". وفي جانب آخر من خطابه، تحدث ترامب عن الاقتصاد الأميركي، مشيراً إلى أن الأسواق المالية عند مستويات قياسية، وأن التضخم تراجع، وأن البلاد تشهد مستويات مرتفعة من الاستثمارات، مضيفاً: \"نحن الآن أفضل دولة حول العالم\". سحب تراخيص الشبكات التي رفضت بث خطابه دعا الرئيس الأميركي دونالد ترامب الخميس، إلى سحب تراخيص البث من الشبكات التي رفضت النقل المباشر لخطابه حول تزوير الانتخابات الذي ألقاه في وقت الذروة، ملمحاً من دون أدلة إلى أنها متورطة في محاولات التلاعب بالانتخابات. وقال ترامب \"هم وغيرهم في الإعلام جزء من مخطط. مثل هذه الممارسات الاحتيالية يجب أن تؤدي إلى سحب تراخيصهم. أنهم يستخدمون موجات الأثير العامة التي تبلغ قيمتها مليارات الدولارات من دون دفع أي مقابل على الإطلاق. إنهم لا يدفعون شيئاً\"، مشيراً بالاسم إلى شبكتي \"آيه بي سي\" و\"أن بي سي\". ويزعم ترامب أن هزيمته في انتخابات عام 2020 كانت بسبب التلاعب، رغم أن أكثر من 60 دعوى قضائية لم تسفر عن أي حكم يثبت ذلك، كما لم تؤد عمليات إعادة الفرز والتدقيق إلى ما يمكن أن يغير النتيجة. من الشراكة إلى الخلاف، كيف يبدو مستقبل العلاقات الأمريكية الإسرائيلية؟ ترامب يحقق أكثر من مليار دولار من العملات المشفّ",
-      "cleanText": "Fri, 17 Jul 2026 02:56:38 GMT اتهم الرئيس الأمريكي دونالد ترامب الصين الخميس، بالقيام بأكبر عملية اختراق لبيانات انتخابية في التاريخ، معلناً أنه سيرفع السرية عن معلومات استخباراتية تكشف \"نقاط ضعف صادمة\" في النظام الانتخابي الأمريكي. وقال ترامب في خطاب إلى الأمة ألقاه في البيت الأبيض ونقله التلفزيون \"على مدى سنوات، بدءا من الدورة الانتخابية لعام 2020، نفذت جمهورية الصين الشعبية ما يُعتقد أنه أكبر اختراق لبيانات انتخابية في التاريخ، ما أدى إلى استحواذها بشكل غير مشروع على ملفات 220 مليون ناخب أمريكي\". ولم تسفر أكثر من 60 دعوى قضائية رفعها ترامب وحلفاؤه عن أي حكم يثبت وجود تزوير قادر على تغيير نتيجة انتخابات 2020، كما لم تتوصل عمليات إعادة فرز الأصوات والتدقيق من قبل وزارة العدل إلى أي نتيجة تدعم مزاعمه. ترامب ينهي مقابلة تلفزيونية فجأة بعد مشادة حول مزاعم \"تزوير الانتخابات\" وبين ترامب أن معلومات استخبارية بشأن التدخل في الانتخابات \"تم التكتم عليها لسنوات\"، متهماً ما وصفهم بـ\"عناصر في الدولة العميقة\" داخل وكالات الاستخبارات بالتواطؤ والتستر على التدخل الصيني، وفق تصريحاته. وأضاف أن تقارير استخبارية، بحسب قوله، تشير إلى أن \"سياسة الحزب الشيوعي الصيني منذ عام 2018 كانت تهدف إلى دعم أي طرف معارض له ودفعه إلى الاستقالة\". واتهم ترامب بكين بالضغط على صحفيين لكتابة تقارير ضده، وبإنشاء وحدة خاصة لاستغلال بيانات ناخبين أمريكيين قال إنها تعرضت للقرصنة. يوم الحرية: كيف يراه دونالد ترامب؟ وأكد الرئيس الأمريكي أن نزاهة الانتخابات تمثل شرطاً أساسياً لقوة الولايات المتحدة، قائلاً: \"لا يمكن لأي دولة أن تكون عظيمة ما لم تكن انتخاباتها نزيهة\". وفي جانب آخر من خطابه، تحدث ترامب عن الاقتصاد الأميركي، مشيراً إلى أن الأسواق المالية عند مستويات قياسية، وأن التضخم تراجع، وأن البلاد تشهد مستويات مرتفعة من الاستثمارات، مضيفاً: \"نحن الآن أفضل دولة حول العالم\". سحب تراخيص الشبكات التي رفضت بث خطابه دعا الرئيس الأميركي دونالد ترامب الخميس، إلى سحب تراخيص البث من الشبكات التي رفضت النقل المباشر لخطابه حول تزوير الانتخابات الذي ألقاه في وقت الذروة، ملمحاً من دون أدلة إلى أنها متورطة في محاولات التلاعب بالانتخابات. وقال ترامب \"هم وغيرهم في الإعلام جزء من مخطط. مثل هذه الممارسات الاحتيالية يجب أن تؤدي إلى سحب تراخيصهم. أنهم يستخدمون موجات الأثير العامة التي تبلغ قيمتها مليارات الدولارات من دون دفع أي مقابل على الإطلاق. إنهم لا يدفعون شيئاً\"، مشيراً بالاسم إلى شبكتي \"آيه بي سي\" و\"أن بي سي\". ويزعم ترامب أن هزيمته في انتخابات عام 2020 كانت بسبب التلاعب، رغم أن أكثر من 60 دعوى قضائية لم تسفر عن أي حكم يثبت ذلك، كما لم تؤد عمليات إعادة الفرز والتدقيق إلى ما يمكن أن يغير النتيجة. من الشراكة إلى الخلاف، كيف يبدو مستقبل العلاقات الأمريكية الإسرائيلية؟ ترامب يحقق أكثر من مليار دولار من العملات المشفّرة في العام الأول من ولايته الرئاسية الثانية كيف احتفلت الولايات المتحدة بالذكرى الـ250 لاستقلالها؟",
-      "fullText": "Fri, 17 Jul 2026 02:56:38 GMT اتهم الرئيس الأمريكي دونالد ترامب الصين الخميس، بالقيام بأكبر عملية اختراق لبيانات انتخابية في التاريخ، معلناً أنه سيرفع السرية عن معلومات استخباراتية تكشف \"نقاط ضعف صادمة\" في النظام الانتخابي الأمريكي. وقال ترامب في خطاب إلى الأمة ألقاه في البيت الأبيض ونقله التلفزيون \"على مدى سنوات، بدءا من الدورة الانتخابية لعام 2020، نفذت جمهورية الصين الشعبية ما يُعتقد أنه أكبر اختراق لبيانات انتخابية في التاريخ، ما أدى إلى استحواذها بشكل غير مشروع على ملفات 220 مليون ناخب أمريكي\". ولم تسفر أكثر من 60 دعوى قضائية رفعها ترامب وحلفاؤه عن أي حكم يثبت وجود تزوير قادر على تغيير نتيجة انتخابات 2020، كما لم تتوصل عمليات إعادة فرز الأصوات والتدقيق من قبل وزارة العدل إلى أي نتيجة تدعم مزاعمه. ترامب ينهي مقابلة تلفزيونية فجأة بعد مشادة حول مزاعم \"تزوير الانتخابات\" وبين ترامب أن معلومات استخبارية بشأن التدخل في الانتخابات \"تم التكتم عليها لسنوات\"، متهماً ما وصفهم بـ\"عناصر في الدولة العميقة\" داخل وكالات الاستخبارات بالتواطؤ والتستر على التدخل الصيني، وفق تصريحاته. وأضاف أن تقارير استخبارية، بحسب قوله، تشير إلى أن \"سياسة الحزب الشيوعي الصيني منذ عام 2018 كانت تهدف إلى دعم أي طرف معارض له ودفعه إلى الاستقالة\". واتهم ترامب بكين بالضغط على صحفيين لكتابة تقارير ضده، وبإنشاء وحدة خاصة لاستغلال بيانات ناخبين أمريكيين قال إنها تعرضت للقرصنة. يوم الحرية: كيف يراه دونالد ترامب؟ وأكد الرئيس الأمريكي أن نزاهة الانتخابات تمثل شرطاً أساسياً لقوة الولايات المتحدة، قائلاً: \"لا يمكن لأي دولة أن تكون عظيمة ما لم تكن انتخاباتها نزيهة\". وفي جانب آخر من خطابه، تحدث ترامب عن الاقتصاد الأميركي، مشيراً إلى أن الأسواق المالية عند مستويات قياسية، وأن التضخم تراجع، وأن البلاد تشهد مستويات مرتفعة من الاستثمارات، مضيفاً: \"نحن الآن أفضل دولة حول العالم\". سحب تراخيص الشبكات التي رفضت بث خطابه دعا الرئيس الأميركي دونالد ترامب الخميس، إلى سحب تراخيص البث من الشبكات التي رفضت النقل المباشر لخطابه حول تزوير الانتخابات الذي ألقاه في وقت الذروة، ملمحاً من دون أدلة إلى أنها متورطة في محاولات التلاعب بالانتخابات. وقال ترامب \"هم وغيرهم في الإعلام جزء من مخطط. مثل هذه الممارسات الاحتيالية يجب أن تؤدي إلى سحب تراخيصهم. أنهم يستخدمون موجات الأثير العامة التي تبلغ قيمتها مليارات الدولارات من دون دفع أي مقابل على الإطلاق. إنهم لا يدفعون شيئاً\"، مشيراً بالاسم إلى شبكتي \"آيه بي سي\" و\"أن بي سي\". ويزعم ترامب أن هزيمته في انتخابات عام 2020 كانت بسبب التلاعب، رغم أن أكثر من 60 دعوى قضائية لم تسفر عن أي حكم يثبت ذلك، كما لم تؤد عمليات إعادة الفرز والتدقيق إلى ما يمكن أن يغير النتيجة. من الشراكة إلى الخلاف، كيف يبدو مستقبل العلاقات الأمريكية الإسرائيلية؟ ترامب يحقق أكثر من مليار دولار من العملات المشفّرة في العام الأول من ولايته الرئاسية الثانية كيف احتفلت الولايات المتحدة بالذكرى الـ250 لاستقلالها؟",
+      "id": "direct-aHR0cHM6Ly85NjRt",
+      "title": "الجيش الأميركي يبدأ موجة جديدة من القصف على إيران (محدث)",
+      "source": "964media",
+      "publishedAt": "2026-07-16T18:37:02.000Z",
+      "url": "https://964media.com/699623/",
+      "description": "964 11:37 مساءً: التلفزيون الإيراني: استهداف جسرين في مدينة بندر خمیر بمحافظة هرمزغان، ومقتل سائق سيارة أثناء الجيش الأميركي يبدأ موجة جديدة من القصف على إيران (محدث) 11:37 مساءً: التلفزيون الإيراني: استهداف جسرين في مدينة بندر خمیر بمحافظة هرمزغان، ومقتل سائق سيارة أثناء عبوره أحد الجسرين المستهدفين. انضموا إلى أسرع منصاتنا 11:25 مساءً : التلفزيون الإيراني: مقذوف أمريكي واحد على الأقل أصاب مطار إيرانشهر في محافظة سيستان وبلوشستان. 11:20 مساءً: إغلاق حركة المرور على محور بندر عباس كهورستان لار بعد استهداف أمريكي لجسر نهر شور بمحافظة هرمزغان، بحسب وكالة تسنيم. 11:11 مساءً : التلفزيون الإيراني: دوي 6 انفجارات متتالية في مدينة حميدية بمحافظة خوزستان جنوب غربي البلاد 11:05 مساءً: وكالة تسنيم: غارات أمريكية استهدفت مطار مدينة إيرانشهر بمحافظة سيستان وبلوشستان جنوب شرقي إيران، وإصابة الجسر الرابط بين بندر عباس وشيراز، واستهداف مدينة بندر خمير ومنطقة كهورستان بمحافظة هرمزغان. 10:55 مساءً: أفادت وسائل إعلام إيرانية باستهداف برج اتصالات في تلة بمدينة عباس وانقطاع الكهرباء عن المنطقة، مؤكدة سماع دوي 10 انفجارات جديدة في جزيرة قشم جنوبي البلاد، كما أوضحت وكالة تسنيم إصابة 7 أشخاص أثر الهجوم على بندر عباس. 10:52 مساءً: التلفزيون الإيراني: دوي 8 انفجارات قرب قرية مسن بجزيرة قشم جنوبي البلاد إثر غارات أمريكية. 10:37 مساءً: أفادت وكالة “إرنا” بسماع دوي انفجارين في مدينة بوشهر جنوبي إيران. 10:17 مساءً: قال المتحدث باسم القيادة المركزية الأمريكية لقناة الجزيرة، إن الجيش الأمريكي ينفذ ضربات لتقليص قدرة إيران على مهاجمة السفن، مبيناً أن الضربات استهدفت مواقع إطلاق صواريخ ومسيرات باتجاه سفن تجارية، فيما أكد استهداف وسائل استطلاع ورادارات في طنب الكبرى ومحيط بندر عباس، موضحاً أن الجيش الأميركي أحرز تقدما في إزالة الألغام التي زرعها الحرس الثوري في هرمز. 10:13 مساءً: قالت وكالة مهر، إنه تم سماع دوي انفجارات في مدينتي بندر عباس وقشم بمحافظة هرمزغان ومدينة أهواز بمحافظة خوزستان. 10:06 مساءً: أفادت وسائل إعلام إيرانية بسماع دوي انفجارات في مدينة الأهواز. 9:34 مساءً: أفاد التلفزيون الإيراني بسماع دوي 3 انفجارات غربي مدينة بندر عباس جنوبي البلاد، فيما أكدت وكالة “مهر” أن مقذوفات أميركية أصابت مناطق في بندر عباس. 9:33 مساءً: أعلنت القيادة المركزية الأميركية (سنتكوم)، في الساعة 9:33 من مساء اليوم الخميس (16 تموز 2026)، شن موجة جديدة من الضربات على إيران لليوم الخامس على التوالي، مشيرة إلى أن هذه الضربات تهدف إلى إضعاف القدرات العسكرية الإيرانية بشكل أكبر.",
+      "cleanText": "الجيش الأميركي يبدأ موجة جديدة من القصف على إيران (محدث) 11:37 مساءً: التلفزيون الإيراني: استهداف جسرين في مدينة بندر خمیر بمحافظة هرمزغان، ومقتل سائق سيارة أثناء عبوره أحد الجسرين المستهدفين. انضموا إلى أسرع منصاتنا 11:25 مساءً : التلفزيون الإيراني: مقذوف أمريكي واحد على الأقل أصاب مطار إيرانشهر في محافظة سيستان وبلوشستان. 11:20 مساءً: إغلاق حركة المرور على محور بندر عباس كهورستان لار بعد استهداف أمريكي لجسر نهر شور بمحافظة هرمزغان، بحسب وكالة تسنيم. 11:11 مساءً : التلفزيون الإيراني: دوي 6 انفجارات متتالية في مدينة حميدية بمحافظة خوزستان جنوب غربي البلاد 11:05 مساءً: وكالة تسنيم: غارات أمريكية استهدفت مطار مدينة إيرانشهر بمحافظة سيستان وبلوشستان جنوب شرقي إيران، وإصابة الجسر الرابط بين بندر عباس وشيراز، واستهداف مدينة بندر خمير ومنطقة كهورستان بمحافظة هرمزغان. 10:55 مساءً: أفادت وسائل إعلام إيرانية باستهداف برج اتصالات في تلة بمدينة عباس وانقطاع الكهرباء عن المنطقة، مؤكدة سماع دوي 10 انفجارات جديدة في جزيرة قشم جنوبي البلاد، كما أوضحت وكالة تسنيم إصابة 7 أشخاص أثر الهجوم على بندر عباس. 10:52 مساءً: التلفزيون الإيراني: دوي 8 انفجارات قرب قرية مسن بجزيرة قشم جنوبي البلاد إثر غارات أمريكية. 10:37 مساءً: أفادت وكالة “إرنا” بسماع دوي انفجارين في مدينة بوشهر جنوبي إيران. 10:17 مساءً: قال المتحدث باسم القيادة المركزية الأمريكية لقناة الجزيرة، إن الجيش الأمريكي ينفذ ضربات لتقليص قدرة إيران على مهاجمة السفن، مبيناً أن الضربات استهدفت مواقع إطلاق صواريخ ومسيرات باتجاه سفن تجارية، فيما أكد استهداف وسائل استطلاع ورادارات في طنب الكبرى ومحيط بندر عباس، موضحاً أن الجيش الأميركي أحرز تقدما في إزالة الألغام التي زرعها الحرس الثوري في هرمز. 10:13 مساءً: قالت وكالة مهر، إنه تم سماع دوي انفجارات في مدينتي بندر عباس وقشم بمحافظة هرمزغان ومدينة أهواز بمحافظة خوزستان. 10:06 مساءً: أفادت وسائل إعلام إيرانية بسماع دوي انفجارات في مدينة الأهواز. 9:34 مساءً: أفاد التلفزيون الإيراني بسماع دوي 3 انفجارات غربي مدينة بندر عباس جنوبي البلاد، فيما أكدت وكالة “مهر” أن مقذوفات أميركية أصابت مناطق في بندر عباس. 9:33 مساءً: أعلنت القيادة المركزية الأميركية (سنتكوم)، في الساعة 9:33 من مساء اليوم الخميس (16 تموز 2026)، شن موجة جديدة من الضربات على إيران لليوم الخامس على التوالي، مشيرة إلى أن هذه الضربات تهدف إلى إضعاف القدرات العسكرية الإيرانية بشكل أكبر.",
+      "fullText": "الجيش الأميركي يبدأ موجة جديدة من القصف على إيران (محدث) 11:37 مساءً: التلفزيون الإيراني: استهداف جسرين في مدينة بندر خمیر بمحافظة هرمزغان، ومقتل سائق سيارة أثناء عبوره أحد الجسرين المستهدفين. انضموا إلى أسرع منصاتنا 11:25 مساءً : التلفزيون الإيراني: مقذوف أمريكي واحد على الأقل أصاب مطار إيرانشهر في محافظة سيستان وبلوشستان. 11:20 مساءً: إغلاق حركة المرور على محور بندر عباس كهورستان لار بعد استهداف أمريكي لجسر نهر شور بمحافظة هرمزغان، بحسب وكالة تسنيم. 11:11 مساءً : التلفزيون الإيراني: دوي 6 انفجارات متتالية في مدينة حميدية بمحافظة خوزستان جنوب غربي البلاد 11:05 مساءً: وكالة تسنيم: غارات أمريكية استهدفت مطار مدينة إيرانشهر بمحافظة سيستان وبلوشستان جنوب شرقي إيران، وإصابة الجسر الرابط بين بندر عباس وشيراز، واستهداف مدينة بندر خمير ومنطقة كهورستان بمحافظة هرمزغان. 10:55 مساءً: أفادت وسائل إعلام إيرانية باستهداف برج اتصالات في تلة بمدينة عباس وانقطاع الكهرباء عن المنطقة، مؤكدة سماع دوي 10 انفجارات جديدة في جزيرة قشم جنوبي البلاد، كما أوضحت وكالة تسنيم إصابة 7 أشخاص أثر الهجوم على بندر عباس. 10:52 مساءً: التلفزيون الإيراني: دوي 8 انفجارات قرب قرية مسن بجزيرة قشم جنوبي البلاد إثر غارات أمريكية. 10:37 مساءً: أفادت وكالة “إرنا” بسماع دوي انفجارين في مدينة بوشهر جنوبي إيران. 10:17 مساءً: قال المتحدث باسم القيادة المركزية الأمريكية لقناة الجزيرة، إن الجيش الأمريكي ينفذ ضربات لتقليص قدرة إيران على مهاجمة السفن، مبيناً أن الضربات استهدفت مواقع إطلاق صواريخ ومسيرات باتجاه سفن تجارية، فيما أكد استهداف وسائل استطلاع ورادارات في طنب الكبرى ومحيط بندر عباس، موضحاً أن الجيش الأميركي أحرز تقدما في إزالة الألغام التي زرعها الحرس الثوري في هرمز. 10:13 مساءً: قالت وكالة مهر، إنه تم سماع دوي انفجارات في مدينتي بندر عباس وقشم بمحافظة هرمزغان ومدينة أهواز بمحافظة خوزستان. 10:06 مساءً: أفادت وسائل إعلام إيرانية بسماع دوي انفجارات في مدينة الأهواز. 9:34 مساءً: أفاد التلفزيون الإيراني بسماع دوي 3 انفجارات غربي مدينة بندر عباس جنوبي البلاد، فيما أكدت وكالة “مهر” أن مقذوفات أميركية أصابت مناطق في بندر عباس. 9:33 مساءً: أعلنت القيادة المركزية الأميركية (سنتكوم)، في الساعة 9:33 من مساء اليوم الخميس (16 تموز 2026)، شن موجة جديدة من الضربات على إيران لليوم الخامس على التوالي، مشيرة إلى أن هذه الضربات تهدف إلى إضعاف القدرات العسكرية الإيرانية بشكل أكبر.",
       "collectionMethod": "iraq-media-direct",
       "sourceType": "iraq-media-direct",
       "category1": "international",
       "category2": "international",
       "category3": "exclude",
-      "importanceScore": 72,
+      "importanceScore": 76,
       "reportUsefulness": "exclude",
       "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 2599,
+      "sourceEvidenceChars": 2156,
       "translationFailed": true,
-      "untranslatedFiltered": true
-    },
-    {
-      "id": "direct-aHR0cHM6Ly9zaGFm",
-      "title": "مقتل 11 شخصاً وإصابة 19 في حريق بدار للأيتام في الجزائر - شفق نيوز | آخر الأخبار العاجلة في العراق وكوردستان والعالم",
-      "source": "Shafaq News",
-      "publishedAt": "2026-07-16T18:56:16.000Z",
-      "url": "https://shafaq.com/ar/bbc-arabic/clyen3830r3o",
-      "description": "لقي 11 شخصاً حتفهم، بينهم أطفال، وأصيب 19 آخرون في حريق اندلع في دار للأيتام في بلدية المحمدية، شرقي العاصمة الجزائر، وفق ما أعلنت الحماية المدنية الجزائرية.وقالت المديرية العامة للح Thu, 16 Jul 2026 18:56:16 GMT لقي 11 شخصاً حتفهم، بينهم أطفال، وأصيب 19 آخرون في حريق اندلع في دار للأيتام في بلدية المحمدية، شرقي العاصمة الجزائر، وفق ما أعلنت الحماية المدنية الجزائرية. وقالت المديرية العامة للحماية المدنية إن فرقها تدخلت نحو الساعة الثالثة والنصف فجراً لإخماد الحريق الذي شب في \"مؤسسة الطفولة المسعفة\"، مشيرة إلى أن المصابين أسعفوا ونقلوا إلى المستشفيات، ولم تعلن السلطات أعمار الضحايا أو هوياتهم. وأضافت أن عشرة من المصابين تعرضوا لحروق متفاوتة الخطورة، بينما أجلت فرق الطوارئ خمسة أشخاص من ذوي الإعاقة من دار الأيتام إلى مكان آمن. وأعرب الرئيس الجزائري عبد المجيد تبون، عن تعازيه لضحايا الحريق، وقال \"تلقيت مسلماً بقضاء الله وقدره نبأ وفاة أطفال وإصابة آخرين من أبناء الجزائر، إثر الحريق.. وأمام هذا المصاب الجلل الذي نزل غداة إحياء اليوم الوطني للطفل، أسأل الله العلي القدير أن يتغمد المتوفين بواسع رحمته، وأن يمن على المصابين بالشفاء العاجل\". إلى ذلك، زار رئيس الوزراء الجزائري سيفي غريب المصابين في مستشفى الحروق الكبرى في زرالدة ومستشفى مصطفى باشا في العاصمة، بحسب التلفزيون الجزائري الرسمي. ولا يزال سبب اندلاع الحريق مجهولاً، فيما لم تنشر السلطات حتى الآن معلومات عن المكان الذي بدأ فيه الحريق أو مدى الأضرار التي لحقت بالمبنى. وقال إلياس جابريني (58 عاماً)، وهو من سكان حي المحمدية القريب من دار الأيتام وشاهد الحريق، إن السكان هرعوا إلى المكان فور سماعهم نبأ اندلاع الحريق. وأضاف لوكالة رويترز \"إنه شعور كبير، شعور لا أستطيع وصفه، ليس من السهل أن ترى هذا بعينيك\". وجاء الحادث في وقت تشهد الجزائر موجة حر وارتفاعاً كبيراً في عدد الحرائق. وقالت المديرية العامة للحماية المدنية إنها أخمدت 913 حريقاً في أنحاء البلاد بين الثامن والخامس عشر من يوليو/تموز، شملت حرائق غابات وأحراش ومحاصيل زراعية ومناطق حضرية. ولم تعلن السلطات وجود صلة بين موجة الحر وحريق مؤسسة المحمدية، ولا يزال التحقيق جارياً لتحديد أسبابه. وتستخدم السلطات الجزائرية تسمية \"مؤسسات الطفولة المسعفة\" للإشارة إلى دور متخصصة في استقبال الأطفال المحرومين من الرعاية الأسرية وإيوائهم وتعليمهم. وينص الإطار القانوني الجزائري على أن تتولى الدولة حماية الأطفال المحرومين من الأُسَر من خلال مؤسسات تهدف إلى توفير الرعاية اللازمة. ولم تتوفر معلومات رسمية بعد عن الطاقة الاستيعابية لمؤسسة المحمدية أو عدد الأطفال والعاملين الذين كانوا فيها وقت اندلاع الحريق. \"رحلوا بنارٍ لم ترحم براءتهم\" واستهل الرئيس الجزائري عبد المجيد ⁧‫تبون‬⁩ كلمته خلال الندوة الصحفية المشتركة مع المستشار الألماني فريدريش ميرتس بالترحم على أرواح \"الأطفال الذين كانوا ضحايا حريق مهول اليوم..\". https://twitter.com/Tipazicherchali/status/2077758834211189143 وتفاعل مستخدموا وسائل التواصل الاجتماعي مع هذه الحادثة الأليمة، معربين عن تعازيهم لضحايا",
-      "cleanText": "Thu, 16 Jul 2026 18:56:16 GMT لقي 11 شخصاً حتفهم، بينهم أطفال، وأصيب 19 آخرون في حريق اندلع في دار للأيتام في بلدية المحمدية، شرقي العاصمة الجزائر، وفق ما أعلنت الحماية المدنية الجزائرية. وقالت المديرية العامة للحماية المدنية إن فرقها تدخلت نحو الساعة الثالثة والنصف فجراً لإخماد الحريق الذي شب في \"مؤسسة الطفولة المسعفة\"، مشيرة إلى أن المصابين أسعفوا ونقلوا إلى المستشفيات، ولم تعلن السلطات أعمار الضحايا أو هوياتهم. وأضافت أن عشرة من المصابين تعرضوا لحروق متفاوتة الخطورة، بينما أجلت فرق الطوارئ خمسة أشخاص من ذوي الإعاقة من دار الأيتام إلى مكان آمن. وأعرب الرئيس الجزائري عبد المجيد تبون، عن تعازيه لضحايا الحريق، وقال \"تلقيت مسلماً بقضاء الله وقدره نبأ وفاة أطفال وإصابة آخرين من أبناء الجزائر، إثر الحريق.. وأمام هذا المصاب الجلل الذي نزل غداة إحياء اليوم الوطني للطفل، أسأل الله العلي القدير أن يتغمد المتوفين بواسع رحمته، وأن يمن على المصابين بالشفاء العاجل\". إلى ذلك، زار رئيس الوزراء الجزائري سيفي غريب المصابين في مستشفى الحروق الكبرى في زرالدة ومستشفى مصطفى باشا في العاصمة، بحسب التلفزيون الجزائري الرسمي. ولا يزال سبب اندلاع الحريق مجهولاً، فيما لم تنشر السلطات حتى الآن معلومات عن المكان الذي بدأ فيه الحريق أو مدى الأضرار التي لحقت بالمبنى. وقال إلياس جابريني (58 عاماً)، وهو من سكان حي المحمدية القريب من دار الأيتام وشاهد الحريق، إن السكان هرعوا إلى المكان فور سماعهم نبأ اندلاع الحريق. وأضاف لوكالة رويترز \"إنه شعور كبير، شعور لا أستطيع وصفه، ليس من السهل أن ترى هذا بعينيك\". وجاء الحادث في وقت تشهد الجزائر موجة حر وارتفاعاً كبيراً في عدد الحرائق. وقالت المديرية العامة للحماية المدنية إنها أخمدت 913 حريقاً في أنحاء البلاد بين الثامن والخامس عشر من يوليو/تموز، شملت حرائق غابات وأحراش ومحاصيل زراعية ومناطق حضرية. ولم تعلن السلطات وجود صلة بين موجة الحر وحريق مؤسسة المحمدية، ولا يزال التحقيق جارياً لتحديد أسبابه. وتستخدم السلطات الجزائرية تسمية \"مؤسسات الطفولة المسعفة\" للإشارة إلى دور متخصصة في استقبال الأطفال المحرومين من الرعاية الأسرية وإيوائهم وتعليمهم. وينص الإطار القانوني الجزائري على أن تتولى الدولة حماية الأطفال المحرومين من الأُسَر من خلال مؤسسات تهدف إلى توفير الرعاية اللازمة. ولم تتوفر معلومات رسمية بعد عن الطاقة الاستيعابية لمؤسسة المحمدية أو عدد الأطفال والعاملين الذين كانوا فيها وقت اندلاع الحريق. \"رحلوا بنارٍ لم ترحم براءتهم\" واستهل الرئيس الجزائري عبد المجيد ⁧‫تبون‬⁩ كلمته خلال الندوة الصحفية المشتركة مع المستشار الألماني فريدريش ميرتس بالترحم على أرواح \"الأطفال الذين كانوا ضحايا حريق مهول اليوم..\". https://twitter.com/Tipazicherchali/status/2077758834211189143 وتفاعل مستخدموا وسائل التواصل الاجتماعي مع هذه الحادثة الأليمة، معربين عن تعازيهم لضحايا الحريق. وقالوا إن الأطفال \"رحلوا بنارٍ لم ترحم براءتهم\". وأضافوا أنهم \"أطفالٌ لم يعرفوا حضنَ أمٍّ، ولا أمانَ أب، فكان الألم رفيقهم حتى آخر لحظة\". https://twitter.com/zmafcb/status/2077749070085427233?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/nissomed125/status/2077756565780562002?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/djamel_d87606/status/2077763468891967995?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/habiba_48/status/2077807907156980178?s=46&t=IMGqgh-45JZ5OA1nFCiYWg الجزائريون ينتخبون 407 أعضاء للمجلس الشعبي الوطني قصة حرب الرمال بين المغرب والجزائر",
-      "fullText": "Thu, 16 Jul 2026 18:56:16 GMT لقي 11 شخصاً حتفهم، بينهم أطفال، وأصيب 19 آخرون في حريق اندلع في دار للأيتام في بلدية المحمدية، شرقي العاصمة الجزائر، وفق ما أعلنت الحماية المدنية الجزائرية. وقالت المديرية العامة للحماية المدنية إن فرقها تدخلت نحو الساعة الثالثة والنصف فجراً لإخماد الحريق الذي شب في \"مؤسسة الطفولة المسعفة\"، مشيرة إلى أن المصابين أسعفوا ونقلوا إلى المستشفيات، ولم تعلن السلطات أعمار الضحايا أو هوياتهم. وأضافت أن عشرة من المصابين تعرضوا لحروق متفاوتة الخطورة، بينما أجلت فرق الطوارئ خمسة أشخاص من ذوي الإعاقة من دار الأيتام إلى مكان آمن. وأعرب الرئيس الجزائري عبد المجيد تبون، عن تعازيه لضحايا الحريق، وقال \"تلقيت مسلماً بقضاء الله وقدره نبأ وفاة أطفال وإصابة آخرين من أبناء الجزائر، إثر الحريق.. وأمام هذا المصاب الجلل الذي نزل غداة إحياء اليوم الوطني للطفل، أسأل الله العلي القدير أن يتغمد المتوفين بواسع رحمته، وأن يمن على المصابين بالشفاء العاجل\". إلى ذلك، زار رئيس الوزراء الجزائري سيفي غريب المصابين في مستشفى الحروق الكبرى في زرالدة ومستشفى مصطفى باشا في العاصمة، بحسب التلفزيون الجزائري الرسمي. ولا يزال سبب اندلاع الحريق مجهولاً، فيما لم تنشر السلطات حتى الآن معلومات عن المكان الذي بدأ فيه الحريق أو مدى الأضرار التي لحقت بالمبنى. وقال إلياس جابريني (58 عاماً)، وهو من سكان حي المحمدية القريب من دار الأيتام وشاهد الحريق، إن السكان هرعوا إلى المكان فور سماعهم نبأ اندلاع الحريق. وأضاف لوكالة رويترز \"إنه شعور كبير، شعور لا أستطيع وصفه، ليس من السهل أن ترى هذا بعينيك\". وجاء الحادث في وقت تشهد الجزائر موجة حر وارتفاعاً كبيراً في عدد الحرائق. وقالت المديرية العامة للحماية المدنية إنها أخمدت 913 حريقاً في أنحاء البلاد بين الثامن والخامس عشر من يوليو/تموز، شملت حرائق غابات وأحراش ومحاصيل زراعية ومناطق حضرية. ولم تعلن السلطات وجود صلة بين موجة الحر وحريق مؤسسة المحمدية، ولا يزال التحقيق جارياً لتحديد أسبابه. وتستخدم السلطات الجزائرية تسمية \"مؤسسات الطفولة المسعفة\" للإشارة إلى دور متخصصة في استقبال الأطفال المحرومين من الرعاية الأسرية وإيوائهم وتعليمهم. وينص الإطار القانوني الجزائري على أن تتولى الدولة حماية الأطفال المحرومين من الأُسَر من خلال مؤسسات تهدف إلى توفير الرعاية اللازمة. ولم تتوفر معلومات رسمية بعد عن الطاقة الاستيعابية لمؤسسة المحمدية أو عدد الأطفال والعاملين الذين كانوا فيها وقت اندلاع الحريق. \"رحلوا بنارٍ لم ترحم براءتهم\" واستهل الرئيس الجزائري عبد المجيد ⁧‫تبون‬⁩ كلمته خلال الندوة الصحفية المشتركة مع المستشار الألماني فريدريش ميرتس بالترحم على أرواح \"الأطفال الذين كانوا ضحايا حريق مهول اليوم..\". https://twitter.com/Tipazicherchali/status/2077758834211189143 وتفاعل مستخدموا وسائل التواصل الاجتماعي مع هذه الحادثة الأليمة، معربين عن تعازيهم لضحايا الحريق. وقالوا إن الأطفال \"رحلوا بنارٍ لم ترحم براءتهم\". وأضافوا أنهم \"أطفالٌ لم يعرفوا حضنَ أمٍّ، ولا أمانَ أب، فكان الألم رفيقهم حتى آخر لحظة\". https://twitter.com/zmafcb/status/2077749070085427233?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/nissomed125/status/2077756565780562002?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/djamel_d87606/status/2077763468891967995?s=46&t=IMGqgh-45JZ5OA1nFCiYWg https://twitter.com/habiba_48/status/2077807907156980178?s=46&t=IMGqgh-45JZ5OA1nFCiYWg الجزائريون ينتخبون 407 أعضاء للمجلس الشعبي الوطني قصة حرب الرمال بين المغرب والجزائر",
-      "collectionMethod": "iraq-media-direct",
-      "sourceType": "iraq-media-direct",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "exclude",
-      "importanceScore": 72,
-      "reportUsefulness": "exclude",
-      "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 3082,
-      "translationFailed": true,
-      "untranslatedFiltered": true
+      "untranslatedFiltered": true,
+      "duplicateCollapsed": true,
+      "duplicateCollapsedCount": 15
     },
     {
       "id": "direct-aHR0cHM6Ly93d3cu",
-      "title": "US, Qatari firms to construct Iraqi oil pipeline from Basra to Fishkhabur - Iraqi News",
+      "title": "Chevron targets Iraq oil expansion with Hormuz bypass pipeline - Iraqi News",
       "source": "Iraqi News",
-      "publishedAt": "2026-07-16T08:53:42.000Z",
-      "url": "https://www.iraqinews.com/iraq/us-qatari-firms-to-construct-iraqi-oil-pipeline-from-basra-to-fishkhabur/",
-      "description": "A consortium of US-based TI Capital and Chevron, as well as Qatar’s UCC, will construct a strategic oil pipeline from Basra to Fishkhabur. A worker stands next to an export pipeline at the Tawke oil refinery near the village of Zacho in Iraqi Kurdistan. Photo: AFP Baghdad (IraqiNews.com) – Iraqi Oil Minister Basim Khudair said on Wednesday that a consortium of US-based TI Capital and Chevron, as well as Qatar’s UCC, will construct a strategic oil pipeline from Basra to Fishkhabur. In a statement to the state-run news agency (INA), Khudair explained that the project is a network of pipelines that will be extended to the Turkish port of Ceyhan and the Syrian port of Baniyas. The pipeline network will provide the country with additional export outlets on the Mediterranean, significantly reducing the risks of maritime shipping via the Strait of Hormuz. Khudair confirmed that Iraq is seeking to establish significant partnerships with major international companies. He noted that the new oil pipelines will provide two additional outlets to enhance export flexibility. Iraq is attempting to reach major agreements with international oil corporations, which is why American companies have been favored, according to Khudair. The Iraqi minister noted that Prime Minister Ali al-Zaidi’s recent meeting with US President Donald Trump included important discussions. Khudair highlighted that a shared understanding exists between Trump and al-Zaidi, who is currently in Washington, to attract international corporations to invest in Iraq. A country like Iraq, with its vast oil and gas reserves, cannot continue to rely on a single outlet, the Strait of Hormuz, according to Khudair. “Economic and financial issues were keeping the Iraqi government from completing the pipeline project,” he added. The Basra-Fishkhabur pipeline project is one of Iraq’s largest strategic energy initiatives, connecting southern oil reserves to the Turkish border. This massive project provides a critical economic shortcut to reduce Iraq’s reliance on the Strait of Hormuz.",
-      "cleanText": "A worker stands next to an export pipeline at the Tawke oil refinery near the village of Zacho in Iraqi Kurdistan. Photo: AFP Baghdad (IraqiNews.com) – Iraqi Oil Minister Basim Khudair said on Wednesday that a consortium of US-based TI Capital and Chevron, as well as Qatar’s UCC, will construct a strategic oil pipeline from Basra to Fishkhabur. In a statement to the state-run news agency (INA), Khudair explained that the project is a network of pipelines that will be extended to the Turkish port of Ceyhan and the Syrian port of Baniyas. The pipeline network will provide the country with additional export outlets on the Mediterranean, significantly reducing the risks of maritime shipping via the Strait of Hormuz. Khudair confirmed that Iraq is seeking to establish significant partnerships with major international companies. He noted that the new oil pipelines will provide two additional outlets to enhance export flexibility. Iraq is attempting to reach major agreements with international oil corporations, which is why American companies have been favored, according to Khudair. The Iraqi minister noted that Prime Minister Ali al-Zaidi’s recent meeting with US President Donald Trump included important discussions. Khudair highlighted that a shared understanding exists between Trump and al-Zaidi, who is currently in Washington, to attract international corporations to invest in Iraq. A country like Iraq, with its vast oil and gas reserves, cannot continue to rely on a single outlet, the Strait of Hormuz, according to Khudair. “Economic and financial issues were keeping the Iraqi government from completing the pipeline project,” he added. The Basra-Fishkhabur pipeline project is one of Iraq’s largest strategic energy initiatives, connecting southern oil reserves to the Turkish border. This massive project provides a critical economic shortcut to reduce Iraq’s reliance on the Strait of Hormuz.",
-      "fullText": "A worker stands next to an export pipeline at the Tawke oil refinery near the village of Zacho in Iraqi Kurdistan. Photo: AFP Baghdad (IraqiNews.com) – Iraqi Oil Minister Basim Khudair said on Wednesday that a consortium of US-based TI Capital and Chevron, as well as Qatar’s UCC, will construct a strategic oil pipeline from Basra to Fishkhabur. In a statement to the state-run news agency (INA), Khudair explained that the project is a network of pipelines that will be extended to the Turkish port of Ceyhan and the Syrian port of Baniyas. The pipeline network will provide the country with additional export outlets on the Mediterranean, significantly reducing the risks of maritime shipping via the Strait of Hormuz. Khudair confirmed that Iraq is seeking to establish significant partnerships with major international companies. He noted that the new oil pipelines will provide two additional outlets to enhance export flexibility. Iraq is attempting to reach major agreements with international oil corporations, which is why American companies have been favored, according to Khudair. The Iraqi minister noted that Prime Minister Ali al-Zaidi’s recent meeting with US President Donald Trump included important discussions. Khudair highlighted that a shared understanding exists between Trump and al-Zaidi, who is currently in Washington, to attract international corporations to invest in Iraq. A country like Iraq, with its vast oil and gas reserves, cannot continue to rely on a single outlet, the Strait of Hormuz, according to Khudair. “Economic and financial issues were keeping the Iraqi government from completing the pipeline project,” he added. The Basra-Fishkhabur pipeline project is one of Iraq’s largest strategic energy initiatives, connecting southern oil reserves to the Turkish border. This massive project provides a critical economic shortcut to reduce Iraq’s reliance on the Strait of Hormuz.",
+      "publishedAt": "2026-07-16T17:17:19.000Z",
+      "url": "https://www.iraqinews.com/iraq/chevron-targets-iraq-oil-expansion-with-hormuz-bypass-pipeline/",
+      "description": "Houston (IraqiNews.com) – Iraqi Prime Minister Ali Al-Zaidi met with Chevron officials in Houston on Thursday, pushing the US oil company to increase investment in Iraq as Baghdad strives to [&hellip;] Houston (IraqiNews.com) – Iraqi Prime Minister Ali Al-Zaidi met with Chevron officials in Houston on Thursday, pushing the US oil company to increase investment in Iraq as Baghdad strives to strengthen energy connections with the US and attract international capital to boost its oil industry. The discussion at Chevron’s headquarters occurred two days after Al-Zaidi met with US President Donald Trump in Washington, and it marked the next step of the Iraqi leader’s tour, which has been centered on gaining American investment and deepening economic ties. According to a statement from his office, Al-Zaidi informed Chevron executives that Iraq was ready to provide the approvals, infrastructure support, and investment incentives required to accelerate projects in the energy sector, including crude production, refining, petrochemicals, natural gas development, and technology transfer. He added that the government was dedicated to strengthening the business climate for foreign energy businesses to attract investment, create employment, and grow the Iraqi economy. According to the Iraqi statement, Chevron Vice Chairman Mark Nelson said that the firm intends to increase its presence in Iraq by investing in the West Qurna 2 and Nasiriyah oilfields, pipeline infrastructure, and storage facilities, as well as striving to hasten project execution. A top Chevron official said that the firm intends to sign memorandums of understanding with the Iraqi government on Friday for West Qurna 2 and Nasiriyah, progressing discussions toward a definitive investment deal. Chevron is also looking at prospective export pipeline routes that would enable Iraqi petroleum to reach regional ports without crossing the Strait of Hormuz, according to the CEO. Rehabilitating existing infrastructure or building new pipes that connect Iraq to export routes via Syria or Turkey is among the options being considered. The quest for alternate export lanes has become more urgent as disruptions to shipping via the Strait of Hormuz underlined Iraq’s reliance on the waterway for oil exports. The Chevron conversations are part of Baghdad’s larger drive to enhance trade relations with the United States under al-Zaidi’s leadership. Iraq is looking for increased engagement from American corporations in its energy industry as it seeks to enhance production capacity, grow downstream sectors, and attract long-term investment. Al-Zaidi’s visit is likely to result in further commercial announcements, with the Uni",
+      "cleanText": "Houston (IraqiNews.com) – Iraqi Prime Minister Ali Al-Zaidi met with Chevron officials in Houston on Thursday, pushing the US oil company to increase investment in Iraq as Baghdad strives to strengthen energy connections with the US and attract international capital to boost its oil industry. The discussion at Chevron’s headquarters occurred two days after Al-Zaidi met with US President Donald Trump in Washington, and it marked the next step of the Iraqi leader’s tour, which has been centered on gaining American investment and deepening economic ties. According to a statement from his office, Al-Zaidi informed Chevron executives that Iraq was ready to provide the approvals, infrastructure support, and investment incentives required to accelerate projects in the energy sector, including crude production, refining, petrochemicals, natural gas development, and technology transfer. He added that the government was dedicated to strengthening the business climate for foreign energy businesses to attract investment, create employment, and grow the Iraqi economy. According to the Iraqi statement, Chevron Vice Chairman Mark Nelson said that the firm intends to increase its presence in Iraq by investing in the West Qurna 2 and Nasiriyah oilfields, pipeline infrastructure, and storage facilities, as well as striving to hasten project execution. A top Chevron official said that the firm intends to sign memorandums of understanding with the Iraqi government on Friday for West Qurna 2 and Nasiriyah, progressing discussions toward a definitive investment deal. Chevron is also looking at prospective export pipeline routes that would enable Iraqi petroleum to reach regional ports without crossing the Strait of Hormuz, according to the CEO. Rehabilitating existing infrastructure or building new pipes that connect Iraq to export routes via Syria or Turkey is among the options being considered. The quest for alternate export lanes has become more urgent as disruptions to shipping via the Strait of Hormuz underlined Iraq’s reliance on the waterway for oil exports. The Chevron conversations are part of Baghdad’s larger drive to enhance trade relations with the United States under al-Zaidi’s leadership. Iraq is looking for increased engagement from American corporations in its energy industry as it seeks to enhance production capacity, grow downstream sectors, and attract long-term investment. Al-Zaidi’s visit is likely to result in further commercial announcements, with the United States Chamber of Commerce sponsoring a US-Iraq Business Summit in Washington on Friday, when government and corporate representatives are expected to announce billions of dollars in investment commitments. Chevron began exclusive discussions earlier this year for an interest in West Qurna 2, one of Iraq’s major producing oilfields, with an output of around 460,000 barrels per day. Last year, the business secured an agreement in principle to build the Nasiriyah project, which covers exploration and production blocks in southern Iraq. Iraq, OPEC’s second-largest oil producer after Saudi Arabia, is looking to diversify export channels and increase output while attracting more US investment in its energy industry.",
+      "fullText": "Houston (IraqiNews.com) – Iraqi Prime Minister Ali Al-Zaidi met with Chevron officials in Houston on Thursday, pushing the US oil company to increase investment in Iraq as Baghdad strives to strengthen energy connections with the US and attract international capital to boost its oil industry. The discussion at Chevron’s headquarters occurred two days after Al-Zaidi met with US President Donald Trump in Washington, and it marked the next step of the Iraqi leader’s tour, which has been centered on gaining American investment and deepening economic ties. According to a statement from his office, Al-Zaidi informed Chevron executives that Iraq was ready to provide the approvals, infrastructure support, and investment incentives required to accelerate projects in the energy sector, including crude production, refining, petrochemicals, natural gas development, and technology transfer. He added that the government was dedicated to strengthening the business climate for foreign energy businesses to attract investment, create employment, and grow the Iraqi economy. According to the Iraqi statement, Chevron Vice Chairman Mark Nelson said that the firm intends to increase its presence in Iraq by investing in the West Qurna 2 and Nasiriyah oilfields, pipeline infrastructure, and storage facilities, as well as striving to hasten project execution. A top Chevron official said that the firm intends to sign memorandums of understanding with the Iraqi government on Friday for West Qurna 2 and Nasiriyah, progressing discussions toward a definitive investment deal. Chevron is also looking at prospective export pipeline routes that would enable Iraqi petroleum to reach regional ports without crossing the Strait of Hormuz, according to the CEO. Rehabilitating existing infrastructure or building new pipes that connect Iraq to export routes via Syria or Turkey is among the options being considered. The quest for alternate export lanes has become more urgent as disruptions to shipping via the Strait of Hormuz underlined Iraq’s reliance on the waterway for oil exports. The Chevron conversations are part of Baghdad’s larger drive to enhance trade relations with the United States under al-Zaidi’s leadership. Iraq is looking for increased engagement from American corporations in its energy industry as it seeks to enhance production capacity, grow downstream sectors, and attract long-term investment. Al-Zaidi’s visit is likely to result in further commercial announcements, with the United States Chamber of Commerce sponsoring a US-Iraq Business Summit in Washington on Friday, when government and corporate representatives are expected to announce billions of dollars in investment commitments. Chevron began exclusive discussions earlier this year for an interest in West Qurna 2, one of Iraq’s major producing oilfields, with an output of around 460,000 barrels per day. Last year, the business secured an agreement in principle to build the Nasiriyah project, which covers exploration and production blocks in southern Iraq. Iraq, OPEC’s second-largest oil producer after Saudi Arabia, is looking to diversify export channels and increase output while attracting more US investment in its energy industry.",
       "collectionMethod": "iraq-media-direct",
       "sourceType": "iraq-media-direct",
       "category1": "international",
@@ -79,58 +58,21 @@
       "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 1920,
+      "sourceEvidenceChars": 3224,
       "translationFailed": true,
-      "reportBullet": "7.16, 이라크 석유부, 美 TI Capital·Chevron 및 카타르 UCC 컨소시엄의 Basra-Fishkhabur 전략 송유관 건설 계획 발표",
+      "reportBullet": "7.16, Al-Zaidi 총리, Chevron의 이라크 유전·수출 인프라 투자 확대 및 호르무즈 해협 우회 송유관 검토 협의",
       "reportSubBullets": [
-        "송유관망의 튀르키예 Ceyhan항 및 시리아 Baniyas항 연장 계획",
-        "정부의 경제·재정 문제가 기존 사업 완공의 제약 요인이었다는 석유장관 설명"
+        "Chevron, West Qurna 2·Nasiriyah 유전과 송유관·저장시설 투자 확대 및 사업 가속화 의향 표명",
+        "시리아·튀르키예 경유 기존 인프라 복구 또는 신규 송유관 건설을 대체 수출로 선택지로 검토"
       ],
-      "reportImplication": "지중해 추가 수출로 2개 확보 시 원유 수출 유연성 제고 및 Hormuz 해협 경유 해상운송 위험 완화 가능.",
+      "reportImplication": "호르무즈 해협 운송 차질로 이라크 원유 수출의 해당 항로 의존 위험이 부각되며 대체 수출로 확보 시급성 증대",
       "reportWritingModel": "gpt-5.6-sol",
       "reportWritingReasoning": "high",
       "reportWritingVersion": "weekly-report-writing-v1-gpt-5.6-sol",
-      "reportWritingRefinedAt": "2026-07-17T06:09:30.792Z",
+      "reportWritingRefinedAt": "2026-07-17T06:27:38.115Z",
       "untranslatedFiltered": true,
       "duplicateCollapsed": true,
-      "duplicateCollapsedCount": 30
-    },
-    {
-      "id": "direct-aHR0cHM6Ly85NjRt",
-      "title": "العراق يطلب شحنة دولار إضافية من ترامب بالتزامن مع لقاء الزيدي",
-      "source": "964media",
-      "publishedAt": "2026-07-14T19:44:11.000Z",
-      "url": "https://964media.com/698865/",
-      "description": "964 كشف المتحدث باسم الحكومة العراقية، حيدر العبودي، اليوم الثلاثاء (14 تموز 2026)، عن تقديم البنك المركزي تصريحات ناطق الحكومة العراق يطلب شحنة دولار إضافية من ترامب بالتزامن مع لقاء الزيدي كشف المتحدث باسم الحكومة العراقية، حيدر العبودي، اليوم الثلاثاء (14 تموز 2026)، عن تقديم البنك المركزي العراقي طلباً للحصول على دفعة إضافية من العملة الأجنبية “الدولار” من الفيدرالي الأمريكي، مبيناً أن لقاء رئيس الوزراء علي الزيدي بالرئيس الأمريكي دونالد ترامب، اليوم آطر العلاقة بين البلدين ونقلها من حيز الأمن إلى حيز الاقتصاد، وفيما كشف العبودي، خلال مداخلة مع قناة الجزيرة، تابعتها شبكة 964 ، عن انتفاء الحاجة لوجود القوات الأجنبية في البلاد ومغادرتها في شهر أيلول، أكد أن قرار حصر السلاح بيد الدولة، هو قرار الحكومة والزيدي حصراً. انضموا إلى أسرع منصاتنا وقال العبودي إن “الوفد العراقي في واشنطن برئاسة رئيس الوزراء، علي الزيدي، وضع النقاط على الحروف، في مسار العلاقة التي تربطه بالولايات المتحدة، ولقاء الزيدي اليوم بترامب، وتأطير المباحثات والتفاهمات بصورة علاقة استراتيجية تبنى على أساس الاقتصاد، وهذا يؤكد بشكل واضح أن العراق يمتلك ثقلاً استراتيجياً على مستوى المنطقة”. وأوضح العبودي أن “قرار حصر السلاح بيد الدولة، هو قرار خاص بالحكومة العراقية فقط ولرئيس الوزراء علي الزيدي، والاقتصاد اليوم هو ما يمثل التحدي الأكبر في العراق، كون إيرادات الدولة المبنية على أساس الواردات النفطية تعرضت لمخاطر كبيرة مع إغلاق مضيق هرمز والتوترات التي شهدتها المنطقة”. وأشار العبودي إلى أن “ظروف تواجد القوات الدولية في العراق، في عام 2014 كان بطلب من الحكومة العراقية، التي استعانت بأصدقائها الدوليين، لكن اليوم انتفت الأسباب التي تدعو لبقاء هذه القوات في العراق”. وأضاف العبودي أن “العراق اليوم يتوجه إلى البحث عن مقومات اقتصادية تنموية تخدم المصالح العليا للدولة العراقية، وعلى هذا الأساس الشراكة بين بغداد وواشنطن تبنى على ثيمة الاقتصاد من أجل تمكين البلدين من استدامة هذا النوع من العلاقة والانتقال بها من حيز الأمن إلى حيز الاقتصاد”. وأكد العبودي أن “السيولة الأجنبية إلى العراق، أطلقت قبل مدة بعد أن قلت أسباب استمرار هذا التدفق للعملات الأجنبية إلى العراق، وكما يعرف الجميع أن البنك المركزي العراقي لديه حساب لدى الفيدرالي الأمريكي، ظروف النقل الجوي خلال الأشهر الماضية عرقلت وصول شحنات الدولار إلى البلاد، واليوم أطلقت هذه الدفعات مرة أخرى، وبحسب المعلومات التي وردتنا، فإن البنك المركزي قدم طلباً للحصول على دفعة أخرى من الدولار”. 10 نقاط في ليلة ترامب والزيدي.. “لا خوف.. انتظرني نهاية السنة” الزيدي يخبر ترامب شيئاً عن كردستان: جزء من جسدي مثل البصرة ترامب يخبر الزيدي شيئاً عن إيران: انتهى خوفكم.. أنا الحارس الزيدي يشتكي لترامب من أوبك: أريد حصة أكبر في نفط العالم أول كلام الزيدي لترامب: سلاح الفصائل صار عندي وانتظرني إلى نهاية العام الزيدي يبلغ ترامب: جئتك من أقدم حضارة في العالم ترامب يتذكر المالكي ويقول",
-      "cleanText": "تصريحات ناطق الحكومة العراق يطلب شحنة دولار إضافية من ترامب بالتزامن مع لقاء الزيدي كشف المتحدث باسم الحكومة العراقية، حيدر العبودي، اليوم الثلاثاء (14 تموز 2026)، عن تقديم البنك المركزي العراقي طلباً للحصول على دفعة إضافية من العملة الأجنبية “الدولار” من الفيدرالي الأمريكي، مبيناً أن لقاء رئيس الوزراء علي الزيدي بالرئيس الأمريكي دونالد ترامب، اليوم آطر العلاقة بين البلدين ونقلها من حيز الأمن إلى حيز الاقتصاد، وفيما كشف العبودي، خلال مداخلة مع قناة الجزيرة، تابعتها شبكة 964 ، عن انتفاء الحاجة لوجود القوات الأجنبية في البلاد ومغادرتها في شهر أيلول، أكد أن قرار حصر السلاح بيد الدولة، هو قرار الحكومة والزيدي حصراً. انضموا إلى أسرع منصاتنا وقال العبودي إن “الوفد العراقي في واشنطن برئاسة رئيس الوزراء، علي الزيدي، وضع النقاط على الحروف، في مسار العلاقة التي تربطه بالولايات المتحدة، ولقاء الزيدي اليوم بترامب، وتأطير المباحثات والتفاهمات بصورة علاقة استراتيجية تبنى على أساس الاقتصاد، وهذا يؤكد بشكل واضح أن العراق يمتلك ثقلاً استراتيجياً على مستوى المنطقة”. وأوضح العبودي أن “قرار حصر السلاح بيد الدولة، هو قرار خاص بالحكومة العراقية فقط ولرئيس الوزراء علي الزيدي، والاقتصاد اليوم هو ما يمثل التحدي الأكبر في العراق، كون إيرادات الدولة المبنية على أساس الواردات النفطية تعرضت لمخاطر كبيرة مع إغلاق مضيق هرمز والتوترات التي شهدتها المنطقة”. وأشار العبودي إلى أن “ظروف تواجد القوات الدولية في العراق، في عام 2014 كان بطلب من الحكومة العراقية، التي استعانت بأصدقائها الدوليين، لكن اليوم انتفت الأسباب التي تدعو لبقاء هذه القوات في العراق”. وأضاف العبودي أن “العراق اليوم يتوجه إلى البحث عن مقومات اقتصادية تنموية تخدم المصالح العليا للدولة العراقية، وعلى هذا الأساس الشراكة بين بغداد وواشنطن تبنى على ثيمة الاقتصاد من أجل تمكين البلدين من استدامة هذا النوع من العلاقة والانتقال بها من حيز الأمن إلى حيز الاقتصاد”. وأكد العبودي أن “السيولة الأجنبية إلى العراق، أطلقت قبل مدة بعد أن قلت أسباب استمرار هذا التدفق للعملات الأجنبية إلى العراق، وكما يعرف الجميع أن البنك المركزي العراقي لديه حساب لدى الفيدرالي الأمريكي، ظروف النقل الجوي خلال الأشهر الماضية عرقلت وصول شحنات الدولار إلى البلاد، واليوم أطلقت هذه الدفعات مرة أخرى، وبحسب المعلومات التي وردتنا، فإن البنك المركزي قدم طلباً للحصول على دفعة أخرى من الدولار”. 10 نقاط في ليلة ترامب والزيدي.. “لا خوف.. انتظرني نهاية السنة” الزيدي يخبر ترامب شيئاً عن كردستان: جزء من جسدي مثل البصرة ترامب يخبر الزيدي شيئاً عن إيران: انتهى خوفكم.. أنا الحارس الزيدي يشتكي لترامب من أوبك: أريد حصة أكبر في نفط العالم أول كلام الزيدي لترامب: سلاح الفصائل صار عندي وانتظرني إلى نهاية العام الزيدي يبلغ ترامب: جئتك من أقدم حضارة في العالم ترامب يتذكر المالكي ويقول للزيدي: كيمياء عالية تجمعني بك وكنت حريصاً أن تفوز ترامب: “أغار من الزيدي”.. سيبقى في منصبه طويلاً وأنجز الكثير ترامب مع الزيدي في باب البيت الأبيض: الزيدي فاز.. أحب العراق.. حالياً هذا كل ما لدي بدأت ليلة بغداد مع ترامب.. الرئيس يؤشر إلى الزيدي ويتحدث كثيراً",
-      "fullText": "تصريحات ناطق الحكومة العراق يطلب شحنة دولار إضافية من ترامب بالتزامن مع لقاء الزيدي كشف المتحدث باسم الحكومة العراقية، حيدر العبودي، اليوم الثلاثاء (14 تموز 2026)، عن تقديم البنك المركزي العراقي طلباً للحصول على دفعة إضافية من العملة الأجنبية “الدولار” من الفيدرالي الأمريكي، مبيناً أن لقاء رئيس الوزراء علي الزيدي بالرئيس الأمريكي دونالد ترامب، اليوم آطر العلاقة بين البلدين ونقلها من حيز الأمن إلى حيز الاقتصاد، وفيما كشف العبودي، خلال مداخلة مع قناة الجزيرة، تابعتها شبكة 964 ، عن انتفاء الحاجة لوجود القوات الأجنبية في البلاد ومغادرتها في شهر أيلول، أكد أن قرار حصر السلاح بيد الدولة، هو قرار الحكومة والزيدي حصراً. انضموا إلى أسرع منصاتنا وقال العبودي إن “الوفد العراقي في واشنطن برئاسة رئيس الوزراء، علي الزيدي، وضع النقاط على الحروف، في مسار العلاقة التي تربطه بالولايات المتحدة، ولقاء الزيدي اليوم بترامب، وتأطير المباحثات والتفاهمات بصورة علاقة استراتيجية تبنى على أساس الاقتصاد، وهذا يؤكد بشكل واضح أن العراق يمتلك ثقلاً استراتيجياً على مستوى المنطقة”. وأوضح العبودي أن “قرار حصر السلاح بيد الدولة، هو قرار خاص بالحكومة العراقية فقط ولرئيس الوزراء علي الزيدي، والاقتصاد اليوم هو ما يمثل التحدي الأكبر في العراق، كون إيرادات الدولة المبنية على أساس الواردات النفطية تعرضت لمخاطر كبيرة مع إغلاق مضيق هرمز والتوترات التي شهدتها المنطقة”. وأشار العبودي إلى أن “ظروف تواجد القوات الدولية في العراق، في عام 2014 كان بطلب من الحكومة العراقية، التي استعانت بأصدقائها الدوليين، لكن اليوم انتفت الأسباب التي تدعو لبقاء هذه القوات في العراق”. وأضاف العبودي أن “العراق اليوم يتوجه إلى البحث عن مقومات اقتصادية تنموية تخدم المصالح العليا للدولة العراقية، وعلى هذا الأساس الشراكة بين بغداد وواشنطن تبنى على ثيمة الاقتصاد من أجل تمكين البلدين من استدامة هذا النوع من العلاقة والانتقال بها من حيز الأمن إلى حيز الاقتصاد”. وأكد العبودي أن “السيولة الأجنبية إلى العراق، أطلقت قبل مدة بعد أن قلت أسباب استمرار هذا التدفق للعملات الأجنبية إلى العراق، وكما يعرف الجميع أن البنك المركزي العراقي لديه حساب لدى الفيدرالي الأمريكي، ظروف النقل الجوي خلال الأشهر الماضية عرقلت وصول شحنات الدولار إلى البلاد، واليوم أطلقت هذه الدفعات مرة أخرى، وبحسب المعلومات التي وردتنا، فإن البنك المركزي قدم طلباً للحصول على دفعة أخرى من الدولار”. 10 نقاط في ليلة ترامب والزيدي.. “لا خوف.. انتظرني نهاية السنة” الزيدي يخبر ترامب شيئاً عن كردستان: جزء من جسدي مثل البصرة ترامب يخبر الزيدي شيئاً عن إيران: انتهى خوفكم.. أنا الحارس الزيدي يشتكي لترامب من أوبك: أريد حصة أكبر في نفط العالم أول كلام الزيدي لترامب: سلاح الفصائل صار عندي وانتظرني إلى نهاية العام الزيدي يبلغ ترامب: جئتك من أقدم حضارة في العالم ترامب يتذكر المالكي ويقول للزيدي: كيمياء عالية تجمعني بك وكنت حريصاً أن تفوز ترامب: “أغار من الزيدي”.. سيبقى في منصبه طويلاً وأنجز الكثير ترامب مع الزيدي في باب البيت الأبيض: الزيدي فاز.. أحب العراق.. حالياً هذا كل ما لدي بدأت ليلة بغداد مع ترامب.. الرئيس يؤشر إلى الزيدي ويتحدث كثيراً",
-      "collectionMethod": "iraq-media-direct",
-      "sourceType": "iraq-media-direct",
-      "category1": "international",
-      "category2": "international",
-      "category3": "exclude",
-      "importanceScore": 76,
-      "reportUsefulness": "exclude",
-      "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 2759,
-      "translationFailed": true,
-      "reportBullet": "7.14, 이라크 정부, 이라크 중앙은행의 美 연준 대상 추가 달러화 공급 요청 및 Al-Zaidi 총리 방미 계기 양국 관계의 경제 중심 전환 강조.",
-      "reportSubBullets": [
-        "최근 수개월간 항공 운송 차질로 중단된 달러화 반입 재개.",
-        "외국군 주둔 필요성 소멸에 따른 9월 철수 및 무기 통제의 정부 전속 권한 천명."
-      ],
-      "reportImplication": "호르무즈 해협 폐쇄와 역내 긴장으로 석유수입 기반 국가재정 위험이 커진 가운데 외화 유동성 확보 필요성 증대.",
-      "reportWritingModel": "gpt-5.6-sol",
-      "reportWritingReasoning": "high",
-      "reportWritingVersion": "weekly-report-writing-v1-gpt-5.6-sol",
-      "reportWritingRefinedAt": "2026-07-17T06:09:31.772Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "untranslatedFiltered": true,
-      "duplicateCollapsed": true,
-      "duplicateCollapsedCount": 21
+      "duplicateCollapsedCount": 31
     },
     {
       "id": "direct-aHR0cHM6Ly9iYWdo",
@@ -138,34 +80,24 @@
       "source": "Baghdad Today",
       "publishedAt": "",
       "url": "https://baghdadtoday.news/303459-.html",
-      "description": "Baghdad Today سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". القائم تحت رحمة الظلام ولهيب تموز وأطفالها ينامون داخل السيارات هرباً من الموت بغداد اليوم - الأنبار رغم الأنباء المتداولة عن تشغيل محطة عكاز الغازية، لا تزال مدينة القائم في محافظة الأنبار تعيش ظلامًا شبه كامل، مع استمرار انقطاع التيار الكهربائي عن جميع أحيائها لليوم الثالث على التوالي، وسط موجة حر خانقة دفعت الأهالي إلى استخدام",
-      "cleanText": "سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". القائم تحت رحمة الظلام ولهيب تموز وأطفالها ينامون داخل السيارات هرباً من الموت بغداد اليوم - الأنبار رغم الأنباء المتداولة عن تشغيل محطة عكاز الغازية، لا تزال مدينة القائم في محافظة الأنبار تعيش ظلامًا شبه كامل، مع استمرار انقطاع التيار الكهربائي عن جميع أحيائها لليوم الثالث على التوالي، وسط موجة حر خانقة دفعت الأهالي إلى استخدام",
-      "fullText": "سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". القائم تحت رحمة الظلام ولهيب تموز وأطفالها ينامون داخل السيارات هرباً من الموت بغداد اليوم - الأنبار رغم الأنباء المتداولة عن تشغيل محطة عكاز الغازية، لا تزال مدينة القائم في محافظة الأنبار تعيش ظلامًا شبه كامل، مع استمرار انقطاع التيار الكهربائي عن جميع أحيائها لليوم الثالث على التوالي، وسط موجة حر خانقة دفعت الأهالي إلى استخدام",
+      "description": "Baghdad Today سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". الحرس الثوري: هاجمنا مركزا في التنف السوري ردا على مقتل جنود إيرانيين بغداد اليوم - متابعة أفادت ​وسائل إعلام رسمية عن الحرس الثوري الإيراني، اليوم الجمعة ( 17 تموز 2026 )، إنه ⁠هاجم مركز قيادة أمريكا للعمليات الخاصة في التنف بسوريا، ردا على مقتل جنود إيرانيين في إيرانشهر. وجاء في بيان للحرس نشره التلفزيون الإيراني، أنه",
+      "cleanText": "سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". الحرس الثوري: هاجمنا مركزا في التنف السوري ردا على مقتل جنود إيرانيين بغداد اليوم - متابعة أفادت ​وسائل إعلام رسمية عن الحرس الثوري الإيراني، اليوم الجمعة ( 17 تموز 2026 )، إنه ⁠هاجم مركز قيادة أمريكا للعمليات الخاصة في التنف بسوريا، ردا على مقتل جنود إيرانيين في إيرانشهر. وجاء في بيان للحرس نشره التلفزيون الإيراني، أنه",
+      "fullText": "سطو مسلح في الطوز والأمن يلاحق الجناة بغداد اليوم – صلاح الدين أفاد مصدر أمني، اليوم الخميس، ( 16 تموز 2026 )، بإصابة مدني خلال حادثة سطو استهدفت منزلًا سكنيًا في قضاء طوز خورماتو شرق محافظة صلاح الدين، فيما باشرت القوات الأمنية عمليات تعقب منفذي الهجوم. وذكر المصدر لـ\"بغداد اليوم\"، إن \"شخصين مجهولين، كانا يحملان أسلحة بيضاء (سكاكين)، اقتحما منزلًا سكنيًا في أحد أحياء قضاء طوز خورماتو، وقاما بالاعتداء على صاحب المنزل، ما أسفر عن إصابته بجروح، قبل الاستيلاء على مبلغ مالي يقدر بخمسة ملايين دينار وسرقة مركبة والفرار من المكان\". وأضاف، أن \"القوات الأمنية فرضت طوقًا أمنيًا فور تلقيها البلاغ، وشرعت بعمليات تفتيش واسعة في محيط المنطقة\"، مبينًا أنها \"تمكنت خلال ساعات من العثور على المركبة التي سرقها الجناة خلال تنفيذ عملية السطو\". وأشار المصدر إلى، أن \"لجنة تحقيق شُكلت لمتابعة ملابسات الحادث، بالتزامن مع تفريغ كاميرات المراقبة وجمع الأدلة، في إطار الجهود الرامية إلى تحديد هوية المتهمين وإلقاء القبض عليهما بأسرع وقت\". الحرس الثوري: هاجمنا مركزا في التنف السوري ردا على مقتل جنود إيرانيين بغداد اليوم - متابعة أفادت ​وسائل إعلام رسمية عن الحرس الثوري الإيراني، اليوم الجمعة ( 17 تموز 2026 )، إنه ⁠هاجم مركز قيادة أمريكا للعمليات الخاصة في التنف بسوريا، ردا على مقتل جنود إيرانيين في إيرانشهر. وجاء في بيان للحرس نشره التلفزيون الإيراني، أنه",
       "collectionMethod": "iraq-media-direct",
       "sourceType": "iraq-media-direct",
-      "category1": "domestic",
-      "category2": "politics_security",
+      "category1": "international",
+      "category2": "international",
       "category3": "exclude",
       "importanceScore": 78,
       "reportUsefulness": "exclude",
       "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 1254,
+      "sourceEvidenceChars": 1244,
       "translationFailed": true,
-      "reportBullet": "7.16, 신원 미상 2인, 살라딘주 동부 투즈쿠르마투 주택 침입 후 집주인 부상·현금 500만 디나르 및 차량 강탈 사건 발생",
-      "reportSubBullets": [
-        "보안군, 사건 현장 일대 봉쇄·수색을 통해 수 시간 내 강탈 차량 회수",
-        "수사위원회, 용의자 신원 확인·검거를 위한 CCTV 분석 및 증거 수집 착수"
-      ],
-      "reportImplication": "",
-      "reportWritingModel": "gpt-5.6-sol",
-      "reportWritingReasoning": "high",
-      "reportWritingVersion": "weekly-report-writing-v1-gpt-5.6-sol",
-      "reportWritingRefinedAt": "2026-07-17T06:08:28.848Z",
       "untranslatedFiltered": true,
       "duplicateCollapsed": true,
-      "duplicateCollapsedCount": 14
+      "duplicateCollapsedCount": 24
     }
   ],
   "debug": {
@@ -183,7 +115,7 @@
       {
         "query": "\"مشروع بسماية\"",
         "ok": true,
-        "count": 3
+        "count": 2
       },
       {
         "query": "\"مدينة بسماية\"",
@@ -243,7 +175,7 @@
       {
         "query": "\"شركة كورية\" \"بسماية\"",
         "ok": true,
-        "count": 0
+        "count": 1
       },
       {
         "query": "\"شركة كورية\" \"مشروع سكني\" \"العراق\"",
@@ -338,7 +270,7 @@
       {
         "query": "\"العراق\" \"مكافحة الفساد\"",
         "ok": true,
-        "count": 11
+        "count": 12
       },
       {
         "query": "\"الإطار التنسيقي\" \"الحقائب الوزارية\"",
@@ -383,7 +315,7 @@
       {
         "query": "\"مجلس النواب\" \"التصويت على الوزراء\"",
         "ok": true,
-        "count": 2
+        "count": 1
       },
       {
         "query": "\"مجلس النواب\" \"منح الثقة\" \"الوزراء\"",
@@ -548,7 +480,7 @@
       {
         "query": "\"العراق\" \"النفط\"",
         "ok": true,
-        "count": 10
+        "count": 9
       },
       {
         "query": "\"العراق\" \"أوبك\"",
@@ -568,7 +500,7 @@
       {
         "query": "\"العراق\" \"الاقتصاد\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"العراق\" \"الاستثمار\"",
@@ -693,7 +625,7 @@
       {
         "query": "\"العراق\" \"غزة\"",
         "ok": true,
-        "count": 10
+        "count": 11
       },
       {
         "query": "\"العراق\" \"الحوثي\"",
@@ -718,7 +650,7 @@
       {
         "query": "\"الخليج\" \"العراق\" \"أمن\"",
         "ok": true,
-        "count": 3
+        "count": 2
       },
       {
         "query": "\"إيران\" \"الحرس الثوري\" \"مضيق هرمز\"",
@@ -1374,39 +1306,39 @@
       }
     ],
     "evidence": {
-      "fulltext": 67,
+      "fulltext": 70,
       "rssDescription": 0,
       "insufficient": 0,
-      "aiEligible": 67
+      "aiEligible": 70
     },
-    "elapsedSeconds": 24
+    "elapsedSeconds": 25
   },
   "reportWriting": {
     "model": "gpt-5.6-sol",
     "reasoning": "high",
     "minScore": 70,
     "maxItems": 40,
-    "refined": 40,
+    "refined": 11,
     "version": "weekly-report-writing-v1-gpt-5.6-sol"
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-17T06:09:31.985Z",
+    "appliedAt": "2026-07-17T06:27:38.311Z",
     "termCount": 27,
-    "changedCount": 21
+    "changedCount": 0
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-17T06:09:32.038Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-17T06:27:38.356Z",
   "knownPoliticalSummaryFixedCount": 0,
-  "knownPoliticalSummaryFixedAt": "2026-07-17T06:09:32.087Z",
-  "untranslatedFilteredCount": 67,
-  "untranslatedFilteredAt": "2026-07-17T06:09:32.142Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-17T06:27:38.402Z",
+  "untranslatedFilteredCount": 70,
+  "untranslatedFilteredAt": "2026-07-17T06:27:38.447Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-17T06:09:32.203Z",
+  "datelineLocationCorrectedAt": "2026-07-17T06:27:38.502Z",
   "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-17T06:09:32.266Z",
+  "aiHallucinationFilteredAt": "2026-07-17T06:27:38.560Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-17T06:09:32.318Z",
-  "duplicateCollapsedCount": 62,
-  "duplicateCollapsedAt": "2026-07-17T06:09:32.395Z"
+  "irrelevantForeignFilteredAt": "2026-07-17T06:27:38.609Z",
+  "duplicateCollapsedCount": 67,
+  "duplicateCollapsedAt": "2026-07-17T06:27:38.676Z"
 }
