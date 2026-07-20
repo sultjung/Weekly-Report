@@ -465,7 +465,7 @@ function reuseFromPrevious(item, previousMap) { const cached = previousMap.get(c
 async function loadPreviousMap() { const map = new Map(); try { const prev = JSON.parse(await fs.readFile(NEWS_FILE, "utf8")); for (const item of prev.articles || []) if (hasReusableAiSummary(item)) map.set(canonicalKey(item), item); } catch {} return map; }
 
 async function aiKorean(prompt, input) {
-  const res = await fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model: OPENAI_SUMMARY_MODEL, temperature: 0.1, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
+  const res = await fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model: OPENAI_SUMMARY_MODEL, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
   if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
   const data = await res.json();
   return data.output_text || (data.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("\n");
