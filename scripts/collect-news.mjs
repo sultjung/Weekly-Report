@@ -34,7 +34,9 @@ const MAX_ARTICLE_TEXT_CHARS = Number(process.env.MAX_ARTICLE_TEXT_CHARS || 1000
 const FULLTEXT_HYDRATION_CONCURRENCY = Number(process.env.FULLTEXT_HYDRATION_CONCURRENCY || 4);
 const MIN_FULLTEXT_CHARS_FOR_AI = Number(process.env.MIN_FULLTEXT_CHARS_FOR_AI || 500);
 const MIN_RSS_DESCRIPTION_CHARS_FOR_AI = Number(process.env.MIN_RSS_DESCRIPTION_CHARS_FOR_AI || 300);
+const MIN_GOOGLE_RSS_EVIDENCE_CHARS = Number(process.env.MIN_GOOGLE_RSS_EVIDENCE_CHARS || 40);
 const HIGH_PRIORITY_RSS_FALLBACK_SCORE = Number(process.env.HIGH_PRIORITY_RSS_FALLBACK_SCORE || 90);
+const GOOGLE_RSS_FALLBACK_SCORE = Number(process.env.GOOGLE_RSS_FALLBACK_SCORE || 70);
 const MAX_NEW_AI_ITEMS = Number(process.env.MAX_NEW_AI_ITEMS || 120);
 
 async function loadGoogleNewsQueries() {
@@ -214,6 +216,7 @@ function hasUsableFullText(item = {}) {
 function evidenceLevelFor(item = {}) {
   if (hasUsableFullText(item)) return "fulltext";
   if (normalizeText(item.description || "").length >= MIN_RSS_DESCRIPTION_CHARS_FOR_AI) return "rss-description";
+  if (item.sourceType === "google-news-rss" && normalizeText(`${item.title || ""} ${item.description || ""}`).length >= MIN_GOOGLE_RSS_EVIDENCE_CHARS) return "rss-description";
   return "insufficient";
 }
 
@@ -289,6 +292,9 @@ async function hydrateSelectedArticle(item = {}) {
 
 function canSummarizeFromEvidence(item = {}) {
   if (item.sourceEvidenceLevel === "fulltext") return true;
+  if (item.sourceType === "google-news-rss" && item.sourceEvidenceLevel === "rss-description") {
+    return Number(item.importanceScore || 0) >= GOOGLE_RSS_FALLBACK_SCORE;
+  }
   return item.sourceEvidenceLevel === "rss-description" &&
     Number(item.importanceScore || 0) >= HIGH_PRIORITY_RSS_FALLBACK_SCORE;
 }
