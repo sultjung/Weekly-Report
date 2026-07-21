@@ -1,20 +1,643 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-21T07:43:15.895Z",
+  "generatedAt": "2026-07-21T23:05:37.414Z",
   "lookbackDays": 30,
   "count": 260,
-  "cacheHits": 115,
+  "cacheHits": 131,
   "model": "gpt-4o-mini",
   "requestedModel": "gpt-5-mini",
   "counts": {
     "total": 260,
-    "politics": 67,
+    "politics": 61,
     "terror_security": 74,
-    "oil_economy": 48,
-    "regional": 67,
-    "exclude": 4
+    "oil_economy": 56,
+    "regional": 63,
+    "exclude": 6
   },
   "articles": [
+    {
+      "id": "rss-v_FeBf4shD7yntsl3s1SkNPQ",
+      "title": "مجلس الوزراء العراقي يقر استيراد زيت الغاز لدعم قطاع الكهرباء - معلومات مباشر",
+      "titleKo": "이라크 정부, 전력 산업 지원을 위한 가스 오일 수입 승인",
+      "summaryKo": "이라크 정부가 전력 산업을 지원하기 위해 가스 오일 수입을 승인하였다. 이는 전력 공급 안정성을 높일 것으로 기대된다.",
+      "source": "معلومات مباشر",
+      "publishedAt": "2026-07-21T20:53:38.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_gNBVV95cUxPTE44MENsX0JLbmpNZWxLeVdpNmNYNThBMlcyQUQzUUdKdUtzUHh4WEJXNkVrblF6dkxSNXk0SGE2N2hxREZLUEQ2dEhmTWlxN0VISS15a0RpbGxRUm1QbXdnVTlMZHlaVEJENHpXUWhsd01pNERpYVRLRG83QndyNU8zSFNPaXJzT1Vxd2Jvazh2ZTA0MlBOcUQ5UG95Q1JIcE5DVVlBdHV5YWdxTjJselhhYWRPQ3VFQ0tZSHd1VkJyZmFZdVQxYjVkRXJaeWxfdjVuNnRWZ3dQVC1DYWFmUUlVV1p2aElxdzhNM3FxWTBidWFvcVNMU25UcExuNFRPTlNrc2FzRGdmMF8tX1pNQVd0WW9jeER6S3l1WWR1cUdMMnk3Qnk2N1J3TFc1YXVzemFadWtKckVuNW83MWVWUnZqcWpYdUFLRnhnZUFRQlNDLWc0a0FVdHphUXJMRlUwWFA4N2hmdHVVRGhUYTNVYmh5UnpSSmtHUGlDR3ZpaHMtaURqNmlpWVBEY3lua25KTE52LVBsS3F3SGhhbElUNXJUVDBKeXdpN2ZOOVdoZkY5Z3hHdDg3TGU5eVVoS1BpZmNhdm9sWl85eFY2bVFaNEZOVU5zTmNma1lpYzhOOTlYYVk2OW5jVkVGWXhNOG1OYmpfM2QzRzIxaEgyMnc?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "description": "مجلس الوزراء العراقي يقر استيراد زيت الغاز لدعم قطاع الكهرباء معلومات مباشر",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 72,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "전력 산업 지원 및 가스 오일 수입 관련 결정으로 경제적 영향 분석이 필요.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 75,
+      "reportBullet": "7.21, 이라크 정부, 전력 공급 안정화를 위해 가스 오일 수입을 승인함.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크 정부"
+      ],
+      "location": "Baghdad",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-CUaAU3eoIBtudv4HZRFZpxN4",
+      "title": "US Policy After Iraq: Getting Lebanon’s Disarmament Right - Middle East Institute",
+      "titleKo": "이라크 이후 미국 정책: 레바논 무장 해제의 올바른 접근",
+      "summaryKo": "미국이 이라크 이후 레바논 무장 해제를 위한 정책을 재조정하고 있다. 친이란 무장조직과 이라크의 주권 강화를 목표로 하고 있다.",
+      "source": "Middle East Institute",
+      "publishedAt": "2026-07-21T18:30:45.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeDFSSW9tWFk1S0hHVkRuazNILXRmcnMtaks4THpFUTNCMEN3QjJDQ3JBeWYzeGNqV1VucHg4Y09MZHhKRnNrZHFIYWc4RnRsTkwtUnBWdFVzTlMxWVJqejlGSkdLTndVYWwtNEJuLXNzTnZOTGpZT1NBZVNIdW5yR1loXzRGOGZBRmc?oc=5",
+      "query": "\"Iraq\" \"ISIS\"",
+      "description": "US Policy After Iraq: Getting Lebanon’s Disarmament Right Middle East Institute",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "politics_security",
+      "category3": "regional",
+      "importanceScore": 86,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 및 주변 지역의 정치적 안정을 위한 미국의 전략이 중요한 이슈로 부각됨.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 79,
+      "reportBullet": "7.21. Middle East Institute가 미국의 레바논 무장 해제 접근을 재조정 대상으로 다뤘다. 친이란 무장조직과 이라크의 주권 강화도 함께 언급했다.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "미국",
+        "레바논",
+        "이라크"
+      ],
+      "location": "레바논",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:05:55.211Z"
+    },
+    {
+      "id": "rss-ExMG4cia6cIaWYSZt5vIhoJN",
+      "title": "مخاطر هرمز تدفع شركات تكرير هندية لوقف تحميل النفط العراقي - الشرق بلومبرغ",
+      "titleKo": "호르무즈 해협 위험, 인도 정유사들 이라크 석유 하역 중단",
+      "summaryKo": "인도 정유사들이 호르무즈 해협의 위험으로 인해 이라크 석유의 하역을 중단했다. 이 결정은 중동 지역에서의 안보와 유가에 중대한 영향을 미칠 수 있다.",
+      "source": "الشرق بلومبرغ",
+      "publishedAt": "2026-07-21T18:26:23.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxPNXVtZm5lU2JONGZRS0pjekFQOWY0eWxfTUh2aUtLZjE1TnBEX3dvYm9pYWYxYmJpc21IR0ExVGFwSXVKWVFNYWN6SHA4T2hTTm42OUFGSFZoMFhlclpDU3puNHlLZTFKeUpQckZaTFM5TktfanlTZFZNT19Hb0hmVkpGYnhQek9LTUl2UVR4SUhXeDYzRWlEa3l2cDg3QlAxd0xyTjhBZ1NWNFYydjhNOUpnY1VueGN0Rm42MS1XZEg3VXVuSEtMUFh0dUw2M2QzY3M3N2kzenRLdExnZmZmWnlDa1ZOOFZTMTRZT0hJdHFVOVV3a1hmTUE0Zk1CUmtiTUNyUWV4VnZob3o0T2R0c2lrSGxvaE9GYkMyWm5JdXhxRXcwZnZJMHFxQzVreWg4VzIyZXRBaF95MHgwMjhJelpFNktxQzNySWp6RmIwZFdlVzlqZFJaYXR2ak5lelIyZ25vb0MzZTEwckdJV1dWTWFuWVhMWnpsdm9vOGhtbkYzaldFWkluM0Y3U2stVnBlVktDWVNzd3N6TG56RTRpZ0hoOXRWQ0J2anRKSnJVRER3RUdvaURzT2tuTjRyemY2cmlVRmNsbm5TR2RISm01NTdWYUlJc2Z5M3c4MHBOcHZlLUgwdENN?oc=5",
+      "query": "\"العراق\" \"النفط\"",
+      "description": "مخاطر هرمز تدفع شركات تكرير هندية لوقف تحميل النفط العراقي الشرق بلومبرغ",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 석유의 수출과 안정성에 중대한 영향",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 72,
+      "reportBullet": "7.21, 인도 정유사들, 호르무즈 해협 위험으로 이라크 석유 하역 중단 결정",
+      "reportSubBullets": [
+        "이로 인해 이라크 석유 수출에 악영향이 예상됨",
+        "해당 지역의 안보 불안정성이 글로벌 유가에 미칠 영향 우려"
+      ],
+      "reportImplication": "",
+      "actors": [
+        "인도 정유사"
+      ],
+      "location": "호르무즈 해협",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-eqVsFhwTi-l2OR8JqI5xzcKL",
+      "title": "مخاطر هرمز تدفع شركات تكرير هندية لوقف تحميل النفط العراقي - الشرق بلومبرغ",
+      "titleKo": "호르무즈 해협의 위험으로 인도 정유사, 이라크 석유 수송 중단",
+      "summaryKo": "인도 정유사들이 호르무즈 해협의 안보 리스크로 인해 이라크 석유 수송을 중단했다. 이는 이라크 석유 수출 및 국제 유가에 중대한 영향을 미칠 수 있다.",
+      "source": "الشرق بلومبرغ",
+      "publishedAt": "2026-07-21T17:31:23.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7ANBVV95cUxQdzh4LU9lMy1jOS1fbzRHd2dRakNMazZmbFNfMG5PNUV6d3FseG5abER6THh3a0JOak5YU0ZSVFVVeGRwWnlNRlZpTTlwVjQ4QlVqNGRiVmNJYTMta3pER0I3VDB5TXBVNWZSSGIyUWxXSmRtbXF5OGp1OG4ybzF6MjlTN3ZkMXRlbjdSRXlyRHB6azFjNmxCdmVpUDlVdVVOcWxZcHpsX1N3WTVDdkVwdTlTWUh4V2Vfckxta0FpRFpyNWU2bGhqVHFtTklIbERTcTB0cFNnM1lPMkZWZDllTFZGSUlWbDY1VmgtNDJSNzZsOENtcUZ4cjFwbnQtcEFxSGpxUExHQWE3VzdJSEZtX3VkcU8tM3hDM0FxUFVGOFNlRWUyXzNJUUQ5bnJQbTV0ejRKQlgyMExUajhlcHk5NjJNaGdoc0FxVmdxTVVNOHN0Q3IxbzRaRVpzNnpqb0U2MmFITGRjdWd4UTRqVmtEdzlENEhaa0hPeUg0V3g4dzc2NXhZTGZrSnlJeENzUFgtczdWV19WOWM2TTdkR1gtTDRabVFGZzlMbjlWa24tREpRZlpDd2NfX2d5aGtZMFh3ajBieHYwWENrT2NJZVE5NEt4SE8yenFFbjEtU3cyVW81UU5IVzJpZlNWcnA?oc=5",
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "description": "مخاطر هرمز تدفع شركات تكرير هندية لوقف تحميل النفط العراقي الشرق بلومبرغ",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 석유 공급 차질이 경제에 미치는 영향이 크므로 중요.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 72,
+      "reportBullet": "7.21, 인도 정유사, 호르무즈 해협 위험으로 이라크 석유 수송을 중단함. 이로 인해 이라크 석유 수출에 긴급한 차질이 발생할 것으로 예상됨.",
+      "reportSubBullets": [
+        "호르무즈 해협의 안보 문제로 인한 석유 물류에 부담 요인 증가",
+        "국제 유가 변동성 확대 가능성"
+      ],
+      "reportImplication": "",
+      "actors": [],
+      "location": "호르무즈 해협",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-Jt45UpimjJxXHz8uFyUnR39p",
+      "title": "شبهات فساد تلاحق وزيراً عراقياً... وتربك التحالف الحاكم - الشرق الأوسط",
+      "titleKo": "이라크 장관에 대한 부패 의혹이 제기되며 여당 연합에 혼란 발생",
+      "summaryKo": "이라크 정부 장관에 부패 의혹이 제기되면서 정부 연합에 혼란이 발생하고 있다. 이번 사건은 정치적 압력을 증가시키고 있으며, 향후 관련 조치에 대한 주목이 필요하다.",
+      "source": "الشرق الأوسط",
+      "publishedAt": "2026-07-21T16:30:56.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi9wRBVV95cUxNT3pfX1EzNWIzY3dKY2xnMzI4OS1ESVNGR1E4amJJUkFPT1Rjb29TUDJSMEdMNHZBdkh1TjVtQTlwRlBPX21GQ0tPTmRINjd5VTlFWmwydXlhZ2YxNUo0UjJEY1RZWVY0d3pseEE2bGk1aTJUVU5peEdCS2RJQ0FGMEN3TVctQnZ5VldzMW14OU1xUXRHZi1aQWxYNy1Fa2dkU055SXFGdE9NbmRKMGpId2l3eFdHSmU3Z3BfMmFZZDA1aS15UVM0Q0ZmOEdfZS1pdWhCemFnMFltU3dFdnZsWlZrdGMzc0FKM195TFc4SjV6TGJ3YXplVjRzY1ZWYVV3em9BRFhiZVN5cUZRaERTbHo5UHVFQnU4cU5UTmFaVVU4ejh0aUVHeDFrZEpQc3FGbmJCMzFLQkhpM3VBZkszOUdVdy1WYllXNmRQSi1GVnhJODVJdlg2WmFfRFl5clFEM0dkNHBhRWt0QVQ2aVNsODNFQXAyUU1FbGg1TzVqaHVYb3NPRDNLS0VKYnR3MWNxM1RnVC1uSEhCQjU5SDZnc0dtZ2dDX1lYUTRRd3pHVmE0cDNHSnVsN1M1VldQR0k3bHhtdEhtaTRHN3ZkQ01CemF3X1JIdmRjTnJ0X2dIRTRmZXV6d2s3OFY1WHYtSkpMSHE1TkJYQUp1LTMxV21QSHdkNEdLX3pIM2FQV1o4YWFTTGlqUmNxY3duMlp3V3l6NjR1dEM2R2tVYWN6WmV6cDJNMF9JREQteVVHNVhpcUp0MndkQlBHTFBlTWdxU3hoVWlyU3ExNHZITGxWVm9pMmt4UXlvc2NNaHowTVR3aEhEcEVIYjBF?oc=5",
+      "query": "\"الإطار التنسيقي\"",
+      "description": "شبهات فساد تلاحق وزيراً عراقياً... وتربك التحالف الحاكم الشرق الأوسط",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "politics",
+      "importanceScore": 72,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "정치권 동향 및 압력 변화와 관련된 주요 뉴스.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 68,
+      "reportBullet": "7.21, 이라크 장관에 대한 부패 의혹 제기, 정부 여당 연합 내 불안정성 증대.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "sourceReliability": "일반 언론",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-APuVRzjjdss2pXnxypblBJGa",
+      "title": "مخاطر مضيق هرمز تدفع الهند لتعليق شحنات النفط العراقى - جريدة البورصة",
+      "titleKo": "호르무즈 해협의 위험으로 인도, 이라크 석유 수송 중단",
+      "summaryKo": "인도는 호르무즈 해협의 위험을 이유로 이라크 석유의 수송을 중단하였다. 이는 중동 지역의 안전과 에너지 공급에 중대한 영향을 미칠 수 있다.",
+      "source": "جريدة البورصة",
+      "publishedAt": "2026-07-21T16:24:20.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iZTBiWFNrLVpPZ01Ya25pcW01NFdORktyZURJRHhJYXBYTGJlRXdTdmZ4Y0YxX0F6NWt2b2V3cEFCWEUxS29GcGJUVzVuLWFCVm1JQlpCRjAwS1U?oc=5",
+      "query": "\"العراق\" \"النفط\"",
+      "description": "مخاطر مضيق هرمز تدفع الهند لتعليق شحنات النفط العراقى جريدة البورصة",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 석유 수출에 대한 영향을 분석하여 주간 상황보고서에 포함",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 67,
+      "reportBullet": "7.21, 인도, 호르무즈 해협 위험으로 이라크 석유 수송을 중단하여 중동 에너지 공급에 불확실성 증가.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "인도"
+      ],
+      "location": "호르무즈 해협",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-dZlrYg09YMocxjIaJjQihARd",
+      "title": "عراقجي: تركيا لعبت دورا محوريا في منع الهجوم البري على إيران من شمال العراق - جريدة زمان التركية",
+      "titleKo": "이라크, 터키가 이란 침공 방지에 핵심적인 역할을 수행했다고 밝힘",
+      "summaryKo": "이라크 관계자는 터키가 이란에 대한 북부 이란의 육상 공격을 방지하는 데 중요한 역할을 했다고 언급했다. 이란과의 경계에 대한 세부 사항은 기사에 명시되지 않았다.",
+      "source": "جريدة زمان التركية",
+      "publishedAt": "2026-07-21T16:20:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPWGpvaXhFWFpja0didV9xR2VISUNMOUJnZjdzZHlvNWZnZjJaaElmN2x1Wkg0NkZoMV9FSDZ2T0tJdFBsWmpITXpXMGlhdEYxdWRJamptczR5MDBOYTdSdVVqRkpxaktCSnFSMmVsVEpMdmZrSEdYUWs3aVIwTnZWNHRNSFJSOHBTazdyNHdaWFJpSGZjX2ZseVhUMzZDQXFkS051cmEyWVZKbXdpMUd3ZWZ1cXBQbEhra0hlbnd6MFQwN2lyQzZvbWhTNHo2RTVkX1JuaFcyRFY4V1QyX19XcDNRakdYci1WWWlFLVZ4MW9ZMUJSaVZsdGxyMVFDcGl6bGx3RWgybzZaT0lnR1Jab18zakJhZ2NhN0JlZkpHa3VWUnc4ZDVjb1FlSXNFYkNuRGpaZmQ0bHBRSHZSdVRRTksxaHdxVGhVNzJsZzRSckNnUVprTm5sODhfTQ?oc=5",
+      "query": "\"العراق\" \"هجوم\"",
+      "description": "عراقجي: تركيا لعبت دورا محوريا في منع الهجوم البري على إيران من شمال العراق جريدة زمان التركية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "테러 및 안보 동향 관련 중동 지역의 갈등 상황 파악을 위해 중요",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 94,
+      "reportBullet": "7.21 아라그치, 북부 이라크발 이란 육상공격 차단에 터키의 핵심 역할을 언급",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크",
+        "터키",
+        "이란"
+      ],
+      "location": "이라크 북부",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:05:57.465Z"
+    },
+    {
+      "id": "rss-l9Fwarm9U169Mf27l301O6xc",
+      "title": "فيديو | الإطار التنسيقي يدعم نتائج زيارة واشنطن.. وملاحقات الفساد تتوسع في العراق - هذا اليوم",
+      "titleKo": "시아조정기구, 방미 결과 지원 및 부패 수사 확대",
+      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
+      "source": "هذا اليوم",
+      "publishedAt": "2026-07-21T16:15:03.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBHME80T0lGNVM2TEFFbTdQX0gxakZIV1B5OUhZZ29MYXl6NlI1MWNHOW9JczBIMUJIemR0WWVXMkk3UmNRTGx3LXdMR0o0MkpH0gFKQVVfeXFMTlBIWmJ0dmZ6d2JKUXZIMVRpb0dseTNSOUtkZXZVZExHckJzeThER1NibWpfblR1ZUczTmNlMEs0ZV8tVXc0Z0hNWGc?oc=5",
+      "query": "\"الإطار التنسيقي\" \"زيارة واشنطن\"",
+      "description": "فيديو | الإطار التنسيقي يدعم نتائج زيارة واشنطن.. وملاحقات الفساد تتوسع في العراق هذا اليوم",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "exclude",
+      "importanceScore": 15,
+      "reportUsefulness": "exclude",
+      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 91,
+      "reportBullet": "7.21. 이라크에서 시아조정기구(SCF), 워싱턴 방문 결과 지지. 부패 수사 확대.",
+      "reportSubBullets": [
+        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
+      ],
+      "reportImplication": "",
+      "actors": [],
+      "location": "이라크",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:05:50.122Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "aiHallucinationFiltered": true,
+      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
+    },
+    {
+      "id": "rss-VjoGb090ylY9ETYcDaR4liw6",
+      "title": "الخيكاني: ذي قار \"منكوبة ومنهوبة\".. خطف وتعذيب وأزمة كهرباء - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "알-헤이카니: 디카르 '재난과 약탈 중'.. 유괴, 고문 및 전력 위기",
+      "summaryKo": "디카르주에서 유괴와 고문 사건이 빈발하고 있으며 전력 위기가 심각하다. 지역 안보 상황이 여전히 불안정하며 주민들이 큰 고통을 받고 있다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-21T15:36:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4tYVpETzRUc05TZUhTVm5MSEdrYlV2S1VQOHZmdUx6RFdQSU5uNzNfcnFJYzE3dWFJUU00elFVQ3RQdVRhUEFmOWROYWVpcGc?oc=5",
+      "query": "\"بغداد\" \"خطف\"",
+      "description": "الخيكاني: ذي قار \"منكوبة ومنهوبة\".. خطف وتعذيب وأزمة كهرباء وكالة بغداد اليوم الاخبارية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "디카르주에서의 치안 문제는 이라크 전반의 안전 상황에 중요한 영향을 미침.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 87,
+      "reportBullet": "7.21 알-헤이카니가 디카르주를 '재난과 약탈'로 지칭하며 유괴·고문과 전력 위기를 제기했다.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "알-헤이카니"
+      ],
+      "location": "디카르주",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:05:59.186Z"
+    },
+    {
+      "id": "direct-09wMusWS47zaooqcBrF3scBQ",
+      "title": "وزير النفط مستعد لمواجهة البرلمان.. العبادي تقدم بطلب لاستضافته في القبة التشريعية",
+      "source": "964media",
+      "publishedAt": "2026-07-21T13:38:37.000Z",
+      "url": "https://964media.com/700786/",
+      "description": "بغداد – 964 تقدّم وزير النفط، باسم العبادي، اليوم الثلاثاء (21 تموز 2026)، بطلبٍ رسمي إلى مجلس النواب وزير النفط مستعد لمواجهة البرلمان.. العبادي تقدم بطلب لاستضافته في القبة التشريعية تقدّم وزير النفط، باسم العبادي، اليوم الثلاثاء (21 تموز 2026)، بطلبٍ رسمي إلى مجلس النواب لاستضافته، في خطوة تُعد من التطورات النادرة على مستوى السلطة التنفيذية. انضموا إلى أسرع منصاتنا وقالت وزارة النفط في بيان، تلقت شبكة 964 نسخة منه، إن “العبادي أكد استعداده للإجابة عن جميع أسئلة أعضاء مجلس النواب، وتوضيح إجراءات الوزارة وخططها في مختلف الملفات”. وأضافت ان “هذه الخطوة تعكس توجهاً نحو تعزيز الشفافية والتعاون المؤسسي، وإطلاع المواطن العراقي على جميع التفاصيل المتعلقة بعمل المؤسسة الحكومية “.",
+      "cleanText": "وزير النفط مستعد لمواجهة البرلمان.. العبادي تقدم بطلب لاستضافته في القبة التشريعية تقدّم وزير النفط، باسم العبادي، اليوم الثلاثاء (21 تموز 2026)، بطلبٍ رسمي إلى مجلس النواب لاستضافته، في خطوة تُعد من التطورات النادرة على مستوى السلطة التنفيذية. انضموا إلى أسرع منصاتنا وقالت وزارة النفط في بيان، تلقت شبكة 964 نسخة منه، إن “العبادي أكد استعداده للإجابة عن جميع أسئلة أعضاء مجلس النواب، وتوضيح إجراءات الوزارة وخططها في مختلف الملفات”. وأضافت ان “هذه الخطوة تعكس توجهاً نحو تعزيز الشفافية والتعاون المؤسسي، وإطلاع المواطن العراقي على جميع التفاصيل المتعلقة بعمل المؤسسة الحكومية “.",
+      "fullText": "وزير النفط مستعد لمواجهة البرلمان.. العبادي تقدم بطلب لاستضافته في القبة التشريعية تقدّم وزير النفط، باسم العبادي، اليوم الثلاثاء (21 تموز 2026)، بطلبٍ رسمي إلى مجلس النواب لاستضافته، في خطوة تُعد من التطورات النادرة على مستوى السلطة التنفيذية. انضموا إلى أسرع منصاتنا وقالت وزارة النفط في بيان، تلقت شبكة 964 نسخة منه، إن “العبادي أكد استعداده للإجابة عن جميع أسئلة أعضاء مجلس النواب، وتوضيح إجراءات الوزارة وخططها في مختلف الملفات”. وأضافت ان “هذه الخطوة تعكس توجهاً نحو تعزيز الشفافية والتعاون المؤسسي، وإطلاع المواطن العراقي على جميع التفاصيل المتعلقة بعمل المؤسسة الحكومية “.",
+      "collectionMethod": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "category1": "international",
+      "category2": "international",
+      "category3": "exclude",
+      "importanceScore": 76,
+      "reportUsefulness": "exclude",
+      "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "fulltext",
+      "sourceEvidenceChars": 580,
+      "translationFailed": true,
+      "untranslatedFiltered": true
+    },
+    {
+      "id": "direct-6Yi6ZMtP7yVW04ViaqGsiBSL",
+      "title": "Indian Oil Corp stops loading Iraqi oil amid Hormuz instability - Iraqi News",
+      "source": "Iraqi News",
+      "publishedAt": "2026-07-21T13:19:32.000Z",
+      "url": "https://www.iraqinews.com/iraq/indian-oil-corp-stops-loading-iraqi-oil-amid-hormuz-instability/",
+      "description": "Indian Oil Corp. has stopped loading Iraqi oil from Basra Oil Terminal due to increasing risk on vessels crossing the Strait of Hormuz. Oil tankers and Iranian speedboats in the Strait of Hormuz. Photo: Atta Kenare/AFP/Getty Images Baghdad (IraqiNews.com) – Sources told Reuters that Indian Oil Corp. (IOC) has stopped loading Iraqi oil from Basrah Oil Terminal due to increasing risk and assaults on vessels crossing the Strait of Hormuz. Around July 23, the state-run IOC planned to transport 2 million barrels of Iraqi oil via the mega-sized crude carrier Lila Jamnagar. Mangalore Refinery and Petrochemicals Ltd, a different state refiner, has also halted plans to transport oil from Iraq via the Indian-flagged Aframax tanker Desh Gaurav. Following the resumption of military operations in the Strait of Hormuz, India has advised shipping companies to refrain from assigning Indian seafarers to vessels operating in that region. Ship captains were also advised to be cautious regarding security in the Arabian Gulf, the Strait of Hormuz, and surrounding waterways and to continuously check navigational warnings. Prior to the war, the Strait of Hormuz between Iran and Oman served as the primary transit route for around a fifth of the world’s oil and gas supplies. Tensions have escalated since the truce between Washington and Tehran was broken in early July. This breakdown has resulted in attacks that have disrupted trade through the crucial waterway.",
+      "cleanText": "Oil tankers and Iranian speedboats in the Strait of Hormuz. Photo: Atta Kenare/AFP/Getty Images Baghdad (IraqiNews.com) – Sources told Reuters that Indian Oil Corp. (IOC) has stopped loading Iraqi oil from Basrah Oil Terminal due to increasing risk and assaults on vessels crossing the Strait of Hormuz. Around July 23, the state-run IOC planned to transport 2 million barrels of Iraqi oil via the mega-sized crude carrier Lila Jamnagar. Mangalore Refinery and Petrochemicals Ltd, a different state refiner, has also halted plans to transport oil from Iraq via the Indian-flagged Aframax tanker Desh Gaurav. Following the resumption of military operations in the Strait of Hormuz, India has advised shipping companies to refrain from assigning Indian seafarers to vessels operating in that region. Ship captains were also advised to be cautious regarding security in the Arabian Gulf, the Strait of Hormuz, and surrounding waterways and to continuously check navigational warnings. Prior to the war, the Strait of Hormuz between Iran and Oman served as the primary transit route for around a fifth of the world’s oil and gas supplies. Tensions have escalated since the truce between Washington and Tehran was broken in early July. This breakdown has resulted in attacks that have disrupted trade through the crucial waterway.",
+      "fullText": "Oil tankers and Iranian speedboats in the Strait of Hormuz. Photo: Atta Kenare/AFP/Getty Images Baghdad (IraqiNews.com) – Sources told Reuters that Indian Oil Corp. (IOC) has stopped loading Iraqi oil from Basrah Oil Terminal due to increasing risk and assaults on vessels crossing the Strait of Hormuz. Around July 23, the state-run IOC planned to transport 2 million barrels of Iraqi oil via the mega-sized crude carrier Lila Jamnagar. Mangalore Refinery and Petrochemicals Ltd, a different state refiner, has also halted plans to transport oil from Iraq via the Indian-flagged Aframax tanker Desh Gaurav. Following the resumption of military operations in the Strait of Hormuz, India has advised shipping companies to refrain from assigning Indian seafarers to vessels operating in that region. Ship captains were also advised to be cautious regarding security in the Arabian Gulf, the Strait of Hormuz, and surrounding waterways and to continuously check navigational warnings. Prior to the war, the Strait of Hormuz between Iran and Oman served as the primary transit route for around a fifth of the world’s oil and gas supplies. Tensions have escalated since the truce between Washington and Tehran was broken in early July. This breakdown has resulted in attacks that have disrupted trade through the crucial waterway.",
+      "collectionMethod": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "호르무즈 해협의 불안정이 이라크 석유 산업에 미치는 영향이 주목됨.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "fulltext",
+      "sourceEvidenceChars": 1325,
+      "titleKo": "인도 석유공사, 호르무즈 불안으로 이라크 유전 석유 선적 중단",
+      "summaryKo": "인도 석유공사(IIOC)는 호르무즈 해협에서의 위험 증가로 인해 Basra 석유 터미널에서 이라크 석유 선적을 중단하였다. IIOC는 7월 23일 200만 배럴을 운송할 계획이었으나, 군사 작전 재개로 인해 인도 선원 안전을 우려하여 선적을 늦춘 상태이다.",
+      "reportBullet": "7.21, 인도 국영 IOC가 Basra 석유터미널에서 이라크 원유 선적을 중단했다. 호르무즈 해협 선박 위험으로 7.23 예정 200만 배럴 운송을 미뤘다.",
+      "reportSubBullets": [
+        "Mangalore Refinery and Petrochemicals Ltd도 이라크산 원유를 실은 인도 국적 탱커 Desh Gaurav의 운송 계획을 중단했다.",
+        "인도는 해당 해역 운항 선박에 인도 선원 배치를 자제하라고 권고했다."
+      ],
+      "reportImplication": "호르무즈 해협 불안이 이라크 원유 수송 일정에 직접 차질을 냈다.",
+      "actors": [
+        "인도 석유공사(IIOC)",
+        "Mangalore Refinery and Petrochemicals Ltd"
+      ],
+      "location": "Basra, 호르무즈 해협",
+      "sourceReliability": "fulltext",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:07.264Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1"
+    },
+    {
+      "id": "direct-DZI_TrHkONQjXwfw4veI0MGv",
+      "title": "الهند تلغي تحميل مليوني برميل من نفط البصرة خوفاً من هرمز",
+      "source": "964media",
+      "publishedAt": "2026-07-21T13:02:12.000Z",
+      "url": "https://964media.com/700771/",
+      "description": "964 كشفت وكالة رويترز، اليوم الثلاثاء (21 تموز 2026)، أن شركتين حكوميتين هنديتين ألغتا خطط تحميل شحنات من النف الهند تلغي تحميل مليوني برميل من نفط البصرة خوفاً من هرمز كشفت وكالة رويترز، اليوم الثلاثاء (21 تموز 2026)، أن شركتين حكوميتين هنديتين ألغتا خطط تحميل شحنات من النفط العراقي من ميناء البصرة، في ظل تصاعد المخاطر الأمنية والهجمات التي استهدفت سفناً مارة عبر مضيق هرمز، بالتزامن مع تحذيرات أصدرتها السلطات الهندية لشركات الشحن والبحارة على خلفية تجدد المواجهات بين واشنطن وطهران. انضموا إلى أسرع منصاتنا وذكرت رويترز، في تقرير تابعته شبكة 964 ، نقلاً عن ثلاثة مصادر مطلعة، إن “مؤسسة النفط الهندية (Indian Oil Corporation) ألغت عملية تحميل مليوني برميل من النفط العراقي، كانت مقررة على متن الناقلة العملاقة” ليلا جامناجار “في 23 تموز الجاري”. وأضافت أن “شركة” مانجالور للتكرير والبتروكيماويات المحدودة “الحكومية ألغت أيضاً خطة لتحميل شحنة نفط عراقية على متن الناقلة” ديش جوراف “التي ترفع العلم الهندي، فيما لم تستجب الشركتان لطلبات التعليق”. وبيّنت رويترز أن “السلطات الهندية نصحت شركات الشحن ومشغلي السفن وشركات التوظيف بعدم إيفاد بحارة هنود على السفن التي تعبر مضيق هرمز، كما دعت قباطنة السفن إلى توخي الحذر ومتابعة التحذيرات الملاحية المتعلقة بالوضع الأمني في الخليج والمضيق والمياه المجاورة”. وأشارت إلى أن “نحو 20% من إمدادات الطاقة العالمية كانت تمر عبر مضيق هرمز قبل اندلاع الحرب، لافتة إلى أن التوتر تصاعد بعد انهيار الهدنة بين الولايات المتحدة وإيران مطلع تموز، واستئناف تبادل الضربات وما رافقه من اضطراب في حركة الملاحة عبر المضيق”. وكانت وكالة رويترز قد أفادت بأن شركة “مانجالور” الهندية لتكرير البترول والبتروكيماويات المحدودة، حجزت ناقلة النفط “ياسمين جوي” لشحن النفط من ميناء البصرة النفطي يومي 19 و20 تموز الحالي، لتكون أول شركة تكرير حكومية في الهند تستأجر ناقلة لشحن النفط الخام العراقي، منذ إعادة فتح مضيق هرمز جزئياً. يأتي ذلك في ظل تصاعد التوتر في المنطقة، إذ حذرت الخارجية الأميركية، اليوم الثلاثاء (21 تموز 2026)، رعاياها المتواجدين في الشرق الأوسط وأوصتهم باليقظة والحذر، وأن يكونوا مستعدين لإمكانية إلغاء الرحلات الجوية، موضحة أن الجماعات المرتبطة بإيران قد تستهدف مصالح أميركية داخل وخارج الشرق الأوسط وفي جميع أنحاء العالم. فيما أعلنت العلاقات العامة للحرس الثوري الإيراني، بحسب ما نشرته وكالة “فارس”، اليوم الثلاثاء، (21 تموز 2026)، عن استهداف وتدمير البنية التحتية لمركز بيانات شركة “أمازون” الأميركية في البحرين بواسطة صواريخ كروز. وجاء هذا الهجوم في إطار الموجة الـ24 من عملية “نصر 2″، ورداً على الهجوم الذي شنه الجيش الأميركي أمس على منشآت قيد الإنشاء ومدنية في دارخوين. إيران “تدمر” مركز بيانات أمازون بالبحرين بصواريخ كروز إيران تقصف منشآت في البحرين وتدمر رادارات بعمان.. والكويت تعترض أهدافاً تحذير للأميركان في المنطقة: استعدوا لكل الاحتمالات في الساعات المقبلة الهند",
+      "cleanText": "الهند تلغي تحميل مليوني برميل من نفط البصرة خوفاً من هرمز كشفت وكالة رويترز، اليوم الثلاثاء (21 تموز 2026)، أن شركتين حكوميتين هنديتين ألغتا خطط تحميل شحنات من النفط العراقي من ميناء البصرة، في ظل تصاعد المخاطر الأمنية والهجمات التي استهدفت سفناً مارة عبر مضيق هرمز، بالتزامن مع تحذيرات أصدرتها السلطات الهندية لشركات الشحن والبحارة على خلفية تجدد المواجهات بين واشنطن وطهران. انضموا إلى أسرع منصاتنا وذكرت رويترز، في تقرير تابعته شبكة 964 ، نقلاً عن ثلاثة مصادر مطلعة، إن “مؤسسة النفط الهندية (Indian Oil Corporation) ألغت عملية تحميل مليوني برميل من النفط العراقي، كانت مقررة على متن الناقلة العملاقة” ليلا جامناجار “في 23 تموز الجاري”. وأضافت أن “شركة” مانجالور للتكرير والبتروكيماويات المحدودة “الحكومية ألغت أيضاً خطة لتحميل شحنة نفط عراقية على متن الناقلة” ديش جوراف “التي ترفع العلم الهندي، فيما لم تستجب الشركتان لطلبات التعليق”. وبيّنت رويترز أن “السلطات الهندية نصحت شركات الشحن ومشغلي السفن وشركات التوظيف بعدم إيفاد بحارة هنود على السفن التي تعبر مضيق هرمز، كما دعت قباطنة السفن إلى توخي الحذر ومتابعة التحذيرات الملاحية المتعلقة بالوضع الأمني في الخليج والمضيق والمياه المجاورة”. وأشارت إلى أن “نحو 20% من إمدادات الطاقة العالمية كانت تمر عبر مضيق هرمز قبل اندلاع الحرب، لافتة إلى أن التوتر تصاعد بعد انهيار الهدنة بين الولايات المتحدة وإيران مطلع تموز، واستئناف تبادل الضربات وما رافقه من اضطراب في حركة الملاحة عبر المضيق”. وكانت وكالة رويترز قد أفادت بأن شركة “مانجالور” الهندية لتكرير البترول والبتروكيماويات المحدودة، حجزت ناقلة النفط “ياسمين جوي” لشحن النفط من ميناء البصرة النفطي يومي 19 و20 تموز الحالي، لتكون أول شركة تكرير حكومية في الهند تستأجر ناقلة لشحن النفط الخام العراقي، منذ إعادة فتح مضيق هرمز جزئياً. يأتي ذلك في ظل تصاعد التوتر في المنطقة، إذ حذرت الخارجية الأميركية، اليوم الثلاثاء (21 تموز 2026)، رعاياها المتواجدين في الشرق الأوسط وأوصتهم باليقظة والحذر، وأن يكونوا مستعدين لإمكانية إلغاء الرحلات الجوية، موضحة أن الجماعات المرتبطة بإيران قد تستهدف مصالح أميركية داخل وخارج الشرق الأوسط وفي جميع أنحاء العالم. فيما أعلنت العلاقات العامة للحرس الثوري الإيراني، بحسب ما نشرته وكالة “فارس”، اليوم الثلاثاء، (21 تموز 2026)، عن استهداف وتدمير البنية التحتية لمركز بيانات شركة “أمازون” الأميركية في البحرين بواسطة صواريخ كروز. وجاء هذا الهجوم في إطار الموجة الـ24 من عملية “نصر 2″، ورداً على الهجوم الذي شنه الجيش الأميركي أمس على منشآت قيد الإنشاء ومدنية في دارخوين. إيران “تدمر” مركز بيانات أمازون بالبحرين بصواريخ كروز إيران تقصف منشآت في البحرين وتدمر رادارات بعمان.. والكويت تعترض أهدافاً تحذير للأميركان في المنطقة: استعدوا لكل الاحتمالات في الساعات المقبلة الهند تحجز أول ناقلة من مرافئ البصرة لشحن نفط العراق.. “ياسمين جوي” ناقلات النفط عبر هرمز تتحكم بإنتاج العراق.. وجودها يرفعه وغيابها يقلصه",
+      "fullText": "الهند تلغي تحميل مليوني برميل من نفط البصرة خوفاً من هرمز كشفت وكالة رويترز، اليوم الثلاثاء (21 تموز 2026)، أن شركتين حكوميتين هنديتين ألغتا خطط تحميل شحنات من النفط العراقي من ميناء البصرة، في ظل تصاعد المخاطر الأمنية والهجمات التي استهدفت سفناً مارة عبر مضيق هرمز، بالتزامن مع تحذيرات أصدرتها السلطات الهندية لشركات الشحن والبحارة على خلفية تجدد المواجهات بين واشنطن وطهران. انضموا إلى أسرع منصاتنا وذكرت رويترز، في تقرير تابعته شبكة 964 ، نقلاً عن ثلاثة مصادر مطلعة، إن “مؤسسة النفط الهندية (Indian Oil Corporation) ألغت عملية تحميل مليوني برميل من النفط العراقي، كانت مقررة على متن الناقلة العملاقة” ليلا جامناجار “في 23 تموز الجاري”. وأضافت أن “شركة” مانجالور للتكرير والبتروكيماويات المحدودة “الحكومية ألغت أيضاً خطة لتحميل شحنة نفط عراقية على متن الناقلة” ديش جوراف “التي ترفع العلم الهندي، فيما لم تستجب الشركتان لطلبات التعليق”. وبيّنت رويترز أن “السلطات الهندية نصحت شركات الشحن ومشغلي السفن وشركات التوظيف بعدم إيفاد بحارة هنود على السفن التي تعبر مضيق هرمز، كما دعت قباطنة السفن إلى توخي الحذر ومتابعة التحذيرات الملاحية المتعلقة بالوضع الأمني في الخليج والمضيق والمياه المجاورة”. وأشارت إلى أن “نحو 20% من إمدادات الطاقة العالمية كانت تمر عبر مضيق هرمز قبل اندلاع الحرب، لافتة إلى أن التوتر تصاعد بعد انهيار الهدنة بين الولايات المتحدة وإيران مطلع تموز، واستئناف تبادل الضربات وما رافقه من اضطراب في حركة الملاحة عبر المضيق”. وكانت وكالة رويترز قد أفادت بأن شركة “مانجالور” الهندية لتكرير البترول والبتروكيماويات المحدودة، حجزت ناقلة النفط “ياسمين جوي” لشحن النفط من ميناء البصرة النفطي يومي 19 و20 تموز الحالي، لتكون أول شركة تكرير حكومية في الهند تستأجر ناقلة لشحن النفط الخام العراقي، منذ إعادة فتح مضيق هرمز جزئياً. يأتي ذلك في ظل تصاعد التوتر في المنطقة، إذ حذرت الخارجية الأميركية، اليوم الثلاثاء (21 تموز 2026)، رعاياها المتواجدين في الشرق الأوسط وأوصتهم باليقظة والحذر، وأن يكونوا مستعدين لإمكانية إلغاء الرحلات الجوية، موضحة أن الجماعات المرتبطة بإيران قد تستهدف مصالح أميركية داخل وخارج الشرق الأوسط وفي جميع أنحاء العالم. فيما أعلنت العلاقات العامة للحرس الثوري الإيراني، بحسب ما نشرته وكالة “فارس”، اليوم الثلاثاء، (21 تموز 2026)، عن استهداف وتدمير البنية التحتية لمركز بيانات شركة “أمازون” الأميركية في البحرين بواسطة صواريخ كروز. وجاء هذا الهجوم في إطار الموجة الـ24 من عملية “نصر 2″، ورداً على الهجوم الذي شنه الجيش الأميركي أمس على منشآت قيد الإنشاء ومدنية في دارخوين. إيران “تدمر” مركز بيانات أمازون بالبحرين بصواريخ كروز إيران تقصف منشآت في البحرين وتدمر رادارات بعمان.. والكويت تعترض أهدافاً تحذير للأميركان في المنطقة: استعدوا لكل الاحتمالات في الساعات المقبلة الهند تحجز أول ناقلة من مرافئ البصرة لشحن نفط العراق.. “ياسمين جوي” ناقلات النفط عبر هرمز تتحكم بإنتاج العراق.. وجودها يرفعه وغيابها يقلصه",
+      "collectionMethod": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "호르무즈 해협의 불안정성이 이라크 원유 수출에 미치는 영향 관련.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "fulltext",
+      "sourceEvidenceChars": 2632,
+      "titleKo": "인도, 호르무즈 해협 위험에 따라 Basra 원유 200만 배럴 적재 취소",
+      "summaryKo": "인도 정부의 두 국영 기업이 Basra에서의 원유 적재를 취소하였다. 이는 호르무즈 해협을 지나가는 선박에 대한 공격이 증가하고 있는 가운데 발생하였다. 인도 당국은 선원들에게 해협 통과를 자제할 것을 권고하였다.",
+      "reportBullet": "7.21 인도 국영 2개사, Basra항 원유 200만 배럴 적재 계획을 취소. 호르무즈 해협 위험 고조 속 선원 통과 자제 권고가 나옴.",
+      "reportSubBullets": [
+        "인도석유공사(IOC)는 23일 리라 자나가르호 적재분을 취소.",
+        "만갈로어 정유·석유화학도 디시 조라프호 선적 계획을 취소."
+      ],
+      "reportImplication": "Basra 원유 선적 취소로 이라크 원유 수출 일정에 차질.",
+      "actors": [
+        "인도 정부",
+        "인도 석유공사",
+        "망갈로르 정제공"
+      ],
+      "location": "Basra",
+      "sourceReliability": "fulltext",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:08.155Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1"
+    },
+    {
+      "id": "rss-OU4vFf3ExkQt4LU4HVlGJRdt",
+      "title": "تصريحات متواصلة من طهران حول تحريك الحوثي لإغلاق باب المندب - سكاي نيوز عربية",
+      "titleKo": "이란, 후티의 바브엘만데브 봉쇄 관련 지속적 발언",
+      "summaryKo": "이란에서 후티 반군의 바브엘만데브 해협 봉쇄 계획에 대한 지속적인 발언이 이어지고 있다. 이는 이라크 및 지역 안정성에 영향을 미칠 수 있는 상황이다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-07-21T12:53:51.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxOQUJVR3NTb0ZrbkRZa3ZBbXgyWmJoOUtzWUFXeTFES2R4OUpZMXN4UndjOW1xMTNFbzlGLWdNcWlYYTJ4WldKMEs0cW5IdzNiUm5CTXM0aFFCczdCTFhvY29Ib3I1MEhEdzJtekc2NEoxaXI1dm9kd2s4cWNMano3VU5EOWRvMUZYZVRGakp6WDZERVA1eVNaR29IN08zOHY5QWtmTnd3SV9UeDUwR2hTb3hadFktU1piaDcteWpmR3RGMTBrZjc0b1JsQnJUTGZfbWs5UlFqX3F5emZnRGxJOE00Wndwb3lJc0I4QXRwYjNzQm5fLTBEQklxOXZQeFZsX25BUEVOYWVudHRQTlBwRWczVEIzVXhrdHRXeTIwbzNMQTZCSVIwQ3RTT1lhdHlEZkpPMHJ0bG9kZXRNTFdERW9MbG81QlBPaW1fb1lLWEJWZGYxQkRycHliX29CRncybzV3dlhnX0l5WUxTV0dHVWxUTTF2YWd5VzF5TXBYRHFVREJLT2J4TjI4Q3hfSmNERG1ZT1NLZjNyWWhVa3JHZlN4dVlqa2FNdW14MHE0X25zSkhEZHVQUXBmbzhoenZfZm9UajNJdlVDQUZ0bjktdUotZVFWNTA?oc=5",
+      "query": "\"العراق\" \"الحوثي\"",
+      "description": "تصريحات متواصلة من طهران حول تحريك الحوثي لإغلاق باب المندب سكاي نيوز عربية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "politics_security",
+      "category3": "regional",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 핵심 국제정세",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 75,
+      "reportBullet": "7.21, 이란, 후티의 바브엘만데브 봉쇄 계획에 대한 지속적인 언급으로 지역 안보에 우려 표명.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "sourceReliability": "일반 언론",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "direct-dVAathxp4QiejaHmZzuhQ02S",
+      "title": "Washington approves Iraqi proposal to mediate between US and Iran - Iraqi News",
+      "source": "Iraqi News",
+      "publishedAt": "2026-07-21T11:34:13.000Z",
+      "url": "https://www.iraqinews.com/iraq/washington-approves-iraqi-proposal-to-mediate-between-us-and-iran/",
+      "description": "US President Donald Trump has approved Iraqi Prime Minister Ali al-Zaidi's proposal to mediate between the United States and Iran. US President Donald Trump and Iraqi Prime Minister Ali al-Zaidi in the White House. Photo: Julia Demaree Nikhinson/AP Baghdad (IraqiNews.com) – US President Donald Trump has approved Iraqi Prime Minister Ali al-Zaidi’s proposal to mediate between the United States and Iran. This diplomatic breakthrough is intended to diffuse the current crisis in the Strait of Hormuz, according to local news outlet Channel 8 News. During their recent meeting in Washington, al-Zaidi asked Trump for approval to establish an official Iraqi mediation effort between the United States and Iran. Trump authorized al-Zaidi to undertake the plan as part of attempts to address the continuing Strait of Hormuz issue. According to insiders, the mediation would focus on restoring stability to marine shipping and energy flows across the key canal. Al-Zaidi informed Trump that, while Pakistan has been involved in political and diplomatic discussions, Iraq plans to lead the economic track of mediation. The Iraqi effort will look for answers to interruptions in commercial shipping and oil shipments via the Strait of Hormuz, which have led to a broader global energy and economic crisis. According to reports, al-Zaidi plans to visit Tehran on Thursday for a series of high-level talks. He and the accompanying Iraqi officials are anticipated to return to Baghdad later that day.",
+      "cleanText": "US President Donald Trump and Iraqi Prime Minister Ali al-Zaidi in the White House. Photo: Julia Demaree Nikhinson/AP Baghdad (IraqiNews.com) – US President Donald Trump has approved Iraqi Prime Minister Ali al-Zaidi’s proposal to mediate between the United States and Iran. This diplomatic breakthrough is intended to diffuse the current crisis in the Strait of Hormuz, according to local news outlet Channel 8 News. During their recent meeting in Washington, al-Zaidi asked Trump for approval to establish an official Iraqi mediation effort between the United States and Iran. Trump authorized al-Zaidi to undertake the plan as part of attempts to address the continuing Strait of Hormuz issue. According to insiders, the mediation would focus on restoring stability to marine shipping and energy flows across the key canal. Al-Zaidi informed Trump that, while Pakistan has been involved in political and diplomatic discussions, Iraq plans to lead the economic track of mediation. The Iraqi effort will look for answers to interruptions in commercial shipping and oil shipments via the Strait of Hormuz, which have led to a broader global energy and economic crisis. According to reports, al-Zaidi plans to visit Tehran on Thursday for a series of high-level talks. He and the accompanying Iraqi officials are anticipated to return to Baghdad later that day.",
+      "fullText": "US President Donald Trump and Iraqi Prime Minister Ali al-Zaidi in the White House. Photo: Julia Demaree Nikhinson/AP Baghdad (IraqiNews.com) – US President Donald Trump has approved Iraqi Prime Minister Ali al-Zaidi’s proposal to mediate between the United States and Iran. This diplomatic breakthrough is intended to diffuse the current crisis in the Strait of Hormuz, according to local news outlet Channel 8 News. During their recent meeting in Washington, al-Zaidi asked Trump for approval to establish an official Iraqi mediation effort between the United States and Iran. Trump authorized al-Zaidi to undertake the plan as part of attempts to address the continuing Strait of Hormuz issue. According to insiders, the mediation would focus on restoring stability to marine shipping and energy flows across the key canal. Al-Zaidi informed Trump that, while Pakistan has been involved in political and diplomatic discussions, Iraq plans to lead the economic track of mediation. The Iraqi effort will look for answers to interruptions in commercial shipping and oil shipments via the Strait of Hormuz, which have led to a broader global energy and economic crisis. According to reports, al-Zaidi plans to visit Tehran on Thursday for a series of high-level talks. He and the accompanying Iraqi officials are anticipated to return to Baghdad later that day.",
+      "collectionMethod": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "category1": "international",
+      "category2": "politics_security",
+      "category3": "regional",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크가 미국과 이란 간의 긴장을 완화하려는 노력에 대한 상징적인 조치로 평가됨.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "fulltext",
+      "sourceEvidenceChars": 1360,
+      "titleKo": "美, 이라크의 미국과 이란 중재 제안 승인",
+      "summaryKo": "도널드 트럼프 미국 대통령이 Al-Zaidi 총리 이라크 총리의 미국과 이란 간 중재 제안을 승인했다. 이란과의 고위급 회담을 통해 호르무즈 해협의 안정성을 회복하고 상업 해운 및 유통의 중단을 해결하는 것이 목표이다.",
+      "reportBullet": "7.21 워싱턴, 트럼프 대통령이 Al-Zaidi 총리의 미·이란 중재안 승인. 호르무즈 해협 해운·에너지 흐름 정상화 중재 착수.",
+      "reportSubBullets": [
+        "Al-Zaidi 총리, 목요일 테헤란 방문해 고위급 회담 예정. 동행 이라크 관리들은 같은 날 Baghdad 복귀 예정."
+      ],
+      "reportImplication": "",
+      "actors": [
+        "Donald Trump",
+        "Al-Zaidi 총리"
+      ],
+      "location": "Baghdad",
+      "sourceReliability": "fulltext",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:24.090Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1"
+    },
+    {
+      "id": "rss-IAZwJ_3WlNDEh8fEltIj46MF",
+      "title": "الهند تلغي تحميل نفط من العراق بسبب المخاطر في مضيق هرمز - العربي الجديد",
+      "titleKo": "인도, 호르무즈 해협의 위험으로 이라크에서 원유 수입 중단",
+      "summaryKo": "인도가 호르무즈 해협에서의 위험성 때문에 이라크에서의 원유 수입을 중단했다. 이는 이라크의 유가 및 물류에 부정적인 영향을 미칠 것으로 보인다.",
+      "source": "العربي الجديد",
+      "publishedAt": "2026-07-21T11:21:31.000Z",
+      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxQb21Xbzhzc3N5MndldlFBVC1UOFdEdWdnQXdHTlI2V18tNW5NNzhnVEJUS0R4NFhPWDhhSE5mTXJDdFJuSC12UDZfZTFDR21vTlFfLXRTQ0cwSEFjeWpzRG5BYVYwNFJGVkFvaDFzbzhULWZqV25xQmZxSHhBNmpoNGhWUFdIVWdKRml2Z0ZqNC1EYUFEdDh1UUdrZnFBQUdQMk5IQzdGVHFBb0RsRzgtOURGRnkxV2hNR3NHeFhhdHp5alVGcUVkSk5HaWprc2xzZTRfLV9rLXRHbGQ2dFZOemlWVWpqbDE5Y0dYdWl0TkxobTl2eTZCNVVIWENwNzNXdEF5aWZVdVB6ZnB5Q0RLbk9OYy1zdTNfeGx6RVlnaGNUS1hLMXJsdDlpUjJodWx2cEVCM010aTVkLXdsUEhwQ0RmaUwtV3FHUTVTdUU4M0U5dm5ONWlpbUt2N2t5SVpwOTdXYkwxTndKOVZab0JFWUJwcGxsa2s1d2NJeTBpRFdzdWNrNjJuc2FHRkFlYmM1WktXSEs2U2JVNDN2cGJSR3JCYU50X0VhMi1lRjB5c3A3dlpONVpLWlNZeVdjWXFSZm9LNmZNb9IBzANBVV95cUxNRnVzM2wtdWhrZVBpcHhUcTk2azhxUmxoSHZfT29LZW5xeFZDd0RaanlaZC1NdjB2Rm9FQVdzc1RBQnFCdklfcnNOQnFVZEt3M3JXN0hKNUZmRy1keWRReVloX2xpc29oanl4T1lPV3ZBX19tSXJCanM2QlZFX3NPNUVzdWUyMVozX191NFh4TDlMMk0zM0pIaU9GUHIxT3p5ZThVY1RBQlRCVWVBMWUzakNuWnBFancteHJjVy00bXRjT3JHd2FUVmVSMm5yNFRPV3JZakJMVFJMb1VWbEd5eTFFMThHb2Z3ZmtuNENWeWg1Um5LNlF2ZE1IMXpCdlV1LWNtVVVZbWNBSFFrWlRMckVnUUV0WDFvMC1YaWhhLVJDTnFFRXl4TEtWZ0JhazZGbU1xbTBPU2dpMFkydW5ERThtTU84TXRwTzZxOTNfNTJJMlhYaTloQXY4MmZQTC1oamNkRmtGOFE0RmhlRUlPWnptQ2pHQmo2Yl9QVFlfaHZEcm9VbUM3bXJ1YmlWUG5Tbk83NWFsYm8wTVBTOG9hZm5vcHlKVG4xN0ZiQXJJNHRDVnVtSjRpWEluMkFoNHJvWG1FNTlSV0xFRS1L?oc=5",
+      "query": "\"مضيق هرمز\" \"العراق\"",
+      "description": "الهند تلغي تحميل نفط من العراق بسبب المخاطر في مضيق هرمز العربي الجديد",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "인도의 원유 수입 중단은 이라크 경제와 유가에 직접적인 영향을 주며, 지역 안보 상황과 관련됨.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 70,
+      "reportBullet": "7.21, 인도, 호르무즈 해협 위험으로 이라크 원유 수입 중단 결정.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "인도",
+        "이라크"
+      ],
+      "location": "호르무즈 해협",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-xWSUi4PIFXlVK_p7ThTL4-uF",
+      "title": "قوانين حياتنا اليومية.. التحكيم والملكية والمحاماة على طاولة البرلمان العراقي - rudawarabia.net",
+      "titleKo": "이라크 의회, 일상 법률에 대한 논의",
+      "summaryKo": "이라크 의회에서 중재, 소유권, 변호사 관련 법률이 논의되었다. 해당 법들은 일상 생활에 직접적인 영향을 미칠 것으로 예상된다.",
+      "source": "rudawarabia.net",
+      "publishedAt": "2026-07-21T11:09:11.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1JY1NsOWdKRWR6d1VnS1VyTzUxQkFaWmR2aVhmVWFOQ0ZvNl83V1czZzVZcmltY3MzMVVhbGJISEFERi1HZEU0TklELVh2Q1pOTnFsNVRlX3FPZE54Z0tjNTBrMUQ5VWRsb0E?oc=5",
+      "query": "\"البرلمان العراقي\"",
+      "description": "قوانين حياتنا اليومية.. التحكيم والملكية والمحاماة على طاولة البرلمان العراقي rudawarabia.net",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "politics",
+      "importanceScore": 72,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "정치권 동향",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 93,
+      "reportBullet": "7.21, 이라크 의회, 일상 법률 중재 및 소유권 논의 시작.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "Baghdad",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-Cuzb8pS-Em23vAD4BtYH4OLu",
+      "title": "مؤسسة النفط الهندية تلغي التحميل من العراق بسبب المخاطر - العربية",
+      "titleKo": "인도 석유 공사, 이라크에서의 물량 적재 중단",
+      "summaryKo": "인도 석유 공사는 이라크에서의 물량 적재를 중단하였다. 이 결정은 해당 지역의 리스크에 기인하며, 이라크의 유가와 물류에도 부정적 영향을 미칠 가능성이 있다.",
+      "source": "العربية",
+      "publishedAt": "2026-07-21T10:54:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxOT3NfTVlYR2lpblFJV01sOU9LaTQtY1hXZnFJZl81Rm9qV0dIOHIwMm5FbmwxcHJZenhKQTkxNDBkWUdMMl93VmIwOFZoVHdqM1NsZzY4cGo1U1pRTnBIWFYwNU5XTG5IT2J3MTZlaE15MDMxVkFmR0ExNXpYcDNtRmY2LVhSNGFVRzVaUWFZUVFtLUFfOE9KdUpuT2hBcUtyNWFKdEV3ZENqaDhyczN5WktmVkFJYTRfUzlvTmc0N3pBemotcjRZWnMwYk5GSXNkdXJteTRoTFNqZm5tamU3X2RkUFlXc3A2T3lzR0J5Z01QZ2FGZVhBNm1icWh4aHoyYXZlTXZtU21IQjNnd0o0MUdHcUFhVVVFdmgtUmJRaU13UDdTNlA1dEh3NXYwRTZkbVo4dDBkLUZ5TzE3R0pZWWQ4Y3VDY1lGbDBQX1RkU3lnN1BsdFJSUi1GcHQzdnJHNUNTLWtreFRUR0U0YmpMLXBuQTF5TVV2b1dvSEJPQ1FhTFlSb1dGNHVpU3ZKOU0tYVRoT0pZdFQ2d1lMcHdseWRqNVgtTFM0emtGc0V6U2JqXzVCX2FTWG5DOHk4WE9XYTd3dXpISzdtMmVXNDhJWUF1RzBURGlVb1FQNzBsMll4cjEtN2lmctIB7gNBVV95cUxNYnJvVUdyZDJfVnp5N0tfdDRuWFRjWF9yNS0yeFMyd212eUJBak9UX0Vsei1YY0hORXoxem9hbEdENmI0RHZUakI4TmRNSTZpaFMtMU5Za2V5UmVBbFVzSWVjRGhEQTZ6NGx5dXkxTzA3dXQ0NmlmcVdlbkVWSEVFTjFYUGthUVBscGxRVnoxcVl1SjE3bm13bjFjQ0hwZWhpa25QWUdkM3VneEdvejBWbjd2U1NqYjBaTnRYMGFyQ2pCRnhhekM5Q1R3dHVFVjNTdDdwS1FJT1NKOTJndXEyS1doQm4tdEVzTjhJTy02NkI0RkpNSUlBNi1FSEhjQTYwRVR4dG5weWdfZk9HTUtlUGh4dXFydFhaWFZSOWFWSmVHZ29FVkREbzhOQlI4cDFaMUdPbEZDd3YycU9kZTY0bUNxSE1XWTIyelJ3RjltVlVfSTNwQkR2NlJuTGVCajFyZ3I2MGhncl9FeXhlZlVJS1NqV24tdG1QekRfbkI3dl82UHpmVDV3X2I4TVp0b1Vwb2pmOUo1eWVwQjNqNHdLX0RUcm5VQVNuU0V1ZkFuc3hoQzBDTjE2NURDUHd2a2Vtb1A3RlpLMXJKc0lzRElGajY5RUEtMzVJMUdJX0VOX3pRclFoTk8zVmh5bmNyZw?oc=5",
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "description": "مؤسسة النفط الهندية تلغي التحميل من العراق بسبب المخاطر العربية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크의 유가와 물류에 미치는 직접적인 영향을 다루고 있다.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 63,
+      "reportBullet": "7.21, 인도 석유 공사, 이라크에서의 물량 적재를 중단함. 이는 지역 리스크 때문임.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "인도 석유 공사"
+      ],
+      "location": "이라크",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
+      "id": "rss-fxgj7AYxUZGlMoRQXYHJ2F3r",
+      "title": "مؤسسة النفط الهندية تلغي التحميل من العراق بسبب اضطرابات هرمز - إرم بزنس",
+      "titleKo": "인도 석유공사, 이라크에서의 화물 적재 중단",
+      "summaryKo": "인도 석유공사가 이라크에서의 화물 적재를 중단하였다. 이는 호르무즈 해협의 혼란으로 인해 발생한 결정이다.",
+      "source": "إرم بزنس",
+      "publishedAt": "2026-07-21T10:27:02.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5YTnpQaGZCTWlJc2J6VnM3X3Y0bWxlSXRLS3BGMkZySmVCV0daTU5TQzFodTNjRVhueUpJZ2IweU5GeHRLbkViMTdpLXU3aEIzMHBHaFRB?oc=5",
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "description": "مؤسسة النفط الهندية تلغي التحميل من العراق بسبب اضطرابات هرمز إرم بزنس",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크의 안보와 유가, 물류에 영향을 미치는 상황.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 70,
+      "reportBullet": "7.21, 인도 석유공사, 호르무즈 해협의 혼란으로 이라크에서의 화물 적재 중단을 결정.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "인도 석유공사"
+      ],
+      "location": "이라크, 호르무즈 해협",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
     {
       "id": "direct-Sx0oc1687WCd80Shh5sn5R2B",
       "title": "Explosive-laden drone crashes near military base in Iraq - Iraqi News",
@@ -122,49 +745,6 @@
       "sourceReliability": "rss-description",
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "direct-IrelJQzm4PiWMPf2z98Dojy3",
-      "title": "Iraq reaches major agricultural milestone with first Super S potato seeds - Iraqi News",
-      "source": "Iraqi News",
-      "publishedAt": "2026-07-20T21:04:04.000Z",
-      "url": "https://www.iraqinews.com/iraq/iraq-produces-highest-global-grade-potato-seeds-super-s-2026/",
-      "description": "The Iraqi Ministry of Agriculture announced the successful domestic production of premium \"Super S\" potato seeds to enhance food security and reduce import costs. Baghdad (IraqiNews.com) — The Iraqi Ministry of Agriculture has achieved a major scientific and strategic breakthrough, marking a first for the nation’s agricultural sector. On Monday, July 20, 2026, the ministry officially announced that its Department of Horticulture successfully produced “Super S” grade potato seeds—the highest internationally recognized classification for potato seed quality. The milestone was confirmed after the locally developed seeds passed exhaustive rigorous testing conducted by the Seed Testing and Certification Department, proving their absolute alignment with top global standards. The strategic project was executed under the auspices of Minister of Agriculture Abdul Rahim Al-Shammari and directly supervised by the Director General of the Horticulture Department, Hatem Karim Al-Ghazi. The production represents the culmination of years of intensive research and practical field applications managed by the technical and scientific cadres of the National Potato Development Program. Specialized operations spanned multiple laboratory and field stations, relying heavily on the Tissue Culture Unit in Nineveh Governorate and the Upper Euphrates Station in Anbar Governorate to ensure the harvest of genetically pure, disease-free, and virus-free national seed stocks. Strategic Impact of the National “Super S” Seed Production Securing Food Sovereignty: Establishing the local production of this top global seed classification acts as a foundational step toward building a sustainable, entirely domestic system for potato cultivation inside Iraq. Reducing Import Reliance: The initiative directly aims to limit the country’s dependence on expensive imported foreign seeds, granting the agricultural sector greater autonomy over an essential crop. Boosting the National Economy: Transitioning to domestic production will dramatically lower overall cultivation costs for local farmers while saving vital hard currency reserves that were previously spent on international seed procurement. Maximizing Crop Yields: The high genetic purity and complete absence of viral strains inherent in “Super S” seeds directly optimize agricultural efficiency, significantly raising the production output per dunam. This pivotal shift in seed infrastructure serves as a major pillar supporting the sustainable development strategies that the Ministry of Agriculture aims to replicate across other primary food crops. The tangible results of this achievement are projected to posit",
-      "cleanText": "Baghdad (IraqiNews.com) — The Iraqi Ministry of Agriculture has achieved a major scientific and strategic breakthrough, marking a first for the nation’s agricultural sector. On Monday, July 20, 2026, the ministry officially announced that its Department of Horticulture successfully produced “Super S” grade potato seeds—the highest internationally recognized classification for potato seed quality. The milestone was confirmed after the locally developed seeds passed exhaustive rigorous testing conducted by the Seed Testing and Certification Department, proving their absolute alignment with top global standards. The strategic project was executed under the auspices of Minister of Agriculture Abdul Rahim Al-Shammari and directly supervised by the Director General of the Horticulture Department, Hatem Karim Al-Ghazi. The production represents the culmination of years of intensive research and practical field applications managed by the technical and scientific cadres of the National Potato Development Program. Specialized operations spanned multiple laboratory and field stations, relying heavily on the Tissue Culture Unit in Nineveh Governorate and the Upper Euphrates Station in Anbar Governorate to ensure the harvest of genetically pure, disease-free, and virus-free national seed stocks. Strategic Impact of the National “Super S” Seed Production Securing Food Sovereignty: Establishing the local production of this top global seed classification acts as a foundational step toward building a sustainable, entirely domestic system for potato cultivation inside Iraq. Reducing Import Reliance: The initiative directly aims to limit the country’s dependence on expensive imported foreign seeds, granting the agricultural sector greater autonomy over an essential crop. Boosting the National Economy: Transitioning to domestic production will dramatically lower overall cultivation costs for local farmers while saving vital hard currency reserves that were previously spent on international seed procurement. Maximizing Crop Yields: The high genetic purity and complete absence of viral strains inherent in “Super S” seeds directly optimize agricultural efficiency, significantly raising the production output per dunam. This pivotal shift in seed infrastructure serves as a major pillar supporting the sustainable development strategies that the Ministry of Agriculture aims to replicate across other primary food crops. The tangible results of this achievement are projected to positively impact local markets over the coming harvest seasons, offering Iraqi consumers and farmers a premium, highly competitive national product that stabilizes the domestic supply chain.",
-      "fullText": "Baghdad (IraqiNews.com) — The Iraqi Ministry of Agriculture has achieved a major scientific and strategic breakthrough, marking a first for the nation’s agricultural sector. On Monday, July 20, 2026, the ministry officially announced that its Department of Horticulture successfully produced “Super S” grade potato seeds—the highest internationally recognized classification for potato seed quality. The milestone was confirmed after the locally developed seeds passed exhaustive rigorous testing conducted by the Seed Testing and Certification Department, proving their absolute alignment with top global standards. The strategic project was executed under the auspices of Minister of Agriculture Abdul Rahim Al-Shammari and directly supervised by the Director General of the Horticulture Department, Hatem Karim Al-Ghazi. The production represents the culmination of years of intensive research and practical field applications managed by the technical and scientific cadres of the National Potato Development Program. Specialized operations spanned multiple laboratory and field stations, relying heavily on the Tissue Culture Unit in Nineveh Governorate and the Upper Euphrates Station in Anbar Governorate to ensure the harvest of genetically pure, disease-free, and virus-free national seed stocks. Strategic Impact of the National “Super S” Seed Production Securing Food Sovereignty: Establishing the local production of this top global seed classification acts as a foundational step toward building a sustainable, entirely domestic system for potato cultivation inside Iraq. Reducing Import Reliance: The initiative directly aims to limit the country’s dependence on expensive imported foreign seeds, granting the agricultural sector greater autonomy over an essential crop. Boosting the National Economy: Transitioning to domestic production will dramatically lower overall cultivation costs for local farmers while saving vital hard currency reserves that were previously spent on international seed procurement. Maximizing Crop Yields: The high genetic purity and complete absence of viral strains inherent in “Super S” seeds directly optimize agricultural efficiency, significantly raising the production output per dunam. This pivotal shift in seed infrastructure serves as a major pillar supporting the sustainable development strategies that the Ministry of Agriculture aims to replicate across other primary food crops. The tangible results of this achievement are projected to positively impact local markets over the coming harvest seasons, offering Iraqi consumers and farmers a premium, highly competitive national product that stabilizes the domestic supply chain.",
-      "collectionMethod": "iraq-media-direct",
-      "sourceType": "iraq-media-direct",
-      "category1": "domestic",
-      "category2": "economy",
-      "category3": "oil_economy",
-      "importanceScore": 78,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "경제 및 식량 안전성 강화 기여",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "fulltext",
-      "sourceEvidenceChars": 2686,
-      "titleKo": "이라크, 첫 슈퍼 S 감자 종자 생산 성과 달성",
-      "summaryKo": "이라크 농업부는 프리미엄 '슈퍼 S' 감자 종자를 성공적으로 생산하여 식량 안전과 수입 비용 절감에 기여했다. 이 종자는 국제적으로 인정받는 최고 품질 분류를 통과하여, 이라크 농업 부문에 큰 획을 긋는 성과로 평가된다.",
-      "reportBullet": "M.D, 이라크 농업부의 슈퍼 S 감자 종자 첫 생산 성과와 국제 최고 품질 분류 통과.",
-      "reportSubBullets": [
-        "종자검사·인증부의 엄격한 시험 통과, 나인와주 조직배양 부문과 Anbar주 상·하 유프라테스 실험거점 활용.",
-        "국가 감자개발프로그램 기술·과학 인력의 장기 연구와 현장 적용 집적, 무병·무바이러스 국가 종자 확보 기반."
-      ],
-      "reportImplication": "국내 감자 재배 체계 구축에 따른 수입 종자 의존 완화와 재배비용·외화 지출 축소 효과.",
-      "actors": [
-        "Abdul Rahim Al-Shammari",
-        "Hatem Karim Al-Ghazi"
-      ],
-      "location": "Baghdad",
-      "sourceReliability": "fulltext",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T01:48:44.125Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
     {
       "id": "direct-gLhdU1eN-30HYwm-TCH3oBrA",
@@ -434,7 +1014,7 @@
       "id": "rss-Qj8Uj75cmtwj4BVNjrMluWE8",
       "title": "تحذيرات من عودة داعش.. العد التنازلي للانسحاب الأمريكي يربك المشهد العراقي - العين الإخبارية",
       "titleKo": "美군 철수 임박, 안보공백에 따른 IS 재출현 및 민병대 무장 유지 우려",
-      "summaryKo": "이라크 내 미군 철수가 9월 30일 완료될 예정인 가운데, 철수 이후 안보공백을 틈탄 IS 재출현 우려가 제기됨. 안보공백이 발생할 경우 민병대가 IS 대응을 명분으로 무기 보유를 계속 주장할 수 있어, Al-Zaidi 총리 내각이 추진 중인 무장해제 정책의 주요 장애 요인으로 작용할 가능성이 있음. 이라크 정부의 무장해제 목표일 역시 9월 30일로 제시된 만큼, 미군 철수와 무장해제 추진이 같은 시점에 맞물리는 상황임. 미군 철수 이후 이라크군의 독자적 대테러 대응 역량과 정부의 무장 통제력이 핵심 변수로 부각됨.",
+      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
       "source": "العين الإخبارية",
       "publishedAt": "2026-07-20T15:08:01.000Z",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZTXZMUjNlX1Y4X2JiTnlfdlNOQkVrcDRhbk1UUHpFN1VBTEl4N01ZQWlPN0hQeWJZZ1IwZEc4elMyQ0Y4bkdhY0tUbmdYN1ptQmhyZTAxMXU4TWZhMFZxRXVsU1J4WVJKQTd6NjZ3?oc=5",
@@ -444,26 +1024,19 @@
       "sourceType": "google-news-rss",
       "category1": "domestic",
       "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 88,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "미군 철수에 따른 IS 재출현·안보공백 우려가 민병대의 무기 보유 명분 및 정부의 9월 30일 무장해제 목표와 충돌할 수 있다는 점에서 핵심 치안·정국 기사.",
+      "category3": "exclude",
+      "importanceScore": 15,
+      "reportUsefulness": "exclude",
+      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 90,
-      "reportBullet": "7.20, 美軍의 9.30 이라크 철수 완료를 앞두고 IS 재출현 및 안보공백 우려 제기. 안보공백은 민병대의 무기 보유 명분으로 활용될 수 있어, 이라크 정부의 9.30 무장해제 목표와 충돌할 가능성",
+      "reportBullet": "7.20. 이라크에서 미군 철수 완료 예정일과 정부 무장해제 목표일이 모두 9월 30일로 겹치며, 철수 이후 안보공백과 IS 재출현 우려가 제기됐다.",
       "reportSubBullets": [
-        "미군 철수 이후 IS 대응 공백이 발생할 경우 민병대가 무장 유지 필요성을 주장할 수 있다는 우려 제기.",
-        "Al-Zaidi 총리 내각이 추진 중인 무장해제 정책이 치안 불안 및 민병대 반발로 차질을 빚을 수 있다는 점이 핵심 쟁점."
+        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
       ],
-      "reportImplication": "미군 철수와 무장해제 목표일이 9월 30일로 겹치면서, IS 위협을 둘러싼 안보 논리가 Al-Zaidi 총리 내각의 무장 통제 정책을 제약할 수 있는 구조 형성.",
-      "actors": [
-        "美軍",
-        "IS",
-        "이라크 정부",
-        "Al-Zaidi 총리 내각",
-        "이라크 민병대"
-      ],
+      "reportImplication": "",
+      "actors": [],
       "location": "Baghdad",
       "sourceReliability": "일반 언론",
       "selected": false,
@@ -471,7 +1044,13 @@
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1",
       "knownPoliticalSummaryFixed": true,
-      "knownPoliticalSummaryReason": "US withdrawal, ISIS resurgence, militia weapons rationale, and the 9/30 disarmament target require deterministic deep summary"
+      "knownPoliticalSummaryReason": "US withdrawal, ISIS resurgence, militia weapons rationale, and the 9/30 disarmament target require deterministic deep summary",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:05:42.212Z",
+      "aiHallucinationFiltered": true,
+      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
     },
     {
       "id": "rss-rVpos8jNSVvnvm7NNh1y9G_l",
@@ -491,10 +1070,10 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "여전히 활동하는 IS 제압 상황 모니터링 필요",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 73,
-      "reportBullet": "7.20, 이라크 군, 커르쿠크에서 IS 은신처 6곳을 신속히 파괴함.",
+      "reportBullet": "07.20. 커르쿠크에서 군이 IS 은신처 6곳을 파괴했다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -503,7 +1082,11 @@
       "location": "커르쿠크",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:10.865Z"
     },
     {
       "id": "direct-ZoGx79yGoXQwJ6YcOapaxnUE",
@@ -527,10 +1110,10 @@
       "sourceEvidenceChars": 1293,
       "titleKo": "이라크 군, Kirkuk에서 IS 은신처 6곳 파괴",
       "summaryKo": "이라크 군은 7월 20일 Kirkuk에서 IS의 의심되는 은신처 6곳을 공중 작전으로 파괴했다고 발표했다. 이 작전은 특수부대의 빠른 보안 작전으로 수행되었으며, 여전히 일부 지역에서 IS의 잔여 세력을 추적하는 보안 작전이 지속되고 있다.",
-      "reportBullet": "7.20, 이라크 군, Kirkuk에서 IS 은신처 6곳 파괴에 성공. 이는 공중 작전으로 진행됨.",
+      "reportBullet": "7.20 이라크 합동작전사령부는 Kirkuk 주 Zghitun Valley에서 특수부대 공수작전과 정밀공습으로 IS 의심 은신처 6곳을 파괴했다.",
       "reportSubBullets": [
-        "특수부대가 신속한 보안 작전을 통해 은신처를 추적하여 파괴함.",
-        "이라크 정부는 여전히 IS 잔여 세력에 대한 보안 작전을 지속하고 있음."
+        "이라크군은 지상 탐색으로 은신처를 식별한 뒤 공습을 시행했다.",
+        "7월 초 Sulaymaniyah주에서는 Asayish가 CTS와 공조해 IS 용의자 2명을 체포했다."
       ],
       "reportImplication": "",
       "actors": [
@@ -543,7 +1126,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:14.396Z"
     },
     {
       "id": "direct-aHR0cHM6Ly85NjRt",
@@ -605,8 +1192,8 @@
       "sourceEvidenceLevel": "fulltext",
       "sourceEvidenceChars": 4015,
       "titleKo": "이란의 무장 세력으로부터의 우려, 이라크 은행의 달러 거래 복원이 어려운 상황",
-      "summaryKo": "경제 전문가 Ziad Al-Hashemi는 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행과 미국 재무부 간의 최근 협정이 제약된 이라크 금융기관의 달러 거래 즉시 복원을 의미하지 않는다고 강조했다. 그는 미국의 엄격한 조건과 재정 정책에 따라 달러 통합이 미비하다고 설명하며, 향후 7개 제약 은행의 국제 은행 채널 복원에 대한 이행이 쉽지 않을 것이라고 경고했다.",
-      "reportBullet": "7월 20일, 이라크 이라크 이라크 이라크 이라크 중앙은행·미 재무부, 제약 은행의 달러 거래 즉시 복원 불가 및 엄격한 준수·구조개혁 조건 부과.",
+      "summaryKo": "경제 전문가 Ziad Al-Hashemi는 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행과 미국 재무부 간의 최근 협정이 제약된 이라크 금융기관의 달러 거래 즉시 복원을 의미하지 않는다고 강조했다. 그는 미국의 엄격한 조건과 재정 정책에 따라 달러 통합이 미비하다고 설명하며, 향후 7개 제약 은행의 국제 은행 채널 복원에 대한 이행이 쉽지 않을 것이라고 경고했다.",
+      "reportBullet": "7월 20일, 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행·미 재무부, 제약 은행의 달러 거래 즉시 복원 불가 및 엄격한 준수·구조개혁 조건 부과.",
       "reportSubBullets": [
         "초기 단계는 유로·UAE 디르함·중국 위안 등 비달러 통화 중심의 국제 코레스폰던트 네트워크 재편입 검토에 한정.",
         "미국계 주요 은행의 거래 관계 미복원과 올리버 와이만 기준 미이행으로, 7개 제약 은행의 단·중기 달러 전환 가능성 제한."
@@ -685,10 +1272,10 @@
       "sourceEvidenceChars": 1521,
       "titleKo": "이라크, 호르무즈 해협 위기에도 걸프 석유 수출 성장 주도",
       "summaryKo": "이라크가 7월 상반기 걸프 지역의 원유 수출 증가를 주도했다. Kpler와 Vortexa에 따르면, 전체 석유 수출이 증가하면서 이란과의 긴장 속에서도 이라크의 원유 선적량이 가장 많이 증가하였다. 그러나 걸프 지역의 석유 수출량은 여전히 전쟁 이전 수준보다 약 32% 낮다.",
-      "reportBullet": "7.20, 이라크, 7월 상반기 걸프 지역의 원유 수출 증가를 주도하며 전체 원유 수출 증가에 기여.",
+      "reportBullet": "7.20. 이라크가 걸프 지역 7월 상반기 원유 수출 증가를 주도했다. Kpler·Vortexa 집계에서 이라크 선적량이 역내 최대 폭으로 늘었고, 걸프 전체 수출은 전월 대비 약 16% 증가했다.",
       "reportSubBullets": [
-        "이라크의 원유 선적량이 걸프 국가 중 가장 큰 폭으로 증가.",
-        "걸프 지역의 전체 원유 수출량은 여전히 전쟁 이전보다 약 32% 낮음."
+        "사우디아라비아·UAE·이라크·쿠웨이트·이란의 수출량은 하루 약 1,200만~1,306만 배럴로 집계됐다.",
+        "걸프 지역 원유 수출은 전쟁 전 수준인 하루 1,760만 배럴보다 약 32% 낮았다."
       ],
       "reportImplication": "",
       "actors": [
@@ -698,7 +1285,11 @@
       "location": "Baghdad",
       "sourceReliability": "fulltext",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:22.709Z"
     },
     {
       "id": "direct-XYQWeDP5yQ9CQoAvIpDl7WSn",
@@ -731,7 +1322,7 @@
       "actors": [
         "지야드 하셈",
         "미국 재무부",
-        "이라크 이라크 중앙은행"
+        "이라크 이라크 이라크 중앙은행"
       ],
       "location": "이라크",
       "sourceReliability": "fulltext",
@@ -860,7 +1451,7 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 55,
-      "reportBullet": "7.20, 이라크 군 대원, 커르쿠크에서 IS 셀 6곳 파괴 작전 실시하여 테러 위협 감소 기여.",
+      "reportBullet": "7.20 커르쿠크에서 이라크 군이 신속작전으로 IS 은신처 6곳을 파괴했다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -870,7 +1461,11 @@
       "location": "커르쿠크",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:25.139Z"
     },
     {
       "id": "rss-6jefoTsMoKTMW5v5eNSIfKkX",
@@ -929,7 +1524,7 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 61,
-      "reportBullet": "7.20, 이라크 Kirkuk에서 기습 작전으로 IS 6개 은신처 파괴.",
+      "reportBullet": "7.20. Kirkuk에서 기습 작전으로 IS 은신처 6곳을 파괴했다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -940,6 +1535,48 @@
       "sourceReliability": "rss-description",
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:27.583Z"
+    },
+    {
+      "id": "rss-DeNj-g7ECtLqDwBb8cufBVol",
+      "title": "بعملية \"خاطفة\".. تدمير 6 أوكار لداعش في كركوك - سكاي نيوز عربية",
+      "titleKo": "쉬운 작전으로 Kirkuk에서 IS 은신처 6곳 파괴",
+      "summaryKo": "이라크 Kirkuk에서 IS(IS) 은신처 6곳이 파괴됐다. 이 작전은 신속하게 진행되었으며, 이란의 테러 위험을 낮추는 데 기여할 것으로 보인다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-07-20T09:03:20.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPUXIzU3dmNzBLYnRvby1oNnZlMTMyUlRRUllWWW9BMlVCcHdWM0s4Y2piQmhzbGN5dWQ4VXoyczNXNGFKdjJSbU01LTREb25iMWxhbFNFMjJIajF5elZpTGx3SmwzdXZvLXVyQXhpeV9jN0owS2hRckNsTk82aGI5aWtlM2MxaXRMbnVuVExXcFNFdldXMDJjdjhHN29oNzlGSGlwNXNldHBGc3VYRGkzRVZodTFjNUpqc0xGcTFBTWNyc2xEd1pBRXdvR2NXTFdHOXFmanhpanBNeWxZcDZvRHE1WE5WMS1ocjZHbzNCUFk4SndfMXk0cVA2cUpJTHg0OHBxVE1FUkRhb0d6R0lYVG1iRVIwUmFFeFJndHVsT1ZkcnZPcFZiZjAtVEozSTVrellPaVBJTVhuNTF0X1RkcVNycVR5cU9lSGFUSjdhYjR2Sjl3VUR2OUhOSWV3VVJj0gHmAkFVX3lxTE4yWF9ROFRlVXZnazBBeFVTNFZKZ0tuSHhTZ1lfTWNnaEVteXo5R05DWmdjUFRZbkp5ZDdPcUxaREpyY0xUdExBRmF1V3U1Z3Y1MHlGZkNENS01YUlERXVLU0E2MGFpT2hWZV9iM25obXlvOGY1TVdESXlaR3QxRC04Mi1JcTBIV3FFSl9YczhCVFd5dzVMalFSTWQtVXVmdjVTaloxdWl5Q0lGN0ppWUcya3RsR2d0cVhoM1ViTHZzbEpLamRJM283TmNBaHRLdVVmbEhkMkFDVmpkQlBtaS1oSDZzcFFZalN3VFlIb01ORm5mS1ZVdVJTMHhHYXFsN21nUjlrSUhNTlVjQnRPUm15U3J4akdGZWJRSjlxSzN4b3p0WHMyYXozdGtxWHVTb2d1TnVDUWtRX2MydzRRR2luLXpvbW83TmJaSllLM3RkSTEyMUI3d2hDbkhHeVd3T3VWTkQ3X2c?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "description": "بعملية \"خاطفة\".. تدمير 6 أوكار لداعش في كركوك سكاي نيوز عربية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 내 안보 상황 긴급 보고 필요",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 61,
+      "reportBullet": "7.20 Kirkuk에서 IS 은신처 6곳을 파괴했다. 신속한 작전으로 은신처를 제거했다.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크 군"
+      ],
+      "location": "Kirkuk",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:29.533Z",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
@@ -964,7 +1601,7 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 62,
-      "reportBullet": "7.20, 이라크 공수 부대, 커르쿠크에서 IS 추격 작전 진행 중.",
+      "reportBullet": "7.20 이라크 공수부대, 커르쿠크에서 IS 추격 작전 전개",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -975,7 +1612,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:31.681Z"
     },
     {
       "id": "rss--WnrqZ6KFDPwOTBZCYU9-2k2",
@@ -998,7 +1639,7 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 76,
-      "reportBullet": "7.20, 이라크 군, 커르쿠크에서 IS(IS) 밀집지역 6곳을 공습하여 파괴.",
+      "reportBullet": "7.20 이라크 합동작전사령부는 커르쿠크에서 육군 항공기로 IS 은거지 6곳을 파괴했다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -1010,7 +1651,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:32.257Z"
     },
     {
       "id": "rss-1PWYaRVDUgCK8pl_3wwyGQgI",
@@ -1062,10 +1707,10 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "치안 및 테러 상황 관련 중요성이 있음",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 73,
-      "reportBullet": "7.20, 이라크 당국, 커르쿠크 및 앤바르에서 IS(IS) 기반시설 6개를 파괴하고 바트당 관련자를 체포함.",
+      "reportBullet": "7.20 커르쿠크와 앤바르에서 IS 은신처 6곳 파괴, 바트당 관련 용의자 1명 체포.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -1076,7 +1721,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:35.627Z"
     },
     {
       "id": "rss-wy0egy2vOCCM0Ih7opKg6HZu",
@@ -1096,10 +1745,10 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "테러 및 치안 문제로 인한 민감한 상황을 반영하기 위해.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 61,
-      "reportBullet": "7.20, 이라크 Kirkuk, '다이쉬' 은신처 6개 파괴 작전 완료.",
+      "reportBullet": "7.20 이라크 Kirkuk 보안작전에서 다이쉬 은신처 6곳을 파괴했다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -1111,7 +1760,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:34.969Z"
     },
     {
       "id": "rss-JVyiPiam9Gu5aJJ1ZgOMRXwT",
@@ -1372,42 +2025,6 @@
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
-      "id": "rss-OU4vFf3ExkQt4LU4HVlGJRdt",
-      "title": "تصريحات متواصلة من طهران حول تحريك الحوثي لإغلاق باب المندب - سكاي نيوز عربية",
-      "titleKo": "이란, 후티의 바브엘만데브 봉쇄 움직임에 대한 지속적인 발언",
-      "summaryKo": "이란은 후티의 바브엘만데브 봉쇄 조치에 대해 계속해서 발언하고 있다. 이 상황은 이라크와 관련된 경제적 및 안보적 측면에서도 중요하다.",
-      "source": "سكاي نيوز عربية",
-      "publishedAt": "2026-07-19T20:39:19.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxOQUJVR3NTb0ZrbkRZa3ZBbXgyWmJoOUtzWUFXeTFES2R4OUpZMXN4UndjOW1xMTNFbzlGLWdNcWlYYTJ4WldKMEs0cW5IdzNiUm5CTXM0aFFCczdCTFhvY29Ib3I1MEhEdzJtekc2NEoxaXI1dm9kd2s4cWNMano3VU5EOWRvMUZYZVRGakp6WDZERVA1eVNaR29IN08zOHY5QWtmTnd3SV9UeDUwR2hTb3hadFktU1piaDcteWpmR3RGMTBrZjc0b1JsQnJUTGZfbWs5UlFqX3F5emZnRGxJOE00Wndwb3lJc0I4QXRwYjNzQm5fLTBEQklxOXZQeFZsX25BUEVOYWVudHRQTlBwRWczVEIzVXhrdHRXeTIwbzNMQTZCSVIwQ3RTT1lhdHlEZkpPMHJ0bG9kZXRNTFdERW9MbG81QlBPaW1fb1lLWEJWZGYxQkRycHliX29CRncybzV3dlhnX0l5WUxTV0dHVWxUTTF2YWd5VzF5TXBYRHFVREJLT2J4TjI4Q3hfSmNERG1ZT1NLZjNyWWhVa3JHZlN4dVlqa2FNdW14MHE0X25zSkhEZHVQUXBmbzhoenZfZm9UajNJdlVDQUZ0bjktdUotZVFWNTA?oc=5",
-      "query": "\"العراق\" \"الحوثي\"",
-      "description": "تصريحات متواصلة من طهران حول تحريك الحوثي لإغلاق باب المندب سكاي نيوز عربية",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 76,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 핵심 국제정세",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 75,
-      "reportBullet": "이란, 후티의 바브엘만데브 봉쇄 싸움에서 발언 지속으로 국제적 긴장 고조 평가.",
-      "reportSubBullets": [
-        "이란의 발언은 중동에서의 권력 역학에 영향을 미칠 것으로 전망.",
-        "이라크의 경제 및 물류 안정성에 대한 우려가 확산될 가능성."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이란",
-        "후티"
-      ],
-      "location": "Bab el-Mandeb",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
       "id": "rss-KfXHi9fjPcPqwKyEwlnFjGTZ",
       "title": "صواريخ العقبة ترفع التأهب.. هل اقتربت إسرائيل من ساعة الصفر مع إيران؟ - إرم نيوز",
       "titleKo": "이스라엘, 이란과의 전쟁 임박한 듯",
@@ -1566,7 +2183,7 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 82,
-      "reportBullet": "7.19, 팔론 전 영국 국방장관, 이라크 군사 개입의 중요성을 강조하며 이라크의 붕괴 가능성을 경고",
+      "reportBullet": "7.19 마이클 팔론 전 영국 국방장관, 대IS 군사개입 관련 내부 내용을 공개했다. 개입이 없었으면 이라크가 붕괴했을 것이라고 밝혔다.",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
@@ -1578,7 +2195,11 @@
       "selected": false,
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
+      "reportWritingRefinedAt": "2026-07-21T23:06:39.059Z"
     },
     {
       "id": "rss-xoSw3C1pg65bST92E1DpO4TE",
@@ -1630,7 +2251,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "국제 정세 변화가 이라크 및 비스마야 사업에 미치는 영향 관찰",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 84,
       "reportBullet": "7.19, 이란, 요르단 아카바 및 이스라엘 에일라트 근처에 미사일 발사. 지역 안보에 중대한 사건으로 평가됨.",
@@ -1865,7 +2486,7 @@
       "title": "المشهد السياسي في العراق ومسارات الانتخابات التشريعية المقبلة - futureuae.com",
       "titleKo": "이라크 정치 상황 및 다가오는 총선 경과",
       "summaryKo": "이라크의 정치 상황과 차기 총선에 대한 경과를 다룬 기사로, 정부의 향후 방향성과 정책 변화가 주목받고 있다. 정치적 판도의 변화가 다가오는 선거에 미칠 영향을 분석한다.",
-      "source": "futureuae.com",
+      "source": "مركز المستقبل",
       "publishedAt": "2026-07-19T13:09:20.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1ARBVV95cUxPU3V3dEhFSzd4MkNQcU0zR0dwQUFwRUgwUzNEWm4yMzBqTzE3a1U0aFhoZy10M0Z2NlRkbVl0QWRzb2w3MW1EVmZDRFBmUjVxMlB2dXNZb2liU0NPcXltWGc1ajF6czFKNmZNRG9pVDR0MzlwVnMyTEwzUDhtLWRNbGo0N1lJUmJHUkE0aF9fdWNmOHNUT3c3TmdoOU41ajlSbFNYS3BvQXRnbldZVzByZHBsd1hEZmx0LTV5QXRSbUVKaEloSjJFUjhmSGVNQ1hRTUJPam5IMVdIWktja2l5dlF1R3lWSi02RjFBcnF5WjlQdXR4YzJKMGpVV1N0cURYS2xIdFhZb3RGdmRUSldnVXgtQmNGa2RDUWdXTm1QNk05QzFLNHhORTVQM1p1OXIzV3ViTkk0YnFvMnpMeFFzeU94LURqYTJWekpMdGpjQlZvcmxuRlY1b3ExY1lBV2J1OXpQaE9iaGFFNi15ZHpvY2QyTFE5MWFocTAtSHlSYWFFUkRhTF93V2JhS3U5WWpJMUNtN01wNnNLQlhUaERNdWtOWTMyMUFickRZZ3BSOW1vOUhlLUlZeG1LRUdWU05VRkw5alNRV2JrYUtyTnpOUHJOcGw0MHJ3M1gwM2Zod1Y1OVNPUXRRRm56elNhSVFfTGF0X1pqWHh0RG5HY3lCaXkwc243NGtUWm04NXpLLWl4V0RCUGJJcHBldjRzc2FUZWU1Z3dmQ2FZVFYtcDFVZ3lDTkpNdllISk15YWVuLWZRdmtnRVhZT2wya2pMQWNubHJHTA?oc=5",
       "query": "\"العراق\" \"الانتخابات\"",
@@ -2184,7 +2805,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "치안 및 테러 관련 정보로 중요함.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 102,
       "reportBullet": "7.19, 이라크 쿠르디스탄 지역, 보안 작전으로 테러리스트 체포 및 IS 은신처 파괴.",
@@ -2260,7 +2881,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크의 테러 상황에 대한 연속적인 대응 조치임.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 86,
       "reportBullet": "7.19, 이라크 정부, Kirkuk 및 앤바르 지역에서 동시 작전을 시행하여 IS 관련 테러리스트를 검거하고 이들의 장비 및 차량을 파괴함.",
@@ -2351,7 +2972,7 @@
       "title": "Hormuz War, Iran Expands the Geography of the War from al-Tanf to Kurdistan and the Indian Ocean | Yemen, Million Strong Demonstrations Declare General Mobilisation, Markets Anticipate Bab al-Mandab with Rising Prices - Al-binaa Newspaper",
       "titleKo": "호르무즈 전쟁과 이란의 전쟁 지리 확장",
       "summaryKo": "이란이 호르무즈 전쟁에서 전쟁 범위를 알 탄프에서 쿠르디스탄 및 인도양으로 확대함. 예멘에서는 백만 명이 동원 선언을 하고 바브 알만다브 가격 상승이 예상됨.",
-      "source": "Al-Binaa",
+      "source": "Al-binaa Newspaper",
       "publishedAt": "2026-07-18T17:16:35.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5aQ1ROYjJ5WHdtREVxbmc3bVhNNFFKRFhKOFYxUGhfQVByU2Z1S2RvenVNX2ZWMTZFVjVXcDlLeGp4bHpoMUZxMUlWS1ZwS3d3ZkE?oc=5",
       "query": "\"Iraq\" \"Iran\" \"United States\"",
@@ -3028,7 +3649,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "호르무즈 해협에서의 불안정성은 이라크의 에너지 물류 및 유가에 직접적인 영향을 줄 수 있음.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 103,
       "reportBullet": "7.17, 이란 혁명수비대, 호르무즈 해협에서 두 대의 유조선에서 화재 발생을 발표.",
@@ -3220,14 +3841,14 @@
     },
     {
       "id": "rss-zLXledCsXH2xUiAIApJOHHhd",
-      "title": "US Escalation and the Prospect of an Iranian Opposition Ground Operation, Trump’s Speech Awaited | The Houthis Signal a Decisive Decision to Break the Blockade, Bab al-Mandab Draws Closer, What About Iraq? - Al-Binaa",
-      "titleKo": "美 고조 및 이란 야당 지상 작전 가능성, 트럼프 연설 대기 | 후티, 봉쇄 해제 결단 신호, 바브 알-만다브 더 가까워져, 이라크는?",
-      "summaryKo": "미국의 군사적 고조가 이란 야당의 지상 작전 가능성을 고조시키고 있으며, 후티 세력이 봉쇄 해제를 위한 결단을 내릴 것이라는 신호를 보이고 있다. 이 상황은 이라크의 안보 및 물류에 직접적인 영향을 미칠 수 있다.",
-      "source": "Al-Binaa",
+      "title": "US Escalation and the Prospect of an Iranian Opposition Ground Operation, Trump’s Speech Awaited | The Houthis Signal a Decisive Decision to Break the Blockade, Bab al-Mandab Draws Closer, What About Iraq? - Al-binaa Newspaper",
+      "titleKo": "美, 이란 반군 작전 가능성 및 트럼프 연설 기대",
+      "summaryKo": "미국의 군사적 확대와 이란 반군의 지상 작전 전개 가능성이 제기되며, 트럼프 대통령의 발언이 주목받고 있다. 후티 반군은 봉쇄를 깨기 위한 결정적인 조치를 신호하고 있다. 이 상황은 이라크에 미치는 영향이 주목된다.",
+      "source": "Al-binaa Newspaper",
       "publishedAt": "2026-07-17T16:55:11.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1TYXljQUJjRTgwY2U5alA3NlE1bndHdUVsWEp2LU1oZWJyaXdBZG5aSV9rNDBRckZndlA3dzhORkFlajA5SnNyTWNmZjlfa05SNXc?oc=5",
       "query": "\"Iraq\" \"Iran\" \"United States\"",
-      "description": "US Escalation and the Prospect of an Iranian Opposition Ground Operation, Trump’s Speech Awaited | The Houthis Signal a Decisive Decision to Break the Blockade, Bab al-Mandab Draws Closer, What About Iraq? Al-Binaa",
+      "description": "US Escalation and the Prospect of an Iranian Opposition Ground Operation, Trump’s Speech Awaited | The Houthis Signal a Decisive Decision to Break the Blockade, Bab al-Mandab Draws Closer, What About Iraq? Al-binaa Newspaper",
       "collectionMethod": "google-news-rss",
       "sourceType": "google-news-rss",
       "category1": "international",
@@ -3235,25 +3856,24 @@
       "category3": "regional",
       "importanceScore": 76,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 국제정세 변화",
-      "aiCacheHit": true,
+      "weeklyReportReason": "이라크 내 상황 변화 가능성을 알리는 기초 자료.",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 214,
-      "reportBullet": "7.17, 美, 군사적 고조 및 이란 야당 지상 작전 가능성 주목, 이라크 안보에 영향 미칠 것으로 평가.",
+      "sourceEvidenceChars": 224,
+      "reportBullet": "7.17, 미군의 이란 반군 작전 가능성 대두, 이는 이라크 안보 상황에 중대한 영향을 미칠 것으로 평가됨.",
       "reportSubBullets": [
-        "후티 세력의 봉쇄 해제 결단이 이란 및 지역 안보 상황에 영향을 미칠 것으로 기대.",
-        "이라크의 물류 및 안전 환경이 변화할 가능성을 배제할 수 없음."
+        "트럼프 대통령의 발언 예정, 이란 및 후티 반군의 전개에 대한 국제사회의 관심이 집중됨."
       ],
       "reportImplication": "",
       "actors": [
-        "美",
+        "미국",
         "이란",
-        "후티"
+        "후티 반군"
       ],
-      "location": "이라크, 바브 알-만다브",
+      "location": "이라크",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-7iyLY0FbGsWmzFiELUKATvMj",
@@ -3306,7 +3926,7 @@
       "importanceScore": 72,
       "reportUsefulness": "include",
       "weeklyReportReason": "정치권 동향 관련 주요 발언",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 64,
       "reportBullet": "7.17, 총리, 이라크를 대신해 중요한 정치 사항을 공개 발표.",
@@ -3371,7 +3991,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "중동 지역의 안전 상황 변화 및 외교적 긴장 관계",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 69,
       "reportBullet": "7.17, 아랍에미리트, 이란의 이라크 쿠르드 지역 공격을 강력하게 반발하고 지역 안전 위협을 지적.",
@@ -3403,7 +4023,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 내치안 및 외교적 연대 반영",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 83,
       "reportBullet": "2026.07.17, 아랍에미리트, 이란의 이라크 쿠르드 공격을 규탄하며 이라크 연대 강화를 표명.",
@@ -3524,8 +4144,8 @@
     {
       "id": "rss-SXttbGdPEQk8uHfnNyHA--1R",
       "title": "تصاعد أعمدة الدخان بعد قصف إيراني على إقليم كردستان العراق - MSN",
-      "titleKo": "이란의 이라크 북부 쿠르드 지역 공습으로 연기 상승",
-      "summaryKo": "이란군이 이라크 북부 쿠르드스탄 지역을 공습하여 큰 연기 기둥이 발생하고 있다. 해당 지역은 이란과의 군사적 긴장이 고조되고 있는 곳으로, 이번 사건은 지역 안전에 영향을 미칠 가능성이 크다.",
+      "titleKo": "이라크 쿠르드 지역에 대한 이란 공습 발생",
+      "summaryKo": "이란이 이라크 쿠르드 지역을 공습하면서 연기가 치솟고 있다. 이로 인해 지역의 치안 상황이 악화될 우려가 제기된다.",
       "source": "MSN",
       "publishedAt": "2026-07-17T14:46:25.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8gNBVV95cUxNZEc3YTlXM2JFWE4tdlpYSktSNjF6XzdUc1VMT0dteXFfeFpwREk0N0twWVB6eHE1UDlncjA2MldZU2ZjUTNrMzhwN05IX2pDMExacDFZblppWDhDc3BuVDhNcThobnN2TnBUcVEwMzJuR3ZDWmlyZURUTlhYMWlMQVNldFdRWDV3LXNoVG5NMFVKbFVjUHM1aE8ydzdrVVMtLU1GU3lyckY0cEhpclQ5NDAyRFNvR0luQjhfcEE0QkN1R3padkZZeFk3dlVkRXIwanktRDU2dmtpa2FMMWYycm92ZURRMVJlZjdQOXVkUHRITnNoUm9lSGRmZWV2MHdOT2J0ZndFQWxOSlJaTDFWek5adVdiOTlwMUxycTdSNDYxLXp5LVFadjA2T2swYzVLZmhfVkFRdW92MHFQenZwaEhDOHNHcEowc2xUN25pOXpaeldpSmc3UmJLX196amc3QUhrTDAtRUt3VG5SWHc3WEZnVC1rY253dkRCWVdyeUtmYVhaVHRYTXVJaGNuaEY4dE55MXk1VnU1Z0hZX2k0WWNVWUxLTWExWUlCY3NZcDlmSWhTNzVhWXNZLVB0QWlNOU9yXzRRNnZKd1piYW10eXc0WGhiaDQ4bDQ2bWJldGU4LWFXbWRHZ2ljdERjUUxKZ2c?oc=5",
@@ -3535,30 +4155,24 @@
       "sourceType": "google-news-rss",
       "category1": "international",
       "category2": "politics_security",
-      "category3": "regional",
+      "category3": "terror_security",
       "importanceScore": 78,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 내외의 안보 상황 관련 중요한 사건으로 평가됨.",
-      "aiCacheHit": true,
+      "weeklyReportReason": "중동 치안 및 테러 관련 주요 사건 발생",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 62,
-      "reportBullet": "7.17., 이란군의 이라크 북부 쿠르드 지역 공습에 따른 대규모 연기 기둥 발생 및 지역 안보 긴장 고조",
-      "reportSubBullets": [
-        "쿠르드스탄 지역의 이란과의 군사적 긴장 고조 국면에서 발생한 사건으로, 현장 안전 불안정성 부각",
-        "공습 직후 큰 연기 기둥 관측, 피해 규모와 후속 상황의 가시성 제한"
-      ],
+      "reportBullet": "7.17, 이란, 이라크 쿠르드 지역에 대한 공습 실시로 지역 내 치안 불안 증가",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
-        "이란군"
+        "이란",
+        "이라크 쿠르드 지역"
       ],
-      "location": "Kurdistan, Iraq",
+      "location": "이라크 쿠르드 지역",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T01:40:06.300Z"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-xz08h75hItEj90LLCeVdtuFG",
@@ -3683,7 +4297,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 내 테러 및 치안 상황 관련 중요한 사건",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 91,
       "reportBullet": "7.17, 이란 반대 정당 사무소가 공격을 받아 9명 사망 및 추가 부상 발생.",
@@ -3719,7 +4333,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "테러 및 치안 상황에 대한 중요한 사건",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 77,
       "reportBullet": "7.17, 이란, 이라크 북부 반군 기지 공습으로 사망자 발생.",
@@ -3787,7 +4401,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "이란의 군사적 대응 경고는 이라크 내 안보 및 외교 관계에 직접적인 영향을 미칠 수 있음.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 89,
       "reportBullet": "7.17, 이란 혁명수비대, 미국 및 지역 국가들에 대해 '강력한 응징'을 경고함.",
@@ -4087,6 +4701,38 @@
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
+      "id": "rss-7N7ETqceyWMRdtp0bfjS4CFF",
+      "title": "الزيدي يدعو شركة كي بي آر الأميركية لاستثمار \"طويل الأمد\" في النفط والتكنولوجيا - شفق نيوز",
+      "titleKo": "Al-Zaidi 총리, KBR에 장기 투자 촉구",
+      "summaryKo": "Al-Zaidi 총리가 미국 KBR에 이라크의 석유 및 기술 분야에서 장기적인 투자를 요청하였다. 이 조치는 이라크의 경제 발전과 안정성을 크게 강화할 것으로 기대된다.",
+      "source": "شفق نيوز",
+      "publishedAt": "2026-07-16T19:36:56.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gRBVV95cUxOM1pUVllJMERnemdmcU9lQ0QxdG9CWXFGSFJxZW8tOW9CMXFSRGNIbnRGX0lDeG9pQkMwY1NyaXZ5eVFKeUd6QTNPLUFBXzlHNTNNUUNEN0Eyekc2eW91UHMwd0txNjBTS0U2T1hvdDM0dkNMUDd2M1lLRDQxVkFESkcwMmZfXy1QMUcxMFJpZXhjeXktbFRHOEl4cXJFSHFPamdIcmtnUWROLV9Ma1FWUHgtY0l3d3ZuMEZ4WTB4d1UzRkJRYm05bkF4WEZIN3hKdnlVbnplWTRaNTZnSmdtRHliX0x0NzVTRG1GRU5HLUd3b0htdnV0TXlmWUVWMGU4dU16X1hWTVBiazJ4TW4tR29NWVBnOG11VllUd3RhOGk5LTlHX05nZ01nRV9DNGwtTjROaE1FNy0tYkRTUUh0eElLdVlJQ2otYUpFOGRGdGM1NWM4bjhhTkwzMjdVcWpKb0Rzbm5USWFDb1ZyLXhXdTJQbHl3SjJfajlna0U0MnpuZDVRdzFGTmNrU1FXcGI0Ym5DZk5WcXFfY2xrQjVSTnN0SGRRcFhRMHpmaUJFS1NROF84TFY0d0pHUlVteG82WGlnbEFmcHVWNUxYTGd5QjljcFRBQjV5YV9pc0dMTG1LNFRTZHRBZTJLUnQxX1pkSU1CYTI1Q1o4QXNscUw4a2Vnb1JxWFQ0czdoV05IRnh0TFFYMjA0SzJqQzYxenlJckNwcWFJTWR2ZXMyejZ5c0pOZ0t4Z0NtcldGMnJnbUF3a1N4MVJaeno5ZDQ2NzdJaFBzVjdoU1BkUTU0cjhidDBwUll4UQ?oc=5",
+      "query": "\"العراق\" \"مشاريع البنى التحتية\"",
+      "description": "الزيدي يدعو شركة كي بي آر الأميركية لاستثمار \"طويل الأمد\" في النفط والتكنولوجيا شفق نيوز",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 76,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크의 에너지 부문 투자 증대 및 경제 안정 세력 강화와 관련된 핵심 국제뉴스",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 88,
+      "reportBullet": "7.16, Al-Zaidi 총리, KBR에 이라크 석유 및 기술 분야 장기 투자 촉구.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "Al-Zaidi 총리, KBR"
+      ],
+      "location": "Iraq",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
+    },
+    {
       "id": "rss-KxCuw48t0IH-qIueWuJU327G",
       "title": "\"شيفرون\" الأميركية توقع غداً مذكرات تفاهم مع العراق للتوسع بقطاع النفط - العربية",
       "titleKo": "美 '쉐브론', 이라크와의 석유 부문 확대를 위한 양해각서 체결 예정",
@@ -4279,7 +4925,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크·비스마야 사업의 안보 및 물류에 영향",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 103,
       "reportBullet": "7.16, 시리아 당국, 이란 하즈볼라 밀범 차단 위해 이라크 국경에서 '품질 높은 무기'를 적발.",
@@ -4368,8 +5014,8 @@
     {
       "id": "rss-ta5ZSV7-i0ca5cl8J_aZRECQ",
       "title": "سوريا: إحباط محاولة تهريب أسلحة وصواريخ عبر الحدود مع العراق - بوابة الشروق",
-      "titleKo": "시리아: 이라크 국경을 통한 무기 및 로켓 밀수 시도 저지",
-      "summaryKo": "시리아에서 이라크 국경을 넘는 무기 및 로켓 밀수 시도가 저지되었다. 이번 사건은 이라크의 안보와 지역의 안정성에 중요한 영향을 미칠 수 있다.",
+      "titleKo": "시리아: 이라크와의 국경에서 무기 밀수 시도 저지",
+      "summaryKo": "시리아에서 이라크와의 국경 근처에서 무기 및 미사일 밀수 시도가 저지되었다. 이번 사건은 이라크의 안전과 보안에 중요한 영향을 미칠 것으로 보인다.",
       "source": "بوابة الشروق",
       "publishedAt": "2026-07-16T08:28:22.000Z",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdEhXWWxqbTkzbmFITWZHS1l5eUliN1lrR0FycmNYM2t3Z1Y5ckJaY2RGZXE1QjdxWHAzRkhNRy1STXZYbmlZRHVyenhvcUlfTVZiQTJ4dzMxSVdXVUM5Z2ZBQnBkM1UwNXZXcFVvdzBOLUxDOVlJaDJYeUdEaFhFcV85YV9ndWs0X0NtR1ZNbWI3a1YzSUpOVmZScTF3bG5JM0lhZjUwaw?oc=5",
@@ -4382,24 +5028,18 @@
       "category3": "terror_security",
       "importanceScore": 76,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크와의 국경 지역에서의 군사적 긴장상태 지속으로 평가됨.",
-      "aiCacheHit": true,
+      "weeklyReportReason": "이라크와의 국경 보안 강화 필요성 발생",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 73,
-      "reportBullet": "7.16, 시리아, 이라크 국경을 통한 무기 및 로켓 밀수 시도가 저지되어 이란-이라크 지역의 안보 위협이 다시 부각됨.",
-      "reportSubBullets": [
-        "본 사건은 이라크의 안보 상황에 직접적인 영향을 미칠 가능성이 있음.",
-        "국경 통제를 강화할 필요성이 대두됨."
-      ],
+      "reportBullet": "7.16, 시리아, 이라크와의 국경에서 무기 및 미사일 밀수 시도를 저지. 이라크의 안전에 중요한 영향을 미칠 것으로 평가.",
+      "reportSubBullets": [],
       "reportImplication": "",
-      "actors": [
-        "시리아",
-        "이라크"
-      ],
+      "actors": [],
       "location": "Syria-Iraq border",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-uhCFFRCX5s_HTLQA7F51Tpvw",
@@ -4419,7 +5059,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 내 테러 관련 제재 조치가 강화됨에 따라 치안 상황이 개선될 가능성이 있음.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 82,
       "reportBullet": "7.16, 이라크 정부, IS 자금지원 및 헤즈볼라 관련 인물에 대한 제재를 발표.",
@@ -4555,7 +5195,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "테러 및 안보 상황 진단을 위한 기초 자료",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 72,
       "reportBullet": "7.15, Baghdad, 미국의 지원으로 '다이쉬' 및 이란의 동맹국들에 대한 재정 압박 시작.",
@@ -4590,7 +5230,7 @@
       "importanceScore": 86,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 내부 정치와 외부의 군사적 영향력이 연결된 사건. PMF와 이란의 연관성 재조명.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 96,
       "reportBullet": "7.15 트럼프, 이라크 침공은 실수라고 발언하며 Al-Zaidi 앞에서 솔레이마니 문제를 다시 거론.",
@@ -4829,7 +5469,7 @@
       "importanceScore": 80,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 신임 총리의 미국 방문과 양국 관계 강화",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 84,
       "reportBullet": "7.14 백악관에서 트럼프 미국 대통령이 이라크 신임 총리 알리 Al-Zaidi 총리를 접견했다.",
@@ -4898,7 +5538,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "중동 지역의 안보 동향과 이란의 정치적 갈등이 이라크에 미칠 영향을 반영하기 위해",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 61,
       "reportBullet": "7.14, 중동 전쟁 희망상인들, 이란-이스라엘 간 전쟁 희망 증가가 지역 안정을 위협.",
@@ -4916,8 +5556,8 @@
     {
       "id": "rss-ZyzHIgoQsSzB2TRzDWhzFsoj",
       "title": "The U.S. Targets Military Sites in Iran as the Revolutionary Guard Announces Attacks on Oil Tankers in the Strait of Hormuz - شبكة يافا الإخبارية",
-      "titleKo": "美, 이란 군사 시설 겨냥 및 이란 혁명수비대, 호르무즈 해협 유조선 공격 발표",
-      "summaryKo": "美, 이란의 군사적 위협에 대응하기 위해 저격 작전을 전개하며, 이란 혁명수비대는 호르무즈 해협에서 유조선에 대한 공격을 발표하였다. 이 상황은 지역 안보와 유가에 중대한 영향을 미칠 가능성이 있다.",
+      "titleKo": "미국, 이란 내 군사 시설 타겟팅 - 혁명수비대, 호르무즈 해협 유조선 공격 발표",
+      "summaryKo": "미국이 이란의 군사 시설을 타겟으로 삼고 있으며, 이란 혁명수비대가 호르무즈 해협에서 유조선에 대한 공격을 발표했다. 이는 미국과 이란의 긴장을 더욱 격화시킬 것으로 예상된다.",
       "source": "شبكة يافا الإخبارية",
       "publishedAt": "2026-07-14T06:45:22.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzbDBuT3pLbGdIbk0zME8wSEl3cVVhWVNoWkw0OXdzNXhzN1dPMjctVTlPb1U1ZEM1ZFJaTmxDY2F3RnpaSW90V2NaT2R1ZkZF?oc=5",
@@ -4930,31 +5570,28 @@
       "category3": "regional",
       "importanceScore": 76,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 핵심 국제정세",
-      "aiCacheHit": true,
+      "weeklyReportReason": "이라크·비스마야 사업의 안보·유가·물류에 직접적인 영향을 미칠 수 있는 국제 정세.",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 143,
-      "reportBullet": "7.14, 美, 이란 군사 시설에 대한 공격으로 지역 안보 상황이 심각해질 가능성 평가.",
-      "reportSubBullets": [
-        "호르무즈 해협의 유조선 공격은 글로벌 원유 공급망에 위협이 될 전망.",
-        "이란의 군사적 긴장이 이라크의 안정성에도 부정적 영향을 미칠 가능성이 있음."
-      ],
+      "reportBullet": "7.14, 미국, 이란 군사 시설을 타겟팅하며 혁명수비대가 유조선 공격을 발표. 양국 관계 긴장 고조.",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
-        "美",
+        "미국",
         "이란",
-        "이란 혁명수비대"
+        "혁명수비대"
       ],
       "location": "호르무즈 해협",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-MFIqFwBqfZJjm8PpFdRxBINT",
       "title": "تعاون أميركي – عراقي – سوري لمكافحة \"داعش\" - annahar.com",
-      "titleKo": "미-이라크-시리아 협력으로 ‘다이시’ 대응",
-      "summaryKo": "미국, 이라크, 시리아가 '다이시'(IS) 대응을 위한 협력을 강화하고 있다. 이번 협력은 지역 안보 강화를 목표로 한다.",
+      "titleKo": "이라크, 미국 및 시리아와 IS 대응 협력",
+      "summaryKo": "이라크가 미국 및 시리아와 협력하여 IS에 대응하기 위한 노력을 강화하고 있다. 이번 협력은 세 나라 간의 안보 협력을 통하여 지역 테러리즘에 대한 공동 대응을 목표로 한다.",
       "source": "annahar.com",
       "publishedAt": "2026-07-14T06:30:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPdkJsaXd1MVVqZG5oUVc3RWhBSW85SHN1XzFNVjI2T0w5RmthS3ctb1JtenpUd2tDTmZtXzhSdWh3WjBSTEtMTzQ4VGowUWV0SnJ4NERTVEZiTWpzcFNVa2lfWWhMZkU2NFVpdWZXUXd1ZEdLcGt0N3Z1TmRtaWxHS0JIbGlYenA2NmJOSmJ2bFlGZ0cwcFVmTHpNRElhMUkyVzVGNHpWRUlsbGRkQ29XYnB4ODNKRWl1TTZSMXRSZFFZcFhHbEJjTmpnbE91S2lIUFdfZlBBX2pjX0t0dndHczR5X2x2OWFMSUlhM29yM0RFd0R5SlpGandiTHZlQlhwSTRncFpIZG5DcjBnQTBvZXZiUm8zTTJiTlB0bktqWXVDX0tJMXJaNWxaRTJXRW5YdFVZUkwzdE9ySVZ0YnhsOFFMWEZPR3RFZzVoZDQ5QlBJQnlWbm1maG5NNlJjYlN4bC02d3JR?oc=5",
@@ -4967,29 +5604,22 @@
       "category3": "terror_security",
       "importanceScore": 78,
       "reportUsefulness": "include",
-      "weeklyReportReason": "테러 및 안보 상황 기여",
-      "aiCacheHit": true,
+      "weeklyReportReason": "테러 및 안보 관련 국제 협력 현황 보고를 위해",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 54,
-      "reportBullet": "7.14, 미국·이라크·시리아, '다이시' 대응을 위한 협력 강화.",
-      "reportSubBullets": [
-        "지역 안보 강화를 목표로 한 3국 공조 구도 부각.",
-        "대테러 협력 범위에 시리아까지 포함된 점이 특징."
-      ],
+      "reportBullet": "7.14, 이라크, 미국 및 시리아가 IS 대응을 위한 협력 체계를 구축.",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
-        "美",
         "이라크",
+        "미국",
         "시리아"
       ],
-      "location": "이란",
+      "location": "Baghdad",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T01:40:20.252Z",
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
@@ -5124,41 +5754,6 @@
         "이란 혁명수비대"
       ],
       "location": "이란",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
-      "id": "rss-4-pXtySgc9myhawp6LS1GZ4U",
-      "title": "رئيس الوزراء العراقي يبدأ زيارة رسمية إلى الولايات المتحدة الأمريكية - بوابة الأهرام",
-      "titleKo": "이라크 총리, 미국 공식 방문 시작",
-      "summaryKo": "이라크 총리가 미국을 공식 방문하기 시작했다. 이번 방문은 양국 간 협력 강화를 목적으로 하고 있으며, 다양한 분야에서의 협상이 이뤄질 예정이다.",
-      "source": "بوابة الأهرام",
-      "publishedAt": "2026-07-13T16:34:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IMnRDcWZhQjlnUXQ5TjBqOG5qV2xUT25sa1FPMC1DZXRxdFpqTVZKUDZxclNsSnZ2bUxyYnRJRUIyc2QxVWpZRDZaTGhhOS1CZVJZSzlR?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
-      "description": "رئيس الوزراء العراقي يبدأ زيارة رسمية إلى الولايات المتحدة الأمريكية بوابة الأهرام",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크와 미국 간의 협력 확대를 위한 중요한 방문이며, 정치적 포지셔닝에 영향을 줄 수 있음.",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 82,
-      "reportBullet": "7.13, 이라크 총리, 미국 방문을 통해 양국 간 협력 강화를 추진.",
-      "reportSubBullets": [
-        "이번 방문으로 이라크와 미국의 경제·안보 관련 협의가 심화될 것으로 기대.",
-        "양국 관계가 보다 전략적으로 재편될 가능성이 있음."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이라크 총리"
-      ],
-      "location": "미국",
       "sourceReliability": "rss-description",
       "selected": false,
       "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
@@ -5311,8 +5906,8 @@
     {
       "id": "rss-wI9AGi1sQE-lCkg0F3aBlZht",
       "title": "Syrian Interior Ministry: Investigations Confirm Damascus Bombing Cell Belonged to ISIS - شبكة يافا الإخبارية",
-      "titleKo": "시리아 내무부: 다마스쿠스 폭탄 테러 셀, IS 소속 확인",
-      "summaryKo": "시리아 내무부의 조사 결과, 다마스쿠스에서 발생한 폭탄 테러 사건에 사용된 셀은 IS와 관련이 있는 것으로 확인되었다. 이는 중동 지역 내 안보 상황과 테러 조직 활동에 대한 경각심을 높인다.",
+      "titleKo": "시리아 내무부: 다마스쿠스 폭탄 테러 셀은 IS 소속으로 확인",
+      "summaryKo": "시리아 내무부는 다마스쿠스에서 발생한 폭탄 테러의 관련 셀이 IS에 속한다는 사실을 확인하였다. 이 사건은 이라크를 포함한 중동 지역의 안보에 영향을 미칠 가능성이 있다.",
       "source": "شبكة يافا الإخبارية",
       "publishedAt": "2026-07-13T11:43:19.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5sMXdzY2tlemRpLTdBa0JDRjlLX1Q1Sm5zbHlTM0VXYkFxRERtSHhlSVVDakg1ZFYxOWhGVHd2eVUzLS00NldIVXdIRlQyWjBn?oc=5",
@@ -5325,24 +5920,21 @@
       "category3": "terror_security",
       "importanceScore": 76,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크·비스마야 사업과 중동의 안보 상황과 관련된 국제 정세를 반영",
-      "aiCacheHit": true,
+      "weeklyReportReason": "중동 지역의 안보 상황 변화 파악에 필요",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 107,
-      "reportBullet": "7.13, 시리아 내무부, 다마스쿠스 폭탄 테러 셀의 IS 소속 확인은 중동 안보에 부정적 영향을 미칠 것으로 평가",
-      "reportSubBullets": [
-        "이 사건은 중동 전역의 테러 위협을 고조시킬 것으로 보인다.",
-        "이라크 내 테러리즘 대응 정책 재검토 필요성이 제기된다."
-      ],
+      "reportBullet": "7.13, 시리아 내무부, 다마스쿠스 폭탄 테러 사건의 IS 소속 확인.",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
-        "IS",
-        "시리아 내무부"
+        "시리아 내무부",
+        "IS"
       ],
-      "location": "Damascus",
+      "location": "다마스쿠스",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
@@ -5417,6 +6009,38 @@
       "reportWritingReasoning": "medium",
       "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
       "reportWritingRefinedAt": "2026-07-21T01:44:18.246Z"
+    },
+    {
+      "id": "rss-4-pXtySgc9myhawp6LS1GZ4U",
+      "title": "رئيس الوزراء العراقي يبدأ زيارة رسمية إلى الولايات المتحدة الأمريكية - بوابة الأهرام",
+      "titleKo": "이라크 총리, 미국 공식 방문 시작",
+      "summaryKo": "이라크 총리가 공식적으로 미국을 방문하기 시작했다. 이는 양국 간 관계 강화를 위한 중요한 기회로 평가된다.",
+      "source": "بوابة الأهرام",
+      "publishedAt": "2026-07-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IMnRDcWZhQjlnUXQ5TjBqOG5qV2xUT25sa1FPMC1DZXRxdFpqTVZKUDZxclNsSnZ2bUxyYnRJRUIyc2QxVWpZRDZaTGhhOS1CZVJZSzlR?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "description": "رئيس الوزراء العراقي يبدأ زيارة رسمية إلى الولايات المتحدة الأمريكية بوابة الأهرام",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "politics_security",
+      "category3": "politics",
+      "importanceScore": 72,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크와 미국 간 관계 및 외교 동향 확인 필요",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 82,
+      "reportBullet": "7.13, 이라크 총리, 미국 방문 시작. 양국 관계 강화 기회로 평가.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크 총리"
+      ],
+      "location": "미국",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss--oGF3-2ye-kdAuooMUDJvrIW",
@@ -5578,7 +6202,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "치안 및 시위 관련 주요 사건.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 63,
       "reportBullet": "2026년 7월 12일, Basra 쿠웨이트 영사관 앞에서 수천 명의 시위대가 모여 격렬한 시위를 벌임.",
@@ -6022,7 +6646,7 @@
       "importanceScore": 90,
       "reportUsefulness": "include",
       "weeklyReportReason": "부패 방지 및 투자 환경 개선을 위한 중대한 조치로 평가됨",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 78,
       "reportBullet": "7.9 이라크에서 NIC 의장 해임, 석유 배급회사 관리자 체포.",
@@ -6103,7 +6727,7 @@
       "importanceScore": 90,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크 투자 환경 변화에 따른 경제적 영향.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 70,
       "reportBullet": "7.9 이라크 의회는 NIC 의장 해임을 결정했다. 부정 의혹을 사유로 제시했다.",
@@ -6414,6 +7038,40 @@
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
+      "id": "rss-f44JKppUXytzIyLYM_wYnSip",
+      "title": "صاروخان يستهدفان شركة صينية تنفذ أكبر مجمع مائي في ميسان - شفق نيوز",
+      "titleKo": "Misan에서 중국 기업을 겨냥한 두 발의 로켓 공격 발생",
+      "summaryKo": "이라크 Misan에서 중국 기업의 대규모 수공업 프로젝트를 겨냥한 로켓 공격이 발생했다. 이번 사건은 해당 프로젝트의 안전 및 치안에 대한 우려를 불러일으키고 있다.",
+      "source": "شفق نيوز",
+      "publishedAt": "2026-07-08T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxPR1ZqWjk0U1AxbkMzRlRFczZBbW5OeG5YY1d0RVB6ZTVMZFhMNnV6Zlp1c0NMOEE5Z1hNNzhPem1iWWEtX2ZMdlFHbWtQUFFMNEctMDhvUllwNmxLZ2ZGbjFHSndCWjhjT2cxWEVJTFczOUVpc3E0clhFSmhjS3liMjJSbHBwOXh1c2Nwd3BNZzdweTZzUVdrdXdwX0FZM3R2N0dwWEtJS1ZxLXFMMmxwbTVwZV8tbElCSTlUVnVIdVhsWW1vNVNqRks4Z3NSTmx6d2g1MUdvdjVlYm5MZ1NUcEphUkFVVnAwNTU1NTg4NXhkWGhrNXlWUkFMMlJpbWRYejVocF8wQU1JQm44S0NyQkIyTmkxVEtUWVlvUS1VeHZjWi1hdFpCUFFHLXMzY3BuX3F1TFV3cnZ4S3dfNU1ETlpPT0hic3Z4amNYOFdvNlZoUW5ZcE5fbXBxUl9rVzNCZXlfUEdxdHlPNERWY1VRNUZWMjBKZnZQQXZiSmlLWUFldk15U0Z5N1d4eTF6T0N4OWt1T2hsaTZQTl9tcHFXVFpqcFBWbUx6N282TnNxd0d0Y3o0WF9qYm15d2VYX3U0c1VWVTZVZjBhd18tUHV1Nw?oc=5",
+      "query": "\"ميسان\" \"صاروخ\"",
+      "description": "صاروخان يستهدفان شركة صينية تنفذ أكبر مجمع مائي في ميسان شفق نيوز",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 78,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "치안 및 테러 사건의 발생으로 본 주간 보고서에 포함",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 65,
+      "reportBullet": "7.8, Misan에서 중국 기업 대규모 수공업 프로젝트를 겨냥한 로켓 공격 발생. 치안 상황 악화 우려.",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "중국 기업"
+      ],
+      "location": "Misan",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1"
+    },
+    {
       "id": "rss-4XYAwTyrLysxOiniadQv1lW4",
       "title": "إيران: استهدفنا قواعد أمريكية في الكويت والبحرين - CNN Arabic",
       "titleKo": "이란, 쿠웨이트와 바레인 내 미국 기지 공격",
@@ -6539,7 +7197,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "이라크의 테러리즘 대응 현황이 중요하기 때문에 포함",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 121,
       "reportBullet": "7.7, 이라크 군, 최근 IS 은신처에 대한 공습 주장으로 영상이 유포되고 있으나 진위는 불확실함.",
@@ -6608,7 +7266,7 @@
       "importanceScore": 72,
       "reportUsefulness": "include",
       "weeklyReportReason": "정치권 내 부패 대처 의지 엄중함 강조",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 106,
       "reportBullet": "7.6, 시아조정기구(SCF), 부정부패 대처를 위한 정부 및 사법조치 지지 재확인.",
@@ -6625,8 +7283,8 @@
     {
       "id": "rss-0UMdcorqfGKXiIwVELrV13mY",
       "title": "بعد عامين من غيابها.. الحكومة العراقية تبدأ إعداد مشروع موازنة 2027 - شفق نيوز",
-      "titleKo": "이라크 정부, 2027년도 예산안 준비 착수",
-      "summaryKo": "이라크 정부가 2년 간의 공백을 깨고 2027년도 예산안 준비를 시작하였다. 이번 예산안은 향후 정부의 정책과 경제 운영에 중요한 영향을 미칠 것으로 예상된다.",
+      "titleKo": "이라크 정부, 2027 회계연도 예산안 준비 시작",
+      "summaryKo": "이라크 정부가 2년 간의 공백을 끝내고 2027 회계연도 예산안 준비를 시작했다. 이번 예산안은 정치적 및 경제적 전망을 고려하여 작성될 예정이다.",
       "source": "شفق نيوز",
       "publishedAt": "2026-07-06T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMijgRBVV95cUxPYi1WaGVlT2VuVTZ1WXlSVHhNNUJLZnRMRkpFWVVEb1g2cEtmUGFuNG1zWEw1QlA0T19nU3pCWEU2aWFNZ0Y4TzhGTkZ5T0tGT21ZRjhjWWs3QnBlbE1uTVVvRjRDVDdURzdaZGZNQU9RZWUzV240YjRUNTBpVTRwMnpWbFpxMzZaZndTcFF1Nm00SV9DMXhfZzBjenRrTzF0djB0Z2VTbjNFa0puUHY2UWJFNVRScVpVUVJWNzhYVFM2S0UycE1qVmFza282M01wbEc5VU8xZE5KLTBSSmFHUHJxLVRvdVA3U0hLWlM4ODRydGRFVDd4U2J2OFYzYzBKcXdGbUVDa2lnNE1WZElVTUMtQldqaVJMYzZnR2Q1VmVxOXdBM2E5NkcyYnNzeUxSTk9iWGVpcjU3M1dTaGxmYTEwQkFxTzFpVXNZd2NwMlllT0NBTm5teFhTUExpNGRvU1ZfYUF3bkdNcnphOVpsNDVPZjVEclRnV0Znc0RPa0dEUmhBdTFNRVgyWUswazIzZHR4d2J0dUpKWGVCbFdHWUpIbkd1NHh4eWdOTThuZVRaNmJBOGRpWEQzdDk2TDJaY2l5bHJTakR5N3RPVkxFdXhqcWVpVzRaQXQtQXJhQkVlZWlmdTQ0akpBY19OSEVqR0JmSXRrblhJZk1LcE1YWUdGRE9Ea2xaekpBNlJB?oc=5",
@@ -6639,15 +7297,12 @@
       "category3": "politics",
       "importanceScore": 72,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 정부의 예산안 준비는 향후 정책 변화와 경제 방향에 중요한 의미를 지님.",
-      "aiCacheHit": true,
+      "weeklyReportReason": "이라크 예산안 준비는 정치적 및 경제적 안정성을 위한 기초 작업으로 평가됨.",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 76,
-      "reportBullet": "이라크 정부, 2027년도 예산안 준비 착수는 향후 정책 및 경제 운영에 중요한 전환점으로 평가.",
-      "reportSubBullets": [
-        "이번 예산안이 정부의 재정적 기초를 강화할 것으로 기대.",
-        "예산안 준비가 정치적 안정성과 국가 재정관리의 필요성을 부각시킬 것으로 전망."
-      ],
+      "reportBullet": "7.06, 이라크 정부, 2027 회계연도 예산안 준비 시작을 발표하였다.",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
         "이라크 정부"
@@ -6655,7 +7310,7 @@
       "location": "Baghdad",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-gjauvhsbvK3H-7L0Y-vVZ2zr",
@@ -6815,7 +7470,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "치안 및 테러 상황 우선 고려",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 71,
       "reportBullet": "7.05, 이라크 군 장교, Kirkuk에서 다이쉬 대원들과의 교전 중 사망.",
@@ -6982,7 +7637,7 @@
       "importanceScore": 72,
       "reportUsefulness": "include",
       "weeklyReportReason": "최근 정치적 이슈가 되고 있는 부패 척결 캠페인 관련",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 95,
       "reportBullet": "7.5, 이라크 정부, 부패 척결 캠페인을 시작하며 정치적 책임 정산 우려가 대두됨.",
@@ -7120,7 +7775,7 @@
       "importanceScore": 78,
       "reportUsefulness": "include",
       "weeklyReportReason": "치안 및 테러 관련 최신 상황 보고",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 71,
       "reportBullet": "2026.07.04, 커르쿠크에서 젊은 농부가 실종되었고 IS와의 연결성이 의심됨.",
@@ -7203,6 +7858,42 @@
       "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
     {
+      "id": "rss-RQvb2a69GrGlr6qHxkgirLnM",
+      "title": "الرئيس العراقي يُحيل \"السوداني\" وأعضاء حكومته إلى التقاعد بمرسوم جمهوري - صحيفة سبق الإلكترونية",
+      "titleKo": "이라크 대통령, \"수다니\" 및 내각 구성원들을 대통령령으로 퇴직 처리",
+      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
+      "source": "صحيفة سبق الإلكترونية",
+      "publishedAt": "2026-07-04T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5JS29LamlmT0t1U3BoT1VJMkFzNUFsNzF2WkNmSGdfMEJtdDhPb0U0eGcxbzdGY0lWLWdfLS1fc0ItUzRHX1g4?oc=5",
+      "query": "\"محمد شياع السوداني\"",
+      "description": "الرئيس العراقي يُحيل \"السوداني\" وأعضاء حكومته إلى التقاعد بمرسوم جمهوري صحيفة سبق الإلكترونية",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "exclude",
+      "importanceScore": 15,
+      "reportUsefulness": "exclude",
+      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 93,
+      "reportBullet": "7.4, 이라크 대통령, Al-Sudani 前 총리 및 내각 구성원들을 대통령령으로 퇴직 처리함.",
+      "reportSubBullets": [
+        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
+      ],
+      "reportImplication": "",
+      "actors": [],
+      "location": "이라크",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "aiHallucinationFiltered": true,
+      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
+    },
+    {
       "id": "rss-RBxO7g6D-jdT0iqe4r4-8lnu",
       "title": "العراق يؤكد أهمية ضمان حرية الملاحة في مضيق هرمز وتعزيز الحوار لمعالجة الأزمات - الهيئة الوطنية للإعلام",
       "titleKo": "이라크, 호르무즈 해협에서의 항행 자유 보장 중요성 확인",
@@ -7252,7 +7943,7 @@
       "importanceScore": 86,
       "reportUsefulness": "include",
       "weeklyReportReason": "부패 척결 의지와 관련된 주요 발언",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 81,
       "reportBullet": "07.03 Al-Sadr, 이라크 부패 연루자 체포 캠페인 지속 희망 표명.",
@@ -7349,8 +8040,8 @@
     {
       "id": "rss-oMeufpTnwP0X-c0VmLsR-Sq-",
       "title": "العراق يؤكد أهمية ضمان حرية الملاحة في مضيق هرمز وتعزيز الحوار لمعالجة الأزمات الإقليمية - بوابة الأهرام",
-      "titleKo": "이라크, 호르무즈 해협의 항행 자유 보장과 지역 위기 해결을 위한 대화의 중요성 강조",
-      "summaryKo": "이라크는 호르무즈 해협에서의 항행 자유 보장이 중요하다고 여기에 대한 대화 필요성을 부각하였다. 이는 지역적 위기 해결을 위한 적극적인 노력이 필요함을 의미한다.",
+      "titleKo": "이라크, 호르무즈 해협 항해 자유 보장 및 지역 위기 해결을 위한 대화 촉구",
+      "summaryKo": "이라크는 호르무즈 해협에서 항해 자유 보장의 중요성을 강조하면서 지역 위기 해결을 위한 대화의 필요성을 언급하였다. 이는 이란과의 관계 및 지역 안보와 밀접한 관련이 있다.",
       "source": "بوابة الأهرام",
       "publishedAt": "2026-07-03T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJWm50SzRTRGlva004ME91VF9lWGY1T0pMX1dzTWlsbmFVNVB4eGw2TFB4TUFWNWNXTFF4Mm9DZGRjanliaW5OS3NMZngySnlFNWhLa2xn?oc=5",
@@ -7361,25 +8052,20 @@
       "category1": "international",
       "category2": "politics_security",
       "category3": "regional",
-      "importanceScore": 3,
+      "importanceScore": 76,
       "reportUsefulness": "include",
-      "weeklyReportReason": "국제 해양 안전 및 지역 안보 관련 논의 강화 차원",
+      "weeklyReportReason": "지역 안보와 경제에 밀접하게 연결된 이슈로, 주요 이해관계자와의 외교 대화 동향을 반영할 필요가 있다.",
       "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 102,
-      "reportBullet": "이라크, 호르무즈 해협 항행 자유 보장 중요성을 평가하며 대화 촉구",
-      "reportSubBullets": [
-        "지역 위기 해결을 위한 이라크의 외교적 노력이 부각됨",
-        "호르무즈 해협의 안전 확보가 지역 안정에 긍정적 영향을 미칠 것으로 전망"
-      ],
+      "reportBullet": "7.03, 이라크, 호르무즈 해협 항해 자유 보장을 강조하며 지역 위기 해결을 위한 대화의 필요성을 촉구.",
+      "reportSubBullets": [],
       "reportImplication": "",
-      "actors": [
-        "이라크 정부"
-      ],
+      "actors": [],
       "location": "호르무즈 해협",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-RXfxundnra0rMBj4GwJ7Wa8P",
@@ -7490,6 +8176,40 @@
       "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
     },
     {
+      "id": "rss-cCqWy4thyC2l5wylietq9SHA",
+      "title": "رئيس وزراء العراق يؤكد مواصلة مكافحة الفساد وحصر السلاح بيد الدولة - اليوم السابع",
+      "titleKo": "이라크 총리, 부패 척결 및 무기 국가 집중 강행",
+      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-07-02T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi9ANBVV95cUxQTXFyS2Q4bTZTeXJ6U1JucHJHcVgyQkh3b3FNODVKOVViNkVGSTNLNFhLUUMzTjJCeUo3Zlo2RUdMaHdSWFI0YTZ2QU0wa2ZrX1JGMVdiUk1kalJwb2NEUzJhZGh3OHE4V3haa0ktX09ONFJ5R25YQnJJSE1GSnRxa3o3cVluY1hSZ2RXVGRwWm9KZERUQWJ0alVOeloyQVVkVm0wYUZRZHE3Y1FkZEdhaDZJR25lOHNVUjhJYjRNU29WdHgtdjVnRkY0blcxQWFJWTNzQ0duWDVKUU9PZ2M0dWVtU1JaUnZRWndjR3RlcTJmTGVXU2xRU0xManhSeFUzUXpaT3JhczlTV2Qta2FBeWtQQllPRlB2Mlo0bDJVMmU1elV0V2xXaFJRVjVHMTlrSXVaMUlLSHYyS1VsTUVGZ1M1RFBmWWpvQ3NxMHY2SWtVZ2ZCNWtTU2NvdTViY1pwZmREbXU5NHByYzMtc1JackFlVXF2M3YzaGNfT2FMN0p4Q2l3WklKQ1huVHVKRHpvV1NDNzhyOVVSMnBqb2k4Zk1mbW44SmcxTHpReWxLc0w5YnJKYWgtaDh3Wm91NV9YUUczT2NLNVVJZ3YyVC1wOE5Dak8xZ25uVkNnd0dYNXpJWjhNT2RtS01STVRqV0IwOGczRNIB7wNBVV95cUxNbkNPTTlUWEQ4Zmh6cFBob1BlSkFiZ1JjSXhOaXY4MV80Ym9VMF9QN191N1k0dHRXYlB2ZnZwU0FBOGZFaHZLUUF5OGQyZkRrLVc1Wm4tV3g5SjlfVkZDd1J6RnRmQ01TNHJwa0FrRnZDRUtGQjVPWGc3OUhMQ0FJSFYwd0tTa3NKTl8tLVM2YWJTM2g4MmVQWnpDM094eG9kYTdPNFhKa1E0TmZzaE10TlJ6RjNNQlJQYzJmVzRYcmVPd1ZWZVZPbUlFY1c3R3lhMVpYbGdhRlRzMi1aRVdTTFUtWFJObGtnMlZ5NmJpQ2N0S2tYa1BWOFppUTNIc05FVTBVQjQ0WDNhbXdGWmRGbVFBdlpsSkxId09ZM3RTZENTSEpKQW9KQUlBeDNtNHVDTGJFNS1xbzBET2gxZ3A4allUb250SjJ5bVEwTlBwcjNZY0F6YzdpS1JmbkJLSzV1OUVqTVlmbVAxREZSSUxhUGF6cHdvU1loM0MwOFVHYldYMlppV2ctZWJhTEZMRk1aZFd2TXd3UFBQUV9jMnBVc2lESlh5NWJnRXNvY29Ddm1TdF9HczJKaEg3RWQyQzRqWnFibk0weXFBOHp1UU1LZ2lmQlNFSldXVHp3TUJnUVFSZklRQWpFS0l0c1Q0OEU?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "description": "رئيس وزراء العراق يؤكد مواصلة مكافحة الفساد وحصر السلاح بيد الدولة اليوم السابع",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "exclude",
+      "importanceScore": 15,
+      "reportUsefulness": "exclude",
+      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 79,
+      "reportBullet": "7.2, 이라크 총리, 무기 집중과 부패 척결 의지를 재강조하며 정치권 강화 의지를 확인함.",
+      "reportSubBullets": [
+        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
+      ],
+      "reportImplication": "",
+      "actors": [],
+      "location": "Baghdad",
+      "sourceReliability": "rss-description",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
+      "aiHallucinationFiltered": true,
+      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
+    },
+    {
       "id": "rss-RyRh-VE9QgLhPkuqID_WFItl",
       "title": "الزيدي يفتح أكبر معركة ضد الفساد… هل يبدأ الاقتصاد العراقي رحلة التعافي؟ - مركز الروابط للدراسات الاستراتيجية والسياسية",
       "titleKo": "Al-Zaidi 총리, 부패 척결을 위한 대규모 전투 시작",
@@ -7562,8 +8282,8 @@
     {
       "id": "rss-abPs4HDp26nn6V1kqCq9G-vO",
       "title": "محافظ البنك المركزي يَزور رئيس مجلس النواب ويؤكدان على تعزيز الاستقرار المالي والإصلاح المصرفي - البنك المركزي العراقي",
-      "titleKo": "이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재, 의장과 회동하여 금융 안정화 및 은행 개혁 강조",
-      "summaryKo": "이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재가 이라크 의회의장과의 회동에서 금융 안정성과 은행 시스템 개혁의 중요성을 확인하였다. 이를 통해 재정적 지속 가능성을 높이는 방안이 모색되고 있다.",
+      "titleKo": "이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재, 의장과 회동하여 금융 안정화 및 은행 개혁 강조",
+      "summaryKo": "이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재가 이라크 의회의장과의 회동에서 금융 안정성과 은행 시스템 개혁의 중요성을 확인하였다. 이를 통해 재정적 지속 가능성을 높이는 방안이 모색되고 있다.",
       "source": "البنك المركزي العراقي",
       "publishedAt": "2026-07-01T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9LS1ZuVE5hTTQ1X21HSk5xUUJQUWF0b1RtQjJ6NXF4dXIxVzVrNFFEX2tLdWwwd2RvbjJ1UWc4TUdpZDg?oc=5",
@@ -7580,14 +8300,14 @@
       "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 116,
-      "reportBullet": "7.1, 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재, 의장과의 회동을 통해 금융 안정성 및 은행 개혁 필요성을 강조.",
+      "reportBullet": "7.1, 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재, 의장과의 회동을 통해 금융 안정성 및 은행 개혁 필요성을 강조.",
       "reportSubBullets": [
         "금융 안정화를 위한 구체적 정책 추진이 기대되는 상황.",
         "재정적 지속 가능성을 높이는 방향으로의 정책 변화가 예상됨."
       ],
       "reportImplication": "",
       "actors": [
-        "이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재",
+        "이라크 이라크 이라크 이라크 이라크 이라크 이라크 이라크 중앙은행 총재",
         "이라크 의회의장"
       ],
       "location": "Baghdad",
@@ -7596,40 +8316,6 @@
       "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
-    },
-    {
-      "id": "rss-zD3cgI0_xCItL5dZc5zSVqJf",
-      "title": "رئيس وزراء العراق يؤكد حرص الحكومة على تعزيز العلاقات مع دول الخليج - بوابة الأهرام",
-      "titleKo": "이라크 총리, 걸프 국가와의 관계 강화 의지 표명",
-      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
-      "source": "بوابة الأهرام",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBQVEp2QkgzR2JHcnB5YnVJeWNLOGE5MkIxeVB0aGZESWVvSzBnSkc4LTBSMHNlVDFaZnRxd3VyMWZfbmlWT05XRnJ1S2V0ZFRmVExfWEVB?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
-      "description": "رئيس وزراء العراق يؤكد حرص الحكومة على تعزيز العلاقات مع دول الخليج بوابة الأهرام",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "exclude",
-      "importanceScore": 15,
-      "reportUsefulness": "exclude",
-      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 81,
-      "reportBullet": "7.1, 이라크 총리, 걸프 국가와의 관계 강화 방침을 천명함.",
-      "reportSubBullets": [
-        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
-      ],
-      "reportImplication": "",
-      "actors": [],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "aiHallucinationFiltered": true,
-      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
     },
     {
       "id": "rss-MbprS3xu7eWk_PuNBuEwQ5tq",
@@ -7862,7 +8548,7 @@
       "importanceScore": 72,
       "reportUsefulness": "include",
       "weeklyReportReason": "정치권 동향 및 부패 척결 관련",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 69,
       "reportBullet": "6.29, 이라크 정부, 부패 연루 의원 및 고위 관계자 체포 작전을 실시하였다.",
@@ -7894,7 +8580,7 @@
       "importanceScore": 72,
       "reportUsefulness": "include",
       "weeklyReportReason": "부패 척결과 정치적 책임 이행에 대한 관심",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 71,
       "reportBullet": "6.29, 이라크 정부, 47명의 부패 혐의자 체포를 통해 부패 척결 의지를 재확인함.",
@@ -7913,15 +8599,15 @@
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
-      "id": "rss-Fozoy3eLs5DvAmvMGCyZI8-w",
-      "title": "ائتلاف السوداني يحذر من \"حملات تشويه\" بعد اعتقالات المنطقة الخضراء - الترا العراق",
-      "titleKo": "Al-Sudani 前 총리 연합, 그린 존에서의 체포 후 '희망 전략' 경고",
+      "id": "rss-c6amRkKSvzfo6LTriLU62AX3",
+      "title": "نوري المالكي: نبارك حملة \"الفجر\" لملاحقة الفاسدين.. امضوا حتى النهاية - الترا العراق",
+      "titleKo": "Nuri Nouri Al-Maliki 前 총리: 부패 세력 추적 캠페인 'Fajr' 지지",
       "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
       "source": "الترا العراق",
-      "publishedAt": "2026-06-28T15:57:07.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijwVBVV95cUxPekdxd3IwVlF4QXpVcTNNQm9rclVFSUR3WjRIRldIRENGOG1fRG4zSlRCYk52NkJmc0VvMjlnZXBEMlpaX2NaSVhmMEk5THRlZjU3aGhYOUpINGRxSGVDc21LTzhiODZfaDltTHFBa0hwNGhWX00teV9YcFA0UUt2VVFMN0o0SjRXQVY2OTVoVzc0WkdzUkx2N3R3ZlZDdlJRRHlLYUx3Ujh4RHRmc1dVRUxuNVR1STh6a2hrU0FENlJvRDdyMGJsYVBQdlVlSTdFR2lGQ3ZxbE9kclhqS0x4OTBsS3BSTzRSYVNnVWJ6Zm5PY1A1Z0JwUmIteThjeUFQaFZoOWJpekRwdlBYRjdwZk5oY3hQVXhaSmFWU1ZNdWpqLVgtOU9nOEVJeXZYWlQtREVKTWpXVkcySHpyNS1qZTVmT1dMZHhNdHRXaTVTd3BrUm9vS0NqQTM0X0NWajlDYWlEb05Db2VtWE9TdFMycjd0OUJYclp4ejFZMTR2dGhEcGxSWmFxaXRTZVBvNnBsWnctOV9RQjdranp6cmR2Zi1VUVNIM280Vnd5Q3BLb1dMclNaeHp5YUFsVVAwVGtMa3N4Q2JESk10T29BZUVBUnZJZFJQWi1fc2czYk1QVlotSVFSZlpCWTFTb1YxdzRmNkJ3RklseEptdi01ZWVjeExEdG5hVm1mSGhkd2wtakhOeVBIaG5tcnEtbU5IWlVGblprLTl4WFVOTElUT3JRRE91MVR6ZWdwNEtEQS1GVUJ6VjBjVnlLeUpianBfbDNMU3RfQWl4MFRhcUZlTkdGUTZfcDk2T0Q5QTh1TWx4b2h0T2ktbW9lMWh0Tm9DbVpyRUdxTmdoWW1wX3BBRFBB?oc=5",
-      "query": "\"محمد شياع السوداني\"",
-      "description": "ائتلاف السوداني يحذر من \"حملات تشويه\" بعد اعتقالات المنطقة الخضراء الترا العراق",
+      "publishedAt": "2026-06-28T15:08:05.000Z",
+      "url": "https://news.google.com/rss/articles/CBMijwVBVV95cUxQYkcwdjZIMEdkdFg5Q0NmSlNRQ3R6X2xGYkRqTXV0Q0ZlNUF0U2d1cGh2MzRqc2U1M25ReUZiNlFQOElmcl9kbU1pWWM5dEJNRzd4LTY3TVA5eXU4TzRXWVdHa0hVSGdYUDdzX05wM3NjVjRfcE9Ydkw5aXZWY3Rob3lmR2wxdkI0VnRzVEktQWR6VnR3QWVuUU1NT29FZmtZWVloQkFKb3I1eGdqcjExY3E4TzlFRkhyQ1ZQTDBfNUdCM1BldHFBc2pUd0FaZUx6M1dXT2RWdmtYV2RiZlE1Z3dCekFtZC1aNGZYY1poeHN3NWF1d3NRMS1TRkJxbmxHZTQwbXFiSzQ1d1hfWElhTjJLYnpEcjBTNExhY21NYXQ0clNWRGhTV0pWT1lqYlVETmVQeC1FczRlbDNqY1E1dHJxVlhwdXFIRUhGSU9fc1Y5TThScDl0Q2U4S01CZHl5c0xGNE82bWtvMFdXb2k3aTBOd0JFbndSSk1SMnkyVkpzbWwzTFNWWWp1eWhrbHVQbTRESUpBUlgtQzJjaTViV1Z6TTVrMVZDSGh3VlV1VWtXM29aYVQ3d1ZEMFNoUnI2bktvUV9nYnQ2cXl1b05MZ3B6bHZyaTJiekgwbjFWNE9vVnlTRDU0bWpldVVwWWM0WE5FZ0tiVmsxZlhhaE9iTExtS0VDemFjeEk1TjZmcFNIZHZWS1ZNVUhrQkRpVjItWVNOYmEzX1BCTnlmaURZMGlFaUgxNjk3dGVVQzAya1dPTm5zSHFTN2FDR3kyMWZkZDVfcEdJSWt1ZjlBV3pCeFItMS1VUm8ydVB1OGZWcThtbUNaLU1Ed1lFeVp5dVpPdC1aUUNCem1jUXAtZ2cw?oc=5",
+      "query": "\"نوري المالكي\"",
+      "description": "نوري المالكي: نبارك حملة \"الفجر\" لملاحقة الفاسدين.. امضوا حتى النهاية الترا العراق",
       "collectionMethod": "google-news-rss",
       "sourceType": "google-news-rss",
       "category1": "domestic",
@@ -7932,8 +8618,8 @@
       "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
       "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 79,
-      "reportBullet": "6.28, Al-Sudani 前 총리 연합, 그린 존에서의 체포 사건과 관련해 정부의 모략 캠페인 경고.",
+      "sourceEvidenceChars": 82,
+      "reportBullet": "6.28, Nuri Nouri Al-Maliki 前 총리, 부패 세력 추적 캠페인 'Fajr'를 지지하며 끝까지 밀고 나가야 한다고 발표.",
       "reportSubBullets": [
         "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
       ],
@@ -7951,8 +8637,8 @@
     {
       "id": "rss-hwg1J3fib04yDi39kzvc9pQ2",
       "title": "بعد حملة الاعتقالات.. هيئة النزاهة العراقية تصدر أول تعليق رسمي - البيان",
-      "titleKo": "이라크 연방연방연방연방연방청렴위원회, 첫 공식 논평 발표",
-      "summaryKo": "이라크 연방연방연방연방연방청렴위원회가 최근 벌어진 대규모 체포 이후 첫 공식 논평을 발표하였다. 이 발표는 내각 구성과 의회 표결 등 현 정치적 상황과 관련된 논의에 중요한 의미를 지닌다.",
+      "titleKo": "이라크 연방청렴위원회, 첫 공식 논평 발표",
+      "summaryKo": "이라크 연방청렴위원회가 최근의 대규모 체포 작전 후 첫 공식 논평을 발표하였다. 이는 부패 척결 의지를 다짐하는 내용이 포함되어 있으며, 정치적 보호를 받지 않겠다는 방침을 강조하였다.",
       "source": "البيان",
       "publishedAt": "2026-06-28T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ZZ1M1X3ZMT1RYX0p2SU0zNDlmeElxVW1RWDhHMm1yaWxSa1Q0akwyeUxzdWJBT0JIZmdCZmVzczA0TTRFRWl3RkhGcGNYcmlTZmZvRUNuTzZ2OFl3WVFvLUx30gFnQVVfeXFMT1hSaU5DNTBBOEhvRU0yaVdLbUN4eml3aTlzUVdmZFdvMnZIbWxaY2Fpb2NLU0JOVnR5WFItNHZhb3paMVY0cTUwSm1aRzhUMWUxLTA3S1NpYXBfV050cTJYUktOM09VQQ?oc=5",
@@ -7965,27 +8651,24 @@
       "category3": "politics",
       "importanceScore": 88,
       "reportUsefulness": "include",
-      "weeklyReportReason": "내각 구성과 의회 관련 핵심 정국 상황을 반영",
-      "aiCacheHit": true,
+      "weeklyReportReason": "정치적 분위기 및 연방청렴위원회의 입장 변화 반영",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 70,
-      "reportBullet": "6.28, 이라크 연방연방연방연방연방청렴위원회, 대규모 체포 이후 첫 공식 논평으로 내각 구성·의회 표결 관련 정국 변수 부각",
-      "reportSubBullets": [
-        "최근 체포 국면과 맞물린 첫 공식 입장 표명으로, 관련 정치 논의의 중심성이 확대된 정황",
-        "내각 구성과 의회 표결을 둘러싼 현 정치 상황과의 연계성만 확인"
-      ],
-      "reportImplication": "연방연방연방연방연방청렴위원회의 첫 공식 논평은 내각 구성과 의회 표결 관련 정국 논의에 직접적 영향을 미치는 정치 변수로 작용 가능성.",
+      "reportBullet": "6.28 이라크 연방청렴위원회, 체포 작전 후 첫 공식 논평. 부패 연루자에 대한 정치적 보호 배제 방침 명시.",
+      "reportSubBullets": [],
+      "reportImplication": "",
       "actors": [
-        "이라크 연방연방연방연방연방청렴위원회"
+        "이라크 연방청렴위원회"
       ],
       "location": "Baghdad",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models",
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "reportWritingModel": "gpt-5.4-mini",
       "reportWritingReasoning": "medium",
       "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T01:44:22.660Z",
+      "reportWritingRefinedAt": "2026-07-21T23:05:48.998Z",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
     },
@@ -8075,7 +8758,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "호르무즈 해협의 안정성 및 이라크의 외교 관련 동향으로 평가됨.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 58,
       "reportBullet": "6.28, 이라크, 호르무즈 해협 관리에 외부 개입 반대 입장 발표.",
@@ -8107,7 +8790,7 @@
       "importanceScore": 76,
       "reportUsefulness": "include",
       "weeklyReportReason": "호르무즈 해협 관련 긴장감이 이라크 경제 및 에너지 수송에 미치는 영향을 주목할 필요가 있다.",
-      "aiCacheHit": false,
+      "aiCacheHit": true,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 63,
       "reportBullet": "6.28, 이라크 정부, 외부 개입은 호르무즈 해협 재개방 지연을 초래한다고 경고.",
@@ -8362,8 +9045,8 @@
     {
       "id": "rss-gGj9Kqt7PLhUEHXMS_NMkVsG",
       "title": "اعتقال مسؤولين سياسيين عراقيين بتهم فساد خلال مداهمة ليلية - Euronews.com",
-      "titleKo": "이라크 정치인들, 부패 혐의로 야간 급습해 체포",
-      "summaryKo": "이라크에서 부패 혐의를 받은 정치인들이 야간에 급습하여 체포되었다. 이번 사건은 이라크 정치권 내 부패 문제의 심각성을 드러내고 있다.",
+      "titleKo": "이라크 정치인들, 부패 혐의로 체포",
+      "summaryKo": "이라크에서 정치인들이 부패 혐의로 야간 단속 중에 체포되었다. 이번 사건은 부패 척결 노력의 일환으로 보인다.",
       "source": "Euronews.com",
       "publishedAt": "2026-06-28T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMlE0RE1tdnRxU2dGTnhoRWliZ05FSXFuOUZFaFhsS2hqc0U3blV5Uko1cWo5M2kzQjQ1eUVQRnIySXI0ODg1Qml3dFMxaVh2cXhwZF9DRFFHdnRWRExTRmE5dGcwYXYwTEp4cHlCajZKWU0zWE9MVldFUy1tYm12Z2dsazlKQndxdFAtTE8zYThPSUttN1dlVWhDWFA4czFjR1QwWm9VN2FJMUk0NFBTQ2cwRV9rUkhv?oc=5",
@@ -8376,24 +9059,21 @@
       "category3": "politics",
       "importanceScore": 72,
       "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 정치권의 부패 전개 사항을 담기 위함",
-      "aiCacheHit": true,
+      "weeklyReportReason": "정치권 부패 문제를 다루며 이라크 정치의 복잡성을 보여줌.",
+      "aiCacheHit": false,
       "sourceEvidenceLevel": "rss-description",
       "sourceEvidenceChars": 71,
-      "reportBullet": "6.28, 이라크 정부, 부패 혐의로 정치인들을 체포하며 정치권 내 부패 문제 해결을 위한 노력을 강화하고 있다.",
-      "reportSubBullets": [
-        "이번 체포 사건은 이라크 정치권의 부패 심각성을 부각시키고 있다.",
-        "부패 문제 해결을 위한 정치적 압박이 증가할 것으로 예상된다."
-      ],
+      "reportBullet": "6.28, 이라크 정부, 정치인들 부패 혐의로 야간 단속 시행 및 체포.",
+      "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
         "이라크 정부",
-        "체포된 정치인들"
+        "정치인들"
       ],
       "location": "Baghdad",
       "sourceReliability": "rss-description",
       "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
+      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
     },
     {
       "id": "rss-NB0ubuefZ0PivuOn342IqQfq",
@@ -8501,705 +9181,6 @@
       "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1"
-    },
-    {
-      "id": "rss-6RSqWnzk7jb6bFrSwUcIl7ED",
-      "title": "بيان مهم من الحرس الثوري بشأن استهداف قواعد أمريكية في الكويت والبحرين - المصري اليوم",
-      "titleKo": "하르크스에 의한 미국 기지 공격 경고",
-      "summaryKo": "이란 혁명수비대는 쿠웨이트와 바레인 내 미국 기지에 대한 공격을 경고하는 공식 성명을 발표했다. 이란의 군사적 긴장이 높아지는 상황에서 지역 안보가 우려된다.",
-      "source": "المصري اليوم",
-      "publishedAt": "2026-06-28T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE02RzZIc2N3SzhMcF84a25wRFFIV2Y5NzM3TXVuUmQtVzB6enBveVBuUDB2NVZ4cWp5ZHZkMGNDUVNmR2xqLXlHcEdRc1ZfOG4xeHRnY1RkUEctcU5fZW530gFjQVVfeXFMUEdkY1lwelNFaG1RQ1dXN0FrVVhybGdyS3dFaDlDWHk0SEJFMS1xVkl2X0lqdHlPOVFBVGhHdWJ1NmZnM3Juc29ZaUoyRWlvSkVsenVFbDkxd1pBS3JGeGs2Q0M0?oc=5",
-      "query": "\"إيران\" \"البحرين\" \"الكويت\" \"قواعد أمريكية\"",
-      "description": "بيان مهم من الحرس الثوري بشأن استهداف قواعد أمريكية في الكويت والبحرين المصري اليوم",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 5,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 및 인근 지역의 군사적 긴장 상황에 대한 국제적 관심 증가.",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 83,
-      "reportBullet": "6.28, 이란 혁명수비대, 쿠웨이트·바레인 내 미국 기지 공격 경고 성명을 발표하여 지역 안보 긴장 부각.",
-      "reportSubBullets": [
-        "미국 기지가 이란의 군사 작전 대상이 될 가능성이 제기되며, 이에 따른 지역 안보 우려가 고조됨.",
-        "하르크스의 경고가 이란과 미국 간의 군사적 긴장을 더욱 심화시킬 것으로 전망."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이란 혁명수비대"
-      ],
-      "location": "쿠웨이트, 바레인",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
-      "id": "rss-5746B1OX2jNTrVnbcW6nXC3D",
-      "title": "رئيس البرلمان العراقي: نرفض الاعتداءات الإيرانية التي تنتهك سيادة الدول العربية والإسلامية - بوابة الشروق",
-      "titleKo": "이라크 의회 의장: 아랍 및 이슬람 국가의 주권을 침해하는 이란의 공격을 거부한다",
-      "summaryKo": "이라크 의회 의장이 이란의 공격이 아랍 및 이슬람 국가의 주권을 위협한다며 이를 강력히 거부한다고 밝혔다. 이 발언은 지역 안보 문제에 대한 의회의 단결된 입장을 반영한다.",
-      "source": "بوابة الشروق",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNa2d1OFVvSWJROUpkN1pQdnlTSGFvRngtYTEyWXRKbXdnZGNsaGtHNUtxTjJiVUZiVW1hSmFlNHNIc0c2R3pTUDVYdTlfOGhuWnczNXp0eGF1R2pUSWNaQVpUTGM5SWRZeWtVTXdoT043TDNJc0phVWhQM2Jsc05BTzhkYnNpbjB6VjlVcWJLQzlJMmJuUWpvOE5Eb3N2MVRCTkRkMFI0NA?oc=5",
-      "query": "\"البرلمان العراقي\"",
-      "description": "رئيس البرلمان العراقي: نرفض الاعتداءات الإيرانية التي تنتهك سيادة الدول العربية والإسلامية بوابة الشروق",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 78,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크의 국익 및 지역 안보와 관련된 정치적 의사를 확인하는 발언",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 103,
-      "reportBullet": "6.27, 이라크 의회 의장, 이란의 공격이 아랍 및 이슬람 국가의 주권을 침해한다며 강력히 반발.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이라크 의회 의장"
-      ],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-rTYy55Wocs20PMFJGbvcDtED",
-      "title": "Unidentified missiles target Kuwait, Bahrain after US strikes - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
-      "titleKo": "미확인 미사일, 미국 공습 후 쿠웨이트 및 바레인 타격",
-      "summaryKo": "미국의 공습 이후 미확인 미사일이 쿠웨이트와 바레인을 겨냥하여 발사됐다. 이번 사건은 미국-이란 간의 긴장 상황 속에서 발생하여 중동 지역의 불안정성을 증폭시킬 우려가 있다.",
-      "source": "شفق نيوز",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcTktX3RMTC13NGtxaldyQXpPT3p0YkZUT21qeGFvYXVmWk44NDh1ZmxqRTRZODhKYVUxbi1TMDlOalZnWklYM2JfcEdNdDhHSlhZSGRCUlRHbGpUVUI2VXdEdTg0Y0NybUh3MXhsaHRQWTBYMjVSbVc2Z3IxTGtFdkFYd1JiQTdIMk9La21PQ3BrT0I3R2dqbnV3?oc=5",
-      "query": "\"Iran\" \"IRGC\" \"Hormuz\" \"missile\"",
-      "description": "Unidentified missiles target Kuwait, Bahrain after US strikes - Shafaq News | Latest breaking news in Iraq and the world شفق نيوز",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 76,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "미국과 이란 간의 갈등이 주변국에 미치는 영향 분석 필요",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 129,
-      "reportBullet": "2026.6.27, 미확인 미사일, 미국의 공습 이후 미사일 발사 사건 발생으로 지역 안보 불안정성 심화 평가.",
-      "reportSubBullets": [
-        "미국과 이란 간의 갈등으로 중동 전체에 걸친 불안정성 증가 예상.",
-        "쿠웨이트와 바레인에 대한 공격은 지역 동맹국의 안보에 부정적 영향을 미칠 것으로 평가."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "미국, 이란, 쿠웨이트, 바레인"
-      ],
-      "location": "쿠웨이트, 바레인",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
-      "id": "rss-vWGYcelD0EvA0vZv98P4pRYN",
-      "title": "العراق.. حملة اعتقالات لسياسيين داخل المنطقة الخضراء بتهمة الفساد - الشرق للأخبار",
-      "titleKo": "이라크, 녹색 구역 내 정치인 부패 혐의 체포 작전",
-      "summaryKo": "이라크에서 부패 혐의로 정치인들에 대한 체포 작전이 진행되었다. 이는 정부의 부패 척결 의지를 보여주는 사건으로 평가된다.",
-      "source": "الشرق للأخبار",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxPNjh1YXNqRnhDTVNpeDFub2hZR1cyeDJBWXczeWdyNjNldVlrajFWYklzZTN3Yi1XMUVIUUJydDVwSTR3V2tVT1hlaXJZX3pIbWNBcUVyMmcxcjVtSEdEbGdSa0RLRGtGTlpVQ0ZRa21XLTNzMjM3RWhydzNOWUVTT0M5S3FFbEZ3Nm1QZzVkWmxFOWhZcGk5VFNMSVJBSGJlZVlacFd1cUg4X0lPMmltSUJiYXo5SXhncjdiZ3RjbzQyS3k5dFk5eDZ2ZS1ZbHJNSlRQbVJudFdrM3RXc3Bra3RpQmd2RG1fbmpuLVBnRHR3bW4tUzVWWWlTckVZQVQ0SnNsWXlQR21IeU5lR0hrUTZibHhWcmJBSnN4MUFsWFA1V2VYa0lMUVd1NVp3WWJ0djFxUEdYWTBpRHMyaERUUUdhdGphSkhZZjA2NTdXWThFV1UwRkFWQy1BRTQ0dGpYQXB2V0V0U0J2YVpSa0dDeGpSUDFqTm1GSUxmQ25MZFBvWWRaUGE0a1pBNA?oc=5",
-      "query": "\"البرلمان العراقي\"",
-      "description": "العراق.. حملة اعتقالات لسياسيين داخل المنطقة الخضراء بتهمة الفساد الشرق للأخبار",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 75,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "정치권의 부패 척결 동향을 반영.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 79,
-      "reportBullet": "6.27, 이라크 정부, 녹색 구역 내 정치인들 대상 부패 혐의 체포 작전 실시.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이라크 정부"
-      ],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-QcplhNQpA-hc0l1acXA43c5I",
-      "title": "رئيس مجلس النواب يشارك في المؤتمر الثامن للبرلمان العربي ورؤساء المجالس والبرلمانات العربية المنعقد في القاهرة - مجلس النواب العراقي",
-      "titleKo": "이라크 의회 의장, 카이로 아랍 의회 회의 참석",
-      "summaryKo": "이라크 의회 의장이 카이로에서 열린 제8회 아랍 의회 및 이라크 의회의장 회의에 참석하였다. 이번 회의는 아랍 국가 간 협력 증진을 목표로 하고 있다.",
-      "source": "مجلس النواب العراقي",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxPUW5XYUUzY0lKV0FCT3lzYzU1MGxBSFZ2azhrb2NXZWwwR05naUhTNTJVTDh6Q0lteHY5RnNiVkkzVWpUZXBxZHBRMnNaZEdreEE2SUV0bXBVdEhFZWVVWFF3OFB4T1FETEhIbUJ2aklmdkgyZS1KNWxIWWlxZXdqaGZ3S2RsTFJJd2RBdUpZN3pFaWptWllWNmJvVEYzb2VSanJZa19QV0tSQWZ2Z0YzTGE5TGp1RV9hMFViODF3ZVdEV252ZHNXX3NBOUlrQU5CNjI3Q3NWMTdHVERScWdUMWQzLW1weUR6azdQWThIS1F3ZW9yTWlxT3A5TjFvWHRPbkt5N2lwa2RmUkFXaWk1c1NTdUtla2x6bUpXcUF1OE1oOWpEX3ppYWdtdHZHQkhYYzRSaGtTLXN6b190djZ3SDhqZ0d4QjVlN29GWGlR?oc=5",
-      "query": "\"العراق\" \"مجلس النواب\"",
-      "description": "رئيس مجلس النواب يشارك في المؤتمر الثامن للبرلمان العربي ورؤساء المجالس والبرلمانات العربية المنعقد في القاهرة مجلس النواب العراقي",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "정치권 동향 변화를 반영하기 위함",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 130,
-      "reportBullet": "6.27, 이라크 의회 의장, 카이로에서 아랍 의회 회의 참석으로 아랍 국가 간 협력 방안 토론.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [],
-      "location": "",
-      "sourceReliability": "일반 언론",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
-    },
-    {
-      "id": "rss-h_C88dnV1ZCpdqoPH4AasG-O",
-      "title": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق - الشرق الأوسط",
-      "titleKo": "이라크 쿠르디스탄 재선 가능성 열다",
-      "summaryKo": "이라크 쿠르디스탄 지역에서 정치적 혼란이 재선의 가능성을 열어주고 있다. 이란 및 주변 지역의 정치적 영향이 계속해서 중요한 변수로 작용할 것으로 보인다.",
-      "source": "الشرق الأوسط",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMisAVBVV95cUxQRFhSSGl0am82WE1sUS1kZnluUE84UjdZeUJzNXgxWFltSUlvVVFXWndKOUZ2TDFUSDJpSGE5LXZINHNmdEFsZmg0Ri0xWjgxd0VwazhUYll5ZFdjRFcxVm1VOXdFbmR1dzRVZEF2S3BRVURwOHM5YnZXOU5mZUN5VURhaGtKb1lRcUFOR3MtaG9XMzVaNGRrRENmRXNvbkExTV9FMzQ3ckE1RTNHVk9ZVm1IeEw5MXVMNjA4T3RvNzREdnJuaUdiZVBUa2FlYzBRUG5aQ0pWVWVKMlkyMW1sdFRRNVVOZzVBOG94LTBESzFSVXY3czduQWdYV1Z3cm1jelVKVDJxX2dVMFVCWGVZTGNYQVVnM0ctS2dJRFprWDZyLWtPeC0wcktoNl96aWFMTUdJZWlNd2hvOHhqTWpYSUltVXI1YzM1ZEhkOUJKUHRfemllMEM0ZXBPNkh4akJ2Zm5RMEZRdzktMW1XbGpsN24wN3FWakRBaEtud0lkblZrdjNjMGQ5VTQ4UU1BTTd0MVhueXk5TllaX01DeHZpNDVqOGJmVm8zcFdTckV0N01leXRKOUFpWDZrWmdGcVRrSHc0Z2JKMkQ5aDVmZ2FKU1JZeDdVY1pJWXNaVlNENHBDQjFLOHdwbEYzSU9yMVZtRjNLdndZRTZjSFBqNWdhVU81ZWVTMFJ5R210SDRkM3MwU2M3RzVScUFUVzJTYzJyYTUxMFdyMmQyWDhkTWZLQWxITlU2cklSd2QyRUJqZVRTNUR6TldhQ0dGR0xvUUdrM3htSEdmcmhOVVdSRDh0eVhZU0ZjMWJ4TkxObjBEb2tLMU05ZFJpVzNnOW03bkk0UXY3YmUwN2xHWWQxYUtwSUlrY1VVTjExVXdVNklCUDhIeF8waVl6TzJ0bzhqY1My?oc=5",
-      "query": "\"العراق\" \"الانتخابات\"",
-      "description": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق الشرق الأوسط",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "정치권 동향 및 향후 선거 관리 이슈 관련 정보 제공",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 73,
-      "reportBullet": "6.27, 이란, 쿠르디스탄 정치적 혼란이 재선을 촉발할 가능성을 보여줌.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "쿠르디스탄 정치권",
-        "이란"
-      ],
-      "location": "쿠르디스탄",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-9hhBXhfHw3lsRRgc0VKs6Cld",
-      "title": "الحرس الثوري يهدد: القواعد الأمريكية في المنطقة ستعيش “جحيمًا” - i24NEWS",
-      "titleKo": "이란 혁명수비대, 지역 내 미국 기지에 대한 위협 경고",
-      "summaryKo": "이란 혁명수비대가 중동 지역의 미국 군 기지들에 대해 심각한 위협을 발언하였다. 이러한 발언은 미-이란 간 긴장을 더욱 고조시키는 것으로 평가된다.",
-      "source": "i24NEWS",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOV3hiRUhXNWRwNmVfTVZiMUpISTRVeGY4REhrVzdKWXNmR0hJV25OajFweFFUaGVIanRIRW84Wl9ZRmc2NGZ6Ykx5dGRJWjVjMDVSajFEQXBOU2dUcTEtRUdfbGp3QmxQelMzR19QNXZXMlBmN0xuZ0RxZ2JiRFNOVG4wbFdoYWdMSlE?oc=5",
-      "query": "\"الحرس الثوري\" \"قواعد أمريكية\"",
-      "description": "الحرس الثوري يهدد: القواعد الأمريكية في المنطقة ستعيش “جحيمًا” i24NEWS",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 5,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "미국 기지에 대한 이란의 위협 발언은 지역 안보에 중대한 영향을 미칠 가능성이 있음",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 70,
-      "reportBullet": "6.27, 이란 혁명수비대, 중동의 미국 기지들은 '지옥'을 경험할 것이라는 경고를 발표함.",
-      "reportSubBullets": [
-        "이란의 발언은 중동 내 군사적 긴장을 고조시키고 외교적 해결의 어려움을 부각시킬 것으로 보임.",
-        "미국의 군사적 입지가 위협받고 있는 상황에서 향후 대응 방안 마련 필요성이 대두됨."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이란 혁명수비대"
-      ],
-      "location": "중동",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
-      "id": "rss-dyPOtlE-W0Z6-khTIe5CFoIG",
-      "title": "وزير الدفاع الإسرائيلي: إذا هاجمت إيران إسرائيل سنرد عليها بكل قوة - ایران اینترنشنال",
-      "titleKo": "이스라엘 국방장관: 이란 공격시 강력하게 대응할 것",
-      "summaryKo": "이스라엘 국방장관이 이란이 이스라엘을 공격할 경우 강력히 대응하겠다고 밝혔다. 이는 중동 지역의 긴장을 더욱 고조시킬 것으로 보인다.",
-      "source": "ایران اینترنشنال",
-      "publishedAt": "2026-06-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ZSWtFZkY3OC1Tc21yaHZMME51cGxUZjV3VkxHZGRzMElacXdUU1hQZmhKeGQ3UW1BdGZreTJmb3VaU0xMbndzSmFqcmdkd0xwOFE?oc=5",
-      "query": "\"العراق\" \"إسرائيل\" \"إيران\"",
-      "description": "وزير الدفاع الإسرائيلي: إذا هاجمت إيران إسرائيل سنرد عليها بكل قوة ایران اینترنشنال",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 76,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 및 비스마야 사업에 미치는 잠재적 영향 고려",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 83,
-      "reportBullet": "6.26, 이스라엘 국방장관, 이란의 공격에 강력 대응하겠다고 언급. 중동 긴장 고조",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이스라엘 국방장관"
-      ],
-      "location": "이스라엘",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-AjswyXagrZG8vDgHqymLJOPG",
-      "title": "زيارة عراقجي إلى بغداد: علاقة الحرس الثوري مع الفصائل العراقية على طاولة البحث - مونت كارلو الدولية",
-      "titleKo": "이라크지 방문: 이란 혁명수비대와 이라크 무장세력 간 관계 논의",
-      "summaryKo": "이라크지 방문 중 이란 혁명수비대와 이라크 무장세력 간의 관계가 주요 논의 주제로 등장하였다. 이 회담은 양국 간의 군사적 협력 및 지역 안보에 대한 새로운 방향성을 제시할 것으로 기대된다.",
-      "source": "مونت كارلو الدولية",
-      "publishedAt": "2026-06-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwAVBVV95cUxPU1FWSWxRTmt4TkpQWXRPc3loUHJsNDY1dWl5a0JpQThIX1BTeFh2dlRaTHUtbjhSSlFJSjBGM2lfOWRwclBJVk1LVFAtU3owQ1FmRE9HZG9Qc054aTJROVdROUVTS0czdE9HMGV2Vl83d29aYUFwMHQxVmhXam1EZzhpc3BfSWlfeThnWDJoZThnRV9KdEVwMGNPXzdZQXNUcGQwc3g2TWlYbVVXb3hsWHMxQUpkN25KeV83RDBVdjl5VGxCZVU2cThTcnVVV0JoZm93OVRnOFhCR3EtVFpzS3FUTV9ZTjdORC1NV1Z6dEgzUFhZaDhsaVhlZnVfVEZuX3VfNk1Kb1N3N0dmc3g1bWNJbVd3S2JuYlNXSEZHbEs0ZkdHbXV3MDdCcUdqdVFWeE1VMFZMSVk2N0d6N0YtUi1qWWJkODlaTkRrVVdTRWt1ZF94NEZrU2lEVms3a2ZIUUhqdGstREZUUHF6T011eS1sSV9iOXRSbndTeE5ya3FOSk9yeDg1ZHducVlVM1EwcHVjdGpuNWFxeW5DQWwwWElQd1lITFhUOWY4U0t1RktURGpUSVZ3WDZTSjd4Sk4yMkd5eFBSOWttVzF3blZBVUpSbThWaWxaNnhJSk90WGpFWUpDMk5LOEJzclJlNm9xWTk0NzVRU2c4cml1NDRxSndFWXNNRlJNZU52czJrSnJBNWZmZGFVWGFBTkFtbWZlMEZTVEZLUGZ5c3FLLWktY215SDB2ZE00UWVKUWVUNVpTZExwY0M0cUJLMXV6OWhIY2c5a3JkdzN4MGdBa3ZqazFIZ29nTHV3WTA4Z1E3WmdGNDF6bEd1SkJRZkxRakNDODJfUW92OHRPWlBGLTVFc1l1ZjJ4Y0V3OXVTNTRIMjBkTlM0UW00YkhtYkdyWkQ3Z01BUWUtQlRRNFRoMlVSYQ?oc=5",
-      "query": "\"الحرس الثوري\" \"العراق\"",
-      "description": "زيارة عراقجي إلى بغداد: علاقة الحرس الثوري مع الفصائل العراقية على طاولة البحث مونت كارلو الدولية",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "regional",
-      "importanceScore": 5,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크와 이란의 군사 관계 강화에 대한 분석 필요",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 97,
-      "reportBullet": "2026.6.26, 이란 혁명수비대, 이란 군사력과 이라크 무장세력 간의 연계를 논의함.",
-      "reportSubBullets": [
-        "이번 회담은 이란의 지역 내 영향력 확대를 의미하며, 이라크 보안 상황에 영향 미칠 것으로 판단됨.",
-        "상호 협력을 통해 양국 간의 군사적 관계가 심화될 가능성이 있음."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이란 혁명수비대",
-        "이라크 무장세력"
-      ],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v7-purpose-fit-models"
-    },
-    {
-      "id": "rss-yPZp46UklO7ddSctUEwjfD1v",
-      "title": "ديالى.. انفجار بمخزن سلاح في أحد مقار الحشد الشعبي - شفق نيوز",
-      "titleKo": "Diyala, 친이란 무장조직 무기고에서 폭발 발생",
-      "summaryKo": "2026년 6월 25일 Diyala에서 친이란 무장조직인 PMF(PMF) 소속 무기고에서 폭발이 발생하였다. 이는 이라크의 치안 상황과 관련하여 중요한 사건으로 평가된다.",
-      "source": "شفق نيوز",
-      "publishedAt": "2026-06-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxNU1RrcVdoalBzVmFjS0ZqVndZRDFCQ084THpCay05SDYxaDJqXzU0aE1OWENqUER2ZmNTQmtVaXNxM2FTSzVqVF96UENidGZwNjhlVmN5MnhhY2FWblBXaVB0VFVOazdfVjVOWHhNYUxEdDQ1NFhZdklkRlU2eXJlU0JqaFdLRk5RWE9LUTJoemdjZWZ3Q0p4ZU5Bd0xXcWljVy11V0l6aHk3QmVLYUR2VVptSTNYdmlPSlZ1Uk91clRXaVFwOFRUbjhveGNXeVo0STdPTGFyeUJfNUpDbHBmbmlNRjFmT0IwcHJFb3Z6UGpSTTdjMmJPTDhiSGtGZ1BfS1VTT3U2RG0xWkRubnJRaXc2ZU1kTmpBZDJxX1NXQTQ2Sm1JbENvS2hscnBSanhiQjE4c1BqT1E3cTZURmNBdUM0cXhmQU9MM0FGb3RNQ2k4Z1l5blVxUkZZWGE1LVNOaEppSFZ5eDRRV2tNc2pveU1iRFJLcW9MT0RZeS1qbzRTdHc5al9yeVZiWUs5ZDY4b1l0bUMtc2NveW9PZkE?oc=5",
-      "query": "\"ديالى\" \"داعش\"",
-      "description": "ديالى.. انفجار بمخزن سلاح في أحد مقار الحشد الشعبي شفق نيوز",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 86,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "친이란 무장조직과 연계된 폭발 사건으로 이라크의 정치 및 치안 불안 우려를 반영함.",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 59,
-      "reportBullet": "6.25 Diyala의 PMF 거점 무기고에서 폭발 발생.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "PMF(PMF)"
-      ],
-      "location": "Diyala",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T07:43:46.736Z"
-    },
-    {
-      "id": "rss-F0UfzXaT3XqUS6xCg265KQk_",
-      "title": "العراق يلوح بخيار الانسحاب من أوبك ما لم يُرفع سقف إنتاجه النفطي - Euronews.com",
-      "titleKo": "이라크, 석유 생산 한도가 상향되지 않으면 OPEC 탈퇴 옵션 검토",
-      "summaryKo": "이라크가 OPEC에서 석유 생산 한도를 증가시키지 않으면 탈퇴를 고려하겠다는 입장을 밝혔다. 이는 이라크의 경제와 에너지 정책에 중요한 영향을 미칠 수 있다.",
-      "source": "Euronews.com",
-      "publishedAt": "2026-06-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOLURWWF9EbElyNUc2NHBJamEzNU5GS1ZxWERud0l5NWdEbTJHZERfLVRXY1Y0SG5SV1h5R2tLLXRGMnpaeTlqaVAxWnQyeU41RVB2REVGcjE4dUV4NGE0SHVlMWFKLWZEamVvWWhLaXBkTk5fck81WENxd0dXVklzWkozWlZiTVZiaWpIWkhaT1dLWnJwNi1SUU04UmNRdVNaMW1ncnd0a0pFSjNhX2VfNDRSdHBQbDFqbjBSaE9GMA?oc=5",
-      "query": "\"Iraq\" \"oil\" \"OPEC\"",
-      "description": "العراق يلوح بخيار الانسحاب من أوبك ما لم يُرفع سقف إنتاجه النفطي Euronews.com",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "economy",
-      "category3": "oil_economy",
-      "importanceScore": 76,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크의 OPEC 탈퇴 가능성이 석유 시장 및 경제에 미칠 영향을 평가해야 한다.",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 77,
-      "reportBullet": "6.25, 이라크 정부, OPEC 탈퇴 검토 발표. 석유 생산 한도가 상향되지 않으면 해당 옵션을 고려할 것이라고 경고함.",
-      "reportSubBullets": [
-        "OPEC 내에서 이라크의 석유 생산 쿼터 문제가 주요 논의 사항으로 떠오름.",
-        "이라크의 석유 정책 변화가 국제 유가에 미치는 영향이 주목됨."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "이라크 정부"
-      ],
-      "location": "이란",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-4hqhZa_bKBMjJrXA5uz_QZSV",
-      "title": "المرجعية الصدرية للجماعات الإسلامية الحاكمة في العراق - Azzaman",
-      "titleKo": "이라크의 집권 이슬람 단체에 대한 Al-Sadr 참조",
-      "summaryKo": "이라크의 집권 이슬람 단체에 대한 Al-Sadr의 입장이 강화되고 있다. 참조가 무장조직 PMF와의 관계에 미치는 영향이 주목된다.",
-      "source": "Azzaman",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNYWNud1VhZ0NreUtTWEtaemltejhzc1pQS0NEenk0V1NPZnpJLURsbW83Nko0TXlnWEtWMG9Lc3ZSS3p6R085bGpFcEVtekVQaExZUEtTM0YtZzZVdDJueVZEOVEwU0xuZW1GWnpJWkU1M0VTLXJFWTA2Nm5HV1dtRVZvWmEyY3ltUnFWamh4LUdoUDU0U1VOY1hYZXRKcFE1dGFhd0Ewb3hpeTdMdkE3S1IzWDR4TFNNbWZXNnM1dG1PeGVQT1IyVURrekR0bHIwZ3h5bVN2eXJTMk9lVkRLSVU0Z3c4eXJGdnk0ZWJ5MHdwMmZIekxaMkw2SzhGdEZZQkVQYURfUlFUSVYwMVBoVGNIWUF3bEVqTF9qVnNqZUdEVkNpaDJ6R0FRM3VfZlhHNFF5VWpVTzVic2NVTkluZjRR?oc=5",
-      "query": "\"التيار الصدري\"",
-      "description": "المرجعية الصدرية للجماعات الإسلامية الحاكمة في العراق Azzaman",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "exclude",
-      "importanceScore": 86,
-      "reportUsefulness": "exclude",
-      "weeklyReportReason": "AI 번역/요약 실패로 보고서 후보에서 제외",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 61,
-      "reportBullet": "06.24 이라크, Al-Sadr المرجعية의 집권 이슬람 단체 관련 입장 강화. PMF(PMF)과의 관계 언급.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "Al-Sadr",
-        "PMF"
-      ],
-      "location": "이라크",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T07:43:56.428Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "translationFailed": true,
-      "untranslatedFiltered": true
-    },
-    {
-      "id": "rss-AwcerLbDdZw8VxZyJyCxr67c",
-      "title": "الجيش الأميركي: تصفية أحد كبار قادة \"داعش\" في غارة بسوريا - الشرق للأخبار",
-      "titleKo": "미군, 시리아에서 \"다이쉬\" 고위 간부 제거",
-      "summaryKo": "미국 군대가 시리아에서 다이쉬의 고위 간부를 제거했다. 해당 작전은 이라크와 중동 지역의 안보 상황에 영향을 미칠 것으로 보인다.",
-      "source": "الشرق للأخبار",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwANBVV95cUxNYlgtcDFTRGtwLXYwRGw3ZnpfSm5GYWhMdlB6ODBEb2FGbVNWZ2l1RF9KNi0tOWc0UWlzemR5MjQ1dlQyaVBodE9jVnBzLTBraVA5NEVhM0U4SkdVanVKWnc1NHRQUEdoejJoMl9qaDVwRWJuWFdFYXdXNm1iV1VxdDh3cndETzhUekV6MmpKN3lNaS1HcHZLVHo0b0xxaGNnWFM0dzVPbWlUcGJEYjlfZmpKeUZLazZYelJnMl9jTC0wTkl2QmZHaDRLYlo4NWUtRk5ZVkY3QU9hYXMxaXM4UXNWLXJJWnFjNHhrem9fQUZsY3FNUXpEZkkxcU9TMUZ5Y01iYWdPb1NyNEdBSHZINEpPcWdLLVlfc1NHa0pNVm84YjROZjQwMnNxVkxKcTJ1NmZZUzZqdXpvS2RBZmZDVGlaS1E4VGlzT2JoZ3FYMDZmcC1yTTRTZWpmUW43bDFPc09pSlNubE80RnZJSmpJMVgwSVFQN0I4T0hJSHBjU0lkMzlHRkJiVHY2bVpKOVhlZEYwSXN3WUJ6Y2d4OTVtam83aENqXzdVZUdPQ0Fpd01lakdxb2xfdkxKRm1EMEda?oc=5",
-      "query": "\"بغداد\" \"داعش\"",
-      "description": "الجيش الأميركي: تصفية أحد كبار قادة \"داعش\" في غارة بسوريا الشرق للأخبار",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "international",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 76,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "중동 안보 동향의 중요한 변화가 이라크 내 상황에 직접적인 영향을 미칠 수 있음.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 71,
-      "reportBullet": "6.24, 미군, 시리아에서 다이쉬 고위 간부를 제거하며 중동 안보 환경 변화 촉발.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "미군"
-      ],
-      "location": "시리아",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-geuIVc--32SF07QDpagv-Lwo",
-      "title": "هل سيتمكن رئيس الوزراء العراقي الجديد أخيراً من كبح جماح الفصائل المسلحة في البلاد؟ - الواجهة - المربد",
-      "titleKo": "이라크 신임 총리가 마침내 무장단체의 폭력을 억제할 수 있을까?",
-      "summaryKo": "이라크 신임 총리가 무장단체의 영향력을 억제할 수 있을지에 대한 우려가 커지고 있다. 정치권과 무장단체 간의 갈등이 지속되고 있으며, 총리의 능력이 시험대에 오를 예정이다.",
-      "source": "الواجهة - المربد",
-      "publishedAt": "2026-06-24T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5zU0F2Nnlzbk4yOWNabG82c1dMX0RCdTBoelJDNldFZ2sxRlNVcV9VWGNJWUVqODZZTnFLcno2d3EtZWlZMnNSdXZMOXdOMEtV?oc=5",
-      "query": "\"مقتدى الصدر\" \"الحشد الشعبي\"",
-      "description": "هل سيتمكن رئيس الوزراء العراقي الجديد أخيراً من كبح جماح الفصائل المسلحة في البلاد؟ الواجهة - المربد",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "정치권 동향에 따른 무장단체 억제 가능성 확인 필요",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 100,
-      "reportBullet": "6.24, 이라크 신임 총리, 무장단체 억제 능력 검증을 앞두고 있음.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이라크 신임 총리",
-        "무장단체"
-      ],
-      "location": "이라크",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-Ax_CNuIOBspjF3z8NxIzj0oJ",
-      "title": "الحشد الشعبي يحبط مخططاً إرهابياً غربي الأنبار - المعلومة",
-      "titleKo": "PMF, 앗Anbar 서부에서 테러 계획 저지",
-      "summaryKo": "PMF(PMF)이 앗Anbar 서부에서 발생하려던 테러 계획을 저지하였다. 해당 사건은 지역의 안전 확보를 위한 중요한 조치로 평가된다.",
-      "source": "المعلومة",
-      "publishedAt": "2026-06-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxPVFFsOF9Pb2NFdHdlWUFfUndNRkpUTnM1NjZOUUpFRklIR3h1Ny1wZkpIY0ZZVVVZQTJJT2xuM2lyb2dPdE0zUEI1QmVud0ItVXVrdTM5Vk9KWUI0bjBXamVPc2JnOHBIVXY2enVTQm95UkpRb0Jka3EzV29GUDNzdXM0cDl6MGI2WkdnMFdqa3lNVHJpUTNDSzhuR1BjeEExOUIxcmdUWGQ3VkN1dFJ1YW9NR1dzVE01cWZPZFRmb3lnR3AwOVBSVjZYemFES0xITXpEM3JxaHZGT2Z0R21meklPQjVlSXJ0SEV2bFVudmJrdjllODh4X25jZC10SXRXV1ZUZFJWeFNoVEg4MmlLTl92SmJOWjhhOVBfOTgtVjlMd0hXQ01WYk1yVGhIWnAtRmY4VTEwZ0pBMHJGVnhZSE5jR05HdDdGNmNsaXk0ekNNUU9qVWtERkQtdmtZSzhLMWhZUVI5a1NkbzBuWmVRZFM4ZnZoeFhWcXVwSnduZWlLUXhVTGRyNm5kNGZpQQ?oc=5",
-      "query": "\"الأنبار\" \"داعش\"",
-      "description": "الحشد الشعبي يحبط مخططاً إرهابياً غربي الأنبار المعلومة",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 86,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "중요한 치안 사건으로 분류됨.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 55,
-      "reportBullet": "6.23 PMF, 앗Anbar 서부에서 테러 계획 저지. 실행 차단.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "PMF(PMF)"
-      ],
-      "location": "앗Anbar",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T07:43:50.862Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
-    },
-    {
-      "id": "rss-cnbqEIVggWoyarl4mcOhSJmw",
-      "title": "بين مكافحة الفساد وضغوط المرحلة... كيف قاد الزيدي عاصفة تغييرات إدارية في العراق؟ - ANF | Articles",
-      "titleKo": "부패 척결과 행정 변화, Al-Zaidi 총리의 이라크 개혁",
-      "summaryKo": "Al-Zaidi 총리가 이끄는 행정 개혁 노력이 부패 방지와 정권 안정화에 주력하고 있다. 이 과정에서 여러 부처의 인사가 이루어지고 있으며, 새로운 이니셔티브가 추진되고 있다.",
-      "source": "ANF | Articles",
-      "publishedAt": "2026-06-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQLUR0TXBCVkVJbzQyTEFwUG9hYzRiMGxmeU5oTDk2WmJ0R0xFWGp3d0tkbUpkZVlEVnF0Z3h2UVU4WG5HZDljRlRaOVA4X092Y25oX1RNR1hwckJKZWtPMmdVNThndGZhanFsLXBiWWdPUEZNb1Q2Y1hiMGtWdW5QZzRBWF9HLWxmVnF0R1pTMEtfQjdlWmpqV0dmTUFlclh6WVpXaVdiNGpnb3o3WXprVTdHZzFiRFpwRHhjcVRBck9JY25oVWc3WHV1Qjl1blVnRUxpbGViLTRvN2pSdDBEaVlrckR3TEk5bjVrTThucEg2Qk94LU4xVnhwSWJyUnV4VE00NEFZbkJpYnNM?oc=5",
-      "query": "\"حيدر مكية\"",
-      "description": "بين مكافحة الفساد وضغوط المرحلة... كيف قاد الزيدي عاصفة تغييرات إدارية في العراق؟ ANF | Articles",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "정치권 내 변화와 이라크 차기 정부의 방향성 제시",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 96,
-      "reportBullet": "6.23, Al-Zaidi 총리, 부패 척결 및 행정 개혁을 통해 이라크 정부의 신뢰 회복을 추진 중.",
-      "reportSubBullets": [
-        "부처 인사를 통한 행정 변화가 진행되고 있음.",
-        "부패 방지와 불만 해소를 위한 이니셔티브가 강화되고 있음."
-      ],
-      "reportImplication": "",
-      "actors": [
-        "Al-Zaidi 총리"
-      ],
-      "location": "Iraq",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-tB53qFWvbZnynW44EANEZTUo",
-      "title": "نزع سلاح الفصائل العراقية: رئيس الحكومة الجديد \"أمام اختبار صعب\"، ما مواقف القوى الشيعية؟ - Arabicpost.net — عربي بوست",
-      "titleKo": "이라크 무장단체 해체: 신임 총리 \"어려운 시험에 직면\"",
-      "summaryKo": "이라크 신임 총리가 무장단체 해체 문제에 직면하여, 시아파 세력의 입장과 반응에 대한 관심이 높아지고 있다. 향후 정책 추진이 어려울 것으로 예상된다.",
-      "source": "Arabicpost.net — عربي بوست",
-      "publishedAt": "2026-06-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQSUJaRG12U3ZCa0p5QnRla1hTVHk4MFk0VktwSmJmdzRPY0VqS29XZ050OGtWQ2tQNFgtMG5IVW9HRVZTSFBVUGoyNTVMN2ZIek5zaEVLczBESVNfeDZ0WnRIQnRJVmlrXzZaOFp4R2tpaUIxNFV0RlFhLWJKcTdWc2p5eDh2VjFLM0xxTFBPVmJlZ0VUclFmSmlDUFlUZVBsRHlmcGRTTklucm5lRTVNTGRjV3FjbEtBZUdfeHdYcDhCWmRiS1hKekFGN3lqRzdBRldRNEstQ2ZkUEV3UlZ2THRZd1NkT25oSllRaE1rZlh6Y0ktM2JmazVvVEdsNlFYRHRKMFJQS25DdjR0eWhtNjlDVmJFeGdPUzE4dUVNTkt4dXk3VTNiUFhoUktod1c0eS1FOWtNaVExVXRHeVJyeGFweS0xT3U1YUxSS19HdmJRc00?oc=5",
-      "query": "\"الحشد الشعبي\" \"نزع السلاح\"",
-      "description": "نزع سلاح الفصائل العراقية: رئيس الحكومة الجديد \"أمام اختبار صعب\"، ما مواقف القوى الشيعية؟ Arabicpost.net — عربي بوست",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 72,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 정치권 내 보안 문제와 관련된 심각한 상황.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 116,
-      "reportBullet": "6.23, 이라크 신임 총리, 무장단체 해체 계획에 어려움을 겪고 있으며, 시아파 세력의 반응이 주목받고 있음.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "신임 총리",
-        "시아파 세력"
-      ],
-      "location": "이라크",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity"
-    },
-    {
-      "id": "rss-y03mCy9VHuDsIeOYJwKIcB-P",
-      "title": "الدنبوس: الإطار التنسيقي \"تفاهم\" على الوزارات الشاغرة.. والسوداني لن يتولى أي منصب - الترا العراق",
-      "titleKo": "SCF, 공석 장관직에 대한 '합의' … Al-Sudani 前 총리 임명 안 함",
-      "summaryKo": "AI 요약 결과에 원문에 없는 핵심 인물·기관이 포함되어 보고서 후보에서 제외.",
-      "source": "الترا العراق",
-      "publishedAt": "2026-06-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi6gVBVV95cUxOMUEzT0thTWVwZVlXNkJyejg3OEJ2cVpIc2cwNUFoY1ctU2ZLc2d5VmNBTTFPQjh3dFl2SHdYMVFYV3dpZlZ6TlBsSmVyLUFnQmRzQzhUQ0JQWC1oS0JlMU9oSWJzRHYtUEZjd3daRkJjQmdfZ1ZzWnBaaW1UZnNWbENyYzhyWXNjN1BTYUtFSDF6aTNfd3BTTkJBSFBmS05HR1dPejNNTE1zYmlxQVZpR2liMG1zeG9UZEx2YjZSQm5FWlN4Sl9EM0ZOOXU0T0ZTUGpFY0pLWTlhcE9zaHdUX2Q3eHUyc3dQQ3g1ckJLVGdSUDdCX0tSZFhIWmV2bTNxTHpsdmxpRDJybWhodk16TW9jMGxtdHNlckNSMjJFU2M4MURHektFWHRkdURkNGkxSFNlT0tWZHVtRGFLRkZLRHdWTGlodGFVVnI4WHB1NmdSa3hOS0lub0FxMGdsZTZySmFjY05GR3d2SWc1bkJ0LXVZa1NVWVBHdHdxOGY3aUpXR2FndnloM3BXNXlRbUw0RDJyRnNFcGlQT1JqWHVqY0NjUE1TVHdJQzQ4QUkzNVMtTnAwdjBqbzRmSW00bkJYQ1JQQ0FXRDU3YVFIYW9TWF9zb05ITG9kTm5DWThmenUxU1NTQTl2dUpmc1hkaS1HLUJjZGFnSGpwamgtckM3NXhmd0RuclNJcU1ZX3BJeEd1Yk9mLV9ZV3Vnc0FyQXJNM2piWHh2VGFJeWJiX0F6cGQxV1VCSHNfNVZtcHpMQ1k2NFFJYzFkMWk2dElBVGp3cjVQVVZaUDN1RHFuUjBvTmpuc1JmdVc0U2oxQWtuVkplNDV6WlNqdzZyZ0VySW5CbC1pclU5MnlQbS1jVDFhaUFyWXZFd08wTHgzLW8yc0JvMmxqNWp0WEduaVk1MTVxTWVycEp1ZHN6TGhhRk1pTkNTYW9fZVFtTVMyeFAycWkzMEdzWGkzekdxSHJQSW9uTTBIczMtMG9fZw?oc=5",
-      "query": "\"العراق\" \"التصويت على الوزراء\"",
-      "description": "الدنبوس: الإطار التنسيقي \"تفاهم\" على الوزارات الشاغرة.. والسوداني لن يتولى أي منصب الترا العراق",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "exclude",
-      "importanceScore": 15,
-      "reportUsefulness": "exclude",
-      "weeklyReportReason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음.",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 95,
-      "reportBullet": "6.23, SCF, 공석 장관직에 대한 합의를 발표하였으나 Al-Sudani 前 총리는 임명 대상에서 제외됨.",
-      "reportSubBullets": [
-        "원문은 지방 행정·서비스 준비 동정이며 Al-Zaidi 총리, 내각 구성, 이라크 의회 관련 내용으로 보기 어려움."
-      ],
-      "reportImplication": "",
-      "actors": [],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "recursiveGlossaryArtifactFixed": true,
-      "recursiveGlossaryArtifactFixedAt": "2026-07-21T07:44:11.496Z",
-      "aiHallucinationFiltered": true,
-      "aiHallucinationReason": "AI introduced Al-Zaidi/PM although source article body did not support it or it appeared only in related/sidebar text."
-    },
-    {
-      "id": "rss-mGtFVI-_-EmaTPwEJzaaews3",
-      "title": "الزيدي يعتزم استكمال تشكيلة الحكومة العراقية قبل زيارة واشنطن - اندبندنت عربية",
-      "titleKo": "Al-Zaidi 총리, 방미 전 이라크 정부 구성 완료 예정",
-      "summaryKo": "Al-Zaidi 총리가 워싱턴 방문 전 이라크 정부 구성을 마무리할 계획임을 밝혔다. 이는 미국과의 관계 강화에 영향을 미칠 것으로 예상된다.",
-      "source": "اندبندنت عربية",
-      "publishedAt": "2026-06-22T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMixgRBVV95cUxNb1NsV3o3aFZMZW1wczFGOElMXzlRd3JTQkE0MXZVaTJOczBpSFNWRFBrdnh5OEs4VGFPSEdTb2JvZkh0NDluNkE0aEpZcDQ4a2pLeC00VVJ3QXNoMHZwRFR2RUgxUkZKSEt6NEdMR2ZYZXFVVTd1dDR6bUNPWlhzYnd1cW1tZkw0WTU0X25QTXRNLXZvc2lIbVpSYko3YmhUMzlZS0tXTjVFOWRRbXFPb1labkNiN3ZkazFQRl80eVk3Ri13Tkw1NEp4R3UxSk1PdnViWmpBZ09rcFhfSFZKQnBrRXJmLUprT0tsMmRlVm8yWVBYc3dnV1dzbm9ET3BtTWhXMF9XQl9wSnl5NTJHc3pjOVNDbzlPQ2dxRzVkT2szWUVHMTdOeFRPVDB0Z1Y2VUl6QjA3UmI2Tl9YQTBGMThkNXpCanRVbEhOMHlrYmlwQnF6RzY2RG5zVk1ZNEkxdWFDX3d2WXo5VUdUMzdDRnQ2Y1JjY0FEUklYSEg2Q2wzV0h5MWwtei1tbTNaZmZKSWlYMlFRYkJfR29VUmpuUVBTbmZhLWVUbm5uSzZvQmRVV213X3plU0FxaGV6RjRCWTNNTmJ1dzYzRE5TVHd5LVJxaDNXYXE2LTl5T1c0OWh6YjJBSVZvdGw3TU1iVkxkakNVaWZqT1FZSU91bHQ1c1lIQmlKRWxZQVlMWk5sSGRsNGFYMVNJT29obV9DOEliUlh3N0dueU5xb1R5TXN0S3FXSmd6T2Z6OXFLT3V2OFlwTHVnZnc?oc=5",
-      "query": "\"رئيس الوزراء\" \"زيارة واشنطن\" \"الكابينة الوزارية\"",
-      "description": "الزيدي يعتزم استكمال تشكيلة الحكومة العراقية قبل زيارة واشنطن اندبندنت عربية",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 88,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 정부 구성 완료 계획은 방미와 직결되며, 후속 정책에 영향을 미칠 수 있음.",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 76,
-      "reportBullet": "6.22 Al-Zaidi 총리, 방미 전 이라크 정부 구성을 완료할 계획 발표.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "Al-Zaidi 총리"
-      ],
-      "location": "Baghdad",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T06:46:53.095Z"
-    },
-    {
-      "id": "rss-3iuoVyY-_GcooKBVXgJ2xHfX",
-      "title": "فيديو | آراس حبيب: الحشد الشعبي لن يحل ويجب حل مشاكل العراق داخلياً - هذا اليوم",
-      "titleKo": "아라스 하비브: PMF 해체 안 해도 된다",
-      "summaryKo": "아라스 하비브는 PMF(PMF)의 해체 필요성을 부정하며, 이라크 문제가 내부적으로 해결되어야 한다고 주장하였다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-06-22T00:39:02.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBWamJoN0ZaS0FtQXd4dzN1Z0pUbi1kSFJoMGI4S0dxRUhEZm5qSlNWbE91ZnN2dWlaMUoyOXZyYkFTRVhrdldxTHFidjV0NjAy0gFKQVVfeXFMT2dBWURDWEt4V0ZabjRibDQ4U1FJVWd0eXU2ZXY2Qmc5STNVWW8zeVhYQWtLdE5aVXdrTERSU0w5TnhaekRDMXcyQ1E?oc=5",
-      "query": "\"الحشد الشعبي\" \"حل\"",
-      "description": "فيديو | آراس حبيب: الحشد الشعبي لن يحل ويجب حل مشاكل العراق داخلياً هذا اليوم",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "politics",
-      "importanceScore": 86,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 내부 정치 동향 관련",
-      "aiCacheHit": true,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 77,
-      "reportBullet": "6.22 아라스 하비브, PMF 해체를 반대하고 이라크 문제의 내부 해결을 촉구.",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "아라스 하비브"
-      ],
-      "location": "이라크",
-      "sourceReliability": "rss-description",
-      "selected": false,
-      "aiSummaryVersion": "weekly-report-v8-evidence-fidelity",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "reportWritingModel": "gpt-5.4-mini",
-      "reportWritingReasoning": "medium",
-      "reportWritingVersion": "weekly-report-writing-v3-cost-optimized",
-      "reportWritingRefinedAt": "2026-07-21T07:43:54.665Z"
     }
   ],
   "debug": {
@@ -9207,7 +9188,7 @@
       {
         "query": "\"بسماية\"",
         "ok": true,
-        "count": 2
+        "count": 3
       },
       {
         "query": "\"بسمايه\"",
@@ -9222,7 +9203,7 @@
       {
         "query": "\"مدينة بسماية\"",
         "ok": true,
-        "count": 0
+        "count": 1
       },
       {
         "query": "\"مدينة بسماية الجديدة\"",
@@ -9257,7 +9238,7 @@
       {
         "query": "\"حيدر مكية\"",
         "ok": true,
-        "count": 10
+        "count": 8
       },
       {
         "query": "\"عادل الياسري\"",
@@ -9302,12 +9283,12 @@
       {
         "query": "\"العراق\" \"مجلس الوزراء\"",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"العراق\" \"رئيس الوزراء\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"محمد شياع السوداني\"",
@@ -9332,12 +9313,12 @@
       {
         "query": "\"الإطار التنسيقي\"",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"نوري المالكي\"",
         "ok": true,
-        "count": 3
+        "count": 4
       },
       {
         "query": "\"مقتدى الصدر\"",
@@ -9347,7 +9328,7 @@
       {
         "query": "\"التيار الصدري\"",
         "ok": true,
-        "count": 4
+        "count": 3
       },
       {
         "query": "\"الحشد الشعبي\" \"السياسة\"",
@@ -9357,17 +9338,17 @@
       {
         "query": "\"النزاهة\" \"العراق\"",
         "ok": true,
-        "count": 12
+        "count": 11
       },
       {
         "query": "\"الهيئة الوطنية للاستثمار\"",
         "ok": true,
-        "count": 8
+        "count": 7
       },
       {
         "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
         "ok": true,
-        "count": 10
+        "count": 9
       },
       {
         "query": "\"العراق\" \"مكافحة الفساد\"",
@@ -9377,7 +9358,7 @@
       {
         "query": "\"الإطار التنسيقي\" \"الحقائب الوزارية\"",
         "ok": true,
-        "count": 5
+        "count": 4
       },
       {
         "query": "\"الإطار التنسيقي\" \"المرشحين للوزارات\"",
@@ -9387,7 +9368,7 @@
       {
         "query": "\"الإطار التنسيقي\" \"الخلافات الداخلية\"",
         "ok": true,
-        "count": 3
+        "count": 2
       },
       {
         "query": "\"الإطار التنسيقي\" \"اكتمال الكابينة\"",
@@ -9397,7 +9378,7 @@
       {
         "query": "\"الإطار التنسيقي\" \"زيارة واشنطن\"",
         "ok": true,
-        "count": 0
+        "count": 3
       },
       {
         "query": "\"رئيس الوزراء\" \"زيارة واشنطن\" \"الكابينة الوزارية\"",
@@ -9422,12 +9403,12 @@
       {
         "query": "\"مجلس النواب\" \"منح الثقة\" \"الوزراء\"",
         "ok": true,
-        "count": 1
+        "count": 0
       },
       {
         "query": "\"مجلس النواب\" \"استئناف جلساته\" \"الوزراء\"",
         "ok": true,
-        "count": 1
+        "count": 2
       },
       {
         "query": "\"مجلس النواب\" \"رئيس الهيئة الوطنية للاستثمار\" \"إعفاء\"",
@@ -9437,7 +9418,7 @@
       {
         "query": "\"مجلس النواب\" \"الهيئة الوطنية للاستثمار\" \"إعفاء\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"رئيس الهيئة الوطنية للاستثمار\" \"هيئة النزاهة\"",
@@ -9452,7 +9433,7 @@
       {
         "query": "\"الهيئة الوطنية للاستثمار\" \"ملفات الفساد\"",
         "ok": true,
-        "count": 3
+        "count": 4
       },
       {
         "query": "\"الحشد الشعبي\" \"حل\"",
@@ -9527,7 +9508,7 @@
       {
         "query": "\"بغداد\" \"داعش\"",
         "ok": true,
-        "count": 10
+        "count": 9
       },
       {
         "query": "\"كركوك\" \"داعش\"",
@@ -9542,7 +9523,7 @@
       {
         "query": "\"العراق\" \"صاروخ\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"العراق\" \"قصف\"",
@@ -9552,12 +9533,12 @@
       {
         "query": "\"بغداد\" \"خطف\"",
         "ok": true,
-        "count": 2
+        "count": 3
       },
       {
         "query": "\"ميسان\" \"صاروخ\"",
         "ok": true,
-        "count": 2
+        "count": 3
       },
       {
         "query": "\"ديالى\" \"داعش\"",
@@ -9572,7 +9553,7 @@
       {
         "query": "\"العراق\" \"الوضع الأمني\"",
         "ok": true,
-        "count": 5
+        "count": 8
       },
       {
         "query": "\"العراق\" \"تظاهرات\"",
@@ -9582,7 +9563,7 @@
       {
         "query": "\"العراق\" \"النفط\"",
         "ok": true,
-        "count": 8
+        "count": 10
       },
       {
         "query": "\"العراق\" \"أوبك\"",
@@ -9592,7 +9573,7 @@
       {
         "query": "\"العراق\" \"الموازنة\"",
         "ok": true,
-        "count": 5
+        "count": 7
       },
       {
         "query": "\"العراق\" \"الكهرباء\"",
@@ -9607,7 +9588,7 @@
       {
         "query": "\"العراق\" \"الاستثمار\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
@@ -9622,7 +9603,7 @@
       {
         "query": "\"العراق\" \"مشاريع البنى التحتية\"",
         "ok": true,
-        "count": 4
+        "count": 6
       },
       {
         "query": "\"العراق\" \"مدن سكنية\"",
@@ -9712,7 +9693,7 @@
       {
         "query": "\"العراق\" \"إيران\" \"الولايات المتحدة\"",
         "ok": true,
-        "count": 8
+        "count": 9
       },
       {
         "query": "\"العراق\" \"إسرائيل\" \"إيران\"",
@@ -9727,7 +9708,7 @@
       {
         "query": "\"العراق\" \"غزة\"",
         "ok": true,
-        "count": 3
+        "count": 5
       },
       {
         "query": "\"العراق\" \"الحوثي\"",
@@ -9737,12 +9718,12 @@
       {
         "query": "\"العراق\" \"القواعد الأمريكية\"",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"الحرس الثوري\" \"العراق\"",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"مضيق هرمز\" \"العراق\"",
@@ -9757,17 +9738,17 @@
       {
         "query": "\"إيران\" \"الحرس الثوري\" \"مضيق هرمز\"",
         "ok": true,
-        "count": 7
+        "count": 6
       },
       {
         "query": "\"الحرس الثوري\" \"قواعد أمريكية\"",
         "ok": true,
-        "count": 1
+        "count": 2
       },
       {
         "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"صواريخ\"",
         "ok": true,
-        "count": 7
+        "count": 6
       },
       {
         "query": "\"إيران\" \"البحرين\" \"الكويت\" \"قواعد أمريكية\"",
@@ -9777,7 +9758,7 @@
       {
         "query": "\"ترامب\" \"إيران\" \"مذكرة تفاهم\"",
         "ok": true,
-        "count": 2
+        "count": 1
       },
       {
         "query": "\"سوريا\" \"قسد\" \"الجيش الوطني السوري\"",
@@ -9857,7 +9838,7 @@
       {
         "query": "\"Iraq\" \"ISIS\"",
         "ok": true,
-        "count": 3
+        "count": 4
       },
       {
         "query": "\"Iraq\" \"rocket attack\"",
@@ -10257,7 +10238,7 @@
           {
             "url": "https://shafaq.com/",
             "type": "html",
-            "count": 4,
+            "count": 3,
             "ok": true
           }
         ]
@@ -10281,7 +10262,7 @@
           {
             "url": "https://www.iraqinews.com/iraq/",
             "type": "html",
-            "count": 4,
+            "count": 3,
             "ok": true
           },
           {
@@ -10292,7 +10273,7 @@
           {
             "url": "https://www.iraqinews.com/features/",
             "type": "html",
-            "count": 3,
+            "count": 2,
             "ok": true
           },
           {
@@ -10408,16 +10389,16 @@
       }
     ],
     "evidence": {
-      "fulltext": 11,
-      "rssDescription": 249,
+      "fulltext": 14,
+      "rssDescription": 246,
       "insufficient": 0,
-      "aiEligible": 145
+      "aiEligible": 128
     },
     "archive": {
-      "previous": 240,
-      "carriedForward": 97
+      "previous": 255,
+      "carriedForward": 104
     },
-    "elapsedSeconds": 149
+    "elapsedSeconds": 113
   },
   "reportWriting": {
     "model": "gpt-5.4-mini",
@@ -10429,22 +10410,22 @@
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-21T07:44:11.435Z",
+    "appliedAt": "2026-07-21T23:06:39.338Z",
     "termCount": 27,
-    "changedCount": 23
+    "changedCount": 16
   },
-  "recursiveGlossaryArtifactFixedCount": 1,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-21T07:44:11.496Z",
+  "recursiveGlossaryArtifactFixedCount": 0,
+  "recursiveGlossaryArtifactFixedAt": "2026-07-21T23:06:39.398Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-21T07:57:25.024Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-21T23:06:39.451Z",
   "untranslatedFilteredCount": 1,
-  "untranslatedFilteredAt": "2026-07-21T07:44:11.598Z",
+  "untranslatedFilteredAt": "2026-07-21T23:06:39.499Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-21T07:44:11.657Z",
-  "aiHallucinationFilteredCount": 3,
-  "aiHallucinationFilteredAt": "2026-07-21T07:44:11.715Z",
+  "datelineLocationCorrectedAt": "2026-07-21T23:06:39.555Z",
+  "aiHallucinationFilteredCount": 5,
+  "aiHallucinationFilteredAt": "2026-07-21T23:06:39.619Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-21T07:44:11.774Z",
+  "irrelevantForeignFilteredAt": "2026-07-21T23:06:39.681Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-21T07:44:11.831Z"
+  "duplicateCollapsedAt": "2026-07-21T23:06:39.740Z"
 }
