@@ -72,8 +72,7 @@ function sourceRecord(article) {
     titleKo: article.titleKo || "",
     publishedAt: article.publishedAt || article.date || "",
     summaryKo: article.summaryKo || "",
-    reportBullet: article.reportBullet || "",
-    evidence: String(article.cleanText || article.fullText || article.description || "").slice(0, 1800)
+    reportBullet: article.reportBullet || ""
   };
 }
 
@@ -157,8 +156,12 @@ async function main() {
       eventTitleKo: representative.titleKo || representative.title || "주요 동향",
       eventSummaryKo: representative.summaryKo || representative.description || "",
       eventArticleCount: group.length,
-      eventSources: sources,
-      eventArticles: group.map(sourceRecord),
+      // Keep only the fields needed by the dashboard and report generator.
+      // Full article text already remains on each raw article; duplicating it
+      // inside every event made data/news.json exceed GitHub's file limit.
+      eventSources: group.length > 1
+        ? sources.map(({ source, url, titleKo, summaryKo }) => ({ source, url, titleKo, summaryKo }))
+        : [],
       eventRepresentativeId: representative.id || ""
     };
     eventMeta.push(meta);
