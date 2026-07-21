@@ -76,6 +76,19 @@ function stableArticleId(prefix = "article", value = "") { return `${prefix}-${c
 function articleText(item = {}) { return [item.title, item.description, item.cleanText, item.fullText, item.titleKo, item.summaryKo].filter(Boolean).join("\n"); }
 function hasAny(text = "", terms = []) { const normalized = stripArabicDiacritics(String(text || "").toLowerCase()); return terms.some((term) => normalized.includes(stripArabicDiacritics(String(term || "").toLowerCase()))); }
 
+function regionalExposureSignals(text = "") {
+  const iran = hasAny(text, ["إيران", "ايران", "الحرس الثوري", "iran", "irgc", "이란", "혁명수비대"]);
+  const israel = hasAny(text, ["إسرائيل", "اسرائيل", "israel", "이스라엘"]);
+  const unitedStates = hasAny(text, ["الولايات المتحدة", "أمريكا", "القواعد الأمريكية", "واشنطن", "united states", "american", "us bases", "washington", "미국", "미군기지"]);
+  const conflictEscalation = hasAny(text, ["حرب", "ضربة", "ضربات", "هجوم", "قصف", "صاروخ", "صواريخ", "طائرة مسيرة", "تصعيد", "رد", "تهديد", "عقوبات", "war", "strike", "attack", "bombing", "missile", "drone", "escalation", "retaliation", "threat", "sanctions", "전쟁", "공습", "공격", "폭격", "미사일", "드론", "확전", "보복", "위협", "제재"]);
+  const energyOrLogistics = hasAny(text, ["مضيق هرمز", "البحر الأحمر", "باب المندب", "النفط", "أسعار النفط", "ناقلات النفط", "الملاحة", "الشحن", "سلسلة التوريد", "إمدادات الطاقة", "hormuz", "red sea", "bab al-mandab", "oil price", "oil export", "oil tanker", "shipping", "navigation", "supply chain", "energy supply", "호르무즈", "홍해", "바브엘만데브", "유가", "원유 수출", "유조선", "해운", "항행", "공급망", "에너지 공급"]);
+  const syria = hasAny(text, ["سوريا", "syri", "시리아"]);
+  const syriaSpillover = syria && hasAny(text, ["الحدود", "داعش", "قسد", "الجيش الوطني السوري", "مخيمات", "هجوم", "اشتباك", "border", "isis", "sdf", "sna", "camp", "attack", "clash", "국경", "ISIS", "SDF", "SNA", "수용소", "공격", "교전"]);
+  const regionalActor = iran || israel || unitedStates || syria || hasAny(text, ["الحوثي", "houthi", "후티"]);
+  const strategic = (iran && (israel || unitedStates) && conflictEscalation) || energyOrLogistics || syriaSpillover;
+  return { regionalActor, strategic };
+}
+
 async function fetchText(url, options = {}) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), options.timeoutMs || FETCH_TIMEOUT_MS);
@@ -119,6 +132,7 @@ function parseRssItems(xml = "", query = "") {
 function scoreCandidate(item = {}) {
   const text = articleText(item);
   const titleAndUrl = `${item.title || ""}\n${item.url || ""}`;
+  const regionalSignals = regionalExposureSignals([item.title, item.titleKo, item.query].filter(Boolean).join("\n"));
   const excluded = [];
   if (/ladbrokes|betting|odds|fixture|score|football|soccer|match|cup|world cup|youtube|tiktok|مباراة|منتخب|كرة|الدوري/i.test(text)) excluded.push("스포츠/베팅/영상성");
   if (/facebook\.com|instagram\.com|x\.com|twitter\.com/i.test(`${item.source || ""}\n${item.url || ""}`)) excluded.push("SNS 출처");
@@ -129,7 +143,7 @@ function scoreCandidate(item = {}) {
   const bismayahDirect = hasAny(text, ["بسماية", "بسمايه", "مشروع بسماية", "مدينة بسماية", "مدينة بسماية الجديدة", "مجمع بسماية", "bismayah", "비스마야"]);
   const bismayahStakeholder = hasAny(text, ["حيدر مكية", "حيدر مكيه", "عادل الياسري", "شركة هانوا", "هانوا", "hanwha"]);
   const bismayahInstitutional = hasAny(text, ["الهيئة الوطنية للاستثمار", "هيئة الاستثمار", "مشروع سكني في العراق", "مدينة سكنية في العراق", "شركة كورية"]);
-  const regionalIraqLink = hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "الولايات المتحدة", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"]);
+  const regionalIraqLink = regionalSignals.strategic;
   if (!iraqContext && !regionalIraqLink && !bismayahDirect && !bismayahStakeholder) return { score: 0, category3: "exclude", reportUsefulness: "exclude", reason: "이라크 맥락 부족" };
 
   if (bismayahDirect) {
@@ -170,13 +184,14 @@ function scoreCandidate(item = {}) {
     category3 = "oil_economy";
     reason = "주거도시 개발·환경/도시계획 기준 후보";
   }
-  if (regionalIraqLink && hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "الولايات المتحدة", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"])) {
-    score = Math.max(score, iraqContext ? 64 : 55); category3 = "regional"; reason = "이라크와 연결 가능한 국제정세 후보";
-  }
-  if (hasAny(text, ["الحرس الثوري", "مضيق هرمز", "قواعد أمريكية", "البحرين", "الكويت", "مذكرة تفاهم", "قسد", "الجيش الوطني السوري", "مخيمات داعش", "حماس", "رهائن", "IRGC", "Hormuz", "US bases", "Bahrain", "Kuwait", "memorandum", "SDF", "SNA", "ISIS camps", "Hamas", "hostages", "혁명수비대", "호르무즈", "미군기지", "바레인", "쿠웨이트", "시리아민주군", "시리아국가군", "가자", "하마스", "인질"])) {
+  if (regionalSignals.strategic) {
     score = Math.max(score, 76);
     category3 = "regional";
-    reason = "美·이스라엘-이란 분쟁 또는 시리아·가자 관련 국제정세 핵심 후보";
+    reason = "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 핵심 국제정세";
+  } else if (iraqContext && regionalSignals.regionalActor && score < 70) {
+    score = Math.max(score, 64);
+    category3 = "regional";
+    reason = "이라크와 직접 연결된 국제정세 참고 후보";
   }
 
   return { score, category3, reportUsefulness: score >= 70 ? "include" : score >= 50 ? "watch" : "exclude", reason };
@@ -419,13 +434,7 @@ function hasWeeklyReportScope(item = {}) {
     "이라크", "바그다드", "비스마야", "한화", "국가투자위원회", "시아조정기구", "인민동원군"
   ]);
 
-  const strategicMiddleEast = hasAny(title, [
-    "إيران", "إسرائيل", "فلسطين", "غزة", "الضفة الغربية", "سوريا", "الحوثي", "البحر الأحمر", "مضيق هرمز",
-    "الحرس الثوري", "القواعد الأمريكية", "لبنان", "حزب الله", "حماس",
-    "iran", "israel", "palestine", "gaza", "west bank", "syria", "houthi", "red sea", "hormuz", "irgc", "us bases",
-    "lebanon", "hezbollah", "hamas",
-    "이란", "이스라엘", "팔레스타인", "가자", "서안", "시리아", "후티", "홍해", "호르무즈", "혁명수비대", "미군기지", "레바논", "헤즈볼라", "하마스"
-  ]);
+  const strategicMiddleEast = regionalExposureSignals(title).strategic;
 
   if (directIraqOrProject || strategicMiddleEast) return true;
 
@@ -444,7 +453,7 @@ function hasWeeklyReportScope(item = {}) {
   ]);
 
   if (foreignLocalPlace && localCrimeOrTerror) return false;
-  return true;
+  return false;
 }
 
 function uniqueRecent(items, limit = MAX_TOTAL) {
@@ -657,6 +666,10 @@ async function main() {
   const previousArticles = await loadPreviousArticles();
   const previousMap = await loadPreviousMap();
   articles = articles.map((item) => reuseFromPrevious(item, previousMap));
+  articles = articles.map((item) => {
+    const baseline = scoreCandidate(item);
+    return { ...item, importanceScore: Math.max(Number(item.importanceScore || 0), Number(baseline.score || 0)) };
+  });
   const cacheHits = articles.filter((x) => x.aiCacheHit).length;
   const toHydrate = articles.filter((x) => !x.aiCacheHit);
   const hydrated = await mapLimit(toHydrate, FULLTEXT_HYDRATION_CONCURRENCY, hydrateSelectedArticle);
