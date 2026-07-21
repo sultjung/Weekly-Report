@@ -22,6 +22,39 @@ function isMalikiAntiCorruptionArticle(article = {}) {
     || (/المالكي|Al-Maliki|말리키|Nouri Al-Maliki/i.test(text) && /فرهود|نهب|فساد|مكافحة الفساد|반부패|부패|약탈/i.test(text) && /الزيدي|Al-Zaidi|알자이디/i.test(text));
 }
 
+
+function isScfUsVisitAntiCorruptionArticle(article = {}) {
+  const text = [article.url, article.title, article.description, article.cleanText, article.fullText].filter(Boolean).join("\n");
+  return /964media\\.com\\/700631/i.test(text)
+    || (/الإطار التنسيقي/.test(text) && /زيارة واشنطن|زيارة.*الولايات المتحدة/.test(text) && /لا حماية.*المتورطين بالفساد|غطاء سياسي.*المتورطين بالفساد/.test(text));
+}
+
+function fixScfUsVisitAntiCorruptionArticle(article = {}) {
+  if (!isScfUsVisitAntiCorruptionArticle(article)) return article;
+  const d = reportDate(article);
+  return {
+    ...article,
+    titleKo: "시아조정기구(SCF), Al-Zaidi 총리 방미 결과 지지 및 부패 연루자 정치적 보호 배제",
+    summaryKo: "시아조정기구(SCF)는 Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 제284차 회의를 열고 최근 방미 결과와 국익 관련 합의 이행에 대한 지지를 표명. 사법기관이 부패 연루를 확인한 인물은 소속과 관계없이 정치적 보호를 제공하지 않겠다고 강조하고 정부·사법기관·청렴위원회의 부패 수사를 지원하기로 함.",
+    category1: "domestic",
+    category2: "politics_security",
+    category3: "politics",
+    importanceScore: Math.max(Number(article.importanceScore || 0), 88),
+    reportUsefulness: "include",
+    weeklyReportReason: "Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도부가 방미 결과 및 국익 관련 합의를 논의한 사실과, 소속 불문 부패 연루자에 대한 정치적 보호 배제 방침을 함께 확인할 수 있는 핵심 정치 기사.",
+    reportBullet: "${d}, 시아조정기구(SCF), Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리 방미 결과 및 국익 관련 합의 이행 지지 표명",
+    reportSubBullets: [
+      "Al-Zaidi 총리와 SCF 지도자들이 제284차 회의에서 방미 결과를 공동 논의하고 정부의 합의 이행을 지원하기로 함.",
+      "사법기관이 부패 연루를 확인한 인물은 소속과 관계없이 정치적 보호를 제공하지 않겠다고 강조."
+    ],
+    reportImplication: "Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도부가 방미 결과를 공동 논의해 시아 정치권 지도부의 정부 합의 지지 확인.",
+    actors: ["시아조정기구(SCF)", "Al-Zaidi 총리", "Al-Maliki 前 총리", "이라크 사법기관", "청렴위원회"],
+    location: "Baghdad",
+    knownPoliticalSummaryFixed: true,
+    knownPoliticalSummaryReason: "SCF US-visit and anti-corruption article requires deterministic institution and evidence correction."
+  };
+}
+
 function fixArticle(article = {}) {
   if (!isMalikiAntiCorruptionArticle(article)) return article;
   const d = reportDate(article);
