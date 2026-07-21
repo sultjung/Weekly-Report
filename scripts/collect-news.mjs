@@ -116,8 +116,10 @@ function parseRssItems(xml = "", query = "") {
 
 function scoreCandidate(item = {}) {
   const text = articleText(item);
+  const titleAndUrl = `${item.title || ""}\n${item.url || ""}`;
   const excluded = [];
   if (/ladbrokes|betting|odds|fixture|score|football|soccer|match|cup|world cup|youtube|tiktok|مباراة|منتخب|كرة|الدوري/i.test(text)) excluded.push("스포츠/베팅/영상성");
+  if (/alsumaria\.tv\/watch\/|\b(?:MIC|Live Talk)\b|الممثلة|الممثل|الفنان|أبراج|ترفيه|منوعات|استديو|الحلقة\s*[٠-٩0-9]+/i.test(titleAndUrl)) excluded.push("연예/방송 프로그램");
   if (excluded.length) return { score: -999, category3: "exclude", reportUsefulness: "exclude", reason: excluded.join(", ") };
 
   const iraqContext = hasAny(text, ["العراق", "عراقي", "بغداد", "البصرة", "كركوك", "ديالى", "ميسان", "الأنبار", "نينوى", "iraq", "iraqi", "baghdad", "basra", "kirkuk", "erbil", "이라크", "바그다드"]);
@@ -651,8 +653,8 @@ async function main() {
   const cacheHits = articles.filter((x) => x.aiCacheHit).length;
   const toHydrate = articles.filter((x) => !x.aiCacheHit);
   const hydrated = await mapLimit(toHydrate, FULLTEXT_HYDRATION_CONCURRENCY, hydrateSelectedArticle);
-  const hydratedMap = new Map(hydrated.map((item) => [canonicalKey(item), item]));
-  articles = articles.map((item) => item.aiCacheHit ? item : (hydratedMap.get(canonicalKey(item)) || item));
+  let hydratedIndex = 0;
+  articles = articles.map((item) => item.aiCacheHit ? item : (hydrated[hydratedIndex++] || item));
 
   const eligible = articles
     .filter((item) => !item.aiCacheHit && canSummarizeFromEvidence(item))
@@ -660,10 +662,10 @@ async function main() {
     .slice(0, MAX_NEW_AI_ITEMS);
 
   const enriched = OPENAI_API_KEY ? await mapLimit(eligible, AI_CONCURRENCY, enrichArticle) : eligible;
-  const enrichedMap = new Map(enriched.map((item) => [canonicalKey(item), item]));
+  const enrichedMap = new Map(eligible.map((item, index) => [item, enriched[index]]));
   articles = articles.map((item) => {
     if (item.aiCacheHit) return item;
-    const result = enrichedMap.get(canonicalKey(item));
+    const result = enrichedMap.get(item);
     if (result) return result;
     return {
       ...item,
