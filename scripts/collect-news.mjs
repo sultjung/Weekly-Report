@@ -17,7 +17,7 @@ const INDEX_FILE = path.join(DATA_DIR, "news-index.json");
 const SEARCH_KEYWORDS_FILE = path.join(DATA_DIR, "search-keywords.json");
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-5.4-mini";
+const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-5.6-luna";
 const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 30);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 12);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 260);
