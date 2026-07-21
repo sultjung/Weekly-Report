@@ -132,7 +132,7 @@ function parseRssItems(xml = "", query = "") {
 function scoreCandidate(item = {}) {
   const text = articleText(item);
   const titleAndUrl = `${item.title || ""}\n${item.url || ""}`;
-  const regionalSignals = regionalExposureSignals([item.title, item.titleKo, item.query].filter(Boolean).join("\n"));
+  const regionalSignals = regionalExposureSignals([item.title, item.titleKo].filter(Boolean).join("\n"));
   const excluded = [];
   if (/ladbrokes|betting|odds|fixture|score|football|soccer|match|cup|world cup|youtube|tiktok|مباراة|منتخب|كرة|الدوري/i.test(text)) excluded.push("스포츠/베팅/영상성");
   if (/facebook\.com|instagram\.com|x\.com|twitter\.com/i.test(`${item.source || ""}\n${item.url || ""}`)) excluded.push("SNS 출처");
@@ -419,7 +419,7 @@ function isExcludedNinaArticle(item = {}) {
 }
 
 function weeklyReportTitleText(item = {}) {
-  return [item.title, item.titleKo, item.query].filter(Boolean).join("\n");
+  return [item.title, item.titleKo].filter(Boolean).join("\n");
 }
 
 function hasWeeklyReportScope(item = {}) {
