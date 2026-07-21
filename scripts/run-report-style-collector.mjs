@@ -99,13 +99,6 @@ function hardenReportScope(source) {
     "pre-AI exclusion"
   );
 
-  source = replaceExactlyOnce(
-    source,
-    `  }).filter((item) => item.reportUsefulness !== "exclude" || item.category3 === "exclude");`,
-    `  }).filter((item) => item.reportUsefulness !== "exclude" && item.category3 !== "exclude");`,
-    "final exclusion"
-  );
-
   return source;
 }
 
