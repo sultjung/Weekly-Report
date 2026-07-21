@@ -4,8 +4,11 @@
  *
  * Why:
  * - The same article can enter through a direct source crawl, Google News RSS, and cached/redirected URLs.
- * - Known corrections can make duplicate source entries look identical on the site.
  * - For weekly reporting, duplicated cards are worse than missing a duplicate source.
+ *
+ * Different URLs are intentionally kept even when they mention the same political actors.
+ * Source pages often contain related-story/sidebar text, so keyword-only story signatures
+ * can incorrectly collapse many unrelated articles into one.
  */
 
 import fs from "node:fs/promises";
@@ -45,41 +48,11 @@ function canonicalUrl(value = "") {
   }
 }
 
-function fullArticleText(article = {}) {
-  return [
-    article.source,
-    article.titleKo,
-    article.title,
-    article.summaryKo,
-    article.description,
-    article.weeklyReportReason,
-    article.reportBullet,
-    ...(Array.isArray(article.reportSubBullets) ? article.reportSubBullets : []),
-    article.reportImplication,
-    ...(Array.isArray(article.actors) ? article.actors : []),
-    article.location
-  ].filter(Boolean).join(" ");
-}
-
-function isMalikiAntiCorruptionDuplicate(article = {}) {
-  const x = normalizeText(fullArticleText(article));
-  return /(?:nouri\s*)?al[- ]?maliki|말리키|المالكي/.test(x)
-    && /al[- ]?zaidi|자이디|الزيدي|반부패/.test(x)
-    && /al[- ]?sudani|前\s*정부|전\s*정부|السوداني|약탈|فرهود|부패|فساد/.test(x)
-    && /반부패|corruption|مكافحة الفساد|부패|فساد/.test(x);
-}
-
 function articleSignature(article = {}) {
   const source = normalizeText(article.source || "");
   const title = normalizeText(article.titleKo || article.title || "");
   const bullet = normalizeText(article.reportBullet || "");
   const summary = normalizeText(article.summaryKo || article.description || "");
-
-  // Content-level known duplicates must be checked before URL.
-  // The same story may be collected with different URLs/dates/caches but should appear once.
-  if (isMalikiAntiCorruptionDuplicate(article)) {
-    return "known:maliki-anti-corruption-interview";
-  }
 
   const url = canonicalUrl(article.url || article.link || "");
   if (url) return `url:${url}`;
@@ -109,15 +82,8 @@ function qualityScore(article = {}) {
 }
 
 function chooseBetter(a, b) {
-  const aSig = articleSignature(a);
-  const bSig = articleSignature(b);
   const aTime = publishedTime(a);
   const bTime = publishedTime(b);
-
-  // For known duplicate stories, earliest published date is usually the true source date.
-  if (aSig === "known:maliki-anti-corruption-interview" && bSig === aSig && aTime !== bTime) {
-    return bTime < aTime ? b : a;
-  }
 
   const aScore = qualityScore(a);
   const bScore = qualityScore(b);
