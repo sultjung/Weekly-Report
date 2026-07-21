@@ -62,7 +62,9 @@ jobs:
           FULLTEXT_HYDRATION_CONCURRENCY: "4"
           MIN_FULLTEXT_CHARS_FOR_AI: "500"
           MIN_RSS_DESCRIPTION_CHARS_FOR_AI: "300"
+          MIN_GOOGLE_RSS_EVIDENCE_CHARS: "40"
           HIGH_PRIORITY_RSS_FALLBACK_SCORE: "90"
+          GOOGLE_RSS_FALLBACK_SCORE: "70"
           MAX_NEW_AI_ITEMS: "260"
         run: |
           for attempt in 1 2 3; do
