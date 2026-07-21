@@ -34,6 +34,22 @@ function parseJsonObject(text = "") {
 function evidence(item = {}) {
   return String(item.cleanText || item.fullText || item.description || item.summaryKo || "").slice(0, 14000);
 }
+function articleKey(item = {}) {
+  const rawUrl = String(item.url || "").trim();
+  if (rawUrl) {
+    try {
+      const url = new URL(rawUrl);
+      url.hash = "";
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^(utm_|fbclid|gclid|mc_)/i.test(key)) url.searchParams.delete(key);
+      }
+      return `url:${url.toString().replace(/\/$/, "")}`;
+    } catch {
+      return `url:${rawUrl.replace(/[?#].*$/, "").replace(/\/$/, "")}`;
+    }
+  }
+  return `id:${String(item.id || "")}`;
+}
 function eligible(item = {}) {
   if (item.reportUsefulness !== "include" || item.category3 === "exclude") return false;
   if (Number(item.importanceScore || 0) < MIN_SCORE) return false;
@@ -125,8 +141,8 @@ async function main() {
     return;
   }
   const refined = await mapLimit(candidates, CONCURRENCY, callFlagship);
-  const byKey = new Map(refined.map((item) => [item.id || item.url, item]));
-  payload.articles = (payload.articles || []).map((item) => byKey.get(item.id || item.url) || item);
+  const byKey = new Map(refined.map((item) => [articleKey(item), item]));
+  payload.articles = (payload.articles || []).map((item) => byKey.get(articleKey(item)) || item);
   payload.reportWriting = {
     model: REPORT_MODEL,
     reasoning: REASONING_EFFORT,
