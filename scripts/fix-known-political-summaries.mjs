@@ -18,7 +18,7 @@ function reportDate(article = {}) {
 
 function isMalikiAntiCorruptionArticle(article = {}) {
   const text = [article.url, article.title, article.titleKo, article.summaryKo, article.description, article.cleanText, article.fullText].filter(Boolean).join("\n");
-  return /964media\.com\/696180/i.test(text)
+  return /964media\.com\/700631/i.test(text)
     || (/المالكي|Al-Maliki|말리키|Nouri Al-Maliki/i.test(text) && /فرهود|نهب|فساد|مكافحة الفساد|반부패|부패|약탈/i.test(text) && /الزيدي|Al-Zaidi|알자이디/i.test(text));
 }
 
