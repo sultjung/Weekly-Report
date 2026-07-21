@@ -25,7 +25,7 @@ function isMalikiAntiCorruptionArticle(article = {}) {
 
 function isScfUsVisitAntiCorruptionArticle(article = {}) {
   const text = [article.url, article.title, article.description, article.cleanText, article.fullText].filter(Boolean).join("\n");
-  return /964media\\.com\\/700631/i.test(text)
+  return /964media[.]com[/]700631/i.test(text)
     || (/الإطار التنسيقي/.test(text) && /زيارة واشنطن|زيارة.*الولايات المتحدة/.test(text) && /لا حماية.*المتورطين بالفساد|غطاء سياسي.*المتورطين بالفساد/.test(text));
 }
 
