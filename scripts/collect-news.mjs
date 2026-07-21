@@ -721,6 +721,13 @@ async function main() {
   const hydrated = await mapLimit(toHydrate, FULLTEXT_HYDRATION_CONCURRENCY, hydrateSelectedArticle);
   let hydratedIndex = 0;
   articles = articles.map((item) => item.aiCacheHit ? item : (hydrated[hydratedIndex++] || item));
+  articles = articles.map((item) => {
+    const baseline = scoreCandidate(item);
+    if (baseline.reportUsefulness === "exclude" || baseline.category3 === "exclude") {
+      return { ...item, importanceScore: Math.min(Number(item.importanceScore || 0), 0), category3: "exclude", reportUsefulness: "exclude", selected: false, weeklyReportReason: baseline.reason };
+    }
+    return item;
+  });
 
   const eligible = articles
     .filter((item) => !item.aiCacheHit && canSummarizeFromEvidence(item))
