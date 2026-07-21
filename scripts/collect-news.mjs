@@ -121,6 +121,7 @@ function scoreCandidate(item = {}) {
   const titleAndUrl = `${item.title || ""}\n${item.url || ""}`;
   const excluded = [];
   if (/ladbrokes|betting|odds|fixture|score|football|soccer|match|cup|world cup|youtube|tiktok|مباراة|منتخب|كرة|الدوري/i.test(text)) excluded.push("스포츠/베팅/영상성");
+  if (/facebook\.com|instagram\.com|x\.com|twitter\.com/i.test(`${item.source || ""}\n${item.url || ""}`)) excluded.push("SNS 출처");
   if (/alsumaria\.tv\/watch\/|\b(?:MIC|Live Talk)\b|الممثلة|الممثل|الفنان|أبراج|ترفيه|منوعات|استديو|الحلقة\s*[٠-٩0-9]+/i.test(titleAndUrl)) excluded.push("연예/방송 프로그램");
   if (excluded.length) return { score: -999, category3: "exclude", reportUsefulness: "exclude", reason: excluded.join(", ") };
 
@@ -630,7 +631,7 @@ async function enrichArticle(item) {
       category1: parsed.category1 === "international" || category3 === "regional" ? "international" : "domestic",
       category2: ["politics_security", "economy", "international"].includes(parsed.category2) ? parsed.category2 : (category3 === "oil_economy" ? "economy" : category3 === "regional" ? "international" : "politics_security"),
       category3,
-      importanceScore: clampScore(parsed.importanceScore, item.importanceScore || 50),
+      importanceScore: Math.max(Number(item.importanceScore || 0), clampScore(parsed.importanceScore, item.importanceScore || 50)),
       reportUsefulness: ["include", "watch", "exclude"].includes(parsed.reportUsefulness) ? parsed.reportUsefulness : item.reportUsefulness,
       weeklyReportReason: clean(parsed.weeklyReportReason || item.weeklyReportReason),
       reportBullet: clean(parsed.reportBullet),
