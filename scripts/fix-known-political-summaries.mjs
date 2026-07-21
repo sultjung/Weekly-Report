@@ -42,7 +42,7 @@ function fixScfUsVisitAntiCorruptionArticle(article = {}) {
     importanceScore: Math.max(Number(article.importanceScore || 0), 88),
     reportUsefulness: "include",
     weeklyReportReason: "Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도부가 방미 결과 및 국익 관련 합의를 논의한 사실과, 소속 불문 부패 연루자에 대한 정치적 보호 배제 방침을 함께 확인할 수 있는 핵심 정치 기사.",
-    reportBullet: "${d}, 시아조정기구(SCF), Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리 방미 결과 및 국익 관련 합의 이행 지지 표명",
+    reportBullet: `${d}, 시아조정기구(SCF), Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리 방미 결과 및 국익 관련 합의 이행 지지 표명`,
     reportSubBullets: [
       "Al-Zaidi 총리와 SCF 지도자들이 제284차 회의에서 방미 결과를 공동 논의하고 정부의 합의 이행을 지원하기로 함.",
       "사법기관이 부패 연루를 확인한 인물은 소속과 관계없이 정치적 보호를 제공하지 않겠다고 강조."
