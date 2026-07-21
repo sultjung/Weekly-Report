@@ -175,6 +175,8 @@ async function editSelectedForFinalReport(selected = []) {
     "reportSubBullets는 '* ' 없이 0~2개이며 reportBullet을 반복하지 않는다. 구체적 근거가 있는 사실이 없으면 빈 배열로 둔다.",
     "reportImplication은 구체적인 정치·안보·경제·BNCP 사업 영향이 근거로 확인될 때만 1문장, 아니면 빈 문자열로 둔다.",
     "기관·인명 표기는 NIC, 청렴위원회, 시아조정기구(SCF), 인민동원군(PMF), 혁명수비대(IRGC), Al-Zaidi 총리, Al-Sudani 前 총리, Al-Maliki 前 총리 기준을 따른다.",
+    "미군 철수·IS 재출현·안보공백·민병대 무장 유지·정부 무장해제 목표가 함께 제시된 기사에서는 철수일과 무장해제 목표일을 반드시 포함하고, 안보공백이 민병대의 무기 보유 명분이 되어 Al-Zaidi 총리 내각의 무장해제 추진을 방해할 수 있다는 기사 핵심을 유지하라. 원문에 없는 날짜나 해석은 추가하지 말라.",
+    "중요 안보 기사의 reportBullet은 필요하면 2~3문장으로 작성해 사건·정책 충돌·구체적 목표일을 모두 전달하라.",
     "groupImpacts는 그룹/건설에 미치는 구체적 영향만 0~2문장으로 작성하고 일반론이면 빈 배열로 둔다.",
     "반드시 JSON 객체만 출력하고 다음 구조를 정확히 사용하라:",
     '{"sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"groupImpacts":[]}',
