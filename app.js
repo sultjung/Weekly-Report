@@ -196,15 +196,19 @@
     const cat = article.category3 || "exclude";
     const reportPreview = [article.reportBullet, ...(article.reportSubBullets || []).map((x) => `* ${x}`), article.reportImplication ? `☞ ${article.reportImplication}` : ""].filter(Boolean).join("\n");
     const url = hasValidUrl(article.url) ? article.url : "";
+    const eventSources = Array.isArray(article.eventSources) ? article.eventSources.filter((item) => hasValidUrl(item.url)) : [];
+    const sourceLinks = eventSources.length > 1
+      ? `<div class="event-sources"><b>동일 사건 원문 ${eventSources.length}건</b>${eventSources.map((item) => `<a href="${escAttr(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.source || "원문")}</a>`).join("")}</div>`
+      : "";
     return `<article class="news-card ${selected ? "selected" : ""}" data-key="${escAttr(key)}">
-      <div class="news-top"><div class="news-meta"><span>${esc(article.source || "-")}</span><span>${esc(formatDate(article.publishedAt))}</span><span>중요도 ${Number(article.importanceScore || 0)}</span></div><button type="button" class="select-btn ${selected ? "on" : ""}" data-action="toggle" data-key="${escAttr(key)}">${selected ? "선택됨" : "보고서에 선택"}</button></div>
+      <div class="news-top"><div class="news-meta"><span>${esc(article.source || "-")}</span><span>${esc(formatDate(article.publishedAt))}</span><span>중요도 ${Number(article.importanceScore || 0)}</span>${Number(article.eventArticleCount || 1) > 1 ? `<span>동일 사건 ${Number(article.eventArticleCount)}건</span>` : ""}</div><button type="button" class="select-btn ${selected ? "on" : ""}" data-action="toggle" data-key="${escAttr(key)}">${selected ? "선택됨" : "보고서에 선택"}</button></div>
       <h3 class="news-title">${esc(article.titleKo || article.title || "제목 없음")}</h3>
       <div class="category-path-line"><b>카테고리</b> ${esc(categoryPath(article))}</div>
       <p class="news-summary">${esc(article.summaryKo || article.description || "")}</p>
       <div class="tag-row"><span class="tag ${cat}">${esc(categoryLabel(cat))}</span><span class="tag">${esc(article.reportUsefulness || "watch")}</span>${article.location ? `<span class="tag">${esc(article.location)}</span>` : ""}${(article.actors || []).slice(0, 4).map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>
       ${article.weeklyReportReason ? `<p class="news-summary"><b>반영 사유</b> ${esc(article.weeklyReportReason)}</p>` : ""}
       ${reportPreview ? `<pre class="report-preview">${esc(reportPreview)}</pre>` : ""}
-      <div class="card-actions"><button type="button" class="source-btn ${url ? "" : "disabled"}" data-action="source" data-url="${escAttr(url)}">${url ? "원문 보기" : "원문 없음"}</button><span>보고서 날짜: ${esc(shortDate(article.publishedAt))}</span></div>
+      <div class="card-actions"><button type="button" class="source-btn ${url ? "" : "disabled"}" data-action="source" data-url="${escAttr(url)}">${url ? "대표 원문 보기" : "원문 없음"}</button><span>보고서 날짜: ${esc(shortDate(article.publishedAt))}</span></div>${sourceLinks}
     </article>`;
   }
   function updateCardSelection(card, selected) {
@@ -300,7 +304,14 @@
       const res = await fetch(`./data/news.json?v=${Date.now()}`, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      state.articles = (Array.isArray(data.articles) ? data.articles : []).map((article, index) => ({ ...article, __uiKey: `ui-${index}-${simpleHash(baseArticleKey(article))}`, selectionKey: `ui-${index}-${simpleHash(baseArticleKey(article))}` }));
+      const rawArticles = Array.isArray(data.articles) ? data.articles : [];
+      // Grouped data keeps every original article, but the dashboard shows one
+      // representative card per event. The remaining source links are rendered
+      // inside that representative card.
+      const visibleArticles = rawArticles.some((article) => article.eventId)
+        ? rawArticles.filter((article) => article.eventRepresentative !== false)
+        : rawArticles;
+      state.articles = visibleArticles.map((article, index) => ({ ...article, __uiKey: `ui-${index}-${simpleHash(baseArticleKey(article))}`, selectionKey: `ui-${index}-${simpleHash(baseArticleKey(article))}` }));
       if ($("updatedAt")) $("updatedAt").textContent = data.generatedAt ? formatDate(data.generatedAt) : "-";
     } catch (err) {
       if ($("newsList")) { $("newsList").className = "news-list empty"; $("newsList").textContent = `뉴스 데이터를 불러오지 못했습니다: ${err.message || err}`; }
