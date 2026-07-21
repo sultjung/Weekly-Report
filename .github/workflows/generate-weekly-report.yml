@@ -60,6 +60,10 @@ jobs:
 
       - name: Generate selected-news DOCX report
         env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_FINAL_REPORT_MODEL: ${{ vars.OPENAI_FINAL_REPORT_MODEL || 'gpt-5.4-mini' }}
+          OPENAI_FINAL_REPORT_REASONING: ${{ vars.OPENAI_FINAL_REPORT_REASONING || 'medium' }}
+          FINAL_REPORT_EVIDENCE_CHARS: "2500"
           SELECTION_JSON: ${{ inputs.selection_json }}
           REPORT_START_DATE: ${{ inputs.report_start_date }}
           REPORT_END_DATE: ${{ inputs.report_end_date }}
