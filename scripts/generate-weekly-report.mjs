@@ -27,6 +27,11 @@ const GENERATED_DIR = path.join(REPORTS_DIR, "generated");
 const SELECTED_FILE = path.join(DATA_DIR, "selected-news.json");
 const NEWS_FILE = path.join(DATA_DIR, "news.json");
 const REPORT_TIMEZONE = "Asia/Seoul";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
+const FINAL_REPORT_MODEL = process.env.OPENAI_FINAL_REPORT_MODEL || "gpt-5.4-mini";
+const FINAL_REPORT_REASONING = process.env.OPENAI_FINAL_REPORT_REASONING || "medium";
+const FINAL_REPORT_EVIDENCE_CHARS = Number(process.env.FINAL_REPORT_EVIDENCE_CHARS || 2500);
+const REPORT_CATEGORIES = ["politics", "terror_security", "oil_economy", "regional"];
 
 function dateFromYmd(ymd) { const [y, m, d] = String(ymd).split("-").map(Number); return new Date(Date.UTC(y, m - 1, d, 0, 0, 0)); }
 function toYmd(date) { return date.toISOString().slice(0, 10); }
@@ -72,6 +77,129 @@ async function readSelectedArticles() {
   return selected;
 }
 
+function parseJsonObject(text = "") {
+  const raw = String(text || "").replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```$/i, "").trim();
+  try { return JSON.parse(raw); } catch {}
+  const match = raw.match(/\{[\s\S]*\}/);
+  if (match) { try { return JSON.parse(match[0]); } catch {} }
+  return null;
+}
+
+function responseText(data = {}) {
+  return data.output_text || (data.output || [])
+    .flatMap((part) => part.content || [])
+    .map((part) => part.text || "")
+    .join("\n");
+}
+
+function finalEditorInput(selected = []) {
+  return selected
+    .filter((item) => REPORT_CATEGORIES.includes(item.category3))
+    .map((item, index) => ({
+      id: `selected-${index + 1}`,
+      sourceId: String(item.id || ""),
+      publishedAt: item.publishedAt || item.date || "",
+      source: item.source || "",
+      url: item.url || "",
+      category3: item.category3,
+      importanceScore: Number(item.importanceScore || 0),
+      title: item.title || "",
+      titleKo: item.titleKo || "",
+      summaryKo: item.summaryKo || "",
+      reportBullet: item.reportBullet || "",
+      reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.slice(0, 2) : [],
+      reportImplication: item.reportImplication || "",
+      evidence: String(item.cleanText || item.fullText || item.description || "").slice(0, FINAL_REPORT_EVIDENCE_CHARS)
+    }));
+}
+
+function validateFinalEdit(parsed, inputItems) {
+  if (!parsed || typeof parsed !== "object" || !parsed.sections || typeof parsed.sections !== "object") {
+    throw new Error("최종 편집 응답에 sections가 없습니다");
+  }
+  const inputById = new Map(inputItems.map((item) => [item.id, item]));
+  const seen = new Map();
+  const sections = {};
+
+  for (const category of REPORT_CATEGORIES) {
+    const rawItems = Array.isArray(parsed.sections[category]) ? parsed.sections[category] : [];
+    sections[category] = rawItems.map((item) => {
+      const sourceArticleIds = [...new Set((Array.isArray(item.sourceArticleIds) ? item.sourceArticleIds : [])
+        .map(String)
+        .filter((id) => inputById.get(id)?.category3 === category))];
+      const reportBullet = normalizeText(item.reportBullet);
+      if (!sourceArticleIds.length || !reportBullet) throw new Error(`${category} 최종 문장에 기사 ID 또는 본문이 없습니다`);
+      for (const id of sourceArticleIds) seen.set(id, (seen.get(id) || 0) + 1);
+      return {
+        sourceArticleIds,
+        reportBullet,
+        reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.map(normalizeText).filter(Boolean).slice(0, 2) : [],
+        reportImplication: normalizeText(item.reportImplication)
+      };
+    });
+  }
+
+  for (const item of inputItems) {
+    if (seen.get(item.id) !== 1) throw new Error(`기사 ID ${item.id}가 최종 편집 결과에서 누락되었거나 중복되었습니다`);
+  }
+
+  return {
+    sections,
+    groupImpacts: Array.isArray(parsed.groupImpacts) ? parsed.groupImpacts.map(normalizeText).filter(Boolean).slice(0, 2) : []
+  };
+}
+
+async function editSelectedForFinalReport(selected = []) {
+  const inputItems = finalEditorInput(selected);
+  if (!OPENAI_API_KEY || !inputItems.length) {
+    return { applied: false, reason: OPENAI_API_KEY ? "편집 대상 기사 없음" : "OPENAI_API_KEY 없음" };
+  }
+
+  const prompt = [
+    "당신은 이라크 주간 종합상황보고서의 최종 편집자다.",
+    "선택된 기사 전체를 한 번에 검토해 사람이 작성한 하나의 보고서처럼 문체와 흐름을 통일하라.",
+    "새로운 사실·수치·인과관계·전망을 추가하지 말고 제공된 기사 근거 안에서만 작성하라.",
+    "같은 사건을 다룬 기사들은 같은 category3 안에서 하나의 보고 항목으로 병합할 수 있다.",
+    "병합하더라도 모든 입력 기사 id를 정확히 한 번씩 sourceArticleIds에 포함하라.",
+    "기사의 category3를 다른 항목으로 이동하지 말라.",
+    "기사 간 반복을 제거하고, 번역투·홍보성 표현·일반론·근거 없는 시사점을 삭제하라.",
+    "문체는 짧고 단정적인 명사형 보고서 문체를 사용한다.",
+    "reportBullet은 '- ' 없이 'M.D, 주체, 핵심 사실·평가' 구조의 정확히 1문장으로 작성하라.",
+    "reportSubBullets는 '* ' 없이 0~2개이며 reportBullet을 반복하지 않는다.",
+    "reportImplication은 구체적인 정치·안보·경제·BNCP 사업 영향이 근거로 확인될 때만 1문장, 아니면 빈 문자열로 둔다.",
+    "기관·인명 표기는 NIC, 청렴위원회, 시아조정기구(SCF), 인민동원군(PMF), 혁명수비대(IRGC), Al-Zaidi 총리, Al-Sudani 前 총리, Al-Maliki 前 총리 기준을 따른다.",
+    "groupImpacts는 그룹/건설에 미치는 구체적 영향만 0~2문장으로 작성하고 일반론이면 빈 배열로 둔다.",
+    "반드시 JSON 객체만 출력하고 다음 구조를 정확히 사용하라:",
+    '{"sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"groupImpacts":[]}',
+    "",
+    JSON.stringify(inputItems, null, 2)
+  ].join("\n");
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" },
+      body: JSON.stringify({
+        model: FINAL_REPORT_MODEL,
+        reasoning: { effort: FINAL_REPORT_REASONING },
+        text: { verbosity: "low" },
+        input: [
+          { role: "system", content: "Edit evidence-grounded Korean executive reports. Output valid JSON only." },
+          { role: "user", content: prompt }
+        ]
+      })
+    });
+    if (!response.ok) throw new Error(`OpenAI ${response.status}: ${await response.text()}`);
+    const data = await response.json();
+    const validated = validateFinalEdit(parseJsonObject(responseText(data)), inputItems);
+    console.log(`[final-edit] applied articles=${inputItems.length}, model=${FINAL_REPORT_MODEL}, reasoning=${FINAL_REPORT_REASONING}`);
+    return { applied: true, model: FINAL_REPORT_MODEL, reasoning: FINAL_REPORT_REASONING, ...validated };
+  } catch (error) {
+    console.warn(`[final-edit] failed; using existing report text: ${error.message || error}`);
+    return { applied: false, model: FINAL_REPORT_MODEL, reasoning: FINAL_REPORT_REASONING, reason: String(error.message || error) };
+  }
+}
+
 function hasCabinetOrCom(item = {}) {
   const text = [item.titleKo, item.title, item.summaryKo, item.reportBullet, item.weeklyReportReason].filter(Boolean).join(" ");
   return /내각회의|COM|Council of Ministers|مجلس الوزراء|국무회의/i.test(text);
@@ -100,6 +228,29 @@ function reportMain(article) {
 function reportSubs(article) { return Array.isArray(article.reportSubBullets) ? article.reportSubBullets.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`).filter(Boolean).slice(0, 2) : []; }
 function reportImplication(article) { return article.reportImplication ? `☞ ${stripFinalPeriod(humanizeTerms(article.reportImplication))}.` : ""; }
 function toReportItems(articles) { return articles.map((article) => ({ main: reportMain(article), subs: reportSubs(article), implication: reportImplication(article), source: article.source, url: article.url, raw: article })); }
+
+function finalSectionItems(finalEdit, category, selected = []) {
+  if (!finalEdit?.applied) return toReportItems(byCategory(selected, category));
+  const sourceById = new Map(finalEditorInput(selected).map((item) => [item.id, item]));
+  return (finalEdit.sections?.[category] || []).map((item) => {
+    const sources = item.sourceArticleIds.map((id) => sourceById.get(id)).filter(Boolean);
+    const first = sources[0] || {};
+    const article = {
+      publishedAt: first.publishedAt,
+      reportBullet: item.reportBullet,
+      reportSubBullets: item.reportSubBullets,
+      reportImplication: item.reportImplication
+    };
+    return {
+      main: reportMain(article),
+      subs: reportSubs(article),
+      implication: reportImplication(article),
+      source: [...new Set(sources.map((source) => source.source).filter(Boolean))].join(", "),
+      url: first.url || "",
+      raw: sources
+    };
+  });
+}
 
 async function fetchYahooDaily(symbol) {
   try {
@@ -190,10 +341,11 @@ async function main() {
   if (!selected.length) throw new Error("선택된 기사가 없습니다. selection_json 입력 또는 data/selected-news.json을 확인하세요.");
   selected.sort(itemDateSort);
 
-  const politics = toReportItems(byCategory(selected, "politics"));
-  const security = toReportItems(byCategory(selected, "terror_security"));
-  const economy = toReportItems(byCategory(selected, "oil_economy"));
-  const regional = toReportItems(byCategory(selected, "regional"));
+  const finalEdit = await editSelectedForFinalReport(selected);
+  const politics = finalSectionItems(finalEdit, "politics", selected);
+  const security = finalSectionItems(finalEdit, "terror_security", selected);
+  const economy = finalSectionItems(finalEdit, "oil_economy", selected);
+  const regional = finalSectionItems(finalEdit, "regional", selected);
   const oilRows = await buildOilRows(period);
   const title = process.env.REPORT_TITLE || titleForPeriod(period);
 
@@ -218,7 +370,8 @@ async function main() {
     categoryHeading("• 이라크와 관련 있는 주변국·국제정세"),
     ...itemParagraphs(regional),
     heading("3. 그룹 / 건설에 미치는 영향", 1),
-    ...impactItems(selected).map((x) => p(x, { size: 28, indent: INDENT.impact, after: 100 }))
+    ...(finalEdit.applied && finalEdit.groupImpacts.length ? finalEdit.groupImpacts.map((x) => `• ${stripFinalPeriod(humanizeTerms(x))}.`) : impactItems(selected))
+      .map((x) => p(x, { size: 28, indent: INDENT.impact, after: 100 }))
   ];
 
   const doc = new Document({
@@ -232,9 +385,10 @@ async function main() {
   const generatedPath = path.join(GENERATED_DIR, fileName);
   await fs.writeFile(generatedPath, buffer);
   await fs.writeFile(path.join(REPORTS_DIR, "latest.docx"), buffer);
-  const meta = { generatedAt: new Date().toISOString(), title, periodStart: toYmd(period.start), periodEnd: toYmd(period.end), reportDate: toYmd(period.reportDate), selectedCount: selected.length, file: `reports/generated/${fileName}`, latest: "reports/latest.docx", oilRows };
+  const finalEditing = { applied: finalEdit.applied, model: finalEdit.model || "none", reasoning: finalEdit.reasoning || "none", reason: finalEdit.reason || "" };
+  const meta = { generatedAt: new Date().toISOString(), title, periodStart: toYmd(period.start), periodEnd: toYmd(period.end), reportDate: toYmd(period.reportDate), selectedCount: selected.length, file: `reports/generated/${fileName}`, latest: "reports/latest.docx", oilRows, finalEditing };
   await fs.writeFile(path.join(REPORTS_DIR, "latest.json"), JSON.stringify(meta, null, 2), "utf8");
-  await fs.writeFile(path.join(GENERATED_DIR, fileName.replace(/\.docx$/i, ".json")), JSON.stringify({ meta, selected }, null, 2), "utf8");
+  await fs.writeFile(path.join(GENERATED_DIR, fileName.replace(/\.docx$/i, ".json")), JSON.stringify({ meta, selected, finalReport: finalEdit.applied ? { sections: finalEdit.sections, groupImpacts: finalEdit.groupImpacts } : null }, null, 2), "utf8");
   console.log("Weekly report generated:", meta);
 }
 
