@@ -77,6 +77,25 @@ async function readSelectedArticles() {
   return selected;
 }
 
+function collapseSelectedEvents(articles = []) {
+  const groups = new Map();
+  for (const article of articles) {
+    const key = article.eventId || `article:${article.id || article.url || article.titleKo || article.title}`;
+    if (!groups.has(key)) groups.set(key, article);
+    else {
+      const current = groups.get(key);
+      const currentScore = Number(current.importanceScore || 0) + String(current.cleanText || current.fullText || "").length / 1000;
+      const nextScore = Number(article.importanceScore || 0) + String(article.cleanText || article.fullText || "").length / 1000;
+      if (nextScore > currentScore) groups.set(key, article);
+    }
+  }
+  return [...groups.values()].map((article) => ({
+    ...article,
+    eventArticleCount: Number(article.eventArticleCount || 1),
+    eventSources: Array.isArray(article.eventSources) ? article.eventSources : [{ source: article.source || "", url: article.url || "" }]
+  }));
+}
+
 function parseJsonObject(text = "") {
   const raw = String(text || "").replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```$/i, "").trim();
   try { return JSON.parse(raw); } catch {}
@@ -109,7 +128,10 @@ function finalEditorInput(selected = []) {
       reportBullet: item.reportBullet || "",
       reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.slice(0, 2) : [],
       reportImplication: item.reportImplication || "",
-      evidence: String(item.cleanText || item.fullText || item.description || "").slice(0, FINAL_REPORT_EVIDENCE_CHARS)
+      eventId: item.eventId || "",
+      eventArticleCount: Number(item.eventArticleCount || 1),
+      eventSources: (item.eventSources || []).map((source) => ({ source: source.source || "", url: source.url || "", titleKo: source.titleKo || "", summaryKo: source.summaryKo || "" })),
+      evidence: [String(item.cleanText || item.fullText || item.description || ""), ...(item.eventArticles || []).map((source) => `${source.source || ""}: ${source.titleKo || source.title || ""}. ${source.summaryKo || ""}. ${source.evidence || ""}`)].join("\n").slice(0, FINAL_REPORT_EVIDENCE_CHARS * 2)
     }));
 }
 
@@ -160,6 +182,8 @@ async function editSelectedForFinalReport(selected = []) {
     "선택된 기사 전체를 한 번에 검토해 사람이 작성한 하나의 보고서처럼 문체와 흐름을 통일하라.",
     "새로운 사실·수치·인과관계·전망을 추가하지 말고 제공된 기사 근거 안에서만 작성하라.",
     "같은 사건을 다룬 기사들은 같은 category3 안에서 하나의 보고 항목으로 병합할 수 있다.",
+    "입력에 eventId와 eventArticleCount가 있는 항목은 이미 동일 사건으로 묶인 것이다. eventId가 같은 입력은 반드시 하나의 보고 항목으로 처리하라.",
+    "동일 사건 항목의 eventSources에 있는 여러 언론 보도를 종합하되, 서로 다른 추가 사실은 reportSubBullets에 반영하라.",
     "병합하더라도 모든 입력 기사 id를 정확히 한 번씩 sourceArticleIds에 포함하라.",
     "기사의 category3를 다른 항목으로 이동하지 말라.",
     "기관 주체는 제공된 evidence와 본문을 기준으로 확인하라. 'الإطار التنسيقي'는 이라크 시아조정기구(SCF)이며 이란 최고 의회·이란 의회·이라크 의회가 아니다. 'مجلس النواب'만 이라크 의회, 'مجلس الوزراء'만 국무회의/내각회의를 뜻한다.",
@@ -236,7 +260,11 @@ function reportMain(article) {
 }
 function reportSubs(article) { return Array.isArray(article.reportSubBullets) ? article.reportSubBullets.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`).filter(Boolean).slice(0, 2) : []; }
 function reportImplication(article) { return article.reportImplication ? `☞ ${stripFinalPeriod(humanizeTerms(article.reportImplication))}.` : ""; }
-function toReportItems(articles) { return articles.map((article) => ({ main: reportMain(article), subs: reportSubs(article), implication: reportImplication(article), source: article.source, url: article.url, raw: article })); }
+function sourceNames(article = {}) {
+  const names = (article.eventSources || []).map((item) => item.source).filter(Boolean);
+  return [...new Set(names)].join(", ") || article.source || "";
+}
+function toReportItems(articles) { return articles.map((article) => ({ main: reportMain(article), subs: reportSubs(article), implication: reportImplication(article), source: sourceNames(article), url: article.url, raw: article })); }
 
 function finalSectionItems(finalEdit, category, selected = []) {
   if (!finalEdit?.applied) return toReportItems(byCategory(selected, category));
@@ -254,7 +282,7 @@ function finalSectionItems(finalEdit, category, selected = []) {
       main: reportMain(article),
       subs: reportSubs(article),
       implication: reportImplication(article),
-      source: [...new Set(sources.map((source) => source.source).filter(Boolean))].join(", "),
+      source: [...new Set(sources.flatMap((source) => (source.eventSources || []).map((item) => item.source)).concat(sources.map((source) => source.source)).filter(Boolean))].join(", "),
       url: first.url || "",
       raw: sources
     };
@@ -346,7 +374,7 @@ function impactItems(selected = []) {
 
 async function main() {
   const period = resolvePeriod();
-  const selected = (await readSelectedArticles()).filter(Boolean);
+  const selected = collapseSelectedEvents((await readSelectedArticles()).filter(Boolean));
   if (!selected.length) throw new Error("선택된 기사가 없습니다. selection_json 입력 또는 data/selected-news.json을 확인하세요.");
   selected.sort(itemDateSort);
 
