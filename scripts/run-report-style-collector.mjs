@@ -80,13 +80,6 @@ function replaceExactlyOnce(source, search, replacement, label) {
 function hardenReportScope(source) {
   source = replaceExactlyOnce(
     source,
-    `const regionalIraqLink = hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "الولايات المتحدة", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"]);`,
-    `const regionalIraqLink = hasAny(text, ["إيران", "اسرائيل", "إسرائيل", "سوريا", "غزة", "الحوثي", "القواعد الأمريكية", "الحرس الثوري", "مضيق هرمز", "iran", "israel", "syria", "gaza", "houthi", "us bases", "hormuz"]);`,
-    "regional scope"
-  );
-
-  source = replaceExactlyOnce(
-    source,
     `  articles = articles.map((item) => reuseFromPrevious(item, previousMap));`,
     `  articles = articles.map((item) => reuseFromPrevious(item, previousMap)).filter((item) => scoreCandidate(item).reportUsefulness !== "exclude");`,
     "cached article scope recheck"
