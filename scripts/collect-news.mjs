@@ -76,6 +76,35 @@ function stableArticleId(prefix = "article", value = "") { return `${prefix}-${c
 function articleText(item = {}) { return [item.title, item.description, item.cleanText, item.fullText, item.titleKo, item.summaryKo].filter(Boolean).join("\n"); }
 function hasAny(text = "", terms = []) { const normalized = stripArabicDiacritics(String(text || "").toLowerCase()); return terms.some((term) => normalized.includes(stripArabicDiacritics(String(term || "").toLowerCase()))); }
 
+// Agriculture and food-production stories are outside the BNCP/Iraq weekly
+// report scope unless the article also contains a direct housing, investment,
+// security, energy, or political connection.  This must run before the broad
+// economy keywords because agricultural articles often mention imports,
+// costs, or the national economy as secondary effects.
+function isOutOfScopeAgricultureArticle(text = "", directSignals = {}) {
+  const agriculture = hasAny(text, [
+    "وزارة الزراعة", "الزراعة", "زراعي", "زراعية", "المحاصيل", "المحصول",
+    "البطاطا", "البطاطس", "بذور", "القمح", "الحبوب", "الأسمدة", "الري",
+    "الثروة الحيوانية", "الأمن الغذائي", "food security", "agriculture",
+    "agricultural", "farmers", "crop", "crops", "potato", "potatoes",
+    "seed", "seeds", "wheat", "grain", "fertilizer", "irrigation",
+    "livestock", "농업부", "농업", "농산물", "감자", "종자", "식량안보",
+    "식량 안보", "농작물", "비료", "관개", "축산"
+  ]);
+  if (!agriculture) return false;
+
+  const relevantNonAgriculture = hasAny(text, [
+    "بسماية", "بسمايه", "بسمایه", "مشروع سكني", "مدينة سكنية", "الهيئة الوطنية للاستثمار",
+    "شركة هانوا", "هانوا", "hanwha", "bismayah", "bncp", "housing", "residential",
+    "construction", "urban planning", "المدن السكنية", "الإعمار والإسكان",
+    "النفط", "أوبك", "oil", "opec", "الموازنة", "budget", "سعر الصرف", "exchange rate",
+    "الكهرباء", "electricity", "مجلس الوزراء", "رئيس الوزراء", "مجلس النواب", "البرلمان",
+    "الحكومة", "انتخابات", "فساد", "داعش", "إرهاب", "هجوم", "أمن الدولة", "national security", "isis",
+    "terror", "attack", "إيران", "إسرائيل", "سوريا", "غزة", "iran", "israel", "syria", "gaza"
+  ]);
+  return !directSignals.bismayahDirect && !directSignals.bismayahStakeholder && !directSignals.bismayahInstitutional && !relevantNonAgriculture;
+}
+
 function regionalExposureSignals(text = "") {
   const iran = hasAny(text, ["إيران", "ايران", "الحرس الثوري", "iran", "irgc", "이란", "혁명수비대"]);
   const israel = hasAny(text, ["إسرائيل", "اسرائيل", "israel", "이스라엘"]);
@@ -143,6 +172,10 @@ function scoreCandidate(item = {}) {
   const bismayahDirect = hasAny(text, ["بسماية", "بسمايه", "مشروع بسماية", "مدينة بسماية", "مدينة بسماية الجديدة", "مجمع بسماية", "bismayah", "비스마야"]);
   const bismayahStakeholder = hasAny(text, ["حيدر مكية", "حيدر مكيه", "عادل الياسري", "شركة هانوا", "هانوا", "hanwha"]);
   const bismayahInstitutional = hasAny(text, ["الهيئة الوطنية للاستثمار", "هيئة الاستثمار", "مشروع سكني في العراق", "مدينة سكنية في العراق", "شركة كورية"]);
+  const directSignals = { bismayahDirect, bismayahStakeholder, bismayahInstitutional };
+  if (isOutOfScopeAgricultureArticle(text, directSignals)) {
+    return { score: -50, category3: "exclude", reportUsefulness: "exclude", reason: "비스마야·주거·정치·치안·에너지와 직접 연결되지 않은 농업/식량 생산 기사" };
+  }
   const regionalIraqLink = regionalSignals.strategic;
   if (!iraqContext && !regionalIraqLink && !bismayahDirect && !bismayahStakeholder) return { score: 0, category3: "exclude", reportUsefulness: "exclude", reason: "이라크 맥락 부족" };
 
@@ -620,6 +653,7 @@ async function enrichArticle(item) {
     "기사 제목이 '전투탱크', '공격하고 싶어했다'처럼 부분 발언을 강조하더라도, 그것이 본문의 핵심이 아니면 reportBullet의 중심으로 삼지 말고 보조 설명으로 낮춰라.",
     "한 문단 안에서 같은 사실을 두 번 반복하지 말라. reportBullet에 쓴 문장을 reportSubBullets에서 다시 풀어쓰지 말라.",
     "이라크와 무관한 국제뉴스, 스포츠, 연예, 광고성 기사는 exclude.",
+    "농업·축산·감자·종자·식량안보·농산물 생산처럼 비스마야/주거도시·NIC·한화·정치·치안·에너지와 직접 연결되지 않은 기사는 경제·국제유가 기사로 분류하지 말고 반드시 exclude.",
     "영국·유럽·미국 등 제3국의 현지 범죄·테러·반이슬람 사건은 이라크 정부·국민·공관·사업 또는 중동 안보에 직접 연결되지 않으면 반드시 exclude 처리하라.",
     "제3국의 현지 치안 사건을 '이라크 주간 테러 상황'으로 분류하지 말라.",
     "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
@@ -677,6 +711,9 @@ async function main() {
   articles = articles.map((item) => reuseFromPrevious(item, previousMap));
   articles = articles.map((item) => {
     const baseline = scoreCandidate(item);
+    if (baseline.reportUsefulness === "exclude" || baseline.category3 === "exclude") {
+      return { ...item, importanceScore: Math.min(Number(item.importanceScore || 0), 0), category3: "exclude", reportUsefulness: "exclude", selected: false, weeklyReportReason: baseline.reason };
+    }
     return { ...item, importanceScore: Math.max(Number(item.importanceScore || 0), Number(baseline.score || 0)) };
   });
   const cacheHits = articles.filter((x) => x.aiCacheHit).length;
@@ -706,7 +743,7 @@ async function main() {
         ? "기사 전문 또는 충분한 원문 설명 미확보"
         : "AI 처리 상한 초과"
     };
-  }).filter((item) => item.reportUsefulness !== "exclude" || item.category3 === "exclude");
+  }).filter((item) => item.reportUsefulness !== "exclude" && item.category3 !== "exclude");
 
   const archiveMerge = mergePreviousArticles(articles, previousArticles, MAX_TOTAL);
   articles = archiveMerge.articles;
