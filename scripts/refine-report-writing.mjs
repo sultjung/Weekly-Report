@@ -10,12 +10,12 @@ import path from "node:path";
 const ROOT = process.cwd();
 const NEWS_FILE = path.join(ROOT, "data", "news.json");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const REPORT_MODEL = process.env.OPENAI_REPORT_MODEL || "gpt-5.6-terra";
+const REPORT_MODEL = process.env.OPENAI_REPORT_MODEL || "gpt-5.4-mini";
 const REASONING_EFFORT = process.env.OPENAI_REPORT_REASONING || "medium";
 const MIN_SCORE = Number(process.env.REPORT_REFINEMENT_MIN_SCORE || 80);
 const MAX_ITEMS = Number(process.env.MAX_REPORT_REFINEMENT_ITEMS || 15);
 const CONCURRENCY = Number(process.env.REPORT_REFINEMENT_CONCURRENCY || 2);
-const VERSION = "weekly-report-writing-v2-cost-optimized";
+const VERSION = "weekly-report-writing-v3-cost-optimized";
 
 function clean(value = "") {
   return String(value || "").replace(/^[-*·•\s]+/, "").replace(/^☞\s*/, "").replace(/\s+/g, " ").trim();
