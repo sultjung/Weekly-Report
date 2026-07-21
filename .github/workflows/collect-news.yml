@@ -45,6 +45,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5-mini' }}
+          OPENAI_SUMMARY_FALLBACK_MODEL: ${{ vars.OPENAI_SUMMARY_FALLBACK_MODEL || 'gpt-4o-mini' }}
           OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4-mini' }}
           OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
           REPORT_REFINEMENT_MIN_SCORE: "70"
