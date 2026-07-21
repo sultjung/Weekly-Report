@@ -78,6 +78,9 @@ button { min-height: 42px; border: 1px solid var(--line); border-radius: 12px; p
 .select-btn.on { background: var(--orange); color: white; border-color: var(--orange); }
 .card-actions { min-width: 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 2px; }
 .card-actions a, .source-btn { min-height: 36px; display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 0 12px; text-decoration: none; font-weight: 800; background: white; color: var(--ink); }
+.event-sources { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: var(--muted); font-size: 13px; }
+.event-sources a { border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px; color: var(--ink); background: #fffaf5; text-decoration: none; }
+.event-sources a:hover { border-color: var(--orange); color: var(--orange-dark); }
 .source-btn.disabled { color: var(--muted); background: #f9fafb; cursor: not-allowed; }
 .footer { background: white; border-top: 1px solid var(--line); text-align: center; color: var(--muted); padding: 24px; }
 @media (max-width: 1000px) {
