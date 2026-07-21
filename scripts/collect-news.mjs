@@ -464,6 +464,51 @@ function hasReusableAiSummary(item = {}) {
 function reuseFromPrevious(item, previousMap) { const cached = previousMap.get(canonicalKey(item)); return cached && hasReusableAiSummary(cached) ? { ...item, ...cached, url: item.url || cached.url, source: item.source || cached.source, aiCacheHit: true } : { ...item, aiCacheHit: false }; }
 async function loadPreviousMap() { const map = new Map(); try { const prev = JSON.parse(await fs.readFile(NEWS_FILE, "utf8")); for (const item of prev.articles || []) if (hasReusableAiSummary(item)) map.set(canonicalKey(item), item); } catch {} return map; }
 
+function isUsableArchivedArticle(item = {}) {
+  const published = new Date(item.publishedAt || item.date || "");
+  return !!(
+    canonicalKey(item) &&
+    !Number.isNaN(published.getTime()) &&
+    published >= cutoffDate() &&
+    item.titleKo && item.summaryKo &&
+    !item.translationFailed &&
+    !item.untranslatedFiltered &&
+    item.reportUsefulness !== "exclude" &&
+    item.category3 !== "exclude" &&
+    hasWeeklyReportScope(item) &&
+    scoreCandidate(item).reportUsefulness !== "exclude"
+  );
+}
+
+async function loadPreviousArticles() {
+  try {
+    const previous = JSON.parse(await fs.readFile(NEWS_FILE, "utf8"));
+    return (previous.articles || []).filter(isUsableArchivedArticle);
+  } catch {
+    return [];
+  }
+}
+
+function mergePreviousArticles(current = [], previous = [], limit = MAX_TOTAL) {
+  const previousByKey = new Map(previous.map((item) => [canonicalKey(item), item]));
+  const merged = new Map(previousByKey);
+
+  for (const item of current) {
+    const key = canonicalKey(item);
+    if (!key) continue;
+    const archived = merged.get(key);
+    if (archived && isUsableArchivedArticle(archived) && !isUsableArchivedArticle(item)) continue;
+    merged.set(key, item);
+  }
+
+  const articles = [...merged.values()]
+    .filter((item) => isUsableArchivedArticle(item) || current.includes(item))
+    .sort((a, b) => new Date(b.publishedAt || b.date || 0) - new Date(a.publishedAt || a.date || 0) || Number(b.importanceScore || 0) - Number(a.importanceScore || 0))
+    .slice(0, limit);
+  const carriedForward = articles.filter((item) => previousByKey.get(canonicalKey(item)) === item).length;
+  return { articles, carriedForward };
+}
+
 async function aiKorean(prompt, input) {
   const res = await fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model: OPENAI_SUMMARY_MODEL, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
   if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
@@ -579,6 +624,7 @@ async function main() {
   const startedAt = Date.now();
   const [google, direct] = await Promise.all([collectGoogleNews(), collectIraqMediaSources()]);
   let articles = uniqueRecent([...google.articles, ...direct.articles], MAX_TOTAL);
+  const previousArticles = await loadPreviousArticles();
   const previousMap = await loadPreviousMap();
   articles = articles.map((item) => reuseFromPrevious(item, previousMap));
   const cacheHits = articles.filter((x) => x.aiCacheHit).length;
@@ -610,6 +656,10 @@ async function main() {
     };
   }).filter((item) => item.reportUsefulness !== "exclude" || item.category3 === "exclude");
 
+  const archiveMerge = mergePreviousArticles(articles, previousArticles, MAX_TOTAL);
+  articles = archiveMerge.articles;
+  console.log(`[archive] previous=${previousArticles.length}, carriedForward=${archiveMerge.carriedForward}, merged=${articles.length}`);
+
   const evidenceStats = {
     fulltext: articles.filter((x) => x.sourceEvidenceLevel === "fulltext").length,
     rssDescription: articles.filter((x) => x.sourceEvidenceLevel === "rss-description").length,
@@ -628,9 +678,9 @@ async function main() {
   };
 
   const generatedAt = nowIso();
-  const payload = { category: "iraq-weekly-report-news", generatedAt, lookbackDays: DAYS, count: articles.length, cacheHits, model: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none", counts, articles, debug: { google: google.debug, direct: direct.debug, evidence: evidenceStats, elapsedSeconds: Math.round((Date.now() - startedAt) / 1000) } };
+  const payload = { category: "iraq-weekly-report-news", generatedAt, lookbackDays: DAYS, count: articles.length, cacheHits, model: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none", counts, articles, debug: { google: google.debug, direct: direct.debug, evidence: evidenceStats, archive: { previous: previousArticles.length, carriedForward: archiveMerge.carriedForward }, elapsedSeconds: Math.round((Date.now() - startedAt) / 1000) } };
   await fs.writeFile(NEWS_FILE, JSON.stringify(payload, null, 2), "utf8");
-  await fs.writeFile(INDEX_FILE, JSON.stringify({ generatedAt, source: "collect-news.mjs", files: { news: "data/news.json" }, counts, elapsedSeconds: payload.debug.elapsedSeconds }, null, 2), "utf8");
+  await fs.writeFile(INDEX_FILE, JSON.stringify({ generatedAt, source: "collect-news.mjs", files: { news: "data/news.json" }, counts, archive: payload.debug.archive, elapsedSeconds: payload.debug.elapsedSeconds }, null, 2), "utf8");
   console.log(`Done. articles=${articles.length}, cacheHits=${cacheHits}, elapsed=${payload.debug.elapsedSeconds}s`);
 }
 
