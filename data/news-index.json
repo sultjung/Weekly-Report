@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-07-21T01:39:49.283Z",
+  "generatedAt": "2026-07-21T01:44:01.495Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 192,
-    "politics": 54,
-    "terror_security": 69,
-    "oil_economy": 19,
-    "regional": 46,
-    "exclude": 4
+    "total": 247,
+    "politics": 53,
+    "terror_security": 72,
+    "oil_economy": 45,
+    "regional": 69,
+    "exclude": 8
   },
   "archive": {
-    "previous": 155,
-    "carriedForward": 7
+    "previous": 175,
+    "carriedForward": 42
   },
-  "elapsedSeconds": 125,
-  "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-21T01:40:58.290Z",
+  "elapsedSeconds": 163,
+  "recursiveGlossaryArtifactFixedCount": 1,
+  "recursiveGlossaryArtifactFixedAt": "2026-07-21T01:45:03.287Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-21T01:40:58.337Z",
-  "untranslatedFilteredCount": 1,
-  "untranslatedFilteredAt": "2026-07-21T01:40:58.382Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-21T01:45:03.336Z",
+  "untranslatedFilteredCount": 4,
+  "untranslatedFilteredAt": "2026-07-21T01:45:03.383Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-21T01:40:58.433Z",
-  "aiHallucinationFilteredCount": 3,
-  "aiHallucinationFilteredAt": "2026-07-21T01:40:58.489Z",
+  "datelineLocationCorrectedAt": "2026-07-21T01:45:03.436Z",
+  "aiHallucinationFilteredCount": 4,
+  "aiHallucinationFilteredAt": "2026-07-21T01:45:03.497Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-21T01:40:58.543Z",
+  "irrelevantForeignFilteredAt": "2026-07-21T01:45:03.555Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-21T01:40:58.592Z"
+  "duplicateCollapsedAt": "2026-07-21T01:45:03.610Z"
 }
