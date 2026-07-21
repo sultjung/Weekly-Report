@@ -74,6 +74,8 @@ async function callFlagship(item) {
     "reportImplication: 구체적인 정치·안보·경제·BNCP 사업 영향이 근거로 확인될 때만 1문장, 아니면 빈 문자열.",
     "일반론, 과장, 추측, 기사 제목 반복, '~하였다/했다/하고 있다' 문체를 피하라.",
     "표기 기준: NIC, 청렴위원회, 시아조정기구(SCF), 인민동원군(PMF), 혁명수비대(IRGC), Al-Zaidi 총리, Al-Sudani 前 총리, Al-Maliki 前 총리.",
+    "미군 철수와 IS 재출현·안보공백을 다루는 중요 안보 기사는 철수 예정일과 정부 무장해제 목표일을 원문에서 확인해 명시하고, 안보공백이 민병대의 무기 보유 명분으로 활용될 수 있어 무장해제 추진과 충돌한다는 핵심 연결관계를 빠뜨리지 말라. 기사에 없는 날짜·인과관계는 추가하지 말라.",
+    "이 유형은 reportBullet을 2~3문장으로 확장할 수 있으며, reportSubBullets에는 IS 재출현 우려·민병대 무장 유지 명분·정부 정책 차질의 구체적 근거를 우선 배치하라.",
     "",
     JSON.stringify({
       publishedAt: item.publishedAt,
