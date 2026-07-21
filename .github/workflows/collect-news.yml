@@ -44,11 +44,11 @@ jobs:
       - name: Collect Iraq weekly news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.6-terra' }}
-          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.6-sol' }}
-          OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'high' }}
-          REPORT_REFINEMENT_MIN_SCORE: "70"
-          MAX_REPORT_REFINEMENT_ITEMS: "40"
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.6-luna' }}
+          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.6-terra' }}
+          OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
+          REPORT_REFINEMENT_MIN_SCORE: "80"
+          MAX_REPORT_REFINEMENT_ITEMS: "15"
           REPORT_REFINEMENT_CONCURRENCY: "2"
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "12"
@@ -80,10 +80,10 @@ jobs:
       - name: Refine high-value report writing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.6-sol' }}
-          OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'high' }}
-          REPORT_REFINEMENT_MIN_SCORE: "70"
-          MAX_REPORT_REFINEMENT_ITEMS: "40"
+          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.6-terra' }}
+          OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
+          REPORT_REFINEMENT_MIN_SCORE: "80"
+          MAX_REPORT_REFINEMENT_ITEMS: "15"
           REPORT_REFINEMENT_CONCURRENCY: "2"
         run: node scripts/refine-report-writing.mjs
 
