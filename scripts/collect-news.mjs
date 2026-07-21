@@ -8,6 +8,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -18,6 +19,9 @@ const SEARCH_KEYWORDS_FILE = path.join(DATA_DIR, "search-keywords.json");
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-5-mini";
+const OPENAI_SUMMARY_FALLBACK_MODEL = process.env.OPENAI_SUMMARY_FALLBACK_MODEL || "gpt-4o-mini";
+let activeSummaryModel = OPENAI_SUMMARY_MODEL;
+let summaryFallbackLogged = false;
 const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 30);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 12);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 260);
@@ -66,6 +70,7 @@ function normalizeText(value = "") { return decodeHtml(String(value || "")).repl
 function normalizeUrl(url = "") { try { const u = new URL(url); for (const key of [...u.searchParams.keys()]) if (/^(utm_|fbclid|gclid|mc_)/i.test(key)) u.searchParams.delete(key); u.hash = ""; return u.toString(); } catch { return url || ""; } }
 function hostnameOf(url = "") { try { return new URL(url).hostname.replace(/^www\./, "").toLowerCase(); } catch { return ""; } }
 function canonicalKey(item = {}) { return normalizeUrl(item.url || "").replace(/^https?:\/\//, "").replace(/\/$/, "") || String(item.title || item.titleKo || "").toLowerCase().replace(/\s+/g, " ").trim(); }
+function stableArticleId(prefix = "article", value = "") { return `${prefix}-${createHash("sha256").update(String(value || "")).digest("base64url").slice(0, 24)}`; }
 function articleText(item = {}) { return [item.title, item.description, item.cleanText, item.fullText, item.titleKo, item.summaryKo].filter(Boolean).join("\n"); }
 function hasAny(text = "", terms = []) { const normalized = stripArabicDiacritics(String(text || "").toLowerCase()); return terms.some((term) => normalized.includes(stripArabicDiacritics(String(term || "").toLowerCase()))); }
 
@@ -94,7 +99,7 @@ function parseRssItems(xml = "", query = "") {
     const source = sourceMatch ? decodeHtml(sourceMatch[1]) : (String(rawTitle).split(" - ").pop() || "Google News");
     const pubDate = extractTag(block, "pubDate");
     return {
-      id: `rss-${Buffer.from(normalizeUrl(extractTag(block, "link")) || rawTitle).toString("base64url").slice(0, 16)}`,
+      id: stableArticleId("rss", normalizeUrl(extractTag(block, "link")) || rawTitle),
       title: rawTitle,
       titleKo: "",
       summaryKo: "",
@@ -194,7 +199,7 @@ function extractUrlsFromHtml(html = "", baseUrl = "") { const urls = []; const r
 function extractMetaContent(html = "", names = []) { for (const name of names) { const patterns = [new RegExp(`<meta[^>]+property=["']${name}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"), new RegExp(`<meta[^>]+name=["']${name}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"), new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${name}["'][^>]*>`, "i")]; for (const p of patterns) { const m = html.match(p); if (m && m[1]) return decodeHtml(m[1]); } } return ""; }
 function extractReadableText(html = "") { let src = String(html || "").replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<nav[\s\S]*?<\/nav>/gi, " ").replace(/<footer[\s\S]*?<\/footer>/gi, " ").replace(/<header[\s\S]*?<\/header>/gi, " "); const body = (src.match(/<article[^>]*>([\s\S]*?)<\/article>/i) || src.match(/<main[^>]*>([\s\S]*?)<\/main>/i) || src.match(/<body[^>]*>([\s\S]*?)<\/body>/i) || [null, src])[1]; const paragraphs = [...body.matchAll(/<(p|h1|h2|h3|li)[^>]*>([\s\S]*?)<\/\1>/gi)].map((m) => stripTags(m[2])).filter((x) => x.length >= 20).filter((x) => !/cookie|subscribe|newsletter|advertisement|privacy|حقوق النشر|اشترك|إعلان/i.test(x)).slice(0, 90); return normalizeText((paragraphs.length >= 3 ? paragraphs.join("\n") : stripTags(body))).slice(0, MAX_ARTICLE_TEXT_CHARS); }
 function extractPublishedAt(html = "", fallback = "") { const meta = extractMetaContent(html, ["article:published_time", "article:modified_time", "pubdate", "publishdate", "date", "datePublished", "dateModified"]); const jsonLd = (html.match(/"datePublished"\s*:\s*"([^"]+)"/i) || [])[1] || ""; const time = (html.match(/<time[^>]+datetime=["']([^"']+)["'][^>]*>/i) || [])[1] || ""; for (const v of [meta, jsonLd, time, fallback]) { const d = new Date(v); if (v && !Number.isNaN(d.getTime())) return d.toISOString(); } return ""; }
-function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") { const title = extractMetaContent(html, ["og:title", "twitter:title", "title"]) || stripTags((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "") || stripTags((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || ""); if (!title || title.length < 4) return null; const cleanText = extractReadableText(html); const desc = [extractMetaContent(html, ["og:description", "twitter:description", "description"]), cleanText.slice(0, 2500)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim(); return { id: `direct-${Buffer.from(normalizeUrl(url)).toString("base64url").slice(0, 16)}`, title, source: source.name || hostnameOf(url) || "Iraq media", publishedAt: extractPublishedAt(html, fallbackDate), url: normalizeUrl(url), description: desc, cleanText, fullText: cleanText, collectionMethod: "iraq-media-direct", sourceType: "iraq-media-direct" }; }
+function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") { const title = extractMetaContent(html, ["og:title", "twitter:title", "title"]) || stripTags((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "") || stripTags((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || ""); if (!title || title.length < 4) return null; const cleanText = extractReadableText(html); const desc = [extractMetaContent(html, ["og:description", "twitter:description", "description"]), cleanText.slice(0, 2500)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim(); return { id: stableArticleId("direct", normalizeUrl(url)), title, source: source.name || hostnameOf(url) || "Iraq media", publishedAt: extractPublishedAt(html, fallbackDate), url: normalizeUrl(url), description: desc, cleanText, fullText: cleanText, collectionMethod: "iraq-media-direct", sourceType: "iraq-media-direct" }; }
 
 function sourceEvidenceText(item = {}) {
   return normalizeText(item.cleanText || item.fullText || item.description || "");
@@ -510,7 +515,23 @@ function mergePreviousArticles(current = [], previous = [], limit = MAX_TOTAL) {
 }
 
 async function aiKorean(prompt, input) {
-  const res = await fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model: OPENAI_SUMMARY_MODEL, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
+  const request = (model) => fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
+  const attemptedModel = activeSummaryModel;
+  let res = await request(attemptedModel);
+  if (!res.ok) {
+    const errorText = await res.text();
+    const modelUnavailable = res.status === 404 && /model_not_found|must be verified|verified to use/i.test(errorText);
+    if (modelUnavailable && OPENAI_SUMMARY_FALLBACK_MODEL && attemptedModel !== OPENAI_SUMMARY_FALLBACK_MODEL) {
+      activeSummaryModel = OPENAI_SUMMARY_FALLBACK_MODEL;
+      if (!summaryFallbackLogged) {
+        console.warn(`[ai] ${OPENAI_SUMMARY_MODEL} unavailable; falling back to ${activeSummaryModel}`);
+        summaryFallbackLogged = true;
+      }
+      res = await request(activeSummaryModel);
+    } else {
+      throw new Error(`OpenAI ${res.status}: ${errorText}`);
+    }
+  }
   if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
   const data = await res.json();
   return data.output_text || (data.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("\n");
@@ -678,7 +699,7 @@ async function main() {
   };
 
   const generatedAt = nowIso();
-  const payload = { category: "iraq-weekly-report-news", generatedAt, lookbackDays: DAYS, count: articles.length, cacheHits, model: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none", counts, articles, debug: { google: google.debug, direct: direct.debug, evidence: evidenceStats, archive: { previous: previousArticles.length, carriedForward: archiveMerge.carriedForward }, elapsedSeconds: Math.round((Date.now() - startedAt) / 1000) } };
+  const payload = { category: "iraq-weekly-report-news", generatedAt, lookbackDays: DAYS, count: articles.length, cacheHits, model: OPENAI_API_KEY ? activeSummaryModel : "none", requestedModel: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none", counts, articles, debug: { google: google.debug, direct: direct.debug, evidence: evidenceStats, archive: { previous: previousArticles.length, carriedForward: archiveMerge.carriedForward }, elapsedSeconds: Math.round((Date.now() - startedAt) / 1000) } };
   await fs.writeFile(NEWS_FILE, JSON.stringify(payload, null, 2), "utf8");
   await fs.writeFile(INDEX_FILE, JSON.stringify({ generatedAt, source: "collect-news.mjs", files: { news: "data/news.json" }, counts, archive: payload.debug.archive, elapsedSeconds: payload.debug.elapsedSeconds }, null, 2), "utf8");
   console.log(`Done. articles=${articles.length}, cacheHits=${cacheHits}, elapsed=${payload.debug.elapsedSeconds}s`);
