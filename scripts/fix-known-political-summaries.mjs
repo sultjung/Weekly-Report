@@ -55,7 +55,31 @@ function fixScfUsVisitAntiCorruptionArticle(article = {}) {
   };
 }
 
+function isUsWithdrawalIsisDisarmamentArticle(article = {}) {
+  const text = [article.url, article.title, article.titleKo, article.summaryKo, article.description, article.cleanText, article.fullText].filter(Boolean).join("\n");
+  return /تحذيرات من عودة داعش.*الانسحاب الأمريكي|美군 철수 임박.*IS 복귀 우려/i.test(text)
+    || (/الانسحاب الأمريكي|انسحاب القوات الأمريكية|withdrawal of US forces|US withdrawal/i.test(text) && /داعش|تنظيم الدولة|ISIS|ISIL|IS 재출현|IS 복귀/i.test(text));
+}
+
+function fixUsWithdrawalIsisDisarmamentArticle(article = {}) {
+  if (!isUsWithdrawalIsisDisarmamentArticle(article)) return article;
+  const d = reportDate(article);
+  return {
+    ...article,
+    titleKo: "美군 철수 임박, 안보공백에 따른 IS 재출현 및 민병대 무장 유지 우려",
+    summaryKo: "이라크 내 미군 철수가 9월 30일 완료될 예정인 가운데, 철수 이후 안보공백을 틈탄 IS 재출현 우려가 제기됨. 안보공백이 발생할 경우 민병대가 IS 대응을 명분으로 무기 보유를 계속 주장할 수 있어, Al-Zaidi 총리 내각이 추진 중인 무장해제 정책의 주요 장애 요인으로 작용할 가능성이 있음. 이라크 정부의 무장해제 목표일 역시 9월 30일로 제시된 만큼, 미군 철수와 무장해제 추진이 같은 시점에 맞물리는 상황임. 미군 철수 이후 이라크군의 독자적 대테러 대응 역량과 정부의 무장 통제력이 핵심 변수로 부각됨.",
+    category1: "domestic", category2: "politics_security", category3: "terror_security", importanceScore: Math.max(Number(article.importanceScore || 0), 88), reportUsefulness: "include",
+    weeklyReportReason: "미군 철수에 따른 IS 재출현·안보공백 우려가 민병대의 무기 보유 명분 및 정부의 9월 30일 무장해제 목표와 충돌할 수 있다는 점에서 핵심 치안·정국 기사.",
+    reportBullet: \`${d}, 美軍의 9.30 이라크 철수 완료를 앞두고 IS 재출현 및 안보공백 우려 제기. 안보공백은 민병대의 무기 보유 명분으로 활용될 수 있어, 이라크 정부의 9.30 무장해제 목표와 충돌할 가능성\`,
+    reportSubBullets: ["미군 철수 이후 IS 대응 공백이 발생할 경우 민병대가 무장 유지 필요성을 주장할 수 있다는 우려 제기.", "Al-Zaidi 총리 내각이 추진 중인 무장해제 정책이 치안 불안 및 민병대 반발로 차질을 빚을 수 있다는 점이 핵심 쟁점."],
+    reportImplication: "미군 철수와 무장해제 목표일이 9월 30일로 겹치면서, IS 위협을 둘러싼 안보 논리가 Al-Zaidi 총리 내각의 무장 통제 정책을 제약할 수 있는 구조 형성.", actors: ["美軍", "IS", "이라크 정부", "Al-Zaidi 총리 내각", "이라크 민병대"], location: "Baghdad", knownPoliticalSummaryFixed: true,
+    knownPoliticalSummaryReason: "US withdrawal, ISIS resurgence, militia weapons rationale, and the 9/30 disarmament target require deterministic deep summary."
+  };
+}
+
 function fixArticle(article = {}) {
+  const withdrawalFixed = fixUsWithdrawalIsisDisarmamentArticle(article);
+  if (withdrawalFixed !== article) return withdrawalFixed;
   if (!isMalikiAntiCorruptionArticle(article)) return article;
   const d = reportDate(article);
   return {
