@@ -29,7 +29,13 @@ const FETCH_TIMEOUT_MS = Number(process.env.FETCH_TIMEOUT_MS || 12000);
 const GOOGLE_QUERY_CONCURRENCY = Number(process.env.GOOGLE_QUERY_CONCURRENCY || 6);
 const SOURCE_CONCURRENCY = Number(process.env.SOURCE_CONCURRENCY || 3);
 const ARTICLE_FETCH_CONCURRENCY = Number(process.env.ARTICLE_FETCH_CONCURRENCY || 4);
-const AI_CONCURRENCY = Number(process.env.AI_CONCURRENCY || 5);
+// Full-text article prompts are large enough that five concurrent calls can
+// exceed the fallback model's TPM allowance.  Keep the calls deliberately
+// paced; this is independent of the article-fetch concurrency above.
+const AI_CONCURRENCY = Number(process.env.AI_CONCURRENCY || 2);
+const AI_MIN_REQUEST_INTERVAL_MS = Number(process.env.AI_MIN_REQUEST_INTERVAL_MS || 2500);
+const OPENAI_MAX_RETRIES = Number(process.env.OPENAI_MAX_RETRIES || 5);
+const OPENAI_RETRY_BASE_MS = Number(process.env.OPENAI_RETRY_BASE_MS || 3000);
 const MAX_ARTICLE_TEXT_CHARS = Number(process.env.MAX_ARTICLE_TEXT_CHARS || 10000);
 const FULLTEXT_HYDRATION_CONCURRENCY = Number(process.env.FULLTEXT_HYDRATION_CONCURRENCY || 4);
 const MIN_FULLTEXT_CHARS_FOR_AI = Number(process.env.MIN_FULLTEXT_CHARS_FOR_AI || 500);
@@ -38,6 +44,30 @@ const MIN_GOOGLE_RSS_EVIDENCE_CHARS = Number(process.env.MIN_GOOGLE_RSS_EVIDENCE
 const HIGH_PRIORITY_RSS_FALLBACK_SCORE = Number(process.env.HIGH_PRIORITY_RSS_FALLBACK_SCORE || 90);
 const GOOGLE_RSS_FALLBACK_SCORE = Number(process.env.GOOGLE_RSS_FALLBACK_SCORE || 70);
 const MAX_NEW_AI_ITEMS = Number(process.env.MAX_NEW_AI_ITEMS || 120);
+
+let nextAiRequestAt = 0;
+
+function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+
+async function waitForAiRequestSlot() {
+  // Reserve the slot before waiting so concurrently running workers cannot
+  // start their API calls at the same time.
+  const now = Date.now();
+  const scheduledAt = Math.max(now, nextAiRequestAt);
+  nextAiRequestAt = scheduledAt + AI_MIN_REQUEST_INTERVAL_MS;
+  if (scheduledAt > now) await sleep(scheduledAt - now);
+}
+
+function retryDelayMs(response, attempt) {
+  const retryAfter = Number(response?.headers?.get("retry-after"));
+  if (Number.isFinite(retryAfter) && retryAfter > 0) return Math.ceil(retryAfter * 1000);
+  // A small jitter prevents retried workers from converging on one request slot.
+  return Math.round(OPENAI_RETRY_BASE_MS * (2 ** attempt) + Math.random() * 750);
+}
+
+function isRetryableOpenAiStatus(status) {
+  return status === 408 || status === 409 || status === 429 || status >= 500;
+}
 
 async function loadGoogleNewsQueries() {
   const config = JSON.parse(await fs.readFile(SEARCH_KEYWORDS_FILE, "utf8"));
@@ -566,26 +596,50 @@ function mergePreviousArticles(current = [], previous = [], limit = MAX_TOTAL) {
 }
 
 async function aiKorean(prompt, input) {
-  const request = (model) => fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
-  const attemptedModel = activeSummaryModel;
-  let res = await request(attemptedModel);
-  if (!res.ok) {
+  const request = async (model) => {
+    await waitForAiRequestSlot();
+    return fetch("https://api.openai.com/v1/responses", { method: "POST", headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" }, body: JSON.stringify({ model, input: [{ role: "system", content: "You classify Iraq news for a Korean weekly situation report. Output valid JSON only." }, { role: "user", content: `${prompt}\n\n기사 데이터:\n${input}` }] }) });
+  };
+
+  let model = activeSummaryModel;
+  for (let attempt = 0; attempt < OPENAI_MAX_RETRIES; attempt += 1) {
+    let res;
+    try {
+      res = await request(model);
+    } catch (error) {
+      if (attempt === OPENAI_MAX_RETRIES - 1) throw error;
+      const delay = retryDelayMs(null, attempt);
+      console.warn(`[ai] connection error; retrying attempt ${attempt + 2}/${OPENAI_MAX_RETRIES} in ${Math.ceil(delay / 1000)}s: ${error.message}`);
+      await sleep(delay);
+      continue;
+    }
+
+    if (res.ok) {
+      const data = await res.json();
+      return data.output_text || (data.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("\n");
+    }
+
     const errorText = await res.text();
     const modelUnavailable = res.status === 404 && /model_not_found|must be verified|verified to use/i.test(errorText);
-    if (modelUnavailable && OPENAI_SUMMARY_FALLBACK_MODEL && attemptedModel !== OPENAI_SUMMARY_FALLBACK_MODEL) {
+    if (modelUnavailable && OPENAI_SUMMARY_FALLBACK_MODEL && model !== OPENAI_SUMMARY_FALLBACK_MODEL) {
       activeSummaryModel = OPENAI_SUMMARY_FALLBACK_MODEL;
+      model = activeSummaryModel;
       if (!summaryFallbackLogged) {
         console.warn(`[ai] ${OPENAI_SUMMARY_MODEL} unavailable; falling back to ${activeSummaryModel}`);
         summaryFallbackLogged = true;
       }
-      res = await request(activeSummaryModel);
-    } else {
+      continue;
+    }
+
+    if (!isRetryableOpenAiStatus(res.status) || attempt === OPENAI_MAX_RETRIES - 1) {
       throw new Error(`OpenAI ${res.status}: ${errorText}`);
     }
+    const delay = retryDelayMs(res, attempt);
+    console.warn(`[ai] OpenAI ${res.status}; retrying attempt ${attempt + 2}/${OPENAI_MAX_RETRIES} in ${Math.ceil(delay / 1000)}s`);
+    await sleep(delay);
   }
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  return data.output_text || (data.output || []).flatMap((o) => o.content || []).map((c) => c.text || "").join("\n");
+
+  throw new Error("OpenAI request retry limit reached");
 }
 function parseJsonObject(text = "") { const raw = String(text || "").replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```$/i, "").trim(); try { return JSON.parse(raw); } catch {} const m = raw.match(/\{[\s\S]*\}/); if (m) { try { return JSON.parse(m[0]); } catch {} } return null; }
 function clean(value = "") { return String(value || "").replace(/^[-*·•\s]+/, "").replace(/^☞\s*/, "").replace(/\s+/g, " ").trim(); }
