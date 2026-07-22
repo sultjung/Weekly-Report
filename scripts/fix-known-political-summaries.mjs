@@ -80,10 +80,15 @@ function fixUsWithdrawalIsisDisarmamentArticle(article = {}) {
 function isAsadiCorruptionAllegationArticle(article = {}) {
   const text = [article.url, article.title, article.titleKo, article.summaryKo, article.description, article.cleanText, article.fullText]
     .filter(Boolean).join("\n");
+  // Asharq Al-Awsat's RSS feed exposed only this short headline.  The article
+  // body therefore never reaches the name/seizure matcher below, even though
+  // it is the Ahmed Al-Asadi case. Keep this signature deliberately narrow so
+  // another generic corruption article cannot be overwritten.
+  const shortRssHeadline = /شبهات فساد تلاحق وزيراً عراقياً\s*\.\.\.\s*وتربك التحالف الحاكم/i.test(String(article.title || ""));
   const names = /أحمد\s+الأسدي|احمد\s+الاسدي|Ahmed\s+Al[- ]?Asadi|Ahmad\s+Al[- ]?Asadi|알\s*아사디|알아사디/i;
   const allegation = /مذكرة\s+(?:قبض|اعتقال)|arrest warrant|체포영장|فساد|부패/i;
   const seizure = /ملايين|مليار|أموال|نقد|ذهب|cash|gold|현금|금\s*\d/i;
-  return names.test(text) && allegation.test(text) && seizure.test(text);
+  return shortRssHeadline || (names.test(text) && allegation.test(text) && seizure.test(text));
 }
 
 function fixAsadiCorruptionAllegationArticle(article = {}) {
