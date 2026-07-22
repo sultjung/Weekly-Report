@@ -19,8 +19,8 @@
   "elapsedSeconds": 247,
   "recursiveGlossaryArtifactFixedCount": 1,
   "recursiveGlossaryArtifactFixedAt": "2026-07-22T00:18:00.111Z",
-  "knownPoliticalSummaryFixedCount": 0,
-  "knownPoliticalSummaryFixedAt": "2026-07-22T00:18:00.160Z",
+  "knownPoliticalSummaryFixedCount": 1,
+  "knownPoliticalSummaryFixedAt": "2026-07-22T01:46:57.068Z",
   "untranslatedFilteredCount": 3,
   "untranslatedFilteredAt": "2026-07-22T00:18:00.208Z",
   "datelineLocationCorrectedCount": 0,
@@ -33,5 +33,5 @@
   "duplicateCollapsedAt": "2026-07-22T00:18:00.431Z",
   "eventCount": 216,
   "eventDuplicateArticleCount": 20,
-  "eventGroupedAt": "2026-07-22T00:18:00.737Z"
+  "eventGroupedAt": "2026-07-22T01:46:57.777Z"
 }

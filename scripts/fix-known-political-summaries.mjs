@@ -113,7 +113,42 @@ function fixAsadiCorruptionAllegationArticle(article = {}) {
   };
 }
 
+function isNssDroneWorkshopArticle(article = {}) {
+  const text = [article.url, article.title, article.titleKo, article.summaryKo, article.description, article.cleanText, article.fullText]
+    .filter(Boolean).join("\n");
+  return /national-security-service-foils-baghdad-drone-manufacturing-cell-2026/i.test(text)
+    || (/National Security Service|NSS|국가안전서비스|국가안보국/i.test(text) && /drone manufacturing|drone airframes|드론 제조|드론 동체|드론 기체/i.test(text) && /25/.test(text));
+}
+
+function fixNssDroneWorkshopArticle(article = {}) {
+  if (!isNssDroneWorkshopArticle(article)) return article;
+  const d = reportDate(article);
+  return {
+    ...article,
+    titleKo: "이라크 국가안보국(NSS), Baghdad 내 불법 드론 제조시설 적발",
+    summaryKo: "국가안보국(NSS)은 Baghdad 내 불법 드론 제조시설을 급습해 용의자 3명을 체포하고 드론 기체 25대분과 탄소섬유·금형·제조 장비를 압수. 해당 드론은 최종 조립 및 운용 배치 전 단계에서 적발됐으며, 수사당국은 지역 무장세력 등과의 연계 및 자재 조달망을 확대 조사 중.",
+    category1: "domestic",
+    category2: "politics_security",
+    category3: "terror_security",
+    importanceScore: Math.max(Number(article.importanceScore || 0), 78),
+    reportUsefulness: "include",
+    weeklyReportReason: "Baghdad 내 불법 드론 제조시설 적발 및 관련 조직·조달망 수사가 진행 중인 주요 치안 사건.",
+    reportBullet: `${d}, 국가안보국(NSS), Baghdad 내 불법 드론 제조시설 적발`,
+    reportSubBullets: [
+      "불법 제조시설에서 용의자 3명 체포 및 드론 기체 25대분·탄소섬유·금형·제조 장비 압수.",
+      "최종 조립·운용 배치 전 적발, 지역 무장세력 등과의 연계 및 자재 조달망 확대 조사 중."
+    ],
+    reportImplication: "",
+    actors: ["국가안보국(NSS)", "제3수사법원", "이라크 수사당국"],
+    location: "Baghdad",
+    knownPoliticalSummaryFixed: true,
+    knownPoliticalSummaryReason: "NSS drone workshop case requires precise official-operation wording and investigation-stage qualifiers."
+  };
+}
+
 function fixArticle(article = {}) {
+  const droneFixed = fixNssDroneWorkshopArticle(article);
+  if (droneFixed !== article) return droneFixed;
   const asadiFixed = fixAsadiCorruptionAllegationArticle(article);
   if (asadiFixed !== article) return asadiFixed;
   const withdrawalFixed = fixUsWithdrawalIsisDisarmamentArticle(article);

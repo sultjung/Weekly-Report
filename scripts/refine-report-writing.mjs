@@ -15,7 +15,7 @@ const REASONING_EFFORT = process.env.OPENAI_REPORT_REASONING || "medium";
 const MIN_SCORE = Number(process.env.REPORT_REFINEMENT_MIN_SCORE || 70);
 const MAX_ITEMS = Number(process.env.MAX_REPORT_REFINEMENT_ITEMS || 20);
 const CONCURRENCY = Number(process.env.REPORT_REFINEMENT_CONCURRENCY || 2);
-const VERSION = "weekly-report-writing-v5-evidence-led-political-allegations";
+const VERSION = "weekly-report-writing-v6-security-operations";
 
 function clean(value = "") {
   return String(value || "").replace(/^[-*·•\s]+/, "").replace(/^☞\s*/, "").replace(/\s+/g, " ").trim();
@@ -67,6 +67,8 @@ async function callFlagship(item) {
     "수사·부패 의혹 기사는 법적 단계를 엄격히 구분하라. 언론 보도·소식통 주장·체포영장 발부설·압수수색·압수물 발견·당사자 부인·검찰 또는 법원의 공식 확인을 같은 사실로 쓰지 말고, 원문에 있는 단계만 '보도', '주장', '설', '확인', '부인'으로 정확히 표기하라. 공식 발표·법원 문서가 없으면 체포·유죄·부패 연루를 단정하지 말라.",
     "정치권 영향은 기사 근거가 있을 때만 작성하라. 여당·연정·정당·정치연합의 반응, 보호·비호 여부, 회의·성명 또는 내부 갈등이 원문에 제시되지 않았다면 '혼란', '압력 증가', '불안정성 증대' 같은 일반적 해석은 쓰지 말라.",
     "이라크 인물은 특별히 정한 예외를 제외하고 영문식 '이름 + Al-가문명'으로 간략 표기하고, 직책·전직 여부를 뒤에 붙인다. 한국어 음역·부친명·조부명을 섞지 말라. 예: Ahmed Al-Asadi 前 MOLSA 장관, Al-Zaidi 총리. 이라크 부처·주요 정부기관은 보고서에서 통용되는 영문 약어로 통일한다.",
+    "치안·테러·무기·드론 제조 관련 기사에서는 치안기관의 공식 작전·압수수색 발표인지, 언론 또는 소식통의 주장인지 먼저 구분하라. 공식 작전 기사라면 발표 기관, 작전 대상, 체포·압수 결과, 수사 단계만 사실대로 정리한다. '음모', '테러조직', '무장세력 연계' 같은 법적·정치적 평가는 원문 또는 공식 발표가 명시한 경우에만 사용한다.",
+    "불법 드론 제조시설 적발 기사에서는 NSS를 '국가안보국(NSS)'으로 통일한다. reportBullet은 'M.D, 국가안보국(NSS), Baghdad 내 불법 드론 제조시설 적발' 형식을 우선하고, reportSubBullets에는 용의자·압수 규모와 최종 조립·운용 배치 전 적발 및 연계·조달망 확대 수사 사실을 각각 정리한다. 지역 무장세력 연계는 수사 중인 가능성으로만 표현하고 사실로 단정하지 않는다.",
     "기사가 여러 결정·지시·사업·현안을 함께 다룬 종합 회의·공식 발표라면 특정 세부 안건 하나로 축소하지 말라. reportBullet은 'M.D, 회의명/기관명 주요 의결 사항'으로 쓰고, reportSubBullets에 중요한 결정 3~5개를 각각 한 줄씩 정리하라. 이때 개별 안건 중심 분류나 일반적 전망은 금지한다.",
     "반드시 JSON 객체만 출력하고 키는 reportBullet, reportSubBullets, reportImplication만 사용하라.",
     "reportBullet: 최종 주간보고서에 바로 넣을 수 있도록 핵심 내용을 보고서 형식으로 압축한다. 반드시 1문장일 필요는 없지만 불필요하게 길게 쓰지 않는다.",
