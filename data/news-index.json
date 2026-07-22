@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-07-22T05:08:38.485Z",
+  "generatedAt": "2026-07-22T03:52:05.212Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
     "total": 260,
-    "politics": 63,
-    "terror_security": 81,
-    "oil_economy": 52,
-    "regional": 60,
-    "exclude": 4
+    "politics": 53,
+    "terror_security": 76,
+    "oil_economy": 50,
+    "regional": 56,
+    "exclude": 25
   },
   "archive": {
-    "previous": 230,
-    "carriedForward": 93
+    "previous": 209,
+    "carriedForward": 119
   },
-  "elapsedSeconds": 459,
-  "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-22T05:09:57.174Z",
-  "knownPoliticalSummaryFixedCount": 2,
-  "knownPoliticalSummaryFixedAt": "2026-07-22T05:09:57.234Z",
-  "untranslatedFilteredCount": 2,
-  "untranslatedFilteredAt": "2026-07-22T05:09:57.285Z",
+  "elapsedSeconds": 315,
+  "recursiveGlossaryArtifactFixedCount": 1,
+  "recursiveGlossaryArtifactFixedAt": "2026-07-22T03:53:02.308Z",
+  "knownPoliticalSummaryFixedCount": 3,
+  "knownPoliticalSummaryFixedAt": "2026-07-22T05:27:41.147Z",
+  "untranslatedFilteredCount": 18,
+  "untranslatedFilteredAt": "2026-07-22T03:53:02.411Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-22T05:09:57.354Z",
-  "aiHallucinationFilteredCount": 2,
-  "aiHallucinationFilteredAt": "2026-07-22T05:09:57.423Z",
+  "datelineLocationCorrectedAt": "2026-07-22T03:53:02.466Z",
+  "aiHallucinationFilteredCount": 8,
+  "aiHallucinationFilteredAt": "2026-07-22T03:53:02.527Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-22T05:09:57.489Z",
+  "irrelevantForeignFilteredAt": "2026-07-22T03:53:02.592Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-22T05:09:57.553Z",
-  "eventCount": 234,
-  "eventDuplicateArticleCount": 26,
-  "eventGroupedAt": "2026-07-22T05:09:57.968Z"
+  "duplicateCollapsedAt": "2026-07-22T03:53:02.649Z",
+  "eventCount": 231,
+  "eventDuplicateArticleCount": 29,
+  "eventGroupedAt": "2026-07-22T05:27:41.508Z"
 }
