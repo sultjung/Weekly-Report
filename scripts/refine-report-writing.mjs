@@ -15,7 +15,7 @@ const REASONING_EFFORT = process.env.OPENAI_REPORT_REASONING || "medium";
 const MIN_SCORE = Number(process.env.REPORT_REFINEMENT_MIN_SCORE || 70);
 const MAX_ITEMS = Number(process.env.MAX_REPORT_REFINEMENT_ITEMS || 20);
 const CONCURRENCY = Number(process.env.REPORT_REFINEMENT_CONCURRENCY || 2);
-const VERSION = "weekly-report-writing-v4-compound-official-briefings";
+const VERSION = "weekly-report-writing-v5-evidence-led-political-allegations";
 
 function clean(value = "") {
   return String(value || "").replace(/^[-*·•\s]+/, "").replace(/^☞\s*/, "").replace(/\s+/g, " ").trim();
@@ -64,6 +64,9 @@ async function callFlagship(item) {
     "기관 주체는 기사 본문 첫 문단과 성명 주체를 기준으로 확정하라. 'الإطار التنسيقي'는 이라크 시아조정기구(SCF)이며 이란 최고 의회·이란 의회·이라크 의회가 아니다. 'مجلس النواب'만 이라크 의회, 'مجلس الوزراء'만 국무회의/내각회의를 뜻한다.",
     "'الإطار التنسيقي ... لا حماية للمتورطين بالفساد' 기사라면 시아조정기구(SCF)가 발표 주체다. Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도자들이 방미 결과 및 국익 관련 합의 이행을 지지한 사실, 그리고 사법기관 확인 부패 연루자에 대한 소속 불문 정치적 보호 배제 방침을 반영하라.",
     "원문에 없는 이란·이란 최고 의회·이란 의회·최고지도자를 삽입하지 말라. 근거 없는 신뢰 회복·정치적 책임성 강화·영향 가능성 문장은 삭제하라.",
+    "수사·부패 의혹 기사는 법적 단계를 엄격히 구분하라. 언론 보도·소식통 주장·체포영장 발부설·압수수색·압수물 발견·당사자 부인·검찰 또는 법원의 공식 확인을 같은 사실로 쓰지 말고, 원문에 있는 단계만 '보도', '주장', '설', '확인', '부인'으로 정확히 표기하라. 공식 발표·법원 문서가 없으면 체포·유죄·부패 연루를 단정하지 말라.",
+    "정치권 영향은 기사 근거가 있을 때만 작성하라. 여당·연정·정당·정치연합의 반응, 보호·비호 여부, 회의·성명 또는 내부 갈등이 원문에 제시되지 않았다면 '혼란', '압력 증가', '불안정성 증대' 같은 일반적 해석은 쓰지 말라.",
+    "이라크 인물은 특별히 정한 예외를 제외하고 영문식 '이름 + Al-가문명'으로 간략 표기하고, 직책·전직 여부를 뒤에 붙인다. 한국어 음역·부친명·조부명을 섞지 말라. 예: Ahmed Al-Asadi 前 MOLSA 장관, Al-Zaidi 총리. 이라크 부처·주요 정부기관은 보고서에서 통용되는 영문 약어로 통일한다.",
     "기사가 여러 결정·지시·사업·현안을 함께 다룬 종합 회의·공식 발표라면 특정 세부 안건 하나로 축소하지 말라. reportBullet은 'M.D, 회의명/기관명 주요 의결 사항'으로 쓰고, reportSubBullets에 중요한 결정 3~5개를 각각 한 줄씩 정리하라. 이때 개별 안건 중심 분류나 일반적 전망은 금지한다.",
     "반드시 JSON 객체만 출력하고 키는 reportBullet, reportSubBullets, reportImplication만 사용하라.",
     "reportBullet: 최종 주간보고서에 바로 넣을 수 있도록 핵심 내용을 보고서 형식으로 압축한다. 반드시 1문장일 필요는 없지만 불필요하게 길게 쓰지 않는다.",
