@@ -241,7 +241,7 @@
   }
   function reportSubs(article) {
     const subs = Array.isArray(article.reportSubBullets) ? article.reportSubBullets : [];
-    if (subs.length) return subs.slice(0, 2).map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`);
+    if (subs.length) return subs.slice(0, 5).map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`);
     const summary = String(article.summaryKo || "").split(/\n+/).map((x) => x.trim()).filter(Boolean).slice(0, 1);
     return summary.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`);
   }
