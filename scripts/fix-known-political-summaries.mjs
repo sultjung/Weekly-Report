@@ -77,7 +77,45 @@ function fixUsWithdrawalIsisDisarmamentArticle(article = {}) {
   };
 }
 
+function isAsadiCorruptionAllegationArticle(article = {}) {
+  const text = [article.url, article.title, article.titleKo, article.summaryKo, article.description, article.cleanText, article.fullText]
+    .filter(Boolean).join("\n");
+  const names = /أحمد\s+الأسدي|احمد\s+الاسدي|Ahmed\s+Al[- ]?Asadi|Ahmad\s+Al[- ]?Asadi|알\s*아사디|알아사디/i;
+  const allegation = /مذكرة\s+(?:قبض|اعتقال)|arrest warrant|체포영장|فساد|부패/i;
+  const seizure = /ملايين|مليار|أموال|نقد|ذهب|cash|gold|현금|금\s*\d/i;
+  return names.test(text) && allegation.test(text) && seizure.test(text);
+}
+
+function fixAsadiCorruptionAllegationArticle(article = {}) {
+  if (!isAsadiCorruptionAllegationArticle(article)) return article;
+  const d = reportDate(article);
+  return {
+    ...article,
+    titleKo: "Ahmed Al-Asadi 前 MOLSA 장관, 부패 의혹 관련 체포영장 발부설 제기",
+    summaryKo: "현지 보도에 따르면 보안 당국이 Ahmed Al-Asadi 前 MOLSA 장관 관련 수사 과정에서 약 160억 디나르의 현금과 약 4kg의 금을 발견했다는 주장이 제기됨. Al-Asadi 측은 해당 보도와 자신이 수사 대상이라는 주장을 전면 부인함. 시아조정기구(SCF)가 Al-Zaidi 총리와의 회의에서 부패 연루자 비호 배제 방침을 밝힌 직후 제기돼, 정치권의 부패 척결 기조와 연계해 주목됨.",
+    category1: "domestic",
+    category2: "politics_security",
+    category3: "politics",
+    importanceScore: Math.max(Number(article.importanceScore || 0), 82),
+    reportUsefulness: "include",
+    weeklyReportReason: "前 MOLSA 장관을 둘러싼 체포영장 발부설·압수물 보도와 당사자 부인이 병존하는 사안으로, SCF의 부패 연루자 정치적 보호 배제 방침 이후 정치권 반응을 점검할 필요가 있는 주요 정치 기사.",
+    reportBullet: `${d}, Ahmed Al-Asadi 前 MOLSA 장관, 부패 의혹 관련 체포영장 발부설 제기`,
+    reportSubBullets: [
+      "현지 보도, 수사 과정에서 약 160억 디나르의 현금과 약 4kg의 금 발견 주장.",
+      "Al-Asadi 측은 현금·금 발견 및 본인이 수사 대상이라는 보도를 전면 부인.",
+      "SCF의 부패 연루자 정치적 보호 배제 방침 이후 제기돼, 관련 수사 및 정치권 반응 추이 주목."
+    ],
+    reportImplication: "체포영장과 압수물은 언론 보도 및 당사자 부인 단계로, 사법기관의 공식 확인 전까지 혐의 확정으로 해석하지 않음.",
+    actors: ["Ahmed Al-Asadi 前 MOLSA 장관", "시아조정기구(SCF)", "Al-Zaidi 총리", "이라크 보안 당국"],
+    location: article.location || "Baghdad",
+    knownPoliticalSummaryFixed: true,
+    knownPoliticalSummaryReason: "Asadi corruption allegation requires distinction between media reports, warrant rumor, alleged seizure, and denial."
+  };
+}
+
 function fixArticle(article = {}) {
+  const asadiFixed = fixAsadiCorruptionAllegationArticle(article);
+  if (asadiFixed !== article) return asadiFixed;
   const withdrawalFixed = fixUsWithdrawalIsisDisarmamentArticle(article);
   if (withdrawalFixed !== article) return withdrawalFixed;
   if (!isMalikiAntiCorruptionArticle(article)) return article;
