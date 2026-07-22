@@ -330,7 +330,17 @@
       state.articles = visibleArticles.map((article, index) => ({ ...article, __uiKey: `ui-${index}-${simpleHash(baseArticleKey(article))}`, selectionKey: `ui-${index}-${simpleHash(baseArticleKey(article))}` }));
       if ($("updatedAt")) $("updatedAt").textContent = data.generatedAt ? formatDate(data.generatedAt) : "-";
     } catch (err) {
-      if ($("newsList")) { $("newsList").className = "news-list empty"; $("newsList").textContent = `뉴스 데이터를 불러오지 못했습니다: ${err.message || err}`; }
+      // Do not call applyFilters() after a loading failure: it used to replace
+      // this useful error with the misleading "표시할 뉴스가 없습니다" and made
+      // the whole dashboard look as if it simply contained zero articles.
+      if ($("updatedAt")) $("updatedAt").textContent = "데이터 연결 오류";
+      if ($("newsList")) {
+        $("newsList").className = "news-list empty";
+        $("newsList").textContent = `뉴스 데이터를 불러오지 못했습니다: ${err.message || err}`;
+      }
+      updateSelectionPreview();
+      updateStats();
+      return;
     }
     updateSelectionPreview();
     applyFilters();
