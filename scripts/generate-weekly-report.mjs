@@ -126,7 +126,7 @@ function finalEditorInput(selected = []) {
       titleKo: item.titleKo || "",
       summaryKo: item.summaryKo || "",
       reportBullet: item.reportBullet || "",
-      reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.slice(0, 2) : [],
+      reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.slice(0, 5) : [],
       reportImplication: item.reportImplication || "",
       eventId: item.eventId || "",
       eventArticleCount: Number(item.eventArticleCount || 1),
@@ -155,7 +155,7 @@ function validateFinalEdit(parsed, inputItems) {
       return {
         sourceArticleIds,
         reportBullet,
-        reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.map(normalizeText).filter(Boolean).slice(0, 2) : [],
+        reportSubBullets: Array.isArray(item.reportSubBullets) ? item.reportSubBullets.map(normalizeText).filter(Boolean).slice(0, 5) : [],
         reportImplication: normalizeText(item.reportImplication)
       };
     });
@@ -190,13 +190,14 @@ async function editSelectedForFinalReport(selected = []) {
     "'الإطار التنسيقي ... لا حماية للمتورطين بالفساد' 기사에서는 시아조정기구(SCF)가 주체다. Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도자들이 방미 결과 및 국익 관련 합의 이행을 지지한 사실과, 사법기관 확인 부패 연루자에 대한 소속 불문 정치적 보호 배제 방침을 유지하라.",
     "원문에 없는 이란·이란 최고 의회·이란 의회·최고지도자를 추가하지 말라. 근거 없는 신뢰 회복·정치적 책임성 강화·영향 가능성 문장은 작성하지 말라.",
     "기사 간 반복을 제거하고, 번역투·홍보성 표현·일반론·근거 없는 시사점을 삭제하라.",
+    "여러 결정·지시·사업·현안을 함께 다룬 종합 회의·공식 발표 기사는 특정 세부 안건 하나로 축소하지 말라. reportBullet은 'M.D, 회의명/기관명 주요 의결 사항'으로 작성하고, reportSubBullets에 중요한 결정 3~5개를 각각 한 줄씩 정리하라. category는 개별 안건이 아닌 기사 전체 성격을 따른다.",
     "문체는 짧고 단정적인 명사형 보고서 문체를 사용한다.",
     "reportBullet은 최종 주간보고서에 바로 넣을 수 있도록 핵심 내용을 보고서 형식으로 압축하라. 반드시 1문장일 필요는 없지만 불필요하게 길게 쓰지 말라.",
     "reportBullet은 M.D 형식의 날짜로 시작하고 주체·장소·행동·결과를 포함하라. 기사 제목을 그대로 번역하지 말라.",
     "이라크·비스마야·한화·NIC·치안·유가·물류와 직접 연결되는 경우에만 사업 또는 파급효과를 언급하라. 연결 근거가 없으면 일반적인 영향 가능성을 덧붙이지 말라.",
     "기사에 없는 원인·전망·피해·정치적 의미를 추가하지 말라. '~하였다', '~하고 있다', '주목된다', '가능성이 있다' 같은 해설형 표현을 피하고 짧고 단정적인 보고서 문체를 사용하라.",
     "reportBullet은 대체로 45~80자 내외를 유지하되, 핵심 사실을 전달하기 위해 필요한 경우 문장을 나누어 작성할 수 있다.",
-    "reportSubBullets는 '* ' 없이 0~2개이며 reportBullet을 반복하지 않는다. 구체적 근거가 있는 사실이 없으면 빈 배열로 둔다.",
+    "reportSubBullets는 '* ' 없이 일반 기사는 0~2개, 종합 회의·공식 발표 기사는 3~5개이며 reportBullet을 반복하지 않는다. 구체적 근거가 있는 사실이 없으면 빈 배열로 둔다.",
     "reportImplication은 구체적인 정치·안보·경제·BNCP 사업 영향이 근거로 확인될 때만 1문장, 아니면 빈 문자열로 둔다.",
     "기관·인명 표기는 NIC, 청렴위원회, 시아조정기구(SCF), 인민동원군(PMF), 혁명수비대(IRGC), Al-Zaidi 총리, Al-Sudani 前 총리, Al-Maliki 前 총리 기준을 따른다.",
     "미군 철수·IS 재출현·안보공백·민병대 무장 유지·정부 무장해제 목표가 함께 제시된 기사에서는 철수일과 무장해제 목표일을 반드시 포함하고, 안보공백이 민병대의 무기 보유 명분이 되어 Al-Zaidi 총리 내각의 무장해제 추진을 방해할 수 있다는 기사 핵심을 유지하라. 원문에 없는 날짜나 해석은 추가하지 말라.",
@@ -258,7 +259,7 @@ function reportMain(article) {
   if (!/^\d{1,2}\.\d{1,2},/.test(base)) base = `${monthDay(article.publishedAt)}, ${base}`;
   return `- ${stripFinalPeriod(humanizeTerms(base))}.`;
 }
-function reportSubs(article) { return Array.isArray(article.reportSubBullets) ? article.reportSubBullets.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`).filter(Boolean).slice(0, 2) : []; }
+function reportSubs(article) { return Array.isArray(article.reportSubBullets) ? article.reportSubBullets.map((x) => `* ${stripFinalPeriod(humanizeTerms(x))}.`).filter(Boolean).slice(0, 5) : []; }
 function reportImplication(article) { return article.reportImplication ? `☞ ${stripFinalPeriod(humanizeTerms(article.reportImplication))}.` : ""; }
 function sourceNames(article = {}) {
   const names = (article.eventSources || []).map((item) => item.source).filter(Boolean);
