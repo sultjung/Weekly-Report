@@ -301,9 +301,25 @@
   async function loadNews() {
     loadSelection();
     try {
-      const res = await fetch(`./data/news.json?v=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
+      // Use the stable URL first. A unique timestamp during a GitHub Pages
+      // deployment can briefly reach an edge with mismatched assets, leaving
+      // the dashboard in an all-zero state.
+      const candidates = ["./data/news.json", `./data/news.json?v=${Date.now()}`];
+      let data = null;
+      let lastError = null;
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const payload = await res.json();
+          if (!Array.isArray(payload?.articles)) throw new Error("기사 목록 형식이 올바르지 않습니다.");
+          data = payload;
+          break;
+        } catch (error) {
+          lastError = error;
+        }
+      }
+      if (!data) throw lastError || new Error("뉴스 데이터 응답을 확인할 수 없습니다.");
       const rawArticles = Array.isArray(data.articles) ? data.articles : [];
       // Grouped data keeps every original article, but the dashboard shows one
       // representative card per event. The remaining source links are rendered
