@@ -1,7 +1,7 @@
 {
   "version": "weekly-report-translation-glossary-v1",
   "description": "이라크 주간 종합상황보고서용 누적 번역 용어집. 사용자가 지정한 용어는 여기에 추가하고, collect-news workflow가 뉴스 수집 후 자동 적용한다.",
-  "lastUpdated": "2026-07-13",
+  "lastUpdated": "2026-07-22",
   "terms": [
     {
       "source": "الهيئة الوطنية للاستثمار",
@@ -43,6 +43,20 @@
       "preferredKo": "Al-Sudani 前 총리",
       "aliases": ["Mohammed Shia Al-Sudani", "Mohammed Shia' Al Sudani", "Mohammed Shia al-Sudani", "Al-Sudani", "알수다니", "수다니 총리", "모하메드 시아 알수다니"],
       "note": "이라크 前 총리 표기. 현 총리는 Al-Zaidi 총리로 표기",
+      "enabled": true
+    },
+    {
+      "source": "أحمد الأسدي",
+      "preferredKo": "Ahmed Al-Asadi",
+      "aliases": ["Ahmed Al Asadi", "Ahmed al-Asadi", "Ahmad Al-Asadi", "Ahmad al-Asadi", "알아사디", "알 아사디", "아흐메드 알아사디", "아흐마드 알아사디"],
+      "note": "이라크 전 노동사회부 장관. 보고서에서는 Ahmed Al-Asadi 前 MOLSA 장관으로 간략 표기",
+      "enabled": true
+    },
+    {
+      "source": "وزارة العمل والشؤون الاجتماعية",
+      "preferredKo": "MOLSA",
+      "aliases": ["Ministry of Labour and Social Affairs", "Ministry of Labor and Social Affairs", "노동사회부", "노동·사회부", "노동부"],
+      "note": "이라크 노동사회부는 보고서에서 MOLSA로 통일",
       "enabled": true
     },
     {
@@ -202,6 +216,7 @@
     { "pattern": "자이드\\s+정부의\\s+완성", "replacement": "이라크 내각 구성" },
     { "pattern": "자이드\\s+정부", "replacement": "Al-Zaidi 총리 내각" },
     { "pattern": "Ali\\s+Al-Zaidi\\s+총리", "replacement": "Al-Zaidi 총리" },
+    { "pattern": "알\\s*Al-Zaidi", "replacement": "Al-Zaidi" },
     { "pattern": "이라크\\s+대통령\\s+자이디", "replacement": "Al-Zaidi 총리" },
     { "pattern": "대통령\\s+자이디", "replacement": "Al-Zaidi 총리" },
     { "pattern": "자이디\\s+대통령", "replacement": "Al-Zaidi 총리" },
