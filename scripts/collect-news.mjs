@@ -9,6 +9,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import { collectionPrompt, EDITORIAL_VERSION } from "./editorial-rules.mjs";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -22,6 +23,7 @@ const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPE
 const OPENAI_SUMMARY_FALLBACK_MODEL = process.env.OPENAI_SUMMARY_FALLBACK_MODEL || "gpt-4o-mini";
 let activeSummaryModel = OPENAI_SUMMARY_MODEL;
 let summaryFallbackLogged = false;
+const REUSABLE_EDITORIAL_VERSIONS = new Set([EDITORIAL_VERSION, "weekly-report-v12-human-editorial-method"]);
 const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 30);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 12);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 260);
@@ -540,7 +542,7 @@ function hasReusableAiSummary(item = {}) {
     hasUsableFullText(item);
   return !!(
     item.titleKo && item.summaryKo &&
-    item.aiSummaryVersion === "weekly-report-v5-evidence" &&
+    REUSABLE_EDITORIAL_VERSIONS.has(item.aiSummaryVersion) &&
     evidenceBacked &&
     !hasArabic(item.titleKo) && !hasArabic(item.summaryKo) &&
     !item.translationFailed &&
@@ -662,75 +664,7 @@ async function enrichArticle(item) {
     initialCategory: item.category3,
     initialReason: item.weeklyReportReason
   }, null, 2);
-  const prompt = [
-    "아래 이라크/중동 관련 기사를 주간 종합상황보고서 후보 기사로 분류·요약하라.",
-    "원문을 별도로 요약한 뒤 다시 번역하지 말고, 제공된 원문 근거에서 바로 한국어 핵심 요약을 한 번에 작성하라.",
-    "국가명·기관명·인명·날짜·수치·투자 대상은 원문 표기를 보존하고 서로 다른 기사나 배경지식을 섞지 말라.",
-    "sourceEvidenceLevel이 fulltext이면 본문 전체를 우선하고, rss-description이면 제목·설명에서 확인되는 사실 이상으로 확대하지 말라.",
-    "비스마야·BNCP·한화·NIC·하이더 마키야·아델 알야시리 관련 보도는 사업 핵심 뉴스로 보고 최우선(include, 높은 중요도) 처리하라.",
-    "반드시 JSON 객체만 출력하라. 마크다운 금지.",
-    "필수 키:",
-    "titleKo, summaryKo, category1, category2, category3, importanceScore, reportUsefulness, weeklyReportReason, reportBullet, reportSubBullets, reportImplication, actors, location, sourceReliability",
-    "category1은 domestic 또는 international.",
-    "category2는 politics_security, economy, international 중 하나.",
-    "category3는 politics, terror_security, oil_economy, regional, exclude 중 하나.",
-    "summaryKo는 3~5줄 한국어 요약. 제목 문장을 그대로 반복하지 말고, 기사 본문에서 확인되는 핵심 주장·비판 대상·조건·정치적 의미를 압축하라.",
-    "[사람 편집자 방식] 단순 번역·축약이 아니라, 먼저 기사 전체를 읽고 이번 주 보고서에서 실제로 보고할 사건의 중심축을 판단하라. 결정 주체, 실제 조치 또는 사건, 결과·진행 단계, 관련 맥락의 순서로 정리하며 자극적인 제목·인용문·세부 수치 하나를 전체 핵심으로 오인하지 말라.",
-    "titleKo는 카드에서 기사 성격을 즉시 알 수 있는 자연스러운 한국어 제목으로, reportBullet은 날짜로 시작하는 보고서 소제목으로 각각 작성하라. titleKo와 summaryKo에는 발행일·보고서 날짜를 절대 앞에 붙이지 말고, 날짜는 카드 상단 메타정보와 reportBullet에만 둬라. titleKo·reportBullet 모두 원문 제목의 기계적 번역이나 '혼란 발생', '우려 증가', '주목 필요' 같은 추상적 표현만으로 끝내지 말라.",
-    "summaryKo는 독자가 원문을 보지 않아도 누가·무엇을·어떻게 했고 현재 어느 단계인지 이해하도록 밀도 있게 작성한다. reportBullet에는 사건의 중심 사실만, reportSubBullets에는 체포·압수 규모·결정 조건·당사자 입장·후속 절차처럼 중심 문장에 넣지 않은 근거만 배치한다.",
-    "기사의 정치·사업상 맥락은 원문이 직접 제시한 연결고리가 있을 때만 포함한다. 사실(공식 발표·보도·당사자 부인·수사 단계)과 해석을 섞지 말고, 실질적으로 필요한 해석만 제한적으로 쓴다. 근거 없는 일반론은 빈 시사점보다 낫지 않다.",
-    "작성 전 내부 점검: 제목만 읽어도 사건 주체·사안이 보이는지, 보고 첫 줄이 날짜·주체·핵심 조치를 담는지, 하위 문장이 첫 줄을 반복하지 않고 근거를 더하는지, 원문에 없는 원인·전망·확정 판단이 없는지 확인하라.",
-    "먼저 기사가 단일 사안 기사인지, 여러 결정·지시·사업·현안을 함께 다룬 종합 회의·공식 발표 기사인지 판단하라. 정부·의회·정당·공공기관·국제기구 등의 회의 결과, 공동성명, 정책 패키지, 정례 브리핑, 업무보고가 후자에 해당한다.",
-    "종합 회의·공식 발표 기사에서는 특정 세부 안건 하나를 제목·핵심 요약·카테고리의 중심으로 삼지 말라. titleKo는 'M.D 회의명/기관명 주요 의결 사항' 또는 'M.D 기관명 종합 발표 주요 내용'처럼 기사 전체를 대표하게 작성하고, category는 개별 안건이 아닌 정부 운영·정책결정·의회 활동·대외정책 등 기사 전체 성격을 기준으로 정하라.",
-    "종합 기사 summaryKo는 정치·경제·사회·대외관계상 중요한 결정 3~5개를 번호 목록으로 정리하되, 결정 주체·조치 내용·대상 또는 목적이 드러나게 작성하라. 사소한 의전·행정 안건과 근거 없는 효과 전망은 제외하라.",
-    "종합 기사 reportBullet은 'M.D, 회의명/기관명 주요 의결 사항' 형식의 제목 역할을 하게 작성하고, reportSubBullets에 핵심 결정 3~5개를 번호 없이 각각 한 줄로 작성하라. 이 경우 reportImplication은 기사에 명시된 별도 사업·정치적 함의가 없으면 빈 문자열로 둔다.",
-    "제목이 자극적이거나 일부 발언만 강조한 경우 제목을 따라가지 말고 본문 전체의 핵심 정치 메시지를 우선하라.",
-    "정치인 인터뷰·논평·발언 기사는 반드시 다음 축을 확인하라: ① 누구를 지지/비판했는지, ② 어떤 정부·정당·기관을 겨냥했는지, ③ 구체 사례/부문/표현이 있는지, ④ 단서·조건·선 긋기가 있는지, ⑤ 이것이 정치적 방어선 또는 연정 내부 신호인지.",
-    "기관 주체를 제목의 단어만 보고 추론하지 말고 기사 본문 첫 문단과 성명 주체를 우선 확인하라. 'الإطار التنسيقي'는 이라크 시아조정기구(SCF)이며 이란 최고 의회·이란 의회·이라크 의회로 번역하지 말라. 'مجلس النواب'만 이라크 의회, 'مجلس الوزراء'만 국무회의/내각회의를 뜻한다.",
-    "'الإطار التنسيقي ... لا حماية للمتورطين بالفساد' 유형의 기사에서는 주체를 반드시 시아조정기구(SCF)로 표기하라. 핵심은 Al-Maliki 前 총리 사무실에서 Al-Zaidi 총리와 SCF 지도자들이 방미 결과 및 국익 관련 합의 이행을 지지한 사실과, 사법기관이 부패 연루를 확인한 인물에게 소속과 관계없이 정치적 보호를 제공하지 않겠다는 방침이다.",
-    "위 유형의 기사에서 이란·이란 최고 의회·이란 의회·최고지도자 등 원문에 없는 주체를 절대 추가하지 말라. 근거 없는 '신뢰 회복 가능성'이나 '정치적 책임성 강화로 해석' 같은 일반론도 금지한다.",
-    "반부패·체포·압수수색·부패 폭로 기사에서는 단순히 '반부패 필요'라고 쓰지 말고, 전 정부 비판인지, 신임 총리 지지인지, 법적 절차 요구인지, 특정 세력 견제인지 구분하라.",
-    "수사·부패 의혹 기사는 사실의 법적 단계를 엄격히 구분하라. 언론 보도·소식통 주장·체포영장 발부설·압수수색·압수물 발견·당사자 부인·검찰 또는 법원의 공식 확인을 서로 같은 사실로 쓰지 말고, 원문에 있는 단계만 '보도', '주장', '설', '확인', '부인'으로 정확히 표기하라. 공식 발표·법원 문서가 없으면 체포·유죄·부패 연루를 단정하지 말라.",
-    "정치권 관련성은 기사 근거가 있을 때만 적어라. 특정 인사의 의혹이 여당·연정·정당·정치연합에 미칠 영향은 해당 세력의 반응, 보호·비호 여부, 회의·성명 또는 내부 갈등이 원문에 제시될 때만 구체적으로 설명한다. 근거 없이 '정부 연합 혼란', '정치적 압력 증가', '불안정성 증대' 같은 일반적 해석을 제목·요약·시사점에 추가하지 말라.",
-    "이라크 인물은 특별히 정한 예외를 제외하고 영문식 '이름 + Al-가문명'으로 간략 표기하고, 한국어 음역·부친명·조부명을 섞지 말라. 직책·전직 여부가 중요하면 뒤에 붙인다. 예: Ahmed Al-Asadi 前 MOLSA 장관, Al-Zaidi 총리. 이라크 부처·주요 정부기관은 보고서에서 통용되는 영문 약어를 우선 사용하며, 최초 표기부터 하나의 약어로 통일한다.",
-    "[치안 작전 기사 편집 원칙] 치안·테러·무기·드론 제조 관련 기사는 원문 제목을 직역하거나 사건을 자극적으로 부르지 말고, 실제 작전 결과를 중심으로 재구성하라. 먼저 치안기관의 공식 작전·압수수색 발표인지, 언론 또는 소식통의 주장인지 구분한다. 공식 작전 기사라면 발표 기관, 적발 장소, 작전 대상, 체포·압수 결과, 현재 수사 단계를 사실 순서로 정리한다. '음모', '테러조직', '무장세력 연계' 같은 법적·정치적 평가는 원문 또는 공식 발표가 명시한 경우에만 사용한다.",
-    "카드 제목과 reportBullet은 '기관 + 장소 + 실제 적발 대상 또는 조치'가 즉시 보이게 작성한다. 예: '이라크 국가안보국(NSS), 바그다드 내 불법 드론 제조시설 적발'. 장소는 기사 작성지(dateline)가 아니라 실제 사건 발생지이며, 한국어로 널리 쓰이는 지명은 바그다드·바스라·나자프처럼 한국어 표기를 우선한다. NSS는 '국가안보국(NSS)'으로 통일한다.",
-    "드론·무기 제조시설 적발 기사는 '제조 음모 차단'처럼 추상적·과장된 제목을 사용하지 않는다. summaryKo에는 용의자 수, 드론 기체·부품 등 압수 규모, 최종 조립·운용 배치 전 적발 여부, 원문에 명시된 추가 수사 범위를 포함한다. '드론 동체 25개'처럼 번역투로 쓰지 말고, 실제 의미에 맞게 '드론 기체 25대분'처럼 자연스러운 보고서 용어를 사용한다.",
-    "지역 무장세력 연계·자재 조달망 등은 원문에 확대 수사 사실이 있을 때만 '연계 및 조달망 확대 조사 중'처럼 수사 단계로 표기하고, 실제 연계 사실로 단정하지 않는다. 이 유형의 reportBullet은 'M.D, 국가안보국(NSS), 바그다드 내 불법 드론 제조시설 적발' 형식을 우선하며, reportSubBullets에는 체포·압수 결과와 추가 수사 범위를 각각 한 줄로 정리한다.",
-    "보고서 전체 문체는 사람이 작성한 정세보고 문체를 따른다. 간결한 명사형·음슴체를 사용하고 장황한 설명문을 피하라.",
-    "reportBullet은 최종 주간보고서에 바로 넣을 수 있도록 핵심 내용을 보고서 형식으로 압축하라. 반드시 1문장일 필요는 없지만 불필요하게 길게 쓰지 말라.",
-    "reportBullet은 M.D 형식의 날짜로 시작하고 주체·장소·행동·결과를 포함하라. 기사 제목을 그대로 번역하지 말라.",
-    "이라크·비스마야·한화·NIC·치안·유가·물류와 직접 연결되는 경우에만 사업 또는 파급효과를 언급하라. 연결 근거가 없으면 일반적인 영향 가능성을 덧붙이지 말라.",
-    "기사에 없는 원인·전망·피해·정치적 의미를 추가하지 말라. '~하였다', '~하고 있다', '주목된다', '가능성이 있다' 같은 해설형 표현을 피하고 짧고 단정적인 보고서 문체를 사용하라.",
-    "reportBullet은 보통 45~90자 내외로 압축하되, 글자 수 때문에 사건의 핵심 조건·결과를 버리지 말라. 복합 사안은 한 줄 제목과 서로 다른 근거의 하위 문장으로 나눈다.",
-    "reportBullet의 주체는 기관·인물·언론·소식통을 명확히 적어라. 예: 'Al-Zaidi 총리', '이라크 의회', '시아조정기구(SCF) 소식통', '혁명수비대(IRGC)', '美 중부사령부'.",
-    "reportBullet에서는 '이라크 정치 조정 기구', '정치적 조정 기구'라고 쓰지 말고 반드시 '시아조정기구(SCF)'로 표기하라.",
-    "reportBullet과 reportSubBullets에서 '자이드 정부'라고 쓰지 말고 'Al-Zaidi 총리' 또는 'Al-Zaidi 총리 내각'으로 표기하라.",
-    "인명·기관명은 보고서식 표기를 사용하라: Al-Zaidi 총리, Al-Sudani 前 총리, Al-Maliki 前 총리, Al-Sadr, Al-Sistani, Khamenei, Soleimani, Pezeshkian 대통령, Trump 대통령, 인민동원군(PMF), 혁명수비대(IRGC), 시리아민주군(SDF), 시리아국가군(SNA).",
-    "지명은 가능하면 영문식으로 표기하라: Baghdad, Teheran, Najaf, Karbala, Qom, Salah al-Din州, Baghdad州.",
-    "reportSubBullets는 '* ' 없이 0~2개. reportBullet에 담지 못한 구체적 사실이 있을 때만 작성하고, 기대·가능성·영향을 일반론으로 덧붙이지 말라.",
-    "정치인 인터뷰/발언 기사 reportSubBullets 구성 예시: ① 전 정부 또는 경쟁 세력에 대한 비판, ② 부패·치안·내각 등 구체 쟁점, ③ 지지하되 법적 절차·제도적 통제 필요 등 단서.",
-    "reportSubBullets 예시: '전 정부 시기 부패가 단순 부패를 넘어 약탈 수준으로 확대되었다고 비판', '전력·항만 등 주요 부문에서 부패 확산을 지적', '반부패 작전 지속 필요성을 인정하면서도 법적 절차와 제도적 기준 내 진행 필요성 언급'.",
-    "reportImplication은 '☞' 없이 0~1문장. 분석 기사, 배경설명, 조직 정의, 파급효과가 분명할 때만 작성하라. 근거가 약하면 빈 문자열로 둬라.",
-    "reportImplication은 '정치적 압박 강화 가능성', '정치적 의지 강화 가능성' 같은 일반론을 금지한다. 구체적 분석 축을 써라.",
-    "정치인 발언의 시사점은 '공개 지지', '조건부 지지', '정치적 방어선', '연정 내부 견제', '전 정부 책임론', '수사 확대 가능성 차단' 중 실제 근거가 있는 축으로 작성하라.",
-    "reportImplication 예시: 'Al-Maliki 前 총리의 공개 지지는 Al-Zaidi 총리의 반부패 드라이브에 힘을 실어주는 동시에, 향후 수사 범위가 법치국가연합·시아조정기구(SCF) 내부로 확대될 가능성에 대비한 정치적 방어선 설정으로 해석.', '인민동원군(PMF) : IS 격퇴를 위해 창설된 非정규군으로 친이란 무장단체들이 소속되어 있어 이란 영향력 하 운영.'",
-    "美·이스라엘-이란 분쟁, 시리아 SDF-SNA 교전, 가자/하마스 인질 관련 기사는 국제사회 섹션 후보로 적극 분류하라.",
-    "PMF 해체·무장해제, Al-Sadr·Al-Sistani의 PMF 관련 입장, Soleimani 추모, Khamenei의 미군 철수 촉구는 이라크 국내 정치/치안 동향 후보로 적극 분류하라.",
-    "미군 철수와 IS 재출현·안보공백을 함께 다루는 중요도 70점 이상 안보 기사는 ① 철수 예정일, ② IS 재출현 또는 안보공백 우려, ③ 민병대가 무기 보유를 계속 주장할 수 있는 명분, ④ Al-Zaidi 총리 내각의 무장해제 추진 및 기사에 명시된 목표일 사이의 충돌을 본문 근거에 따라 연결해 요약하라. 기사에 날짜가 명시된 경우 반드시 날짜를 적고, 기사에 없는 날짜는 추정하지 말라.",
-    "위 유형의 reportBullet은 제목을 반복하지 말고 철수 일정과 정책 충돌을 함께 담아 2~3문장으로 작성할 수 있다. reportSubBullets에는 안보공백·민병대 무장 유지 명분·정부 무장해제 목표 차질 중 reportBullet에 담지 못한 구체적 사실만 적어라.",
-    "보고서 문체는 '~하였다/했다/하고 있다'를 피하고 '~참석', '~강조', '~비판', '~지지', '~조건 제시', '~전망', '~제기', '~촉구', '~체결', '~승인', '~감행', '~시사' 형태를 우선한다.",
-    "기사 제목이 '전투탱크', '공격하고 싶어했다'처럼 부분 발언을 강조하더라도, 그것이 본문의 핵심이 아니면 reportBullet의 중심으로 삼지 말고 보조 설명으로 낮춰라.",
-    "한 문단 안에서 같은 사실을 두 번 반복하지 말라. reportBullet에 쓴 문장을 reportSubBullets에서 다시 풀어쓰지 말라.",
-    "이라크와 무관한 국제뉴스, 스포츠, 연예, 광고성 기사는 exclude.",
-    "농업·축산·감자·종자·식량안보·농산물 생산처럼 비스마야/주거도시·NIC·한화·정치·치안·에너지와 직접 연결되지 않은 기사는 경제·국제유가 기사로 분류하지 말고 반드시 exclude.",
-    "영국·유럽·미국 등 제3국의 현지 범죄·테러·반이슬람 사건은 이라크 정부·국민·공관·사업 또는 중동 안보에 직접 연결되지 않으면 반드시 exclude 처리하라.",
-    "제3국의 현지 치안 사건을 '이라크 주간 테러 상황'으로 분류하지 말라.",
-    "기사에 없는 숫자, 인과관계, 전망을 만들지 말라.",
-    "시아조정기구(SCF) 내부 갈등, 장관 후보자 미확정, 내각 완성 지연, 총리 방미 이후 전망, 의회 본회의 재개, 장관 신임투표 미실시, NIC 의장 해임안, 청렴위원회 이관 관련 기사는 정치권 동향 핵심 후보로 적극 분류하라.",
-    "건설주택부의 신규 주거도시, 환경기준, 도시계획 기준, 단열재, 녹지비율, 자국 건설자재 우선 사용 관련 기사는 주간보고서 경제/투자환경 후보로 적극 분류하라.",
-    "국가투자위원회는 NIC로 표기하고, 부패방지위원회보다 청렴위원회 표현을 사용하라."
-  ].join("\n");
+  const prompt = collectionPrompt();
   try {
     let parsed = parseJsonObject(await aiKorean(prompt, input));
     const invalid = () => !parsed || !parsed.titleKo || !parsed.summaryKo || hasArabic(parsed.titleKo) || hasArabic(parsed.summaryKo);
@@ -763,7 +697,7 @@ async function enrichArticle(item) {
       location: clean(parsed.location),
       sourceReliability: clean(parsed.sourceReliability || "일반 언론"),
       selected: false,
-      aiSummaryVersion: "weekly-report-v5-evidence"
+      aiSummaryVersion: EDITORIAL_VERSION
     };
   } catch (err) {
     console.warn(`[ai] failed: ${item.title} - ${err.message || err}`);
@@ -778,7 +712,9 @@ async function main() {
   let articles = uniqueRecent([...google.articles, ...direct.articles], MAX_TOTAL);
   const previousArticles = await loadPreviousArticles();
   const previousMap = await loadPreviousMap();
-  articles = articles.map((item) => reuseFromPrevious(item, previousMap));
+  articles = articles
+    .map((item) => reuseFromPrevious(item, previousMap))
+    .filter((item) => scoreCandidate(item).reportUsefulness !== "exclude");
   articles = articles.map((item) => {
     const baseline = scoreCandidate(item);
     if (baseline.reportUsefulness === "exclude" || baseline.category3 === "exclude") {
@@ -800,7 +736,7 @@ async function main() {
   });
 
   const eligible = articles
-    .filter((item) => !item.aiCacheHit && canSummarizeFromEvidence(item))
+    .filter((item) => !item.aiCacheHit && item.reportUsefulness !== "exclude" && item.category3 !== "exclude" && canSummarizeFromEvidence(item))
     .sort((a, b) => Number(b.importanceScore || 0) - Number(a.importanceScore || 0) || new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0))
     .slice(0, MAX_NEW_AI_ITEMS);
 

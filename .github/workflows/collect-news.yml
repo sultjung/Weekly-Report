@@ -3,9 +3,8 @@ name: Collect Iraq Weekly News
 on:
   workflow_dispatch:
   schedule:
-    # KST 06:17 primary, 06:47 backup retry
+    # KST 06:17 daily. The job already retries collection up to three times.
     - cron: "17 21 * * *"
-    - cron: "47 21 * * *"
 
 permissions:
   contents: write

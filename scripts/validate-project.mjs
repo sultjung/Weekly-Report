@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { EDITORIAL_VERSION, editorialPromptBytes } from "./editorial-rules.mjs";
 
 const ROOT = process.cwd();
 const readJson = async (file) => JSON.parse(await fs.readFile(path.join(ROOT, file), "utf8"));
@@ -36,10 +37,36 @@ if (scriptRefs.length !== 1 || scriptRefs[0] !== "app.js") {
   throw new Error(`index.html must load only app.js; found: ${scriptRefs.join(", ")}`);
 }
 
+const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
+if ((appJs.match(/function buildWordHtml\s*\(/g) || []).length !== 1 || (appJs.match(/window\.buildWordHtml\s*=/g) || []).length !== 1) {
+  throw new Error("app.js must expose exactly one buildWordHtml implementation");
+}
+if ((appJs.match(/new MutationObserver\s*\(/g) || []).length > 1) {
+  throw new Error("app.js must not register multiple article-list observers");
+}
+
+const packageJson = await readJson("package.json");
+if (packageJson.scripts?.collect !== "node scripts/collect-news.mjs") {
+  throw new Error("npm run collect must execute the canonical collector directly");
+}
+try {
+  await fs.access(path.join(ROOT, "scripts/run-report-style-collector.mjs"));
+  throw new Error("Runtime collector patch wrapper must remain removed");
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
+
+const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
+if (/47 21 \* \* \*/.test(workflow)) throw new Error("Unconditional 06:47 backup schedule must remain removed");
+const promptBytes = editorialPromptBytes();
+if (promptBytes < 4000 || promptBytes > 6000) {
+  throw new Error(`Collection prompt must remain within the 4-6KB budget; found ${promptBytes} bytes`);
+}
+
 const syntaxFiles = [
   "app.js",
+  "scripts/editorial-rules.mjs",
   "scripts/collect-news.mjs",
-  "scripts/run-report-style-collector.mjs",
   "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
@@ -58,4 +85,4 @@ for (const file of syntaxFiles) {
   const result = spawnSync(process.execPath, ["--check", file], { stdio: "inherit" });
   if (result.status !== 0) process.exit(result.status || 1);
 }
-console.log(`Validated ${queries.length} search queries, ${sources.length} media sources and ${syntaxFiles.length} JavaScript files.`);
+console.log(`Validated ${queries.length} queries, ${sources.length} sources, ${syntaxFiles.length} JavaScript files, editorial policy ${EDITORIAL_VERSION} (${promptBytes} bytes).`);
