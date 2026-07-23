@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-07-22T23:45:31.270Z",
+  "generatedAt": "2026-07-23T06:46:25.092Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
     "total": 260,
-    "politics": 56,
-    "terror_security": 87,
-    "oil_economy": 55,
-    "regional": 56,
-    "exclude": 6
+    "politics": 53,
+    "terror_security": 75,
+    "oil_economy": 60,
+    "regional": 69,
+    "exclude": 3
   },
   "archive": {
-    "previous": 257,
-    "carriedForward": 101
+    "previous": 254,
+    "carriedForward": 84
   },
-  "elapsedSeconds": 334,
-  "recursiveGlossaryArtifactFixedCount": 1,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-22T23:46:21.145Z",
-  "knownPoliticalSummaryFixedCount": 2,
-  "knownPoliticalSummaryFixedAt": "2026-07-22T23:46:21.194Z",
-  "untranslatedFilteredCount": 4,
-  "untranslatedFilteredAt": "2026-07-22T23:46:21.282Z",
+  "elapsedSeconds": 376,
+  "recursiveGlossaryArtifactFixedCount": 0,
+  "recursiveGlossaryArtifactFixedAt": "2026-07-23T06:47:46.190Z",
+  "knownPoliticalSummaryFixedCount": 3,
+  "knownPoliticalSummaryFixedAt": "2026-07-23T06:47:46.257Z",
+  "untranslatedFilteredCount": 1,
+  "untranslatedFilteredAt": "2026-07-23T06:47:46.358Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-22T23:46:21.336Z",
+  "datelineLocationCorrectedAt": "2026-07-23T06:47:46.433Z",
   "aiHallucinationFilteredCount": 2,
-  "aiHallucinationFilteredAt": "2026-07-22T23:46:21.389Z",
+  "aiHallucinationFilteredAt": "2026-07-23T06:47:46.512Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-22T23:46:21.445Z",
+  "irrelevantForeignFilteredAt": "2026-07-23T06:47:46.584Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-22T23:46:21.494Z",
-  "eventCount": 224,
-  "eventDuplicateArticleCount": 36,
-  "eventGroupedAt": "2026-07-22T23:46:21.857Z"
+  "duplicateCollapsedAt": "2026-07-23T06:47:46.647Z",
+  "eventCount": 219,
+  "eventDuplicateArticleCount": 41,
+  "eventGroupedAt": "2026-07-23T06:47:47.235Z"
 }
