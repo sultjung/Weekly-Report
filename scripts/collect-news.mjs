@@ -198,7 +198,7 @@ function scoreCandidate(item = {}) {
   if (/alsumaria\.tv\/watch\/|\b(?:MIC|Live Talk)\b|الممثلة|الممثل|الفنان|أبراج|ترفيه|منوعات|استديو|الحلقة\s*[٠-٩0-9]+/i.test(titleAndUrl)) excluded.push("연예/방송 프로그램");
   if (excluded.length) return { score: -999, category3: "exclude", reportUsefulness: "exclude", reason: excluded.join(", ") };
 
-  const iraqContext = hasAny(text, ["العراق", "عراقي", "بغداد", "البصرة", "كركوك", "ديالى", "ميسان", "الأنبار", "نينوى", "iraq", "iraqi", "baghdad", "basra", "kirkuk", "erbil", "이라크", "바그다드"]);
+  const iraqContext = hasAny(text, ["العراق", "عراقي", "بغداد", "البصرة", "كركوك", "ديالى", "ميسان", "الأنبار", "نينوى", "علي الزيدي", "iraq", "iraqi", "baghdad", "basra", "kirkuk", "erbil", "ali al-zaidi", "al-zaidi", "이라크", "바그다드"]);
   const bismayahDirect = hasAny(text, ["بسماية", "بسمايه", "مشروع بسماية", "مدينة بسماية", "مدينة بسماية الجديدة", "مجمع بسماية", "bismayah", "비스마야"]);
   const bismayahStakeholder = hasAny(text, ["حيدر مكية", "حيدر مكيه", "عادل الياسري", "شركة هانوا", "هانوا", "hanwha"]);
   const bismayahInstitutional = hasAny(text, ["الهيئة الوطنية للاستثمار", "هيئة الاستثمار", "مشروع سكني في العراق", "مدينة سكنية في العراق", "شركة كورية"]);
@@ -223,7 +223,7 @@ function scoreCandidate(item = {}) {
   let category3 = "politics";
   let reason = "이라크 주간 정세 참고자료";
 
-  if (iraqContext && hasAny(text, ["مجلس الوزراء", "رئيس الوزراء", "السوداني", "مجلس النواب", "البرلمان", "انتخابات", "حكومة", "الإطار التنسيقي", "المالكي", "الصدر", "النزاهة", "فساد", "استجواب", "هيئة الاستثمار", "cabinet", "parliament", "election", "government", "corruption", "정치", "의회", "정부", "선거"])) {
+  if (iraqContext && hasAny(text, ["مجلس الوزراء", "رئيس الوزراء", "الزيدي", "السوداني", "مجلس النواب", "البرلمان", "انتخابات", "حكومة", "الإطار التنسيقي", "المالكي", "الصدر", "النزاهة", "فساد", "استجواب", "هيئة الاستثمار", "cabinet", "prime minister", "al-zaidi", "parliament", "election", "government", "corruption", "정치", "의회", "정부", "선거"])) {
     score = Math.max(score, 72); category3 = "politics"; reason = "정치권 동향 후보";
   }
   if (iraqContext && hasAny(text, ["الحقائب الوزارية", "المرشحين للوزارات", "مرشحي الوزارات", "المرشحون للوزارات", "الكابينة الوزارية", "اكتمال الكابينة", "استكمال الكابينة", "الخلافات الداخلية", "زيارة واشنطن", "زيارة الولايات المتحدة", "التصويت على الوزراء", "منح الثقة", "جلسة مجلس النواب", "استئناف جلساته", "إعفاء رئيس الهيئة الوطنية للاستثمار", "إقالة رئيس الهيئة الوطنية للاستثمار", "رئيس الهيئة الوطنية للاستثمار", "هيئة النزاهة", "إحالته إلى النزاهة", "ملفات الفساد", "ministerial candidates", "ministerial portfolios", "cabinet completion", "complete the cabinet", "internal disputes", "internal conflict", "washington visit", "us visit", "confidence vote", "vote of confidence", "resume session", "National Investment Commission", "NIC chair", "NIC chairman", "dismissal", "Integrity Commission", "corruption files", "장관 후보자", "장관 후보", "내각 완성", "내각 구성", "내각 지연", "총리 방미", "미국 방문", "방미 이후", "내부 갈등", "신임투표", "신임 투표", "본회의 재개", "NIC 의장 해임", "국가투자위원회 의장 해임", "청렴위원회 이관", "부패 의혹"])) {
