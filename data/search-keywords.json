@@ -25,6 +25,9 @@
   "iraq_politics_government": [
     "\"العراق\" \"مجلس الوزراء\"",
     "\"العراق\" \"رئيس الوزراء\"",
+    "\"علي الزيدي\"",
+    "\"الزيدي\" \"طهران\"",
+    "\"الزيدي\" \"إيران\"",
     "\"محمد شياع السوداني\"",
     "\"العراق\" \"مجلس النواب\"",
     "\"البرلمان العراقي\"",
@@ -143,6 +146,7 @@
   ],
   "english_iraq": [
     "\"Iraq\" \"Council of Ministers\"",
+    "\"Iraq\" \"Ali Al-Zaidi\"",
     "\"Iraq\" \"Al-Sudani\"",
     "\"Iraq\" \"parliament\" \"election\"",
     "\"Iraq\" \"Coordination Framework\"",
