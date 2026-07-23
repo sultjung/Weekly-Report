@@ -22,6 +22,13 @@ const sourceText = JSON.stringify(sources).toLowerCase();
 if (sourceText.includes("ninanews.com") || sources.some((source) => String(source.id || "").toLowerCase() === "nina")) {
   throw new Error("NINA must remain excluded from configured sources");
 }
+const alJazeera = sources.find((source) => source.id === "aljazeera-arabic" && source.enabled !== false);
+if (!alJazeera || !(alJazeera.listPages || []).some((url) => /aljazeera\.net\/where\/mideast\/arab\/iraq/i.test(url))) {
+  throw new Error("Al Jazeera Arabic Iraq source is missing or disabled");
+}
+for (const required of ["\"علي الزيدي\"", "\"الزيدي\" \"طهران\""]) {
+  if (!queries.includes(required)) throw new Error(`Current Iraqi PM search keyword missing: ${required}`);
+}
 
 const indexHtml = await fs.readFile(path.join(ROOT, "index.html"), "utf8");
 const scriptRefs = [...indexHtml.matchAll(/<script\s+src="\.\/([^"?]+)(?:\?[^\"]*)?"/g)].map((match) => match[1]);
