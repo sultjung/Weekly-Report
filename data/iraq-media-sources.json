@@ -73,6 +73,19 @@
     "sitemapUrls": ["https://www.reuters.com/arc/outboundfeeds/news-sitemap/?outputType=xml"]
   },
   {
+    "id": "aljazeera-arabic",
+    "name": "Al Jazeera Arabic",
+    "baseUrl": "https://www.aljazeera.net/",
+    "enabled": true,
+    "focus": "iraq-politics-analysis",
+    "listPages": [
+      "https://www.aljazeera.net/where/mideast/arab/iraq/",
+      "https://www.aljazeera.net/politics/"
+    ],
+    "rssUrls": [],
+    "sitemapUrls": []
+  },
+  {
     "id": "middle-east-forum",
     "name": "Middle East Forum",
     "baseUrl": "https://www.meforum.org/",
