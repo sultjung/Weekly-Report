@@ -17,7 +17,7 @@ const MIN_SCORE = Number(process.env.REPORT_REFINEMENT_MIN_SCORE || 70);
 const MAX_ITEMS = Number(process.env.MAX_REPORT_REFINEMENT_ITEMS || 20);
 const CONCURRENCY = Number(process.env.REPORT_REFINEMENT_CONCURRENCY || 2);
 const VERSION = `${EDITORIAL_VERSION}-refinement`;
-const REUSABLE_VERSIONS = new Set([VERSION, "weekly-report-writing-v6-security-operations"]);
+const REUSABLE_VERSIONS = new Set([VERSION]);
 
 function clean(value = "") {
   return String(value || "").replace(/^[-*·•\s]+/, "").replace(/^☞\s*/, "").replace(/\s+/g, " ").trim();

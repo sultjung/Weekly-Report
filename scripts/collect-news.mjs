@@ -9,6 +9,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import { pathToFileURL } from "node:url";
 import { collectionPrompt, EDITORIAL_VERSION } from "./editorial-rules.mjs";
 
 const ROOT = process.cwd();
@@ -23,7 +24,7 @@ const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPE
 const OPENAI_SUMMARY_FALLBACK_MODEL = process.env.OPENAI_SUMMARY_FALLBACK_MODEL || "gpt-4o-mini";
 let activeSummaryModel = OPENAI_SUMMARY_MODEL;
 let summaryFallbackLogged = false;
-const REUSABLE_EDITORIAL_VERSIONS = new Set([EDITORIAL_VERSION, "weekly-report-v12-human-editorial-method"]);
+const REUSABLE_EDITORIAL_VERSIONS = new Set([EDITORIAL_VERSION]);
 const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 30);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 12);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 260);
@@ -75,13 +76,38 @@ async function loadGoogleNewsQueries() {
   const config = JSON.parse(await fs.readFile(SEARCH_KEYWORDS_FILE, "utf8"));
   const queries = Object.entries(config)
     .filter(([key]) => !key.startsWith("_"))
-    .flatMap(([, values]) => Array.isArray(values) ? values : [])
-    .map((value) => String(value || "").trim())
-    .filter(Boolean);
+    .flatMap(([group, values]) => (Array.isArray(values) ? values : []).map((value) => ({
+      query: String(value || "").trim(),
+      group,
+      ...queryPolicy(group)
+    })))
+    .filter((item) => item.query);
 
   if (!queries.length) throw new Error("No Google News queries configured in data/search-keywords.json");
-  if (new Set(queries).size !== queries.length) throw new Error("Duplicate Google News queries found in data/search-keywords.json");
+  if (new Set(queries.map((item) => item.query)).size !== queries.length) throw new Error("Duplicate Google News queries found in data/search-keywords.json");
   return queries;
+}
+
+export function queryPolicy(group = "") {
+  if (group === "korean_oil_market") {
+    return { collectionLane: "oil_market", forcedCategory3: "oil_economy", locale: { hl: "ko", gl: "KR", ceid: "KR:ko" } };
+  }
+  if (group === "korean_middle_east") {
+    return { collectionLane: "regional_context", forcedCategory3: "regional", locale: { hl: "ko", gl: "KR", ceid: "KR:ko" } };
+  }
+  if (group === "english_middle_east_fallback") {
+    return { collectionLane: "regional_context", forcedCategory3: "regional", locale: { hl: "en-US", gl: "US", ceid: "US:en" } };
+  }
+  if (group === "arabic_iraq_politics") {
+    return { collectionLane: "arabic_iraq_politics", forcedCategory3: "politics", locale: { hl: "ar", gl: "IQ", ceid: "IQ:ar" } };
+  }
+  if (group === "arabic_iraq_security_protests") {
+    return { collectionLane: "arabic_iraq_security", forcedCategory3: "terror_security", locale: { hl: "ar", gl: "IQ", ceid: "IQ:ar" } };
+  }
+  if (group === "english_iraq_politics_security") {
+    return { collectionLane: "iraq_politics_security", forcedCategory3: "", locale: { hl: "en-US", gl: "US", ceid: "US:en" } };
+  }
+  return { collectionLane: "core_bncp", forcedCategory3: "politics", locale: { hl: "ko", gl: "KR", ceid: "KR:ko" } };
 }
 
 const GOOGLE_NEWS_QUERIES = await loadGoogleNewsQueries();
@@ -166,8 +192,12 @@ async function fetchText(url, options = {}) {
 }
 
 function extractTag(xml = "", tag = "") { const match = String(xml || "").match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i")); return match ? decodeHtml(match[1]) : ""; }
-function googleNewsRssUrl(query) { const params = new URLSearchParams({ q: `${query} when:${DAYS}d`, hl: "ar", gl: "IQ", ceid: "IQ:ar" }); return `https://news.google.com/rss/search?${params.toString()}`; }
-function parseRssItems(xml = "", query = "") {
+function googleNewsRssUrl(spec = {}) {
+  const locale = spec.locale || { hl: "ar", gl: "IQ", ceid: "IQ:ar" };
+  const params = new URLSearchParams({ q: `${spec.query || ""} when:${DAYS}d`, ...locale });
+  return `https://news.google.com/rss/search?${params.toString()}`;
+}
+function parseRssItems(xml = "", spec = {}) {
   const blocks = String(xml || "").match(/<item>[\s\S]*?<\/item>/gi) || [];
   return blocks.map((block) => {
     const rawTitle = extractTag(block, "title");
@@ -182,7 +212,10 @@ function parseRssItems(xml = "", query = "") {
       source,
       publishedAt: pubDate ? new Date(pubDate).toISOString() : "",
       url: normalizeUrl(extractTag(block, "link")),
-      query,
+      query: spec.query || "",
+      queryGroup: spec.group || "",
+      collectionLane: spec.collectionLane || "",
+      forcedCategory3: spec.forcedCategory3 || "",
       description: stripTags(extractTag(block, "description")),
       collectionMethod: "google-news-rss",
       sourceType: "google-news-rss"
@@ -190,76 +223,99 @@ function parseRssItems(xml = "", query = "") {
   }).filter((item) => item.title && item.url);
 }
 
-function scoreCandidate(item = {}) {
+function hasArabicPoliticsSignal(text = "") {
+  return hasAny(text, [
+    "مجلس الوزراء", "رئيس الوزراء", "علي الزيدي", "الزيدي", "السوداني",
+    "مجلس النواب", "البرلمان", "انتخابات", "الحكومة", "الإطار التنسيقي",
+    "المالكي", "الصدر", "السيستاني", "الحشد الشعبي", "الحقائب الوزارية",
+    "الكابينة الوزارية", "منح الثقة", "النزاهة", "مكافحة الفساد",
+    "رئيس الهيئة الوطنية للاستثمار", "إعفاء", "إقالة"
+  ]);
+}
+
+function hasArabicSecurityOrProtestSignal(text = "") {
+  return hasAny(text, [
+    "داعش", "إرهاب", "ارهاب", "هجوم إرهابي", "هجوم مسلح", "اشتباك",
+    "عبوة ناسفة", "تفجير", "انتحاري", "اغتيال", "إطلاق نار", "قصف",
+    "صاروخ", "طائرة مسيرة", "خطف", "الوضع الأمني", "تظاهرات", "احتجاجات",
+    "اعتصام", "متظاهرين", "إغلاق الطرق", "المنطقة الخضراء"
+  ]);
+}
+
+function hasOilMarketSignal(text = "") {
+  return hasAny(text, [
+    "국제유가", "두바이유", "브렌트유", "서부텍사스유", "WTI", "원유 가격",
+    "유가 상승", "유가 하락", "원유 공급", "OPEC", "oil price", "crude oil",
+    "brent", "west texas intermediate", "dubai crude"
+  ]);
+}
+
+export function scoreCandidate(item = {}) {
   const text = articleText(item);
   const titleAndUrl = `${item.title || ""}\n${item.url || ""}`;
-  const regionalSignals = regionalExposureSignals([item.title, item.titleKo].filter(Boolean).join("\n"));
+  const titleText = [item.title, item.titleKo, item.description].filter(Boolean).join("\n");
+  const regionalSignals = regionalExposureSignals(titleText);
   const excluded = [];
   if (/ladbrokes|betting|odds|fixture|score|football|soccer|match|cup|world cup|youtube|tiktok|مباراة|منتخب|كرة|الدوري/i.test(text)) excluded.push("스포츠/베팅/영상성");
   if (/facebook\.com|instagram\.com|x\.com|twitter\.com/i.test(`${item.source || ""}\n${item.url || ""}`)) excluded.push("SNS 출처");
   if (/alsumaria\.tv\/watch\/|\b(?:MIC|Live Talk)\b|الممثلة|الممثل|الفنان|أبراج|ترفيه|منوعات|استديو|الحلقة\s*[٠-٩0-9]+/i.test(titleAndUrl)) excluded.push("연예/방송 프로그램");
   if (excluded.length) return { score: -999, category3: "exclude", reportUsefulness: "exclude", reason: excluded.join(", ") };
 
-  const iraqContext = hasAny(text, ["العراق", "عراقي", "بغداد", "البصرة", "كركوك", "ديالى", "ميسان", "الأنبار", "نينوى", "علي الزيدي", "iraq", "iraqi", "baghdad", "basra", "kirkuk", "erbil", "ali al-zaidi", "al-zaidi", "이라크", "바그다드"]);
-  const bismayahDirect = hasAny(text, ["بسماية", "بسمايه", "مشروع بسماية", "مدينة بسماية", "مدينة بسماية الجديدة", "مجمع بسماية", "bismayah", "비스마야"]);
-  const bismayahStakeholder = hasAny(text, ["حيدر مكية", "حيدر مكيه", "عادل الياسري", "شركة هانوا", "هانوا", "hanwha"]);
-  const bismayahInstitutional = hasAny(text, ["الهيئة الوطنية للاستثمار", "هيئة الاستثمار", "مشروع سكني في العراق", "مدينة سكنية في العراق", "شركة كورية"]);
-  const directSignals = { bismayahDirect, bismayahStakeholder, bismayahInstitutional };
-  if (isOutOfScopeAgricultureArticle(text, directSignals)) {
-    return { score: -50, category3: "exclude", reportUsefulness: "exclude", reason: "비스마야·주거·정치·치안·에너지와 직접 연결되지 않은 농업/식량 생산 기사" };
+  if (item.collectionLane === "oil_market") {
+    if (!hasOilMarketSignal(text)) return { score: 0, category3: "exclude", reportUsefulness: "exclude", reason: "국제유가 직접 관련성 부족" };
+    return { score: 84, category3: "oil_economy", reportUsefulness: "include", reason: "한국어 국제유가 변동 원인 후보" };
   }
-  const regionalIraqLink = regionalSignals.strategic;
-  if (!iraqContext && !regionalIraqLink && !bismayahDirect && !bismayahStakeholder) return { score: 0, category3: "exclude", reportUsefulness: "exclude", reason: "이라크 맥락 부족" };
+  if (item.collectionLane === "regional_context") {
+    if (!regionalSignals.regionalActor && !regionalSignals.strategic) {
+      return { score: 0, category3: "exclude", reportUsefulness: "exclude", reason: "중동 주요 정세 직접 관련성 부족" };
+    }
+    return { score: 82, category3: "regional", reportUsefulness: "include", reason: "한국어·영문 중동 주요 정세 후보" };
+  }
 
-  if (bismayahDirect) {
-    return { score: 100, category3: "oil_economy", reportUsefulness: "include", reason: "비스마야 사업 직접 관련 최우선 기사" };
+  const arabicSource = hasArabic(item.title || "") ||
+    String(item.collectionLane || "").startsWith("arabic_") ||
+    item.sourceType === "iraq-media-direct";
+  if (arabicSource) {
+    const security = hasArabicSecurityOrProtestSignal(text);
+    const politics = hasArabicPoliticsSignal(text);
+    if (security) return { score: 80, category3: "terror_security", reportUsefulness: "include", reason: "이라크 테러·치안·시위 후보" };
+    if (politics) return { score: 76, category3: "politics", reportUsefulness: "include", reason: "이라크 정치권 동향 후보" };
+    return { score: -40, category3: "exclude", reportUsefulness: "exclude", reason: "아랍어 수집 범위(이라크 정치·테러·시위) 밖 기사" };
   }
-  if (bismayahStakeholder && (iraqContext || bismayahInstitutional)) {
-    return { score: 96, category3: "oil_economy", reportUsefulness: "include", reason: "비스마야·한화·핵심 관계자 관련 최우선 기사" };
+
+  const iraqContext = hasAny(text, ["iraq", "iraqi", "baghdad", "basra", "kirkuk", "erbil", "ali al-zaidi", "al-zaidi", "이라크", "바그다드"]);
+  const bismayahDirect = hasAny(text, ["bismayah", "bismaya", "bncp", "비스마야"]);
+  const bismayahStakeholder = hasAny(text, ["hanwha", "한화"]);
+  const directSignals = { bismayahDirect, bismayahStakeholder, bismayahInstitutional: false };
+  if (isOutOfScopeAgricultureArticle(text, directSignals)) {
+    return { score: -50, category3: "exclude", reportUsefulness: "exclude", reason: "정치·치안·국제유가·중동 정세와 직접 연결되지 않은 농업/식량 기사" };
   }
-  if (iraqContext && bismayahInstitutional) {
-    return { score: 90, category3: "oil_economy", reportUsefulness: "include", reason: "NIC·이라크 주택사업 관련 주요 사업환경 기사" };
+
+  if (bismayahDirect || (bismayahStakeholder && iraqContext)) {
+    return { score: 100, category3: "politics", reportUsefulness: "include", reason: "비스마야·한화 직접 관련 최우선 기사" };
   }
 
   let score = 35;
   let category3 = "politics";
   let reason = "이라크 주간 정세 참고자료";
 
-  if (iraqContext && hasAny(text, ["مجلس الوزراء", "رئيس الوزراء", "الزيدي", "السوداني", "مجلس النواب", "البرلمان", "انتخابات", "حكومة", "الإطار التنسيقي", "المالكي", "الصدر", "النزاهة", "فساد", "استجواب", "هيئة الاستثمار", "cabinet", "prime minister", "al-zaidi", "parliament", "election", "government", "corruption", "정치", "의회", "정부", "선거"])) {
-    score = Math.max(score, 72); category3 = "politics"; reason = "정치권 동향 후보";
-  }
-  if (iraqContext && hasAny(text, ["الحقائب الوزارية", "المرشحين للوزارات", "مرشحي الوزارات", "المرشحون للوزارات", "الكابينة الوزارية", "اكتمال الكابينة", "استكمال الكابينة", "الخلافات الداخلية", "زيارة واشنطن", "زيارة الولايات المتحدة", "التصويت على الوزراء", "منح الثقة", "جلسة مجلس النواب", "استئناف جلساته", "إعفاء رئيس الهيئة الوطنية للاستثمار", "إقالة رئيس الهيئة الوطنية للاستثمار", "رئيس الهيئة الوطنية للاستثمار", "هيئة النزاهة", "إحالته إلى النزاهة", "ملفات الفساد", "ministerial candidates", "ministerial portfolios", "cabinet completion", "complete the cabinet", "internal disputes", "internal conflict", "washington visit", "us visit", "confidence vote", "vote of confidence", "resume session", "National Investment Commission", "NIC chair", "NIC chairman", "dismissal", "Integrity Commission", "corruption files", "장관 후보자", "장관 후보", "내각 완성", "내각 구성", "내각 지연", "총리 방미", "미국 방문", "방미 이후", "내부 갈등", "신임투표", "신임 투표", "본회의 재개", "NIC 의장 해임", "국가투자위원회 의장 해임", "청렴위원회 이관", "부패 의혹"])) {
-    score = Math.max(score, 88);
+  if (iraqContext && hasAny(text, ["cabinet", "prime minister", "al-zaidi", "parliament", "election", "government", "corruption", "coordination framework", "pmf", "sadr", "maliki", "정치", "의회", "정부", "선거", "총리", "부패"])) {
+    score = Math.max(score, 76);
     category3 = "politics";
-    reason = "내각 구성·의회 표결·NIC 해임 관련 핵심 정국 후보";
+    reason = "이라크 정치권 동향 후보";
   }
-  if (iraqContext && hasAny(text, ["الحشد الشعبي", "سليماني", "السيستاني", "الصدر", "نزع السلاح", "حل الحشد", "PMF", "Popular Mobilization", "Soleimani", "Sistani", "disband", "disarm", "weapons", "인민동원군", "무장해제", "해체", "Soleimani", "Al-Sadr", "Al-Sistani"])) {
-    score = Math.max(score, 86);
-    category3 = "politics";
-    reason = "PMF·친이란 무장조직·이라크 주권 관련 핵심 정국 후보";
-  }
-  if (iraqContext && hasAny(text, ["داعش", "إرهاب", "ارهاب", "هجوم", "اشتباك", "قصف", "صاروخ", "طائرة مسيرة", "خطف", "اغتيال", "تفجير", "تظاهرات", "security", "isis", "terror", "attack", "rocket", "kidnap", "protest", "치안", "테러", "공격", "납치", "시위"])) {
-    score = Math.max(score, 78); category3 = "terror_security"; reason = "치안/테러 상황 후보";
-  }
-  if (iraqContext && hasAny(text, ["النفط", "أوبك", "اوبك", "الموازنة", "الكهرباء", "الاقتصاد", "سعر الصرف", "استثمار", "الإعمار", "الإسكان", "oil", "opec", "budget", "electricity", "economy", "investment", "housing", "construction", "유가", "예산", "경제", "전력", "투자", "주택", "건설"])) {
-    score = Math.max(score, 68); category3 = "oil_economy"; reason = "경제/유가/투자 환경 후보";
-  }
-  if (iraqContext && hasAny(text, ["وزارة الإعمار والإسكان", "الاعمار والاسكان", "الإعمار والإسكان", "المدن السكنية", "مدينة سكنية", "مدن سكنية", "المدن الجديدة", "مدينة جديدة", "معايير بيئية", "المعايير البيئية", "معايير التخطيط", "التخطيط العمراني", "التخطيط الحضري", "العزل الحراري", "مواد العزل", "المساحات الخضراء", "نسبة المساحات الخضراء", "نسبة الخضراء", "مواد البناء المحلية", "المواد الإنشائية المحلية", "مواد انشائية محلية", "construction and housing ministry", "ministry of construction and housing", "new residential cities", "environmental standards", "urban planning standards", "insulation", "green space", "green spaces", "local construction materials", "건설주택부", "신규 주거도시", "주거도시", "환경기준", "환경 기준", "도시계획", "도시 계획", "단열재", "녹지", "자국 건설자재", "국산 건설자재"])) {
-    score = Math.max(score, 82);
-    category3 = "oil_economy";
-    reason = "주거도시 개발·환경/도시계획 기준 후보";
+  if (iraqContext && hasAny(text, ["security", "isis", "terror", "attack", "rocket", "drone", "kidnap", "protest", "shooting", "ied", "치안", "테러", "공격", "드론", "납치", "시위", "총격"])) {
+    score = Math.max(score, 80);
+    category3 = "terror_security";
+    reason = "이라크 테러·치안·시위 후보";
   }
   if (regionalSignals.strategic) {
-    score = Math.max(score, 76);
+    score = Math.max(score, 78);
     category3 = "regional";
-    reason = "이라크·비스마야 사업의 안보·유가·물류에 영향을 줄 수 있는 핵심 국제정세";
-  } else if (iraqContext && regionalSignals.regionalActor && score < 70) {
-    score = Math.max(score, 64);
-    category3 = "regional";
-    reason = "이라크와 직접 연결된 국제정세 참고 후보";
+    reason = "중동 안보·물류에 영향을 주는 주요 국제정세 후보";
   }
 
-  return { score, category3, reportUsefulness: score >= 70 ? "include" : score >= 50 ? "watch" : "exclude", reason };
+  return { score, category3, reportUsefulness: score >= 70 ? "include" : "exclude", reason };
 }
 
 function looksLikeArticleUrl(url = "") {
@@ -284,7 +340,7 @@ function extractUrlsFromHtml(html = "", baseUrl = "") { const urls = []; const r
 function extractMetaContent(html = "", names = []) { for (const name of names) { const patterns = [new RegExp(`<meta[^>]+property=["']${name}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"), new RegExp(`<meta[^>]+name=["']${name}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"), new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${name}["'][^>]*>`, "i")]; for (const p of patterns) { const m = html.match(p); if (m && m[1]) return decodeHtml(m[1]); } } return ""; }
 function extractReadableText(html = "") { let src = String(html || "").replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<nav[\s\S]*?<\/nav>/gi, " ").replace(/<footer[\s\S]*?<\/footer>/gi, " ").replace(/<header[\s\S]*?<\/header>/gi, " "); const body = (src.match(/<article[^>]*>([\s\S]*?)<\/article>/i) || src.match(/<main[^>]*>([\s\S]*?)<\/main>/i) || src.match(/<body[^>]*>([\s\S]*?)<\/body>/i) || [null, src])[1]; const paragraphs = [...body.matchAll(/<(p|h1|h2|h3|li)[^>]*>([\s\S]*?)<\/\1>/gi)].map((m) => stripTags(m[2])).filter((x) => x.length >= 20).filter((x) => !/cookie|subscribe|newsletter|advertisement|privacy|حقوق النشر|اشترك|إعلان/i.test(x)).slice(0, 90); return normalizeText((paragraphs.length >= 3 ? paragraphs.join("\n") : stripTags(body))).slice(0, MAX_ARTICLE_TEXT_CHARS); }
 function extractPublishedAt(html = "", fallback = "") { const meta = extractMetaContent(html, ["article:published_time", "article:modified_time", "pubdate", "publishdate", "date", "datePublished", "dateModified"]); const jsonLd = (html.match(/"datePublished"\s*:\s*"([^"]+)"/i) || [])[1] || ""; const time = (html.match(/<time[^>]+datetime=["']([^"']+)["'][^>]*>/i) || [])[1] || ""; for (const v of [meta, jsonLd, time, fallback]) { const d = new Date(v); if (v && !Number.isNaN(d.getTime())) return d.toISOString(); } return ""; }
-function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") { const title = extractMetaContent(html, ["og:title", "twitter:title", "title"]) || stripTags((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "") || stripTags((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || ""); if (!title || title.length < 4) return null; const cleanText = extractReadableText(html); const desc = [extractMetaContent(html, ["og:description", "twitter:description", "description"]), cleanText.slice(0, 2500)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim(); return { id: stableArticleId("direct", normalizeUrl(url)), title, source: source.name || hostnameOf(url) || "Iraq media", publishedAt: extractPublishedAt(html, fallbackDate), url: normalizeUrl(url), description: desc, cleanText, fullText: cleanText, collectionMethod: "iraq-media-direct", sourceType: "iraq-media-direct" }; }
+function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") { const title = extractMetaContent(html, ["og:title", "twitter:title", "title"]) || stripTags((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "") || stripTags((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || ""); if (!title || title.length < 4) return null; const cleanText = extractReadableText(html); const desc = [extractMetaContent(html, ["og:description", "twitter:description", "description"]), cleanText.slice(0, 2500)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim(); return { id: stableArticleId("direct", normalizeUrl(url)), title, source: source.name || hostnameOf(url) || "Iraq media", publishedAt: extractPublishedAt(html, fallbackDate), url: normalizeUrl(url), description: desc, cleanText, fullText: cleanText, collectionLane: "arabic_iraq_direct", collectionMethod: "iraq-media-direct", sourceType: "iraq-media-direct" }; }
 
 function sourceEvidenceText(item = {}) {
   return normalizeText(item.cleanText || item.fullText || item.description || "");
@@ -402,15 +458,15 @@ function responseHasCountryShift(item = {}, parsed = {}) {
 }
 
 async function collectGoogleNews() {
-  const results = await mapLimit(GOOGLE_NEWS_QUERIES, GOOGLE_QUERY_CONCURRENCY, async (query) => {
+  const results = await mapLimit(GOOGLE_NEWS_QUERIES, GOOGLE_QUERY_CONCURRENCY, async (spec) => {
     try {
-      const xml = await fetchText(googleNewsRssUrl(query));
-      const items = parseRssItems(xml, query).slice(0, MAX_PER_QUERY).map(applyInitialScore).filter((x) => x.reportUsefulness !== "exclude");
-      console.log(`[google] ${query}: ${items.length}`);
-      return { items, debug: { query, ok: true, count: items.length } };
+      const xml = await fetchText(googleNewsRssUrl(spec));
+      const items = parseRssItems(xml, spec).slice(0, MAX_PER_QUERY).map(applyInitialScore).filter((x) => x.reportUsefulness !== "exclude");
+      console.log(`[google:${spec.group}] ${spec.query}: ${items.length}`);
+      return { items, debug: { query: spec.query, group: spec.group, lane: spec.collectionLane, ok: true, count: items.length } };
     } catch (err) {
-      console.warn(`[google] ${query}: ${err.message || err}`);
-      return { items: [], debug: { query, ok: false, error: String(err.message || err) } };
+      console.warn(`[google:${spec.group}] ${spec.query}: ${err.message || err}`);
+      return { items: [], debug: { query: spec.query, group: spec.group, lane: spec.collectionLane, ok: false, error: String(err.message || err) } };
     }
   });
   return { articles: results.flatMap((x) => x.items), debug: results.map((x) => x.debug) };
@@ -424,7 +480,13 @@ async function collectSource(source) {
     try {
       const text = await fetchText(probe);
       if (/<rss|<feed|<item/i.test(text)) {
-        const rssItems = parseRssItems(text, `source:${source.id}`).slice(0, MAX_PER_QUERY);
+        const rssItems = parseRssItems(text, {
+          query: `source:${source.id}`,
+          group: "arabic_iraq_direct",
+          collectionLane: "arabic_iraq_direct",
+          forcedCategory3: "",
+          locale: { hl: "ar", gl: "IQ", ceid: "IQ:ar" }
+        }).slice(0, MAX_PER_QUERY);
         candidates.push(...rssItems.map((item) => ({ url: item.url, rssItem: item })));
         debug.probes.push({ url: probe, type: "rss", count: rssItems.length, ok: true });
       } else {
@@ -489,6 +551,7 @@ function weeklyReportTitleText(item = {}) {
 
 function hasWeeklyReportScope(item = {}) {
   const title = weeklyReportTitleText(item);
+  if (item.collectionLane) return true;
 
   const directIraqOrProject = hasAny(title, [
     "العراق", "عراقي", "بغداد", "البصرة", "كركوك", "أربيل", "النجف", "كربلاء", "الأنبار", "نينوى", "ديالى", "ميسان",
@@ -648,6 +711,24 @@ function clean(value = "") { return String(value || "").replace(/^[-*·•\s]+/,
 function normalizeArray(value, limit = 3) { if (Array.isArray(value)) return value.map(clean).filter(Boolean).slice(0, limit); if (typeof value === "string") return value.split(/\n+|(?<=\.)\s+/).map(clean).filter(Boolean).slice(0, limit); return []; }
 function clampScore(value, fallback) { const n = Number(value); return Number.isFinite(n) ? Math.max(0, Math.min(100, Math.round(n))) : fallback; }
 function normalizeCategory3(v = "", fallback = "politics") { const x = String(v || "").trim(); return ["politics", "terror_security", "oil_economy", "regional", "exclude"].includes(x) ? x : fallback; }
+function normalizeSecurityEventType(value = "", item = {}) {
+  const allowed = new Set(["armed_attack", "ied", "assassination", "protest", "shooting", "suicide_bombing", "other", "none"]);
+  const parsed = String(value || "").trim();
+  if (allowed.has(parsed)) return parsed;
+  if (item.category3 !== "terror_security") return "none";
+  const text = articleText(item);
+  if (hasAny(text, ["تظاهرات", "احتجاجات", "اعتصام", "متظاهرين", "protest", "demonstration", "시위", "집회"])) return "protest";
+  if (hasAny(text, ["عبوة ناسفة", "ied", "급조폭발물"])) return "ied";
+  if (hasAny(text, ["انتحاري", "suicide bombing", "자살폭탄"])) return "suicide_bombing";
+  if (hasAny(text, ["اغتيال", "assassination", "암살"])) return "assassination";
+  if (hasAny(text, ["إطلاق نار", "shooting", "총격"])) return "shooting";
+  return "armed_attack";
+}
+function normalizeSecurityEventCount(value, type = "none") {
+  if (type === "none") return 0;
+  const n = Number(value);
+  return Number.isFinite(n) ? Math.max(1, Math.min(100, Math.round(n))) : 1;
+}
 
 async function enrichArticle(item) {
   if (!OPENAI_API_KEY) return item;
@@ -661,10 +742,16 @@ async function enrichArticle(item) {
     text,
     sourceEvidenceLevel: item.sourceEvidenceLevel || evidenceLevelFor(item),
     sourceEvidenceChars: Number(item.sourceEvidenceChars || sourceEvidenceText(item).length),
+    collectionLane: item.collectionLane || "",
+    forcedCategory3: item.forcedCategory3 || "",
     initialCategory: item.category3,
     initialReason: item.weeklyReportReason
   }, null, 2);
-  const prompt = collectionPrompt();
+  const prompt = collectionPrompt({
+    collectionLane: item.collectionLane || "",
+    forcedCategory3: item.forcedCategory3 || "",
+    sourceLanguage: hasArabic(`${item.title || ""}\n${text}`) ? "Arabic" : /[가-힣]/.test(`${item.title || ""}\n${text}`) ? "Korean" : "English"
+  });
   try {
     let parsed = parseJsonObject(await aiKorean(prompt, input));
     const invalid = () => !parsed || !parsed.titleKo || !parsed.summaryKo || hasArabic(parsed.titleKo) || hasArabic(parsed.summaryKo);
@@ -679,7 +766,13 @@ async function enrichArticle(item) {
     }
 
     if (invalid() || responseHasCountryShift(item, parsed)) throw new Error("bad or source-inconsistent AI JSON");
-    const category3 = normalizeCategory3(parsed.category3, item.category3);
+    const categoryLocked = !!item.forcedCategory3 ||
+      String(item.collectionLane || "").startsWith("arabic_") ||
+      item.collectionLane === "oil_market" ||
+      item.collectionLane === "regional_context" ||
+      item.collectionLane === "core_bncp";
+    const category3 = categoryLocked ? item.category3 : normalizeCategory3(parsed.category3, item.category3);
+    const securityEventType = normalizeSecurityEventType(parsed.securityEventType, { ...item, category3 });
     return {
       ...item,
       titleKo: clean(parsed.titleKo),
@@ -695,6 +788,8 @@ async function enrichArticle(item) {
       reportImplication: clean(parsed.reportImplication),
       actors: normalizeArray(parsed.actors, 8),
       location: clean(parsed.location),
+      securityEventType,
+      securityEventCount: normalizeSecurityEventCount(parsed.securityEventCount, securityEventType),
       sourceReliability: clean(parsed.sourceReliability || "일반 언론"),
       selected: false,
       aiSummaryVersion: EDITORIAL_VERSION
@@ -794,4 +889,6 @@ async function mapLimit(arr, limit, fn) {
   return ret;
 }
 
-main().catch((err) => { console.error(err); process.exit(1); });
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => { console.error(err); process.exit(1); });
+}

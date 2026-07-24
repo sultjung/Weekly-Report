@@ -1,6 +1,6 @@
 # Iraq Weekly Report Builder
 
-이라크 정치·치안·경제·비스마야 관련 뉴스를 수집하고, 한국어 주간보고서 후보와 DOCX 보고서를 생성하는 GitHub Pages 프로젝트입니다.
+이라크 정치·치안·시위와 한국어 국제유가, 한국어·영문 중동 주요 정세를 수집하고, 한국어 주간보고서 후보와 DOCX 보고서를 생성하는 GitHub Pages 프로젝트입니다.
 
 ## 핵심 구조
 
@@ -27,6 +27,9 @@ GitHub Actions의 `Collect Iraq Weekly News`도 동일한 `collect → postproce
 ## 검색어 수정
 
 검색어는 `data/search-keywords.json` 한 파일에서만 관리합니다. 자세한 형식은 `SEARCH_KEYWORDS.md`를 참고하세요.
+
+DOCX는 `templates/weekly-report-template.docx`의 승인된 최종 양식을 그대로 열어 내용만 채웁니다. 국제유가 표는 보고일 2일 전부터 전일까지의 한국석유공사 오피넷 Dubai·Brent·WTI 일간가격을 사용합니다.
+보고서 생성 시 정치·치안은 사용자가 선택한 기사를 사용하고, 국제유가와 중동 주요 정세는 보고기간 내 전용 검색 경로의 중요 후보를 자동으로 포함합니다.
 
 ## 유지보수 원칙
 

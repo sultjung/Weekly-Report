@@ -3,7 +3,7 @@
  * Keep durable rules here instead of copying large prompts across scripts.
  */
 
-export const EDITORIAL_VERSION = "weekly-report-v13-central-editorial-rules";
+export const EDITORIAL_VERSION = "weekly-report-v14-source-lanes-final-template";
 
 const COMMON_RULES = `
 [사실성]
@@ -27,19 +27,25 @@ const COMMON_RULES = `
 - 지명은 프로젝트 기준을 일관되게 적용한다: Baghdad, Teheran, Najaf, Karbala, Qom, Salah al-Din州, Baghdad州.
 
 [유형별]
+- 수집 경로가 arabic_iraq_politics이면 이라크 정치권 동향만 politics로 작성한다. 관광·산업·일반 경제·유가·주택·디지털 전환 기사는 exclude한다.
+- 수집 경로가 arabic_iraq_security이면 이라크 내 테러·치안 사건과 시위만 terror_security로 작성한다. 특히 Baghdad 시위의 장소·주최·요구사항·충돌 및 도로 통제 여부를 구분한다.
+- 수집 경로가 oil_market이면 한국어 기사에서 보고기간 국제유가를 움직인 가장 큰 원인만 oil_economy로 작성한다. 이라크 관광·일반 경제·투자·주택 기사는 절대 이 항목에 넣지 않는다.
+- 수집 경로가 regional_context이면 한국어 또는 영문 기사에서 이라크 현장 안전·대피·해운·공급망에 영향을 줄 수 있는 중동 핵심 정세만 regional로 작성한다.
+- 한국어 원문은 번역하지 않고 핵심만 요약한다. 영문 원문은 자연스러운 한국어로 요약하고, 아랍어 원문은 허용된 이라크 정치·테러·시위 경로에서만 번역·요약한다.
 - SCF의 '부패 연루자 정치적 보호 배제' 기사에서는 SCF가 주체다. Al-Maliki 前 총리 사무실 회의, Al-Zaidi 총리 방미 결과·국익 합의 이행 지지, 사법기관 확인 연루자에 대한 소속 불문 보호 배제만 근거대로 반영한다.
 - 정치인 발언은 누구를 지지·비판·견제했는지, 구체 쟁점, 조건·선 긋기를 구분한다. 연정 영향은 원문에 세력 반응·회의·성명·내부 갈등이 있을 때만 쓴다.
 - 치안 작전은 발표 기관·실제 장소·대상·체포/압수 결과·수사 단계를 쓴다. 드론 시설은 'NSS, Baghdad 내 불법 드론 제조시설 적발'처럼 구체화하고 기체는 '25대분'처럼 자연스럽게 쓴다. 연계·조달망은 확대 조사 중일 때만 수사 대상으로 표현한다.
 - 미군 철수·IS 재출현·안보공백·민병대 무장·정부 무장해제를 함께 다룬 기사는 원문상 철수일과 목표일, 안보공백이 무기 보유 명분과 무장해제 추진에 주는 충돌을 유지한다. 필요한 경우 reportBullet 2~3문장을 허용한다.
-- 비스마야·BNCP·한화·NIC·하이더 마키야·아델 알야시리, 이라크 정치·치안·에너지·건설주택·주거도시·투자환경은 핵심 후보로 본다.
+- 비스마야·BNCP·한화 직접 관련 한국어·영문 기사는 핵심 후보로 보되 politics에 둔다.
 - 이라크와 직접 무관한 국제뉴스·스포츠·연예·광고, 제3국 현지 범죄·테러, 무관한 농축산·식량 기사는 exclude한다. 제3국 사건을 이라크 테러로 분류하지 않는다.
 `.trim();
 
 const COLLECTION_SCHEMA = `
 JSON 객체만 출력한다(마크다운 금지). 필수 키:
-titleKo, summaryKo, category1, category2, category3, importanceScore, reportUsefulness, weeklyReportReason, reportBullet, reportSubBullets, reportImplication, actors, location, sourceReliability.
+titleKo, summaryKo, category1, category2, category3, importanceScore, reportUsefulness, weeklyReportReason, reportBullet, reportSubBullets, reportImplication, actors, location, securityEventType, securityEventCount, sourceReliability.
 category1: domestic|international. category2: politics_security|economy|international. category3: politics|terror_security|oil_economy|regional|exclude.
 reportUsefulness: include|watch|exclude. 일반 기사의 reportSubBullets는 0~2개, 종합 기사는 3~5개이며 접두사 '* '를 넣지 않는다. reportImplication에는 '☞'를 넣지 않는다.
+securityEventType: armed_attack|ied|assassination|protest|shooting|suicide_bombing|other|none. terror_security가 아니면 none과 0을 사용한다. securityEventCount는 기사에서 확인되는 독립 사건 건수이며 불명확하면 1이다.
 `.trim();
 
 const REPORT_SCHEMA = `
@@ -47,9 +53,10 @@ JSON 객체만 출력하고 키는 reportBullet, reportSubBullets, reportImplica
 기존 분류는 바꾸지 않는다. 일반 기사의 reportSubBullets는 0~2개, 종합 기사는 3~5개이며 '* '를 넣지 않는다. reportImplication은 근거가 없으면 빈 문자열이다.
 `.trim();
 
-export function collectionPrompt() {
+export function collectionPrompt(context = {}) {
   return [
-    "이라크/중동 기사를 한국어 주간 종합상황보고서 후보로 분류·요약한다. 원문 근거에서 번역·요약·분류를 한 번에 수행한다.",
+    "기사를 한국어 주간 종합상황보고서 후보로 분류·요약한다. 원문 근거에서 번역 또는 요약과 분류를 수행한다.",
+    `수집 경로(고정 분류를 임의 변경하지 말 것): ${JSON.stringify(context)}`,
     COMMON_RULES,
     COLLECTION_SCHEMA
   ].join("\n\n");
@@ -66,11 +73,12 @@ export function refinementPrompt(article) {
 }
 
 export function finalReportPrompt(items) {
-  const output = '{"sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"groupImpacts":[]}';
+  const output = '{"internationalTopic":"중동 주요 정세","sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"groupImpacts":[]}';
   return [
-    "선택 기사 전체를 검토해 하나의 일관된 최종 보고서로 편집한다.",
+    "선택 기사 전체를 검토해 실제 7월 23일 최종본과 같은 밀도의 한국어 주간 종합상황보고서로 편집한다.",
     COMMON_RULES,
     "동일 category3와 eventId의 같은 사건은 하나로 병합하고 서로 다른 추가 사실은 하위 문장에 둔다. 모든 입력 id는 sourceArticleIds에 정확히 한 번 포함하며 category3를 이동하지 않는다.",
+    "oil_economy는 보고기간 국제유가를 움직인 가장 큰 원인 중심으로 중복 사건을 병합한다. regional은 중요 중동 정세만 남기며, internationalTopic은 내용을 대표하는 10~24자 소제목으로 작성한다.",
     "groupImpacts는 근거가 있는 그룹/건설 영향만 0~2문장, 일반론이면 빈 배열이다.",
     `JSON만 출력한다. 구조: ${output}`,
     "선택 기사:",

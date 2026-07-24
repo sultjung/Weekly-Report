@@ -14,8 +14,12 @@ const queries = Object.entries(keywordConfig)
   .flatMap(([, values]) => Array.isArray(values) ? values : []);
 if (!queries.length) throw new Error("Search keyword list is empty");
 if (new Set(queries).size !== queries.length) throw new Error("Duplicate search keywords found");
-for (const required of ["\"بسماية\"", "\"شركة هانوا\""]) {
+for (const required of ["\"العراق\" \"مجلس الوزراء\"", "\"العراق\" \"داعش\"", "\"국제유가\"", "\"중동 정세\" \"이란\" \"미국\""]) {
   if (!queries.includes(required)) throw new Error(`Required search keyword missing: ${required}`);
+}
+const forbiddenArabicEconomy = ["\"العراق\" \"النفط\"", "\"العراق\" \"الاقتصاد\"", "\"العراق\" \"الاستثمار\"", "\"العراق\" \"الإسكان\""];
+for (const forbidden of forbiddenArabicEconomy) {
+  if (queries.includes(forbidden)) throw new Error(`Arabic economy keyword must remain removed: ${forbidden}`);
 }
 
 const sources = await readJson("data/iraq-media-sources.json");
@@ -30,6 +34,8 @@ if (!alJazeera || !(alJazeera.listPages || []).some((url) => /aljazeera\.net\/wh
 for (const required of ["\"علي الزيدي\"", "\"الزيدي\" \"طهران\""]) {
   if (!queries.includes(required)) throw new Error(`Current Iraqi PM search keyword missing: ${required}`);
 }
+await fs.access(path.join(ROOT, "templates", "weekly-report-template.docx"));
+await fs.access(path.join(ROOT, "scripts", "fill-weekly-template.py"));
 
 const indexHtml = await fs.readFile(path.join(ROOT, "index.html"), "utf8");
 const scriptRefs = [...indexHtml.matchAll(/<script\s+src="\.\/([^"?]+)(?:\?[^\"]*)?"/g)].map((match) => match[1]);
@@ -59,8 +65,8 @@ try {
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
 if (/47 21 \* \* \*/.test(workflow)) throw new Error("Unconditional 06:47 backup schedule must remain removed");
 const promptBytes = editorialPromptBytes();
-if (promptBytes < 4000 || promptBytes > 6000) {
-  throw new Error(`Collection prompt must remain within the 4-6KB budget; found ${promptBytes} bytes`);
+if (promptBytes < 4000 || promptBytes > 7500) {
+  throw new Error(`Collection prompt must remain within the 4-7.5KB budget; found ${promptBytes} bytes`);
 }
 
 const syntaxFiles = [
