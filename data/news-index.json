@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-07-24T06:45:02.458Z",
+  "generatedAt": "2026-07-24T07:10:42.060Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
     "total": 260,
-    "politics": 47,
-    "terror_security": 81,
-    "oil_economy": 61,
-    "regional": 65,
-    "exclude": 6
+    "politics": 31,
+    "terror_security": 58,
+    "oil_economy": 72,
+    "regional": 98,
+    "exclude": 1
   },
   "archive": {
-    "previous": 257,
-    "carriedForward": 103
+    "previous": 145,
+    "carriedForward": 119
   },
-  "elapsedSeconds": 354,
-  "recursiveGlossaryArtifactFixedCount": 1,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-24T06:46:21.019Z",
-  "knownPoliticalSummaryFixedCount": 4,
-  "knownPoliticalSummaryFixedAt": "2026-07-24T06:46:21.092Z",
+  "elapsedSeconds": 702,
+  "recursiveGlossaryArtifactFixedCount": 0,
+  "recursiveGlossaryArtifactFixedAt": "2026-07-24T07:12:05.137Z",
+  "knownPoliticalSummaryFixedCount": 1,
+  "knownPoliticalSummaryFixedAt": "2026-07-24T07:12:05.203Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-24T06:46:21.203Z",
+  "untranslatedFilteredAt": "2026-07-24T07:12:05.300Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-24T06:46:21.279Z",
-  "aiHallucinationFilteredCount": 6,
-  "aiHallucinationFilteredAt": "2026-07-24T06:46:21.361Z",
+  "datelineLocationCorrectedAt": "2026-07-24T07:12:05.368Z",
+  "aiHallucinationFilteredCount": 1,
+  "aiHallucinationFilteredAt": "2026-07-24T07:12:05.443Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-24T06:46:21.437Z",
+  "irrelevantForeignFilteredAt": "2026-07-24T07:12:05.516Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-24T06:46:21.510Z",
-  "eventCount": 216,
-  "eventDuplicateArticleCount": 44,
-  "eventGroupedAt": "2026-07-24T06:46:22.234Z"
+  "duplicateCollapsedAt": "2026-07-24T07:12:05.582Z",
+  "eventCount": 177,
+  "eventDuplicateArticleCount": 83,
+  "eventGroupedAt": "2026-07-24T07:12:06.384Z"
 }
