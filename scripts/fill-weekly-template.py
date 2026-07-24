@@ -8,6 +8,7 @@ import json
 import shutil
 from copy import deepcopy
 from pathlib import Path
+from zipfile import BadZipFile, ZipFile
 
 from docx import Document
 from docx.oxml.ns import qn
@@ -144,6 +145,26 @@ def fill_tables(doc: Document, data: dict) -> None:
             set_cell_value(cell, value)
 
 
+def verify_saved_docx(path: Path) -> None:
+    try:
+        with ZipFile(path) as archive:
+            names = set(archive.namelist())
+            required = {"[Content_Types].xml", "word/document.xml", "word/styles.xml"}
+            missing = required - names
+            if missing:
+                raise ValueError(f"Invalid DOCX package; missing: {sorted(missing)}")
+            document_xml = archive.read("word/document.xml")
+            if b"{{" in document_xml or b"}}" in document_xml:
+                raise ValueError("Unfilled template marker remains in generated DOCX")
+            footer_xml = b"\n".join(
+                archive.read(name) for name in names if name.startswith("word/footer") and name.endswith(".xml")
+            )
+            if b"PAGE" not in footer_xml:
+                raise ValueError("PAGE field is missing from the generated DOCX footer")
+    except BadZipFile as error:
+        raise ValueError("Generated file is not a real DOCX package") from error
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--template", required=True)
@@ -174,6 +195,7 @@ def main() -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     latest.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
+    verify_saved_docx(output)
     shutil.copyfile(output, latest)
 
 

@@ -20,9 +20,10 @@ const SELECTED_FILE = path.join(DATA_DIR, "selected-news.json");
 const NEWS_FILE = path.join(DATA_DIR, "news.json");
 const REPORT_TIMEZONE = "Asia/Seoul";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const FINAL_REPORT_MODEL = process.env.OPENAI_FINAL_REPORT_MODEL || "gpt-5.4-mini";
-const FINAL_REPORT_REASONING = process.env.OPENAI_FINAL_REPORT_REASONING || "medium";
+const FINAL_REPORT_MODEL = process.env.OPENAI_FINAL_REPORT_MODEL || "gpt-5.4";
+const FINAL_REPORT_REASONING = process.env.OPENAI_FINAL_REPORT_REASONING || "high";
 const FINAL_REPORT_EVIDENCE_CHARS = Number(process.env.FINAL_REPORT_EVIDENCE_CHARS || 2500);
+const FINAL_REPORT_REQUIRED = String(process.env.FINAL_REPORT_REQUIRED || "true").toLowerCase() !== "false";
 const PYTHON_BIN = process.env.PYTHON_BIN || "python3";
 const REPORT_CATEGORIES = ["politics", "terror_security", "oil_economy", "regional"];
 
@@ -40,6 +41,11 @@ function fileDateName(date) { return `${date.getUTCMonth() + 1}월 ${date.getUTC
 function monthDay(value) { const date = new Date(value); return Number.isNaN(date.getTime()) ? "" : `${date.getUTCMonth() + 1}.${date.getUTCDate()}`; }
 function normalizeText(value = "") { return String(value || "").replace(/\s+/g, " ").trim(); }
 function stripFinalPeriod(value = "") { return normalizeText(value).replace(/[.。]+$/g, ""); }
+function stripGeneratedDatePrefix(value = "") {
+  return normalizeText(value)
+    .replace(/^[-·•\s]+/, "")
+    .replace(/^(?:M\.?\s*D|(?:\d{1,2}\.)?\d{1,2}(?:~(?:\d{1,2}\.)?\d{1,2})?)\s*,\s*/i, "");
+}
 function numeric(value, fallback = 0) { const number = Number(value); return Number.isFinite(number) ? number : fallback; }
 function isWithinPeriod(item, period) {
   const published = new Date(item.publishedAt || item.date || "");
@@ -155,25 +161,36 @@ function validateFinalEdit(parsed, inputItems) {
   const inputById = new Map(inputItems.map((item) => [item.id, item]));
   const seen = new Map();
   const sections = {};
+  const limits = { politics: 7, terror_security: 5, oil_economy: 2, regional: 4 };
   for (const category of REPORT_CATEGORIES) {
-    sections[category] = (Array.isArray(parsed.sections[category]) ? parsed.sections[category] : []).map((item) => {
+    const rawItems = Array.isArray(parsed.sections[category]) ? parsed.sections[category] : [];
+    if (rawItems.length > limits[category]) throw new Error(`${category} 최종 문장 수가 최대 ${limits[category]}건을 초과했습니다`);
+    sections[category] = rawItems.map((item) => {
       const sourceArticleIds = [...new Set((Array.isArray(item.sourceArticleIds) ? item.sourceArticleIds : []).map(String).filter((id) => inputById.get(id)?.category3 === category))];
-      const reportBullet = normalizeText(item.reportBullet);
+      const reportBullet = stripGeneratedDatePrefix(item.reportBullet);
       if (!sourceArticleIds.length || !reportBullet) throw new Error(`${category} 최종 문장에 기사 ID 또는 본문이 없습니다`);
       for (const id of sourceArticleIds) seen.set(id, (seen.get(id) || 0) + 1);
       return {
         sourceArticleIds,
         reportBullet,
-        reportSubBullets: (Array.isArray(item.reportSubBullets) ? item.reportSubBullets : []).map(normalizeText).filter(Boolean).slice(0, 5),
-        reportImplication: normalizeText(item.reportImplication)
+        reportSubBullets: (Array.isArray(item.reportSubBullets) ? item.reportSubBullets : []).map(stripGeneratedDatePrefix).filter(Boolean).slice(0, 5),
+        reportImplication: stripGeneratedDatePrefix(item.reportImplication)
       };
     });
   }
+  const exclusions = (Array.isArray(parsed.excludedSourceArticleIds) ? parsed.excludedSourceArticleIds : []).map((item) => {
+    const id = String(typeof item === "string" ? item : item?.id || "");
+    const reason = normalizeText(typeof item === "string" ? "최종보고서 중요도 기준 미달" : item?.reason || "");
+    if (!inputById.has(id) || !reason) throw new Error(`제외 기사 ID 또는 사유가 올바르지 않습니다: ${id || "(빈 값)"}`);
+    seen.set(id, (seen.get(id) || 0) + 1);
+    return { id, reason };
+  });
   for (const item of inputItems) {
-    if (seen.get(item.id) !== 1) throw new Error(`기사 ID ${item.id}가 최종 편집 결과에서 누락되었거나 중복되었습니다`);
+    if (seen.get(item.id) !== 1) throw new Error(`기사 ID ${item.id}가 본문 또는 제외 목록에서 누락되었거나 중복되었습니다`);
   }
   return {
     sections,
+    exclusions,
     internationalTopic: normalizeText(parsed.internationalTopic || "중동 주요 정세").slice(0, 40),
     groupImpacts: (Array.isArray(parsed.groupImpacts) ? parsed.groupImpacts : []).map(normalizeText).filter(Boolean).slice(0, 2)
   };
@@ -191,7 +208,7 @@ async function editSelectedForFinalReport(selected = []) {
         reasoning: { effort: FINAL_REPORT_REASONING },
         text: { verbosity: "low" },
         input: [
-          { role: "system", content: "Edit evidence-grounded Korean executive reports. Output valid JSON only." },
+          { role: "system", content: "당신은 이라크 사업 경영진에게 제출하는 한국어 주간보고서의 최종 편집자다. 제공된 근거만 사용해 핵심 사건을 엄격히 선별·병합하고, 번역투 없는 간결한 보고서 문체의 유효한 JSON만 출력한다." },
           { role: "user", content: finalReportPrompt(inputItems) }
         ]
       })
@@ -218,10 +235,9 @@ function humanizeTerms(value = "") {
     .replace(/테헤란/g, "Teheran");
 }
 function reportMain(article) {
-  let text = article.reportBullet || `${monthDay(article.publishedAt)}, ${article.titleKo || article.title || "주요 동향"}`;
-  text = normalizeText(text).replace(/^[-·•\s]+/, "");
-  if (!/^\d{1,2}\.\d{1,2}(?:~\d{1,2})?,/.test(text)) text = `${monthDay(article.publishedAt)}, ${text}`;
-  return stripFinalPeriod(humanizeTerms(text));
+  const text = stripGeneratedDatePrefix(article.reportBullet || article.titleKo || article.title || "주요 동향");
+  const label = article.dateLabel || monthDay(article.publishedAt);
+  return stripFinalPeriod(humanizeTerms(`${label}, ${text}`));
 }
 function reportSubs(article) { return (Array.isArray(article.reportSubBullets) ? article.reportSubBullets : []).map((value) => stripFinalPeriod(humanizeTerms(value))).filter(Boolean).slice(0, 5); }
 function reportImplication(article) { return article.reportImplication ? stripFinalPeriod(humanizeTerms(article.reportImplication)) : ""; }
@@ -233,11 +249,47 @@ function finalSectionItems(finalEdit, category, selected) {
   return (finalEdit.sections?.[category] || []).map((item) => {
     const first = sourceById.get(item.sourceArticleIds[0]) || {};
     return {
-      main: reportMain({ publishedAt: first.publishedAt, reportBullet: item.reportBullet }),
+      main: reportMain({ publishedAt: first.publishedAt, dateLabel: sourceDateLabel(item.sourceArticleIds, sourceById), reportBullet: item.reportBullet }),
       subs: item.reportSubBullets.map((value) => stripFinalPeriod(humanizeTerms(value))),
       implication: item.reportImplication ? stripFinalPeriod(humanizeTerms(item.reportImplication)) : ""
     };
   });
+}
+
+function sourceDateLabel(sourceArticleIds, sourceById) {
+  const dates = sourceArticleIds
+    .map((id) => new Date(sourceById.get(id)?.publishedAt || ""))
+    .filter((date) => !Number.isNaN(date.getTime()))
+    .sort((a, b) => a - b);
+  if (!dates.length) return "-";
+  const first = dates[0];
+  const last = dates.at(-1);
+  const firstLabel = `${first.getUTCMonth() + 1}.${first.getUTCDate()}`;
+  if (toYmd(first) === toYmd(last)) return firstLabel;
+  return first.getUTCMonth() === last.getUTCMonth()
+    ? `${firstLabel}~${last.getUTCDate()}`
+    : `${firstLabel}~${last.getUTCMonth() + 1}.${last.getUTCDate()}`;
+}
+
+const FORBIDDEN_FINAL_TEXT = [
+  { pattern: /\bM\.?\s*D\b/i, label: "M.D 날짜 자리표시자" },
+  { pattern: /\bcrossing\b/i, label: "영어 번역 잔재 crossing" },
+  { pattern: /{{[^}]+}}/, label: "미치환 양식 표시" },
+  { pattern: /이란[-\s]?이라크 의회/, label: "잘못된 기관명" },
+  { pattern: /향후\s+(?:회담|협상)[\s\S]{0,30}구체화\s*예정/, label: "근거 없는 전망" },
+  { pattern: /법률적\s+개선[\s\S]{0,20}기회/, label: "모호한 번역 문장" }
+];
+
+function validateReportData(reportData) {
+  const lines = [
+    ...Object.values(reportData.sections || {}).flatMap((items) => items.flatMap((item) => [item.main, ...(item.subs || []), item.implication])),
+    ...(reportData.groupImpacts || [])
+  ].map(normalizeText).filter(Boolean);
+  for (const line of lines) {
+    for (const forbidden of FORBIDDEN_FINAL_TEXT) {
+      if (forbidden.pattern.test(line)) throw new Error(`최종보고서 품질검사 실패(${forbidden.label}): ${line}`);
+    }
+  }
 }
 
 function oilRequestBody(start, end) {
@@ -360,6 +412,9 @@ async function main() {
   const selected = collapseSelectedEvents([...manualSelected, ...automaticReportCandidates(allArticles, period)]).sort(itemDateSort);
   if (!selected.length) throw new Error("보고기간 내 선택 기사 또는 자동 국제유가·중동 정세 후보가 없습니다.");
   const finalEdit = await editSelectedForFinalReport(selected);
+  if (FINAL_REPORT_REQUIRED && !finalEdit.applied) {
+    throw new Error(`최종 AI 편집을 완료하지 못해 보고서 생성을 중단합니다: ${finalEdit.reason || "알 수 없는 오류"}`);
+  }
   const oilRows = await buildOilRows(period);
   const reportData = {
     period: `${shortLegacyDate(period.start)} ~ ${shortLegacyDate(period.end)}`,
@@ -370,6 +425,7 @@ async function main() {
     terrorStats: buildTerrorStats(allArticles, period),
     oilRows
   };
+  validateReportData(reportData);
 
   await fs.mkdir(GENERATED_DIR, { recursive: true });
   const fileName = `건설_이라크 주간 종합상황보고(${fileDateName(period.reportDate)}).docx`;
@@ -390,6 +446,9 @@ async function main() {
     periodEnd: toYmd(period.end),
     reportDate: toYmd(period.reportDate),
     selectedCount: selected.length,
+    usedCount: finalEdit.applied ? selected.length - finalEdit.exclusions.length : selected.length,
+    excludedCount: finalEdit.applied ? finalEdit.exclusions.length : 0,
+    exclusions: finalEdit.applied ? finalEdit.exclusions : [],
     file: `reports/generated/${fileName}`,
     latest: "reports/latest.docx",
     template: "templates/weekly-report-template.docx",

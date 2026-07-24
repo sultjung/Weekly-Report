@@ -3,7 +3,7 @@
  * Keep durable rules here instead of copying large prompts across scripts.
  */
 
-export const EDITORIAL_VERSION = "weekly-report-v14-source-lanes-final-template";
+export const EDITORIAL_VERSION = "weekly-report-v15-final-editor-quality-gate";
 
 const COMMON_RULES = `
 [사실성]
@@ -15,10 +15,10 @@ const COMMON_RULES = `
 [편집]
 - 먼저 단일 사건인지 종합 회의·공동성명·정책 패키지인지 판단한다. 결정 주체→실제 조치·사건→결과·진행 단계→원문상 맥락 순으로 중심축을 잡는다.
 - titleKo는 날짜 없이 자연스러운 카드 제목, summaryKo는 제목을 반복하지 않는 1~2개 밀도 높은 한국어 문장이다. 독자가 원문 없이 주체·조치·현재 단계를 이해해야 한다.
-- reportBullet은 M.D로 시작해 주체·장소·핵심 조치·결과가 보이는 45~90자 내외 보고서 소제목이다. reportSubBullets는 첫 줄과 겹치지 않는 구체 사실만 둔다.
+- reportBullet에는 날짜·M.D·글머리표를 넣지 않는다. 주체·장소·핵심 조치·결과가 보이는 45~90자 내외 보고서 소제목만 작성한다. 날짜는 프로그램이 원문 게시일에서 붙인다.
 - reportImplication은 원문에 구체적인 정치·안보·경제·BNCP 연결 근거가 있을 때만 1문장, 아니면 빈 문자열이다. '주목 필요·우려 증가·압박/의지 강화 가능성·신뢰 회복 기대' 같은 일반론은 금지한다.
 - 짧고 단정적인 명사형 보고서 문체를 쓴다. 번역투·홍보문·과장·같은 사실 반복과 '~하였다/하고 있다/가능성이 있다'를 피한다.
-- 종합 기사는 세부 안건 하나로 축소하지 않는다. reportBullet은 'M.D, 회의명/기관명 주요 의결 사항', summaryKo와 reportSubBullets는 중요한 결정 3~5개로 구성한다.
+- 종합 기사는 세부 안건 하나로 축소하지 않는다. reportBullet은 회의명·기관명과 주요 의결 사항을 압축하고, summaryKo와 reportSubBullets는 중요한 결정 3~5개로 구성한다.
 
 [기관·표기]
 - الإطار التنسيقي=시아조정기구(SCF), مجلس النواب=이라크 의회, مجلس الوزراء=국무회의/내각회의. SCF를 이란 최고 의회·이란 의회·이라크 의회로 바꾸지 않는다.
@@ -53,6 +53,29 @@ JSON 객체만 출력하고 키는 reportBullet, reportSubBullets, reportImplica
 기존 분류는 바꾸지 않는다. 일반 기사의 reportSubBullets는 0~2개, 종합 기사는 3~5개이며 '* '를 넣지 않는다. reportImplication은 근거가 없으면 빈 문자열이다.
 `.trim();
 
+const FINAL_REPORT_RULES = `
+[선별]
+- 모든 입력 기사를 억지로 본문에 넣지 않는다. 각 id를 본문의 sourceArticleIds 또는 excludedSourceArticleIds 중 정확히 한 곳에만 배치한다.
+- 제외 기준은 동일 사건 중복, 중요도 부족, 보고기간 핵심 흐름과 무관, 근거 부족, 다른 기사가 더 정확함이다. 기사 수를 채우기 위한 포함은 금지한다.
+- politics는 내각 구성·SCF·의회·NIC·부패수사·미국/이란 관계 등 정책·사업 환경을 바꾸는 핵심 사건만 최대 7건으로 압축한다.
+- terror_security는 이라크 내 실제 테러·치안 사건과 Baghdad 시위 중 장소·주체·결과가 확인된 사건만 최대 5건으로 압축한다.
+- oil_economy는 보고기간 국제유가를 움직인 가장 큰 원인 1~2건만 남기고 같은 상승·하락 원인을 하나로 병합한다.
+- regional은 이라크 현장 안전·대피·항공·해운·공급망에 영향을 줄 수 있는 중동 핵심 정세만 최대 4건으로 남긴다.
+
+[문장]
+- reportBullet에는 날짜, M.D, '-', '•'를 쓰지 않는다. 날짜는 프로그램이 붙인다.
+- 첫 줄은 '주체, 핵심 조치·사건 및 확인된 결과' 순서의 짧은 명사형 문장으로 작성한다.
+- reportSubBullets는 첫 줄에 없는 수치·일정·조건·상대방 반응만 쓴다. 첫 줄을 바꿔 말한 문장은 삭제한다.
+- 기사 원문에 없는 전망·평가·인과관계는 쓰지 않는다. '향후 구체화 예정', '기회를 제공', '신뢰 회복 기대', '경각심 제고 필요' 같은 빈 일반론을 금지한다.
+- 번역 잔재와 혼합 표현을 금지한다. 예: crossing, M.D, 이란-이라크 의회, 법률적 개선 기회.
+- 기관·직책이 불명확하면 넓은 표현으로 꾸미지 말고 확인된 기관명·직책만 쓴다.
+- 문장 종결은 보고서식 명사형을 우선하며 '~하였다', '~하고 있다', '~할 것으로 기대된다'를 반복하지 않는다.
+
+[시사점]
+- reportImplication과 groupImpacts는 기사 요약이 아니라 BNCP 협의 일정, NIC·정부 대응, 임직원 이동, 공항·국경·육로, 원유·물류비 등 구체적인 확인·조치 대상이 있을 때만 작성한다.
+- groupImpacts는 최대 2문장으로, '무엇을 점검/유지/대비할지'가 드러나야 한다. 근거가 없으면 빈 배열로 둔다.
+`.trim();
+
 export function collectionPrompt(context = {}) {
   return [
     "기사를 한국어 주간 종합상황보고서 후보로 분류·요약한다. 원문 근거에서 번역 또는 요약과 분류를 수행한다.",
@@ -73,15 +96,15 @@ export function refinementPrompt(article) {
 }
 
 export function finalReportPrompt(items) {
-  const output = '{"internationalTopic":"중동 주요 정세","sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"groupImpacts":[]}';
+  const output = '{"internationalTopic":"중동 주요 정세","sections":{"politics":[{"sourceArticleIds":["id"],"reportBullet":"","reportSubBullets":[],"reportImplication":""}],"terror_security":[],"oil_economy":[],"regional":[]},"excludedSourceArticleIds":[{"id":"id","reason":"중복 또는 중요도 부족"}],"groupImpacts":[]}';
   return [
-    "선택 기사 전체를 검토해 실제 7월 23일 최종본과 같은 밀도의 한국어 주간 종합상황보고서로 편집한다.",
+    "입력 기사 전체를 편집위원처럼 선별·병합해 실제 7월 23일 최종본과 같은 밀도의 한국어 주간 종합상황보고서를 작성한다.",
     COMMON_RULES,
-    "동일 category3와 eventId의 같은 사건은 하나로 병합하고 서로 다른 추가 사실은 하위 문장에 둔다. 모든 입력 id는 sourceArticleIds에 정확히 한 번 포함하며 category3를 이동하지 않는다.",
-    "oil_economy는 보고기간 국제유가를 움직인 가장 큰 원인 중심으로 중복 사건을 병합한다. regional은 중요 중동 정세만 남기며, internationalTopic은 내용을 대표하는 10~24자 소제목으로 작성한다.",
-    "groupImpacts는 근거가 있는 그룹/건설 영향만 0~2문장, 일반론이면 빈 배열이다.",
+    FINAL_REPORT_RULES,
+    "동일 category3와 eventId의 같은 사건은 하나로 병합하고 서로 다른 추가 사실만 하위 문장에 둔다. category3는 이동하지 않는다.",
+    "internationalTopic은 실제 포함한 regional 기사의 공통 핵심을 대표하는 10~24자 소제목으로 작성한다.",
     `JSON만 출력한다. 구조: ${output}`,
-    "선택 기사:",
+    "검토 대상 기사:",
     JSON.stringify(items, null, 2)
   ].join("\n\n");
 }

@@ -23,13 +23,6 @@
     const d = new Date(value || 0);
     return Number.isNaN(d.getTime()) ? "-" : `${d.getMonth() + 1}.${d.getDate()}`;
   }
-  function reportMonthDay(value) {
-    const d = value instanceof Date ? value : new Date(value || 0);
-    return Number.isNaN(d.getTime()) ? "-" : `${d.getMonth() + 1}.${d.getDate()}`;
-  }
-  function koreanReportDate(date = new Date()) { return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}.`; }
-  function legacyShortDate(date) { return `΄${String(date.getFullYear()).slice(2)}.${date.getMonth() + 1}.${date.getDate()}`; }
-  function fileDateName(date = new Date()) { return `${date.getMonth() + 1}월 ${date.getDate()}일`; }
   function stripFinalPeriod(text = "") { return String(text || "").replace(/[.。]+$/g, "").trim(); }
 
   function simpleHash(value = "") {
@@ -335,99 +328,33 @@
     return `☞ ${implication}.`;
   }
   function selectedArticlesSorted() { return [...state.selected.values()].map(stripUiFields).sort((a, b) => (dateValue(a) || 0) - (dateValue(b) || 0)); }
-  function resolveReportPeriod(articles) {
-    const dates = articles.map(dateValue).filter(Boolean).sort((a, b) => a - b);
-    const today = new Date();
-    if (!dates.length) { const end = new Date(today); end.setDate(end.getDate() - 1); const start = new Date(end); start.setDate(start.getDate() - 6); return { start, end, reportDate: today }; }
-    return { start: dates[0], end: dates[dates.length - 1], reportDate: today };
+  async function copySelectionJson() {
+    const text = JSON.stringify(selectedPayload(), null, 2);
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const preview = $("selectionPreview");
+    preview.hidden = false;
+    preview.value = text;
+    preview.select();
+    document.execCommand("copy");
+    preview.hidden = true;
   }
-  function groupByCategory(articles, category) { return articles.filter((x) => x.category3 === category).sort((a, b) => (dateValue(a) || 0) - (dateValue(b) || 0)); }
-  function renderReportItems(articles) {
-    if (!articles.length) return `<p class="item empty-line">- 특이사항 없음</p>`;
-    return articles.map((article) => `<p class="item">${esc(reportMain(article))}</p>${reportSubs(article).map((x) => `<p class="sub">${esc(x)}</p>`).join("")}${reportImplication(article) ? `<p class="implication">${esc(reportImplication(article))}</p>` : ""}`).join("");
-  }
-  function renderTerrorTable() { return `<table class="report-table"><tr><th>구분</th><th>계</th><th>무장세력공격</th><th>IED</th><th>암 살</th><th>시 위</th><th>총 격</th><th>자살폭탄테러</th></tr><tr><td>건수</td><td>확인 필요</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></table>`; }
-  function renderOilTable(period) { const d1 = new Date(period.reportDate); d1.setDate(d1.getDate() - 2); const d2 = new Date(period.reportDate); d2.setDate(d2.getDate() - 1); return `<table class="report-table oil-table"><tr><th>구 분</th><th>두바이유</th><th>브렌트유</th><th>서부텍사스유(WTI)</th></tr><tr><td>${esc(reportMonthDay(d1))}</td><td>-</td><td>-</td><td>-</td></tr><tr><td>${esc(reportMonthDay(d2))}</td><td>-</td><td>-</td><td>-</td></tr></table>`; }
-  function buildImpactItems(articles) {
-    const top = articles.slice().sort((a, b) => Number(b.importanceScore || 0) - Number(a.importanceScore || 0)).slice(0, 8);
-    const safety = top.find((x) => x.category3 === "terror_security" || x.category3 === "regional");
-    const admin = top.find((x) => x.category3 === "politics" || x.category3 === "oil_economy");
-    return [`• ${stripFinalPeriod(humanizeTerms(safety?.reportImplication || safety?.weeklyReportReason || "이라크 치안 및 주변국 긴장 동향에 따른 현장 이동·외부활동 관리 지속 필요"))}.`, `• ${stripFinalPeriod(humanizeTerms(admin?.reportImplication || admin?.weeklyReportReason || "정부·의회·투자기관 동향에 따른 인허가 및 사업 협의 일정 변동 가능성 점검 필요"))}.`];
-  }
-  function hasCabinetOrCom(article = {}) { return /내각회의|COM|Council of Ministers|مجلس الوزراء|국무회의/i.test(textOf(article)); }
-  function renderOptionalCabinetTable(politicsArticles) {
-    const rows = politicsArticles.filter(hasCabinetOrCom).slice(0, 5);
-    if (!rows.length) return "";
-    return `<table class="report-table cabinet-table"><tr><th>구 분</th><th>주 제</th><th>내 용</th></tr>${rows.map((article, i) => `<tr><td>${i + 1}</td><td>${esc(article.titleKo || article.title || "내각회의")}</td><td class="left-cell">${esc((article.reportSubBullets || [article.summaryKo || article.weeklyReportReason || "주요 의결사항 확인 필요"]).join("\n"))}</td></tr>`).join("")}</table>`;
-  }
-  function wordListMain(num, label) { return `<p class="h1 word-list-main" style="mso-list:l0 level1 lfo1"><span style="mso-list:Ignore">${num}.<span style="font:7.0pt 'Times New Roman'">&nbsp;&nbsp;</span></span>${label}</p>`; }
-  function wordListSub(num, label) { return `<p class="h2 word-list-sub" style="mso-list:l1 level1 lfo2"><span style="mso-list:Ignore">${num})<span style="font:7.0pt 'Times New Roman'">&nbsp;&nbsp;</span></span>${label}</p>`; }
-  function reportStyles() {
-    return `@page WordSection1 { size:595.3pt 841.9pt; margin:50pt 54pt; }
-div.WordSection1 { page:WordSection1; }
-body { font-family:Batang,serif; font-size:14pt; color:#000; }
-p { margin:0 0 6pt; line-height:1.25; }
-.title { font-size:16pt; font-weight:bold; text-decoration:underline; margin-bottom:8pt; }
-.date { text-align:right; margin-bottom:18pt; }
-.h1 { font-size:16pt; font-weight:bold; } .h2,.category { font-size:14pt; font-weight:bold; }
-.word-list-main { margin:12pt 0 6pt; text-indent:0; } .word-list-sub { margin:6pt 0 5pt 18pt; text-indent:0; }
-.category { margin:5pt 0 4pt 34pt; } .item { margin:5pt 0 3pt 50pt; font-size:14pt; }
-.sub,.implication { margin:0 0 3pt 62pt; font-size:13pt; } .implication { font-style:italic; }
-.impact { margin:5pt 0 3pt 42pt; font-size:13pt; } .empty-line { color:#555; }
-table.report-table { width:100%; border-collapse:collapse; margin:5pt 0 10pt; font-size:11pt; }
-.report-table th,.report-table td { border:1px solid #333; padding:5pt; text-align:center; vertical-align:middle; }
-.report-table th { background:#f2f2f2; font-weight:bold; } .report-table .left-cell { text-align:left; white-space:pre-line; }
-.cabinet-table td:nth-child(1) { width:10%; } .cabinet-table td:nth-child(2) { width:30%; } .cabinet-table td:nth-child(3) { width:60%; }
-.source-note { color:#666; font-size:9pt; margin-top:16pt; }
-@list l0 { mso-list-id:1001001; mso-list-type:hybrid; } @list l0:level1 { mso-level-number-format:decimal; mso-level-text:"%1."; margin-left:0; text-indent:0; }
-@list l1 { mso-list-id:1001002; mso-list-type:hybrid; } @list l1:level1 { mso-level-number-format:decimal; mso-level-text:"%1)"; margin-left:18pt; text-indent:-18pt; }`;
-  }
-  function internationalTheme(article) {
-    const text = textOf(article).toLowerCase();
-    if (/iran|이란|israel|이스라엘|trump|트럼프|irgc|혁명수비대|호르무즈|hormuz|미군기지|바레인|쿠웨이트|미사일|missile|drone|드론|공습|airstrike|양해각서/.test(text)) return "美·이스라엘-이란 분쟁 관련";
-    if (/sdf|sna|시리아민주군|시리아국가군|syria|시리아|튀르키예|turkey|is 수용소|난민캠프/.test(text)) return "시리아 정세 관련";
-    if (/gaza|가자|hamas|하마스|hostage|인질|팔레스타인|palestine/.test(text)) return "가자·하마스 관련";
-    if (/houthi|후티|red sea|홍해|yemen|예멘/.test(text)) return "홍해·후티 관련";
-    return "이라크 관련 국제정세";
-  }
-  function renderInternational(articles) {
-    const order = ["美·이스라엘-이란 분쟁 관련", "시리아 정세 관련", "가자·하마스 관련", "홍해·후티 관련", "이라크 관련 국제정세"];
-    if (!articles.length) return `<p class="category">• 이라크 관련 국제정세</p><p class="item empty-line">- 특이사항 없음</p>`;
-    return order.map((theme) => [theme, articles.filter((article) => internationalTheme(article) === theme)])
-      .filter(([, items]) => items.length)
-      .map(([theme, items]) => `<p class="category">• ${esc(theme)}</p>${renderReportItems(items)}`).join("");
-  }
-  function applyLearnedWritingRules(html) {
-    return String(html || "")
-      .replace(/이라크 내각 구성이 미국 방문 이후로 미뤄졌다\.\s*시아조정기구\(SCF\)(?:는|은)? 장관 임명 결정을 미국 방문 결과에 연계하고 있다\.\s*이는 정치적 불확실성을 더욱 부각시키고 있다\./g, "이라크 내각 구성이 Al-Zaidi 총리의 미국 방문 이후로 미뤄짐에 따라 정치적 불확실성을 더욱 부각시키고 있음.")
-      .replace(/-\s*(\d{1,2}\.\d{1,2}),\s*시아조정기구\(SCF\),\s*장관 임명 결정을 미국 방문 결과에 연계\.?/g, "- $1, 시아조정기구(SCF), 미국 방문 결과에 연계하여 장관 임명 결정.");
-  }
-  function buildWordHtml(articles) {
-    const selected = prepareArticles(articles).filter((article) => article.category3 !== "exclude" && article.reportUsefulness !== "exclude");
-    const period = resolveReportPeriod(selected);
-    const politics = groupByCategory(selected, "politics");
-    const security = groupByCategory(selected, "terror_security");
-    const economy = groupByCategory(selected, "oil_economy");
-    const regional = groupByCategory(selected, "regional");
-    const title = `건설, 이라크 주간 종합 상황보고(${legacyShortDate(period.start)} ~ ${legacyShortDate(period.end)})`;
-    const impact = buildImpactItems(selected).map((x) => `<p class="impact">${esc(x)}</p>`).join("");
-    const html = `<!doctype html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${reportStyles()}</style></head><body><div class="WordSection1"><p class="title">${esc(title)}</p><p class="date">${esc(koreanReportDate(period.reportDate))}</p>${wordListMain(1, "이라크 국내 상황")}${wordListSub(1, "정국 / 치안")}<p class="category">• 정치권 동향</p>${renderReportItems(politics)}${renderOptionalCabinetTable(politics)}<p class="category">• 이라크 주간 테러 상황</p>${renderTerrorTable()}${renderReportItems(security)}${wordListSub(2, "경제")}<p class="category">• 국제유가 관련 동향</p>${renderReportItems(economy)}${renderOilTable(period)}${wordListMain(2, "국제사회")}${renderInternational(regional)}${wordListMain(3, "그룹 / 건설에 미치는 영향")}${impact}<p class="source-note">※ 본 보고서는 웹앱에서 사용자가 선택한 ${selected.length}건의 기사 후보를 기반으로 자동 생성됨.</p></div></body></html>`;
-    return applyLearnedWritingRules(html);
-  }
-  function generateReportDocument() {
+  async function generateReportDocument() {
     const articles = selectedArticlesSorted();
     if (!articles.length) return alert("보고서에 넣을 기사를 먼저 선택해주세요.");
-    const period = resolveReportPeriod(articles);
-    const html = buildWordHtml(articles);
-    const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `건설_이라크 주간 종합상황보고(${fileDateName(period.reportDate)}).doc`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
+    const workflowWindow = window.open("https://github.com/sultjung/Weekly-Report/actions/workflows/generate-weekly-report.yml", "_blank");
+    if (workflowWindow) workflowWindow.opener = null;
+    try {
+      await copySelectionJson();
+    } catch {
+      return alert("선택 기사 JSON을 복사하지 못했습니다. 브라우저의 클립보드 권한을 확인해주세요.");
+    }
+    if (!workflowWindow) {
+      return alert("선택 기사 JSON은 복사됐지만 GitHub Actions 창이 차단됐습니다. 팝업을 허용한 뒤 다시 눌러주세요.");
+    }
+    alert("선택 기사 JSON을 복사했습니다.\n\n새로 열린 GitHub Actions에서 Run workflow를 누르고 selection_json 칸에 붙여넣어 실행해주세요. 완료 후 reports/latest.docx를 받으면 됩니다.");
   }
 
   async function loadNews() {
@@ -527,7 +454,6 @@ table.report-table { width:100%; border-collapse:collapse; margin:5pt 0 10pt; fo
   window.reportMain = reportMain;
   window.reportSubs = reportSubs;
   window.reportImplication = reportImplication;
-  window.buildWordHtml = buildWordHtml;
 
   bindEvents();
   loadNews();

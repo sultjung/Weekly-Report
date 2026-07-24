@@ -44,8 +44,11 @@ if (scriptRefs.length !== 1 || scriptRefs[0] !== "app.js") {
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
-if ((appJs.match(/function buildWordHtml\s*\(/g) || []).length !== 1 || (appJs.match(/window\.buildWordHtml\s*=/g) || []).length !== 1) {
-  throw new Error("app.js must expose exactly one buildWordHtml implementation");
+for (const forbidden of [/function buildWordHtml\s*\(/, /application\/msword/, /\.doc["'`]/]) {
+  if (forbidden.test(appJs)) throw new Error(`Browser-side fake Word generation must remain removed: ${forbidden}`);
+}
+if (!/generate-weekly-report\.yml/.test(appJs) || !/copySelectionJson/.test(appJs)) {
+  throw new Error("Browser report action must copy selection JSON and open the canonical DOCX workflow");
 }
 if ((appJs.match(/new MutationObserver\s*\(/g) || []).length > 1) {
   throw new Error("app.js must not register multiple article-list observers");
