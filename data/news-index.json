@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-07-24T07:10:42.060Z",
+  "generatedAt": "2026-07-25T06:18:37.506Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
     "total": 260,
-    "politics": 31,
-    "terror_security": 58,
-    "oil_economy": 72,
-    "regional": 98,
-    "exclude": 1
+    "politics": 20,
+    "terror_security": 51,
+    "oil_economy": 80,
+    "regional": 106,
+    "exclude": 3
   },
   "archive": {
-    "previous": 145,
-    "carriedForward": 119
+    "previous": 259,
+    "carriedForward": 109
   },
-  "elapsedSeconds": 702,
+  "elapsedSeconds": 679,
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-24T07:12:05.137Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-25T06:19:19.894Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-24T07:12:05.203Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-25T06:19:19.958Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-24T07:12:05.300Z",
+  "untranslatedFilteredAt": "2026-07-25T06:19:20.056Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-24T07:12:05.368Z",
-  "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-24T07:12:05.443Z",
-  "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-24T07:12:05.516Z",
+  "datelineLocationCorrectedAt": "2026-07-25T06:19:20.122Z",
+  "aiHallucinationFilteredCount": 2,
+  "aiHallucinationFilteredAt": "2026-07-25T06:19:20.191Z",
+  "irrelevantForeignFilteredCount": 1,
+  "irrelevantForeignFilteredAt": "2026-07-25T06:19:20.262Z",
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-24T07:12:05.582Z",
-  "eventCount": 177,
-  "eventDuplicateArticleCount": 83,
-  "eventGroupedAt": "2026-07-24T07:12:06.384Z"
+  "duplicateCollapsedAt": "2026-07-25T06:19:20.321Z",
+  "eventCount": 159,
+  "eventDuplicateArticleCount": 101,
+  "eventGroupedAt": "2026-07-25T06:19:21.325Z"
 }
