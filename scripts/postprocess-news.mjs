@@ -11,6 +11,7 @@ const steps = [
   "scripts/fix-agency-dateline-location-errors.mjs",
   "scripts/filter-ai-hallucinated-actors.mjs",
   "scripts/filter-irrelevant-foreign-news.mjs",
+  "scripts/filter-strict-relevance-and-facts.mjs",
   "scripts/deduplicate-news-articles.mjs",
   "scripts/group-news-events.mjs"
 ];
