@@ -4,6 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { EDITORIAL_VERSION, editorialPromptBytes } from "./editorial-rules.mjs";
+import { exclusionReason, applyDeterministicCorrections } from "./filter-strict-relevance-and-facts.mjs";
 
 const ROOT = process.cwd();
 const readJson = async (file) => JSON.parse(await fs.readFile(path.join(ROOT, file), "utf8"));
@@ -72,6 +73,50 @@ if (promptBytes < 4000 || promptBytes > 7500) {
   throw new Error(`Collection prompt must remain within the 4-7.5KB budget; found ${promptBytes} bytes`);
 }
 
+function requireMatch(value, pattern, label) {
+  if (!pattern.test(String(value || ""))) throw new Error(`Quality-gate regression failed: ${label}`);
+}
+function requireEmpty(value, label) {
+  if (String(value || "") !== "") throw new Error(`Quality-gate regression failed: ${label} (${value})`);
+}
+
+requireMatch(exclusionReason({
+  category3: "oil_economy",
+  title: "대구 휘발유값 11주 연속 하락…국제유가 급등에 상승 전환 가능성",
+  description: "대구 주유소 휘발유 가격 동향"
+}), /국내 지역 휘발유/, "local retail fuel article must be excluded");
+
+requireMatch(exclusionReason({
+  category3: "terror_security",
+  title: "ثاني أغرب عشاء لمراسلي البيت الأبيض",
+  description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين"
+}), /제3국/, "White House dinner must not become Iraq security news");
+
+requireMatch(exclusionReason({
+  category3: "terror_security",
+  title: "هذا أخطر تحد سياسي في الهند يواجه مودي",
+  description: "احتجاجات الطلاب في الهند"
+}), /제3국/, "India politics must not become Iraq security news");
+
+requireEmpty(exclusionReason({
+  category3: "terror_security",
+  title: "العراق: اعتقال ثلاثة أشخاص في بغداد",
+  description: "أعلن جهاز الأمن الوطني العراقي اعتقال ثلاثة أشخاص وضبط طائرات مسيرة"
+}), "real Iraq security article must remain eligible");
+
+const correctedZaidi = applyDeterministicCorrections({
+  title: "رئيس الوزراء علي الزيدي يؤكد من طهران",
+  description: "قال رئيس مجلس الوزراء علي الزيدي إن العراق لن يسمح بتهديد إيران من أراضيه",
+  titleKo: "이라크 외무장관 Al-Zaidi, 이란 위협 차단 강조",
+  reportBullet: "M.D, Al-Zaidi 외무장관, 이란 내 위협 차단 의지 표명",
+  actors: ["Al-Zaidi 외무장관"]
+});
+requireMatch(correctedZaidi.titleKo, /Al-Zaidi 총리/, "Al-Zaidi role must be corrected to prime minister");
+if (/^M\s*[.·]?\s*D/i.test(correctedZaidi.reportBullet || "")) {
+  throw new Error("Quality-gate regression failed: M.D placeholder must be removed");
+}
+requireMatch(correctedZaidi.reportBullet, /Al-Zaidi 총리/, "report bullet role correction");
+
 const syntaxFiles = [
   "app.js",
   "scripts/editorial-rules.mjs",
@@ -87,6 +132,7 @@ const syntaxFiles = [
   "scripts/fix-agency-dateline-location-errors.mjs",
   "scripts/filter-ai-hallucinated-actors.mjs",
   "scripts/filter-irrelevant-foreign-news.mjs",
+  "scripts/filter-strict-relevance-and-facts.mjs",
   "scripts/deduplicate-news-articles.mjs"
 ];
 for (const file of syntaxFiles) {
