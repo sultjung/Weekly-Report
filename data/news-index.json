@@ -1,37 +1,47 @@
 {
-  "generatedAt": "2026-07-26T07:26:21.541Z",
+  "generatedAt": "2026-07-26T23:56:38.697Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 260,
-    "politics": 16,
-    "terror_security": 51,
-    "oil_economy": 75,
-    "regional": 117,
-    "exclude": 1
+    "total": 186,
+    "politics": 6,
+    "terror_security": 41,
+    "oil_economy": 66,
+    "regional": 73,
+    "exclude": 0
   },
   "archive": {
-    "previous": 257,
-    "carriedForward": 120
+    "previous": 259,
+    "carriedForward": 119
   },
-  "elapsedSeconds": 421,
+  "elapsedSeconds": 380,
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-26T07:27:14.844Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-26T23:57:28.625Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-26T07:27:14.911Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-26T23:57:28.676Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-26T07:27:15.015Z",
+  "untranslatedFilteredAt": "2026-07-26T23:57:28.749Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-26T07:27:15.090Z",
-  "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-26T07:27:15.164Z",
+  "datelineLocationCorrectedAt": "2026-07-26T23:57:28.802Z",
+  "aiHallucinationFilteredCount": 0,
+  "aiHallucinationFilteredAt": "2026-07-26T23:57:28.859Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-26T07:27:15.240Z",
+  "irrelevantForeignFilteredAt": "2026-07-26T23:57:28.913Z",
+  "count": 186,
+  "strictQualityGate": {
+    "appliedAt": "2026-07-26T23:57:29.049Z",
+    "removedCount": 74,
+    "correctedCount": 5
+  },
+  "gazaRegionalFilter": {
+    "appliedAt": "2026-07-26T23:57:29.087Z",
+    "removedCount": 0
+  },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-26T07:27:15.307Z",
-  "eventCount": 153,
-  "eventDuplicateArticleCount": 107,
-  "eventGroupedAt": "2026-07-26T07:27:16.484Z"
+  "duplicateCollapsedAt": "2026-07-26T23:57:29.127Z",
+  "eventCount": 101,
+  "eventDuplicateArticleCount": 85,
+  "eventGroupedAt": "2026-07-26T23:57:29.531Z"
 }
