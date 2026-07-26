@@ -12,6 +12,7 @@ const steps = [
   "scripts/filter-ai-hallucinated-actors.mjs",
   "scripts/filter-irrelevant-foreign-news.mjs",
   "scripts/filter-strict-relevance-and-facts.mjs",
+  "scripts/filter-gaza-regional-news.mjs",
   "scripts/deduplicate-news-articles.mjs",
   "scripts/group-news-events.mjs"
 ];
