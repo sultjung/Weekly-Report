@@ -44,6 +44,17 @@ export function roleFromEvidence(quote = "") {
   return "";
 }
 
+export function securityEventTypeFromSource(article = {}) {
+  const raw = sourceLead(article);
+  if (/تظاهرات|احتجاجات|اعتصام|متظاهرين|protest|demonstration|시위|집회/iu.test(raw)) return "protest";
+  if (/عبوة ناسفة|\bied\b|급조폭발물/iu.test(raw)) return "ied";
+  if (/انتحاري|suicide bomb|자살폭탄/iu.test(raw)) return "suicide_bombing";
+  if (/اغتيال|assassination|암살/iu.test(raw)) return "assassination";
+  if (/إطلاق نار|اطلاق نار|shooting|총격/iu.test(raw)) return "shooting";
+  if (/هجوم مسلح|هجوم إرهابي|اشتباك|تفجير|قصف|صاروخ|armed attack|terror attack|clash|bombing|rocket attack|무장 공격|테러 공격|교전|폭발|로켓 공격/iu.test(raw)) return "armed_attack";
+  return "other";
+}
+
 export function unambiguousLocationFromSource(article = {}) {
   const raw = sourceLead(article);
   const found = LOCATION_RULES.filter(([pattern]) => pattern.test(raw)).map(([, location]) => location);
@@ -81,6 +92,15 @@ function normalizeArticle(article = {}) {
   if (deterministicLocation && deterministicLocation !== article.location) {
     corrected.location = deterministicLocation;
     changed = true;
+  }
+
+  if (article.category3 === "terror_security") {
+    const deterministicEventType = securityEventTypeFromSource(article);
+    if (deterministicEventType !== article.securityEventType) {
+      corrected.securityEventType = deterministicEventType;
+      corrected.securityEventCount = 1;
+      changed = true;
+    }
   }
 
   corrected.extractedActors = extracted;
