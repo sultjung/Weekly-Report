@@ -14,7 +14,8 @@ const NEWS_FILE = path.join(ROOT, "data", "news.json");
 const INDEX_FILE = path.join(ROOT, "data", "news-index.json");
 
 const IRAQ_DIRECT_RE = /العراق|عراقي|العراقية|بغداد|البصرة|أربيل|اربيل|كركوك|الأنبار|الانبار|ديالى|الموصل|نينوى|إقليم كردستان|اقليم كردستان|iraq|iraqi|baghdad|basra|erbil|kirkuk|anbar|diyala|mosul|nineveh|iraqi kurdistan|kurdistan region of iraq|이라크|바그다드|바스라|에르빌|아르빌|키르쿠크|안바르|디얄라|모술|니나와|쿠르드 자치정부/iu;
-const PROJECT_RE = /بسماية|بسمايه|بسمایه|شركة هانوا|هانوا|bismayah|bismaya|bncp|hanwha|비스마야|한화/iu;
+const BISMAYAH_RE = /بسماية|بسمايه|بسمایه|bismayah|bismaya|bncp|비스마야/iu;
+const HANWHA_RE = /شركة هانوا|هانوا|hanwha|한화/iu;
 
 const BORDER_RE = /الحدود|معبر حدودي|منفذ حدودي|إغلاق الحدود|غلق الحدود|تسلل|تهريب|لاجئ|نازح|انتشار حدودي|border|border crossing|cross-border|frontier|closure|closed crossing|infiltration|smuggling|refugee|displaced|border deployment|국경|국경검문소|국경 통제|국경 폐쇄|월경|침투|밀수|난민|피란민/iu;
 const AIR_RE = /المجال الجوي|إغلاق الأجواء|المطار|الرحلات الجوية|تعليق الرحلات|إلغاء الرحلات|نوتام|airspace|airport|flight suspension|flight cancellation|aviation|notam|영공|공항|항공편|운항 중단|결항|비행금지/iu;
@@ -53,7 +54,7 @@ function hasLinkedIraqSignal(article = {}, signalRe) {
 export function regionalIraqExposureReason(article = {}) {
   const raw = articleSourceText(article);
   if (!raw.trim()) return "원문 근거 없음";
-  if (PROJECT_RE.test(raw)) return "비스마야·한화 직접 관련";
+  if (BISMAYAH_RE.test(raw) || (HANWHA_RE.test(raw) && IRAQ_DIRECT_RE.test(raw))) return "비스마야·한화 직접 관련";
   if (!IRAQ_DIRECT_RE.test(raw)) return "원문에 이라크 직접 연결 없음";
   if (hasLinkedIraqSignal(article, BORDER_RE)) return "이라크 국경·통관·침투 리스크";
   if (hasLinkedIraqSignal(article, AIR_RE)) return "이라크 영공·공항·항공편 리스크";
