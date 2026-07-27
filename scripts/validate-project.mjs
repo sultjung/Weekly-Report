@@ -18,7 +18,13 @@ const queries = Object.entries(keywordConfig)
   .flatMap(([, values]) => Array.isArray(values) ? values : []);
 if (!queries.length) throw new Error("Search keyword list is empty");
 if (new Set(queries).size !== queries.length) throw new Error("Duplicate search keywords found");
-for (const required of ["\"العراق\" \"مجلس الوزراء\"", "\"العراق\" \"داعش\"", "\"국제유가\"", "\"중동 정세\" \"이란\" \"미국\""]) {
+for (const required of [
+  "\"العراق\" \"مجلس الوزراء\"",
+  "\"العراق\" \"داعش\"",
+  "\"العراق\" \"الحدود السورية\"",
+  "\"국제유가\"",
+  "\"이라크\" \"영공 폐쇄\""
+]) {
   if (!queries.includes(required)) throw new Error(`Required search keyword missing: ${required}`);
 }
 const forbiddenArabicEconomy = ["\"العراق\" \"النفط\"", "\"العراق\" \"الاقتصاد\"", "\"العراق\" \"الاستثمار\"", "\"العراق\" \"الإسكان\""];
@@ -27,6 +33,18 @@ for (const forbidden of forbiddenArabicEconomy) {
 }
 for (const forbidden of ["\"가자\" \"이스라엘\" \"인질\"", "\"Gaza\" \"Israel\" \"hostages\""]) {
   if (queries.includes(forbidden)) throw new Error(`Gaza-specific Middle East query must remain removed: ${forbidden}`);
+}
+const regionalQueries = [
+  ...(keywordConfig.korean_middle_east || []),
+  ...(keywordConfig.english_middle_east_fallback || [])
+];
+for (const forbidden of ["Lebanon", "Hezbollah", "레바논", "헤즈볼라", "civil nuclear", "원자력 협력"]) {
+  if (regionalQueries.some((query) => String(query).toLowerCase().includes(forbidden.toLowerCase()))) {
+    throw new Error(`Regional query must remain Iraq-operational only; forbidden term found: ${forbidden}`);
+  }
+}
+if (regionalQueries.some((query) => !/(?:Iraq|이라크)/i.test(String(query)))) {
+  throw new Error("Every regional-context query must include an explicit Iraq term");
 }
 
 const sources = await readJson("data/iraq-media-sources.json");
@@ -85,12 +103,13 @@ if (!/OPENAI_FACT_FALLBACK_MODEL:\s*"gpt-5\.4-mini"/.test(workflow)) throw new E
 if (/OPENAI_SUMMARY_MODEL|OPENAI_SUMMARY_FALLBACK_MODEL/.test(workflow)) throw new Error("Legacy all-in-one summary model must not run in the collection workflow");
 const stageOrder = [
   workflow.indexOf("npm run collect"),
+  workflow.indexOf("node scripts/filter-regional-iraq-exposure.mjs"),
   workflow.indexOf("node scripts/extract-article-facts.mjs"),
   workflow.indexOf("node scripts/refine-report-writing.mjs"),
   workflow.indexOf("npm run postprocess")
 ];
 if (stageOrder.some((value) => value < 0) || !stageOrder.every((value, index) => index === 0 || value > stageOrder[index - 1])) {
-  throw new Error("Workflow stages must remain collect -> fact extraction -> report refinement -> postprocess");
+  throw new Error("Workflow stages must remain collect -> Iraq regional filter -> fact extraction -> report refinement -> postprocess");
 }
 
 const promptBytes = editorialPromptBytes();
@@ -197,12 +216,14 @@ const syntaxFiles = [
   "scripts/article-fact-rules.mjs",
   "scripts/collect-sources-only.mjs",
   "scripts/collect-news.mjs",
+  "scripts/filter-regional-iraq-exposure.mjs",
   "scripts/extract-article-facts.mjs",
   "scripts/normalize-extracted-entities.mjs",
   "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
   "scripts/validate-project.mjs",
+  "scripts/validate-regional-iraq-scope.mjs",
   "scripts/apply-glossary-to-news.mjs",
   "scripts/fix-recursive-glossary-artifacts.mjs",
   "scripts/fix-known-political-summaries.mjs",
