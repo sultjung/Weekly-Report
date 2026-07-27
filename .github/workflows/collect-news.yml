@@ -75,6 +75,12 @@ jobs:
             sleep $((attempt * 90))
           done
 
+      # Stage 1.5: neighbouring-country news is retained only when the source
+      # shows a direct Iraq/BNCP operational path such as a border, airspace,
+      # airport, Iraq-based facility, evacuation, oil export, port, or supply chain.
+      - name: Filter regional news to Iraq operational exposure
+        run: node scripts/filter-regional-iraq-exposure.mjs
+
       # Stage 2: code decides relevance, category, and importance first. The AI
       # receives only articles that survived those checks, and only translates
       # and extracts facts with source quotations.
