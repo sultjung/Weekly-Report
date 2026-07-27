@@ -17,7 +17,7 @@ const ROOT = process.cwd();
 const NEWS_FILE = path.join(ROOT, "data", "news.json");
 const INDEX_FILE = path.join(ROOT, "data", "news-index.json");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const FACT_MODEL = process.env.OPENAI_FACT_MODEL || "gpt-5.4-nano";
+const FACT_MODEL = process.env.OPENAI_FACT_MODEL || "gpt-5.4";
 const FACT_FALLBACK_MODEL = process.env.OPENAI_FACT_FALLBACK_MODEL || "gpt-5.4-mini";
 const MAX_ITEMS = Number(process.env.FACT_EXTRACTION_MAX_ITEMS || 180);
 const CONCURRENCY = Number(process.env.FACT_AI_CONCURRENCY || 4);
@@ -33,7 +33,7 @@ let fallbackLogged = false;
 const IRAQ_RE = /العراق|عراقي|العراقية|بغداد|البصرة|الموصل|نينوى|أربيل|اربيل|كركوك|الأنبار|الانبار|ديالى|كربلاء|النجف|السليمانية|إقليم كردستان|اقليم كردستان|الحكومة العراقية|البرلمان العراقي|رئيس الوزراء العراقي|مجلس الوزراء العراقي|مجلس النواب العراقي|الإطار التنسيقي|الهيئة الوطنية للاستثمار|بسماية|بسمايه|هانوا|iraq|iraqi|baghdad|basra|mosul|nineveh|erbil|kirkuk|anbar|diyala|karbala|najaf|sulaymaniyah|iraqi kurdistan|kurdistan region of iraq|krg|bismayah|bismaya|bncp|hanwha|national investment commission|이라크|바그다드|바스라|모술|니나와|아르빌|에르빌|키르쿠크|안바르|디얄라|카르발라|나자프|쿠르드 자치정부|비스마야|한화|시아조정기구/iu;
 const PROJECT_RE = /بسماية|بسمايه|بسمایه|هانوا|شركة هانوا|bismayah|bismaya|bncp|hanwha|비스마야|한화/iu;
 const POLITICS_RE = /مجلس الوزراء|رئيس الوزراء|رئيس الحكومة|مجلس النواب|البرلمان|الحكومة|انتخابات|الإطار التنسيقي|النزاهة|فساد|مكافحة الفساد|الهيئة الوطنية للاستثمار|الحشد الشعبي|نزع السلاح|cabinet|prime minister|premier|parliament|government|election|coordination framework|corruption|anti-corruption|national investment commission|pmf|disarmament|국무회의|내각|총리|의회|정부|선거|시아조정기구|부패|청렴위원회|nic|인민동원군|무장해제/iu;
-const SECURITY_RE = /داعش|إرهاب|ارهاب|هجوم مسلح|هجوم إرهابي|اشتباك|عبوة ناسفة|تفجير|انتحاري|اغتيال|إطلاق نار|اطلاق نار|قصف|صاروخ|طائرة مسيرة|خطف|اعتقال|إلقاء القبض|القاء القبض|ضبط|تظاهرات|احتجاجات|اعتصام|إغلاق الطرق|isis|terror|armed attack|clash|ied|bombing|suicide bomb|assassination|shooting|rocket|drone|kidnap|arrest|detained|seized|protest|demonstration|road closure|테러|무장 공격|교전|급조폭발물|폭탄|자살폭탄|암살|총격|로켓|드론|납치|체포|구금|압수|시위|집회|도로 통제/iu;
+const SECURITY_RE = /داعش|إرهاب|ارهاب|هجوم مسلح|هجوم إرهابي|اشتباك|عبوة ناسفة|تفجير|انتحاري|اغتيال|إطلاق نار|اطلاق نار|قصف|صاروخ|طائرة مسيرة|خطف|اعتقال|إلقاء القبض|القاء القبض|ضبط|تظاهرات|احتجاجات|اعتصام|إغلاق الطرق|الحدود|معبر حدودي|منفذ حدودي|إغلاق الحدود|غلق الحدود|تسلل|تهريب|isis|terror|armed attack|clash|ied|bombing|suicide bomb|assassination|shooting|rocket|drone|kidnap|arrest|detained|seized|protest|demonstration|road closure|border|border crossing|border closure|cross-border|infiltration|smuggling|테러|무장 공격|교전|급조폭발물|폭탄|자살폭탄|암살|총격|로켓|드론|납치|체포|구금|압수|시위|집회|도로 통제|국경|국경 폐쇄|국경 통제|침투|밀수/iu;
 const OIL_RE = /국제유가|원유 가격|원유 선물|두바이유|브렌트유|서부텍사스유|\bwti\b|\bopec\+?\b|석유수출국기구|원유 공급|원유 수요|산유량|원유 수출|crude oil|oil price|oil futures|brent|west texas intermediate|dubai crude|oil supply|oil demand|oil output|oil export|أوبك|أسعار النفط|النفط الخام/iu;
 const RETAIL_FUEL_RE = /휘발유|경유|주유소|기름값|유류세|리터당|자동차 연료|소비자 가격|gasoline|petrol|diesel|pump price|fuel tax|retail fuel/iu;
 const GAZA_RE = /قطاع\s+غزة|غزة|فلسطين|فلسطيني(?:ة|ون|ين)?|حماس|gaza(?:\s+strip)?|palestin(?:e|ian|ians)|hamas|가자(?:\s*지구)?|팔레스타인|하마스/iu;
@@ -86,8 +86,11 @@ export function classifyArticle(article = {}) {
 
   if (lane === "regional_context") {
     if (GAZA_RE.test(raw)) return { include: false, reason: "가자·팔레스타인·하마스 관련 중동 기사 제외" };
-    if (!REGIONAL_ACTOR_RE.test(raw) || !STRATEGIC_RE.test(raw)) return { include: false, reason: "이라크 현장 안전·항공·해운·원유·공급망과 연결되는 중동 전략 신호 부족" };
-    return { include: true, category3: "regional", baseScore: 80, reason: "중동 안보·물류 핵심 정세 후보" };
+    if (article.regionalIraqExposureReason) {
+      return { include: true, category3: "regional", baseScore: 84, reason: article.regionalIraqExposureReason };
+    }
+    if (!IRAQ_RE.test(raw) || !STRATEGIC_RE.test(raw)) return { include: false, reason: "이라크 국경·영공·공항·기지·원유수출·물류 직접 연결 부족" };
+    return { include: true, category3: "regional", baseScore: 80, reason: "이라크 운영과 직접 연결되는 국제정세 후보" };
   }
 
   if (PROJECT_RE.test(raw)) {
@@ -98,10 +101,10 @@ export function classifyArticle(article = {}) {
 
   const security = SECURITY_RE.test(raw);
   const politics = POLITICS_RE.test(raw);
-  if (lane === "arabic_iraq_security" && !security) return { include: false, reason: "이라크 테러·치안·시위 사건 근거 부족" };
+  if (lane === "arabic_iraq_security" && !security) return { include: false, reason: "이라크 테러·치안·시위·국경안보 근거 부족" };
   if (lane === "arabic_iraq_politics" && !politics) return { include: false, reason: "이라크 정치·정부·의회·NIC 근거 부족" };
 
-  if (security) return { include: true, category3: "terror_security", baseScore: 82, reason: "이라크 테러·치안·시위 후보" };
+  if (security) return { include: true, category3: "terror_security", baseScore: 82, reason: "이라크 테러·치안·시위·국경안보 후보" };
   if (politics) return { include: true, category3: "politics", baseScore: 78, reason: "이라크 정치권 동향 후보" };
   return { include: false, reason: "주간보고서 정치·치안 범위 밖 기사" };
 }
