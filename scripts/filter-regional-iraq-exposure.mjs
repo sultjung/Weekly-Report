@@ -19,14 +19,35 @@ const PROJECT_RE = /بسماية|بسمايه|بسمایه|شركة هانوا|�
 const BORDER_RE = /الحدود|معبر حدودي|منفذ حدودي|إغلاق الحدود|غلق الحدود|تسلل|تهريب|لاجئ|نازح|انتشار حدودي|border|border crossing|cross-border|frontier|closure|closed crossing|infiltration|smuggling|refugee|displaced|border deployment|국경|국경검문소|국경 통제|국경 폐쇄|월경|침투|밀수|난민|피란민/iu;
 const AIR_RE = /المجال الجوي|إغلاق الأجواء|المطار|الرحلات الجوية|تعليق الرحلات|إلغاء الرحلات|نوتام|airspace|airport|flight suspension|flight cancellation|aviation|notam|영공|공항|항공편|운항 중단|결항|비행금지/iu;
 const IRAQ_BASE_RE = /قاعدة عين الأسد|عين الاسد|قاعدة حرير|القواعد الأمريكية في العراق|السفارة الأمريكية في بغداد|ain al-asad|al asad air base|harir base|us bases in iraq|us embassy in baghdad|이라크 미군기지|아인 알아사드|하리르 기지|주이라크 미국대사관/iu;
-const IRAQ_ENERGY_LOGISTICS_RE = /مضيق هرمز|صادرات النفط العراقية|موانئ البصرة|ميناء أم قصر|خور الزبير|ناقلات النفط العراقية|سلسلة التوريد إلى العراق|hormuz|iraqi oil exports|basra ports?|umm qasr|khor al-zubair|iraqi tanker|supply chain to iraq|호르무즈|이라크 원유 수출|바스라항|움카스르|코르 알주바이르|이라크 유조선|이라크 공급망/iu;
+const IRAQ_SPECIFIC_ENERGY_RE = /صادرات النفط العراقية|موانئ البصرة|ميناء أم قصر|خور الزبير|ناقلات النفط العراقية|سلسلة التوريد إلى العراق|iraqi oil exports|basra ports?|umm qasr|khor al-zubair|iraqi tanker|supply chain to iraq|이라크 원유 수출|바스라항|움카스르|코르 알주바이르|이라크 유조선|이라크 공급망/iu;
+const GENERAL_ENERGY_LOGISTICS_RE = /مضيق هرمز|البحر الأحمر|ناقلات النفط|الملاحة|الشحن|سلسلة التوريد|hormuz|red sea|oil tanker|shipping|navigation|supply chain|호르무즈|홍해|유조선|해운|항행|공급망/iu;
 const EVACUATION_RE = /إجلاء|خطة الإخلاء|تحذير السفر|إغلاق السفارة|evacuation|evacuation flight|travel warning|embassy closure|대피|철수 계획|여행경보|대사관 폐쇄/iu;
 
+function articleFields(article = {}) {
+  const title = String(article.title || "");
+  const description = String(article.description || "");
+  const body = String(article.cleanText || article.fullText || "").slice(0, 12000);
+  return { title, description, body };
+}
+
 function articleSourceText(article = {}) {
-  return [article.title, article.description, article.cleanText, article.fullText]
+  const { title, description, body } = articleFields(article);
+  return [title, description, body].filter(Boolean).join("\n");
+}
+
+function sourceSegments(article = {}) {
+  const { title, description, body } = articleFields(article);
+  const bodySegments = body
+    .split(/\n+|(?<=[.!?؟。])\s+/u)
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return [title, description, `${title} ${description}`.trim(), ...bodySegments]
     .filter(Boolean)
-    .join("\n")
-    .slice(0, 12000);
+    .map((value) => value.slice(0, 1200));
+}
+
+function hasLinkedIraqSignal(article = {}, signalRe) {
+  return sourceSegments(article).some((segment) => IRAQ_DIRECT_RE.test(segment) && signalRe.test(segment));
 }
 
 export function regionalIraqExposureReason(article = {}) {
@@ -34,11 +55,11 @@ export function regionalIraqExposureReason(article = {}) {
   if (!raw.trim()) return "원문 근거 없음";
   if (PROJECT_RE.test(raw)) return "비스마야·한화 직접 관련";
   if (!IRAQ_DIRECT_RE.test(raw)) return "원문에 이라크 직접 연결 없음";
-  if (BORDER_RE.test(raw)) return "이라크 국경·통관·침투 리스크";
-  if (AIR_RE.test(raw)) return "이라크 영공·공항·항공편 리스크";
+  if (hasLinkedIraqSignal(article, BORDER_RE)) return "이라크 국경·통관·침투 리스크";
+  if (hasLinkedIraqSignal(article, AIR_RE)) return "이라크 영공·공항·항공편 리스크";
   if (IRAQ_BASE_RE.test(raw)) return "이라크 내 미군기지·외교시설 리스크";
-  if (IRAQ_ENERGY_LOGISTICS_RE.test(raw)) return "이라크 원유수출·항만·공급망 리스크";
-  if (EVACUATION_RE.test(raw)) return "이라크 대피·이동·여행 리스크";
+  if (IRAQ_SPECIFIC_ENERGY_RE.test(raw) || hasLinkedIraqSignal(article, GENERAL_ENERGY_LOGISTICS_RE)) return "이라크 원유수출·항만·공급망 리스크";
+  if (hasLinkedIraqSignal(article, EVACUATION_RE)) return "이라크 대피·이동·여행 리스크";
   return "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족";
 }
 
