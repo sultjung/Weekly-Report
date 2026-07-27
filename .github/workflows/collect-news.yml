@@ -91,6 +91,11 @@ jobs:
           FACT_MAX_EVIDENCE_CHARS: "9000"
         run: node scripts/extract-article-facts.mjs
 
+      # Stage 2.5: normalize high-risk roles and locations from the validated
+      # source quotations before any report-style rewriting occurs.
+      - name: Normalize extracted roles and locations
+        run: node scripts/normalize-extracted-entities.mjs
+
       # Stage 3: only the top report candidates are rewritten as report prose.
       - name: Refine high-value report writing
         env:
