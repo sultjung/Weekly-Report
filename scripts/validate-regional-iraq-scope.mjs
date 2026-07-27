@@ -45,11 +45,15 @@ const shouldReject = [
     title: "Iraq comments on regional developments",
     description: "Lebanon airport suspends flights after local clashes",
     cleanText: "Baghdad issued a general diplomatic statement.\nLebanon airport separately suspended flights because of domestic security conditions."
+  },
+  {
+    title: "Hanwha announces a new overseas technology investment",
+    description: "The project is unrelated to Iraq or Bismayah"
   }
 ];
 for (const article of shouldReject) {
   if (isRegionalIraqExposure(article)) {
-    throw new Error(`Unrelated neighbouring-country security article passed: ${article.title}`);
+    throw new Error(`Unrelated neighbouring-country or Hanwha article passed: ${article.title}`);
   }
 }
 
@@ -69,6 +73,10 @@ const shouldKeep = [
   {
     title: "Attack reported at Ain al-Asad air base in Iraq",
     description: "The Iraqi base hosting US forces was targeted"
+  },
+  {
+    title: "Hanwha reviews its Iraq operations after regional airspace closures",
+    description: "The review covers the Bismayah project and Baghdad travel routes"
   }
 ];
 for (const article of shouldKeep) {
