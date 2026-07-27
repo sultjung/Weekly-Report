@@ -3,6 +3,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { classifyArticle } from "./extract-article-facts.mjs";
 import { isRegionalIraqExposure, regionalIraqExposureReason } from "./filter-regional-iraq-exposure.mjs";
 
 const ROOT = process.cwd();
@@ -74,6 +75,26 @@ for (const article of shouldKeep) {
   if (!isRegionalIraqExposure(article)) {
     throw new Error(`Direct Iraq operational exposure was rejected: ${article.title} (${regionalIraqExposureReason(article)})`);
   }
+}
+
+const borderClassification = classifyArticle({
+  collectionLane: "arabic_iraq_security",
+  title: "العراق يغلق الحدود السورية لمنع التسلل والتهريب",
+  description: "تعزيز قوات حرس الحدود العراقية عند المعابر"
+});
+if (!borderClassification.include || borderClassification.category3 !== "terror_security") {
+  throw new Error("Iraq border closure/infiltration article must classify as terror_security");
+}
+
+const operationalRegional = {
+  collectionLane: "regional_context",
+  title: "Iraq closes its airspace after regional missile attacks",
+  description: "Baghdad airport flights were suspended"
+};
+operationalRegional.regionalIraqExposureReason = regionalIraqExposureReason(operationalRegional);
+const regionalClassification = classifyArticle(operationalRegional);
+if (!regionalClassification.include || regionalClassification.category3 !== "regional") {
+  throw new Error("Validated Iraq airspace exposure must classify as regional");
 }
 
 console.log(`Validated ${regionalQueries.length} Iraq-focused regional queries and operational exposure rules.`);
