@@ -1,6 +1,6 @@
 {
   "_description": "Weekly-Report 검색어 단일 관리 파일. 그룹명으로 검색 언어·지역·보고서 항목을 결정합니다.",
-  "_usage": "아랍어는 이라크 정치·테러·시위만 수집하고, 국제유가는 한국어, 중동 주요 정세는 한국어·영문으로 수집합니다.",
+  "_usage": "아랍어는 이라크 정치·테러·시위·국경안보만 수집하고, 국제유가는 한국어, 국제정세는 이라크 국경·영공·공항·기지·원유수출·물류에 직접 연결되는 한국어·영문 기사만 수집합니다.",
   "core_bncp_non_arabic": [
     "\"비스마야\"",
     "\"한화\" \"이라크\"",
@@ -67,7 +67,16 @@
     "\"بغداد\" \"اعتصام\"",
     "\"بغداد\" \"اشتباكات\" \"متظاهرين\"",
     "\"بغداد\" \"إغلاق الطرق\" \"احتجاج\"",
-    "\"المنطقة الخضراء\" \"تظاهرات\""
+    "\"المنطقة الخضراء\" \"تظاهرات\"",
+    "\"العراق\" \"الحدود السورية\"",
+    "\"العراق\" \"الحدود الإيرانية\"",
+    "\"العراق\" \"الحدود التركية\"",
+    "\"العراق\" \"الحدود الأردنية\"",
+    "\"العراق\" \"الحدود السعودية\"",
+    "\"العراق\" \"الحدود الكويتية\"",
+    "\"العراق\" \"إغلاق الحدود\"",
+    "\"العراق\" \"تسلل عبر الحدود\"",
+    "\"العراق\" \"تهريب عبر الحدود\""
   ],
   "english_iraq_politics_security": [
     "\"Iraq\" \"Council of Ministers\"",
@@ -81,7 +90,15 @@
     "\"Baghdad\" \"terror attack\"",
     "\"Baghdad\" \"protest\"",
     "\"Iraq\" \"rocket attack\"",
-    "\"Iraq\" \"drone attack\""
+    "\"Iraq\" \"drone attack\"",
+    "\"Iraq\" \"Syria border\" \"ISIS\"",
+    "\"Iraq\" \"Iran border\" \"closure\"",
+    "\"Iraq\" \"Turkey border\" \"PKK\"",
+    "\"Iraq\" \"Jordan border\" \"Trebil\"",
+    "\"Iraq\" \"Saudi border\" \"Arar\"",
+    "\"Iraq\" \"Kuwait border\" \"Safwan\"",
+    "\"Iraq\" \"border security\" \"infiltration\"",
+    "\"Iraq\" \"border crossing\" \"closure\""
   ],
   "korean_oil_market": [
     "\"국제유가\"",
@@ -95,23 +112,25 @@
     "\"국제유가\" \"미국\" \"이란\""
   ],
   "korean_middle_east": [
-    "\"중동 정세\" \"이란\" \"미국\"",
-    "\"이스라엘\" \"이란\" \"미국\"",
-    "\"미국\" \"이란\" \"호르무즈\"",
-    "\"후티\" \"홍해\" \"사우디\"",
-    "\"후티\" \"유조선\"",
-    "\"레바논\" \"헤즈볼라\"",
-    "\"시리아\" \"SDF\" \"ISIS\"",
-    "\"사우디\" \"미국\" \"원자력 협력\"",
-    "\"걸프\" \"미군기지\" \"이란\""
+    "\"이라크\" \"영공 폐쇄\"",
+    "\"이라크\" \"공항 운항 중단\"",
+    "\"이라크\" \"대피\" \"항공편\"",
+    "\"이라크\" \"미군기지\" \"공격\"",
+    "\"이라크\" \"이란 국경\" \"폐쇄\"",
+    "\"이라크\" \"시리아 국경\" \"ISIS\"",
+    "\"이라크\" \"호르무즈\" \"원유 수출\"",
+    "\"이라크\" \"홍해\" \"해운\"",
+    "\"이라크\" \"공급망\" \"국경\""
   ],
   "english_middle_east_fallback": [
-    "\"Iran\" \"United States\" \"Israel\" \"missile\"",
-    "\"Iran\" \"US bases\" \"Hormuz\"",
-    "\"Houthi\" \"Red Sea\" \"Saudi\"",
-    "\"Houthi\" \"oil tanker\"",
-    "\"Lebanon\" \"Hezbollah\" \"United States\"",
-    "\"Syria\" \"SDF\" \"ISIS camps\"",
-    "\"Saudi Arabia\" \"United States\" \"civil nuclear\""
+    "\"Iraq\" \"airspace closure\"",
+    "\"Iraq\" \"airport suspension\"",
+    "\"Iraq\" \"evacuation flights\"",
+    "\"Iraq\" \"US bases\" \"attack\"",
+    "\"Iraq\" \"Iran border\" \"closure\"",
+    "\"Iraq\" \"Syria border\" \"ISIS\"",
+    "\"Iraq\" \"Hormuz\" \"oil exports\"",
+    "\"Iraq\" \"Red Sea\" \"shipping\"",
+    "\"Iraq\" \"supply chain\" \"border\""
   ]
 }
