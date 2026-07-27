@@ -43,13 +43,16 @@ jobs:
       - name: Collect Iraq weekly news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5-mini' }}
-          OPENAI_SUMMARY_FALLBACK_MODEL: ${{ vars.OPENAI_SUMMARY_FALLBACK_MODEL || 'gpt-4o-mini' }}
+          # Use the same proven model family as report refinement. Hard-code this
+          # so an old repository variable cannot silently force gpt-5-mini and
+          # then downgrade the whole run to gpt-4o-mini.
+          OPENAI_SUMMARY_MODEL: "gpt-5.4-mini"
+          OPENAI_SUMMARY_FALLBACK_MODEL: "gpt-5.4-nano"
           OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4-mini' }}
           OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
           REPORT_REFINEMENT_MIN_SCORE: "70"
           MAX_REPORT_REFINEMENT_ITEMS: "20"
-          REPORT_REFINEMENT_CONCURRENCY: "2"
+          REPORT_REFINEMENT_CONCURRENCY: "4"
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "12"
           MAX_TOTAL: "260"
@@ -57,17 +60,20 @@ jobs:
           GOOGLE_QUERY_CONCURRENCY: "6"
           SOURCE_CONCURRENCY: "3"
           ARTICLE_FETCH_CONCURRENCY: "4"
-          AI_CONCURRENCY: "2"
-          AI_MIN_REQUEST_INTERVAL_MS: "2500"
-          OPENAI_MAX_RETRIES: "5"
-          OPENAI_RETRY_BASE_MS: "3000"
+          # Tier-1 limits for the selected models leave enough headroom for this
+          # pace while cutting the former 2.5-second global request queue.
+          AI_CONCURRENCY: "4"
+          AI_MIN_REQUEST_INTERVAL_MS: "1000"
+          OPENAI_MAX_RETRIES: "3"
+          OPENAI_RETRY_BASE_MS: "2000"
           FULLTEXT_HYDRATION_CONCURRENCY: "4"
           MIN_FULLTEXT_CHARS_FOR_AI: "500"
           MIN_RSS_DESCRIPTION_CHARS_FOR_AI: "300"
           MIN_GOOGLE_RSS_EVIDENCE_CHARS: "40"
           HIGH_PRIORITY_RSS_FALLBACK_SCORE: "90"
           GOOGLE_RSS_FALLBACK_SCORE: "70"
-          MAX_NEW_AI_ITEMS: "260"
+          # Prevent an unusually broad news day from creating an unbounded AI queue.
+          MAX_NEW_AI_ITEMS: "180"
         run: |
           for attempt in 1 2 3; do
             echo "Collect Iraq weekly news attempt ${attempt}/3"
@@ -89,7 +95,7 @@ jobs:
           OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
           REPORT_REFINEMENT_MIN_SCORE: "70"
           MAX_REPORT_REFINEMENT_ITEMS: "20"
-          REPORT_REFINEMENT_CONCURRENCY: "2"
+          REPORT_REFINEMENT_CONCURRENCY: "4"
         run: node scripts/refine-report-writing.mjs
 
       - name: Post-process collected news
