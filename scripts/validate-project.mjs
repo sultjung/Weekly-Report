@@ -6,6 +6,7 @@ import { spawnSync } from "node:child_process";
 import { EDITORIAL_VERSION, editorialPromptBytes } from "./editorial-rules.mjs";
 import { FACT_EXTRACTION_VERSION, factExtractionPrompt, factPromptBytes } from "./article-fact-rules.mjs";
 import { classifyArticle, evidenceQuoteSupported } from "./extract-article-facts.mjs";
+import { roleFromEvidence, unambiguousLocationFromSource } from "./normalize-extracted-entities.mjs";
 import { exclusionReason, applyDeterministicCorrections } from "./filter-strict-relevance-and-facts.mjs";
 
 const ROOT = process.cwd();
@@ -61,8 +62,12 @@ if ((appJs.match(/new MutationObserver\s*\(/g) || []).length > 1) {
 }
 
 const packageJson = await readJson("package.json");
-if (packageJson.scripts?.collect !== "node scripts/collect-news.mjs") {
-  throw new Error("npm run collect must execute the canonical collector directly");
+if (packageJson.scripts?.collect !== "node scripts/collect-sources-only.mjs") {
+  throw new Error("npm run collect must execute the AI-free source collector");
+}
+const sourceCollector = await fs.readFile(path.join(ROOT, "scripts/collect-sources-only.mjs"), "utf8");
+if (!/OPENAI_API_KEY:\s*""/.test(sourceCollector) || !/scripts\/collect-news\.mjs/.test(sourceCollector)) {
+  throw new Error("Source collector must clear OpenAI credentials before invoking collect-news.mjs");
 }
 try {
   await fs.access(path.join(ROOT, "scripts/run-report-style-collector.mjs"));
@@ -146,6 +151,10 @@ if (evidenceQuoteSupported("Al-Zaidi 외무장관", {
   title: "رئيس الوزراء علي الزيدي يؤكد من طهران",
   description: "قال رئيس مجلس الوزراء علي الزيدي"
 })) throw new Error("Evidence quote validator must reject invented translated role text");
+if (roleFromEvidence("قال رئيس مجلس الوزراء علي الزيدي") !== "총리") throw new Error("Arabic prime-minister role must normalize to 총리");
+if (roleFromEvidence("اجتمع وزير الخارجية العراقي") !== "외무장관") throw new Error("Arabic foreign-minister role must normalize to 외무장관");
+if (unambiguousLocationFromSource({ title: "اجتماع في بغداد", description: "العراق" }) !== "Baghdad") throw new Error("Single source location must normalize to Baghdad");
+if (unambiguousLocationFromSource({ title: "لقاء بغداد وطهران" }) !== "") throw new Error("Ambiguous multi-location article must not force one location");
 
 requireMatch(exclusionReason({
   category3: "oil_economy",
@@ -185,8 +194,10 @@ const syntaxFiles = [
   "app.js",
   "scripts/editorial-rules.mjs",
   "scripts/article-fact-rules.mjs",
+  "scripts/collect-sources-only.mjs",
   "scripts/collect-news.mjs",
   "scripts/extract-article-facts.mjs",
+  "scripts/normalize-extracted-entities.mjs",
   "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
