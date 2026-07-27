@@ -4,6 +4,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { EDITORIAL_VERSION, editorialPromptBytes } from "./editorial-rules.mjs";
+import { FACT_EXTRACTION_VERSION, factExtractionPrompt, factPromptBytes } from "./article-fact-rules.mjs";
+import { classifyArticle, evidenceQuoteSupported } from "./extract-article-facts.mjs";
 import { exclusionReason, applyDeterministicCorrections } from "./filter-strict-relevance-and-facts.mjs";
 
 const ROOT = process.cwd();
@@ -21,6 +23,9 @@ for (const required of ["\"العراق\" \"مجلس الوزراء\"", "\"ال�
 const forbiddenArabicEconomy = ["\"العراق\" \"النفط\"", "\"العراق\" \"الاقتصاد\"", "\"العراق\" \"الاستثمار\"", "\"العراق\" \"الإسكان\""];
 for (const forbidden of forbiddenArabicEconomy) {
   if (queries.includes(forbidden)) throw new Error(`Arabic economy keyword must remain removed: ${forbidden}`);
+}
+for (const forbidden of ["\"가자\" \"이스라엘\" \"인질\"", "\"Gaza\" \"Israel\" \"hostages\""]) {
+  if (queries.includes(forbidden)) throw new Error(`Gaza-specific Middle East query must remain removed: ${forbidden}`);
 }
 
 const sources = await readJson("data/iraq-media-sources.json");
@@ -68,9 +73,31 @@ try {
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
 if (/47 21 \* \* \*/.test(workflow)) throw new Error("Unconditional 06:47 backup schedule must remain removed");
+if (/gpt-4o-mini/.test(workflow)) throw new Error("Collect workflow must not silently downgrade to gpt-4o-mini");
+if (!/OPENAI_FACT_MODEL:\s*"gpt-5\.4-nano"/.test(workflow)) throw new Error("First-pass fact model must be gpt-5.4-nano");
+if (!/OPENAI_FACT_FALLBACK_MODEL:\s*"gpt-5\.4-mini"/.test(workflow)) throw new Error("Fact fallback must remain gpt-5.4-mini");
+if (/OPENAI_SUMMARY_MODEL|OPENAI_SUMMARY_FALLBACK_MODEL/.test(workflow)) throw new Error("Legacy all-in-one summary model must not run in the collection workflow");
+const stageOrder = [
+  workflow.indexOf("npm run collect"),
+  workflow.indexOf("node scripts/extract-article-facts.mjs"),
+  workflow.indexOf("node scripts/refine-report-writing.mjs"),
+  workflow.indexOf("npm run postprocess")
+];
+if (stageOrder.some((value) => value < 0) || !stageOrder.every((value, index) => index === 0 || value > stageOrder[index - 1])) {
+  throw new Error("Workflow stages must remain collect -> fact extraction -> report refinement -> postprocess");
+}
+
 const promptBytes = editorialPromptBytes();
 if (promptBytes < 4000 || promptBytes > 7500) {
-  throw new Error(`Collection prompt must remain within the 4-7.5KB budget; found ${promptBytes} bytes`);
+  throw new Error(`Editorial prompt must remain within the 4-7.5KB budget; found ${promptBytes} bytes`);
+}
+const factBytes = factPromptBytes();
+if (factBytes < 1500 || factBytes > 4000) {
+  throw new Error(`Fact extraction prompt must remain focused within 1.5-4KB; found ${factBytes} bytes`);
+}
+const factPrompt = factExtractionPrompt();
+for (const forbidden of ["importanceScore", "reportBullet", "reportSubBullets", "reportImplication", "category3", "reportUsefulness"]) {
+  if (factPrompt.includes(forbidden)) throw new Error(`Fact extraction prompt must not request ${forbidden}`);
 }
 
 function requireMatch(value, pattern, label) {
@@ -79,25 +106,62 @@ function requireMatch(value, pattern, label) {
 function requireEmpty(value, label) {
   if (String(value || "") !== "") throw new Error(`Quality-gate regression failed: ${label} (${value})`);
 }
+function requireExcluded(result, pattern, label) {
+  if (result?.include !== false || !pattern.test(String(result?.reason || ""))) throw new Error(`Fact-pipeline regression failed: ${label}`);
+}
+function requireCategory(result, category, label) {
+  if (result?.include !== true || result?.category3 !== category) throw new Error(`Fact-pipeline regression failed: ${label}`);
+}
+
+requireExcluded(classifyArticle({
+  collectionLane: "oil_market",
+  title: "대구 휘발유값 11주 연속 하락…국제유가 급등",
+  description: "대구 주유소 휘발유 가격 동향"
+}), /휘발유/, "local retail fuel must be rejected before AI");
+requireExcluded(classifyArticle({
+  collectionLane: "arabic_iraq_direct",
+  title: "ثاني أغرب عشاء لمراسلي البيت الأبيض",
+  description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين"
+}), /이라크/, "White House dinner must be rejected before AI");
+requireExcluded(classifyArticle({
+  collectionLane: "regional_context",
+  title: "가자지구 공습 확대",
+  description: "이스라엘과 하마스 충돌"
+}), /가자/, "Gaza regional story must be rejected before AI");
+requireCategory(classifyArticle({
+  collectionLane: "arabic_iraq_security",
+  title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد",
+  description: "ضبط طائرات مسيرة"
+}), "terror_security", "real Iraq security article must remain eligible");
+requireCategory(classifyArticle({
+  collectionLane: "core_bncp",
+  title: "비스마야 신도시 사업 관련 한화 협의",
+  description: "이라크 비스마야 사업"
+}), "politics", "BNCP article must remain top priority");
+if (!evidenceQuoteSupported("اعتقال ثلاثة أشخاص", {
+  title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد",
+  description: "ضبط طائرات مسيرة"
+})) throw new Error("Evidence quote validator must accept exact source text");
+if (evidenceQuoteSupported("Al-Zaidi 외무장관", {
+  title: "رئيس الوزراء علي الزيدي يؤكد من طهران",
+  description: "قال رئيس مجلس الوزراء علي الزيدي"
+})) throw new Error("Evidence quote validator must reject invented translated role text");
 
 requireMatch(exclusionReason({
   category3: "oil_economy",
   title: "대구 휘발유값 11주 연속 하락…국제유가 급등에 상승 전환 가능성",
   description: "대구 주유소 휘발유 가격 동향"
 }), /국내 지역 휘발유/, "local retail fuel article must be excluded");
-
 requireMatch(exclusionReason({
   category3: "terror_security",
   title: "ثاني أغرب عشاء لمراسلي البيت الأبيض",
   description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين"
 }), /제3국/, "White House dinner must not become Iraq security news");
-
 requireMatch(exclusionReason({
   category3: "terror_security",
   title: "هذا أخطر تحد سياسي في الهند يواجه مودي",
   description: "احتجاجات الطلاب في الهند"
 }), /제3국/, "India politics must not become Iraq security news");
-
 requireEmpty(exclusionReason({
   category3: "terror_security",
   title: "العراق: اعتقال ثلاثة أشخاص في بغداد",
@@ -120,7 +184,9 @@ requireMatch(correctedZaidi.reportBullet, /Al-Zaidi 총리/, "report bullet role
 const syntaxFiles = [
   "app.js",
   "scripts/editorial-rules.mjs",
+  "scripts/article-fact-rules.mjs",
   "scripts/collect-news.mjs",
+  "scripts/extract-article-facts.mjs",
   "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
@@ -133,6 +199,7 @@ const syntaxFiles = [
   "scripts/filter-ai-hallucinated-actors.mjs",
   "scripts/filter-irrelevant-foreign-news.mjs",
   "scripts/filter-strict-relevance-and-facts.mjs",
+  "scripts/filter-gaza-regional-news.mjs",
   "scripts/deduplicate-news-articles.mjs"
 ];
 for (const file of syntaxFiles) {
@@ -140,4 +207,4 @@ for (const file of syntaxFiles) {
   const result = spawnSync(process.execPath, ["--check", file], { stdio: "inherit" });
   if (result.status !== 0) process.exit(result.status || 1);
 }
-console.log(`Validated ${queries.length} queries, ${sources.length} sources, ${syntaxFiles.length} JavaScript files, editorial policy ${EDITORIAL_VERSION} (${promptBytes} bytes).`);
+console.log(`Validated ${queries.length} queries, ${sources.length} sources, ${syntaxFiles.length} JavaScript files, editorial policy ${EDITORIAL_VERSION} (${promptBytes} bytes), fact policy ${FACT_EXTRACTION_VERSION} (${factBytes} bytes).`);
