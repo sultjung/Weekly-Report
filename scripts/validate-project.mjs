@@ -27,6 +27,7 @@ for (const required of [
 ]) {
   if (!queries.includes(required)) throw new Error(`Required search keyword missing: ${required}`);
 }
+
 const forbiddenArabicEconomy = ["\"العراق\" \"النفط\"", "\"العراق\" \"الاقتصاد\"", "\"العراق\" \"الاستثمار\"", "\"العراق\" \"الإسكان\""];
 for (const forbidden of forbiddenArabicEconomy) {
   if (queries.includes(forbidden)) throw new Error(`Arabic economy keyword must remain removed: ${forbidden}`);
@@ -34,6 +35,7 @@ for (const forbidden of forbiddenArabicEconomy) {
 for (const forbidden of ["\"가자\" \"이스라엘\" \"인질\"", "\"Gaza\" \"Israel\" \"hostages\""]) {
   if (queries.includes(forbidden)) throw new Error(`Gaza-specific Middle East query must remain removed: ${forbidden}`);
 }
+
 const regionalQueries = [
   ...(keywordConfig.korean_middle_east || []),
   ...(keywordConfig.english_middle_east_fallback || [])
@@ -59,6 +61,7 @@ if (!alJazeera || !(alJazeera.listPages || []).some((url) => /aljazeera\.net\/wh
 for (const required of ["\"علي الزيدي\"", "\"الزيدي\" \"طهران\""]) {
   if (!queries.includes(required)) throw new Error(`Current Iraqi PM search keyword missing: ${required}`);
 }
+
 await fs.access(path.join(ROOT, "templates", "weekly-report-template.docx"));
 await fs.access(path.join(ROOT, "scripts", "fill-weekly-template.py"));
 
@@ -72,8 +75,11 @@ const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
 for (const forbidden of [/function buildWordHtml\s*\(/, /application\/msword/, /\.doc["'`]/]) {
   if (forbidden.test(appJs)) throw new Error(`Browser-side fake Word generation must remain removed: ${forbidden}`);
 }
-if (!/generate-weekly-report\.yml/.test(appJs) || !/copySelectionJson/.test(appJs)) {
-  throw new Error("Browser report action must copy selection JSON and open the canonical DOCX workflow");
+const hasCanonicalWorkflowLink = /generate-weekly-report\.yml/.test(appJs);
+const hasSelectionJsonDownload = /downloadSelection/.test(appJs) && /selected-news\.json/.test(appJs) && /application\/json/.test(appJs);
+const hasGenerateReportAction = /generateReport/.test(appJs) && /window\.open/.test(appJs);
+if (!hasCanonicalWorkflowLink || !hasSelectionJsonDownload || !hasGenerateReportAction) {
+  throw new Error("Browser report action must download selection JSON and open the canonical DOCX workflow");
 }
 if ((appJs.match(/new MutationObserver\s*\(/g) || []).length > 1) {
   throw new Error("app.js must not register multiple article-list observers");
@@ -138,64 +144,22 @@ function requireCategory(result, category, label) {
   if (result?.include !== true || result?.category3 !== category) throw new Error(`Fact-pipeline regression failed: ${label}`);
 }
 
-requireExcluded(classifyArticle({
-  collectionLane: "oil_market",
-  title: "대구 휘발유값 11주 연속 하락…국제유가 급등",
-  description: "대구 주유소 휘발유 가격 동향"
-}), /휘발유/, "local retail fuel must be rejected before AI");
-requireExcluded(classifyArticle({
-  collectionLane: "arabic_iraq_direct",
-  title: "ثاني أغرب عشاء لمراسلي البيت الأبيض",
-  description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين"
-}), /이라크/, "White House dinner must be rejected before AI");
-requireExcluded(classifyArticle({
-  collectionLane: "regional_context",
-  title: "가자지구 공습 확대",
-  description: "이스라엘과 하마스 충돌"
-}), /가자/, "Gaza regional story must be rejected before AI");
-requireCategory(classifyArticle({
-  collectionLane: "arabic_iraq_security",
-  title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد",
-  description: "ضبط طائرات مسيرة"
-}), "terror_security", "real Iraq security article must remain eligible");
-requireCategory(classifyArticle({
-  collectionLane: "core_bncp",
-  title: "비스마야 신도시 사업 관련 한화 협의",
-  description: "이라크 비스마야 사업"
-}), "politics", "BNCP article must remain top priority");
-if (!evidenceQuoteSupported("اعتقال ثلاثة أشخاص", {
-  title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد",
-  description: "ضبط طائرات مسيرة"
-})) throw new Error("Evidence quote validator must accept exact source text");
-if (evidenceQuoteSupported("Al-Zaidi 외무장관", {
-  title: "رئيس الوزراء علي الزيدي يؤكد من طهران",
-  description: "قال رئيس مجلس الوزراء علي الزيدي"
-})) throw new Error("Evidence quote validator must reject invented translated role text");
+requireExcluded(classifyArticle({ collectionLane: "oil_market", title: "대구 휘발유값 11주 연속 하락…국제유가 급등", description: "대구 주유소 휘발유 가격 동향" }), /휘발유/, "local retail fuel must be rejected before AI");
+requireExcluded(classifyArticle({ collectionLane: "arabic_iraq_direct", title: "ثاني أغرب عشاء لمراسلي البيت الأبيض", description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين" }), /이라크/, "White House dinner must be rejected before AI");
+requireExcluded(classifyArticle({ collectionLane: "regional_context", title: "가자지구 공습 확대", description: "이스라엘과 하마스 충돌" }), /가자/, "Gaza regional story must be rejected before AI");
+requireCategory(classifyArticle({ collectionLane: "arabic_iraq_security", title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد", description: "ضبط طائرات مسيرة" }), "terror_security", "real Iraq security article must remain eligible");
+requireCategory(classifyArticle({ collectionLane: "core_bncp", title: "비스마야 신도시 사업 관련 한화 협의", description: "이라크 비스마야 사업" }), "politics", "BNCP article must remain top priority");
+if (!evidenceQuoteSupported("اعتقال ثلاثة أشخاص", { title: "العراق يعلن اعتقال ثلاثة أشخاص في بغداد", description: "ضبط طائرات مسيرة" })) throw new Error("Evidence quote validator must accept exact source text");
+if (evidenceQuoteSupported("Al-Zaidi 외무장관", { title: "رئيس الوزراء علي الزيدي يؤكد من طهران", description: "قال رئيس مجلس الوزراء علي الزيدي" })) throw new Error("Evidence quote validator must reject invented translated role text");
 if (roleFromEvidence("قال رئيس مجلس الوزراء علي الزيدي") !== "총리") throw new Error("Arabic prime-minister role must normalize to 총리");
 if (roleFromEvidence("اجتمع وزير الخارجية العراقي") !== "외무장관") throw new Error("Arabic foreign-minister role must normalize to 외무장관");
 if (unambiguousLocationFromSource({ title: "اجتماع في بغداد", description: "العراق" }) !== "Baghdad") throw new Error("Single source location must normalize to Baghdad");
 if (unambiguousLocationFromSource({ title: "لقاء بغداد وطهران" }) !== "") throw new Error("Ambiguous multi-location article must not force one location");
 
-requireMatch(exclusionReason({
-  category3: "oil_economy",
-  title: "대구 휘발유값 11주 연속 하락…국제유가 급등에 상승 전환 가능성",
-  description: "대구 주유소 휘발유 가격 동향"
-}), /국내 지역 휘발유/, "local retail fuel article must be excluded");
-requireMatch(exclusionReason({
-  category3: "terror_security",
-  title: "ثاني أغرب عشاء لمراسلي البيت الأبيض",
-  description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين"
-}), /제3국/, "White House dinner must not become Iraq security news");
-requireMatch(exclusionReason({
-  category3: "terror_security",
-  title: "هذا أخطر تحد سياسي في الهند يواجه مودي",
-  description: "احتجاجات الطلاب في الهند"
-}), /제3국/, "India politics must not become Iraq security news");
-requireEmpty(exclusionReason({
-  category3: "terror_security",
-  title: "العراق: اعتقال ثلاثة أشخاص في بغداد",
-  description: "أعلن جهاز الأمن الوطني العراقي اعتقال ثلاثة أشخاص وضبط طائرات مسيرة"
-}), "real Iraq security article must remain eligible");
+requireMatch(exclusionReason({ category3: "oil_economy", title: "대구 휘발유값 11주 연속 하락…국제유가 급등에 상승 전환 가능성", description: "대구 주유소 휘발유 가격 동향" }), /국내 지역 휘발유/, "local retail fuel article must be excluded");
+requireMatch(exclusionReason({ category3: "terror_security", title: "ثاني أغرب عشاء لمراسلي البيت الأبيض", description: "عشاء في نيويورك وخطاب هجومي ضد الصحفيين" }), /제3국/, "White House dinner must not become Iraq security news");
+requireMatch(exclusionReason({ category3: "terror_security", title: "هذا أخطر تحد سياسي في الهند يواجه مودي", description: "احتجاجات الطلاب في الهند" }), /제3국/, "India politics must not become Iraq security news");
+requireEmpty(exclusionReason({ category3: "terror_security", title: "العراق: اعتقال ثلاثة أشخاص في بغداد", description: "أعلن جهاز الأمن الوطني العراقي اعتقال ثلاثة أشخاص وضبط طائرات مسيرة" }), "real Iraq security article must remain eligible");
 
 const correctedZaidi = applyDeterministicCorrections({
   title: "رئيس الوزراء علي الزيدي يؤكد من طهران",
@@ -205,9 +169,7 @@ const correctedZaidi = applyDeterministicCorrections({
   actors: ["Al-Zaidi 외무장관"]
 });
 requireMatch(correctedZaidi.titleKo, /Al-Zaidi 총리/, "Al-Zaidi role must be corrected to prime minister");
-if (/^M\s*[.·]?\s*D/i.test(correctedZaidi.reportBullet || "")) {
-  throw new Error("Quality-gate regression failed: M.D placeholder must be removed");
-}
+if (/^M\s*[.·]?\s*D/i.test(correctedZaidi.reportBullet || "")) throw new Error("Quality-gate regression failed: M.D placeholder must be removed");
 requireMatch(correctedZaidi.reportBullet, /Al-Zaidi 총리/, "report bullet role correction");
 
 const syntaxFiles = [
