@@ -2,6 +2,8 @@
   const target=document.getElementById('updatedAt');
   if(!target)return;
 
+  let correctText='-';
+
   const formatKst=value=>{
     const parsed=new Date(value);
     if(Number.isNaN(parsed.getTime()))return '-';
@@ -16,6 +18,15 @@
     }).format(parsed);
   };
 
+  const enforceCorrectTime=()=>{
+    if(correctText!=='-'&&target.textContent!==correctText){
+      target.textContent=correctText;
+    }
+  };
+
+  const observer=new MutationObserver(enforceCorrectTime);
+  observer.observe(target,{childList:true,characterData:true,subtree:true});
+
   fetch(`./data/news.json?v=${Date.now()}`,{cache:'no-store'})
     .then(response=>{
       if(!response.ok)throw new Error(`HTTP ${response.status}`);
@@ -23,9 +34,11 @@
     })
     .then(data=>{
       const updatedAt=data.updatedAt||data.generatedAt;
-      target.textContent=updatedAt?formatKst(updatedAt):'-';
+      correctText=updatedAt?formatKst(updatedAt):'-';
+      enforceCorrectTime();
     })
     .catch(()=>{
+      correctText='-';
       target.textContent='-';
     });
 })();
