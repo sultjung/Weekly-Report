@@ -79,7 +79,8 @@ try {
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
 if (/47 21 \* \* \*/.test(workflow)) throw new Error("Unconditional 06:47 backup schedule must remain removed");
 if (/gpt-4o-mini/.test(workflow)) throw new Error("Collect workflow must not silently downgrade to gpt-4o-mini");
-if (!/OPENAI_FACT_MODEL:\s*"gpt-5\.4-nano"/.test(workflow)) throw new Error("First-pass fact model must be gpt-5.4-nano");
+if (!/OPENAI_FACT_MODEL:\s*"gpt-5\.4"/.test(workflow)) throw new Error("First-pass fact model must be gpt-5.4");
+if (/OPENAI_FACT_MODEL:\s*"gpt-5\.4-(?:mini|nano)"/.test(workflow)) throw new Error("First-pass fact model must not use a small-model tier");
 if (!/OPENAI_FACT_FALLBACK_MODEL:\s*"gpt-5\.4-mini"/.test(workflow)) throw new Error("Fact fallback must remain gpt-5.4-mini");
 if (/OPENAI_SUMMARY_MODEL|OPENAI_SUMMARY_FALLBACK_MODEL/.test(workflow)) throw new Error("Legacy all-in-one summary model must not run in the collection workflow");
 const stageOrder = [
