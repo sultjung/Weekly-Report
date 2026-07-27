@@ -8,7 +8,7 @@
     "collect": "node scripts/collect-sources-only.mjs",
     "postprocess": "node scripts/postprocess-news.mjs",
     "report": "node scripts/generate-weekly-report.mjs",
-    "validate": "node scripts/validate-project.mjs"
+    "validate": "node scripts/validate-project.mjs && node scripts/validate-regional-iraq-scope.mjs"
   },
   "dependencies": {
     "docx": "^9.5.1"
