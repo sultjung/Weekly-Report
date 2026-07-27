@@ -39,6 +39,11 @@ const shouldReject = [
   {
     title: "Syria deploys forces near its northern border",
     description: "Domestic Syrian security operation"
+  },
+  {
+    title: "Iraq comments on regional developments",
+    description: "Lebanon airport suspends flights after local clashes",
+    cleanText: "Baghdad issued a general diplomatic statement.\nLebanon airport separately suspended flights because of domestic security conditions."
   }
 ];
 for (const article of shouldReject) {
