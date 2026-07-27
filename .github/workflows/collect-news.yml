@@ -1,128 +1,49 @@
 name: Collect Iraq Weekly News
-
 on:
   workflow_dispatch:
   schedule:
-    # KST 06:17 daily. The job already retries collection up to three times.
     - cron: "17 21 * * *"
-
 permissions:
   contents: write
-
 concurrency:
   group: collect-iraq-weekly-news
   cancel-in-progress: false
-
 jobs:
   collect-news:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Sync latest main
-        run: |
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Validate project structure
-        run: npm run validate
-
-      # Stage 1: collect, hydrate, and apply the collector's inexpensive source
-      # checks only. No OpenAI key is exposed here, so the legacy all-in-one AI
-      # prompt cannot run.
+      - uses: actions/checkout@v4
+        with: {ref: main, fetch-depth: 0}
+      - run: git fetch origin main && git checkout main && git reset --hard origin/main
+      - uses: actions/setup-node@v4
+        with: {node-version: "24", cache: npm}
+      - run: npm ci && npm run validate
       - name: Collect and hydrate source articles
         env:
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "12"
           MAX_TOTAL: "260"
           FETCH_TIMEOUT_MS: "12000"
-          GOOGLE_QUERY_CONCURRENCY: "6"
-          SOURCE_CONCURRENCY: "3"
           ARTICLE_FETCH_CONCURRENCY: "4"
-          FULLTEXT_HYDRATION_CONCURRENCY: "4"
-          MIN_FULLTEXT_CHARS_FOR_AI: "500"
-          MIN_RSS_DESCRIPTION_CHARS_FOR_AI: "300"
-          MIN_GOOGLE_RSS_EVIDENCE_CHARS: "40"
-          HIGH_PRIORITY_RSS_FALLBACK_SCORE: "90"
-          GOOGLE_RSS_FALLBACK_SCORE: "70"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Collect Iraq source articles attempt ${attempt}/3"
-            if npm run collect; then
-              echo "Source collection succeeded"
-              break
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Source collection failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 90))
-          done
-
-      # Stage 1.5: neighbouring-country news is retained only when the source
-      # shows a direct Iraq/BNCP operational path such as a border, airspace,
-      # airport, Iraq-based facility, evacuation, oil export, port, or supply chain.
-      - name: Filter regional news to Iraq operational exposure
+        run: npm run collect
+      - name: Filter regional news
         run: node scripts/filter-regional-iraq-exposure.mjs
-
-      # Stage 2: code decides relevance, category, and importance first. The AI
-      # receives only articles that survived those checks, and only translates
-      # and extracts facts with source quotations.
-      - name: Translate and extract evidence-backed facts
+      - name: Score, translate and extract facts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_FACT_MODEL: "gpt-5.4"
-          OPENAI_FACT_FALLBACK_MODEL: "gpt-5.4-mini"
+          OPENAI_FACT_MODEL: ${{ vars.OPENAI_TRANSLATION_MODEL || 'gpt-5-mini' }}
+          OPENAI_FACT_FALLBACK_MODEL: ${{ vars.OPENAI_TRANSLATION_FALLBACK_MODEL || 'gpt-4o-mini' }}
           FACT_EXTRACTION_MAX_ITEMS: "180"
           FACT_AI_CONCURRENCY: "4"
-          FACT_AI_MIN_REQUEST_INTERVAL_MS: "1000"
-          FACT_AI_MAX_RETRIES: "3"
-          FACT_AI_RETRY_BASE_MS: "2000"
-          FACT_MAX_EVIDENCE_CHARS: "9000"
+          FACT_MAX_EVIDENCE_CHARS: "12000"
+          FULL_TRANSLATION_MIN_SCORE: "60"
+          SCORING_POLICY_FILE: "data/news-scoring-policy.json"
         run: node scripts/extract-article-facts.mjs
-
-      # Stage 2.5: normalize high-risk roles and locations from the validated
-      # source quotations before any report-style rewriting occurs.
-      - name: Normalize extracted roles and locations
-        run: node scripts/normalize-extracted-entities.mjs
-
-      # Stage 3: only the top report candidates are rewritten as report prose.
-      - name: Refine high-value report writing
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4-mini' }}
-          OPENAI_REPORT_REASONING: ${{ vars.OPENAI_REPORT_REASONING || 'medium' }}
-          REPORT_REFINEMENT_MIN_SCORE: "70"
-          MAX_REPORT_REFINEMENT_ITEMS: "20"
-          REPORT_REFINEMENT_CONCURRENCY: "4"
-        run: node scripts/refine-report-writing.mjs
-
-      - name: Post-process collected news
-        run: npm run postprocess
-
-      - name: Sync latest main before commit
-        run: |
-          git config pull.rebase true
-          git pull --rebase --autostash origin main
-
-      - name: Commit updated news data
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Normalize entities and post-process
+        run: node scripts/normalize-extracted-entities.mjs && npm run postprocess
+      - run: git config pull.rebase true && git pull --rebase --autostash origin main
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update Iraq weekly news data"
+          commit_message: "Update scored and translated Iraq news"
           file_pattern: "data/*.json"
