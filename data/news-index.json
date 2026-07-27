@@ -1,47 +1,61 @@
 {
-  "generatedAt": "2026-07-26T23:56:38.697Z",
+  "generatedAt": "2026-07-27T00:47:58.793Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 186,
+    "total": 173,
     "politics": 6,
-    "terror_security": 41,
-    "oil_economy": 66,
-    "regional": 73,
+    "terror_security": 33,
+    "oil_economy": 85,
+    "regional": 49,
     "exclude": 0
   },
   "archive": {
-    "previous": 259,
-    "carriedForward": 119
+    "previous": 186,
+    "carriedForward": 76
   },
-  "elapsedSeconds": 380,
+  "elapsedSeconds": 30,
+  "count": 173,
+  "model": "gpt-5.4",
+  "requestedModel": "gpt-5.4",
+  "factExtraction": {
+    "version": "weekly-report-v16-evidence-facts-only",
+    "reused": 0,
+    "requested": 180,
+    "extracted": 177,
+    "failed": 3,
+    "removedCount": 83
+  },
+  "entityNormalization": {
+    "correctedCount": 32,
+    "completedAt": "2026-07-27T00:51:15.968Z"
+  },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-26T23:57:28.625Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-27T00:52:01.727Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-26T23:57:28.676Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-27T00:52:02.040Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-26T23:57:28.749Z",
+  "untranslatedFilteredAt": "2026-07-27T00:52:02.122Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-26T23:57:28.802Z",
-  "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-26T23:57:28.859Z",
+  "datelineLocationCorrectedAt": "2026-07-27T00:52:02.174Z",
+  "aiHallucinationFilteredCount": 4,
+  "aiHallucinationFilteredAt": "2026-07-27T00:52:02.230Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-26T23:57:28.913Z",
-  "count": 186,
+  "irrelevantForeignFilteredAt": "2026-07-27T00:52:02.285Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-26T23:57:29.049Z",
-    "removedCount": 74,
-    "correctedCount": 5
+    "appliedAt": "2026-07-27T00:52:02.341Z",
+    "removedCount": 4,
+    "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-26T23:57:29.087Z",
+    "appliedAt": "2026-07-27T00:52:02.384Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-26T23:57:29.127Z",
-  "eventCount": 101,
-  "eventDuplicateArticleCount": 85,
-  "eventGroupedAt": "2026-07-26T23:57:29.531Z"
+  "duplicateCollapsedAt": "2026-07-27T00:52:02.430Z",
+  "eventCount": 70,
+  "eventDuplicateArticleCount": 103,
+  "eventGroupedAt": "2026-07-27T00:52:02.736Z"
 }
