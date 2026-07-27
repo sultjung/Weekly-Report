@@ -41,7 +41,7 @@ function sourceSegments(article = {}) {
     .split(/\n+|(?<=[.!?؟。])\s+/u)
     .map((value) => value.trim())
     .filter(Boolean);
-  return [title, description, `${title} ${description}`.trim(), ...bodySegments]
+  return [title, description, ...bodySegments]
     .filter(Boolean)
     .map((value) => value.slice(0, 1200));
 }
