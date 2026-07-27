@@ -1,0 +1,1273 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-27T23:30:00.814Z",
+    "title": "건설, 이라크 주간 종합 상황보고(΄26.7.23 ~ ΄26.7.28)",
+    "periodStart": "2026-07-23",
+    "periodEnd": "2026-07-28",
+    "reportDate": "2026-07-28",
+    "selectedCount": 16,
+    "usedCount": 11,
+    "excludedCount": 5,
+    "exclusions": [
+      {
+        "id": "selected-2",
+        "reason": "후티 공격 관련 유가 반응 기사로 regional 핵심 사건과 중복"
+      },
+      {
+        "id": "selected-4",
+        "reason": "후티 공격 관련 유가 반응 기사로 regional 핵심 사건과 중복"
+      },
+      {
+        "id": "selected-5",
+        "reason": "정보평가 보도로 현장 조치 확인 부족"
+      },
+      {
+        "id": "selected-10",
+        "reason": "국내 농가 비용 기사로 국제유가 핵심 원인 요약과 거리"
+      },
+      {
+        "id": "selected-14",
+        "reason": "제3국 전선 확대 서술로 이라크 현장 영향 핵심 축과 거리"
+      }
+    ],
+    "file": "reports/generated/건설_이라크 주간 종합상황보고(7월 28일).docx",
+    "latest": "reports/latest.docx",
+    "template": "templates/weekly-report-template.docx",
+    "oilSource": "한국석유공사 오피넷 국제원유 일간가격",
+    "oilRows": [
+      {
+        "date": "7.26",
+        "dubai": "-",
+        "brent": "$96.78",
+        "wti": "$89.31"
+      },
+      {
+        "date": "7.27",
+        "dubai": "-",
+        "brent": "$87.94",
+        "wti": "$82.08"
+      }
+    ],
+    "terrorStats": {
+      "total": 10,
+      "armed_attack": 8,
+      "ied": 1,
+      "assassination": 1,
+      "protest": 0,
+      "shooting": 0,
+      "suicide_bombing": 0
+    },
+    "finalEditing": {
+      "applied": true,
+      "model": "gpt-5.4",
+      "reasoning": "high",
+      "reason": ""
+    }
+  },
+  "selected": [
+    {
+      "id": "rss-u9T1bCormQkuX2Omrrl45C7G",
+      "title": "Chinese Tankers Push Through Bab el-Mandeb Despite Houthi Blockade Threats - Crude Oil Prices Today | OilPrice.com",
+      "titleKo": "후티의 봉쇄 위협에도 중국 유조선들, 바브엘만데브 통과",
+      "summaryKo": "중국 유조선들이 후티의 봉쇄 위협에도 바브엘만데브를 통과했다. 후티의 봉쇄 위협이 언급됐다.",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "publishedAt": "2026-07-23T11:30:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcDM3TGZaeTV4SlJQT3BOTDI3S3hFZFlYSTdpV3BPNmktd2ItWkhPVkR3TkROdG10aGtNeF9CYkFhUEtmMk5xeVRsT0VsV0x2S3g4czZBYlFGTkFCZ09XakkxSW53ZzNJaVhMbXI2T051Q3RnLWhfUVVNa1pBT19iZUxhRjhZODhHSUpzY1RubnFyR01PTVMyX0RUSi1KeU40QzZrOU9FRV9STVA2UHZWYlFQUUN2UkJtRHlhWnM3Z2c3QWJ6VnhSSm9R0gHPAUFVX3lxTE1ESEl1Nm9QamVZUkpNOEtUWjJkcG1IMjhGakhsRGh1ckdqUXN5eGtmcFliT2taTUx3SVZoZHA1d0d2WWs5Q3hmQnpWM2p5MjNsb3BPVFUwVV9yOGM4Z3hmYTNGNzBIbFRwWXNMdUdYYWtCeVEzNE5oTVBsNXZFNm4xS2xudXZpRXJIT3VfX2FnM0RkMkF0WHlTb1I5QVB3R0QwSnVEdzdyWlA4SG8zSGJLcXFhTWlpWkhFdHJjZkNYcGRxSmotcVQ1UEdDaklZOA?oc=5",
+      "query": "\"Houthi\" \"oil tanker\"",
+      "queryGroup": "english_middle_east_fallback",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "Chinese Tankers Push Through Bab el-Mandeb Despite Houthi Blockade Threats Crude Oil Prices Today | OilPrice.com",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 112,
+      "reportBullet": "후티의 봉쇄 위협에도 중국 유조선들, 바브엘만데브 통과",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "중국 유조선들",
+        "후티"
+      ],
+      "location": "바브엘만데브",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-23-1aye639",
+      "eventTitleKo": "후티의 봉쇄 위협에도 중국 유조선들, 바브엘만데브 통과",
+      "eventSummaryKo": "중국 유조선들이 후티의 봉쇄 위협에도 바브엘만데브를 통과했다. 후티의 봉쇄 위협이 언급됐다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-u9T1bCormQkuX2Omrrl45C7G",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "중국 유조선들이 후티의 봉쇄 위협에도 바브엘만데브를 통과했다.",
+          "evidenceQuote": "Chinese Tankers Push Through Bab el-Mandeb Despite Houthi Blockade Threats"
+        },
+        {
+          "sentenceKo": "후티의 봉쇄 위협이 언급됐다.",
+          "evidenceQuote": "Despite Houthi Blockade Threats"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "중국 유조선들",
+          "roleKo": "",
+          "evidenceQuote": "Chinese Tankers"
+        },
+        {
+          "nameKo": "후티",
+          "roleKo": "",
+          "evidenceQuote": "Houthi"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "LDuFLvdZ6FC6l1rhYLJUbCjm",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:56.800Z"
+    },
+    {
+      "id": "rss-W-0cDc6IUdb9RX3fRzpyT4Sm",
+      "title": "Oil shoots to its highest since May after Houthi tanker attacks | Daily Sabah - Daily Sabah",
+      "titleKo": "후티의 유조선 공격 이후 유가가 5월 이후 최고치로 급등",
+      "summaryKo": "유가가 후티의 유조선 공격 이후 5월 이후 최고치로 급등했다.",
+      "source": "Daily Sabah",
+      "publishedAt": "2026-07-23T17:18:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZ3o3OUNRU1dSM0tSZFFLcFQtVFZxSlVITktDSGxuNnhhWlJzNUR3cXhudFBJdHZmUzl0M2Z1SmRKNG5lWW9DLUJqcnJ6Smd2ZnpHTUpWZTJfRjNvY3ZQR0ZTZnplcG1KNjFvSU1XT3RiTEV4dzkyVWdsaTVLSTFoT1QxWDFzMHV3MmUxbDNlNzR2eHZVX2trWnZvR1hWR1dJZ1Z1V2I5clZzNTDSAbABQVVfeXFMTjRNQy1VQVJqZzIwd2djZ2FpeXNZTTQxaTBXWU1DbExoTVlrLW9SQ3E4NWRmdjdvNHFQWFhlT0k3Q2tGalNIZmdyZzB0cWoxWGdmVW45TDB6V0RENVgyYV80OVlZNVdGVlNVMFB2Zk1iVVR6T0lwUi1UY1FLcmJnMGUyajNwUWg5RmV6WWRoeHl5MFJPRmpQRnNManpBSE9XT3JiZUxOMHc1TFhLUThtYzM?oc=5",
+      "query": "\"Houthi\" \"oil tanker\"",
+      "queryGroup": "english_middle_east_fallback",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "Oil shoots to its highest since May after Houthi tanker attacks | Daily Sabah Daily Sabah",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 89,
+      "reportBullet": "후티의 유조선 공격 이후 유가가 5월 이후 최고치로 급등",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "후티"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-23-9i323t",
+      "eventTitleKo": "후티의 유조선 공격 이후 유가가 5월 이후 최고치로 급등",
+      "eventSummaryKo": "유가가 후티의 유조선 공격 이후 5월 이후 최고치로 급등했다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-W-0cDc6IUdb9RX3fRzpyT4Sm",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "유가가 후티의 유조선 공격 이후 5월 이후 최고치로 급등했다.",
+          "evidenceQuote": "Oil shoots to its highest since May after Houthi tanker attacks"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "후티",
+          "roleKo": "",
+          "evidenceQuote": "Houthi tanker attacks"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "28RbRtKW4zkNay4bmJjyfZX0",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:53.483Z"
+    },
+    {
+      "id": "rss-64TXo8vahEnGNJN0Zti2-Jm4",
+      "title": "Houthi Attacks on Saudi Tankers Constrict Crude Trade - gCaptain",
+      "titleKo": "후티의 사우디 유조선 공격으로 원유 거래 위축",
+      "summaryKo": "후티의 공격이 사우디 유조선을 대상으로 발생했다. 후티의 사우디 유조선 공격으로 원유 거래가 위축됐다.",
+      "source": "gCaptain",
+      "publishedAt": "2026-07-23T17:56:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN0Qzc2dpdldWR1hnN0c4UUptTmticFFCRnZUeGEtUXdTTEd0V0o4U2pyZ3l0WGlTWlN0YXFhaG9tc0RZV0pUMDJfMlBmanNpbmM2ejI2TmlDejNQZFc2M0psdmZJZ0pFRF9YWEFLaU9zc0FsVHgxNTNSVlFGRXRBTw?oc=5",
+      "query": "\"Houthi\" \"oil tanker\"",
+      "queryGroup": "english_middle_east_fallback",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "Houthi Attacks on Saudi Tankers Constrict Crude Trade gCaptain",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 62,
+      "reportBullet": "후티의 사우디 유조선 공격으로 원유 거래 위축",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "후티",
+        "사우디"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-23-1ius16f",
+      "eventTitleKo": "후티의 사우디 유조선 공격으로 원유 거래 위축",
+      "eventSummaryKo": "후티의 공격이 사우디 유조선을 대상으로 발생했다. 후티의 사우디 유조선 공격으로 원유 거래가 위축됐다.",
+      "eventArticleCount": 1,
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "후티의 공격이 사우디 유조선을 대상으로 발생했다.",
+          "evidenceQuote": "Houthi Attacks on Saudi Tankers"
+        },
+        {
+          "sentenceKo": "후티의 사우디 유조선 공격으로 원유 거래가 위축됐다.",
+          "evidenceQuote": "Houthi Attacks on Saudi Tankers Constrict Crude Trade"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "후티",
+          "roleKo": "",
+          "evidenceQuote": "Houthi Attacks on Saudi Tankers"
+        },
+        {
+          "nameKo": "사우디",
+          "roleKo": "",
+          "evidenceQuote": "Saudi Tankers"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "oCfTVWMR2kG_yJphZLVvHyAy",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:51.944Z",
+      "eventSources": [],
+      "eventRepresentativeId": "rss-64TXo8vahEnGNJN0Zti2-Jm4"
+    },
+    {
+      "id": "rss-nuOgDYnMpY4Xd7QincLEtWcW",
+      "title": "Oil settles over $100 as Houthi attacks intensify Middle East supply risks - Reuters",
+      "titleKo": "후티 공격이 중동 공급 위험을 키우면서 유가가 100달러를 웃돌며 마감",
+      "summaryKo": "유가는 후티 공격으로 중동 공급 위험이 커지는 가운데 100달러를 웃돌며 마감했다.",
+      "source": "Reuters",
+      "publishedAt": "2026-07-23T22:09:04.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcEZlQTh2dnVnblEzaVc4eE81SE92UFhTN2VJSXQ4RGdOQVFLU2FuUTB6d19yWWotOFZzQTRaRmlPanZpYkdPZ18waTVpd0lsaWJPRU9aZkd5VU9lZ3RvYi00RGh3TUFsV3JYTGpNc21BOE54N01TbmtCOWh2UWtUTFhZQVlfVHBNS2F1ZDhJS01RT001UDRBQ3MwYTFqM25uaUcxX1E4R3JTX1k?oc=5",
+      "query": "\"Houthi\" \"oil tanker\"",
+      "queryGroup": "english_middle_east_fallback",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "Oil settles over $100 as Houthi attacks intensify Middle East supply risks Reuters",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 82,
+      "reportBullet": "후티 공격이 중동 공급 위험을 키우면서 유가가 100달러를 웃돌며 마감",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "후티"
+      ],
+      "location": "중동",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "유가는 후티 공격으로 중동 공급 위험이 커지는 가운데 100달러를 웃돌며 마감했다.",
+          "evidenceQuote": "Oil settles over $100 as Houthi attacks intensify Middle East supply risks"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "후티",
+          "roleKo": "",
+          "evidenceQuote": "Houthi attacks"
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "XufzjQNQgIc6SyruAR8uKhfZ",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:46.654Z",
+      "eventId": "event-2026-07-23-o80t0h",
+      "eventTitleKo": "EU와 캐나다, 홍해 유조선에 대한 후티 공격을 '용납할 수 없다'고 규탄하고 추가 확전 경고",
+      "eventSummaryKo": "EU와 캐나다는 홍해 유조선에 대한 후티 공격을 용납할 수 없다고 밝혔다. EU와 캐나다는 추가 확전에 대해 경고했다.",
+      "eventArticleCount": 5,
+      "eventRepresentative": false
+    },
+    {
+      "id": "rss-xciX38yowsk1m_vi_ojCsnu0",
+      "title": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\" - JTBC",
+      "titleKo": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\"",
+      "summaryKo": "CNN은 미 정보당국이 공습으로 이란의 태도를 바꿀 수 없다고 판단했다고 전했다.",
+      "source": "JTBC",
+      "publishedAt": "2026-07-24T02:01:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB1ODNLOUFlNTllTzl3RUFLZGZkSTBTNzViSkYzWUdqNnRmYkR0WG5QR09DQ3dUZVRzNUJwYVdPcERKU05OOUZqZFA4YnpQUzNoOWtjUA?oc=5",
+      "query": "\"중동 정세\" \"이란\" \"미국\"",
+      "queryGroup": "korean_middle_east",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\" JTBC",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 40,
+      "reportBullet": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\"",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "CNN",
+        "미 정보당국",
+        "이란"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "CNN은 미 정보당국이 공습으로 이란의 태도를 바꿀 수 없다고 판단했다고 전했다.",
+          "evidenceQuote": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\""
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "CNN",
+          "roleKo": "",
+          "evidenceQuote": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\""
+        },
+        {
+          "nameKo": "미 정보당국",
+          "roleKo": "",
+          "evidenceQuote": "미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "공습으로 이란 태도 못 바꾼다"
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "V7FsmD-eRksBPQEJ95jrragv",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:43.892Z",
+      "eventId": "event-2026-07-24-1bho3yd",
+      "eventTitleKo": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\"",
+      "eventSummaryKo": "CNN은 미 정보당국이 공습으로 이란의 태도를 바꿀 수 없다고 판단했다고 전했다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-xciX38yowsk1m_vi_ojCsnu0",
+      "eventRepresentative": true
+    },
+    {
+      "id": "rss-zPoP6hMGustRrNvPqS8ILq1u",
+      "title": "US military launches new strikes on Iran as clashes escalate over shipping routes - AP News",
+      "titleKo": "미군, 해상 운송로를 둘러싼 충돌 격화 속 이란에 새로운 공습 개시",
+      "summaryKo": "미군이 이란에 새로운 공습을 개시했다. 해상 운송로를 둘러싼 충돌이 격화되고 있다.",
+      "source": "AP News",
+      "publishedAt": "2026-07-24T03:26:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHFrc1BFd1MyNGJEdWFibkJiY1dGVjRNY2tOWUNTbEZTaEw5Z3liZFUxOWExS3ZhdExIZGpjRUFsSW9WWVcyZC1aRmdaRWtVSUFyVHBxeU5wOWZfYTBYbFpZZ25uYUVxUE8tRzQ0d2VOYVk2bTZlUW8yY0RZdnFmQnVqQjRkc2RoQ2Nya19n?oc=5",
+      "query": "\"Houthi\" \"oil tanker\"",
+      "queryGroup": "english_middle_east_fallback",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "US military launches new strikes on Iran as clashes escalate over shipping routes AP News",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 89,
+      "reportBullet": "미군, 해상 운송로를 둘러싼 충돌 격화 속 이란에 새로운 공습 개시",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "미군",
+        "이란"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-24-1tpgyr1",
+      "eventTitleKo": "미군, 해상 운송로를 둘러싼 충돌 격화 속 이란에 새로운 공습 개시",
+      "eventSummaryKo": "미군이 이란에 새로운 공습을 개시했다. 해상 운송로를 둘러싼 충돌이 격화되고 있다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-zPoP6hMGustRrNvPqS8ILq1u",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "미군이 이란에 새로운 공습을 개시했다.",
+          "evidenceQuote": "US military launches new strikes on Iran"
+        },
+        {
+          "sentenceKo": "해상 운송로를 둘러싼 충돌이 격화되고 있다.",
+          "evidenceQuote": "clashes escalate over shipping routes"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "미군",
+          "roleKo": "",
+          "evidenceQuote": "US military"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "strikes on Iran"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "yb_U5wE9mvowxlpMYXN9xdUn",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:42.059Z"
+    },
+    {
+      "id": "rss-qdTqc3BBre6HBpKqux-ejo5t",
+      "title": "유가, 中·파키스탄 중재설에 6일만에 하락…브렌트유 3.9%↓ - 연합뉴스",
+      "titleKo": "유가, 중국·파키스탄 중재설에 6일 만에 하락…브렌트유 3.9%↓",
+      "summaryKo": "유가는 중국·파키스탄 중재설에 6일 만에 하락했다. 브렌트유는 3.9% 하락했다.",
+      "source": "연합뉴스",
+      "publishedAt": "2026-07-24T19:58:36.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4eHlfS1Rpb2YwVnZrYlU2RkltLUpXSjJzVDJkOXJ5dFM0YjVCUF91a2p5YUtHSEVOdVZITTlTcTBrWDQ5dklGTjBGdTJyQ0x4LWJBazVxM2JmeEo4Qk1zVNIBYEFVX3lxTFB4eHlfS1Rpb2YwVnZrYlU2RkltLUpXSjJzVDJkOXJ5dFM0YjVCUF91a2p5YUtHSEVOdVZITTlTcTBrWDQ5dklGTjBGdTJyQ0x4LWJBazVxM2JmeEo4Qk1zVA?oc=5",
+      "query": "\"브렌트유\" \"WTI\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "유가, 中·파키스탄 중재설에 6일만에 하락…브렌트유 3.9%↓ 연합뉴스",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 39,
+      "reportBullet": "유가, 중국·파키스탄 중재설에 6일 만에 하락…브렌트유 3.9%↓",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-25T06:19:11.238Z",
+      "eventId": "event-2026-07-24-16wy8cp",
+      "eventTitleKo": "유가, 중국·파키스탄 중재설에 6일 만에 하락…브렌트유 3.9%↓",
+      "eventSummaryKo": "유가는 중국·파키스탄 중재설에 6일 만에 하락했다. 브렌트유는 3.9% 하락했다.",
+      "eventArticleCount": 1,
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "유가는 중국·파키스탄 중재설에 6일 만에 하락했다.",
+          "evidenceQuote": "유가, 中·파키스탄 중재설에 6일만에 하락"
+        },
+        {
+          "sentenceKo": "브렌트유는 3.9% 하락했다.",
+          "evidenceQuote": "브렌트유 3.9%↓"
+        }
+      ],
+      "extractedActors": [],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "RXBlcP6K61GPnvzGaM7NK56o",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:52.579Z",
+      "eventSources": [],
+      "eventRepresentativeId": "rss-qdTqc3BBre6HBpKqux-ejo5t"
+    },
+    {
+      "id": "rss-Jk_wzb6Vh0vEw6mtgUN5xOel",
+      "title": "다시 100달러 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까 - 연합인포맥스",
+      "titleKo": "다시 100달러를 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까",
+      "summaryKo": "국제유가가 다시 100달러를 돌파했다. 기사는 하반기 '2%대 물가' 사수 가능성을 제기한다.",
+      "source": "연합인포맥스",
+      "publishedAt": "2026-07-24T22:29:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sTmNGLU5DeXQ0NDJndzVRQnp4WnZBWjVJXzJsUnEtY0cwbTF4NlNlQXJBWTUwYjJZM05KamowSkhPc2w1YXBVbVg2WnJRTVMzYTc0aG0ycDRzd3Q2NWplVmFTYklrUHZoMGpZLU9sX3k?oc=5",
+      "query": "\"국제유가\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "다시 100달러 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까 연합인포맥스",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 45,
+      "reportBullet": "다시 100달러를 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-25T06:19:05.190Z",
+      "eventId": "event-2026-07-24-1iyo7sa",
+      "eventTitleKo": "다시 100달러를 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까",
+      "eventSummaryKo": "국제유가가 다시 100달러를 돌파했다. 기사는 하반기 '2%대 물가' 사수 가능성을 제기한다.",
+      "eventArticleCount": 2,
+      "eventSources": [
+        {
+          "source": "조선일보",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVGRIWmsxREI2Q3N4UVQ4Nk9KTUs5NEhoZUlsNWlWSVF3V1p5QzBVNVltRmxWaDhQT0ZJZlJlRUxGUXhDM0pjSmdSWWNFQTRMZ3ZiZ1RFS0VWbHhaempxTnBvOEtXZzlQckZHS2dKZ040T0ZwaXlMOVZOdVZENGY5cVRzWDJqQ0lZa0tOWlFB?oc=5",
+          "titleKo": "국제유가 100달러 넘어도 석유 최고가격 동결... \"물가 상승 부담 고려\"",
+          "summaryKo": "석유 최고가격이 동결됐다. 동결의 고려 사항으로 물가 상승 부담이 언급됐다."
+        },
+        {
+          "source": "연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sTmNGLU5DeXQ0NDJndzVRQnp4WnZBWjVJXzJsUnEtY0cwbTF4NlNlQXJBWTUwYjJZM05KamowSkhPc2w1YXBVbVg2WnJRTVMzYTc0aG0ycDRzd3Q2NWplVmFTYklrUHZoMGpZLU9sX3k?oc=5",
+          "titleKo": "다시 100달러를 돌파한 국제유가…하반기 '2%대 물가' 사수 가능할까",
+          "summaryKo": "국제유가가 다시 100달러를 돌파했다. 기사는 하반기 '2%대 물가' 사수 가능성을 제기한다."
+        }
+      ],
+      "eventRepresentativeId": "rss-Jk_wzb6Vh0vEw6mtgUN5xOel",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "국제유가가 다시 100달러를 돌파했다.",
+          "evidenceQuote": "다시 100달러 돌파한 국제유가"
+        },
+        {
+          "sentenceKo": "기사는 하반기 '2%대 물가' 사수 가능성을 제기한다.",
+          "evidenceQuote": "하반기 '2%대 물가' 사수 가능할까"
+        }
+      ],
+      "extractedActors": [],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "SrnTs7IQLEu2_3H6uBKpsXz8",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:48.570Z"
+    },
+    {
+      "id": "rss-I-st65pnHf_butzfFACv6dMM",
+      "title": "브렌트유 7%↑…두달 만에 종가 100달러 돌파 - v.daum.net",
+      "titleKo": "브렌트유 7%↑…두달 만에 종가 100달러 돌파",
+      "summaryKo": "브렌트유 종가가 두달 만에 100달러를 돌파했다.",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-25T02:34:12.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5pWFRyVUdOUzM2RF9aazJ1bnhzVEJDR2ZWNTEzb2dlQXNKNm1SaVZKcGRydjNkeGRPVF9HSURPbE9RVTlaaF9CU2hnWFZDTURadURCVA?oc=5",
+      "query": "\"브렌트유\" \"WTI\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "브렌트유 7%↑…두달 만에 종가 100달러 돌파 v.daum.net",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 37,
+      "reportBullet": "브렌트유 7%↑…두달 만에 종가 100달러 돌파",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-26T07:26:23.862Z",
+      "eventId": "event-2026-07-22-1tbwr4a",
+      "eventTitleKo": "국제유가 상승, 미국 이란 군사적 충돌 지속에 영향 받아",
+      "eventSummaryKo": "국제유가가 상승했다. 미국과 이란의 군사적 충돌이 지속됐다. 국제유가 상승은 미국과 이란의 군사적 충돌 지속에 영향을 받았다.",
+      "eventArticleCount": 33,
+      "eventRepresentative": false,
+      "extractedFacts": [
+        {
+          "sentenceKo": "브렌트유 종가가 두달 만에 100달러를 돌파했다.",
+          "evidenceQuote": "두달 만에 종가 100달러 돌파"
+        }
+      ],
+      "extractedActors": [],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "d_B237oQ1q-qnHFnNTGc1eLq",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:46.440Z"
+    },
+    {
+      "id": "rss-MgGPUX90YB7FL7nHoNblSG9Y",
+      "title": "농가 생산비 부담 ‘역대 최고’…전쟁 여파 국제유가 급등 - 농민신문",
+      "titleKo": "농가 생산비 부담 ‘역대 최고’…전쟁 여파 국제유가 급등",
+      "summaryKo": "농가 생산비 부담이 역대 최고 수준이다. 전쟁 여파로 국제유가가 급등했다.",
+      "source": "농민신문",
+      "publishedAt": "2026-07-25T05:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1GTGdEVmxqVHdFbXVYRzdVWnFkd2dBRU9zME84NDliTUM4T204WGNwd3F5UE1ZazRiUndDSktzRGgyOUhPeUtyM0JjNF9pYkQyMk81T3hsVDFFUQ?oc=5",
+      "query": "\"국제유가\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "농가 생산비 부담 ‘역대 최고’…전쟁 여파 국제유가 급등 농민신문",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 36,
+      "reportBullet": "농가 생산비 부담 ‘역대 최고’…전쟁 여파 국제유가 급등",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-26T23:56:47.929Z",
+      "eventId": "event-2026-07-25-l6v6km",
+      "eventTitleKo": "농가 생산비 부담 ‘역대 최고’…전쟁 여파 국제유가 급등",
+      "eventSummaryKo": "농가 생산비 부담이 역대 최고 수준이다. 전쟁 여파로 국제유가가 급등했다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-MgGPUX90YB7FL7nHoNblSG9Y",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "농가 생산비 부담이 역대 최고 수준이다.",
+          "evidenceQuote": "농가 생산비 부담 ‘역대 최고’"
+        },
+        {
+          "sentenceKo": "전쟁 여파로 국제유가가 급등했다.",
+          "evidenceQuote": "전쟁 여파 국제유가 급등"
+        }
+      ],
+      "extractedActors": [],
+      "articleStructure": "multi_issue",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "ChL0XBs3aCOw7tWDkgPhGT1j",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:45.309Z"
+    },
+    {
+      "id": "rss-h-LEux8lBnYO9dMsiVdq7Gj6",
+      "title": "중재 나선 오만, 이란과 ‘호르무즈 협상’…“트럼프, ‘공습 중단’ 명령” - 중앙일보",
+      "titleKo": "중재에 나선 오만, 이란과 ‘호르무즈 협상’…“트럼프, ‘공습 중단’ 명령”",
+      "summaryKo": "오만이 중재에 나섰다. 이란과 ‘호르무즈 협상’이 언급됐다. 트럼프가 ‘공습 중단’ 명령을 내렸다고 전해졌다.",
+      "source": "중앙일보",
+      "publishedAt": "2026-07-25T23:20:56.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fdV9vSWxyMG0yRXVpODlJT0RhVnhQRm9JQU9nZTIwT0pWVjllRDZoU0N0NHh2ZUZxN0t1M2FaRnNoTHVWR2FLUF9UQkFaRmJfbG5IYVZB?oc=5",
+      "query": "\"미국\" \"이란\" \"호르무즈\"",
+      "queryGroup": "korean_middle_east",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "중재 나선 오만, 이란과 ‘호르무즈 협상’…“트럼프, ‘공습 중단’ 명령” 중앙일보",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 46,
+      "reportBullet": "중재에 나선 오만, 이란과 ‘호르무즈 협상’…“트럼프, ‘공습 중단’ 명령”",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "오만",
+        "이란",
+        "트럼프"
+      ],
+      "location": "호르무즈",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-25-1uk1wfi",
+      "eventTitleKo": "이스라엘 공영방송 \"트럼프, 이란에 대한 강력한 공습을 연기한 듯…협상 기회\"",
+      "eventSummaryKo": "이스라엘 공영방송은 트럼프가 이란에 대한 강력한 공습을 연기한 듯하다고 전했다. 이스라엘 공영방송은 이번 상황을 협상 기회로 언급했다.",
+      "eventArticleCount": 2,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-h-LEux8lBnYO9dMsiVdq7Gj6",
+      "eventRepresentative": false,
+      "extractedFacts": [
+        {
+          "sentenceKo": "오만이 중재에 나섰다.",
+          "evidenceQuote": "중재 나선 오만"
+        },
+        {
+          "sentenceKo": "이란과 ‘호르무즈 협상’이 언급됐다.",
+          "evidenceQuote": "이란과 ‘호르무즈 협상’"
+        },
+        {
+          "sentenceKo": "트럼프가 ‘공습 중단’ 명령을 내렸다고 전해졌다.",
+          "evidenceQuote": "“트럼프, ‘공습 중단’ 명령”"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "오만",
+          "roleKo": "",
+          "evidenceQuote": "중재 나선 오만"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "이란과 ‘호르무즈 협상’"
+        },
+        {
+          "nameKo": "트럼프",
+          "roleKo": "",
+          "evidenceQuote": "“트럼프, ‘공습 중단’ 명령”"
+        }
+      ],
+      "articleStructure": "multi_issue",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "pP2EQ6OQljjSws0pXu1xOe-h",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:32.390Z"
+    },
+    {
+      "id": "rss-YrOmvmcxogzcvzxXHqV40HPE",
+      "title": "미국·이란, 2주 만에 공습 잠정 중단...'제2전선' 홍해에선 교전 격화 - YTN",
+      "titleKo": "미국·이란, 2주 만에 공습 잠정 중단…‘제2전선’ 홍해에서는 교전 격화",
+      "summaryKo": "미국과 이란의 공습이 2주 만에 잠정 중단됐다. 홍해에서는 교전이 격화됐다.",
+      "source": "YTN",
+      "publishedAt": "2026-07-25T23:52:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE90dk1iS08wYW5JeHA1bWt6bXoxYWFXZkJpWlJ2djRndDl0N0E4RDB6Y0xyOWpNVW5XTnhmcDFKT1JZN1djdTg1eXdYWVFOeDQwYTlMMUtETFJpeEhkWmc?oc=5",
+      "query": "\"미국\" \"이란\" \"호르무즈\"",
+      "queryGroup": "korean_middle_east",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "미국·이란, 2주 만에 공습 잠정 중단...'제2전선' 홍해에선 교전 격화 YTN",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 45,
+      "reportBullet": "미국·이란, 2주 만에 공습 잠정 중단…‘제2전선’ 홍해에서는 교전 격화",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "미국",
+        "이란"
+      ],
+      "location": "홍해",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-25-1wy1lhj",
+      "eventTitleKo": "미국·이란, 2주 만에 공습 잠정 중단…‘제2전선’ 홍해에서는 교전 격화",
+      "eventSummaryKo": "미국과 이란의 공습이 2주 만에 잠정 중단됐다. 홍해에서는 교전이 격화됐다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-YrOmvmcxogzcvzxXHqV40HPE",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "미국과 이란의 공습이 2주 만에 잠정 중단됐다.",
+          "evidenceQuote": "미국·이란, 2주 만에 공습 잠정 중단"
+        },
+        {
+          "sentenceKo": "홍해에서는 교전이 격화됐다.",
+          "evidenceQuote": "'제2전선' 홍해에선 교전 격화"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "미국",
+          "roleKo": "",
+          "evidenceQuote": "미국·이란, 2주 만에 공습 잠정 중단"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "미국·이란, 2주 만에 공습 잠정 중단"
+        }
+      ],
+      "articleStructure": "multi_issue",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "pCgkqq3fIEibSdSD1Ei5Trsc",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:30.253Z"
+    },
+    {
+      "id": "rss-d2kLQkCPIcUpCKtNXuATn1xv",
+      "title": "홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상 - v.daum.net",
+      "titleKo": "홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상",
+      "summaryKo": "홍해까지 막히자 국제유가가 다시 들썩였다. 하반기 물가에 비상 상황이 언급됐다.",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-26T08:48:50.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBfbGpsNHl3c0VxQjduQ19mc3pLSFJGdGV4aW93RFRwQVZpX2lqNzBRbmNjN0ZBekFkbkJWM3B5WjlrRUlaQ1E?oc=5",
+      "query": "\"국제유가\" \"홍해\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상 v.daum.net",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 40,
+      "reportBullet": "홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [],
+      "location": "홍해",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-26T23:56:44.273Z",
+      "eventId": "event-2026-07-26-1tmv8h0",
+      "eventTitleKo": "홍해까지 확대 우려…국제유가 150달러 관측도",
+      "eventSummaryKo": "원문은 홍해까지 확대될 우려가 있다고 전한다. 원문은 국제유가가 150달러에 이를 수 있다는 관측을 전한다.",
+      "eventArticleCount": 6,
+      "eventRepresentative": false,
+      "extractedFacts": [
+        {
+          "sentenceKo": "홍해까지 막히자 국제유가가 다시 들썩였다.",
+          "evidenceQuote": "홍해까지 막히자 국제유가 다시 들썩"
+        },
+        {
+          "sentenceKo": "하반기 물가에 비상 상황이 언급됐다.",
+          "evidenceQuote": "하반기 물가 비상"
+        }
+      ],
+      "extractedActors": [],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "yYXWMd9P1PJic0MQTb0_lOeX",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:35.518Z"
+    },
+    {
+      "id": "rss-sUQZ8zVTrWR6SVwaf36r-S6l",
+      "title": "사우디-후티 보복전, 우크라는 이란 선박 타격…홍해·카스피해로 전선 확대 - 한겨레",
+      "titleKo": "사우디-후티 보복전, 우크라는 이란 선박 타격…홍해·카스피해로 전선 확대",
+      "summaryKo": "사우디와 후티의 보복전이 벌어지고 있다. 우크라이나가 이란 선박을 타격했다. 전선이 홍해와 카스피해로 확대됐다.",
+      "source": "한겨레",
+      "publishedAt": "2026-07-26T10:20:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1Bb2ZoSDNneFYwVDByN19XTi1qRFRNWVp3akNlUUN3SzBtZEVYZnVHZUhjUXVDUjJuR1pxekVET2t2Tl8zYm9UMFhWUDEyVEF6NGxtQTR5c1RtejFMVUNWU3AzeGY1Nld1emVsdzRZRm9CMnM?oc=5",
+      "query": "\"후티\" \"홍해\" \"사우디\"",
+      "queryGroup": "korean_middle_east",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "사우디-후티 보복전, 우크라는 이란 선박 타격…홍해·카스피해로 전선 확대 한겨레",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 44,
+      "reportBullet": "사우디-후티 보복전, 우크라는 이란 선박 타격…홍해·카스피해로 전선 확대",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "사우디",
+        "후티",
+        "우크라이나",
+        "이란"
+      ],
+      "location": "홍해·카스피해",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-24-1m3z7z5",
+      "eventTitleKo": "트럼프, '사상 최대 공격' 검토…이란, 미국 휴전안 거부로 중동 전쟁 장기화 우려",
+      "eventSummaryKo": "트럼프가 '사상 최대 공격'을 검토하고 있다. 이란이 미국의 휴전안을 거부했다. 중동 전쟁의 장기화 우려가 제기됐다.",
+      "eventArticleCount": 28,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-sUQZ8zVTrWR6SVwaf36r-S6l",
+      "eventRepresentative": false,
+      "extractedFacts": [
+        {
+          "sentenceKo": "사우디와 후티의 보복전이 벌어지고 있다.",
+          "evidenceQuote": "사우디-후티 보복전"
+        },
+        {
+          "sentenceKo": "우크라이나가 이란 선박을 타격했다.",
+          "evidenceQuote": "우크라는 이란 선박 타격"
+        },
+        {
+          "sentenceKo": "전선이 홍해와 카스피해로 확대됐다.",
+          "evidenceQuote": "홍해·카스피해로 전선 확대"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "사우디",
+          "roleKo": "",
+          "evidenceQuote": "사우디-후티 보복전"
+        },
+        {
+          "nameKo": "후티",
+          "roleKo": "",
+          "evidenceQuote": "사우디-후티 보복전"
+        },
+        {
+          "nameKo": "우크라이나",
+          "roleKo": "",
+          "evidenceQuote": "우크라는 이란 선박 타격"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "우크라는 이란 선박 타격"
+        }
+      ],
+      "articleStructure": "multi_issue",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "grYGxMYn8wpMiaU73sxhT0ap",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:29.461Z"
+    },
+    {
+      "id": "rss-VQASlnNdz32pgd6_3skIiSYz",
+      "title": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\" - JTBC",
+      "titleKo": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\"",
+      "summaryKo": "이란군 대변인은 미국의 공습 중단에 보복 작전을 중단했다고 밝혔다.",
+      "source": "JTBC",
+      "publishedAt": "2026-07-26T12:42:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFByZmVDb3VZWk1CTU9RX0Z3YlE2VDNvYVhQd0NKUjlTREpscnNIN1VyTm8ySU80SEpVVHpSMTF3RXlFdVV2ZkJ3ZVQ5aTc3a205VnI1Qg?oc=5",
+      "query": "\"중동 정세\" \"이란\" \"미국\"",
+      "queryGroup": "korean_middle_east",
+      "collectionLane": "regional_context",
+      "forcedCategory3": "regional",
+      "description": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\" JTBC",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "international",
+      "category2": "international",
+      "category3": "regional",
+      "importanceScore": 80,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "중동 안보·물류 핵심 정세 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 33,
+      "reportBullet": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\"",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이란군 대변인",
+        "미국"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "eventId": "event-2026-07-26-85yv69",
+      "eventTitleKo": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\"",
+      "eventSummaryKo": "이란군 대변인은 미국의 공습 중단에 보복 작전을 중단했다고 밝혔다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-VQASlnNdz32pgd6_3skIiSYz",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "이란군 대변인은 미국의 공습 중단에 보복 작전을 중단했다고 밝혔다.",
+          "evidenceQuote": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\""
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "이란군",
+          "roleKo": "대변인",
+          "evidenceQuote": "이란군 대변인"
+        },
+        {
+          "nameKo": "미국",
+          "roleKo": "",
+          "evidenceQuote": "미국 공습 중단"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "2Q9iqX_-nVsOF4ElF1h4OhT8",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:50:28.180Z"
+    },
+    {
+      "id": "rss-2GRFrSI0LKV2xKn1wUuRedus",
+      "title": "국제유가 6% 급락…美, 이란 공습 중단에 긴장 완화 기대 - 블루밍비트",
+      "titleKo": "국제유가 6% 급락…미국, 이란 공습 중단에 긴장 완화 기대",
+      "summaryKo": "국제유가가 6% 급락했다. 미국의 이란 공습 중단으로 긴장 완화 기대가 제기됐다.",
+      "source": "블루밍비트",
+      "publishedAt": "2026-07-26T22:36:35.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA0dTNHV0VyOEFRRldNckN4dmdhMnRJZEFJUVVFdkdvYlpIeUNTVFYtY25WMjdUTVVNV01XaUpBR0I1UE9LRkJlWjhyY3czUVVa?oc=5",
+      "query": "\"국제유가\" \"공급 차질\"",
+      "queryGroup": "korean_oil_market",
+      "collectionLane": "oil_market",
+      "forcedCategory3": "oil_economy",
+      "description": "국제유가 6% 급락…美, 이란 공습 중단에 긴장 완화 기대 블루밍비트",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "economy",
+      "category3": "oil_economy",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "국제유가 변동 원인 후보",
+      "aiCacheHit": true,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 38,
+      "reportBullet": "국제유가 6% 급락…미국, 이란 공습 중단에 긴장 완화 기대",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "미국",
+        "이란"
+      ],
+      "location": "",
+      "securityEventType": "none",
+      "securityEventCount": 0,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "selected": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "reportWritingModel": "gpt-5.4-mini",
+      "reportWritingReasoning": "medium",
+      "reportWritingVersion": "weekly-report-v15-final-editor-quality-gate-refinement",
+      "reportWritingRefinedAt": "2026-07-26T23:56:43.438Z",
+      "eventId": "event-2026-07-26-1sutfn1",
+      "eventTitleKo": "국제유가 6% 급락…미국, 이란 공습 중단에 긴장 완화 기대",
+      "eventSummaryKo": "국제유가가 6% 급락했다. 미국의 이란 공습 중단으로 긴장 완화 기대가 제기됐다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-2GRFrSI0LKV2xKn1wUuRedus",
+      "eventRepresentative": true,
+      "extractedFacts": [
+        {
+          "sentenceKo": "국제유가가 6% 급락했다.",
+          "evidenceQuote": "국제유가 6% 급락"
+        },
+        {
+          "sentenceKo": "미국의 이란 공습 중단으로 긴장 완화 기대가 제기됐다.",
+          "evidenceQuote": "美, 이란 공습 중단에 긴장 완화 기대"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "미국",
+          "roleKo": "",
+          "evidenceQuote": "美, 이란 공습 중단에 긴장 완화 기대"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "美, 이란 공습 중단에 긴장 완화 기대"
+        }
+      ],
+      "articleStructure": "single_event",
+      "translationFailed": false,
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "e_0IAJaPDzlX3yKYVGjwKwk7",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-27T00:48:34.184Z"
+    }
+  ],
+  "finalReport": {
+    "period": "΄26.7.23 ~ ΄26.7.28",
+    "reportDate": "2026. 7. 28.",
+    "internationalTopic": "홍해 충돌과 미·이란 공습 중단",
+    "sections": {
+      "politics": [],
+      "terror_security": [],
+      "oil_economy": [
+        {
+          "main": "7.24~26, 국제유가, 홍해 차질과 공급 우려로 100달러 재돌파",
+          "subs": [
+            "브렌트유 7% 상승, 두달 만에 종가 100달러 돌파"
+          ],
+          "implication": "현장 연료비·물류비 변동 반영 기준 점검 대상"
+        },
+        {
+          "main": "7.24~26, 국제유가, 중재설과 미국의 대이란 공습 중단 기대에 급락 전환",
+          "subs": [
+            "브렌트유 6일 만에 하락, 3.9%↓",
+            "미국의 이란 공습 중단 기대 속 국제유가 6% 급락"
+          ],
+          "implication": ""
+        }
+      ],
+      "regional": [
+        {
+          "main": "7.23, 후티, 사우디 유조선 공격과 바브엘만데브 봉쇄 위협으로 홍해 원유 운송 차질",
+          "subs": [
+            "중국 유조선은 봉쇄 위협 속에서도 바브엘만데브 통과"
+          ],
+          "implication": ""
+        },
+        {
+          "main": "7.24, 미군, 해상 운송로 충돌 격화 국면에서 이란 추가 공습 개시",
+          "subs": [],
+          "implication": ""
+        },
+        {
+          "main": "7.25~26, 미국·이란, 공습 잠정 중단 보도 속 이란군 대변인 보복작전 중단 발표",
+          "subs": [
+            "오만, 이란과 '호르무즈 협상' 중재와 Trump 대통령 공습 중단 명령 보도",
+            "홍해에서는 교전 격화 보도"
+          ],
+          "implication": ""
+        }
+      ]
+    },
+    "groupImpacts": [
+      "홍해·바브엘만데브 경유 해상 운송 일정과 선사 우회 여부 점검.",
+      "미·이란 공습 재개 여부에 대비해 중동 경유 출장·항공편 운영 상황 확인."
+    ],
+    "terrorStats": {
+      "total": 10,
+      "armed_attack": 8,
+      "ied": 1,
+      "assassination": 1,
+      "protest": 0,
+      "shooting": 0,
+      "suicide_bombing": 0
+    },
+    "oilRows": [
+      {
+        "date": "7.26",
+        "dubai": "-",
+        "brent": "$96.78",
+        "wti": "$89.31"
+      },
+      {
+        "date": "7.27",
+        "dubai": "-",
+        "brent": "$87.94",
+        "wti": "$82.08"
+      }
+    ]
+  }
+}

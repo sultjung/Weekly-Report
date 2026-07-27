@@ -1,42 +1,50 @@
 {
-  "generatedAt": "2026-07-27T03:32:16.775Z",
-  "title": "건설, 이라크 주간 종합 상황보고(΄26.7.23 ~ ΄26.7.27)",
+  "generatedAt": "2026-07-27T23:30:00.814Z",
+  "title": "건설, 이라크 주간 종합 상황보고(΄26.7.23 ~ ΄26.7.28)",
   "periodStart": "2026-07-23",
-  "periodEnd": "2026-07-27",
-  "reportDate": "2026-07-27",
+  "periodEnd": "2026-07-28",
+  "reportDate": "2026-07-28",
   "selectedCount": 16,
-  "usedCount": 13,
-  "excludedCount": 3,
+  "usedCount": 11,
+  "excludedCount": 5,
   "exclusions": [
     {
+      "id": "selected-2",
+      "reason": "후티 공격 관련 유가 반응 기사로 regional 핵심 사건과 중복"
+    },
+    {
+      "id": "selected-4",
+      "reason": "후티 공격 관련 유가 반응 기사로 regional 핵심 사건과 중복"
+    },
+    {
       "id": "selected-5",
-      "reason": "공습 효과에 대한 배경 보도로 핵심 조치 기사에 비해 직접성 부족"
+      "reason": "정보평가 보도로 현장 조치 확인 부족"
     },
     {
       "id": "selected-10",
-      "reason": "국내 농가 생산비 기사로 국제유가 핵심 원인 파악과 무관"
+      "reason": "국내 농가 비용 기사로 국제유가 핵심 원인 요약과 거리"
     },
     {
       "id": "selected-14",
-      "reason": "홍해·카스피해 등 다른 전선을 섞은 종합 기사로 핵심 흐름 중복"
+      "reason": "제3국 전선 확대 서술로 이라크 현장 영향 핵심 축과 거리"
     }
   ],
-  "file": "reports/generated/건설_이라크 주간 종합상황보고(7월 27일).docx",
+  "file": "reports/generated/건설_이라크 주간 종합상황보고(7월 28일).docx",
   "latest": "reports/latest.docx",
   "template": "templates/weekly-report-template.docx",
   "oilSource": "한국석유공사 오피넷 국제원유 일간가격",
   "oilRows": [
     {
-      "date": "7.25",
+      "date": "7.26",
       "dubai": "-",
       "brent": "$96.78",
       "wti": "$89.31"
     },
     {
-      "date": "7.26",
+      "date": "7.27",
       "dubai": "-",
-      "brent": "$96.78",
-      "wti": "$89.31"
+      "brent": "$87.94",
+      "wti": "$82.08"
     }
   ],
   "terrorStats": {
