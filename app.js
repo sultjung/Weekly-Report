@@ -5,7 +5,7 @@
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const score=a=>Number(a.relevanceScore??a.importanceScore??a.score??0);
   const key=a=>a.id||a.url||`${a.titleKo||a.title}-${a.publishedAt}`;
-  const text=a=>[a.titleKo,a.title,a.translatedTitle,a.summaryKo,a.translatedBody,a.fullTranslation,a.description,a.source,a.weeklyReportReason,a.category1,a.category2,a.category3].filter(Boolean).join(' ');
+  const text=a=>[a.titleKo,a.title,a.translatedTitle,a.summaryKo,a.translatedBody,a.fullTranslation,a.description,a.source,a.weeklyReportReason,a.category1,a.category2,a.category3,a.queryGroup,a.collectionLane].filter(Boolean).join(' ');
   const body=a=>a.translatedBody||a.fullTranslation||a.translationKo||a.summaryKo||a.description||'';
   const title=a=>a.translatedTitle||a.titleKo||a.title||'제목 없음';
   const date=a=>{
@@ -13,7 +13,12 @@
     return isNaN(d)?'-':new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d);
   };
 
+  function isDomesticMedia(a){
+    return String(a.queryGroup||'')==='korean_domestic_media';
+  }
+
   function categoryOf(a){
+    if(isDomesticMedia(a))return'domestic';
     const c=String(a.category3||a.forcedCategory3||'').toLowerCase();
     if(c==='politics')return'politics';
     if(c==='oil_economy'||c==='economy')return'economy';
@@ -37,6 +42,7 @@
   function stats(){
     const A=S.articles;
     $('statTotal').textContent=A.length;
+    $('statDomestic').textContent=A.filter(a=>categoryOf(a)==='domestic').length;
     $('statPolitics').textContent=A.filter(a=>categoryOf(a)==='politics').length;
     $('statEconomy').textContent=A.filter(a=>categoryOf(a)==='economy').length;
     $('statSecurity').textContent=A.filter(a=>categoryOf(a)==='security').length;
@@ -52,14 +58,14 @@
       if(days!=='all'&&!isNaN(d)&&d<cutoff)return false;
       if(score(a)<min)return false;
       if(q&&!text(a).toLowerCase().includes(q))return false;
-      if(['politics','economy','security','international'].includes(S.filter)&&categoryOf(a)!==S.filter)return false;
+      if(['domestic','politics','economy','security','international'].includes(S.filter)&&categoryOf(a)!==S.filter)return false;
       if(S.filter==='selected'&&!S.selected.has(key(a)))return false;
       return true;
     }).sort((a,b)=>$('sortFilter').value==='latest'?new Date(b.publishedAt||0)-new Date(a.publishedAt||0):score(b)-score(a));
     render();
   }
   function scoreClass(n){return n>=90?'s90':n>=80?'s80':n>=70?'s70':''}
-  function categoryLabel(c){return{politics:'이라크 정치',economy:'경제',security:'안보',international:'국제사회'}[c]||'검토'}
+  function categoryLabel(c){return{domestic:'국내 언론',politics:'정치',economy:'경제',security:'안보',international:'국제사회'}[c]||'검토'}
   function render(){
     const n=$('newsList');
     $('visibleCount').textContent=`${S.filtered.length}건 표시`;
