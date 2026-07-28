@@ -62,12 +62,20 @@ if (!/football|soccer|world cup|مباراة|منتخب|كرة|الدوري/i.te
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
 if (/gpt-4o-mini/.test(workflow)) throw new Error("Collect workflow must not use gpt-4o-mini");
-if (!/OPENAI_FACT_MODEL:\s*\$\{\{ vars\.OPENAI_TRANSLATION_MODEL \|\| 'gpt-5\.4' \}\}/.test(workflow)) {
+
+function workflowEnvHasDefault(name, literal, variableName) {
+  const literalPattern = new RegExp(`${name}:\\s*["']?${literal.replace(/\./g, "\\.")}["']?`);
+  const variablePattern = new RegExp(`${name}:\\s*\\$\\{\\{\\s*vars\\.${variableName}\\s*\\|\\|\\s*["']${literal.replace(/\./g, "\\.")}["']\\s*\\}\\}`);
+  return literalPattern.test(workflow) || variablePattern.test(workflow);
+}
+
+if (!workflowEnvHasDefault("OPENAI_FACT_MODEL", "gpt-5.4", "OPENAI_TRANSLATION_MODEL")) {
   throw new Error("First-pass fact model default must be gpt-5.4");
 }
-if (!/OPENAI_FACT_FALLBACK_MODEL:\s*\$\{\{ vars\.OPENAI_TRANSLATION_FALLBACK_MODEL \|\| 'gpt-5\.4-mini' \}\}/.test(workflow)) {
+if (!workflowEnvHasDefault("OPENAI_FACT_FALLBACK_MODEL", "gpt-5.4-mini", "OPENAI_TRANSLATION_FALLBACK_MODEL")) {
   throw new Error("Fact fallback default must be gpt-5.4-mini");
 }
+
 const stages = [
   "npm run collect",
   "node scripts/filter-regional-iraq-exposure.mjs",
