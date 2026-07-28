@@ -10,7 +10,10 @@
   const title=a=>isDomestic(a)?(a.title||a.titleKo||'제목 없음'):(a.translatedTitle||a.titleKo||a.title||'제목 없음');
   const preview=a=>isDomestic(a)?(a.description||a.fullText||''):(a.translatedBody||a.fullTranslation||a.translationKo||a.summaryKo||a.description||'');
   const hasDomesticFullText=a=>isDomestic(a)&&a.fullTextAvailable===true&&String(a.fullText||'').trim().length>=350;
-  const fullBody=a=>isDomestic(a)?(hasDomesticFullText(a)?a.fullText:''):(a.translatedBody||a.fullTranslation||a.translationKo||a.summaryKo||a.description||'');
+  const domesticExpandedBody=a=>hasDomesticFullText(a)
+    ? String(a.fullText||'').trim()
+    : `${String(a.description||'기사 요약을 불러오지 못했습니다.').trim()}\n\n※ 전체 본문은 원문 보기에서 확인해 주세요.`;
+  const fullBody=a=>isDomestic(a)?domesticExpandedBody(a):(a.translatedBody||a.fullTranslation||a.translationKo||a.summaryKo||a.description||'');
   const date=a=>{const d=new Date(a.publishedAt||a.date||0);return isNaN(d)?'-':new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d)};
 
   function categoryOf(a){
@@ -68,9 +71,9 @@
       const k=key(a),sel=S.selected.has(k),p=preview(a),f=fullBody(a),category=categoryOf(a),domestic=isDomestic(a),reason=a.relevanceReason||a.weeklyReportReason||a.scoreReason||'';
       const scoreMeta=domestic?'':`<span class="score ${scoreClass(score(a))}">관련성 ${score(a)}점</span>`;
       const selectButton=domestic?'':`<button class="select-btn ${sel?'on':''}" data-action="select">${sel?'선택됨':'보고서에 선택'}</button>`;
-      const expandLabel=domestic?'전체 기사 보기':'전체 번역 보기';
-      const domesticFallback=domestic&&!f?`<span class="fulltext-status">본문 자동 수집 불가 · 원문에서 확인</span>`:'';
-      return `<article class="news-card ${domestic?'domestic-card':''} ${sel?'selected':''}" data-key="${esc(k)}"><div class="news-top"><div class="meta"><span>${esc(a.source||'-')}</span><span>${esc(date(a))}</span>${scoreMeta}</div>${selectButton}</div><h3>${esc(title(a))}</h3><p class="preview">${esc(p)}</p>${f?`<div class="fulltext">${esc(f)}</div>`:''}<div class="tags"><span class="tag category-${category}">${categoryLabel(category)}</span></div><div class="card-actions">${f?`<button data-action="expand" data-open-label="${expandLabel}">${expandLabel}</button>`:''}${a.url?`<a href="${esc(a.url)}" target="_blank" rel="noopener">원문 보기</a>`:''}${domesticFallback}</div>${relatedMarkup(a)}${!domestic&&reason?`<p class="hint"><b>점수 근거</b> ${esc(reason)}</p>`:''}</article>`;
+      const expandLabel=domestic?'기사 내용 펼쳐보기':'전체 번역 보기';
+      const fallbackBadge=domestic&&!hasDomesticFullText(a)?'<span class="fulltext-status">RSS 요약 · 전체 본문은 원문에서 확인</span>':'';
+      return `<article class="news-card ${domestic?'domestic-card':''} ${sel?'selected':''}" data-key="${esc(k)}"><div class="news-top"><div class="meta"><span>${esc(a.source||'-')}</span><span>${esc(date(a))}</span>${scoreMeta}</div>${selectButton}</div><h3>${esc(title(a))}</h3><p class="preview">${esc(p)}</p><div class="fulltext">${esc(f)}</div><div class="tags"><span class="tag category-${category}">${categoryLabel(category)}</span></div><div class="card-actions"><button data-action="expand" data-open-label="${expandLabel}">${expandLabel}</button>${a.url?`<a href="${esc(a.url)}" target="_blank" rel="noopener">원문 보기</a>`:''}${fallbackBadge}</div>${relatedMarkup(a)}${!domestic&&reason?`<p class="hint"><b>점수 근거</b> ${esc(reason)}</p>`:''}</article>`;
     }).join('');
   }
   async function init(){
