@@ -29,6 +29,8 @@ jobs:
         run: npm run collect
       - name: Filter regional news
         run: node scripts/filter-regional-iraq-exposure.mjs
+      - name: Prepare Korean domestic media
+        run: node scripts/prepare-domestic-media.mjs
       - name: Score, translate and extract facts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
