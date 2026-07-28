@@ -32,14 +32,23 @@ jobs:
       - name: Score, translate and extract facts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_FACT_MODEL: ${{ vars.OPENAI_TRANSLATION_MODEL || 'gpt-5-mini' }}
-          OPENAI_FACT_FALLBACK_MODEL: ${{ vars.OPENAI_TRANSLATION_FALLBACK_MODEL || 'gpt-4o-mini' }}
+          OPENAI_FACT_MODEL: "gpt-5.4"
+          OPENAI_FACT_FALLBACK_MODEL: "gpt-5.4-mini"
           FACT_EXTRACTION_MAX_ITEMS: "180"
           FACT_AI_CONCURRENCY: "4"
           FACT_MAX_EVIDENCE_CHARS: "12000"
           FULL_TRANSLATION_MIN_SCORE: "60"
           SCORING_POLICY_FILE: "data/news-scoring-policy.json"
         run: node scripts/extract-article-facts.mjs
+      - name: Refine high-value report writing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_REPORT_MODEL: "gpt-5.4-mini"
+          OPENAI_REPORT_REASONING: "medium"
+          REPORT_REFINEMENT_MIN_SCORE: "70"
+          MAX_REPORT_REFINEMENT_ITEMS: "20"
+          REPORT_REFINEMENT_CONCURRENCY: "2"
+        run: node scripts/refine-report-writing.mjs
       - name: Normalize entities and post-process
         run: node scripts/normalize-extracted-entities.mjs && npm run postprocess
       - run: git config pull.rebase true && git pull --rebase --autostash origin main
