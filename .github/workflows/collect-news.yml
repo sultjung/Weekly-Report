@@ -39,6 +39,8 @@ jobs:
           FACT_MAX_EVIDENCE_CHARS: "12000"
           SCORING_POLICY_FILE: "data/news-scoring-policy.json"
         run: node scripts/extract-article-facts.mjs
+      - name: Normalize Iraq entities and post-process
+        run: node scripts/normalize-extracted-entities.mjs && npm run postprocess
       - name: Translate full Iraq article bodies
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -48,8 +50,6 @@ jobs:
           FULL_TRANSLATION_CONCURRENCY: "3"
           FULL_TRANSLATION_MAX_SOURCE_CHARS: "14000"
         run: node scripts/translate-full-articles.mjs
-      - name: Normalize Iraq entities and post-process
-        run: node scripts/normalize-extracted-entities.mjs && npm run postprocess
       - name: Collect Korean domestic news without AI
         env:
           DOMESTIC_NEWS_DAYS: "7"
