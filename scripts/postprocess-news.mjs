@@ -14,7 +14,8 @@ const steps = [
   "scripts/filter-strict-relevance-and-facts.mjs",
   "scripts/filter-gaza-regional-news.mjs",
   "scripts/deduplicate-news-articles.mjs",
-  "scripts/group-news-events.mjs"
+  "scripts/group-news-events.mjs",
+  "scripts/repair-broken-article-links.mjs"
 ];
 
 for (const script of steps) {
