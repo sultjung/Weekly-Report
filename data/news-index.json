@@ -1,61 +1,414 @@
 {
-  "generatedAt": "2026-07-27T00:47:58.793Z",
+  "generatedAt": "2026-07-28T03:37:13.703Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 173,
-    "politics": 6,
-    "terror_security": 33,
-    "oil_economy": 85,
-    "regional": 49,
+    "total": 170,
+    "politics": 8,
+    "terror_security": 80,
+    "oil_economy": 80,
+    "regional": 2,
     "exclude": 0
   },
   "archive": {
-    "previous": 186,
-    "carriedForward": 76
+    "previous": 173,
+    "carriedForward": 168
   },
-  "elapsedSeconds": 30,
-  "count": 173,
+  "elapsedSeconds": 31,
+  "count": 170,
+  "regionalIraqExposure": {
+    "inputRegional": 76,
+    "keptRegional": 7,
+    "removedRegional": 69,
+    "removed": [
+      {
+        "id": "rss-GblqMmHII_6j-vjhJUe3WCIr",
+        "title": "Saudis Blame Iran-Backed Militias Based in Iraq for Drone Attacks - The New York Times",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-daCA4O38pUYy5YUwJfX12j20",
+        "title": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-_uiGqSVYxSA3TR3HAU5ZJmML",
+        "title": "CHARTED: Oil Trade Through the Strait of Hormuz by Country – Visual Capitalist - EnergyNow.com",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-c-GweOb5UaT9JxiWjfcVfn-_",
+        "title": "U.S. pauses Iran strikes for second straight night as talks move in positive direction - CBS News",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-VQASlnNdz32pgd6_3skIiSYz",
+        "title": "이란군 대변인 \"미국 공습 중단에 보복 작전 중단\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-sUQZ8zVTrWR6SVwaf36r-S6l",
+        "title": "사우디-후티 보복전, 우크라는 이란 선박 타격…홍해·카스피해로 전선 확대",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-YrOmvmcxogzcvzxXHqV40HPE",
+        "title": "미국·이란, 2주 만에 공습 잠정 중단…‘제2전선’ 홍해에서는 교전 격화",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-h-LEux8lBnYO9dMsiVdq7Gj6",
+        "title": "중재에 나선 오만, 이란과 ‘호르무즈 협상’…“트럼프, ‘공습 중단’ 명령”",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-j-8uLQAVb820Dty3Y8EK8G49",
+        "title": "이스라엘 공영방송 \"트럼프, 이란에 대한 강력한 공습을 연기한 듯…협상 기회\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-G-x3yMlkuL7Iv3URsd423fx0",
+        "title": "사우디·후티 또 서로 공습…홍해 긴장 고조",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-WDg6XQ4rmYrDmvVUYlwtg9Cp",
+        "title": "사우디·후티 또 서로 공습…홍해 긴장 고조",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-AzBqoBAk9a5KB--9lcoIHvW6",
+        "title": "사우디, 후티 근거지 공습…홍해 해상전쟁 전면전으로 확산",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-GnH8jraPk-yiWSCavWdYCDOp",
+        "title": "미국이 새 공습을 개시하고, 이란이 전쟁을 확대하는 가운데 트럼프가 ‘대규모 공격’을 위협",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
+        "title": "미국, 이란 공격 확대…트럼프는 홍해 공격을 두고 테헤란과 후티에 경고",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-3wjDmHG747pbyLy4Ulc4ucez",
+        "title": "후티 반군 \"홍해 해협 전면 봉쇄 안 한다…사우디만 겨냥\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-94PbP5innqBhGtQGCUpjIr39",
+        "title": "트럼프, '사상 최대 공격' 검토…이란, 미국 휴전안 거부로 중동 전쟁 장기화 우려",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-B2h2aoSoQofXAKzYB_pa-YFU",
+        "title": "US-Iran fighting escalates as explosions heard in Iraq, sirens in Bahrain - South China Morning Post",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-CmC7tWH4pxiihnlYRh-TWrzC",
+        "title": "트럼프가 이란과 후티에 \"중대한 군사적 처벌\"을 위협하는 가운데 미국이 추가 공습을 수행",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-gXn945CU0JxD_pAIgoS8TGNh",
+        "title": "후티, 홍해서 유조선 공격…브렌트유 100달러 재돌파",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-zPoP6hMGustRrNvPqS8ILq1u",
+        "title": "미군, 해상 운송로를 둘러싼 충돌 격화 속 이란에 새로운 공습 개시",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-xciX38yowsk1m_vi_ojCsnu0",
+        "title": "CNN \"미 정보당국, ‘공습으로 이란 태도 못 바꾼다’ 판단\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-3EITiBLDZfUM3S9kCo1AxkFG",
+        "title": "'친이란' 후티 봉쇄 위협에도 중국 유조선들 홍해 입구 무사 통과",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-PZMEgoWBYsuObBfwDHJG8jgi",
+        "title": "후티, 사우디 유조선 2척 공격…트럼프 \"이란 강력 응징\" 경고",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-BO6KKbs7fW1owAYIUFFISzfD",
+        "title": "후티의 홍해 유조선 공격 후 트럼프, '대규모 군사적 응징' 위협",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-nuOgDYnMpY4Xd7QincLEtWcW",
+        "title": "후티 공격이 중동 공급 위험을 키우면서 유가가 100달러를 웃돌며 마감",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-XgL5HshWtvD_sSNPDleKxILt",
+        "title": "후티의 공격이 홍해에서 일촉즉발의 상황을 만들다: 알아야 할 것",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-__qunUbzQ2GrNbC_M6zdgqlf",
+        "title": "홍해 공격 이후 유가가 배럴당 100달러로 급등",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-Mlps0nVKfwq4Q2q9Lj_WRKPh",
+        "title": "후티 봉쇄에도 중국 유조선, 홍해 요충지를 통과",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-Hbvdy6QNB9Ktp3x-J6aUH1en",
+        "title": "후티의 사우디 유조선 공격으로 공급이 차질을 빚자 유가가 100달러를 돌파",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-64TXo8vahEnGNJN0Zti2-Jm4",
+        "title": "후티의 사우디 유조선 공격으로 원유 거래 위축",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-9iTCikf36w89ouTG8YKCnn0-",
+        "title": "예멘의 후티가 홍해에서 사우디 유조선을 공격해 이란 전쟁 확대를 위협 - PBS",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-W-0cDc6IUdb9RX3fRzpyT4Sm",
+        "title": "후티의 유조선 공격 이후 유가가 5월 이후 최고치로 급등",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-l71LS3sw_QPmKhcFgne9Iky4",
+        "title": "예멘 후티, 사우디 유조선 공격…미국은 이란에 추가 공습 개시",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-ipCIpKGOC3ggj1FuBXhBfnhm",
+        "title": "US imports first fuel oil cargoes shipped via Syria as Iraq leverages new export route - Reuters",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-XVWD8WnNA7yKeqW_ZvrZkQ7y",
+        "title": "EU와 캐나다, 홍해 유조선에 대한 후티 공격을 '용납할 수 없다'고 규탄하고 추가 확전 경고",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-u9T1bCormQkuX2Omrrl45C7G",
+        "title": "후티의 봉쇄 위협에도 중국 유조선들, 바브엘만데브 통과",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-w9e3HSII0ibVHwZTRmsFfZrZ",
+        "title": "예멘 후티의 새로운 위협이 이란 전쟁을 확대하고 또 다른 무역 요충지를 위험에 빠뜨릴 수 있다",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-23bqbboSI9zvIuW09y5_PxuY",
+        "title": "미국의 이란 ‘곡괭이산’ 공습 검토, 이스라엘 정보기관이 부추겼다",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-lJr9GzfhZXMy6ye99hppagWv",
+        "title": "“미국, 며칠 내 이란 핵시설 직접 타격”…이스라엘 인근에도 미사일",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-gujRSNFUDAH19pfG8IAkquuS",
+        "title": "미국, 며칠 내 이란 핵시설 직접 타격…이스라엘 인근에도 미사일",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-BQQ2DUEZrQ502V8y6Xaa0XzC",
+        "title": "Mideast oil producers step up plans to bypass the Strait of Hormuz - ABC News - Breaking News, Latest News and Videos",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-YsIXGTSe5w-vNYOrW4aRaCMt",
+        "title": "미국, 며칠 내 이란 핵시설 직접 타격…이스라엘 인근에도 미사일",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-hyieGRwM5TZRItZwwYKIjq4v",
+        "title": "후티, 홍해서 첫 유조선 공격···호르무즈 이어 에너지 공급망 위기 현실화",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-RRoy2mbc1YC3Zo0HxcbDblz6",
+        "title": "후티, 홍해서 첫 유조선 공격…호르무즈 이어 에너지 공급망 위기 현실화",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-gXe4vNJTdZysWYXsnT4Swqzx",
+        "title": "후티, 홍해서 첫 유조선 공격…호르무즈 이어 에너지 공급망 위기 현실화",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-41hVWNPp9DTUlAjdOgBuaFkt",
+        "title": "Iraq opens temporary air routes to Iran - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-tGNIadxeUug0A3ay8vcs9dMj",
+        "title": "트럼프, 홍해에서 유조선이 표적이 된 뒤 미국은 후티의 공격에 대해 이란에 책임을 묻겠다고 밝혀",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-SBihn1RQOyxjYjWzB5QnONue",
+        "title": "Houthis target Red Sea shipping as US hits Iran - The New Indian Express",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-qxj7eHiFomBqM7rP4DglaaPu",
+        "title": "[영상] 후티 \"홍해에서 봉쇄 위반 유조선 공격\"…미군은 12일째 이란 공습",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-B6aASrGdTsOBsEHwuhRvQ9u6",
+        "title": "미국의 이란 공격 확대 속 후티, 사우디 유조선 2척 공격 주장",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-TvdAz2gM37uowRLyDV11VVph",
+        "title": "트럼프, 홍해의 후티 공격에 대해 이란을 처벌하겠다고 공언… 유가 100달러 돌파",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-6FAuWOsZcRRn49MZPnvYjuhP",
+        "title": "트럼프, 호르무즈 해협에서 이란의 공격이 있을 때마다 미국이 교량이나 발전소를 파괴할 것이라고 말해",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-80f3v3j9YoFRQuA2_J2-lNl_",
+        "title": "후티 “사우디 유조선 공격”…해상 봉쇄 선언 후 첫 선박 타격 주장",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-hRdlsP14ywkXkwBEvW3WSb9N",
+        "title": "U.S. Missile Attack Near Shalamcheh Border Crossing in Iran Reports No Casualties - Sahi",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-ulC3JCtWD7vVygoncb6xotpO",
+        "title": "홍해서 유조선 2척 피격…후티 \"사우디 봉쇄위반 선박 공격\" 주장",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-vMn9FnU6YzPqgXdsNzY4CMA-",
+        "title": "“봉쇄 선언 사흘 만에 유조선 때렸다”…후티, 홍해 첫 공격 [밀리터리+]",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-p87p7vd0fZNyE20uMFayrA1O",
+        "title": "후티 반군 \"사우디 유조선 2척 공격\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-LipOmWFFl956jYqA7GCMRBbs",
+        "title": "후티 \"사우디 유조선 공격\"…이란 \"석유 한 방울도 안 돼\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-K5QPbyxSbqt_T3746r6EjEX7",
+        "title": "후티 반군 \"사우디 유조선 2척 공격\"",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-vaD_bsBE4rMu_Rz3Cm0cJRWi",
+        "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-ekQBVDd0sB6xOHKAgrPIInma",
+        "title": "Houthis announce Saudi naval blockade, threatening new front in US-Iran war - Reuters",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-yfWqgGDikgDmDdM9mfyPxEi5",
+        "title": "To Base or Not to Base: The Iran War Exposes Flaws of U.S. Basing in the Middle East - Council on Foreign Relations",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
+        "title": "Pentagon identifies US service member killed in Iranian attack on Iraq base - The Hill",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-uHDTqEly9-KUoifv9RbAc_va",
+        "title": "Pentagon Withheld Dozens of U.S. Military Injuries in Iran War - The New York Times",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-qQvzTd3VgpLU278msbgYtXAg",
+        "title": "Iran attacks Kurdistan Freedom Party bases in Iraq amid 2026 crisis - Crypto Briefing",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-cVm9W9jO46imkK92tRHp5OUc",
+        "title": "Iraq signs 48 deals with US companies during PM’s visit to Washington - Al Jazeera",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-TW14eJd5-glE1f5R26MR3IYw",
+        "title": "U.S. strikes bridges in Iran; Tehran targets U.S. bases in the Gulf - NPR",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-PC7SzZ_PrpqtSS-GcfJZlN-x",
+        "title": "Iran Targets US Military Bases Across 3 Countries in Retaliatory Attack - IranWire",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-UT_Jta2dWb7bXR0FL0zP2KAY",
+        "title": "Oil pipelines around the Strait of Hormuz won't end the threat Iran poses to Middle East crude exports - CNBC",
+        "reason": "원문에 이라크 직접 연결 없음"
+      }
+    ],
+    "completedAt": "2026-07-28T03:37:13.783Z"
+  },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 0,
-    "requested": 180,
-    "extracted": 177,
-    "failed": 3,
-    "removedCount": 83
+    "reused": 119,
+    "requested": 59,
+    "extracted": 58,
+    "failed": 1,
+    "removedCount": 14
   },
   "entityNormalization": {
-    "correctedCount": 32,
-    "completedAt": "2026-07-27T00:51:15.968Z"
+    "correctedCount": 67,
+    "completedAt": "2026-07-28T03:39:36.781Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-27T00:52:01.727Z",
-  "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-27T00:52:02.040Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T03:39:37.027Z",
+  "knownPoliticalSummaryFixedCount": 2,
+  "knownPoliticalSummaryFixedAt": "2026-07-28T03:39:37.082Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-27T00:52:02.122Z",
+  "untranslatedFilteredAt": "2026-07-28T03:39:37.173Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-27T00:52:02.174Z",
-  "aiHallucinationFilteredCount": 4,
-  "aiHallucinationFilteredAt": "2026-07-27T00:52:02.230Z",
+  "datelineLocationCorrectedAt": "2026-07-28T03:39:37.227Z",
+  "aiHallucinationFilteredCount": 2,
+  "aiHallucinationFilteredAt": "2026-07-28T03:39:37.283Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-27T00:52:02.285Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T03:39:37.337Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-27T00:52:02.341Z",
-    "removedCount": 4,
+    "appliedAt": "2026-07-28T03:39:37.403Z",
+    "removedCount": 7,
     "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-27T00:52:02.384Z",
+    "appliedAt": "2026-07-28T03:39:37.448Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-27T00:52:02.430Z",
-  "eventCount": 70,
-  "eventDuplicateArticleCount": 103,
-  "eventGroupedAt": "2026-07-27T00:52:02.736Z"
+  "duplicateCollapsedAt": "2026-07-28T03:39:37.498Z",
+  "eventCount": 86,
+  "eventDuplicateArticleCount": 84,
+  "eventGroupedAt": "2026-07-28T03:39:37.905Z"
 }
