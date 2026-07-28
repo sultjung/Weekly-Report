@@ -9,20 +9,18 @@
   const isDomestic=a=>a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media'||String(a.category3||'')==='domestic_media';
   const title=a=>isDomestic(a)?(a.title||a.titleKo||'제목 없음'):(a.translatedTitle||a.titleKo||a.title||'제목 없음');
   function articleUrl(a={}){
-    const candidates=[a.publisherUrl,a.resolvedUrl,a.canonicalUrl,a.articleUrl,a.sourceUrl,a.googleNewsUrl,a.link,a.url];
+    const candidates=[a.resolvedUrl,a.canonicalUrl,a.articleUrl,a.sourceUrl,a.link,a.url];
     for(const value of candidates){
       const raw=String(value||'').trim();
       if(!/^https?:\/\//i.test(raw))continue;
       try{
-        const u=new URL(raw);
-        const host=u.hostname.toLowerCase();
-        const path=u.pathname.toLowerCase();
+        const u=new URL(raw),host=u.hostname.toLowerCase(),path=u.pathname.toLowerCase();
         if(/(^|\.)lh\d*\.googleusercontent\.com$/.test(host))continue;
         if(/(^|\.)gstatic\.com$/.test(host))continue;
+        if(host==='news.google.com'&&/^\/(search|topics|topstories)(\/|$)/i.test(path))continue;
+        if(/(^|\.)google\.[a-z.]+$/.test(host)&&/^\/search(\/|$)/i.test(path))continue;
         if(/\.(?:jpg|jpeg|png|gif|webp|svg|ico)(?:$|[?#])/i.test(path))continue;
         if(/(?:^|[?&])(w|h|sz)=\d+(?:&|$)/i.test(u.search)&&/googleusercontent\.com$/.test(host))continue;
-        if(/google\.[^/]+\/search$/i.test(`${host}${path}`))continue;
-        if(host==='news.google.com'&&!/\/(?:rss\/)?articles?\//i.test(path))continue;
         return u.toString();
       }catch{}
     }
@@ -42,7 +40,6 @@
   const preview=a=>isDomestic(a)?domesticPreview(a):translatedPreview(a);
   const fullBody=a=>isDomestic(a)?'':translatedFull(a);
   const date=a=>{const d=new Date(a.publishedAt||a.date||0);return isNaN(d)?'-':new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d)};
-
   function categoryOf(a){
     if(isDomestic(a))return'domestic';
     const c=String(a.category3||a.forcedCategory3||'').toLowerCase();
@@ -59,28 +56,11 @@
   function loadSel(){try{for(const a of JSON.parse(localStorage.getItem(KEY)||'[]'))S.selected.set(key(a),a)}catch{}}
   function save(){localStorage.setItem(KEY,JSON.stringify([...S.selected.values()]));stats()}
   function payload(){return{selectionVersion:'2026-07-v1',generatedAt:new Date().toISOString(),purpose:'iraq-weekly-report-selected-news',count:S.selected.size,articles:[...S.selected.values()].sort((a,b)=>new Date(a.publishedAt||0)-new Date(b.publishedAt||0))}}
-  function stats(){
-    const A=S.articles;
-    $('statTotal').textContent=A.length;
-    $('statDomestic').textContent=A.filter(a=>categoryOf(a)==='domestic').length;
-    $('statPolitics').textContent=A.filter(a=>categoryOf(a)==='politics').length;
-    $('statEconomy').textContent=A.filter(a=>categoryOf(a)==='economy').length;
-    $('statSecurity').textContent=A.filter(a=>categoryOf(a)==='security').length;
-    $('statInternational').textContent=A.filter(a=>categoryOf(a)==='international').length;
-    $('statSelected').textContent=S.selected.size;
-  }
+  function stats(){const A=S.articles;$('statTotal').textContent=A.length;$('statDomestic').textContent=A.filter(a=>categoryOf(a)==='domestic').length;$('statPolitics').textContent=A.filter(a=>categoryOf(a)==='politics').length;$('statEconomy').textContent=A.filter(a=>categoryOf(a)==='economy').length;$('statSecurity').textContent=A.filter(a=>categoryOf(a)==='security').length;$('statInternational').textContent=A.filter(a=>categoryOf(a)==='international').length;$('statSelected').textContent=S.selected.size}
   function apply(){
     const days=$('periodFilter').value,min=+$('scoreFilter').value,q=$('searchInput').value.trim().toLowerCase();
-    const cutoff=new Date(); if(days!=='all')cutoff.setDate(cutoff.getDate()-Number(days));
-    S.filtered=S.articles.filter(a=>{
-      const d=new Date(a.publishedAt||0);
-      if(days!=='all'&&!isNaN(d)&&d<cutoff)return false;
-      if(score(a)<min)return false;
-      if(q&&!text(a).toLowerCase().includes(q))return false;
-      if(['domestic','politics','economy','security','international'].includes(S.filter)&&categoryOf(a)!==S.filter)return false;
-      if(S.filter==='selected'&&!S.selected.has(key(a)))return false;
-      return true;
-    }).sort((a,b)=>$('sortFilter').value==='latest'?new Date(b.publishedAt||0)-new Date(a.publishedAt||0):score(b)-score(a));
+    const cutoff=new Date();if(days!=='all')cutoff.setDate(cutoff.getDate()-Number(days));
+    S.filtered=S.articles.filter(a=>{const d=new Date(a.publishedAt||0);if(days!=='all'&&!isNaN(d)&&d<cutoff)return false;if(score(a)<min)return false;if(q&&!text(a).toLowerCase().includes(q))return false;if(['domestic','politics','economy','security','international'].includes(S.filter)&&categoryOf(a)!==S.filter)return false;if(S.filter==='selected'&&!S.selected.has(key(a)))return false;return true}).sort((a,b)=>$('sortFilter').value==='latest'?new Date(b.publishedAt||0)-new Date(a.publishedAt||0):score(b)-score(a));
     render();
   }
   function scoreClass(n){return n>=90?'s90':n>=80?'s80':n>=70?'s70':''}
@@ -91,7 +71,7 @@
     return `<button class="related-toggle" data-action="related">관련뉴스 ${items.length+1}건 전체보기</button><div class="related-list">${items.map(x=>{const url=articleUrl(x);return url?`<a href="${esc(url)}" target="_blank" rel="noopener"><b>${esc(x.title)}</b><span>${esc(x.source||'-')} · ${esc(date(x))}</span></a>`:`<div class="related-link-disabled"><b>${esc(x.title)}</b><span>${esc(x.source||'-')} · 원문 주소 미확보</span></div>`}).join('')}</div>`;
   }
   function render(){
-    const n=$('newsList'); $('visibleCount').textContent=`${S.filtered.length}건 표시`;
+    const n=$('newsList');$('visibleCount').textContent=`${S.filtered.length}건 표시`;
     if(!S.filtered.length){n.className='news-list empty';n.textContent='조건에 맞는 기사가 없습니다.';return}
     n.className='news-list';
     n.innerHTML=S.filtered.map(a=>{
@@ -106,18 +86,8 @@
       return `<article class="news-card ${domestic?'domestic-card compact-card':''} ${sel?'selected':''}" data-key="${esc(k)}"><div class="news-top"><div class="meta"><span>${esc(a.source||'-')}</span><span>${esc(date(a))}</span>${scoreMeta}</div>${selectButton}</div>${heading}<p class="preview">${esc(p)}</p>${translatedBody?`<div class="fulltext">${esc(translatedBody)}</div>`:''}<div class="card-footer"><div class="tags"><span class="tag category-${category}">${categoryLabel(category)}</span></div><div class="card-actions">${expand}${originalLink}${translationStatus}</div></div>${relatedMarkup(a)}${!domestic&&reason?`<p class="hint"><b>점수 근거</b> ${esc(reason)}</p>`:''}</article>`;
     }).join('');
   }
-  async function init(){
-    loadSel();
-    try{const r=await fetch(`./data/news.json?v=${Date.now()}`,{cache:'no-store'});const d=await r.json();S.articles=Array.isArray(d)?d:(d.articles||d.items||[]);stats();apply()}
-    catch(e){$('newsList').className='news-list empty';$('newsList').textContent=`뉴스 데이터를 불러오지 못했습니다: ${e.message}`}
-  }
-  document.addEventListener('click',e=>{
-    const card=e.target.closest('.news-card');
-    if(e.target.closest('.stat-card')){S.filter=e.target.closest('.stat-card').dataset.statFilter;document.querySelectorAll('.stat-card').forEach(x=>x.classList.toggle('active',x.dataset.statFilter===S.filter));apply();return}
-    if(card&&e.target.dataset.action==='expand'){card.classList.toggle('open');const base=e.target.dataset.openLabel||'전체 보기';e.target.textContent=card.classList.contains('open')?'접기':base}
-    if(card&&e.target.dataset.action==='related'){card.classList.toggle('related-open');e.target.textContent=card.classList.contains('related-open')?'관련뉴스 접기':e.target.textContent.replace(' 접기','')}
-    if(card&&e.target.dataset.action==='select'){const a=S.articles.find(x=>key(x)===card.dataset.key);if(!a)return;S.selected.has(card.dataset.key)?S.selected.delete(card.dataset.key):S.selected.set(card.dataset.key,{...a,selected:true});save();apply()}
-  });
+  async function init(){loadSel();try{const r=await fetch(`./data/news.json?v=${Date.now()}`,{cache:'no-store'});const d=await r.json();S.articles=Array.isArray(d)?d:(d.articles||d.items||[]);stats();apply()}catch(e){$('newsList').className='news-list empty';$('newsList').textContent=`뉴스 데이터를 불러오지 못했습니다: ${e.message}`}}
+  document.addEventListener('click',e=>{const card=e.target.closest('.news-card');if(e.target.closest('.stat-card')){S.filter=e.target.closest('.stat-card').dataset.statFilter;document.querySelectorAll('.stat-card').forEach(x=>x.classList.toggle('active',x.dataset.statFilter===S.filter));apply();return}if(card&&e.target.dataset.action==='expand'){card.classList.toggle('open');const base=e.target.dataset.openLabel||'전체 보기';e.target.textContent=card.classList.contains('open')?'접기':base}if(card&&e.target.dataset.action==='related'){card.classList.toggle('related-open');e.target.textContent=card.classList.contains('related-open')?'관련뉴스 접기':e.target.textContent.replace(' 접기','')}if(card&&e.target.dataset.action==='select'){const a=S.articles.find(x=>key(x)===card.dataset.key);if(!a)return;S.selected.has(card.dataset.key)?S.selected.delete(card.dataset.key):S.selected.set(card.dataset.key,{...a,selected:true});save();apply()}});
   ['periodFilter','scoreFilter','sortFilter'].forEach(id=>$(id).addEventListener('change',apply));
   $('searchInput').addEventListener('input',apply);
   $('resetFilters').onclick=()=>{$('periodFilter').value='7';$('scoreFilter').value='70';$('sortFilter').value='score';$('searchInput').value='';S.filter='all';document.querySelectorAll('.stat-card').forEach(x=>x.classList.toggle('active',x.dataset.statFilter==='all'));apply()};
