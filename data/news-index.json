@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T23:04:56.546Z",
+  "generatedAt": "2026-07-28T23:39:13.519Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
@@ -13,15 +13,15 @@
     "exclude": 0
   },
   "archive": {
-    "previous": 110,
-    "carriedForward": 110
+    "previous": 112,
+    "carriedForward": 112
   },
-  "elapsedSeconds": 32,
+  "elapsedSeconds": 40,
   "count": 112,
   "regionalIraqExposure": {
-    "inputRegional": 80,
+    "inputRegional": 78,
     "keptRegional": 24,
-    "removedRegional": 56,
+    "removedRegional": 54,
     "removed": [
       {
         "id": "rss-E8MHJZ9nvFcQewdtS54aVnPy",
@@ -51,11 +51,6 @@
       {
         "id": "rss-daCA4O38pUYy5YUwJfX12j20",
         "title": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-BVGtE60tmRDCuBNVcjCIezuV",
-        "title": "Iran Ground Offensive Against U.S. Bases Inconceivable, Analysts Say - Forbes",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -149,7 +144,7 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-vaD_bsBE4rMu_Rz3Cm0cJRWi",
+        "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -269,11 +264,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
-        "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -304,46 +294,46 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T23:04:56.657Z"
+    "completedAt": "2026-07-28T23:39:13.614Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 110,
-    "requested": 21,
-    "extracted": 21,
+    "reused": 112,
+    "requested": 20,
+    "extracted": 20,
     "failed": 0,
     "removedCount": 14
   },
   "entityNormalization": {
     "correctedCount": 88,
-    "completedAt": "2026-07-28T23:05:21.035Z"
+    "completedAt": "2026-07-28T23:39:36.017Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:05:21.331Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:39:36.307Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T23:05:21.399Z",
-  "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T23:05:21.513Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T23:39:36.363Z",
+  "untranslatedFilteredCount": 1,
+  "untranslatedFilteredAt": "2026-07-28T23:39:36.458Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T23:05:21.586Z",
+  "datelineLocationCorrectedAt": "2026-07-28T23:39:36.586Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T23:05:21.665Z",
+  "aiHallucinationFilteredAt": "2026-07-28T23:39:36.649Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T23:05:21.732Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T23:39:36.845Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T23:05:21.812Z",
-    "removedCount": 19,
+    "appliedAt": "2026-07-28T23:39:36.911Z",
+    "removedCount": 20,
     "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T23:05:21.871Z",
+    "appliedAt": "2026-07-28T23:39:36.962Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T23:05:21.937Z",
-  "eventCount": 68,
-  "eventDuplicateArticleCount": 44,
-  "eventGroupedAt": "2026-07-28T23:05:22.513Z"
+  "duplicateCollapsedAt": "2026-07-28T23:39:37.268Z",
+  "eventCount": 69,
+  "eventDuplicateArticleCount": 43,
+  "eventGroupedAt": "2026-07-28T23:39:37.724Z"
 }
