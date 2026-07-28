@@ -14,7 +14,8 @@
   };
 
   function isDomesticMedia(a){
-    return String(a.queryGroup||'')==='korean_domestic_media';
+    const original=[a.title,a.description].filter(Boolean).join(' ');
+    return a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media'||/[가-힣]/.test(original);
   }
 
   function categoryOf(a){
