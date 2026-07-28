@@ -13,7 +13,13 @@ const queries = groups.flatMap(([, values]) => Array.isArray(values) ? values : 
 if (!queries.length) throw new Error("Search keyword list is empty");
 if (new Set(queries).size !== queries.length) throw new Error("Duplicate search keywords found");
 
-const expectedKorean = ["\"비스마야\"", "\"한화\" \"이라크\"", "\"이라크\""];
+const expectedKorean = [
+  "\"비스마야\"",
+  "\"한화\" \"이라크\"",
+  "\"이라크\"",
+  "\"한화\" \"김동관\"",
+  "\"한화\" \"김동선\""
+];
 const actualKorean = keywords.korean_domestic_media || [];
 if (JSON.stringify(actualKorean) !== JSON.stringify(expectedKorean)) {
   throw new Error(`Korean domestic-media queries must be exactly: ${expectedKorean.join(", ")}`);
@@ -51,8 +57,13 @@ if (!scriptRefs.includes("app.js") || !scriptRefs.includes("update-time.js")) {
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
-for (const required of ["korean_domestic_media", "statDomestic", "domestic:'국내 언론'"]) {
+for (const required of ["korean_domestic_media", "statDomestic", "domestic:'국내 언론'", "김동관", "김동선", "isStaleUnapprovedKorean"]) {
   if (!appJs.includes(required)) throw new Error(`Domestic media dashboard logic missing: ${required}`);
+}
+
+const domesticPreparation = await fs.readFile(path.join(ROOT, "scripts", "prepare-domestic-media.mjs"), "utf8");
+for (const required of ["김동관", "김동선", "unrelatedKoreanRemoved", "SPORTS_RE"]) {
+  if (!domesticPreparation.includes(required)) throw new Error(`Domestic media preparation rule missing: ${required}`);
 }
 
 const extractor = await fs.readFile(path.join(ROOT, "scripts", "extract-article-facts.mjs"), "utf8");
@@ -79,6 +90,7 @@ if (!workflowEnvHasDefault("OPENAI_FACT_FALLBACK_MODEL", "gpt-5.4-mini", "OPENAI
 const stages = [
   "npm run collect",
   "node scripts/filter-regional-iraq-exposure.mjs",
+  "node scripts/prepare-domestic-media.mjs",
   "node scripts/extract-article-facts.mjs",
   "node scripts/refine-report-writing.mjs",
   "npm run postprocess"
@@ -98,6 +110,7 @@ const syntaxFiles = [
   "scripts/collect-sources-only.mjs",
   "scripts/collect-news.mjs",
   "scripts/filter-regional-iraq-exposure.mjs",
+  "scripts/prepare-domestic-media.mjs",
   "scripts/extract-article-facts.mjs",
   "scripts/normalize-extracted-entities.mjs",
   "scripts/refine-report-writing.mjs",
