@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-28T04:59:26.276Z",
+  "generatedAt": "2026-07-28T06:22:02.170Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 103,
+    "total": 104,
     "politics": 7,
-    "terror_security": 89,
+    "terror_security": 90,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 102,
-    "carriedForward": 102
+    "previous": 103,
+    "carriedForward": 103
   },
-  "elapsedSeconds": 24,
-  "count": 103,
+  "elapsedSeconds": 37,
+  "count": 104,
   "regionalIraqExposure": {
-    "inputRegional": 84,
+    "inputRegional": 83,
     "keptRegional": 23,
-    "removedRegional": 61,
+    "removedRegional": 60,
     "removed": [
       {
         "id": "rss-2l7KYG0TliIcgXr11btk352L",
@@ -99,19 +99,9 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
-        "id": "rss-3hflbkOwEGxiB6rNEJiDzO2N",
-        "title": "Explosions are heard near a US base in northern Iraq as US-Iran fighting escalates - WWAYTV3",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-XiQuo2QuerxkkXDkfhnGYvu5",
         "title": "US military says it fired on another merchant vessel trying to breach blockade of Iranian ports - WFSB",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-yQInKx31yQeXKh4Ep2VrO4pe",
-        "title": "Explosions Reported Near US Base In Northern Iraq As Iran Conflict Escalates - Outlook India",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-CmC7tWH4pxiihnlYRh-TWrzC",
@@ -164,7 +154,7 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
+        "id": "rss-vaD_bsBE4rMu_Rz3Cm0cJRWi",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -217,6 +207,11 @@
         "id": "rss-rz1gCC_TAGiKyiJZOEr2oBt6",
         "title": "Gulf oil exports hit five-month high as Hormuz traffic slows - The Arab Weekly",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-KhccXrYm4JKZ6Wir-JH7kD8k",
+        "title": "Iranian attack kills U.S. service member in Iraq - Armenpress",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-LaiAS68S0LfAVwlqLZtIm8aK",
@@ -279,6 +274,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-SGL5gGNkjIY7p_xF7p7SBWEm",
+        "title": "Video shows Iranian drones shot down over Iraq's Erbil - Reuters",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
         "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -286,11 +286,6 @@
       {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-RXSndJmdfwZLG3_O0ZAd51m8",
-        "title": "Khamenei funeral procession crosses into Iraq amid 2026 Iran war tensions - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -329,46 +324,46 @@
         "reason": "원문에 이라크 직접 연결 없음"
       }
     ],
-    "completedAt": "2026-07-28T04:59:26.371Z"
+    "completedAt": "2026-07-28T06:22:02.251Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 102,
+    "reused": 103,
     "requested": 17,
     "extracted": 17,
     "failed": 0,
     "removedCount": 8
   },
   "entityNormalization": {
-    "correctedCount": 76,
-    "completedAt": "2026-07-28T04:59:44.833Z"
+    "correctedCount": 77,
+    "completedAt": "2026-07-28T06:22:23.097Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T04:59:45.116Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T06:22:23.319Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T04:59:45.176Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T06:22:23.366Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T04:59:45.269Z",
+  "untranslatedFilteredAt": "2026-07-28T06:22:23.442Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T04:59:45.330Z",
+  "datelineLocationCorrectedAt": "2026-07-28T06:22:23.493Z",
   "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-28T04:59:45.395Z",
+  "aiHallucinationFilteredAt": "2026-07-28T06:22:23.545Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T04:59:45.453Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T06:22:23.598Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T04:59:45.520Z",
+    "appliedAt": "2026-07-28T06:22:23.657Z",
     "removedCount": 16,
     "correctedCount": 1
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T04:59:45.572Z",
+    "appliedAt": "2026-07-28T06:22:23.698Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T04:59:45.628Z",
+  "duplicateCollapsedAt": "2026-07-28T06:22:23.743Z",
   "eventCount": 63,
-  "eventDuplicateArticleCount": 40,
-  "eventGroupedAt": "2026-07-28T04:59:46.031Z"
+  "eventDuplicateArticleCount": 41,
+  "eventGroupedAt": "2026-07-28T06:22:24.061Z"
 }
