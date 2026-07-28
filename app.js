@@ -6,16 +6,34 @@
   const score=a=>Number(a.relevanceScore??a.importanceScore??a.score??0);
   const key=a=>a.id||a.url||`${a.titleKo||a.title}-${a.publishedAt}`;
   const text=a=>[a.titleKo,a.title,a.translatedTitle,a.summaryKo,a.translatedBody,a.fullTranslation,a.description,a.source,a.weeklyReportReason,a.category1,a.category2,a.category3,a.queryGroup,a.collectionLane].filter(Boolean).join(' ');
+  const originalText=a=>[a.title,a.description,a.cleanText,a.fullText].filter(Boolean).join(' ');
   const body=a=>a.translatedBody||a.fullTranslation||a.translationKo||a.summaryKo||a.description||'';
   const title=a=>a.translatedTitle||a.titleKo||a.title||'제목 없음';
   const date=a=>{
     const d=new Date(a.publishedAt||a.date||0);
     return isNaN(d)?'-':new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d);
   };
+  const SPORTS_RE=/축구|농구|배구|야구|월드컵|아시안컵|올림픽|경기\s*(?:결과|일정|중계)|대표팀|선수|감독|리그|득점|football|soccer|world cup|match|fixture|league/i;
+
+  function approvedDomestic(a){
+    const original=originalText(a);
+    if(!/[가-힣]/.test(String(a.title||''))||SPORTS_RE.test(original))return false;
+    if(/비스마야/i.test(original))return true;
+    if(/이라크/i.test(original))return true;
+    if(/한화/i.test(original)&&/김동관/i.test(original))return true;
+    if(/한화/i.test(original)&&/김동선/i.test(original))return true;
+    return false;
+  }
 
   function isDomesticMedia(a){
-    const original=[a.title,a.description].filter(Boolean).join(' ');
-    return a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media'||/[가-힣]/.test(original);
+    if(!approvedDomestic(a))return false;
+    return a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media'||/[가-힣]/.test(String(a.title||''));
+  }
+
+  function isStaleUnapprovedKorean(a){
+    const koreanOriginal=/[가-힣]/.test(String(a.title||''));
+    const markedDomestic=a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media';
+    return (koreanOriginal||markedDomestic)&&!approvedDomestic(a);
   }
 
   function categoryOf(a){
@@ -82,7 +100,8 @@
     try{
       const r=await fetch(`./data/news.json?v=${Date.now()}`,{cache:'no-store'});
       const d=await r.json();
-      S.articles=Array.isArray(d)?d:(d.articles||d.items||[]);
+      const loaded=Array.isArray(d)?d:(d.articles||d.items||[]);
+      S.articles=loaded.filter(a=>!isStaleUnapprovedKorean(a));
       stats();apply();
     }catch(e){
       $('newsList').className='news-list empty';
