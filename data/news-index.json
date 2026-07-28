@@ -1,30 +1,35 @@
 {
-  "generatedAt": "2026-07-28T22:37:46.624Z",
+  "generatedAt": "2026-07-28T23:04:56.546Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 110,
+    "total": 112,
     "politics": 7,
-    "terror_security": 96,
+    "terror_security": 98,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 113,
-    "carriedForward": 113
+    "previous": 110,
+    "carriedForward": 110
   },
-  "elapsedSeconds": 27,
-  "count": 110,
+  "elapsedSeconds": 32,
+  "count": 112,
   "regionalIraqExposure": {
-    "inputRegional": 81,
+    "inputRegional": 80,
     "keptRegional": 24,
-    "removedRegional": 57,
+    "removedRegional": 56,
     "removed": [
       {
-        "id": "rss-txDtcqNIZzdCX41mTZQ1jy9P",
+        "id": "rss-E8MHJZ9nvFcQewdtS54aVnPy",
+        "title": "Yemen’s Houthis say targeted Saudi tanker in Red Sea - Free Malaysia Today",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-xRakfPPRVOSeHzWqxhR2vCfo",
         "title": "Saudi Arabia vows firm response to attacks on oil facilities and shipping - Gulf News",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -77,11 +82,6 @@
         "id": "rss-KOpH8sWHQ4fDdZPRyj8Jk1h2",
         "title": "Syria focuses on energy deals, works to revive infrastructure and institutions - Foundation for Defense of Democracies",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-alJTKsE_hmmjd7f3iyCh4AoA",
-        "title": "Drones target Iraqi city where US forces are based as US-Iran fighting escalates - BreakingNews.ie",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
@@ -146,11 +146,6 @@
       {
         "id": "rss-hRdlsP14ywkXkwBEvW3WSb9N",
         "title": "U.S. Missile Attack Near Shalamcheh Border Crossing in Iran Reports No Casualties - Sahi",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-Lazntp0wRwYQ7YiPQNw7yxh2",
-        "title": "U.S., Pakistan condemn Houthi Red Sea threats to shipping and Saudi Arabia - The Tribune-Democrat",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -269,6 +264,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
+        "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
         "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -289,11 +289,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-BQn0u3DyfU8xMMwCJ1_b0zLe",
-        "title": "Iraq prepares to reopen Syrian land route for oil exports to bypass Gulf - Anadolu Ajansı",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-gJDr7w16kI7vpeYFGUI4yD2e",
         "title": "Iraq’s oil exports to South Korea fall by 80% - Iraqi News",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -309,46 +304,46 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T22:37:46.713Z"
+    "completedAt": "2026-07-28T23:04:56.657Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 112,
-    "requested": 20,
-    "extracted": 20,
+    "reused": 110,
+    "requested": 21,
+    "extracted": 21,
     "failed": 0,
-    "removedCount": 13
+    "removedCount": 14
   },
   "entityNormalization": {
-    "correctedCount": 89,
-    "completedAt": "2026-07-28T22:38:09.961Z"
+    "correctedCount": 88,
+    "completedAt": "2026-07-28T23:05:21.035Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:38:10.197Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:05:21.331Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T22:38:10.251Z",
-  "untranslatedFilteredCount": 3,
-  "untranslatedFilteredAt": "2026-07-28T22:38:10.342Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T23:05:21.399Z",
+  "untranslatedFilteredCount": 0,
+  "untranslatedFilteredAt": "2026-07-28T23:05:21.513Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T22:38:10.401Z",
+  "datelineLocationCorrectedAt": "2026-07-28T23:05:21.586Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T22:38:10.467Z",
+  "aiHallucinationFilteredAt": "2026-07-28T23:05:21.665Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T22:38:10.522Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T23:05:21.732Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T22:38:10.591Z",
-    "removedCount": 22,
+    "appliedAt": "2026-07-28T23:05:21.812Z",
+    "removedCount": 19,
     "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T22:38:10.639Z",
+    "appliedAt": "2026-07-28T23:05:21.871Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T22:38:10.692Z",
-  "eventCount": 67,
-  "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T22:38:11.129Z"
+  "duplicateCollapsedAt": "2026-07-28T23:05:21.937Z",
+  "eventCount": 68,
+  "eventDuplicateArticleCount": 44,
+  "eventGroupedAt": "2026-07-28T23:05:22.513Z"
 }

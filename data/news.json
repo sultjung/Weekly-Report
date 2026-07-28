@@ -1,15 +1,15 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-28T22:37:46.624Z",
+  "generatedAt": "2026-07-28T23:04:56.546Z",
   "lookbackDays": 30,
-  "count": 156,
+  "count": 157,
   "cacheHits": 0,
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "counts": {
-    "total": 110,
+    "total": 112,
     "politics": 7,
-    "terror_security": 96,
+    "terror_security": 98,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
@@ -46,6 +46,30 @@
         }
       ],
       "relatedNewsCount": 1,
+      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
+      "previewAvailable": false
+    },
+    {
+      "id": "domestic-XR07iV8VXSQFEPfEqEpX5S5B",
+      "title": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\"",
+      "titleKo": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\"",
+      "source": "연합뉴스",
+      "publishedAt": "2026-07-28T20:12:55.000Z",
+      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
+      "description": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\" 연합뉴스",
+      "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
+      "query": "이라크",
+      "queryGroup": "korean_domestic_media",
+      "collectionLane": "korean_domestic_media",
+      "category3": "domestic_media",
+      "domesticMedia": true,
+      "importanceScore": 70,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
+      "relatedNews": [],
+      "relatedNewsCount": 0,
       "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
       "previewAvailable": false
     },
@@ -151,7 +175,7 @@
       "titleKo": "이라크·예멘서 동시다발 공세… ‘저항의 축’에 둘러싸인 사우디",
       "source": "v.daum.net",
       "publishedAt": "2026-07-28T10:14:17.000Z",
-      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9MLUlZYTVkSjZId2Fjb3lOY2FQa09scXJzTC1kTnpuMkYzYXZLZnZleW9KWF9HRm9KMHlGU2ozVkxJOG0xNm9NaHBiT3RhVk0?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크·예멘서 동시다발 공세… ‘저항의 축’에 둘러싸인 사우디 v.daum.net",
       "fullText": "",
       "fullTextAvailable": false,
@@ -348,30 +372,6 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-oFawLZoQxhlA7P3uBzBHr0IW",
-      "title": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
-      "titleKo": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
-      "source": "뉴스1",
-      "publishedAt": "2026-07-27T15:25:45.000Z",
-      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
-      "description": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세 뉴스1",
-      "fullText": "",
-      "fullTextAvailable": false,
-      "fullTextChars": 0,
-      "query": "이라크",
-      "queryGroup": "korean_domestic_media",
-      "collectionLane": "korean_domestic_media",
-      "category3": "domestic_media",
-      "domesticMedia": true,
-      "importanceScore": 70,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
-      "relatedNews": [],
-      "relatedNewsCount": 0,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
-    },
-    {
       "id": "domestic-kVRYCO4QqPnI1UY8gnUwXjqT",
       "title": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
       "titleKo": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
@@ -544,7 +544,7 @@
           "title": "유통·테크 판 키운 ‘한화 3남’ 김동선…투자 성과 입증 과제 [기업X-RAY]",
           "source": "쿠키뉴스",
           "publishedAt": "2026-07-26T21:00:05.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5iUnpndEtLWEpjdjVKMjQ5RDQ2aDFVdFROcDZuMXZxZU5YM0pIdV9zWVhKNVdDQmtKaDc0WG13aHNBOWZNXzk0VGFuRVFkWGEwV3pvNE10RFUxZ1ZaTlA5UERUTQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5iUnpndEtLWEpjdjVKMjQ5RDQ2aDFVdFROcDZuMXZxZU5YM0pIdV9zWVhKNVdDQmtKaDc0WG13aHNBOWZNXzk0VGFuRVFkWGEwV3pvNE10RFUxZ1ZaTlA5UERUTQ?oc=5",
           "description": "유통·테크 판 키운 ‘한화 3남’ 김동선…투자 성과 입증 과제 [기업X-RAY] 쿠키뉴스",
           "fullText": "",
           "fullTextAvailable": false
@@ -786,7 +786,7 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-k3AR_CMdeOf_saXkhdyARrF9",
+      "id": "domestic-rUClrtgeKnSk1pfibVjLfKgR",
       "title": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "titleKo": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "source": "v.daum.net",
@@ -1314,30 +1314,6 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-t4zHTrfnn2vVzoovEzq2jvQ-",
-      "title": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다",
-      "titleKo": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다",
-      "source": "딜사이트",
-      "publishedAt": "2026-07-21T23:00:00.000Z",
-      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
-      "description": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 딜사이트",
-      "fullText": "",
-      "fullTextAvailable": false,
-      "fullTextChars": 0,
-      "query": "한화 김동선",
-      "queryGroup": "korean_domestic_media",
-      "collectionLane": "korean_domestic_media",
-      "category3": "domestic_media",
-      "domesticMedia": true,
-      "importanceScore": 70,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
-      "relatedNews": [],
-      "relatedNewsCount": 0,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
-    },
-    {
       "id": "direct-zVjHJWG4XeBuIqw2hRs2QLTG",
       "title": "مرة أخرى.. السعودية تعلن التصدي لطائرات مسيرة انطلقت من الأراضي العراقية",
       "source": "964media",
@@ -1765,7 +1741,8 @@
       "eventArticleCount": 1,
       "eventSources": [],
       "eventRepresentativeId": "rss-EZWiHP45f-hjZf4aZZ8w2arv",
-      "eventRepresentative": true
+      "eventRepresentative": true,
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-cnAiHYP3JXCHaSR8B7yxg7pO",
@@ -1832,7 +1809,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "KV0lwc6-9fBV7T7lf3SdhRsU",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:22.518Z"
+      "fullTranslatedAt": "2026-07-28T22:24:22.518Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-0uOnIFIvjAdnHlcEbhYLFZ1h",
@@ -1895,7 +1873,88 @@
       "eventTitleKo": "이란 지원 이라크 민병대, 사우디 석유 시설에 드론 공격 가해, 왕국군 밝혀 - The Times of Israel",
       "eventSummaryKo": "이란의 지원을 받는 이라크 민병대가 사우디 석유 시설에 드론 공격을 가했다. 왕국 군이 해당 드론 공격이 있었다고 밝혔다.",
       "eventArticleCount": 9,
-      "eventRepresentative": false
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found"
+    },
+    {
+      "id": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
+      "title": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq - The Jerusalem Post",
+      "titleKo": "이란, 이라크 북부의 쿠르드 반대 세력을 겨냥한 드론 공격을 격화 - 예루살렘 포스트",
+      "summaryKo": "이란이 이라크 북부의 쿠르드 야당 단체를 겨냥한 드론 공격을 확대하고 있다.",
+      "source": "The Jerusalem Post",
+      "publishedAt": "2026-07-28T09:52:36.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01TElXVUY3VHNfUndXZjNBU3V6UVNZUWI4czd4SDRqS3UybXVUaWp3OFJtNVFza3pMUk9zZERJMEloSjFGOEVzR3RfbHlwbTVzdHM4ZjlXa0ZVdTFjQ3FjVDh6UDVBWGtobVE?oc=5",
+      "query": "\"Iraq\" \"drone attack\"",
+      "queryGroup": "english_iraq_politics_security",
+      "collectionLane": "iraq_politics_security",
+      "forcedCategory3": "",
+      "description": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq The Jerusalem Post",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 100,
+      "reportBullet": "이란, 이라크 북부의 쿠르드 야당 단체를 겨냥한 드론 공격 확대",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이란",
+        "쿠르드 야당 단체"
+      ],
+      "location": "이라크 북부",
+      "securityEventType": "other",
+      "securityEventCount": 1,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "이란이 이라크 북부의 쿠르드 야당 단체를 겨냥한 드론 공격을 확대하고 있다.",
+          "evidenceQuote": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "Iran escalates drone attacks"
+        },
+        {
+          "nameKo": "쿠르드 야당 단체",
+          "roleKo": "",
+          "evidenceQuote": "targeting Kurdish opposition groups"
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "XVum31uv9J-OU9Lo7Hjj4IQ2",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-28T23:05:18.733Z",
+      "entityNormalizationApplied": true,
+      "entityNormalizedAt": "2026-07-28T23:05:21.030Z",
+      "eventId": "event-2026-07-28-1ngclwr",
+      "eventTitleKo": "이란, 이라크 북부의 쿠르드 야당 단체를 겨냥한 드론 공격 확대",
+      "eventSummaryKo": "이란이 이라크 북부의 쿠르드 야당 단체를 겨냥한 드론 공격을 확대하고 있다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
+      "eventRepresentative": true,
+      "linkRepairStatus": "publisher-url-not-found",
+      "translatedTitle": "이란, 이라크 북부의 쿠르드 반대 세력을 겨냥한 드론 공격을 격화 - 예루살렘 포스트",
+      "translatedBody": "이란, 이라크 북부의 쿠르드 반대 세력을 겨냥한 드론 공격을 격화 예루살렘 포스트",
+      "fullTranslation": "이란, 이라크 북부의 쿠르드 반대 세력을 겨냥한 드론 공격을 격화 예루살렘 포스트",
+      "translationPreview": "이란, 이라크 북부의 쿠르드 반대 세력을 겨냥한 드론 공격을 격화 예루살렘 포스트",
+      "fullTranslationVersion": "weekly-report-full-translation-v1",
+      "fullTranslationFingerprint": "XVum31uv9J-OU9Lo7Hjj4IQ2",
+      "fullTranslationModel": "gpt-5.4-mini",
+      "fullTranslatedAt": "2026-07-28T23:05:28.822Z"
     },
     {
       "id": "rss-35O8HXgX-1Syc4zBVECjrAra",
@@ -1959,7 +2018,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 - Al Daee News",
       "translatedBody": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 Al Daee News",
@@ -1968,7 +2027,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "Zad9VeqaXws38sIPQMLDT3po",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:25.455Z"
+      "fullTranslatedAt": "2026-07-28T22:24:25.455Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-mzTbnalHG5F2R6x-Fh7IUTwQ",
@@ -2141,12 +2201,13 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "ctapRjQMMRHiklsg_HjERuOP",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:27.062Z"
+      "fullTranslatedAt": "2026-07-28T22:24:27.062Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-klcPUomnQGRj7o5w54FK2Eq6",
       "title": "Exclusive: Iraq seeks Saudi evidence in drone attack probe - The New Arab",
-      "titleKo": "단독: 이라크, 드론 공격 조사에서 사우디 증거 확보 추진",
+      "titleKo": "단독: 이라크, 드론 공격 수사에서 사우디의 증거를 요구",
       "summaryKo": "이라크가 드론 공격 조사에서 사우디의 증거를 확보하려 한다.",
       "source": "The New Arab",
       "publishedAt": "2026-07-28T09:14:23.000Z",
@@ -2210,7 +2271,16 @@
       "eventTitleKo": "이란 지원 이라크 민병대, 사우디 석유 시설에 드론 공격 가해, 왕국군 밝혀 - The Times of Israel",
       "eventSummaryKo": "이란의 지원을 받는 이라크 민병대가 사우디 석유 시설에 드론 공격을 가했다. 왕국 군이 해당 드론 공격이 있었다고 밝혔다.",
       "eventArticleCount": 9,
-      "eventRepresentative": false
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found",
+      "translatedTitle": "단독: 이라크, 드론 공격 수사에서 사우디의 증거를 요구",
+      "translatedBody": "단독: 이라크, 드론 공격 수사에서 사우디의 증거를 요구 The New Arab",
+      "fullTranslation": "단독: 이라크, 드론 공격 수사에서 사우디의 증거를 요구 The New Arab",
+      "translationPreview": "단독: 이라크, 드론 공격 수사에서 사우디의 증거를 요구 The New Arab",
+      "fullTranslationVersion": "weekly-report-full-translation-v1",
+      "fullTranslationFingerprint": "y_uKzxF0EFdvrgMPyZuwoDoP",
+      "fullTranslationModel": "gpt-5.4-mini",
+      "fullTranslatedAt": "2026-07-28T23:05:29.477Z"
     },
     {
       "id": "rss-G2ur4Nc2b0J_78bFu9JxDpZM",
@@ -2267,7 +2337,8 @@
       "eventArticleCount": 1,
       "eventSources": [],
       "eventRepresentativeId": "rss-G2ur4Nc2b0J_78bFu9JxDpZM",
-      "eventRepresentative": true
+      "eventRepresentative": true,
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-6faKGJGiGIVPT2PyVkaS67tl",
@@ -2445,7 +2516,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "tnjOIISsymDFzvqPLtxDTV7e",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:29.527Z"
+      "fullTranslatedAt": "2026-07-28T22:24:29.527Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-mknjB9_53tVmyeZWC5bGmIkK",
@@ -2605,7 +2677,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "oClEWKQHWD8EGIYDlbcVvlqm",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:41:12.115Z"
+      "fullTranslatedAt": "2026-07-28T06:41:12.115Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-Ny9Q-1_x9-PXhoLGVsGxhmv5",
@@ -2661,8 +2734,9 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
-      "eventRepresentative": false
+      "eventArticleCount": 8,
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-Cg6QcNjD1TlWfgtYTeMhQASc",
@@ -2733,7 +2807,88 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "hks22hhmyyKziVz_bMtbTEjB",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:35.402Z"
+      "fullTranslatedAt": "2026-07-28T22:24:35.402Z",
+      "linkRepairStatus": "publisher-url-not-found"
+    },
+    {
+      "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
+      "title": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار - قناة ومنصة المشهد - أخبار العالم اليوم",
+      "titleKo": "이라크, 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "summaryKo": "이라크가 Anbar에서 IS의 금융 거점 중 하나를 표적화했다.",
+      "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
+      "publishedAt": "2026-07-28T03:58:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
+      "query": "\"الأنبار\" \"داعش\"",
+      "queryGroup": "arabic_iraq_security_protests",
+      "collectionLane": "arabic_iraq_security",
+      "forcedCategory3": "terror_security",
+      "description": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار قناة ومنصة المشهد - أخبار العالم اليوم",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 92,
+      "reportBullet": "이라크, Anbar에서 IS의 금융 거점 중 하나를 표적화",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크",
+        "IS"
+      ],
+      "location": "Anbar",
+      "securityEventType": "other",
+      "securityEventCount": 1,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "이라크가 안바르에서 IS의 금융 거점 중 하나를 표적화했다.",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "이라크",
+          "roleKo": "",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        },
+        {
+          "nameKo": "다에시",
+          "roleKo": "",
+          "evidenceQuote": "المقرات المالية لـ\"داعش\""
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-28T23:05:20.950Z",
+      "entityNormalizationApplied": true,
+      "entityNormalizedAt": "2026-07-28T23:05:21.030Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "eventId": "event-2026-07-27-6vfeki",
+      "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
+      "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
+      "eventArticleCount": 8,
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found",
+      "translatedTitle": "이라크, 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "translatedBody": "이라크가 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥했다 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "fullTranslation": "이라크가 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥했다 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "translationPreview": "이라크가 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥했다 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "fullTranslationVersion": "weekly-report-full-translation-v1",
+      "fullTranslationFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
+      "fullTranslationModel": "gpt-5.4-mini",
+      "fullTranslatedAt": "2026-07-28T23:05:30.794Z"
     },
     {
       "id": "rss-tJ66Y3Al6mJDkMpwYPuD-vCp",
@@ -2803,7 +2958,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
       "translatedBody": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 이라크 국립통신사 | 니나",
@@ -2812,7 +2967,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "zGGOnutYzWqXQiBuRYgRo5HK",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:25.210Z"
+      "fullTranslatedAt": "2026-07-28T06:22:25.210Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-x1fV5oPgpqrceElLUwGln3e2",
@@ -2882,7 +3038,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "이라크, 안바르에서 ISIS의 ‘금고’를 급습해 테러 조직원들을 체포 - 에람 뉴스",
       "translatedBody": "이라크는 안바르에서 ISIS의 ‘금고’를 급습하는 동안 테러 조직원들을 체포했다. 에람 뉴스",
@@ -2891,7 +3047,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "0AN6_yXzfK1ibF3O6RsN1V-C",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:26.663Z"
+      "fullTranslatedAt": "2026-07-28T06:22:26.663Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-xP__J_hwKQe-iF-QG2XCJl1B",
@@ -2964,7 +3121,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "B4hKIk8X69msYAVRi7g_qWYy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:26.414Z"
+      "fullTranslatedAt": "2026-07-28T06:22:26.414Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-9MRFGFty-8SeHB4lkuwPhF06",
@@ -3035,7 +3193,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "EoshhwZiyHygEJwfcN8cJ5xL",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:27.369Z"
+      "fullTranslatedAt": "2026-07-28T06:22:27.369Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-SDrAWBN4Ue6-j2Znk9TWkEoJ",
@@ -3100,7 +3259,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "5OH4LXJdGpgDQ5F3chTRwdT-",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:36.832Z"
+      "fullTranslatedAt": "2026-07-28T22:24:36.832Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-6D8xFEgKuX7h3jbQoDvaK_fS",
@@ -3165,7 +3325,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "wriEU912sv0cceyLKmtnR6c5",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:28.132Z"
+      "fullTranslatedAt": "2026-07-28T06:22:28.132Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-V3fp_2LqI_lpyeCu3RtFd7o3",
@@ -3228,7 +3389,8 @@
       "eventTitleKo": "이란 지원 이라크 민병대, 사우디 석유 시설에 드론 공격 가해, 왕국군 밝혀 - The Times of Israel",
       "eventSummaryKo": "이란의 지원을 받는 이라크 민병대가 사우디 석유 시설에 드론 공격을 가했다. 왕국 군이 해당 드론 공격이 있었다고 밝혔다.",
       "eventArticleCount": 9,
-      "eventRepresentative": false
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-XDuRWL5uAAaLFF9EDG_jszS2",
@@ -3288,7 +3450,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 - video-agencyia.iq",
       "translatedBody": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 video-agencyia.iq",
@@ -3297,7 +3459,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "10XkmG3Ve-rDV0JbZOV7vSqy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:29.945Z"
+      "fullTranslatedAt": "2026-07-28T06:22:29.945Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-jZfaV-tZwntGNg8fP7nF1D0X",
@@ -3361,7 +3524,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 - 이라크 뉴스 통신사(INA)",
       "translatedBody": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 이라크 뉴스 통신사(INA)",
@@ -3370,7 +3533,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "63kv4A0HPC1jI2nkLaJVWUcC",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:30.259Z"
+      "fullTranslatedAt": "2026-07-28T06:22:30.259Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-Y-ve8oMvxvESLudEIPckw7mx",
@@ -3445,7 +3609,8 @@
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1",
       "eventSources": [],
-      "eventRepresentativeId": "rss-Y-ve8oMvxvESLudEIPckw7mx"
+      "eventRepresentativeId": "rss-Y-ve8oMvxvESLudEIPckw7mx",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-Ge_ESI0MxHrpsswueOuMl3xd",
@@ -3535,7 +3700,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventSources": [
         {
           "source": "964media",
@@ -3566,6 +3731,12 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aTWJpbFZob0t2OVQ2aU1VaUlpcGZERUZ4b2dVRGNCT3Z4dE5iYmlmV1dUMGxLSTJKdFRRY2xuSFFLU1F0ZTFNdF9LcmhUNnhpTWk1eUNuclY2OXQyZU0wOW9Vcw?oc=5",
           "titleKo": "군사정보국: Anbar에서 IS(IS) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
           "summaryKo": "군사정보부가 Anbar에서 IS 조직원 5명을 체포했다."
+        },
+        {
+          "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
+          "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
+          "titleKo": "이라크, Anbar에서 IS의 금융 거점 중 하나를 표적화",
+          "summaryKo": "이라크가 Anbar에서 IS의 금융 거점 중 하나를 표적화했다."
         },
         {
           "source": "هذا اليوم",
@@ -3859,7 +4030,8 @@
       "fullTranslationModel": "gpt-5.4-mini",
       "fullTranslatedAt": "2026-07-28T06:22:35.269Z",
       "eventSources": [],
-      "eventRepresentativeId": "rss-NNX_jIhC8aMSbBxMDZFBIvbq"
+      "eventRepresentativeId": "rss-NNX_jIhC8aMSbBxMDZFBIvbq",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-K-ZhAcDxST5_Yf3Ir9NMELp3",
@@ -4029,7 +4201,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "2q_i2l3XWkIjdG8gzCCQlSkQ",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:41.185Z"
+      "fullTranslatedAt": "2026-07-28T06:22:41.185Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-yhxR0hzSFn-jJtpjGW53DiP8",
@@ -4102,7 +4275,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "DfDqsM3epMgCBTVruej1O8JP",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:41.807Z"
+      "fullTranslatedAt": "2026-07-28T06:22:41.807Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-sJNmWDV5imz6NM-iQyg9_xeX",
@@ -4291,7 +4465,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "63qVHvFbi1Mt8DJSLMYEjlrw",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:43.286Z"
+      "fullTranslatedAt": "2026-07-28T06:22:43.286Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-OLAdx4V2LkCVq6VJ_GWDlvzb",
@@ -4459,7 +4634,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "AxVYsStA216AkUHAAhi0pHle",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:45.573Z"
+      "fullTranslatedAt": "2026-07-28T06:22:45.573Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-6LZynJQnu_Ru-6eXxSYumyQR",
@@ -4771,7 +4947,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "3KddgvkpJDfORTR-7U_J5_dt",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:47.935Z"
+      "fullTranslatedAt": "2026-07-28T06:22:47.935Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-ZW4WUVcMkykkAlr9VY8br376",
@@ -4840,7 +5017,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "i20m4ykwcJXCtOAkUo3KOPTR",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:50.386Z"
+      "fullTranslatedAt": "2026-07-28T06:22:50.386Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-wpebjBWTCsK1CW1MXrRtEAGb",
@@ -5069,7 +5247,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "4pvbQRmj9PDIUtTn-OxNga2Y",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:22:56.520Z"
+      "fullTranslatedAt": "2026-07-28T06:22:56.520Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-XAqDCgQ_p_8dLj5WBo_85GJd",
@@ -5232,7 +5411,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "H2G4K6YyxruNfXGO4TV9BATz",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:41:13.029Z"
+      "fullTranslatedAt": "2026-07-28T06:41:13.029Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-QcyQjtseLa6q8lQQBivnhz3F",
@@ -5586,7 +5766,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "cLPkwdbcOUbYnW26m9H_Kh31",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:02.648Z"
+      "fullTranslatedAt": "2026-07-28T06:23:02.648Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-0hxPNEkxXQWk9ltKotR8hJZA",
@@ -5961,7 +6142,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "_iaUppvKQfh8_olaYtxI5UgR",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:14.332Z"
+      "fullTranslatedAt": "2026-07-28T06:23:14.332Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-kJFEILZa6oMlxNQSBKu1YBSv",
@@ -6026,7 +6208,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "g1YaebsGNed-9iBPIjOddpxd",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:14.362Z"
+      "fullTranslatedAt": "2026-07-28T06:23:14.362Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-YiL36r1err4RIfnVT-RPwZXg",
@@ -6103,7 +6286,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "PMfZ0_yBV8qhPexLpYnwHtGu",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:15.711Z"
+      "fullTranslatedAt": "2026-07-28T06:23:15.711Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-FQUjtQyUAC9xORA62Cp6LDCp",
@@ -6180,7 +6364,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "3KpvITOZG56TZeWfLdXA0KM-",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:15.567Z"
+      "fullTranslatedAt": "2026-07-28T06:23:15.567Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-iDUZSk0yPaK0NmAzMp_9De0K",
@@ -6290,7 +6475,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "e8JcHcTBfOBWWYKYS5nvroV1",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:41:15.317Z"
+      "fullTranslatedAt": "2026-07-28T06:41:15.317Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-eCPBY_g8FU2RduFGRjyx87wQ",
@@ -6369,7 +6555,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "E9CWPef0dDpb2kJVSPAIIqLy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:17.168Z"
+      "fullTranslatedAt": "2026-07-28T06:23:17.168Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-zGn1d-4A8HJjoSJpWVh9eP4S",
@@ -6473,7 +6660,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "7ZaTuoTHoTfzNKzpCyPSraJq",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:18.344Z"
+      "fullTranslatedAt": "2026-07-28T06:23:18.344Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-p25KS-YrHxDo876HKoCZWBjA",
@@ -6556,7 +6744,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "ISV75d9SWXNdCCH3BPZWgzBd",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:18.339Z"
+      "fullTranslatedAt": "2026-07-28T06:23:18.339Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-K1yZYX67YKS0jiWIIv6LfRvV",
@@ -6629,7 +6818,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "rQlp0SH66vUwGdUtZHatugPk",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:39.826Z"
+      "fullTranslatedAt": "2026-07-28T22:24:39.826Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-uJkbl-p0cwuEpBXxuK7dlWQd",
@@ -6735,7 +6925,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "chNVycFQxPtPVp5oh8_Y8HKy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:19.528Z"
+      "fullTranslatedAt": "2026-07-28T06:23:19.528Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-NgWlUKS3I9acUddeiKtumf5T",
@@ -6814,7 +7005,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "chNVycFQxPtPVp5oh8_Y8HKy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:20.752Z"
+      "fullTranslatedAt": "2026-07-28T06:23:20.752Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-qbYT4qmyHzG2Sx1HmOxgiid8",
@@ -6894,7 +7086,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "8_IAVXukQIwqnIa1IJTqFV0w",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:21.001Z"
+      "fullTranslatedAt": "2026-07-28T06:23:21.001Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-75e2XYLVCDXjpUrYP3bBORiA",
@@ -6980,7 +7173,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "koU3oGAdCWKQFWKsKQJP_8oy",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:21.918Z"
+      "fullTranslatedAt": "2026-07-28T06:23:21.918Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct--wOEIVyZqeZY6lBLims3zDTY",
@@ -7174,7 +7368,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "IVWt6Yk21kq6BJigtiSjE5kh",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:23.162Z"
+      "fullTranslatedAt": "2026-07-28T06:23:23.162Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-jhfZlL_oh0G1qx_5uRkfRAHy",
@@ -7353,7 +7548,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "NJKtq8uWvR2rC4gS_OgXftKu",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:40.190Z"
+      "fullTranslatedAt": "2026-07-28T22:24:40.190Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-0WQJRUCzbVHAE9ydDtZSGAg5",
@@ -7424,7 +7620,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "MhZKTyrx2gdctddLp4zRuXt3",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:28.756Z"
+      "fullTranslatedAt": "2026-07-28T06:23:28.756Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-iK0Vtxfz65GQQo75RRCzzHiD",
@@ -7625,7 +7822,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "kSNMR5TgB4pdR7tc8PqawhgS",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:33.165Z"
+      "fullTranslatedAt": "2026-07-28T06:23:33.165Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-jJrHcqoEOy0rwePkTzY10nKa",
@@ -7743,7 +7941,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "Raohuk0LKq9U3agxqyd78g97",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:35.684Z"
+      "fullTranslatedAt": "2026-07-28T06:23:35.684Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-vOcQJSFLCykjG6CTIl4B8Qgo",
@@ -7818,7 +8017,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "yG5bf-DVGtSvBUssnBDfBkbF",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:34.698Z"
+      "fullTranslatedAt": "2026-07-28T06:23:34.698Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-AFcYvxUYj56ErBc0K233eHWk",
@@ -7986,7 +8186,8 @@
       "factExtractionModel": "gpt-5.4",
       "factExtractedAt": "2026-07-27T00:49:21.522Z",
       "entityNormalizationApplied": true,
-      "entityNormalizedAt": "2026-07-27T00:51:15.966Z"
+      "entityNormalizedAt": "2026-07-27T00:51:15.966Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-6PIZmVscjR_sHfIfwwWNlpa3",
@@ -8066,7 +8267,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "_nxSjvbax1gLyxqpgrCPHz0k",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:37.899Z"
+      "fullTranslatedAt": "2026-07-28T06:23:37.899Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-b3lEhEf3AcE-xMTcH85m6WOM",
@@ -8133,7 +8335,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "ptFINI1bou3NKHOpsF4lZAPV",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:39.018Z"
+      "fullTranslatedAt": "2026-07-28T06:23:39.018Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-_GkWLBiCNEFXsFIoZr6D3cSM",
@@ -8196,7 +8399,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "fT0DIU322V0x5dGZlV5BmC8p",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:40.044Z"
+      "fullTranslatedAt": "2026-07-28T06:23:40.044Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-EmaWGoeObSDEVMD9da-8OJZd",
@@ -8254,7 +8458,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "FuzZ7u0biOJ6ZhNRQePwqJE7",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:40.970Z"
+      "fullTranslatedAt": "2026-07-28T06:23:40.970Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-Ronw7Y2iRlDYMCNJnqsq6ezg",
@@ -8322,7 +8527,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "r3QwKnhpELytDJ_vWktrUy7y",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:41.943Z"
+      "fullTranslatedAt": "2026-07-28T06:23:41.943Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-QYh_uKznROcxAfp6qFDsg5QX",
@@ -8401,7 +8607,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "d--uIARm_jBpLfOhwGDmSxfU",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:43.036Z"
+      "fullTranslatedAt": "2026-07-28T06:23:43.036Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-CEogPQO7Lg8M_UDXOOH2ao0k",
@@ -8474,7 +8681,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "sWHbposMLG3co0oNp9jFLVel",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:44.182Z"
+      "fullTranslatedAt": "2026-07-28T06:23:44.182Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-FmlsmA5XLoJVXPONC6FgFMw5",
@@ -8550,7 +8758,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "r3w_PQjbGm_Iv7khS5Uk1ANe",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:46.446Z"
+      "fullTranslatedAt": "2026-07-28T06:23:46.446Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-5HYYHeCSN3iFBMfReeVZ5vEY",
@@ -8729,7 +8938,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "ZH5ruFLAFwI2R7rDxPPIXGcK",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:47.682Z"
+      "fullTranslatedAt": "2026-07-28T06:23:47.682Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-HimU2pv1tfB5-z_j3f5YG2wK",
@@ -8832,7 +9042,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "xH67ZsFgJ8hR9_Ej3BZMKslv",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:48.789Z"
+      "fullTranslatedAt": "2026-07-28T06:23:48.789Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-68BnfJR0IdixcPxT3dwP-Lrr",
@@ -8906,7 +9117,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "FGPJIpYb7bx5PjW8drA8iz3a",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:50.203Z"
+      "fullTranslatedAt": "2026-07-28T06:23:50.203Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-9G3yIuPFUKogno9QoJCg6gAK",
@@ -8977,7 +9189,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "dVDKYTgoc0_xuNHu5cF2eCDK",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:51.431Z"
+      "fullTranslatedAt": "2026-07-28T06:23:51.431Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-IdAMT9obCv9C22XVcHkk3SV7",
@@ -9058,7 +9271,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "dIFE220LeNUYG7wzhSVDFirs",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:23:52.050Z"
+      "fullTranslatedAt": "2026-07-28T06:23:52.050Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "direct-6DyaDG7lvJHQQWPpEOhfliZ5",
@@ -9730,7 +9944,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "-nEo1cmopVNycEQZcAVpkMZU",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:13.972Z"
+      "fullTranslatedAt": "2026-07-28T06:24:13.972Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-4vZ4hKHaFkhgimUKR_qxOJ4M",
@@ -9806,7 +10021,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "IEymlIO4KmJ3PQoV76n380Af",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:15.058Z"
+      "fullTranslatedAt": "2026-07-28T06:24:15.058Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-I0V99Nr-MGFhj_RLaWlnTla1",
@@ -9881,7 +10097,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "NELzjXTUcGgHLoStNDLXnRma",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:14.914Z"
+      "fullTranslatedAt": "2026-07-28T06:24:14.914Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-VjoGb090ylY9ETYcDaR4liw6",
@@ -9964,12 +10181,13 @@
       "fullTranslationModel": "gpt-5.4-mini",
       "fullTranslatedAt": "2026-07-28T06:24:17.991Z",
       "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1"
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-rkSCtmDQR-oPux1NOqJJJEwD",
       "title": "الجيش الأميركي يحدّد هوية جندي قُتل بتفجير في العراق - الشرق الأوسط",
-      "titleKo": "미군, 이라크 폭발로 사망한 병사의 신원 확인",
+      "titleKo": "미군, 이라크에서 폭발로 사망한 군인 신원 확인 - 알샤르크 알아우사트",
       "summaryKo": "미군이 이라크의 폭발로 사망한 병사의 신원을 확인했다.",
       "source": "الشرق الأوسط",
       "publishedAt": "2026-07-21T15:02:42.000Z",
@@ -10025,7 +10243,16 @@
       "eventTitleKo": "미 육군, 이라크에서 이란 드론 잔해를 폭파하던 중 사망한 군인의 신원 공개 - 알마스리 알욤",
       "eventSummaryKo": "미군이 이라크에서 이란제 드론 잔해를 폭파하던 중 숨진 군인의 신원을 공개했다.",
       "eventArticleCount": 3,
-      "eventRepresentative": false
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found",
+      "translatedTitle": "미군, 이라크에서 폭발로 사망한 군인 신원 확인 - 알샤르크 알아우사트",
+      "translatedBody": "미군은 이라크에서 폭발로 사망한 군인의 신원을 확인했다. 알샤르크 알아우사트",
+      "fullTranslation": "미군은 이라크에서 폭발로 사망한 군인의 신원을 확인했다. 알샤르크 알아우사트",
+      "translationPreview": "미군은 이라크에서 폭발로 사망한 군인의 신원을 확인했다. 알샤르크 알아우사트",
+      "fullTranslationVersion": "weekly-report-full-translation-v1",
+      "fullTranslationFingerprint": "Oh7eeryKT9Fz3ICI7l31OkyO",
+      "fullTranslationModel": "gpt-5.4-mini",
+      "fullTranslatedAt": "2026-07-28T23:05:31.809Z"
     },
     {
       "id": "rss-gSk9ensw2DP9ZgqCDRl7jdiR",
@@ -10114,7 +10341,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "yQr9BxcO7n7TVPE4TNG4KBg1",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:17.245Z"
+      "fullTranslatedAt": "2026-07-28T06:24:17.245Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-RyLES1C7TNbsEU53yh1ViXL-",
@@ -10210,7 +10438,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "v25b5lkfOOPrGUGxUDdhcMy2",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:18.938Z"
+      "fullTranslatedAt": "2026-07-28T06:24:18.938Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-cxGcWBtt3-KV2-je2N8JRhfm",
@@ -10291,7 +10520,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "cuH4LTvUcDN4JQABRZ5FEfn1",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:19.267Z"
+      "fullTranslatedAt": "2026-07-28T06:24:19.267Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-ol4hd45UF6QfBp-ts4Tq7CAw",
@@ -10362,7 +10592,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "p_zI8s9kxGkadZcF3s-dT469",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:22.519Z"
+      "fullTranslatedAt": "2026-07-28T06:24:22.519Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-DeNj-g7ECtLqDwBb8cufBVol",
@@ -10437,7 +10668,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "VNI-fmw59IIk0OhgLSg9PwCe",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:22.911Z"
+      "fullTranslatedAt": "2026-07-28T06:24:22.911Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-jAF04WNy0XxzVEN29ABOKGtS",
@@ -10512,7 +10744,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "eoCorSqqQ5vtQZdlxRuCKb_2",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:41:17.137Z"
+      "fullTranslatedAt": "2026-07-28T06:41:17.137Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-dDgUfTZmz9i4XQsP8RhPq55J",
@@ -10604,7 +10837,8 @@
       "fullTranslationVersion": "weekly-report-full-translation-v1",
       "fullTranslationFingerprint": "J8hktWO7vd5ltHISNL_uorUU",
       "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T06:24:25.746Z"
+      "fullTranslatedAt": "2026-07-28T06:24:25.746Z",
+      "linkRepairStatus": "publisher-url-not-found"
     },
     {
       "id": "rss-VyMNrfp8PdsUyK-FwxzW7Pm0",
@@ -10688,7 +10922,8 @@
       "fullTranslationModel": "gpt-5.4-mini",
       "fullTranslatedAt": "2026-07-28T06:24:27.669Z",
       "eventSources": [],
-      "eventRepresentativeId": "rss-VyMNrfp8PdsUyK-FwxzW7Pm0"
+      "eventRepresentativeId": "rss-VyMNrfp8PdsUyK-FwxzW7Pm0",
+      "linkRepairStatus": "publisher-url-not-found"
     }
   ],
   "debug": {
@@ -10733,21 +10968,21 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 12
+        "count": 11
       },
       {
         "query": "\"رئيس الوزراء\" \"توجيه\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 15
+        "count": 14
       },
       {
         "query": "\"رئيس الوزراء\" \"اجتماع\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 9
+        "count": 8
       },
       {
         "query": "\"المكتب الإعلامي لرئيس الوزراء\"",
@@ -10768,7 +11003,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 20
+        "count": 21
       },
       {
         "query": "\"مجلس النواب\" \"قانون\" \"العراق\"",
@@ -10782,14 +11017,14 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 10
+        "count": 11
       },
       {
         "query": "\"مجلس النواب\" \"استجواب\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 7
+        "count": 6
       },
       {
         "query": "\"مجلس النواب\" \"إعفاء\" \"العراق\"",
@@ -10838,7 +11073,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"الكتل السياسية\" \"الحكومة\" \"العراق\"",
@@ -10859,7 +11094,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 16
+        "count": 15
       },
       {
         "query": "\"هيئة النزاهة\" \"مسؤول\" \"العراق\"",
@@ -10915,7 +11150,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 11
+        "count": 12
       },
       {
         "query": "\"الهيئة الوطنية للاستثمار\" \"إعفاء\"",
@@ -11027,7 +11262,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 18
+        "count": 19
       },
       {
         "query": "\"مقتدى الصدر\" \"الحكومة\"",
@@ -11076,7 +11311,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 23
+        "count": 22
       },
       {
         "query": "\"العراق\" \"هجوم إرهابي\"",
@@ -11097,7 +11332,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 16
+        "count": 15
       },
       {
         "query": "\"العراق\" \"اغتيال\"",
@@ -11111,21 +11346,21 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 6
+        "count": 7
       },
       {
         "query": "\"العراق\" \"هجوم مسلح\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 13
+        "count": 11
       },
       {
         "query": "\"العراق\" \"صاروخ\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 5
+        "count": 3
       },
       {
         "query": "\"العراق\" \"طائرة مسيرة\"",
@@ -11293,7 +11528,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 3
+        "count": 2
       },
       {
         "query": "\"Iraq\" \"Coordination Framework meeting\"",
@@ -11356,7 +11591,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 8
+        "count": 7
       },
       {
         "query": "\"Iraq Foreign Ministry\" \"statement\"",
@@ -11377,7 +11612,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 14
+        "count": 13
       },
       {
         "query": "\"Baghdad\" \"terror attack\"",
@@ -11391,7 +11626,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"Iraq\" \"rocket attack\"",
@@ -11440,7 +11675,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 9
+        "count": 10
       },
       {
         "query": "\"Iraq\" \"airspace closure\"",
@@ -11683,8 +11918,9 @@
           },
           {
             "url": "https://www.faceiraq.org/",
-            "ok": false,
-            "error": "Timeout after 12000ms"
+            "type": "html",
+            "count": 10,
+            "ok": true
           },
           {
             "url": "https://www.faceiraq.org/news/security",
@@ -11909,9 +12145,8 @@
           },
           {
             "url": "https://www.iraqinews.com/iraq/",
-            "type": "html",
-            "count": 1,
-            "ok": true
+            "ok": false,
+            "error": "HTTP 403 Forbidden"
           },
           {
             "url": "https://www.iraqinews.com/business-iraqi-dinar/",
@@ -11920,9 +12155,8 @@
           },
           {
             "url": "https://www.iraqinews.com/features/",
-            "type": "html",
-            "count": 1,
-            "ok": true
+            "ok": false,
+            "error": "HTTP 403 Forbidden"
           },
           {
             "url": "https://www.iraqinews.com/",
@@ -12037,24 +12271,29 @@
       }
     ],
     "evidence": {
-      "fulltext": 39,
-      "rssDescription": 163,
+      "fulltext": 40,
+      "rssDescription": 161,
       "insufficient": 0,
       "aiEligible": 120
     },
     "archive": {
-      "previous": 113,
-      "carriedForward": 113
+      "previous": 110,
+      "carriedForward": 110
     },
-    "elapsedSeconds": 27
+    "elapsedSeconds": 32
   },
   "regionalIraqExposure": {
-    "inputRegional": 81,
+    "inputRegional": 80,
     "keptRegional": 24,
-    "removedRegional": 57,
+    "removedRegional": 56,
     "removed": [
       {
-        "id": "rss-txDtcqNIZzdCX41mTZQ1jy9P",
+        "id": "rss-E8MHJZ9nvFcQewdtS54aVnPy",
+        "title": "Yemen’s Houthis say targeted Saudi tanker in Red Sea - Free Malaysia Today",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-xRakfPPRVOSeHzWqxhR2vCfo",
         "title": "Saudi Arabia vows firm response to attacks on oil facilities and shipping - Gulf News",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -12107,11 +12346,6 @@
         "id": "rss-KOpH8sWHQ4fDdZPRyj8Jk1h2",
         "title": "Syria focuses on energy deals, works to revive infrastructure and institutions - Foundation for Defense of Democracies",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-alJTKsE_hmmjd7f3iyCh4AoA",
-        "title": "Drones target Iraqi city where US forces are based as US-Iran fighting escalates - BreakingNews.ie",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
@@ -12176,11 +12410,6 @@
       {
         "id": "rss-hRdlsP14ywkXkwBEvW3WSb9N",
         "title": "U.S. Missile Attack Near Shalamcheh Border Crossing in Iran Reports No Casualties - Sahi",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-Lazntp0wRwYQ7YiPQNw7yxh2",
-        "title": "U.S., Pakistan condemn Houthi Red Sea threats to shipping and Saudi Arabia - The Tribune-Democrat",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -12299,6 +12528,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
+        "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
         "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -12319,11 +12553,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-BQn0u3DyfU8xMMwCJ1_b0zLe",
-        "title": "Iraq prepares to reopen Syrian land route for oil exports to bypass Gulf - Anadolu Ajansı",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-gJDr7w16kI7vpeYFGUI4yD2e",
         "title": "Iraq’s oil exports to South Korea fall by 80% - Iraqi News",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -12339,20 +12568,25 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T22:37:46.713Z"
+    "completedAt": "2026-07-28T23:04:56.657Z"
   },
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
     "requestedModel": "gpt-5.4",
     "model": "gpt-5.4",
-    "candidates": 132,
-    "reused": 112,
-    "requested": 20,
-    "extracted": 20,
+    "candidates": 131,
+    "reused": 110,
+    "requested": 21,
+    "extracted": 21,
     "failed": 0,
-    "removedBeforeAi": 13,
+    "removedBeforeAi": 14,
     "overflow": 0,
     "removed": [
+      {
+        "id": "direct-u4WOYoaGnThRQY8m13SPslRi",
+        "title": "الجيش الأمريكي يعلن اعتراض صواريخ أطلقتها إيران",
+        "reason": "원문에 이라크·BNCP 직접 연계 없음"
+      },
       {
         "id": "direct-8fu6ZGS68ATJcqkw-7DjiTs7",
         "title": "من بين آلاف.. لماذا فضحت صورة هذا الرضيع إسرائيل عالميا؟",
@@ -12419,33 +12653,33 @@
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       }
     ],
-    "completedAt": "2026-07-28T22:38:09.672Z"
+    "completedAt": "2026-07-28T23:05:20.951Z"
   },
   "entityNormalization": {
-    "correctedCount": 89,
-    "completedAt": "2026-07-28T22:38:09.961Z"
+    "correctedCount": 88,
+    "completedAt": "2026-07-28T23:05:21.035Z"
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-28T22:38:10.142Z",
+    "appliedAt": "2026-07-28T23:05:21.263Z",
     "termCount": 29,
-    "changedCount": 37
+    "changedCount": 32
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:38:10.197Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:05:21.331Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T22:38:10.251Z",
-  "untranslatedFilteredCount": 3,
-  "untranslatedFilteredAt": "2026-07-28T22:38:10.342Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T23:05:21.399Z",
+  "untranslatedFilteredCount": 0,
+  "untranslatedFilteredAt": "2026-07-28T23:05:21.513Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T22:38:10.401Z",
+  "datelineLocationCorrectedAt": "2026-07-28T23:05:21.586Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T22:38:10.467Z",
+  "aiHallucinationFilteredAt": "2026-07-28T23:05:21.665Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T22:38:10.522Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T23:05:21.732Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T22:38:10.591Z",
-    "removedCount": 22,
+    "appliedAt": "2026-07-28T23:05:21.812Z",
+    "removedCount": 19,
     "correctedCount": 2,
     "removed": [
       {
@@ -12461,26 +12695,8 @@
         "reason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음."
       },
       {
-        "id": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
-        "title": "이란, 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하다 - The Jerusalem Post",
-        "category3": "exclude",
-        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
-      },
-      {
-        "id": "rss-mJKBPJiv_POK9OQsQcHiWRqe",
-        "title": "정보 당국, Anbar에서 IS의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포 - 이 날",
-        "category3": "exclude",
-        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
-      },
-      {
-        "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
-        "title": "이라크, Anbar에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-مشهد 채널 및 플랫폼 - 오늘의 세계 뉴스",
-        "category3": "exclude",
-        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
-      },
-      {
         "id": "rss-CWsFKJB-wpfhAMpdO7j12Ysw",
-        "title": "레바논, 호르무즈 해협 우회를 위한 이라크산 원유 운송 경로 제안",
+        "title": "레바논, 호르무즈 해협 우회를 위해 이라크에 원유 운송 경로 제안",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12492,7 +12708,7 @@
       },
       {
         "id": "rss-FiE6bMC75C4fWsqIEwfEGLB0",
-        "title": "이라크, 호르무즈 해협 의존을 줄이기 위해 튀르키예·시리아 파이프라인 검토",
+        "title": "이라크, 호르무즈 해협 의존 완화를 위해 튀르키예·시리아 파이프라인 검토",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12504,13 +12720,13 @@
       },
       {
         "id": "rss-e4XU__UNWt6FccUJxYL8pBKE",
-        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 통해 이라크 석유를 운송한다",
+        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 거쳐 이라크 석유를 운송한다",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-dlNwKO39ujSvak0_AiPN-Tcb",
-        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 통해 이라크의 석유를 운송한다",
+        "title": "호르무즈 여파의 징후로 수천 대의 트럭이 시리아를 거쳐 이라크 석유를 운송",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12522,7 +12738,7 @@
       },
       {
         "id": "rss-JwpbF__DhmDgmt65ab-x-6RA",
-        "title": "미국 석유 기업들, 대체 운송로 개발 위해 이라크와 계약 체결",
+        "title": "미국 석유회사들, 대체 운송로 개발 위해 이라크와 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12534,7 +12750,7 @@
       },
       {
         "id": "rss-biLB2LUcp0cdTfSWyZF6yBVu",
-        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대체 경로 조성을 검토할 예정 - WSJ",
+        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대체 경로 조성 검토 - WSJ",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12546,7 +12762,7 @@
       },
       {
         "id": "rss-g1gbX16_99tC9TFh0Hg0bkMA",
-        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니야스 송유관 재건 추진",
+        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니야스 파이프라인 재건 추진",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12558,51 +12774,51 @@
       },
       {
         "id": "rss-9iInuZYHIuNor1pKKIc0Ak_p",
-        "title": "EU 항공안전기구, 항공사들에 이란·이라크·레바논 영공 회피 권고",
+        "title": "EU 항공 당국, 항공사들에 이란·이라크·레바논 영공 회피 권고",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-7jZ5-TM3tPitYtS_TmuFBdHc",
-        "title": "EU, 지역 긴장 속 이란·이라크·레바논 영공 회피 권고",
+        "title": "EU, 지역 긴장 고조 속 이란·이라크·레바논 영공 회피 권고",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-aIicXailZ_0ek1uuSpVn00Ko",
-        "title": "이라크는 새로운 해상 함대로 호르무즈 딜레마를 헤쳐 나갈 수 있을까?",
+        "title": "이라크는 새 해상 함대로 호르무즈 딜레마를 헤쳐 나갈 수 있을까?",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-BtEej1-vPqPkwh9uUBu2gGJS",
-        "title": "이라크의 발이 묶였던 석유가 마침내 호르무즈 해협을 빠져나오다",
+        "title": "이라크의 발이 묶였던 석유가 마침내 호르무즈 해협을 빠져나가다",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       }
     ]
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T22:38:10.639Z",
+    "appliedAt": "2026-07-28T23:05:21.871Z",
     "removedCount": 0,
     "removed": []
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T22:38:10.692Z",
-  "eventCount": 67,
-  "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T22:38:11.129Z",
+  "duplicateCollapsedAt": "2026-07-28T23:05:21.937Z",
+  "eventCount": 68,
+  "eventDuplicateArticleCount": 44,
+  "eventGroupedAt": "2026-07-28T23:05:22.513Z",
   "fullTranslation": {
     "version": "weekly-report-full-translation-v1",
-    "processed": 110,
-    "generatedAt": "2026-07-28T22:38:14.146Z",
+    "processed": 112,
+    "generatedAt": "2026-07-28T23:05:31.809Z",
     "model": "gpt-5.4-mini"
   },
   "domesticMedia": {
-    "count": 46,
-    "rawCount": 69,
+    "count": 45,
+    "rawCount": 68,
     "fullTextCount": 0,
-    "fullTextFailedCount": 69,
+    "fullTextFailedCount": 68,
     "queries": [
       "비스마야",
       "한화 이라크",
@@ -12610,14 +12826,14 @@
       "한화 김동관",
       "한화 김동선"
     ],
-    "generatedAt": "2026-07-28T22:38:18.591Z",
+    "generatedAt": "2026-07-28T23:05:41.715Z",
     "aiUsed": false
   },
   "domesticPreviewNormalization": {
-    "updated": 46,
-    "resolved": 46,
+    "updated": 45,
+    "resolved": 44,
     "usefulCount": 1,
-    "failed": 0,
-    "generatedAt": "2026-07-28T22:38:23.407Z"
+    "failed": 1,
+    "generatedAt": "2026-07-28T23:05:54.290Z"
   }
 }
