@@ -1,15 +1,15 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-28T22:23:21.447Z",
+  "generatedAt": "2026-07-28T22:37:46.624Z",
   "lookbackDays": 30,
-  "count": 159,
+  "count": 156,
   "cacheHits": 0,
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "counts": {
-    "total": 113,
+    "total": 110,
     "politics": 7,
-    "terror_security": 99,
+    "terror_security": 96,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
@@ -46,30 +46,6 @@
         }
       ],
       "relatedNewsCount": 1,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
-    },
-    {
-      "id": "domestic-XR07iV8VXSQFEPfEqEpX5S5B",
-      "title": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\"",
-      "titleKo": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\"",
-      "source": "연합뉴스",
-      "publishedAt": "2026-07-28T20:12:55.000Z",
-      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
-      "description": "사우디 \"이라크발 드론 이틀째 요격…동부 석유 시설 노려\" 연합뉴스",
-      "fullText": "",
-      "fullTextAvailable": false,
-      "fullTextChars": 0,
-      "query": "이라크",
-      "queryGroup": "korean_domestic_media",
-      "collectionLane": "korean_domestic_media",
-      "category3": "domestic_media",
-      "domesticMedia": true,
-      "importanceScore": 70,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
-      "relatedNews": [],
-      "relatedNewsCount": 0,
       "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
       "previewAvailable": false
     },
@@ -372,6 +348,30 @@
       "previewAvailable": false
     },
     {
+      "id": "domestic-oFawLZoQxhlA7P3uBzBHr0IW",
+      "title": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
+      "titleKo": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
+      "source": "뉴스1",
+      "publishedAt": "2026-07-27T15:25:45.000Z",
+      "url": "https://lh3.googleusercontent.com/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=w16",
+      "description": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세 뉴스1",
+      "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
+      "query": "이라크",
+      "queryGroup": "korean_domestic_media",
+      "collectionLane": "korean_domestic_media",
+      "category3": "domestic_media",
+      "domesticMedia": true,
+      "importanceScore": 70,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
+      "relatedNews": [],
+      "relatedNewsCount": 0,
+      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
+      "previewAvailable": false
+    },
+    {
       "id": "domestic-kVRYCO4QqPnI1UY8gnUwXjqT",
       "title": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
       "titleKo": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
@@ -623,15 +623,6 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [
         {
-          "title": "[김동선의 뉴한화] 부동산 쇼핑에 명품관 재건축까지…한화갤러리아 재무부담 '촉각'",
-          "source": "딜사이트",
-          "publishedAt": "2026-07-23T22:00:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5KNFlCbkV3WGxnOWk1OVlKOThSWHlCMXBCLVNTNXV2ekFDTk96Vy1RS2tQUEQzdGxkVzhNWXNLNUtNMmgwQ2FOMDBkdDI4bG8?oc=5&hl=ko&gl=KR&ceid=KR:ko",
-          "description": "[김동선의 뉴한화] 부동산 쇼핑에 명품관 재건축까지…한화갤러리아 재무부담 '촉각' 딜사이트",
-          "fullText": "",
-          "fullTextAvailable": false
-        },
-        {
           "title": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 : 네이버 블로그",
           "source": "Naver Blog",
           "publishedAt": "2026-07-23T08:09:42.000Z",
@@ -641,7 +632,7 @@
           "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 2,
+      "relatedNewsCount": 1,
       "previewText": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 : 네이버 블로그 Naver Blog",
       "previewAvailable": true
     },
@@ -795,7 +786,7 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-rUClrtgeKnSk1pfibVjLfKgR",
+      "id": "domestic-k3AR_CMdeOf_saXkhdyARrF9",
       "title": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "titleKo": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "source": "v.daum.net",
@@ -1427,7 +1418,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "다시 한 번.. 사우디, 이라크 영토에서 출발한 무인기 대응했다고 발표",
       "translatedBody": "“친이란 민병대”가 다시 한 번… 사우디, 이라크 영토에서 출발한 무인기 대응했다고 발표 사우디아라비아 국방부는 오늘, 방공망이 지난 몇 시간 동안 동부 지역의 석유 시설을 겨냥하려 한 여러 대의 무인기를 요격해 파괴했다고 밝혔으며, 이번 공격은 이라크 영토에서 출발해 “이란에 소속된 테러 민병대”가 수행했다고 말했다. 964 네트워크가 확인한 성명에서 사우디 국방부 대변인인 타르키 알말키 육군 소장은 “방공망이 동부 지역의 석유 시설을 겨냥하려 한 여러 대의 무인기를 요격하고 파괴했다”고 밝혔다. 알말키는 “이러한 테러 시도는 다시 한 번 이라크 영토에서 출발했으며 이란에 소속된 테러 민병대가 실행했다”고 덧붙이며, “왕국은 자국과 자산을 방어할 본연의 권리를 갖고 있다”고 강조했고, “적절한 시점과 장소에서 대응할 권리를 보유하고 있다”고 말했다. 사우디 국방부는 앞서 어제 월요일(2026년 7월 27일), 동부와 리야드 두 지역의 석유 시설을 겨냥하려 했다고 밝힌 여러 대의 무인기를 요격·파괴했다고 발표했으며, 무인기들이 이라크 영토에서 출발해 “이란에 소속된 테러 민병대”가 실행했다고 확인했다. 또한 왕국은 적절한 시점과 장소에서 대응할 권리를 보유하고 있다고 강조했다. 사우디 외교부도 월요일(2026년 7월 27일) 사우디 내 지역을 겨냥한 무인기 공격을 규탄하며, 그 배후에 “이라크 내 이란계 민병대”가 있다고 말했고, “침략”의 원천에 대응할 권리를 보유하고 있음을 확인했으며, 이라크 정부에 자국 영토가 자신들을 향한 공격을 개시하는 발판으로 이용되지 않도록 하는 조치를 취할 것을 촉구했다. 또한 총사령관 알리 팔리흐 알자이디는 오늘 월요일(2026년 7월 27일), 사우디 국방부 성명에 나온, 이라크 영토에서 출발한 무인기가 المملكة를 겨냥했다는 내용과 관련해 조사하라는 지시를 관련 보안 당국에 내렸다. 한편 이라크 이슬람 저항군은 오늘 월요일(2026년 7월 27일), 사우디가 المملكة를 겨냥한 무인기들이 자국 영토에서 출발했다고 العراق을 비난한 데 대해, 이러한 비난은 المملكة의 깊숙한 곳까지 타격을 준 예멘의 고통스러운 타격에 대응하지 못하는 무능을 정당화하려는 시도일 뿐이며, 다가올 예멘의 대응 성격을 두려워한 것이라고 밝혔다. 이어 어떤 어리석은 사우디의 행동도 가혹한 대응에 직면할 것이며, 그들은 후회의 손가락을 물게 될 것이라고 경고했다고 성명은 전했다. “항공 사진 또는 무인기 잔해”.. العراق, 사우디에 공격 증거 요구 이라크 저항군, 사우디 폭격과 거리를 두고 المملكة에 예멘 봉쇄 해제를 촉구 UAE, 사우디와 연대: 무인기들은 이라크 영토에서 출발했다 무스타파 알카지미, 무인기에 불만: 왜 사우디를 타격했나? 알자이디, 사우디 폭격 조사 지시: 형제와 친구들을 겨냥한 공격을 용납하지 않겠다 무인기 공격 이후.. 리야드, بغداد에 자국 영토에서 ‘침략’이 출발하지 못하도록 하는 조치 요구 분노한 사우디 성명: العراق에서 온 무인기를 요격했으며, 이란에 소속된 민병대가 이를 발사했다",
@@ -1520,13 +1511,13 @@
       "factExtractedAt": "2026-07-28T22:23:29.495Z",
       "entityNormalizationApplied": true,
       "entityNormalizedAt": "2026-07-28T22:24:13.126Z",
-      "eventId": "event-2026-07-28-yygppx",
-      "eventTitleKo": "사우디, 이라크발 드론의 새로운 공격 저지 발표",
-      "eventSummaryKo": "사우디 국방부는 최근 몇 시간 동안 동부 지역의 석유 시설을 겨냥하려 한 드론들을 자국 방어체계가 파괴했다고 밝혔다. 사우디 국방부는 이번 시도가 다시 이라크 영토에서 출발했고 이란 연계 민병대가 수행했다고 밝혔다. 이라크는 자국 영토에서 출발한 드론들이 사우디의 석유 시설을 겨냥한 사건에 대해 월요일 저녁 조사 개시를 발표했다.",
-      "eventArticleCount": 1,
+      "eventId": "event-2026-07-27-1txbz9y",
+      "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
+      "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
+      "eventArticleCount": 9,
       "eventSources": [],
       "eventRepresentativeId": "direct-N81Bx4xnbutWcxiV8OtWdx0M",
-      "eventRepresentative": true,
+      "eventRepresentative": false,
       "translatedTitle": "사우디아라비아, 이라크발 드론의 새로운 공격 차단 발표",
       "translatedBody": "사우디아라비아 국방부 휘장(알자지라) 2026년 7월 28일 게시 2026년 7월 28일 | 최신 업데이트: 2026년 7월 29일 00:08(메카 시간) 최신 업데이트: 2026년 7월 29일 00:08(메카 시간)\n\n사우디아라비아 국방부는 자국 방공망이 지난 몇 시간 동안 동부 지역의 석유 시설을 겨냥하려 했던 드론들을 격추했다고 밝혔다.\n\n국방부는 오늘 화요일 저녁 성명에서 “테러 시도는 다시 이라크 영토에서 출발했으며, 이란에 속한 민병대가 실행했다”고 말했다.\n\n성명은 왕국이 자위할 권리가 있으며, 적절한 시기와 장소에서 대응할 권리를 보유하고 있음을 강조했다.\n\n한편 사우디 외교부는 이라크 정부가 자국 영토가 공격의 출발점으로 사용되는 것을 막기 위해 필요한 모든 조치를 취해야 한다고 강조했다.\n\n외교부는 “이라크 내 이란에 속한 민병대가 동부 지역의 석유 시설을 향해 드론을 계속 발사하고 있다”고 규탄하며, 공격의 근원에 대응하기 위해 필요한 조치를 취할 법적 권리를 보유하고 있다고 확인했다.\n\n앞서 사우디 국방부는 지난 월요일, 이라크에서 날아온 드론들을 요격했으며 이 드론들이 동부 및 리야드 지역의 석유 시설을 겨냥하려 했다고 발표했다.\n\n국방부 대변인 타르키 알말리키 소장은 이 시도들이 이라크 영토에서 출발했으며, “이란에 속한 테러 민병대”가 실행했다고 확인했다.\n\n사건 이후 사우디 외교부는 바그다드 정부에 이라크 영토가 왕국에 대한 어떠한 공격에도 사용되지 않도록 막아 달라고 요구했다.\n\n한편 이라크는 월요일 저녁, 자국 영토에서 출발한 드론들이 사우디아라비아의 석유 시설을 겨냥했다는 조사 개시를 발표했으며, 공격들에 대한 걸프 국가들의 규탄 속에서 이를 지역 안보에 대한 심각한 격화이자 위협으로 간주했다.",
       "fullTranslation": "사우디아라비아 국방부 휘장(알자지라) 2026년 7월 28일 게시 2026년 7월 28일 | 최신 업데이트: 2026년 7월 29일 00:08(메카 시간) 최신 업데이트: 2026년 7월 29일 00:08(메카 시간)\n\n사우디아라비아 국방부는 자국 방공망이 지난 몇 시간 동안 동부 지역의 석유 시설을 겨냥하려 했던 드론들을 격추했다고 밝혔다.\n\n국방부는 오늘 화요일 저녁 성명에서 “테러 시도는 다시 이라크 영토에서 출발했으며, 이란에 속한 민병대가 실행했다”고 말했다.\n\n성명은 왕국이 자위할 권리가 있으며, 적절한 시기와 장소에서 대응할 권리를 보유하고 있음을 강조했다.\n\n한편 사우디 외교부는 이라크 정부가 자국 영토가 공격의 출발점으로 사용되는 것을 막기 위해 필요한 모든 조치를 취해야 한다고 강조했다.\n\n외교부는 “이라크 내 이란에 속한 민병대가 동부 지역의 석유 시설을 향해 드론을 계속 발사하고 있다”고 규탄하며, 공격의 근원에 대응하기 위해 필요한 조치를 취할 법적 권리를 보유하고 있다고 확인했다.\n\n앞서 사우디 국방부는 지난 월요일, 이라크에서 날아온 드론들을 요격했으며 이 드론들이 동부 및 리야드 지역의 석유 시설을 겨냥하려 했다고 발표했다.\n\n국방부 대변인 타르키 알말리키 소장은 이 시도들이 이라크 영토에서 출발했으며, “이란에 속한 테러 민병대”가 실행했다고 확인했다.\n\n사건 이후 사우디 외교부는 바그다드 정부에 이라크 영토가 왕국에 대한 어떠한 공격에도 사용되지 않도록 막아 달라고 요구했다.\n\n한편 이라크는 월요일 저녁, 자국 영토에서 출발한 드론들이 사우디아라비아의 석유 시설을 겨냥했다는 조사 개시를 발표했으며, 공격들에 대한 걸프 국가들의 규탄 속에서 이를 지역 안보에 대한 심각한 격화이자 위협으로 간주했다.",
@@ -1606,8 +1597,8 @@
       "factExtractionFingerprint": "i43TzXlczGGLRkBY5Sr-qSkd",
       "factExtractionModel": "gpt-5.4",
       "factExtractedAt": "2026-07-28T22:23:29.632Z",
-      "eventId": "event-2026-07-28-13547qd",
-      "eventTitleKo": "트럼프의 서사를 흔든 전사자들.. 펜타곤 기록은 무엇을 숨기고 있나?",
+      "eventId": "event-2026-07-28-rdazce",
+      "eventTitleKo": "트럼프의 서사를 흔든 사망자들.. 국방부 기록은 무엇을 숨기고 있나?",
       "eventSummaryKo": "워싱턴포스트에 따르면 펜타곤은 지난주 전자 데이터베이스에서 최근 군 사망 4건을 삭제했다. 국방부는 이름이 사라진 이유를 데이터 처리의 일시적 오류 때문이라고 설명했다.",
       "eventArticleCount": 1,
       "eventSources": [],
@@ -1643,7 +1634,7 @@
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
       "sourceEvidenceChars": 3447,
-      "titleKo": "곧 터키산 무기.. 에르도안이 자이디에게 물었다: 100만 배럴 맞지? 자이디가 우리 장관을 폭로했다: 서명 안 했지?",
+      "titleKo": "곧 터키산 무기.. 에르도안이 Al-Zaidi 총리에게 물었다: 100만 배럴 맞지? Al-Zaidi 총리가 우리 장관을 폭로했다: 서명 안 했지?",
       "summaryKo": "에르도안은 터키가 이라크에 필요한 방위산업 제품을 제공할 준비가 되어 있다고 밝혔다. 에르도안은 이라크와 튀르키예의 원유 협정이 종료됐으며 양측에 이익이 되는 포괄적 에너지 협력 협정 체결을 목표로 한다고 말했다. Al-Zaidi 총리는 그들이 100만 배럴을 제공할 것이라고 말했다.",
       "reportBullet": "터키 무기 지원 임박… 에르도안, Al-Zaidi 총리에게 \"100만 배럴 맞나?\" Al-Zaidi 총리 \"왜 협정에 서명하지 않았나?\"",
       "reportSubBullets": [],
@@ -1695,8 +1686,8 @@
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1",
       "factCorrectionApplied": false,
-      "eventId": "event-2026-07-28-1kwzs48",
-      "eventTitleKo": "터키 무기 지원 임박… 에르도안, Al-Zaidi 총리에게 \"100만 배럴 맞나?\" Al-Zaidi 총리 \"왜 협정에 서명하지 않았나?\"",
+      "eventId": "event-2026-07-28-3zxo0c",
+      "eventTitleKo": "곧 터키산 무기.. 에르도안이 Al-Zaidi 총리에게 물었다: 100만 배럴 맞지? Al-Zaidi 총리가 우리 장관을 폭로했다: 서명 안 했지?",
       "eventSummaryKo": "에르도안은 터키가 이라크에 필요한 방위산업 제품을 제공할 준비가 되어 있다고 밝혔다. 에르도안은 이라크와 튀르키예의 원유 협정이 종료됐으며 양측에 이익이 되는 포괄적 에너지 협력 협정 체결을 목표로 한다고 말했다. Al-Zaidi 총리는 그들이 100만 배럴을 제공할 것이라고 말했다.",
       "eventArticleCount": 1,
       "eventSources": [],
@@ -1827,8 +1818,8 @@
       "factExtractionFingerprint": "KV0lwc6-9fBV7T7lf3SdhRsU",
       "factExtractionModel": "gpt-5.4",
       "factExtractedAt": "2026-07-28T22:23:59.686Z",
-      "eventId": "event-2026-07-28-edp7pa",
-      "eventTitleKo": "침해·암살·납치… 보고서, 이라크의 표현의 자유 악화를 추적",
+      "eventId": "event-2026-07-28-1nalpor",
+      "eventTitleKo": "침해, 암살, 납치… 보고서가 이라크에서의 표현의 자유 악화를 포착하다 - ANF | 기사",
       "eventSummaryKo": "한 보고서는 이라크에서 표현의 자유가 악화하고 있다고 추적했다. 원문은 침해, 암살, 납치를 언급한다.",
       "eventArticleCount": 1,
       "eventSources": [],
@@ -1907,88 +1898,9 @@
       "eventRepresentative": false
     },
     {
-      "id": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
-      "title": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq - The Jerusalem Post",
-      "titleKo": "이란, 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하다 - The Jerusalem Post",
-      "summaryKo": "이란이 이라크 북부의 쿠르드 반대단체를 겨냥한 드론 공격을 확대했다.",
-      "source": "The Jerusalem Post",
-      "publishedAt": "2026-07-28T09:52:36.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01TElXVUY3VHNfUndXZjNBU3V6UVNZUWI4czd4SDRqS3UybXVUaWp3OFJtNVFza3pMUk9zZERJMEloSjFGOEVzR3RfbHlwbTVzdHM4ZjlXa0ZVdTFjQ3FjVDh6UDVBWGtobVE?oc=5",
-      "query": "\"Iraq\" \"drone attack\"",
-      "queryGroup": "english_iraq_politics_security",
-      "collectionLane": "iraq_politics_security",
-      "forcedCategory3": "",
-      "description": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq The Jerusalem Post",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 82,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 100,
-      "reportBullet": "이란, 이라크 북부의 쿠르드 반대단체를 겨냥한 드론 공격 확대",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이란",
-        "쿠르드 반대단체"
-      ],
-      "location": "이라크 북부",
-      "securityEventType": "other",
-      "securityEventCount": 1,
-      "sourceReliability": "RSS 제목·설명 기반",
-      "extractedFacts": [
-        {
-          "sentenceKo": "이란이 이라크 북부의 쿠르드 반대단체를 겨냥한 드론 공격을 확대했다.",
-          "evidenceQuote": "Iran escalates drone attacks targeting Kurdish opposition groups in northern Iraq"
-        }
-      ],
-      "extractedActors": [
-        {
-          "nameKo": "이란",
-          "roleKo": "",
-          "evidenceQuote": "Iran escalates drone attacks"
-        },
-        {
-          "nameKo": "쿠르드 반대단체",
-          "roleKo": "",
-          "evidenceQuote": "targeting Kurdish opposition groups"
-        }
-      ],
-      "articleStructure": "single_event",
-      "selected": false,
-      "translationFailed": false,
-      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionFingerprint": "XVum31uv9J-OU9Lo7Hjj4IQ2",
-      "factExtractionModel": "gpt-5.4",
-      "factExtractedAt": "2026-07-28T22:24:01.251Z",
-      "entityNormalizationApplied": true,
-      "entityNormalizedAt": "2026-07-28T22:24:13.129Z",
-      "eventId": "event-2026-07-28-16rt672",
-      "eventTitleKo": "이란, 이라크 북부의 쿠르드 반대단체를 겨냥한 드론 공격 확대",
-      "eventSummaryKo": "이란이 이라크 북부의 쿠르드 반대단체를 겨냥한 드론 공격을 확대했다.",
-      "eventArticleCount": 1,
-      "eventSources": [],
-      "eventRepresentativeId": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
-      "eventRepresentative": true,
-      "translatedTitle": "이란, 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하다 - The Jerusalem Post",
-      "translatedBody": "이란은 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하고 있다 The Jerusalem Post",
-      "fullTranslation": "이란은 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하고 있다 The Jerusalem Post",
-      "translationPreview": "이란은 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하고 있다 The Jerusalem Post",
-      "fullTranslationVersion": "weekly-report-full-translation-v1",
-      "fullTranslationFingerprint": "XVum31uv9J-OU9Lo7Hjj4IQ2",
-      "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:24.566Z"
-    },
-    {
       "id": "rss-35O8HXgX-1Syc4zBVECjrAra",
       "title": "الإطاحة بـ\"القائد الأمني لداعش\" في قضاء راوة غرب الأنبار - Al Daee News",
-      "titleKo": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 - Al Daee News",
+      "titleKo": "Anbar 서부 라와 지구에서 “IS의 보안 지휘관” 체포 - Al Daee News",
       "summaryKo": "Anbar 서부 라와 지구에서 \"IS의 안보 책임자\"가 체포됐다.",
       "source": "Al Daee News",
       "publishedAt": "2026-07-28T09:41:16.000Z",
@@ -2047,7 +1959,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false,
       "translatedTitle": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 - Al Daee News",
       "translatedBody": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 Al Daee News",
@@ -2079,7 +1991,7 @@
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
       "sourceEvidenceChars": 1712,
-      "titleKo": "드론들이 아르빌을 겨냥하고 동맹군이 일부를 요격",
+      "titleKo": "드론들이 Erbil을 겨냥하고 동맹군이 일부를 요격",
       "summaryKo": "드론들이 28일 새벽 이라크 북부 쿠르드자치정부 수도 Erbil을 공격했다. 국제연합군 항공기는 미국 영사관 본부를 향하던 드론들을 요격했다. 드론 2대가 클리판 지역의 이란 정부 반대 정당 코말라 당 본부를 공격해 물적 피해를 냈다.",
       "reportBullet": "드론이 Erbil을 겨냥, 국제연합군이 일부 요격",
       "reportSubBullets": [],
@@ -2136,8 +2048,8 @@
       "entityNormalizedAt": "2026-07-28T22:24:13.129Z",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "eventId": "event-2026-07-28-1cmbr3r",
-      "eventTitleKo": "드론이 Erbil을 겨냥, 국제연합군이 일부 요격",
+      "eventId": "event-2026-07-28-1bmn4t5",
+      "eventTitleKo": "드론들이 Erbil을 겨냥하고 동맹군이 일부를 요격",
       "eventSummaryKo": "드론들이 28일 새벽 이라크 북부 쿠르드자치정부 수도 Erbil을 공격했다. 국제연합군 항공기는 미국 영사관 본부를 향하던 드론들을 요격했다. 드론 2대가 클리판 지역의 이란 정부 반대 정당 코말라 당 본부를 공격해 물적 피해를 냈다.",
       "eventArticleCount": 1,
       "eventSources": [],
@@ -2155,7 +2067,7 @@
     {
       "id": "rss-wneBFYF5nMCDlCPccoFBCgvq",
       "title": "Baghdad to investigate Saudi Arabia's claims drone attack launched from Iraq - thenationalnews.com",
-      "titleKo": "바그다드, 사우디아라비아의 이라크발 드론 공격 주장 조사 예정 - thenationalnews.com",
+      "titleKo": "Baghdad, 사우디아라비아의 이라크발 드론 공격 주장 조사 예정 - thenationalnews.com",
       "summaryKo": "Baghdad는 이라크에서 드론 공격이 발사됐다는 사우디아라비아의 주장을 조사할 예정이다.",
       "source": "thenationalnews.com",
       "publishedAt": "2026-07-28T09:19:31.000Z",
@@ -2378,14 +2290,15 @@
       "aiCacheHit": false,
       "sourceEvidenceLevel": "fulltext",
       "sourceEvidenceChars": 9999,
-      "titleKo": "워싱턴과 테헤란 사이의 줄다리기에서의 이라크.. 이란의 영향력은 끝났는가?",
-      "summaryKo": "이야드 알아나바르의 연구는 Al-Zaidi 총리가 미국과 이란 사이에서 이라크의 관계 균형을 맞추려 한다고 다뤘다. 이 연구는 미국의 2003년 이후 불분명한 구상이 이란 영향력 확대의 길을 열었다고 봤다. 이 연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
-      "reportBullet": "워싱턴과 테헤란의 줄다리기 속 이라크… 이란의 영향력은 끝났나?",
+      "titleKo": "워싱턴과 테헤란의 줄다리기 한복판의 이라크… 이란의 영향력은 끝났나?",
+      "summaryKo": "이야드 알아ნ바르의 연구는 Al-Zaidi 총리가 미국과 이란 사이에서 이라크의 관계 균형을 시도한다고 다뤘다. 연구는 2020년 초 카셈 솔레이마니와 아부 마흐디 알무한디스 피살 이후 이란의 이라크 직접 개입 일부가 위축되기 시작했다고 봤다. 연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
+      "reportBullet": "워싱턴과 테헤란의 줄다리기 한복판의 이라크… 이란의 영향력은 끝났나?",
       "reportSubBullets": [],
       "reportImplication": "",
       "actors": [
-        "이야드 알아나바르 이라크 연구자",
         "Al-Zaidi 총리",
+        "마수드 페제시키안 이란 대통령",
+        "이란",
         "미국"
       ],
       "location": "이라크",
@@ -2394,33 +2307,38 @@
       "sourceReliability": "기사 원문 전문 확인",
       "extractedFacts": [
         {
-          "sentenceKo": "이야드 알아나바르의 연구는 알리 알자이디 이라크 총리가 미국과 이란 사이에서 이라크의 관계 균형을 맞추려 한다고 다뤘다.",
+          "sentenceKo": "이야드 알아ნ바르의 연구는 알리 알자이디 이라크 총리가 미국과 이란 사이에서 이라크의 관계 균형을 시도한다고 다뤘다.",
           "evidenceQuote": "تتناول دراسة \"العراق في لعبة صراع القوة والنفوذ بين إيران والولايات المتحدة\"، للباحث العراقي إياد العنبر، محاولات رئيس الوزراء العراقي علي الزيدي الموازنة في علاقات العراق مع الولايات المتحدة وإيران"
         },
         {
-          "sentenceKo": "이 연구는 미국의 2003년 이후 불분명한 구상이 이란 영향력 확대의 길을 열었다고 봤다.",
-          "evidenceQuote": "وترى الدراسة أن الولايات المتحدة أسهمت في فتح المجال أمام تمدد النفوذ الإيراني، لأنها لم تمتلك بعد إسقاط نظام صدام حسين مشروعًا واضحًا لمرحلة ما بعد 2003"
+          "sentenceKo": "연구는 2020년 초 카셈 솔레이마니와 아부 마흐디 알무한디스 피살 이후 이란의 이라크 직접 개입 일부가 위축되기 시작했다고 봤다.",
+          "evidenceQuote": "تعيد بداية انحسار بعض أشكال التدخل الإيراني المباشر في العراق إلى اغتيال قاسم سليماني وأبو مهدي المهندس مطلع عام 2020"
         },
         {
-          "sentenceKo": "이 연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
+          "sentenceKo": "연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
           "evidenceQuote": "تؤكد الدراسة أن إيران ما زالت تملك مفاتيح متعددة للنفوذ داخل العراق، ولا تحصرها في المجال السياسي أو العسكري، بل تمتد إلى المجال الاجتماعي والرمزي"
         }
       ],
       "extractedActors": [
-        {
-          "nameKo": "이야드 알아나바르",
-          "roleKo": "이라크 연구자",
-          "evidenceQuote": "للباحث العراقي إياد العنبر"
-        },
         {
           "nameKo": "알리 알자이디",
           "roleKo": "총리",
           "evidenceQuote": "رئيس الوزراء العراقي علي الزيدي"
         },
         {
+          "nameKo": "마수드 페제시키안",
+          "roleKo": "이란 대통령",
+          "evidenceQuote": "الرئيس الإيراني مسعود بيزشكيان"
+        },
+        {
+          "nameKo": "이란",
+          "roleKo": "",
+          "evidenceQuote": "إيران ما زالت تملك مفاتيح متعددة للنفوذ داخل العراق"
+        },
+        {
           "nameKo": "미국",
           "roleKo": "",
-          "evidenceQuote": "الولايات المتحدة"
+          "evidenceQuote": "الولايات المتحدة أسهمت في فتح المجال أمام تمدد النفوذ الإيراني"
         }
       ],
       "articleStructure": "single_event",
@@ -2428,17 +2346,17 @@
       "translationFailed": false,
       "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
       "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionFingerprint": "8YVGwlHS0VnwSbJcKqGMmrjU",
+      "factExtractionFingerprint": "yLWwarKCPihxkxKVPenvNv-T",
       "factExtractionModel": "gpt-5.4",
-      "factExtractedAt": "2026-07-28T22:23:49.188Z",
+      "factExtractedAt": "2026-07-28T22:37:56.730Z",
       "entityNormalizationApplied": true,
-      "entityNormalizedAt": "2026-07-28T22:24:13.129Z",
+      "entityNormalizedAt": "2026-07-28T22:38:09.957Z",
       "glossaryApplied": true,
       "glossaryVersion": "weekly-report-translation-glossary-v1",
       "factCorrectionApplied": false,
-      "eventId": "event-2026-07-28-9qdubb",
-      "eventTitleKo": "워싱턴과 테헤란의 줄다리기 속 이라크… 이란의 영향력은 끝났나?",
-      "eventSummaryKo": "이야드 알아나바르의 연구는 Al-Zaidi 총리가 미국과 이란 사이에서 이라크의 관계 균형을 맞추려 한다고 다뤘다. 이 연구는 미국의 2003년 이후 불분명한 구상이 이란 영향력 확대의 길을 열었다고 봤다. 이 연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
+      "eventId": "event-2026-07-28-3zdqyv",
+      "eventTitleKo": "워싱턴과 테헤란의 줄다리기 한복판의 이라크… 이란의 영향력은 끝났나?",
+      "eventSummaryKo": "이야드 알아ნ바르의 연구는 Al-Zaidi 총리가 미국과 이란 사이에서 이라크의 관계 균형을 시도한다고 다뤘다. 연구는 2020년 초 카셈 솔레이마니와 아부 마흐디 알무한디스 피살 이후 이란의 이라크 직접 개입 일부가 위축되기 시작했다고 봤다. 연구는 이란이 여전히 이라크 내부에서 정치·군사뿐 아니라 사회적·상징적 영향력의 여러 열쇠를 갖고 있다고 확인했다.",
       "eventArticleCount": 1,
       "eventSources": [],
       "eventRepresentativeId": "direct-6faKGJGiGIVPT2PyVkaS67tl",
@@ -2690,79 +2608,6 @@
       "fullTranslatedAt": "2026-07-28T06:41:12.115Z"
     },
     {
-      "id": "rss-mJKBPJiv_POK9OQsQcHiWRqe",
-      "title": "الاستخبارات تداهم \"بيت مال المسلمين\" لداعش في الأنبار وتعتقل 5 متهمين - هذا اليوم",
-      "titleKo": "정보 당국, 안바르에서 داعش의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포 - 이 날",
-      "summaryKo": "정보당국이 피의자 5명을 체포했다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-28T05:03:02.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5TUkFRVUstTkpDb1lyckJKbm1KRUtiRGRUVkFpLUVSRVFQMWhNWUY4blVxOEVCdWx6UXRSZy1VYVdjQmhURVk3U2tjb1Jjbi1v0gFKQVVfeXFMUDIwS1NxTjRCeHMyX0R5cWpZTmRvaVFtWEVKLXY0cE1fUlNTcDFxTzhRemlhajJOeXgtRWo1aDhHYUV4WURmcXpzQXc?oc=5",
-      "query": "\"الأنبار\" \"داعش\"",
-      "queryGroup": "arabic_iraq_security_protests",
-      "collectionLane": "arabic_iraq_security",
-      "forcedCategory3": "terror_security",
-      "description": "الاستخبارات تداهم \"بيت مال المسلمين\" لداعش في الأنبار وتعتقل 5 متهمين هذا اليوم",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 82,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 79,
-      "reportBullet": "정보당국, Anbar에서 IS의 '무슬림 재정 창구'를 급습해 피의자 5명 체포",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "정보당국"
-      ],
-      "location": "Anbar",
-      "securityEventType": "other",
-      "securityEventCount": 1,
-      "sourceReliability": "RSS 제목·설명 기반",
-      "extractedFacts": [
-        {
-          "sentenceKo": "정보당국이 피의자 5명을 체포했다.",
-          "evidenceQuote": "وتعتقل 5 متهمين"
-        }
-      ],
-      "extractedActors": [
-        {
-          "nameKo": "정보당국",
-          "roleKo": "",
-          "evidenceQuote": "الاستخبارات"
-        }
-      ],
-      "articleStructure": "single_event",
-      "selected": false,
-      "translationFailed": false,
-      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionFingerprint": "VwHBeH3A1t9lWA7D-4YmZ-ZF",
-      "factExtractionModel": "gpt-5.4",
-      "factExtractedAt": "2026-07-28T22:24:09.219Z",
-      "entityNormalizationApplied": true,
-      "entityNormalizedAt": "2026-07-28T22:24:13.130Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "eventId": "event-2026-07-27-6vfeki",
-      "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
-      "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
-      "eventRepresentative": false,
-      "translatedTitle": "정보 당국, 안바르에서 داعش의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포 - 이 날",
-      "translatedBody": "정보 당국은 오늘 안바르에서 داعش의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포했다",
-      "fullTranslation": "정보 당국은 오늘 안바르에서 داعش의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포했다",
-      "translationPreview": "정보 당국은 오늘 안바르에서 داعش의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포했다",
-      "fullTranslationVersion": "weekly-report-full-translation-v1",
-      "fullTranslationFingerprint": "VwHBeH3A1t9lWA7D-4YmZ-ZF",
-      "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:30.924Z"
-    },
-    {
       "id": "rss-Ny9Q-1_x9-PXhoLGVsGxhmv5",
       "title": "اعتقال خمسة أشخاص بمداهمة منزل كان يستخدمه \"داعش\" في الأنبار - هذا اليوم",
       "titleKo": "Anbar에서 IS가 사용하던 주택 급습으로 5명 체포",
@@ -2816,7 +2661,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false
     },
     {
@@ -2879,7 +2724,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "이라크, 사우디아라비아에 대한 드론 공격 조사 중.",
       "translatedBody": "이라크는 사우디아라비아에 대한 드론 공격을 조사하고 있다. Vietnam.vn",
@@ -2889,81 +2734,6 @@
       "fullTranslationFingerprint": "hks22hhmyyKziVz_bMtbTEjB",
       "fullTranslationModel": "gpt-5.4-mini",
       "fullTranslatedAt": "2026-07-28T22:24:35.402Z"
-    },
-    {
-      "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
-      "title": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار - قناة ومنصة المشهد - أخبار العالم اليوم",
-      "titleKo": "이라크, 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-مشهد 채널 및 플랫폼 - 오늘의 세계 뉴스",
-      "summaryKo": "이라크가 Anbar에서 IS의 자금 관련 거점 중 하나를 표적으로 삼았다.",
-      "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
-      "publishedAt": "2026-07-28T03:58:01.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
-      "query": "\"الأنبار\" \"داعش\"",
-      "queryGroup": "arabic_iraq_security_protests",
-      "collectionLane": "arabic_iraq_security",
-      "forcedCategory3": "terror_security",
-      "description": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار قناة ومنصة المشهد - أخبار العالم اليوم",
-      "collectionMethod": "google-news-rss",
-      "sourceType": "google-news-rss",
-      "category1": "domestic",
-      "category2": "politics_security",
-      "category3": "terror_security",
-      "importanceScore": 82,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
-      "aiCacheHit": false,
-      "sourceEvidenceLevel": "rss-description",
-      "sourceEvidenceChars": 92,
-      "reportBullet": "이라크, Anbar에서 IS의 자금 관련 거점 중 하나를 표적으로 삼아",
-      "reportSubBullets": [],
-      "reportImplication": "",
-      "actors": [
-        "이라크"
-      ],
-      "location": "Anbar",
-      "securityEventType": "other",
-      "securityEventCount": 1,
-      "sourceReliability": "RSS 제목·설명 기반",
-      "extractedFacts": [
-        {
-          "sentenceKo": "이라크가 안바르에서 ISIS의 자금 관련 거점 중 하나를 표적으로 삼았다.",
-          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
-        }
-      ],
-      "extractedActors": [
-        {
-          "nameKo": "이라크",
-          "roleKo": "",
-          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
-        }
-      ],
-      "articleStructure": "single_event",
-      "selected": false,
-      "translationFailed": false,
-      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
-      "factExtractionFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
-      "factExtractionModel": "gpt-5.4",
-      "factExtractedAt": "2026-07-28T22:24:11.780Z",
-      "entityNormalizationApplied": true,
-      "entityNormalizedAt": "2026-07-28T22:24:13.130Z",
-      "glossaryApplied": true,
-      "glossaryVersion": "weekly-report-translation-glossary-v1",
-      "eventId": "event-2026-07-28-xap5q3",
-      "eventTitleKo": "이라크, Anbar에서 IS의 자금 관련 거점 중 하나를 표적으로 삼아",
-      "eventSummaryKo": "이라크가 Anbar에서 IS의 자금 관련 거점 중 하나를 표적으로 삼았다.",
-      "eventArticleCount": 1,
-      "eventSources": [],
-      "eventRepresentativeId": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
-      "eventRepresentative": true,
-      "translatedTitle": "이라크, 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-مشهد 채널 및 플랫폼 - 오늘의 세계 뉴스",
-      "translatedBody": "이라크는 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥한다 채널 및 플랫폼 알-مشهد - 오늘의 세계 뉴스",
-      "fullTranslation": "이라크는 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥한다 채널 및 플랫폼 알-مشهد - 오늘의 세계 뉴스",
-      "translationPreview": "이라크는 안바르에서 \"داع시\"의 금융 본부 중 하나를 겨냥한다 채널 및 플랫폼 알-مشهد - 오늘의 세계 뉴스",
-      "fullTranslationVersion": "weekly-report-full-translation-v1",
-      "fullTranslationFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
-      "fullTranslationModel": "gpt-5.4-mini",
-      "fullTranslatedAt": "2026-07-28T22:24:38.417Z"
     },
     {
       "id": "rss-tJ66Y3Al6mJDkMpwYPuD-vCp",
@@ -3033,7 +2803,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false,
       "translatedTitle": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
       "translatedBody": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 이라크 국립통신사 | 니나",
@@ -3112,7 +2882,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false,
       "translatedTitle": "이라크, 안바르에서 ISIS의 ‘금고’를 급습해 테러 조직원들을 체포 - 에람 뉴스",
       "translatedBody": "이라크는 안바르에서 ISIS의 ‘금고’를 급습하는 동안 테러 조직원들을 체포했다. 에람 뉴스",
@@ -3270,7 +3040,7 @@
     {
       "id": "rss-SDrAWBN4Ue6-j2Znk9TWkEoJ",
       "title": "عملية أمنية في الأنبار تطيح بمتهمين بالإرهاب وتضبط أسلحة ووثائق مرتبطة بداعش الارهابي - وكالة انباء براثا",
-      "titleKo": "안바르에서의 보안 작전으로 테러 혐의자들을 체포하고, 다에시 테러조직과 관련된 무기와 문서를 압수 - 브라사 통신사",
+      "titleKo": "Anbar에서의 보안 작전으로 테러 혐의자들을 체포하고, IS 테러조직과 관련된 무기와 문서를 압수 - 브라사 통신사",
       "summaryKo": "보안 작전이 Anbar에서 테러 혐의자들을 체포했다.",
       "source": "وكالة انباء براثا",
       "publishedAt": "2026-07-27T20:51:15.000Z",
@@ -3518,7 +3288,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false,
       "translatedTitle": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 - video-agencyia.iq",
       "translatedBody": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 video-agencyia.iq",
@@ -3591,7 +3361,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventRepresentative": false,
       "translatedTitle": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 - 이라크 뉴스 통신사(INA)",
       "translatedBody": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 이라크 뉴스 통신사(INA)",
@@ -3765,7 +3535,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 7,
       "eventSources": [
         {
           "source": "964media",
@@ -3804,15 +3574,9 @@
           "summaryKo": "Anbar에서 IS가 사용하던 주택을 급습해 5명이 체포됐다."
         },
         {
-          "source": "هذا اليوم",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5TUkFRVUstTkpDb1lyckJKbm1KRUtiRGRUVkFpLUVSRVFQMWhNWUY4blVxOEVCdWx6UXRSZy1VYVdjQmhURVk3U2tjb1Jjbi1v0gFKQVVfeXFMUDIwS1NxTjRCeHMyX0R5cWpZTmRvaVFtWEVKLXY0cE1fUlNTcDFxTzhRemlhajJOeXgtRWo1aDhHYUV4WURmcXpzQXc?oc=5",
-          "titleKo": "정보당국, Anbar에서 IS의 '무슬림 재정 창구'를 급습해 피의자 5명 체포",
-          "summaryKo": "정보당국이 피의자 5명을 체포했다."
-        },
-        {
           "source": "Al Daee News",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5VUt0OWFpa1VKU1Y0RHZ5U0VqZl9SNDIxQTdHMkpVWFo0WUJIcHB6UWE3bVgyTmVoM0pXTjBVbFJFdERvU2RpRzJRV1FwZ2dIekNZN1pn?oc=5",
-          "titleKo": "Anbar 서부 라와 지구에서 \"IS의 안보 책임자\" 체포",
+          "titleKo": "Anbar 서부 라와 지구에서 “IS의 보안 지휘관” 체포 - Al Daee News",
           "summaryKo": "Anbar 서부 라와 지구에서 \"IS의 안보 책임자\"가 체포됐다."
         }
       ],
@@ -3915,7 +3679,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "이라크 저항세력, 사우디아라비아 포격을 부인하고 왕국에 예멘에 대한 봉쇄 해제를 촉구",
       "translatedBody": "“실패를 정당화하려는 비난” 이라크 저항세력, 사우디아라비아 포격을 부인하고 왕국에 예멘에 대한 봉쇄 해제를 촉구\n\n이라크 내 이슬람 저항세력은 오늘 월요일(2026년 7월 27일) 사우디아라비아가 자국을 겨냥한 무인기들이 이라크 영토에서 출발했다고 이라크를 비난한 데 대해 응답하며, 이러한 비난은 المملكة의 심부까지 닿은 예멘의 고통스러운 타격에 대응하지 못하는 무능을 정당화하려는 시도일 뿐이며, 다가올 예멘의 대응 성격에 대한 두려움에서 비롯된 것이라고 밝혔다. 또한 어떤 어리석은 사우디 행위도 혹독한 대응에 직면할 것이며, 그들로 하여금 후회의 손가락을 물게 만들 것이라고 경고했다고 성명은 전했다.\n\n우리의 가장 빠른 플랫폼에 가입하세요\n\n이라크 내 이슬람 저항세력의 성명, 네트워크 964가 확인: 자비롭고 자애로우신 하나님의 이름으로 (إِنَّمَا يَفْتَرِي الْكَذِبَ الَّذِينَ لَا يُؤْمِنُونَ بِآيَاتِ اللَّهِ ۖ وَأُولَٰئِكَ هُمُ الْكَاذِبُونَ)\n사우디 체제가 이라크를 향해 계속 비난을 퍼붓고 동부와 리야드의 석유 시설에 대한 포격의 근원이라고 주장하는 동안, 이 주장은 오히려 이 체제에 이라크와 그 국민에 대한 적대감이 고착된 특징임을 우리에게 더욱 확신시켜 줄 뿐이다. 이러한 추측들은 다만 심부에 이른 기반시설에 대한 예멘의 고통스러운 타격에 대응하지 못하는 무능을 정당화하려는 시도일 뿐이며, 다가올 예멘의 대응 성격에 대한 두려움에서 비롯된 것이다.\n\n우리는 이슬람 저항세력으로서 사우디 체제에 분명한 경고를 보낸다. 어떤 어리석은 사우디 행위도 혹독한 대응에 직면할 것이며, 그들로 하여금 후회의 손가락을 물게 만들 것이라고 선언한다. 그리고 분명히 말한다: 여러분 가운데 현명한 남자가 있다면, 오늘 여러분은 비난을 이리저리 퍼붓고 여러분의 실패를 정당화하며 여러분의 범죄를 가리기보다는, 예멘 국민에 대한 부당한 봉쇄를 해제하는 것이 더욱 절실하다.\n\n이라크 내 이슬람 저항세력\n2026년 7월 27일\n\n총사령관 알리 팔리흐 알자이디는 오늘 월요일(2026년 7월 27일), 안보 담당 기관들에 사우디 국방부 성명에 나온, 이라크 영토에서 출발한 무인기들로 왕국을 겨냥했다는 내용에 대한 조사를 지시했다.\n\n사우디 국방부는 오늘 월요일(2026년 7월 27일) 동부와 리야드 지역의 석유 시설을 겨냥하려 했다고 밝힌 여러 대의 무인기들을 요격·파괴했다고 발표하며, 이 무인기들이 이라크 영토에서 출발했고 “이란에 속한 테러 민병대”가 실행했다고 확인한 한편, 적절한 시점과 장소에서 대응할 권리를 보유하고 있다고 강조했다.\n\n사우디 외교부도 오늘 월요일(2026년 7월 27일) 왕국의 여러 지역을 겨냥한 무인기 공격을 규탄하며, 그 배후에 “이라크 내 이란 계열 민병대”가 있다고 말했다. 또한 “침략”의 출처에 대응할 권리를 보유하고 있다고 확인했으며, 이라크 정부에 자국 영토가 공격 개시의 출발점으로 사용되지 않도록 막는 조치를 취할 것을 촉구했다.\n\n아랍에미리트, 사우디와 연대: 무인기는 이라크 영토에서 출발했다\n무스타파 알카디미, 무인기에 불쾌감: 왜 사우디를 타격했나?\n알자이디, 사우디 포격 조사 지시: 우리는 형제와 친구들을 겨냥한 공격을 용납하지 않을 것이다\n무인기 공격 이후.. 리야드는 바그다드에 자국 영토에서 “침략”이 출발하는 것을 막는 조치를 요구\n격앙된 사우디 성명: 우리는 이란에 속한 민병대가 발사한 이라크발 무인기를 요격했다",
@@ -4428,7 +4192,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "사우디와 연대하는 아랍에미리트: 무인기는 이라크 영토에서 출발했다",
       "translatedBody": "“왕국의 주권에 대한 노골적인 침해” 아랍에미리트는 사우디와 연대한다: 무인기는 이라크 영토에서 출발했다 아랍에미리트 외교부는 오늘 월요일(2026년 7월 27일), 성명에 따르면 이라크 영토에서 온 무인기들에 의해 사우디아라비아 왕국의 동부 지역과 리야드 지역의 석유 시설이 공격당했다고 규탄했다. 964 네트워크가 이를 전했다. \n\n부처는 성명에서 “아랍에미리트는 이라크 영토에서 온 무인기들을 이용한 가장 강한 표현으로도 규탄할 수 있는 공격적 행위를 규탄하며, 이는 형제국 사우디아라비아 왕국의 동부 지역과 리야드 지역의 석유 시설을 목표로 하려 했던 것”이라고 밝혔다. \n\n성명은 “이러한 공격적 행위는 사우디아라비아 왕국의 주권에 대한 노골적인 침해이며, 그 안보와 안정을 위협하는 것”이라고 덧붙였다. \n\n부처는 또한 “아랍에미리트가 형제국 사우디아라비아에 전적으로 연대하며, 그 안보와 안정을 보전하는 데 기여하는 모든 것을 지지한다”는 입장을 거듭 밝혔다. \n\n군 최고사령관 알리 팔리흐 알자이디는 오늘 월요일(2026년 7월 27일), 사우디 국방부 성명에 나온, 이라크 영토에서 출발한 무인기를 통해 사우디아라비아가 공격당했다는 내용에 대해 관련 보안 기관들에 조사하라고 지시했다. \n\n사우디 국방부는 오늘 월요일(2026년 7월 27일), 동부 지역과 리야드 지역의 석유 시설을 공격하려 했다고 밝힌 여러 대의 무인기를 요격·파괴했다고 발표했으며, 해당 무인기들은 이라크 영토에서 출발해 “이란에 속한 테러 민병대”가 실행한 것이라고 확인했다. 또한 왕국은 적절한 시점과 장소에서 대응할 권리를 보유한다고 강조했다. \n\n사우디 외교부도 오늘 월요일(2026년 7월 27일), 왕국의 지역들을 겨냥한 무인기 공격을 규탄하며 그 배후에 “이라크 내 이란계 민병대”가 있다고 밝혔다. 또한 “침략”의 근원에 대응할 권리를 보유하고 있다고 확인했으며, 이라크 정부에 자국 영토가 자국에 대한 공격을 시작하는 발판으로 사용되지 않도록 막는 조치를 취할 것을 촉구했다. \n\n무스타파 알카드미는 무인기에 분노: 왜 사우디를 공격했나? 알자이디는 사우디 포격 조사 지시: 형제와 친구를 겨냥한 공격을 허용하지 않겠다 무인기 공격 후… 리야드는 바그다드에 자국 영토에서 “침략”이 출발하지 못하게 하는 조치를 요구 사우디의 격앙된 성명: 우리는 이란에 속한 민병대가 발사한 이라크발 무인기를 요격했다",
@@ -4514,7 +4278,7 @@
         {
           "source": "وكالة انباء براثا",
           "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBnMTV3akxhVDBsZFpFVGp2WXVuZWstSVp4SUtMUEdoSUpVRUxtVDdRanZaV2lCbFJUNnRuT2tLTkNzNnBDOFFvdmU4dk1sZw?oc=5",
-          "titleKo": "보안 작전이 Anbar에서 테러 혐의자들을 체포했다.",
+          "titleKo": "Anbar에서의 보안 작전으로 테러 혐의자들을 체포하고, IS 테러조직과 관련된 무기와 문서를 압수 - 브라사 통신사",
           "summaryKo": "보안 작전이 Anbar에서 테러 혐의자들을 체포했다."
         }
       ],
@@ -4902,7 +4666,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventSources": [
         {
           "source": "الأيام البحرينية",
@@ -4998,7 +4762,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "바레인, 이라크 영토에서 발사된 무인기로 사우디의 석유 시설을 겨냥한 테러 공격 시도를 규탄 - 알-아이얌 알-바레이니야",
       "translatedBody": "바레인은 이라크 영토에서 발사된 무인기로 사우디의 석유 시설을 겨냥한 테러 공격 시도를 규탄한다. 알-아이얌 알-바레이니야",
@@ -5274,7 +5038,7 @@
         {
           "source": "The New Arab",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQTRCaXFiVEZ6WnlMRGQ2WTJhSUlja3V0SjZyVDQxbVAzR1dGM3k1cVQ1anZ3di1Ea1Z4TGw0Z1hxdGtHYmNOV2dZeURSbHhlV0VENmZNZ00xbE5lSVJkeTJkNUdGQ1dSOUlDLWdGU0ZSeE5IcTBZTF9aZUtpM2NILWVGbHNZUG5CcUHSAY8BQVVfeXFMTjEyQ0JWTTZnNkp1RHBDU003TF9BMmlHenhRZm5rS2V5TEctVF9ZY0xxT25ubTE5VjRrLXdZX29lR0dyVDJyOXEyT05KMFQtYWpsSkVMcHFYVjNOc1hLUDZsUldQLVlxUHpLa2JYb2VYYnN6YXgwQ0h5YU9CTi1kRU8tbHlzY2NkZ2JvOXZ4alE?oc=5",
-          "titleKo": "이라크, 사우디아라비아 드론 공격 조사 착수",
+          "titleKo": "이라크, 사우디아라비아에 대한 드론 공격 조사 착수 - The New Arab",
           "summaryKo": "이라크가 사우디아라비아에 대한 드론 공격에 관한 조사를 시작했다."
         },
         {
@@ -5286,7 +5050,7 @@
         {
           "source": "thenationalnews.com",
           "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWHFRMHZWMVVVc3lOSE45aWVOWTJ1LTVjdU9ORzh3Q2JpNEREZEdNN0hVZDg2djJ2cnJqd1BsUXZYWFo0THdsVUlWdTQ4RkdWRkhxZE9XcjZCbnI5QV8tbW5XVl9JTFpOZ1dmT05aMVFrME03eGZHamRORFJKMDhsRVZaTnpBQXJhOFFBLVh3RFdQNDEwSGUtTnF2MWQ4WGZTTFg5b2VRUkVCR01ZdHpRQ2toamVxa1gxWmlnQ25mSE5LZWZLWmZ6QlMyY2Vza0F4YVd0YlNKbmRIU28?oc=5",
-          "titleKo": "Baghdad, 이라크에서 드론 공격이 발사됐다는 사우디아라비아의 주장을 조사",
+          "titleKo": "Baghdad, 사우디아라비아의 이라크발 드론 공격 주장 조사 예정 - thenationalnews.com",
           "summaryKo": "Baghdad는 이라크에서 드론 공격이 발사됐다는 사우디아라비아의 주장을 조사할 예정이다."
         },
         {
@@ -5396,7 +5160,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventRepresentative": false,
       "translatedTitle": "이라크, 사우디아라비아가 자국 영토에서 발사된 드론을 요격한 뒤 조사 착수",
       "translatedBody": "사우디아라비아는 이라크 정부가 자국 영토가 침략의 발판으로 사용되지 않도록 보장하기 위해 필요한 모든 조치를 취해야 한다고 강조했다 (셔터스톡)\n\n게시일 2026/7/27 2026/7/27 | 최종 업데이트: 2026/7/28 00:32 (메카 시간)\n\n이라크는 오늘 월요일 저녁, 자국 영토에서 발사돼 사우디아라비아의 석유 시설을 겨냥한 무인기와 관련해 조사를 시작했다고 발표했다. 걸프 국가들은 이 공격들을 규탄하며, 이를 위험한 긴장이 고조되는 행위이자 지역 안보에 대한 위협이라고 봤다.\n\n사우디 국방부는 앞서 월요일, 여러 대의 무인기를 요격해 파괴했다고 발표하면서, 그것들이 이라크에서 발사돼 동부 지역과 리야드의 석유 시설을 겨냥하려 했다고 밝혔다.\n\n부처 대변인인 터키 알말리키 소장은 성명에서 이러한 시도가 이라크 영토에서 출발했으며, “이란에 속한 테러 민병대”가 이를 실행했다고 확인했다.\n\n사건 직후 사우디 외교부는 바그다드 정부에 이라크 영토가 왕국을 겨냥한 어떤 공격에도 사용되지 않도록 막을 것을 요구하면서, “공격의 근원에 대응할 권리”가 있다고 강조했다.\n\n이라크, 법적 조치 취할 것 약속\n\n이후 월요일, 이라크군 대변인 사바 알누만은 성명에서 총리 알리 알자이디가 사우디 국방부가 제공한, 사우디가 요격한 무인기에 관한 정보에 대해 조사를 지시했다고 밝혔다.\n\n알누만은 자국이 “이라크 영토를 형제국이나 우호국을 겨냥한 어떤 공격의 통로 또는 출발점으로 사용하는 것”을 거부한다고 강조하며, 이라크 정부가 선린의 원칙에 헌신하고 있음을 확인했다.\n\n군 대변인은 보안 당국이 증거와 정보를 조사하고 있으며, 조사 결과에 따라 이 같은 행위에 연루된 것이 입증되는 자들에 대해 법적 조치를 취할 것이라고 설명했다.\n\n성명은 또한 이라크-사우디 관계가 상호 존중과 공동 이익, 선린의 원칙에 기반한 확고하고 깊은 형제 관계라고 강조하며, 바그다드가 이 관계를 훼손하거나 해치려는 어떤 시도도 허용하지 않을 것이라고 덧붙였다.\n\n걸프협력회의 사무총장 자심 알부다위는 “이란에 속한 민병대가 이라크에서 발사한 무인기를 통해 사우디아라비아를 겨냥한 공격”을 규탄하며, 이것이 심각한 긴장이 고조되는 행위이자 국제법의 노골적인 위반이며, 지역의 안보와 안정에 대한 직접적인 위협이라고 경고했다.\n\n또한 카타르, 쿠웨이트, 아랍에미리트도 왕국의 석유 시설을 겨냥하려 한 시도를 강력히 비난하며, 별도의 성명에서 사우디와의 연대와 자국의 안전과 안정을 지키기 위해 왕국이 취하는 모든 조치에 대한 전폭적인 지지를 확인했다.\n\n금요일까지 2주 동안 테헤란은 자신들이 말하는 미국이 아랍 국가들, 특히 바레인, 쿠웨이트, 요르단에 있는 미군 시설과 군사 장비를 겨냥한 공격에 대한 대응으로 공격을 감행했다.\n\n이틀 전부터 이란과 미국 간 대치는 비교적 잠잠해졌으며, 미국 전쟁부(펜타곤)는 13밤에 걸친 연속 폭격을 중단했다. 한편 이란이 인접국들을 공격했다는 어떤 보고도 나오지 않았다.",
@@ -5571,7 +5335,7 @@
       "eventId": "event-2026-07-27-1txbz9y",
       "eventTitleKo": "드론 공격 이후… 리야드, Baghdad에 자국 땅에서 “공격”이 출발하지 못하게 하는 조치를 요구",
       "eventSummaryKo": "사우디 외무부는 왕국 내 지역을 겨냥한 드론 공격을 규탄하고, 이라크 정부에 자국 영토가 자국 공격의 출발점으로 사용되지 않도록 조치를 취할 것을 촉구했다. 사우디 국방부는 동부 지역과 리야드의 석유 시설을 겨냥하려 한 드론 여러 대를 요격·파괴했다고 밝혔다. 공동성명에서 이라크는 자국 영토나 영공이 사우디와 걸프 국가들을 겨냥한 어떤 공격의 출발점으로 사용되는 것을 금지하겠다는 확고한 입장을 재확인했다.",
-      "eventArticleCount": 8,
+      "eventArticleCount": 9,
       "eventSources": [
         {
           "source": "964media",
@@ -5612,13 +5376,19 @@
         {
           "source": "Vietnam.vn",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBKQ1hxejdlSlR1NEItZXZvbWJjeGdjSl9CVVV3VHBubUlaUy1zODJCMk1NNFlSTVkzd0xUeWhoUndyVGNrZ0tVdXdBcXZYSUFKM2s0YlE3Mmh6bjhaOHJ2OEtNd1RTRmVXWDVYOTFjN2g5Ty1IQWdV?oc=5",
-          "titleKo": "이라크, 사우디아라비아에 대한 무인기 공격 조사",
+          "titleKo": "이라크, 사우디아라비아에 대한 드론 공격 조사 중.",
           "summaryKo": "이라크가 사우디아라비아에 대한 무인기 공격을 조사하고 있다."
+        },
+        {
+          "source": "Al Jazeera Arabic",
+          "url": "https://www.aljazeera.net/news/2026/7/28/%D8%B9%D8%A7%D8%AC%D9%84-%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%AF%D9%81%D8%A7%D8%B9%D8%A7%D8%AA%D9%86%D8%A7",
+          "titleKo": "사우디아라비아, 이라크발 드론의 새로운 공격 차단 발표",
+          "summaryKo": "사우디 국방부는 최근 몇 시간 동안 동부 지역의 석유 시설을 겨냥하려 한 드론들을 자국 방어체계가 파괴했다고 밝혔다. 사우디 국방부는 이번 시도가 다시 이라크 영토에서 출발했고 이란 연계 민병대가 수행했다고 밝혔다. 이라크는 자국 영토에서 출발한 드론들이 사우디의 석유 시설을 겨냥한 사건에 대해 월요일 저녁 조사 개시를 발표했다."
         },
         {
           "source": "964media",
           "url": "https://964media.com/702876/",
-          "titleKo": "또다시… 사우디, 이라크 영토에서 출발한 드론 차단 발표",
+          "titleKo": "다시 한 번.. 사우디, 이라크 영토에서 출발한 무인기 대응했다고 발표",
           "summaryKo": "사우디 국방부는 방공망이 동부 지역의 석유 시설을 겨냥한 다수의 드론을 요격·파괴했다고 발표했다. 사우디 국방부 대변인 투르키 알말키는 이번 시도가 다시 이라크 영토에서 출발했으며 이란 추종 테러 민병대가 실행했다고 밝혔다. 알리 팔리흐 Al-Zaidi 총리는 사우디 국방부 발표 내용에 대한 조사를 관계 보안 기관에 지시했다."
         }
       ],
@@ -6791,7 +6561,7 @@
     {
       "id": "rss-K1yZYX67YKS0jiWIIv6LfRvV",
       "title": "قوات التحالف الدولي تسقط طائرة مسيرة في محافظة أربيل بالعراق - صدى البلد",
-      "titleKo": "국제 연합군, 이라크 아르빌주에서 무인기 격추 - Sada El-Balad",
+      "titleKo": "국제 연합군, 이라크 Erbil주에서 무인기 격추 - Sada El-Balad",
       "summaryKo": "국제연합군이 이라크 Erbil주에서 무인기를 격추했다.",
       "source": "صدى البلد",
       "publishedAt": "2026-07-25T13:36:00.000Z",
@@ -7268,7 +7038,7 @@
         {
           "source": "صدى البلد",
           "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9JemxqMzQ0Nm5fNk84UmdWcG9wbEptRlVuTDA5eUktNVdnV1hBSGM5VENPdWtlWXc3V3Z3bEJBdE50d0JLczRN?oc=5",
-          "titleKo": "국제연합군, 이라크 Erbil주에서 무인기 격추",
+          "titleKo": "국제 연합군, 이라크 Erbil주에서 무인기 격추 - Sada El-Balad",
           "summaryKo": "국제연합군이 이라크 Erbil주에서 무인기를 격추했다."
         }
       ],
@@ -7929,7 +7699,7 @@
         {
           "source": "Iraqi News",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbTU4LU5RWnZlaHpDWTBudkR4clUyUDJSdEZtNHphcUlNTEt5VU1VUmdKQVJRMmpvZHNkbExBMExYY2FZaUE3ZTJNaXFYSEFXaGQyNnE4Y3NaN1lKRGVEOERvSEFsUFRZQW4tQTJFZjkyYXozaGwyRElOYmVKQTdmWGh0X0M4bVRXNHo0?oc=5",
-          "titleKo": "쿠웨이트가 드론 공격을 보고하면서 이라크 국경에 관심 집중",
+          "titleKo": "쿠웨이트가 드론 공격을 보고하면서 이라크 국경에 주목이 쏠려 - 이라크 뉴스",
           "summaryKo": "쿠웨이트가 드론 공격을 보고했다. 이라크 국경이 주목받고 있다."
         },
         {
@@ -10956,14 +10726,14 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 4
+        "count": 3
       },
       {
         "query": "\"مجلس الوزراء\" \"قرر\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 11
+        "count": 12
       },
       {
         "query": "\"رئيس الوزراء\" \"توجيه\" \"العراق\"",
@@ -10977,7 +10747,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 8
+        "count": 9
       },
       {
         "query": "\"المكتب الإعلامي لرئيس الوزراء\"",
@@ -11068,7 +10838,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 6
+        "count": 5
       },
       {
         "query": "\"الكتل السياسية\" \"الحكومة\" \"العراق\"",
@@ -11089,14 +10859,14 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 15
+        "count": 16
       },
       {
         "query": "\"هيئة النزاهة\" \"مسؤول\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 18
+        "count": 19
       },
       {
         "query": "\"القضاء العراقي\" \"فساد\"",
@@ -11138,7 +10908,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 9
+        "count": 10
       },
       {
         "query": "\"الهيئة الوطنية للاستثمار\" \"رئيس\"",
@@ -11222,14 +10992,14 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 9
+        "count": 10
       },
       {
         "query": "\"العراق\" \"إيران\" \"اتفاق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 2
+        "count": 1
       },
       {
         "query": "\"العراق\" \"العقوبات الأمريكية\"",
@@ -11271,7 +11041,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 18
+        "count": 17
       },
       {
         "query": "\"العراق\" \"داعش\"",
@@ -11306,7 +11076,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 24
+        "count": 23
       },
       {
         "query": "\"العراق\" \"هجوم إرهابي\"",
@@ -11320,21 +11090,21 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 23
+        "count": 24
       },
       {
         "query": "\"العراق\" \"عبوة ناسفة\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 15
+        "count": 16
       },
       {
         "query": "\"العراق\" \"اغتيال\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 21
+        "count": 20
       },
       {
         "query": "\"العراق\" \"إطلاق نار\"",
@@ -11348,14 +11118,14 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 12
+        "count": 13
       },
       {
         "query": "\"العراق\" \"صاروخ\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 4
+        "count": 5
       },
       {
         "query": "\"العراق\" \"طائرة مسيرة\"",
@@ -11509,7 +11279,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 1
+        "count": 2
       },
       {
         "query": "\"Iraq parliament\" \"vote\"",
@@ -11523,7 +11293,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 2
+        "count": 3
       },
       {
         "query": "\"Iraq\" \"Coordination Framework meeting\"",
@@ -11586,7 +11356,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 7
+        "count": 8
       },
       {
         "query": "\"Iraq Foreign Ministry\" \"statement\"",
@@ -11913,9 +11683,8 @@
           },
           {
             "url": "https://www.faceiraq.org/",
-            "type": "html",
-            "count": 10,
-            "ok": true
+            "ok": false,
+            "error": "Timeout after 12000ms"
           },
           {
             "url": "https://www.faceiraq.org/news/security",
@@ -12152,7 +11921,7 @@
           {
             "url": "https://www.iraqinews.com/features/",
             "type": "html",
-            "count": 2,
+            "count": 1,
             "ok": true
           },
           {
@@ -12274,10 +12043,10 @@
       "aiEligible": 120
     },
     "archive": {
-      "previous": 93,
-      "carriedForward": 93
+      "previous": 113,
+      "carriedForward": 113
     },
-    "elapsedSeconds": 34
+    "elapsedSeconds": 27
   },
   "regionalIraqExposure": {
     "inputRegional": 81,
@@ -12285,7 +12054,7 @@
     "removedRegional": 57,
     "removed": [
       {
-        "id": "rss-xRakfPPRVOSeHzWqxhR2vCfo",
+        "id": "rss-txDtcqNIZzdCX41mTZQ1jy9P",
         "title": "Saudi Arabia vows firm response to attacks on oil facilities and shipping - Gulf News",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -12338,6 +12107,11 @@
         "id": "rss-KOpH8sWHQ4fDdZPRyj8Jk1h2",
         "title": "Syria focuses on energy deals, works to revive infrastructure and institutions - Foundation for Defense of Democracies",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-alJTKsE_hmmjd7f3iyCh4AoA",
+        "title": "Drones target Iraqi city where US forces are based as US-Iran fighting escalates - BreakingNews.ie",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
@@ -12525,11 +12299,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
-        "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
         "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
         "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -12570,16 +12339,16 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T22:23:21.558Z"
+    "completedAt": "2026-07-28T22:37:46.713Z"
   },
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
     "requestedModel": "gpt-5.4",
     "model": "gpt-5.4",
     "candidates": 132,
-    "reused": 93,
-    "requested": 39,
-    "extracted": 39,
+    "reused": 112,
+    "requested": 20,
+    "extracted": 20,
     "failed": 0,
     "removedBeforeAi": 13,
     "overflow": 0,
@@ -12650,38 +12419,38 @@
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       }
     ],
-    "completedAt": "2026-07-28T22:24:13.052Z"
+    "completedAt": "2026-07-28T22:38:09.672Z"
   },
   "entityNormalization": {
     "correctedCount": 89,
-    "completedAt": "2026-07-28T22:24:13.134Z"
+    "completedAt": "2026-07-28T22:38:09.961Z"
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-28T22:24:13.361Z",
+    "appliedAt": "2026-07-28T22:38:10.142Z",
     "termCount": 29,
-    "changedCount": 38
+    "changedCount": 37
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:24:13.431Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:38:10.197Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T22:24:13.500Z",
-  "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T22:24:13.609Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T22:38:10.251Z",
+  "untranslatedFilteredCount": 3,
+  "untranslatedFilteredAt": "2026-07-28T22:38:10.342Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T22:24:13.685Z",
+  "datelineLocationCorrectedAt": "2026-07-28T22:38:10.401Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T22:24:13.763Z",
+  "aiHallucinationFilteredAt": "2026-07-28T22:38:10.467Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T22:24:13.830Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T22:38:10.522Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T22:24:13.908Z",
-    "removedCount": 19,
+    "appliedAt": "2026-07-28T22:38:10.591Z",
+    "removedCount": 22,
     "correctedCount": 2,
     "removed": [
       {
         "id": "direct-bnlg2k_uFQufCYU4riIsT3x8",
-        "title": "북코르도판에서 군과 신속지원군 사이의 힘의 균형은 어떻게 바뀌었나?",
+        "title": "북코르도판에서 군과 신속지원군의 힘의 균형은 어떻게 바뀌었나?",
         "category3": "terror_security",
         "reason": "원문상 이라크 내 실제 테러·치안·시위 사건이 확인되지 않은 기사"
       },
@@ -12692,8 +12461,26 @@
         "reason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음."
       },
       {
+        "id": "rss-WBDUOk4bzYQQnTAjXP8bKlo1",
+        "title": "이란, 이라크 북부의 쿠르드 المعارضة 세력을 겨냥한 드론 공격을 강화하다 - The Jerusalem Post",
+        "category3": "exclude",
+        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
+      },
+      {
+        "id": "rss-mJKBPJiv_POK9OQsQcHiWRqe",
+        "title": "정보 당국, Anbar에서 IS의 “بيت مال المسلمين”을 급습하고 피의자 5명을 체포 - 이 날",
+        "category3": "exclude",
+        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
+      },
+      {
+        "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
+        "title": "이라크, Anbar에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-مشهد 채널 및 플랫폼 - 오늘의 세계 뉴스",
+        "category3": "exclude",
+        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
+      },
+      {
         "id": "rss-CWsFKJB-wpfhAMpdO7j12Ysw",
-        "title": "레바논, 이라크산 원유의 호르무즈 해협 우회 운송 경로 제안",
+        "title": "레바논, 호르무즈 해협 우회를 위한 이라크산 원유 운송 경로 제안",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12705,7 +12492,7 @@
       },
       {
         "id": "rss-FiE6bMC75C4fWsqIEwfEGLB0",
-        "title": "이라크, 호르무즈 해협 의존도 축소 위해 튀르키예·시리아 송유관 검토",
+        "title": "이라크, 호르무즈 해협 의존을 줄이기 위해 튀르키예·시리아 파이프라인 검토",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12717,7 +12504,7 @@
       },
       {
         "id": "rss-e4XU__UNWt6FccUJxYL8pBKE",
-        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 거쳐 이라크 석유를 운송한다",
+        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 통해 이라크 석유를 운송한다",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12729,31 +12516,31 @@
       },
       {
         "id": "rss--ZNtYqwdThEzJthx_hjRIF-9",
-        "title": "이란, 이라크·요르단·오만·시리아의 미군 기지를 겨냥",
+        "title": "이란, 이라크·요르단·오만·시리아의 미군 기지를 표적으로 삼아 - 아랍뉴스",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-JwpbF__DhmDgmt65ab-x-6RA",
-        "title": "미국 석유 기업들, 대체 수송로 개발 위해 이라크와 계약 체결",
+        "title": "미국 석유 기업들, 대체 운송로 개발 위해 이라크와 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-OSJ7c6ukoMYATY4qRAKxTrVW",
-        "title": "미국 석유기업들, 이라크와 대체 운송 경로 개발 계약 체결",
+        "title": "미국 석유 기업들, 이라크와 대체 운송로 개발 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-biLB2LUcp0cdTfSWyZF6yBVu",
-        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대체 경로 조성 검토 - WSJ",
+        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대체 경로 조성을 검토할 예정 - WSJ",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-Ho_lgdp7_WFDLhTGO5F2ifDQ",
-        "title": "미국, 호르무즈 해협 우회를 위해 이라크-시리아 송유관 지지",
+        "title": "미국, 호르무즈 해협 우회를 위한 이라크-시리아 송유관 지지",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12765,13 +12552,13 @@
       },
       {
         "id": "rss-boFw9WCK2gW0rZ6YEr0VyVu2",
-        "title": "단독: 시리아·이라크·미국, 호르무즈 해협을 우회하는 지중해 송유관 합의 공개 계획",
+        "title": "단독: 시리아·이라크·미국, 호르무즈 해협 우회를 위한 지중해 송유관 합의 공개 계획",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-9iInuZYHIuNor1pKKIc0Ak_p",
-        "title": "EU 항공청, 항공사들에 이란·이라크·레바논 영공 회피 권고",
+        "title": "EU 항공안전기구, 항공사들에 이란·이라크·레바논 영공 회피 권고",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -12783,39 +12570,39 @@
       },
       {
         "id": "rss-aIicXailZ_0ek1uuSpVn00Ko",
-        "title": "이라크는 새 해상 함대로 호르무즈 딜레마를 헤쳐 나갈 수 있을까?",
+        "title": "이라크는 새로운 해상 함대로 호르무즈 딜레마를 헤쳐 나갈 수 있을까?",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-BtEej1-vPqPkwh9uUBu2gGJS",
-        "title": "이라크의 발이 묶였던 원유가 마침내 호르무즈 해협을 빠져나오다",
+        "title": "이라크의 발이 묶였던 석유가 마침내 호르무즈 해협을 빠져나오다",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       }
     ]
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T22:24:13.966Z",
+    "appliedAt": "2026-07-28T22:38:10.639Z",
     "removedCount": 0,
     "removed": []
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T22:24:14.028Z",
-  "eventCount": 70,
+  "duplicateCollapsedAt": "2026-07-28T22:38:10.692Z",
+  "eventCount": 67,
   "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T22:24:14.601Z",
+  "eventGroupedAt": "2026-07-28T22:38:11.129Z",
   "fullTranslation": {
     "version": "weekly-report-full-translation-v1",
-    "processed": 113,
-    "generatedAt": "2026-07-28T22:24:49.828Z",
+    "processed": 110,
+    "generatedAt": "2026-07-28T22:38:14.146Z",
     "model": "gpt-5.4-mini"
   },
   "domesticMedia": {
     "count": 46,
-    "rawCount": 70,
+    "rawCount": 69,
     "fullTextCount": 0,
-    "fullTextFailedCount": 70,
+    "fullTextFailedCount": 69,
     "queries": [
       "비스마야",
       "한화 이라크",
@@ -12823,7 +12610,7 @@
       "한화 김동관",
       "한화 김동선"
     ],
-    "generatedAt": "2026-07-28T22:24:54.136Z",
+    "generatedAt": "2026-07-28T22:38:18.591Z",
     "aiUsed": false
   },
   "domesticPreviewNormalization": {
@@ -12831,6 +12618,6 @@
     "resolved": 46,
     "usefulCount": 1,
     "failed": 0,
-    "generatedAt": "2026-07-28T22:24:58.266Z"
+    "generatedAt": "2026-07-28T22:38:23.407Z"
   }
 }

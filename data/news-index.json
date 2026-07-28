@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-07-28T22:23:21.447Z",
+  "generatedAt": "2026-07-28T22:37:46.624Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 113,
+    "total": 110,
     "politics": 7,
-    "terror_security": 99,
+    "terror_security": 96,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 93,
-    "carriedForward": 93
+    "previous": 113,
+    "carriedForward": 113
   },
-  "elapsedSeconds": 34,
-  "count": 113,
+  "elapsedSeconds": 27,
+  "count": 110,
   "regionalIraqExposure": {
     "inputRegional": 81,
     "keptRegional": 24,
     "removedRegional": 57,
     "removed": [
       {
-        "id": "rss-xRakfPPRVOSeHzWqxhR2vCfo",
+        "id": "rss-txDtcqNIZzdCX41mTZQ1jy9P",
         "title": "Saudi Arabia vows firm response to attacks on oil facilities and shipping - Gulf News",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -77,6 +77,11 @@
         "id": "rss-KOpH8sWHQ4fDdZPRyj8Jk1h2",
         "title": "Syria focuses on energy deals, works to revive infrastructure and institutions - Foundation for Defense of Democracies",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-alJTKsE_hmmjd7f3iyCh4AoA",
+        "title": "Drones target Iraqi city where US forces are based as US-Iran fighting escalates - BreakingNews.ie",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
@@ -264,11 +269,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
-        "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
         "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
         "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -309,46 +309,46 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T22:23:21.558Z"
+    "completedAt": "2026-07-28T22:37:46.713Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 93,
-    "requested": 39,
-    "extracted": 39,
+    "reused": 112,
+    "requested": 20,
+    "extracted": 20,
     "failed": 0,
     "removedCount": 13
   },
   "entityNormalization": {
     "correctedCount": 89,
-    "completedAt": "2026-07-28T22:24:13.134Z"
+    "completedAt": "2026-07-28T22:38:09.961Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:24:13.431Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:38:10.197Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T22:24:13.500Z",
-  "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T22:24:13.609Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T22:38:10.251Z",
+  "untranslatedFilteredCount": 3,
+  "untranslatedFilteredAt": "2026-07-28T22:38:10.342Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T22:24:13.685Z",
+  "datelineLocationCorrectedAt": "2026-07-28T22:38:10.401Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T22:24:13.763Z",
+  "aiHallucinationFilteredAt": "2026-07-28T22:38:10.467Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T22:24:13.830Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T22:38:10.522Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T22:24:13.908Z",
-    "removedCount": 19,
+    "appliedAt": "2026-07-28T22:38:10.591Z",
+    "removedCount": 22,
     "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T22:24:13.966Z",
+    "appliedAt": "2026-07-28T22:38:10.639Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T22:24:14.028Z",
-  "eventCount": 70,
+  "duplicateCollapsedAt": "2026-07-28T22:38:10.692Z",
+  "eventCount": 67,
   "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T22:24:14.601Z"
+  "eventGroupedAt": "2026-07-28T22:38:11.129Z"
 }
