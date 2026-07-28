@@ -29,7 +29,7 @@ for (const required of ["data-stat-filter=\"domestic\"", "id=\"statDomestic\"", 
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
-for (const required of ["relatedNews", "관련뉴스", "previewText", "compact-card", "원문 보기", "전체 번역 보기"]) {
+for (const required of ["relatedNews", "관련뉴스", "previewText", "compact-card", "원문 보기", "전체 번역 보기", "translatedBody", "translationPreview"]) {
   if (!appJs.includes(required)) throw new Error(`News review UI missing: ${required}`);
 }
 if (appJs.includes("기사 내용 펼쳐보기")) throw new Error("Domestic article expand button must remain removed");
@@ -39,8 +39,12 @@ for (const required of ["news.google.com/rss/search", "aiUsed: false", "relatedN
   if (!domesticCollector.includes(required)) throw new Error(`Domestic RSS collector rule missing: ${required}`);
 }
 const domesticPreview = await fs.readFile(path.join(ROOT, "scripts", "normalize-domestic-previews.mjs"), "utf8");
-for (const required of ["previewText", "og:description", "firstParagraph", "article.url"]) {
+for (const required of ["previewText", "og:description", "twitter:description", "paragraphCandidates", "relatedNews"]) {
   if (!domesticPreview.includes(required)) throw new Error(`Domestic preview normalization rule missing: ${required}`);
+}
+const fullTranslation = await fs.readFile(path.join(ROOT, "scripts", "translate-full-articles.mjs"), "utf8");
+for (const required of ["translatedTitleKo", "translatedBodyKo", "translatedBody", "fullTranslation", "translationPreview", "Do not summarize"]) {
+  if (!fullTranslation.includes(required)) throw new Error(`Full article translation rule missing: ${required}`);
 }
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
@@ -53,6 +57,7 @@ const stages = [
   "node scripts/filter-regional-iraq-exposure.mjs",
   "node scripts/extract-article-facts.mjs",
   "npm run postprocess",
+  "node scripts/translate-full-articles.mjs",
   "node scripts/collect-domestic-news.mjs",
   "node scripts/normalize-domestic-previews.mjs"
 ];
@@ -69,6 +74,7 @@ const syntaxFiles = [
   "app.js",
   "scripts/collect-domestic-news.mjs",
   "scripts/normalize-domestic-previews.mjs",
+  "scripts/translate-full-articles.mjs",
   "scripts/editorial-rules.mjs",
   "scripts/article-fact-rules.mjs",
   "scripts/collect-sources-only.mjs",
@@ -86,4 +92,4 @@ for (const file of syntaxFiles) {
   const result = spawnSync(process.execPath, ["--check", file], { stdio: "inherit" });
   if (result.status !== 0) process.exit(result.status || 1);
 }
-console.log(`Validated ${allQueries.length} Iraq queries, ${expectedKorean.length} no-AI domestic RSS queries, simplified collection workflow, and ${syntaxFiles.length} JavaScript files.`);
+console.log(`Validated ${allQueries.length} Iraq queries, ${expectedKorean.length} no-AI domestic RSS queries, full-body translation, and ${syntaxFiles.length} JavaScript files.`);
