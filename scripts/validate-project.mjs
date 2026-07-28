@@ -18,14 +18,34 @@ const queries = Object.entries(keywordConfig)
   .flatMap(([, values]) => Array.isArray(values) ? values : []);
 if (!queries.length) throw new Error("Search keyword list is empty");
 if (new Set(queries).size !== queries.length) throw new Error("Duplicate search keywords found");
-for (const required of [
-  "\"العراق\" \"مجلس الوزراء\"",
+
+const requiredQueries = [
+  "\"مجلس الوزراء العراقي\" \"قرارات\"",
+  "\"مجلس النواب\" \"جلسة\" \"العراق\"",
+  "\"الهيئة الوطنية للاستثمار\" \"مجلس الوزراء\"",
+  "\"بسماية\" \"الهيئة الوطنية للاستثمار\"",
   "\"العراق\" \"داعش\"",
   "\"العراق\" \"الحدود السورية\"",
   "\"국제유가\"",
   "\"이라크\" \"영공 폐쇄\""
-]) {
+];
+for (const required of requiredQueries) {
   if (!queries.includes(required)) throw new Error(`Required search keyword missing: ${required}`);
+}
+
+const requiredGroups = [
+  "core_bncp_non_arabic",
+  "arabic_iraq_politics",
+  "arabic_iraq_security_protests",
+  "english_iraq_politics_security",
+  "korean_oil_market",
+  "korean_middle_east",
+  "english_middle_east_fallback"
+];
+for (const group of requiredGroups) {
+  if (!Array.isArray(keywordConfig[group]) || !keywordConfig[group].length) {
+    throw new Error(`Required search keyword group missing or empty: ${group}`);
+  }
 }
 
 const forbiddenArabicEconomy = ["\"العراق\" \"النفط\"", "\"العراق\" \"الاقتصاد\"", "\"العراق\" \"الاستثمار\"", "\"العراق\" \"الإسكان\""];
@@ -34,6 +54,15 @@ for (const forbidden of forbiddenArabicEconomy) {
 }
 for (const forbidden of ["\"가자\" \"이스라엘\" \"인질\"", "\"Gaza\" \"Israel\" \"hostages\""]) {
   if (queries.includes(forbidden)) throw new Error(`Gaza-specific Middle East query must remain removed: ${forbidden}`);
+}
+
+const koreanPoliticsSecurityGroups = [
+  ...(keywordConfig.arabic_iraq_politics || []),
+  ...(keywordConfig.arabic_iraq_security_protests || []),
+  ...(keywordConfig.english_iraq_politics_security || [])
+];
+if (koreanPoliticsSecurityGroups.some((query) => /[가-힣]/.test(String(query)))) {
+  throw new Error("Politics and security keyword groups must not contain Korean-language queries");
 }
 
 const regionalQueries = [
@@ -58,8 +87,17 @@ const alJazeera = sources.find((source) => source.id === "aljazeera-arabic" && s
 if (!alJazeera || !(alJazeera.listPages || []).some((url) => /aljazeera\.net\/where\/mideast\/arab\/iraq/i.test(url))) {
   throw new Error("Al Jazeera Arabic Iraq source is missing or disabled");
 }
-for (const required of ["\"علي الزيدي\"", "\"الزيدي\" \"طهران\""]) {
-  if (!queries.includes(required)) throw new Error(`Current Iraqi PM search keyword missing: ${required}`);
+
+const politicalCoverageSignals = [
+  "\"رئيس الوزراء\" \"توجيه\" \"العراق\"",
+  "\"الإطار التنسيقي\" \"اجتماع\"",
+  "\"هيئة النزاهة\" \"مسؤول\" \"العراق\"",
+  "\"الهيئة الوطنية للاستثمار\" \"تحقيق\"",
+  "\"رئيس الوزراء\" \"واشنطن\" \"العراق\"",
+  "\"رئيس الوزراء\" \"طهران\" \"العراق\""
+];
+for (const required of politicalCoverageSignals) {
+  if (!queries.includes(required)) throw new Error(`Political coverage keyword missing: ${required}`);
 }
 
 await fs.access(path.join(ROOT, "templates", "weekly-report-template.docx"));
@@ -67,8 +105,9 @@ await fs.access(path.join(ROOT, "scripts", "fill-weekly-template.py"));
 
 const indexHtml = await fs.readFile(path.join(ROOT, "index.html"), "utf8");
 const scriptRefs = [...indexHtml.matchAll(/<script\s+src="\.\/([^"?]+)(?:\?[^\"]*)?"/g)].map((match) => match[1]);
-if (scriptRefs.length !== 1 || scriptRefs[0] !== "app.js") {
-  throw new Error(`index.html must load only app.js; found: ${scriptRefs.join(", ")}`);
+const allowedScriptRefs = new Set(["app.js", "update-time.js"]);
+if (!scriptRefs.includes("app.js") || scriptRefs.some((ref) => !allowedScriptRefs.has(ref))) {
+  throw new Error(`index.html must load app.js and only approved helper scripts; found: ${scriptRefs.join(", ")}`);
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
