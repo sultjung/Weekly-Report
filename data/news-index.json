@@ -1,28 +1,33 @@
 {
-  "generatedAt": "2026-07-28T06:40:49.970Z",
+  "generatedAt": "2026-07-28T22:23:21.447Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 93,
+    "total": 113,
     "politics": 7,
-    "terror_security": 79,
+    "terror_security": 99,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 104,
-    "carriedForward": 104
+    "previous": 93,
+    "carriedForward": 93
   },
-  "elapsedSeconds": 33,
-  "count": 93,
+  "elapsedSeconds": 34,
+  "count": 113,
   "regionalIraqExposure": {
-    "inputRegional": 84,
-    "keptRegional": 23,
-    "removedRegional": 61,
+    "inputRegional": 81,
+    "keptRegional": 24,
+    "removedRegional": 57,
     "removed": [
+      {
+        "id": "rss-xRakfPPRVOSeHzWqxhR2vCfo",
+        "title": "Saudi Arabia vows firm response to attacks on oil facilities and shipping - Gulf News",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
       {
         "id": "rss-2l7KYG0TliIcgXr11btk352L",
         "title": "Gulf oil producers race to build alternatives to the Strait of Hormuz as oil nears $100 - Cyprus Shipping News",
@@ -34,9 +39,9 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
-        "id": "rss-GblqMmHII_6j-vjhJUe3WCIr",
-        "title": "Saudis Blame Iran-Backed Militias Based in Iraq for Drone Attacks - The New York Times",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+        "id": "rss-jupE-sqhQ34HsbmZA2H1h0dn",
+        "title": "Drones attack Iran's neighbours as Tehran appears to test Trump's latest pause - The Business Standard",
+        "reason": "원문에 이라크 직접 연결 없음"
       },
       {
         "id": "rss-daCA4O38pUYy5YUwJfX12j20",
@@ -44,8 +49,8 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-_uiGqSVYxSA3TR3HAU5ZJmML",
-        "title": "CHARTED: Oil Trade Through the Strait of Hormuz by Country – Visual Capitalist - EnergyNow.com",
+        "id": "rss-BVGtE60tmRDCuBNVcjCIezuV",
+        "title": "Iran Ground Offensive Against U.S. Bases Inconceivable, Analysts Say - Forbes",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -64,11 +69,6 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
-        "id": "rss-hoN40ld7y-MD9-0j28lorRDB",
-        "title": "Strait of Hormuz - Encyclopedia Britannica",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
         "id": "rss-AnvfO22aefVu34q3U6esp7fy",
         "title": "Iran's attacks on US bases in the Middle East mark 'end of an era' - ABC News & Headlines – Australian Broadcasting Corporation",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -77,11 +77,6 @@
         "id": "rss-KOpH8sWHQ4fDdZPRyj8Jk1h2",
         "title": "Syria focuses on energy deals, works to revive infrastructure and institutions - Foundation for Defense of Democracies",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-alJTKsE_hmmjd7f3iyCh4AoA",
-        "title": "Drones target Iraqi city where US forces are based as US-Iran fighting escalates - BreakingNews.ie",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-rt-WCItcBH0rOu67Xl_BXGzm",
@@ -99,9 +94,9 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
-        "id": "rss-XiQuo2QuerxkkXDkfhnGYvu5",
-        "title": "US military says it fired on another merchant vessel trying to breach blockade of Iranian ports - WFSB",
-        "reason": "원문에 이라크 직접 연결 없음"
+        "id": "rss-3hflbkOwEGxiB6rNEJiDzO2N",
+        "title": "Explosions are heard near a US base in northern Iraq as US-Iran fighting escalates - WWAYTV3",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-CmC7tWH4pxiihnlYRh-TWrzC",
@@ -174,6 +169,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-f7KBmD4o5unYWTtN3C66sfUG",
+        "title": "U.S. soldier killed in Iraq during controlled explosion of Iranian drone named as Sgt. Michael Emmanuel Swinton - CBS News",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
         "title": "Pentagon identifies US service member killed in Iranian attack on Iraq base - The Hill",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -199,19 +199,14 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-uHDTqEly9-KUoifv9RbAc_va",
-        "title": "Pentagon Withheld Dozens of U.S. Military Injuries in Iran War - The New York Times",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
         "id": "rss-rz1gCC_TAGiKyiJZOEr2oBt6",
         "title": "Gulf oil exports hit five-month high as Hormuz traffic slows - The Arab Weekly",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-KhccXrYm4JKZ6Wir-JH7kD8k",
-        "title": "Iranian attack kills U.S. service member in Iraq - Armenpress",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+        "id": "rss-uHDTqEly9-KUoifv9RbAc_va",
+        "title": "Pentagon Withheld Dozens of U.S. Military Injuries in Iran War - The New York Times",
+        "reason": "원문에 이라크 직접 연결 없음"
       },
       {
         "id": "rss-LaiAS68S0LfAVwlqLZtIm8aK",
@@ -249,11 +244,6 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-hpx1hnUC0UVHVm3W-1tx4MJA",
-        "title": "Drone and Missile Attack Targets Komala Party Camp in Iraqi Kurdistan - IranWire",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-DM2SueVZ34aJmgaWsjI0coeF",
         "title": "Gulf states come under Iranian fire as US strikes intensify - Al Jazeera",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -274,14 +264,14 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-SGL5gGNkjIY7p_xF7p7SBWEm",
-        "title": "Video shows Iranian drones shot down over Iraq's Erbil - Reuters",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-PVXAqnCN-BI39vjNgBZE_YLw",
         "title": "Hormuz tanker attacks slow Gulf oil exports as shipping risks mount - World Oil",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
+        "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
@@ -304,6 +294,11 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
+        "id": "rss-gJDr7w16kI7vpeYFGUI4yD2e",
+        "title": "Iraq’s oil exports to South Korea fall by 80% - Iraqi News",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-gM3p5dVS8zU9jsV_l7eElxO8",
         "title": "Germany’s conglomerate Bayer linked to Israel's use of chemical weapons in Lebanon - PressTV",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -312,63 +307,48 @@
         "id": "rss-I456i-rhNasXOToKoIQPZvNh",
         "title": "Live Brazilian Cattle Reach Iraq Through Syria as Regional Trade Corridor Expands - Kurdistan24",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-1cPdKdpw7f_y6FhklwGSvnTs",
-        "title": "Iran attacks Bahrain and Kuwait following U.S. strikes, threatens to halt talks to end war - CBC",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-Lv3l_rC8EwGPnzEXvlNtcSIR",
-        "title": "Iran says it struck US bases in Kuwait, Bahrain after American attacks - The New Region",
-        "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-3fZIG48wyGPAE6IxsbFbk0n4",
-        "title": "Iran's FM calls for new Gulf security framework after strikes on US bases - Türkiye Today",
-        "reason": "원문에 이라크 직접 연결 없음"
       }
     ],
-    "completedAt": "2026-07-28T06:40:50.063Z"
+    "completedAt": "2026-07-28T22:23:21.558Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 104,
-    "requested": 17,
-    "extracted": 17,
+    "reused": 93,
+    "requested": 39,
+    "extracted": 39,
     "failed": 0,
-    "removedCount": 6
+    "removedCount": 13
   },
   "entityNormalization": {
-    "correctedCount": 78,
-    "completedAt": "2026-07-28T06:41:09.490Z"
+    "correctedCount": 89,
+    "completedAt": "2026-07-28T22:24:13.134Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T06:41:09.778Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T22:24:13.431Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T06:41:09.841Z",
-  "untranslatedFilteredCount": 12,
-  "untranslatedFilteredAt": "2026-07-28T06:41:09.939Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T22:24:13.500Z",
+  "untranslatedFilteredCount": 0,
+  "untranslatedFilteredAt": "2026-07-28T22:24:13.609Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T06:41:10.010Z",
-  "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-28T06:41:10.080Z",
+  "datelineLocationCorrectedAt": "2026-07-28T22:24:13.685Z",
+  "aiHallucinationFilteredCount": 1,
+  "aiHallucinationFilteredAt": "2026-07-28T22:24:13.763Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T06:41:10.139Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T22:24:13.830Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T06:41:10.213Z",
-    "removedCount": 28,
-    "correctedCount": 1
+    "appliedAt": "2026-07-28T22:24:13.908Z",
+    "removedCount": 19,
+    "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T06:41:10.268Z",
+    "appliedAt": "2026-07-28T22:24:13.966Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T06:41:10.324Z",
-  "eventCount": 60,
-  "eventDuplicateArticleCount": 33,
-  "eventGroupedAt": "2026-07-28T06:41:10.689Z"
+  "duplicateCollapsedAt": "2026-07-28T22:24:14.028Z",
+  "eventCount": 70,
+  "eventDuplicateArticleCount": 43,
+  "eventGroupedAt": "2026-07-28T22:24:14.601Z"
 }
