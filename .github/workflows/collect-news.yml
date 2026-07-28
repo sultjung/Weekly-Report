@@ -22,8 +22,8 @@ jobs:
       - name: Collect and hydrate source articles
         env:
           NEWS_LOOKBACK_DAYS: "30"
-          MAX_PER_QUERY: "12"
-          MAX_TOTAL: "260"
+          MAX_PER_QUERY: "30"
+          MAX_TOTAL: "320"
           FETCH_TIMEOUT_MS: "12000"
           ARTICLE_FETCH_CONCURRENCY: "4"
         run: npm run collect
