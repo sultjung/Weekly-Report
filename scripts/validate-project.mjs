@@ -9,14 +9,17 @@ const readJson = async (file) => JSON.parse(await fs.readFile(path.join(ROOT, fi
 const keywords = await readJson("data/search-keywords.json");
 const domesticKeywords = await readJson("data/domestic-search-keywords.json");
 const expectedKorean = ["비스마야", "한화 이라크", "이라크", "한화 김동관", "한화 김동선"];
-if (JSON.stringify(domesticKeywords.queries || []) !== JSON.stringify(expectedKorean)) {
+const actualKorean = Array.isArray(domesticKeywords.queries) ? domesticKeywords.queries : [];
+if (JSON.stringify(actualKorean) !== JSON.stringify(expectedKorean)) {
   throw new Error(`Korean domestic queries must be exactly: ${expectedKorean.join(", ")}`);
 }
 if (Object.prototype.hasOwnProperty.call(keywords, "korean_domestic_media")) {
   throw new Error("Korean domestic queries must stay outside the AI keyword file");
 }
 
-const allQueries = Object.entries(keywords).filter(([key]) => !key.startsWith("_")).flatMap(([, values]) => Array.isArray(values) ? values : []);
+const allQueries = Object.entries(keywords)
+  .filter(([key]) => !key.startsWith("_"))
+  .flatMap(([, values]) => Array.isArray(values) ? values : []);
 if (!allQueries.length) throw new Error("Search keyword list is empty");
 if (new Set(allQueries).size !== allQueries.length) throw new Error("Duplicate search keywords found");
 
@@ -26,13 +29,13 @@ for (const required of ["data-stat-filter=\"domestic\"", "id=\"statDomestic\"", 
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
-for (const required of ["relatedNews", "관련뉴스", "previewText", "compact-card", "원문 보기"]) {
-  if (!appJs.includes(required)) throw new Error(`Compact domestic news UI missing: ${required}`);
+for (const required of ["relatedNews", "관련뉴스", "previewText", "compact-card", "원문 보기", "전체 번역 보기"]) {
+  if (!appJs.includes(required)) throw new Error(`News review UI missing: ${required}`);
 }
 if (appJs.includes("기사 내용 펼쳐보기")) throw new Error("Domestic article expand button must remain removed");
 
 const domesticCollector = await fs.readFile(path.join(ROOT, "scripts", "collect-domestic-news.mjs"), "utf8");
-for (const required of ["news.google.com/rss/search", "aiUsed: false", "relatedNews", "SPORTS_RE", "한화 김동관", "한화 김동선"]) {
+for (const required of ["news.google.com/rss/search", "aiUsed: false", "relatedNews", "SPORTS_RE", "KEYWORDS_FILE"]) {
   if (!domesticCollector.includes(required)) throw new Error(`Domestic RSS collector rule missing: ${required}`);
 }
 const domesticPreview = await fs.readFile(path.join(ROOT, "scripts", "normalize-domestic-previews.mjs"), "utf8");
@@ -42,11 +45,13 @@ for (const required of ["previewText", "og:description", "firstParagraph", "arti
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
 if (/gpt-4o-mini/.test(workflow)) throw new Error("Collect workflow must not use gpt-4o-mini");
+if (/node scripts\/refine-report-writing\.mjs/.test(workflow)) {
+  throw new Error("Report-writing refinement must run only during final report generation, not news collection");
+}
 const stages = [
   "npm run collect",
   "node scripts/filter-regional-iraq-exposure.mjs",
   "node scripts/extract-article-facts.mjs",
-  "node scripts/refine-report-writing.mjs",
   "npm run postprocess",
   "node scripts/collect-domestic-news.mjs",
   "node scripts/normalize-domestic-previews.mjs"
@@ -71,7 +76,6 @@ const syntaxFiles = [
   "scripts/filter-regional-iraq-exposure.mjs",
   "scripts/extract-article-facts.mjs",
   "scripts/normalize-extracted-entities.mjs",
-  "scripts/refine-report-writing.mjs",
   "scripts/postprocess-news.mjs",
   "scripts/generate-weekly-report.mjs",
   "scripts/validate-project.mjs",
@@ -82,4 +86,4 @@ for (const file of syntaxFiles) {
   const result = spawnSync(process.execPath, ["--check", file], { stdio: "inherit" });
   if (result.status !== 0) process.exit(result.status || 1);
 }
-console.log(`Validated ${allQueries.length} AI queries, ${expectedKorean.length} no-AI domestic RSS queries, and ${syntaxFiles.length} JavaScript files.`);
+console.log(`Validated ${allQueries.length} Iraq queries, ${expectedKorean.length} no-AI domestic RSS queries, simplified collection workflow, and ${syntaxFiles.length} JavaScript files.`);
