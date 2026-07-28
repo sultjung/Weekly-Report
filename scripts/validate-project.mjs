@@ -27,8 +27,8 @@ for (const required of ["relatedNews", "관련뉴스", "전체 기사 보기", "
 }
 
 const domesticCollector = await fs.readFile(path.join(ROOT, "scripts", "collect-domestic-news.mjs"), "utf8");
-for (const required of ["Google News RSS", "aiUsed: false", "relatedNews", "SPORTS_RE", "한화 김동관", "한화 김동선"]) {
-  if (!domesticCollector.includes(required)) throw new Error(`Simple domestic RSS collector rule missing: ${required}`);
+for (const required of ["news.google.com/rss/search", "aiUsed: false", "relatedNews", "SPORTS_RE", "한화 김동관", "한화 김동선"]) {
+  if (!domesticCollector.includes(required)) throw new Error(`Domestic RSS collector rule missing: ${required}`);
 }
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
