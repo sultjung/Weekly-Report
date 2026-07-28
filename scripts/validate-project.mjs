@@ -14,11 +14,11 @@ if (!queries.length) throw new Error("Search keyword list is empty");
 if (new Set(queries).size !== queries.length) throw new Error("Duplicate search keywords found");
 
 const expectedKorean = [
-  "\"비스마야\"",
-  "\"한화\" \"이라크\"",
-  "\"이라크\"",
-  "\"한화\" \"김동관\"",
-  "\"한화\" \"김동선\""
+  "비스마야",
+  "한화 이라크",
+  "이라크",
+  "한화 김동관",
+  "한화 김동선"
 ];
 const actualKorean = keywords.korean_domestic_media || [];
 if (JSON.stringify(actualKorean) !== JSON.stringify(expectedKorean)) {
