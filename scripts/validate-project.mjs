@@ -26,13 +26,18 @@ for (const required of ["data-stat-filter=\"domestic\"", "id=\"statDomestic\"", 
 }
 
 const appJs = await fs.readFile(path.join(ROOT, "app.js"), "utf8");
-for (const required of ["relatedNews", "관련뉴스", "전체 기사 보기", "domestic-card"]) {
-  if (!appJs.includes(required)) throw new Error(`Grouped domestic news UI missing: ${required}`);
+for (const required of ["relatedNews", "관련뉴스", "previewText", "compact-card", "원문 보기"]) {
+  if (!appJs.includes(required)) throw new Error(`Compact domestic news UI missing: ${required}`);
 }
+if (appJs.includes("기사 내용 펼쳐보기")) throw new Error("Domestic article expand button must remain removed");
 
 const domesticCollector = await fs.readFile(path.join(ROOT, "scripts", "collect-domestic-news.mjs"), "utf8");
 for (const required of ["news.google.com/rss/search", "aiUsed: false", "relatedNews", "SPORTS_RE", "한화 김동관", "한화 김동선"]) {
   if (!domesticCollector.includes(required)) throw new Error(`Domestic RSS collector rule missing: ${required}`);
+}
+const domesticPreview = await fs.readFile(path.join(ROOT, "scripts", "normalize-domestic-previews.mjs"), "utf8");
+for (const required of ["previewText", "og:description", "firstParagraph", "article.url"]) {
+  if (!domesticPreview.includes(required)) throw new Error(`Domestic preview normalization rule missing: ${required}`);
 }
 
 const workflow = await fs.readFile(path.join(ROOT, ".github/workflows/collect-news.yml"), "utf8");
@@ -43,7 +48,8 @@ const stages = [
   "node scripts/extract-article-facts.mjs",
   "node scripts/refine-report-writing.mjs",
   "npm run postprocess",
-  "node scripts/collect-domestic-news.mjs"
+  "node scripts/collect-domestic-news.mjs",
+  "node scripts/normalize-domestic-previews.mjs"
 ];
 const positions = stages.map((stage) => workflow.indexOf(stage));
 if (positions.some((value) => value < 0) || !positions.every((value, index) => index === 0 || value > positions[index - 1])) {
@@ -57,6 +63,7 @@ await fs.access(path.join(ROOT, "scripts", "fill-weekly-template.py"));
 const syntaxFiles = [
   "app.js",
   "scripts/collect-domestic-news.mjs",
+  "scripts/normalize-domestic-previews.mjs",
   "scripts/editorial-rules.mjs",
   "scripts/article-fact-rules.mjs",
   "scripts/collect-sources-only.mjs",
