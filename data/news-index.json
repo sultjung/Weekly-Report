@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-28T04:13:38.975Z",
+  "generatedAt": "2026-07-28T04:59:26.276Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 183,
-    "politics": 8,
-    "terror_security": 88,
-    "oil_economy": 80,
+    "total": 103,
+    "politics": 7,
+    "terror_security": 89,
+    "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 170,
-    "carriedForward": 170
+    "previous": 102,
+    "carriedForward": 102
   },
-  "elapsedSeconds": 36,
-  "count": 183,
+  "elapsedSeconds": 24,
+  "count": 103,
   "regionalIraqExposure": {
-    "inputRegional": 82,
-    "keptRegional": 22,
-    "removedRegional": 60,
+    "inputRegional": 84,
+    "keptRegional": 23,
+    "removedRegional": 61,
     "removed": [
       {
         "id": "rss-2l7KYG0TliIcgXr11btk352L",
@@ -31,11 +31,6 @@
       {
         "id": "rss-cqvQCMc1Zl1hJE01_70XKIH0",
         "title": "Saudi says groups in Iraq targeted territory, Houthis claim drone attacks - The Hindu",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-0iertV6yZLxU-8JK7NQsvfQK",
-        "title": "Riyadh demands Baghdad curb attacks by Iran-aligned militias in Iraq - Rudaw",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -64,18 +59,8 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss--xGhV1_74IHgShFIApGE6XOp",
-        "title": "Iraq signs pipeline deal with Syria to reroute oil exports through the Mediterranean - Crypto Briefing",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-na3RPXC11r0a9wkGP1LQbPzG",
         "title": "Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say - The New York Times",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-rXARu2rUHPQWukzw_2q_5NvO",
-        "title": "Houthis say hit Saudi Arabia as Trump weighs harder Iran strikes - Iraqi News",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -114,9 +99,19 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
+        "id": "rss-3hflbkOwEGxiB6rNEJiDzO2N",
+        "title": "Explosions are heard near a US base in northern Iraq as US-Iran fighting escalates - WWAYTV3",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-XiQuo2QuerxkkXDkfhnGYvu5",
         "title": "US military says it fired on another merchant vessel trying to breach blockade of Iranian ports - WFSB",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-yQInKx31yQeXKh4Ep2VrO4pe",
+        "title": "Explosions Reported Near US Base In Northern Iraq As Iran Conflict Escalates - Outlook India",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-CmC7tWH4pxiihnlYRh-TWrzC",
@@ -137,6 +132,11 @@
         "id": "rss-ipCIpKGOC3ggj1FuBXhBfnhm",
         "title": "US imports first fuel oil cargoes shipped via Syria as Iraq leverages new export route - Reuters",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-n3iVNmj991Ju2ccOpJO2lQV-",
+        "title": "Iran sends commanders, missile equipment to Yemen’s Houthis: sources - Crypto Briefing",
+        "reason": "원문에 이라크 직접 연결 없음"
       },
       {
         "id": "rss-BQQ2DUEZrQ502V8y6Xaa0XzC",
@@ -164,7 +164,7 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-vaD_bsBE4rMu_Rz3Cm0cJRWi",
+        "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -182,11 +182,6 @@
         "id": "rss-yfWqgGDikgDmDdM9mfyPxEi5",
         "title": "To Base or Not to Base: The Iran War Exposes Flaws of U.S. Basing in the Middle East - Council on Foreign Relations",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-f7KBmD4o5unYWTtN3C66sfUG",
-        "title": "U.S. soldier killed in Iraq during controlled explosion of Iranian drone named as Sgt. Michael Emmanuel Swinton - CBS News",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
@@ -269,6 +264,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-2m3a6pTBt94uSNqXZKOK8rc8",
+        "title": "Vessel hijacked off Yemen as satellite images show Iranian missile hit US Patriot battery - Ynetnews",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-PC7SzZ_PrpqtSS-GcfJZlN-x",
         "title": "Iran Targets US Military Bases Across 3 Countries in Retaliatory Attack - IranWire",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -286,6 +286,11 @@
       {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-RXSndJmdfwZLG3_O0ZAd51m8",
+        "title": "Khamenei funeral procession crosses into Iraq amid 2026 Iran war tensions - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -324,46 +329,46 @@
         "reason": "원문에 이라크 직접 연결 없음"
       }
     ],
-    "completedAt": "2026-07-28T04:13:39.054Z"
+    "completedAt": "2026-07-28T04:59:26.371Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 170,
-    "requested": 28,
-    "extracted": 28,
+    "reused": 102,
+    "requested": 17,
+    "extracted": 17,
     "failed": 0,
-    "removedCount": 7
+    "removedCount": 8
   },
   "entityNormalization": {
-    "correctedCount": 75,
-    "completedAt": "2026-07-28T04:14:57.329Z"
+    "correctedCount": 76,
+    "completedAt": "2026-07-28T04:59:44.833Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T04:14:57.580Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T04:59:45.116Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T04:14:57.631Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T04:59:45.176Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T04:14:57.718Z",
+  "untranslatedFilteredAt": "2026-07-28T04:59:45.269Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T04:14:57.777Z",
+  "datelineLocationCorrectedAt": "2026-07-28T04:59:45.330Z",
   "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-28T04:14:57.836Z",
+  "aiHallucinationFilteredAt": "2026-07-28T04:59:45.395Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T04:14:57.889Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T04:59:45.453Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T04:14:57.955Z",
-    "removedCount": 15,
+    "appliedAt": "2026-07-28T04:59:45.520Z",
+    "removedCount": 16,
     "correctedCount": 1
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T04:14:58.001Z",
+    "appliedAt": "2026-07-28T04:59:45.572Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T04:14:58.055Z",
-  "eventCount": 94,
-  "eventDuplicateArticleCount": 89,
-  "eventGroupedAt": "2026-07-28T04:14:58.502Z"
+  "duplicateCollapsedAt": "2026-07-28T04:59:45.628Z",
+  "eventCount": 63,
+  "eventDuplicateArticleCount": 40,
+  "eventGroupedAt": "2026-07-28T04:59:46.031Z"
 }

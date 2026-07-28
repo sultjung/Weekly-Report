@@ -1,29 +1,31 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-28T04:13:38.975Z",
+  "generatedAt": "2026-07-28T04:59:26.276Z",
   "lookbackDays": 30,
-  "count": 146,
+  "count": 147,
   "cacheHits": 0,
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "counts": {
-    "total": 183,
-    "politics": 8,
-    "terror_security": 88,
-    "oil_economy": 80,
+    "total": 103,
+    "politics": 7,
+    "terror_security": 89,
+    "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "articles": [
     {
-      "id": "domestic-qg7BJYxGS-pZoKtfk7-1Or0D",
+      "id": "domestic-Fjci6-18ZQEUPanciHuHemvZ",
       "title": "[김동선 시대 개막] ① 신설 지주사 출범 카운트다운 …한화그룹 막내의 홀로서기",
       "titleKo": "[김동선 시대 개막] ① 신설 지주사 출범 카운트다운 …한화그룹 막내의 홀로서기",
       "source": "CEO스코어데일리",
       "publishedAt": "2026-07-27T22:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9sOWFsVFRqeWdQV21yckpkbkh4YTBmblpJMVpIY3NLVklwNmNGS1pFX2VrN0wzVGxPejFsYUNIWk5KcEtvUDlvWGtYRGIzQkhmR2xobTlWRXZfUXNSLTJ1LXlDUkdrbF9nbXFN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9sOWFsVFRqeWdQV21yckpkbkh4YTBmblpJMVpIY3NLVklwNmNGS1pFX2VrN0wzVGxPejFsYUNIWk5KcEtvUDlvWGtYRGIzQkhmR2xobTlWRXZfUXNSLTJ1LXlDUkdrbF9nbXFN?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선 시대 개막] ① 신설 지주사 출범 카운트다운 …한화그룹 막내의 홀로서기 CEO스코어데일리",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -33,17 +35,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-LB_8ftL_U-NXEz8OCxBRcEx9",
+      "id": "domestic-nlK26Z0NcDnnTASTVy9A4xnK",
       "title": "[미완의 한화 김동선②] 백화점 열 손가락에 없는 갤러리아",
       "titleKo": "[미완의 한화 김동선②] 백화점 열 손가락에 없는 갤러리아",
       "source": "신아일보",
       "publishedAt": "2026-07-27T20:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ZV2V6QWhqMk1mY05BeWtBc3JlbUprZ193M0t6dDJOaUlfcHVWQWU5YVRQaHdNMXdzMV9vM1UyRk5Nbms2UnFzVTJONTFwb29SbHZXZkxtbWZla2gzU3JvZjg2U2hzMWRjTjJnS203NHk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ZV2V6QWhqMk1mY05BeWtBc3JlbUprZ193M0t6dDJOaUlfcHVWQWU5YVRQaHdNMXdzMV9vM1UyRk5Nbms2UnFzVTJONTFwb29SbHZXZkxtbWZla2gzU3JvZjg2U2hzMWRjTjJnS203NHk?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[미완의 한화 김동선②] 백화점 열 손가락에 없는 갤러리아 신아일보",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -53,17 +58,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-N3xMuiwrPePOPwMldFISdX6j",
+      "id": "domestic-oxBedD4mYJUYfrw2cfAWPoCq",
       "title": "이라크 총리, 사우디 '이라크발 드론 공격' 주장에 조사 지시",
       "titleKo": "이라크 총리, 사우디 '이라크발 드론 공격' 주장에 조사 지시",
       "source": "뉴시스",
       "publishedAt": "2026-07-27T19:41:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1fQ1RSRXZKTGt3cGRFd2RpMVAyQkxrcldZUTlCU01qN0tlNHA5X1NpWlMzcXNKNWlBWXBBbmhRQndTcklMb2tLY0JpMWhtOUc5QVNmeTNqU0JsRG85enFuaUMyZllvVzlfSnlGSjJsLXFvY2I3eDVwddIBeEFVX3lxTE1fQ1RSRXZKTGt3cGRFd2RpMVAyQkxrcldZUTlCU01qN0tlNHA5X1NpWlMzcXNKNWlBWXBBbmhRQndTcklMb2tLY0JpMWhtOUc5QVNmeTNqU0JsRG85enFuaUMyZllvVzlfSnlGSjJsLXFvY2I3eDVwdQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1fQ1RSRXZKTGt3cGRFd2RpMVAyQkxrcldZUTlCU01qN0tlNHA5X1NpWlMzcXNKNWlBWXBBbmhRQndTcklMb2tLY0JpMWhtOUc5QVNmeTNqU0JsRG85enFuaUMyZllvVzlfSnlGSjJsLXFvY2I3eDVwddIBeEFVX3lxTE1fQ1RSRXZKTGt3cGRFd2RpMVAyQkxrcldZUTlCU01qN0tlNHA5X1NpWlMzcXNKNWlBWXBBbmhRQndTcklMb2tLY0JpMWhtOUc5QVNmeTNqU0JsRG85enFuaUMyZllvVzlfSnlGSjJsLXFvY2I3eDVwdQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크 총리, 사우디 '이라크발 드론 공격' 주장에 조사 지시 뉴시스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -73,17 +81,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-8FnOin50cZvOiyZ6XsJwhlUM",
+      "id": "domestic-oFawLZoQxhlA7P3uBzBHr0IW",
       "title": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
       "titleKo": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세",
       "source": "뉴스1",
       "publishedAt": "2026-07-27T15:25:45.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5SY2d0WlRCYVc3bnNZSy1VRzhTRHpLbjdjQlFvZ1pGVXpZNTFyVkRrQmIzY1RiQ3loaUJNVkl3c25YbWRtNjk2OW9teDNLYTNGVlZPMng2TElwYnBvcVRPa2JB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5SY2d0WlRCYVc3bnNZSy1VRzhTRHpLbjdjQlFvZ1pGVXpZNTFyVkRrQmIzY1RiQ3loaUJNVkl3c25YbWRtNjk2OW9teDNLYTNGVlZPMng2TElwYnBvcVRPa2JB?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "예멘 후티, 사우디 송유관 드론 공격 주장… 이라크 민병대도 가세 뉴스1",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -93,17 +104,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-0NYo-NMX30vwMNk0ipVCEWar",
+      "id": "domestic-gL1maz0RQCSx25GtE3ruVNxN",
       "title": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" |",
       "titleKo": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" |",
       "source": "연합인포맥스",
       "publishedAt": "2026-07-27T14:28:44.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiREF5a3BiTExWdmtnUjJKZTJmTkJ3SzZTczl3N2NmMTY4SVN0WWNKeXlVV0V4bmNQdWdJVmZUOFdjQTJQVXV0XzBwNVVZeExzM1R3MThSQU00dHBYZ1o4QXVjdGtqME12ZXJ4eFRDV25WdzhL?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiREF5a3BiTExWdmtnUjJKZTJmTkJ3SzZTczl3N2NmMTY4SVN0WWNKeXlVV0V4bmNQdWdJVmZUOFdjQTJQVXV0XzBwNVVZeExzM1R3MThSQU00dHBYZ1o4QXVjdGtqME12ZXJ4eFRDV25WdzhL?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" | 연합인포맥스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -113,17 +127,43 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-yRrHbQkF3Aa8WhHqyk78TYuS",
+      "id": "domestic-oFN2WFyXgHxA6AYChrEqJPRX",
+      "title": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
+      "titleKo": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-27T13:45:49.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE14SDQyNzRkUnhuTGVQUUFfOGNtN2pIc2xmVVlSNk9LZWd4SVphbnBnWFVKRmVWTFJscVViSHdQalRwYmtvMkE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
+      "description": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격 v.daum.net",
+      "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
+      "query": "이라크",
+      "queryGroup": "korean_domestic_media",
+      "collectionLane": "korean_domestic_media",
+      "category3": "domestic_media",
+      "domesticMedia": true,
+      "importanceScore": 70,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
+      "relatedNews": [],
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
+    },
+    {
+      "id": "domestic-PM3sj9KJAzDF9TS5jQRZioM_",
       "title": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\"",
       "titleKo": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\"",
-      "source": "v.daum.net",
-      "publishedAt": "2026-07-27T13:45:01.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9ZNE5jcTl2eGFaNm1raUZPU1dqdGcxZ3BZWWxuX0czVHZOcFZVOWZ4VDZJTXprSnNVQjloLV9HSXF6Y19zSFE?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "description": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\" v.daum.net",
+      "source": "news.sbs.co.kr",
+      "publishedAt": "2026-07-27T13:43:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVmphUGswN01tdi1lQ0l6QVNhTk5EdDF0alRUVUFsRDdGQ3Y1MmllSGVDaDRJWHE2ckx4UnZNSkh4SHVsbEpqd2dBQUZJSktORnZjX0R2Vm9LSW9JMW52dTYtSGU2SFNSb253azRIN3E2VDlpcFhWSXg0VElaVDZLdDhIR1VXZw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
+      "description": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\" news.sbs.co.kr",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -134,53 +174,29 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [
         {
-          "title": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\"",
-          "source": "news.sbs.co.kr",
-          "publishedAt": "2026-07-27T13:43:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVmphUGswN01tdi1lQ0l6QVNhTk5EdDF0alRUVUFsRDdGQ3Y1MmllSGVDaDRJWHE2ckx4UnZNSkh4SHVsbEpqd2dBQUZJSktORnZjX0R2Vm9LSW9JMW52dTYtSGU2SFNSb253azRIN3E2VDlpcFhWSXg0VElaVDZLdDhIR1VXZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-          "description": "사우디 \"이라크발 드론 요격…이란 지원 민병대 소행\" news.sbs.co.kr",
-          "fullText": ""
-        },
-        {
           "title": "사우디 \"이라크발 드론 요격…이란 지원받는 민병대 소행\"",
           "source": "연합뉴스",
           "publishedAt": "2026-07-27T13:25:07.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TcTBnTmhKajVoRkxTTjJvWFdtc0VVbmE5UTkta3pqcldBYm03NGx4djFZaXhIaWVhUzROaHFtSE4yaGlyYlBwZXRuZEpCbXoyWFZtZnFTeXZoUnfSAWBBVV95cUxQSm1DX1FobllqUmNXZlZCaFRDOFQ3RlFTWUNLN1FKbUdsQjVJRklvaEI0Q3JBOVpyMklhY3hpNWhXOGdza0lKZGNkWFhaWHZjczhXaXZpWjBFZFN6MFJCVUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TcTBnTmhKajVoRkxTTjJvWFdtc0VVbmE5UTkta3pqcldBYm03NGx4djFZaXhIaWVhUzROaHFtSE4yaGlyYlBwZXRuZEpCbXoyWFZtZnFTeXZoUnfSAWBBVV95cUxQSm1DX1FobllqUmNXZlZCaFRDOFQ3RlFTWUNLN1FKbUdsQjVJRklvaEI0Q3JBOVpyMklhY3hpNWhXOGdza0lKZGNkWFhaWHZjczhXaXZpWjBFZFN6MFJCVUQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "사우디 \"이라크발 드론 요격…이란 지원받는 민병대 소행\" 연합뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 2
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-bX6-UvbmWwwlagS4pCRcTddT",
-      "title": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
-      "titleKo": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격",
-      "source": "뉴스1",
-      "publishedAt": "2026-07-27T13:43:59.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9EUDI5UUFtYTBDODQ1SmFxTFlROC1EYlZWbnZReEhFM0RsZ210WDEyWU5KYWpHU1A5V1h1TXdMYVhTdzRVR2k5NGp2RDk5bUhxaUFNbF9KY0Zrc3N6S3hJYWR3?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "description": "'친이란' 이라크 무장단체·후티반군, 사우디 석유 인프라 공격 뉴스1",
-      "fullText": "",
-      "query": "이라크",
-      "queryGroup": "korean_domestic_media",
-      "collectionLane": "korean_domestic_media",
-      "category3": "domestic_media",
-      "domesticMedia": true,
-      "importanceScore": 70,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
-      "relatedNews": [],
-      "relatedNewsCount": 0
-    },
-    {
-      "id": "domestic-wc7Vb4kfbStCSa99c12Zj4Fp",
+      "id": "domestic-Z5LiLR_XHSfm_FE9cFKmZvs2",
       "title": "이라크와 레바논, 불안정한 중동 정세 속에서 관계 강화.",
       "titleKo": "이라크와 레바논, 불안정한 중동 정세 속에서 관계 강화.",
       "source": "Vietnam.vn",
       "publishedAt": "2026-07-27T08:38:25.000Z",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbnlSRzFqTlVhdE1XRHI4a1kzVFBsS01USDVRVTRwRmQ5VEEwcVh4WmlzOUZLelYzTl92Z19YMzVOcUE0aTZuMlYwajFBSlZSdVdtMDU5WEF1SDFEZjF3OW1KOVUxbDFJaDZTMmExdUlnd20yalN6UjEwOGRsTkFoNUxUX2FSZFNISTZXaWsxbFV4V0J2S3E0dURaMzVmc08z?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbnlSRzFqTlVhdE1XRHI4a1kzVFBsS01USDVRVTRwRmQ5VEEwcVh4WmlzOUZLelYzTl92Z19YMzVOcUE0aTZuMlYwajFBSlZSdVdtMDU5WEF1SDFEZjF3OW1KOVUxbDFJaDZTMmExdUlnd20yalN6UjEwOGRsTkFoNUxUX2FSZFNISTZXaWsxbFV4V0J2S3E0dURaMzVmc08z?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크와 레바논, 불안정한 중동 정세 속에서 관계 강화. Vietnam.vn",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -190,17 +206,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-FhFpb0FukOBBFAOQwLIbQ43U",
+      "id": "domestic-KDqSLec6aw3wX_wxnOsqqhav",
       "title": "[김동선의 뉴한화] '신성장동력' 한화로보틱스, 밸류체인 구축 촉각 : 네이버 블로그",
       "titleKo": "[김동선의 뉴한화] '신성장동력' 한화로보틱스, 밸류체인 구축 촉각 : 네이버 블로그",
       "source": "Naver Blog",
       "publishedAt": "2026-07-27T05:08:35.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNT09UdFBBdklYdmVhVDdoVzk0Nk9pRkg2dXE2VURlUFoxUFVMWTVwa2ZhZE5MYi1DVE82RUUyX01DNXYyajhFUUhQU0ZVZ1NSbU5EU1AwUHRMc0JDRWFINGNKRlZmZkZsbk9kdUgxaU5sR1FYWk1fU2pBYjdQV2ZRWUZ1TWVHZnlCV0dUcHI2dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNT09UdFBBdklYdmVhVDdoVzk0Nk9pRkg2dXE2VURlUFoxUFVMWTVwa2ZhZE5MYi1DVE82RUUyX01DNXYyajhFUUhQU0ZVZ1NSbU5EU1AwUHRMc0JDRWFINGNKRlZmZkZsbk9kdUgxaU5sR1FYWk1fU2pBYjdQV2ZRWUZ1TWVHZnlCV0dUcHI2dw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선의 뉴한화] '신성장동력' 한화로보틱스, 밸류체인 구축 촉각 : 네이버 블로그 Naver Blog",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -210,17 +229,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-SYCsl2I2HJI7eCzXqh8AgJ9H",
+      "id": "domestic-Asdw4V0dWtWE-6Q4_2u0MM3k",
       "title": "김동선, 한화 독립경영 첫 시험대...성장보다 '계열사 간 현금 배분'",
       "titleKo": "김동선, 한화 독립경영 첫 시험대...성장보다 '계열사 간 현금 배분'",
       "source": "뉴스핌",
       "publishedAt": "2026-07-27T04:24:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE03a0tZU2hKbEFTLVBadkIxNzlYZlZEeTI2UGlDalF3R29XeDhVMjNtcUh5YTIwRXVKQll6RllhSlBXSFlvTzVpRmJZbUI0cjBpNGxUbktwR0lyOTFw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE03a0tZU2hKbEFTLVBadkIxNzlYZlZEeTI2UGlDalF3R29XeDhVMjNtcUh5YTIwRXVKQll6RllhSlBXSFlvTzVpRmJZbUI0cjBpNGxUbktwR0lyOTFw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "김동선, 한화 독립경영 첫 시험대...성장보다 '계열사 간 현금 배분' 뉴스핌",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -230,17 +252,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-YYY3oCPO3k5uG7tPCju6wjZI",
+      "id": "domestic-c4sKyTk__JD1FxSwCP2HBA1N",
       "title": "이라크, 시리아 경유 지중해 송유관 건설 추진",
       "titleKo": "이라크, 시리아 경유 지중해 송유관 건설 추진",
       "source": "더구루",
       "publishedAt": "2026-07-27T00:49:36.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1mNjZ4anhGTl9KQjhNRVdWTE9aSFNIWW9scWhvanFMUUkzdUp5ajZZS2tway10TFpFWWppSjBiY3NxWmNtX3E1RFg3OWRHLVZOTkhGT0laQ0RjeTYzOVZNYmN6RQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1mNjZ4anhGTl9KQjhNRVdWTE9aSFNIWW9scWhvanFMUUkzdUp5ajZZS2tway10TFpFWWppSjBiY3NxWmNtX3E1RFg3OWRHLVZOTkhGT0laQ0RjeTYzOVZNYmN6RQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크, 시리아 경유 지중해 송유관 건설 추진 더구루",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -250,17 +275,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-9QyFKIEVsgGtdExxZ1I3zTGY",
+      "id": "domestic-wGCi0cOOi8gD4mJ9qamh4BuJ",
       "title": "이라크와 레바논은 경제 협력을 증진하고 지역 프로젝트를 개발하고 있습니다.",
       "titleKo": "이라크와 레바논은 경제 협력을 증진하고 지역 프로젝트를 개발하고 있습니다.",
       "source": "Vietnam.vn",
       "publishedAt": "2026-07-27T00:28:26.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQWFWUC1BVUJnbDJxMFpZRGdUakFPb3BkaUpFUDdod0dTSUZLMW1YTWlhblJYN2EybUJBLVpZcGk4Rzh6OHUxVGlSaUxDb1VkQ2pjNDdLZnZ3SURLdWwyVGZLdEJpM0Z2ejRXcWdwR1BZZ1IzeVpTNFpTVWhaM2JIaThXSURYSHc4azl3MThxaHBOeDVlamwxcjMwUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQWFWUC1BVUJnbDJxMFpZRGdUakFPb3BkaUpFUDdod0dTSUZLMW1YTWlhblJYN2EybUJBLVpZcGk4Rzh6OHUxVGlSaUxDb1VkQ2pjNDdLZnZ3SURLdWwyVGZLdEJpM0Z2ejRXcWdwR1BZZ1IzeVpTNFpTVWhaM2JIaThXSURYSHc4azl3MThxaHBOeDVlamwxcjMwUQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크와 레바논은 경제 협력을 증진하고 지역 프로젝트를 개발하고 있습니다. Vietnam.vn",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -270,17 +298,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-vKyWFnA7NDkBaICdZ51ZlKRz",
+      "id": "domestic-jEXJ69dchpUj50G7ks_Lwn_c",
       "title": "유통·테크 판 키운 '한화 3남' 김동선…투자 성과 입증 과제 [기업X-RAY]",
       "titleKo": "유통·테크 판 키운 '한화 3남' 김동선…투자 성과 입증 과제 [기업X-RAY]",
       "source": "네이트",
       "publishedAt": "2026-07-26T21:02:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9BNWZuLTBZd0E0ekxPWktMdFJlX1kxMWdjdnRjanE5ZUp4Z3VETDR0Q0lzdW1RWWRXdG9nUE4yeHU4ZnNRTzNBQUhZMG15aWthd1lkd3hsSG9DeGxsV3lRRy1iQ3RfLTIyRHFxRTh3X2c1RkNab182bA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9BNWZuLTBZd0E0ekxPWktMdFJlX1kxMWdjdnRjanE5ZUp4Z3VETDR0Q0lzdW1RWWRXdG9nUE4yeHU4ZnNRTzNBQUhZMG15aWthd1lkd3hsSG9DeGxsV3lRRy1iQ3RfLTIyRHFxRTh3X2c1RkNab182bA?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "유통·테크 판 키운 '한화 3남' 김동선…투자 성과 입증 과제 [기업X-RAY] 네이트",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -294,22 +325,26 @@
           "title": "유통·테크 판 키운 ‘한화 3남’ 김동선…투자 성과 입증 과제 [기업X-RAY]",
           "source": "쿠키뉴스",
           "publishedAt": "2026-07-26T21:00:05.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5iUnpndEtLWEpjdjVKMjQ5RDQ2aDFVdFROcDZuMXZxZU5YM0pIdV9zWVhKNVdDQmtKaDc0WG13aHNBOWZNXzk0VGFuRVFkWGEwV3pvNE10RFUxZ1ZaTlA5UERUTQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5iUnpndEtLWEpjdjVKMjQ5RDQ2aDFVdFROcDZuMXZxZU5YM0pIdV9zWVhKNVdDQmtKaDc0WG13aHNBOWZNXzk0VGFuRVFkWGEwV3pvNE10RFUxZ1ZaTlA5UERUTQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "유통·테크 판 키운 ‘한화 3남’ 김동선…투자 성과 입증 과제 [기업X-RAY] 쿠키뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 1
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-riIpamQvYR6t4xKsyKwlztDX",
+      "id": "domestic-SZnNXEBYa4aN6GyHoIEpj9Fi",
       "title": "한화 인적 분할…김동관·김동선 3세 분업 승계의 막이 올랐다",
       "titleKo": "한화 인적 분할…김동관·김동선 3세 분업 승계의 막이 올랐다",
       "source": "v.daum.net",
       "publishedAt": "2026-07-26T20:32:52.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE85a0tjWEZUalJ3QlRTbUtqLWI5Sklncll6bE9wdm1sM3V1anZya1MyM0FISFBSMWZzYV90YTNVRWdua0o1Ym5EWm5hZzBxNllsQlVKbA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE85a0tjWEZUalJ3QlRTbUtqLWI5Sklncll6bE9wdm1sM3V1anZya1MyM0FISFBSMWZzYV90YTNVRWdua0o1Ym5EWm5hZzBxNllsQlVKbA?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "한화 인적 분할…김동관·김동선 3세 분업 승계의 막이 올랐다 v.daum.net",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -319,17 +354,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-163MLH1dsjAPl9VsPToK-urB",
+      "id": "domestic-AVAZoVEtv_dJEUHbFg-dGt4n",
       "title": "[미완의 한화 김동선①] 30대 부사장, 다가온 책임과 검증의 시간",
       "titleKo": "[미완의 한화 김동선①] 30대 부사장, 다가온 책임과 검증의 시간",
       "source": "신아일보",
       "publishedAt": "2026-07-26T20:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBLd1VONkJJTGVJMEppZ0s0bmJkMXp1ZjZRVFYzb3I3aXk1V0E2WmN0OFg0d2lxX2p1ZEpmN1RESVVIUUM5QUJpdkRYQkEtc0pPX0V6VU85NnpaalJfSnRkamJzbUxLdTVFM2pVeU9sVUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBLd1VONkJJTGVJMEppZ0s0bmJkMXp1ZjZRVFYzb3I3aXk1V0E2WmN0OFg0d2lxX2p1ZEpmN1RESVVIUUM5QUJpdkRYQkEtc0pPX0V6VU85NnpaalJfSnRkamJzbUxLdTVFM2pVeU9sVUE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[미완의 한화 김동선①] 30대 부사장, 다가온 책임과 검증의 시간 신아일보",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -339,17 +377,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-Q1qLwKvcYbPlaBK7fpSqfmyM",
+      "id": "domestic-rSO-omdO8xHm9NCFXeFOEOnk",
       "title": "이라크의 균형 외교에 대한 도전 과제",
       "titleKo": "이라크의 균형 외교에 대한 도전 과제",
       "source": "Vietnam.vn",
       "publishedAt": "2026-07-24T18:26:13.000Z",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42NXNrazI5aERrUkRJMUVpYi1XODEya09TNDhnblJxUUpqRlF5NUtWbXN5b3NMMVRaY3lqdkNkYnBjblR3bWtEa2pYTEFZN3EzYzEtV2ozM2FNTGRKSFJhRmNiTERYal94ejlZV05iT1dyMllMcGpVbGtkWi1udw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42NXNrazI5aERrUkRJMUVpYi1XODEya09TNDhnblJxUUpqRlF5NUtWbXN5b3NMMVRaY3lqdkNkYnBjblR3bWtEa2pYTEFZN3EzYzEtV2ozM2FNTGRKSFJhRmNiTERYal94ejlZV05iT1dyMllMcGpVbGtkWi1udw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크의 균형 외교에 대한 도전 과제 Vietnam.vn",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -359,17 +400,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-MNd7Keyk1vui85tmmnWFRhJB",
+      "id": "domestic-0vVJ46ifb3xZyrcZ8ZxbNQsS",
       "title": "[김동선의 뉴한화] 부동산 쇼핑에 명품관 재건축까지…한화갤러리아 재무부담 '촉각' : 네이버 블로그",
       "titleKo": "[김동선의 뉴한화] 부동산 쇼핑에 명품관 재건축까지…한화갤러리아 재무부담 '촉각' : 네이버 블로그",
       "source": "Naver Blog",
       "publishedAt": "2026-07-24T15:17:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc3dSaXo2NnhvVzR3VzJUNlNfaV9rZjNIZVpxdm5aQ1A3ZzVxVEJNMGxHcEhFdFEwUEpaejNGMWk4UmxEOF9WR0ZtVU9ONk1ZNWxuUWU5OExCMjRiNGZZVy1JSWpTRS1fWFRGTFFscjE4a0ItZ09NcFZ3LXVIQnZtOUE3QVJMZFdpVjlyemtVVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc3dSaXo2NnhvVzR3VzJUNlNfaV9rZjNIZVpxdm5aQ1A3ZzVxVEJNMGxHcEhFdFEwUEpaejNGMWk4UmxEOF9WR0ZtVU9ONk1ZNWxuUWU5OExCMjRiNGZZVy1JSWpTRS1fWFRGTFFscjE4a0ItZ09NcFZ3LXVIQnZtOUE3QVJMZFdpVjlyemtVVQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선의 뉴한화] 부동산 쇼핑에 명품관 재건축까지…한화갤러리아 재무부담 '촉각' : 네이버 블로그 Naver Blog",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -383,22 +427,26 @@
           "title": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 : 네이버 블로그",
           "source": "Naver Blog",
           "publishedAt": "2026-07-23T08:09:42.000Z",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRHMxRHFQRmxtaDVlbm9ySHhUVE9yV09vTmZfTnRCMU5rcHRPNVhJMGVNdFg5M0w5U2RwQ0N5ckZQNXRKZlBkVV80UjlaZlIyR1FZNGxMRjNYTXFqWVBEQll4eC1KTmdRQlpkak04OEIteGt2eUVacHBSLWNFdlZtdjVSdnctYXNtcXFWT0JWZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRHMxRHFQRmxtaDVlbm9ySHhUVE9yV09vTmZfTnRCMU5rcHRPNVhJMGVNdFg5M0w5U2RwQ0N5ckZQNXRKZlBkVV80UjlaZlIyR1FZNGxMRjNYTXFqWVBEQll4eC1KTmdRQlpkak04OEIteGt2eUVacHBSLWNFdlZtdjVSdnctYXNtcXFWT0JWZw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 : 네이버 블로그 Naver Blog",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 1
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-KV0AxsaCTVSh_Iy1ms5yGBG-",
+      "id": "domestic-WdvYZ4CMyOBCl_MW0JJOGTt4",
       "title": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장",
       "titleKo": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장",
       "source": "v.daum.net",
       "publishedAt": "2026-07-24T12:11:03.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE14SXltVWNYemtSSVF6cE41OXBuYTQtWko3aXhpZ0tlQXNmUXFyUFpLUGF0NUpxSkVOZXJ2anRKQm5NN21hQ1RjaGhCcl9YNk1VR011Tw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE14SXltVWNYemtSSVF6cE41OXBuYTQtWko3aXhpZ0tlQXNmUXFyUFpLUGF0NUpxSkVOZXJ2anRKQm5NN21hQ1RjaGhCcl9YNk1VR011Tw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장 v.daum.net",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -412,30 +460,35 @@
           "title": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장",
           "source": "v.daum.net",
           "publishedAt": "2026-07-24T12:11:03.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9naVl1Z29vdjNRdk9tMnVVelVZaHJtZFY5RHkxdDRmRk9DWjhBZTMxTHdGS01zZjdBdld6UFB0XzQ5dDRiLU1KbVFVOA?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9naVl1Z29vdjNRdk9tMnVVelVZaHJtZFY5RHkxdDRmRk9DWjhBZTMxTHdGS01zZjdBdld6UFB0XzQ5dDRiLU1KbVFVOA?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장 v.daum.net",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장",
           "source": "이투데이",
           "publishedAt": "2026-07-24T12:10:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5wUUo4Z3pscXRpY3I0UEc2bHRPWmdwcXRvUlVmUXp2YnYwN1laOWwwR2ZHVHdyampiX2pfM2tWR1dPOVVMWUh3RFdxVGVvdUlHTU5Bdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5wUUo4Z3pscXRpY3I0UEc2bHRPWmdwcXRvUlVmUXp2YnYwN1laOWwwR2ZHVHdyampiX2pfM2tWR1dPOVVMWUh3RFdxVGVvdUlHTU5Bdw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "이란, 쿠웨이트 미군기지 드론 공습⋯이라크·바레인도 긴장 이투데이",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 2
+      "relatedNewsCount": 2,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-L1wkiolmg3EaNcZUJO4Yc0eH",
+      "id": "domestic-O-F8luPt7M6DHcvhCoALbV9Q",
       "title": "인내심 바닥난 트럼프, 이라크 통해 ‘휴전 제안’…이란 거부",
       "titleKo": "인내심 바닥난 트럼프, 이라크 통해 ‘휴전 제안’…이란 거부",
       "source": "한겨레",
       "publishedAt": "2026-07-24T12:11:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9oWXo2emo2dS1FNUpnSXdrUDhsMjN4MXFSVzRnaHN3eFloeTgxWnVNS2VJNEp4c2hJS1NPMnZrd28taTlzYm96V0JxajNJdmd4SVlxQS01MHZ1QXdyV1pSQjVhaG03U2ZFWG1hbjVLSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9oWXo2emo2dS1FNUpnSXdrUDhsMjN4MXFSVzRnaHN3eFloeTgxWnVNS2VJNEp4c2hJS1NPMnZrd28taTlzYm96V0JxajNJdmd4SVlxQS01MHZ1QXdyV1pSQjVhaG03U2ZFWG1hbjVLSQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "인내심 바닥난 트럼프, 이라크 통해 ‘휴전 제안’…이란 거부 한겨레",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -449,94 +502,107 @@
           "title": "\"트럼프, 이라크 통해 휴전 제안…이란은 거부\"",
           "source": "JTBC",
           "publishedAt": "2026-07-24T08:06:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16ZFhYcTZoeU90b19zRU9IXzYwS1JWSkZMWmE3d3ozYmludjhuTEgxMWktRDg5Nm1QZ1ZzZWVPNGFBRE5hNmU0MHRWcHdEMTlGeWZnVA?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16ZFhYcTZoeU90b19zRU9IXzYwS1JWSkZMWmE3d3ozYmludjhuTEgxMWktRDg5Nm1QZ1ZzZWVPNGFBRE5hNmU0MHRWcHdEMTlGeWZnVA?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"트럼프, 이라크 통해 휴전 제안…이란은 거부\" JTBC",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "트럼프의 '이라크 중재' 이란 휴전 제안…이란 \"美 비논리적\" 전격 거부",
           "source": "데일리굿뉴스",
           "publishedAt": "2026-07-24T08:02:19.000Z",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzV3VWcDh3MmFtUHlQX0gtLUgtTEFuaVp5OWgzNS1UV0QwMG9ROTNwNXIyS0djSkJ5cU13QnIzS09XY1VQeGZPbkpHNDJoUDM5VWtya0pEQ0VsZnIzN3NvbzMwUjRtQzBRQ2pzMg?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzV3VWcDh3MmFtUHlQX0gtLUgtTEFuaVp5OWgzNS1UV0QwMG9ROTNwNXIyS0djSkJ5cU13QnIzS09XY1VQeGZPbkpHNDJoUDM5VWtya0pEQ0VsZnIzN3NvbzMwUjRtQzBRQ2pzMg?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "트럼프의 '이라크 중재' 이란 휴전 제안…이란 \"美 비논리적\" 전격 거부 데일리굿뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"이란, 이라크 총리 통한 트럼프의 '휴전 제안' 거부\"",
           "source": "v.daum.net",
           "publishedAt": "2026-07-24T07:29:27.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE13M2ZnZWUycW41V245UEJxMTJKWmN5VXlqejhKQ05aZnVMeEJ2dy1GdTRRMUl5blZueF9mR0xxckRkMXBPYkE?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE13M2ZnZWUycW41V245UEJxMTJKWmN5VXlqejhKQ05aZnVMeEJ2dy1GdTRRMUl5blZueF9mR0xxckRkMXBPYkE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"이란, 이라크 총리 통한 트럼프의 '휴전 제안' 거부\" v.daum.net",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"트럼프, 이라크 중재 거쳐 휴전 제안…이란이 거부\"",
           "source": "v.daum.net",
           "publishedAt": "2026-07-24T07:18:03.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB5ZHZMNVhFN21hZ1VPNXNfT0FXaGtIQUt2OEV1dkp5UWVLcXNmS1UyYl9zbXMxbmw3aWtBZUVldmUxeDltbGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB5ZHZMNVhFN21hZ1VPNXNfT0FXaGtIQUt2OEV1dkp5UWVLcXNmS1UyYl9zbXMxbmw3aWtBZUVldmUxeDltbGc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"트럼프, 이라크 중재 거쳐 휴전 제안…이란이 거부\" v.daum.net",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "NYT “트럼프, 이라크 총리 통해 휴전 제안…이란은 거부”",
           "source": "동아일보",
           "publishedAt": "2026-07-24T07:15:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1YTlJVZE1ackNiS0FNZVJ0SHFmUjdEa1gzRGRoeWxhS29pZXhmTFhHRlo1bEI5OXN2dEN5cVdFZ2YwOHhURnhhWjhwVHE5YkIxcUZXcWxDcXBvSVEzUkdIcTJCeXlsWWt4aHFKTENENngtakHSAWZBVV95cUxPQmpfWi1ONldNSWFVcEhEbFNRRnNDRWJFQ3VhVG8zUm1tY3VVbHM0U1h3Qmw5c09lY2F6aG1FOVV5am4wNUhjUXFyVE1KSEs2M3gzZkw3a2JLQjBCWnl1MTdVdFdhaFE?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1YTlJVZE1ackNiS0FNZVJ0SHFmUjdEa1gzRGRoeWxhS29pZXhmTFhHRlo1bEI5OXN2dEN5cVdFZ2YwOHhURnhhWjhwVHE5YkIxcUZXcWxDcXBvSVEzUkdIcTJCeXlsWWt4aHFKTENENngtakHSAWZBVV95cUxPQmpfWi1ONldNSWFVcEhEbFNRRnNDRWJFQ3VhVG8zUm1tY3VVbHM0U1h3Qmw5c09lY2F6aG1FOVV5am4wNUhjUXFyVE1KSEs2M3gzZkw3a2JLQjBCWnl1MTdVdFdhaFE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "NYT “트럼프, 이라크 총리 통해 휴전 제안…이란은 거부” 동아일보",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "NYT “트럼프, 이라크 중재 거쳐 휴전 제안…이란 거부해”",
           "source": "KBS 뉴스",
           "publishedAt": "2026-07-24T07:05:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE90Y1h0LWxONlplTWRka2dwdWg3czJfUzlFTEJ1QkJ2aGdUSHZQbnM3RDdBbGNDMUEzRmtiSGJZSW92NE9NT1pxcUY3WGdRWFc4dFcwcUlGSTh6bXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE90Y1h0LWxONlplTWRka2dwdWg3czJfUzlFTEJ1QkJ2aGdUSHZQbnM3RDdBbGNDMUEzRmtiSGJZSW92NE9NT1pxcUY3WGdRWFc4dFcwcUlGSTh6bXc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "NYT “트럼프, 이라크 중재 거쳐 휴전 제안…이란 거부해” KBS 뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"트럼프, 이라크 통해 휴전 제안...이란이 거부\"",
           "source": "YTN",
           "publishedAt": "2026-07-24T06:52:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9SNnRPc1hpeUhJSWptYjNQY1hDZWJ3MUt1endRTlJ1OVVTQkFMbEgtb2ZnNGhjdzVCZC1GcTR6VHNKT3VZTWdmc2tiOTlsRXFxQ1Y3eFlZWmR5LUxYLXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9SNnRPc1hpeUhJSWptYjNQY1hDZWJ3MUt1endRTlJ1OVVTQkFMbEgtb2ZnNGhjdzVCZC1GcTR6VHNKT3VZTWdmc2tiOTlsRXFxQ1Y3eFlZWmR5LUxYLXc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"트럼프, 이라크 통해 휴전 제안...이란이 거부\" YTN",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"트럼프, 이라크 중재 거쳐 휴전 제안…이란 거부해\"",
           "source": "연합뉴스",
           "publishedAt": "2026-07-24T06:37:58.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwMmFYZTQxREJsNjR2NHdxeEo0YmV0RHA0TWlSNDFEM0gtUTkzM3dVbVV3Nk1lRHBsU0xteTlKVGg2VkcwR1oxeHk3RXlyYzV5WDN5bURkbno5MjTSAWBBVV95cUxOcnlLZGlkdVJwUzBDblRsVVRJbjJmdkkxWlZHbURtT2wwWUJJM19ZUnl3bmllZlFsc1doNXk3NXBMQ2tVd2NjbXR3YUFodXdMSFBCTDVwYmYwdmtOWlRFUzk?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwMmFYZTQxREJsNjR2NHdxeEo0YmV0RHA0TWlSNDFEM0gtUTkzM3dVbVV3Nk1lRHBsU0xteTlKVGg2VkcwR1oxeHk3RXlyYzV5WDN5bURkbno5MjTSAWBBVV95cUxOcnlLZGlkdVJwUzBDblRsVVRJbjJmdkkxWlZHbURtT2wwWUJJM19ZUnl3bmllZlFsc1doNXk3NXBMQ2tVd2NjbXR3YUFodXdMSFBCTDVwYmYwdmtOWlRFUzk?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"트럼프, 이라크 중재 거쳐 휴전 제안…이란 거부해\" 연합뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"이란, 이라크 총리가 방미 후 전달한 트럼프 휴전 제안 거절\"",
           "source": "뉴스1",
           "publishedAt": "2026-07-24T05:27:45.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9OZnROS0cxS0xfS2hBWW85TjlSeWNGcWtfV18wdlNlSmw2Y2ZJYW8zN1RjTE9tU2ZXc1pmMi1xdDVIcDhRZVNiUVpyMl94cVVKNVN1MHY2enlLSHFmR05jUkdB?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9OZnROS0cxS0xfS2hBWW85TjlSeWNGcWtfV18wdlNlSmw2Y2ZJYW8zN1RjTE9tU2ZXc1pmMi1xdDVIcDhRZVNiUVpyMl94cVVKNVN1MHY2enlLSHFmR05jUkdB?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"이란, 이라크 총리가 방미 후 전달한 트럼프 휴전 제안 거절\" 뉴스1",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "이란, 美의 휴전 제안 거부…이라크 중재 실패",
           "source": "ppss.kr",
           "publishedAt": "2026-07-24T02:27:35.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQMUN2cURQSGVNWWItdFc5SGtkMmJOSTJyelBab25VZ2xLWHlXdTd5QkZCUTNleTQyV2pLSU9hUnBOcjBpc1Nac1NMX1BsMzBrNE1ESlhvNGhDcEtaV2hnTHRTSXY?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQMUN2cURQSGVNWWItdFc5SGtkMmJOSTJyelBab25VZ2xLWHlXdTd5QkZCUTNleTQyV2pLSU9hUnBOcjBpc1Nac1NMX1BsMzBrNE1ESlhvNGhDcEtaV2hnTHRTSXY?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "이란, 美의 휴전 제안 거부…이라크 중재 실패 ppss.kr",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 10
+      "relatedNewsCount": 10,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-P4D7603JeMxPtTpZPFCfXkRA",
+      "id": "domestic-k3AR_CMdeOf_saXkhdyARrF9",
       "title": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "titleKo": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "source": "v.daum.net",
       "publishedAt": "2026-07-24T11:54:39.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1wR3FtanZFa3p2TzkweDlkMzExUHBfX2dnclVUOW5Ba290N3BpNXdxUVZuWjBLVkFnTTlwUUthazlXd0RTSnNCaVNHeGxTZTlyUDhSWg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1wR3FtanZFa3p2TzkweDlkMzExUHBfX2dnclVUOW5Ba290N3BpNXdxUVZuWjBLVkFnTTlwUUthazlXd0RTSnNCaVNHeGxTZTlyUDhSWg?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\" v.daum.net",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -546,17 +612,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-GY_vrgmVK2p59ajLx7w78s_T",
+      "id": "domestic-UD63-qOJE08gRiovKIk76aXh",
       "title": "천궁-Ⅱ뺏기면 안 되는데?!…“이라크, 중도금 미지급으로 인도 지연” 진실은? [밀리터리+]",
       "titleKo": "천궁-Ⅱ뺏기면 안 되는데?!…“이라크, 중도금 미지급으로 인도 지연” 진실은? [밀리터리+]",
       "source": "나우뉴스",
       "publishedAt": "2026-07-24T11:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMOFJQdzRBMjJyYWw3M0lBOWxRdEU5cVpzYS1keE1SM29YcE5kWm9YZHRLNEdOX3lDZXFoa2FWdzFObGxNazVTNkNtZlJzNlhoS1ZtbldSeUlPakZ6ZFRjVXJtRG96N29yMHl5bzljMzc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMOFJQdzRBMjJyYWw3M0lBOWxRdEU5cVpzYS1keE1SM29YcE5kWm9YZHRLNEdOX3lDZXFoa2FWdzFObGxNazVTNkNtZlJzNlhoS1ZtbldSeUlPakZ6ZFRjVXJtRG96N29yMHl5bzljMzc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "천궁-Ⅱ뺏기면 안 되는데?!…“이라크, 중도금 미지급으로 인도 지연” 진실은? [밀리터리+] 나우뉴스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -566,17 +635,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-EJjKDfpz3VwzLizTR6Tn1HNK",
+      "id": "domestic-oLqkbS14VV1cCUGCQtAUL0F9",
       "title": "[심층분석] 이라크 경유한 미국 '휴전 제의' 거부",
       "titleKo": "[심층분석] 이라크 경유한 미국 '휴전 제의' 거부",
       "source": "데일리연합",
       "publishedAt": "2026-07-24T10:50:08.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4xQ0V1QnQwdURjYVdpajBpNEdfRWFyVEFROXhCTUpYUFROVml4YW9paDJEbk5CdmxOSm03bm45MTV3b3lBQm54ZFpPbEl5MG1nODBGUnI1NXo0b2M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4xQ0V1QnQwdURjYVdpajBpNEdfRWFyVEFROXhCTUpYUFROVml4YW9paDJEbk5CdmxOSm03bm45MTV3b3lBQm54ZFpPbEl5MG1nODBGUnI1NXo0b2M?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[심층분석] 이라크 경유한 미국 '휴전 제의' 거부 데일리연합",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -586,17 +658,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-ihDcx0sKLDcmRcIvoe2Je8Ak",
+      "id": "domestic-hyum7JMY0CxFRtLaDsQEpV9m",
       "title": "NYT \"이란, 트럼프의 새 휴전안 거부\"… 알자이디 이라크 총리가 전달",
       "titleKo": "NYT \"이란, 트럼프의 새 휴전안 거부\"… 알자이디 이라크 총리가 전달",
       "source": "뉴스핌",
       "publishedAt": "2026-07-24T10:01:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4tTFJJREFKNWZKdnhhR2ZjWFNZeHdZTDR4VDhHaVMxbm1WckpBU2I0OGNDb2p6bUZzN3p1MnhhQnVJU1NTaXhHQUU1TDByOHVvZlRWVjV6SVRPZ0NR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4tTFJJREFKNWZKdnhhR2ZjWFNZeHdZTDR4VDhHaVMxbm1WckpBU2I0OGNDb2p6bUZzN3p1MnhhQnVJU1NTaXhHQUU1TDByOHVvZlRWVjV6SVRPZ0NR?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "NYT \"이란, 트럼프의 새 휴전안 거부\"… 알자이디 이라크 총리가 전달 뉴스핌",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -610,30 +685,35 @@
           "title": "이란, 이라크 총리가 방미 후 전달한 트럼프 휴전안 거부",
           "source": "뉴시스",
           "publishedAt": "2026-07-24T08:03:19.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9reDJ3N2o2LVNOaUctYWJucnRncVNKVWZqMVo2RlNsN0pidXFTcWs1M05XTG9ULW5KaG15eVZ3dTJMQWJWcFhJcTNzNkhCTklQREhfSkNpVWJSYlNsV2ZsS9IBeEFVX3lxTE5GUk93cWd3bmdfNUViLTNuMUNyUWZqX0V5YnU1c3NWS1dnUlcxQTNOQUd1alI2eGpRdlF0ZjRlcENCUWxsRE1zRjVIcE1zZnlvN2Y1bEhZbmxfRlppUk1ySmg2RTlfQ3JMci1ROThjeXpqbE9uV1JlSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9reDJ3N2o2LVNOaUctYWJucnRncVNKVWZqMVo2RlNsN0pidXFTcWs1M05XTG9ULW5KaG15eVZ3dTJMQWJWcFhJcTNzNkhCTklQREhfSkNpVWJSYlNsV2ZsS9IBeEFVX3lxTE5GUk93cWd3bmdfNUViLTNuMUNyUWZqX0V5YnU1c3NWS1dnUlcxQTNOQUd1alI2eGpRdlF0ZjRlcENCUWxsRE1zRjVIcE1zZnlvN2Y1bEhZbmxfRlppUk1ySmg2RTlfQ3JMci1ROThjeXpqbE9uV1JlSQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "이란, 이라크 총리가 방미 후 전달한 트럼프 휴전안 거부 뉴시스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         },
         {
           "title": "\"이란, 트럼프가 제안한 휴전안 거부…이라크 총리 통해 전달\"",
           "source": "v.daum.net",
           "publishedAt": "2026-07-24T02:27:29.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4X3Y0RkxIS0cwdm9oZlI3NjdCWDNsRE9mcTQ1YWlObGlMd1JzaXZyRm1qZ0NVZjRoX1o5LXozVy10aEw2MWVBRzBQTlp5dTNDc3pKcS1MVXNkZ290?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4X3Y0RkxIS0cwdm9oZlI3NjdCWDNsRE9mcTQ1YWlObGlMd1JzaXZyRm1qZ0NVZjRoX1o5LXozVy10aEw2MWVBRzBQTlp5dTNDc3pKcS1MVXNkZ290?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "\"이란, 트럼프가 제안한 휴전안 거부…이라크 총리 통해 전달\" v.daum.net",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 2
+      "relatedNewsCount": 2,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-zb_O7LEXGWHqcsKWf8A7m5O9",
+      "id": "domestic--E-fjPlzG3RaaE9MsCfNDGOl",
       "title": "무력 충돌 14일째...이란, 쿠웨이트·이라크 등에 또 보복",
       "titleKo": "무력 충돌 14일째...이란, 쿠웨이트·이라크 등에 또 보복",
       "source": "YTN",
       "publishedAt": "2026-07-24T09:58:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9YaG1BZktrTWVfZzlwMUVHdGNKV3pSMHkyMEtRemVhdVZsNV96TVVBalpoc0VZdm9VNUpKcktJdEZUVXYwRURsUk0zNVN5R1NrVC1EZnZhWUp6TG52Vmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9YaG1BZktrTWVfZzlwMUVHdGNKV3pSMHkyMEtRemVhdVZsNV96TVVBalpoc0VZdm9VNUpKcktJdEZUVXYwRURsUk0zNVN5R1NrVC1EZnZhWUp6TG52Vmc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "무력 충돌 14일째...이란, 쿠웨이트·이라크 등에 또 보복 YTN",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -647,22 +727,26 @@
           "title": "이란, 쿠웨이트 등에 보복 계속…이라크 공항 근처 드론 추락(종합)",
           "source": "뉴스1",
           "publishedAt": "2026-07-24T09:26:12.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Xbm5INHNBbVBhM1VTUUM5SWtDOVRWeG9wUDl2NEFDcHBtNVhNMFNSbmhGZW42TzhudUtVTjk5RmxLcjR6UXB6SXU4VHlHSnF3YTd5VlNCQ1h4VDFLYkNKdnhB?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Xbm5INHNBbVBhM1VTUUM5SWtDOVRWeG9wUDl2NEFDcHBtNVhNMFNSbmhGZW42TzhudUtVTjk5RmxLcjR6UXB6SXU4VHlHSnF3YTd5VlNCQ1h4VDFLYkNKdnhB?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "이란, 쿠웨이트 등에 보복 계속…이라크 공항 근처 드론 추락(종합) 뉴스1",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 1
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-F4aIxnQQkz8oFbgiD8pxMHGR",
+      "id": "domestic-BYLzH7OT49W1hpkr-dCspntn",
       "title": "\"이라크 천궁-Ⅱ 도입 지연 원인은 대금 미지급 때문\" 정치권 폭로 또 나와",
       "titleKo": "\"이라크 천궁-Ⅱ 도입 지연 원인은 대금 미지급 때문\" 정치권 폭로 또 나와",
       "source": "더구루",
       "publishedAt": "2026-07-24T06:10:40.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBIZVVDU2FRTVJxOEdzMWxzNmI1SFUxbjFxUnlEanZ2eTZfMUxydmdpRGVIOUxaSmQ1ZVZ4ZTA3TkZVcWFYX3dZQjhlalVWZXJ1U2N4QkJtX1FJVFZIMEE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBIZVVDU2FRTVJxOEdzMWxzNmI1SFUxbjFxUnlEanZ2eTZfMUxydmdpRGVIOUxaSmQ1ZVZ4ZTA3TkZVcWFYX3dZQjhlalVWZXJ1U2N4QkJtX1FJVFZIMEE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "\"이라크 천궁-Ⅱ 도입 지연 원인은 대금 미지급 때문\" 정치권 폭로 또 나와 더구루",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -672,17 +756,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-_QauBXQw1wh7NqDw0byVylat",
+      "id": "domestic-ZzgcEMXFQF1zL_rFH2NIo2Lq",
       "title": "LIG D&A 4조 1046억 이라크 수출 차질… LIG D&A \"계약 파기설 사실무근\"",
       "titleKo": "LIG D&A 4조 1046억 이라크 수출 차질… LIG D&A \"계약 파기설 사실무근\"",
       "source": "글로벌이코노믹",
       "publishedAt": "2026-07-23T23:00:07.000Z",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYUIyYWRZTzJRX0xNTER4dnVmY1BJclc3R0kxZFI2UHZvVTBxUllDb0dyN0dZMmozTVJMb01BWm53amxOUm1KNzNGV19Za09wTTlnb3didWdSbklyanB0VEo1YnhmclhCNGJvb255eU1INlh6WHNlVHppb1hJcDMzZ05NdGUydw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYUIyYWRZTzJRX0xNTER4dnVmY1BJclc3R0kxZFI2UHZvVTBxUllDb0dyN0dZMmozTVJMb01BWm53amxOUm1KNzNGV19Za09wTTlnb3didWdSbklyanB0VEo1YnhmclhCNGJvb255eU1INlh6WHNlVHppb1hJcDMzZ05NdGUydw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "LIG D&A 4조 1046억 이라크 수출 차질… LIG D&A \"계약 파기설 사실무근\" 글로벌이코노믹",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -692,17 +779,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-7Q36cL2jBZKapSz5k_UTCwic",
+      "id": "domestic-SXAjXuShaTFSQjwqqGMnm2s5",
       "title": "[김동선의 뉴한화] '더피크 도산' 부지 품은 한화갤러리아, 승부수 통할까 : 네이버 블로그",
       "titleKo": "[김동선의 뉴한화] '더피크 도산' 부지 품은 한화갤러리아, 승부수 통할까 : 네이버 블로그",
       "source": "Naver Blog",
       "publishedAt": "2026-07-23T14:09:43.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQXdtcW05bVhEZHZaUjc1X1dGZEQtRzF6OHlaOHhkTG1laHllamh0dGdqb0t0OFlhSnd6X21OTWFTXzViQVNsTzUyM1ZrRjllMXlBQW1aSmxFdllUQkJiUTFyTUUxTnZtZG5pM3E1emtDcnhRNjJOY2dHOFNERDdRWWtBZ2twTWs4dG9OLTR6RQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQXdtcW05bVhEZHZaUjc1X1dGZEQtRzF6OHlaOHhkTG1laHllamh0dGdqb0t0OFlhSnd6X21OTWFTXzViQVNsTzUyM1ZrRjllMXlBQW1aSmxFdllUQkJiUTFyTUUxTnZtZG5pM3E1emtDcnhRNjJOY2dHOFNERDdRWWtBZ2twTWs4dG9OLTR6RQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선의 뉴한화] '더피크 도산' 부지 품은 한화갤러리아, 승부수 통할까 : 네이버 블로그 Naver Blog",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -712,17 +802,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-BwVZWFXtRge2F2UIUd4jwBs3",
+      "id": "domestic-_YcBXQ14JMF1qxWf6kkunZA9",
       "title": "[김동선의 뉴한화] 한화갤러리아 부동산 수집, 계열분리 지렛대 포석? : 네이버 블로그",
       "titleKo": "[김동선의 뉴한화] 한화갤러리아 부동산 수집, 계열분리 지렛대 포석? : 네이버 블로그",
       "source": "Naver Blog",
       "publishedAt": "2026-07-23T14:04:38.000Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQnI4UXRMcGlNU09MWEFSOVNPdnA3UW5vbEZSbmxBRnl2eTd4WjlvRzJaNHBUcEQzTS0zc1FFUmZDUGY1ZERJMW1ET1FjQldmOFZKekktcGFpNTZTbDV6ai1BRE5PUlprZlYzQTBJdGpSSjNNczlpSkltOUp3SXMzN1d5bmFuZUtpd3o1Rm1Wcw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQnI4UXRMcGlNU09MWEFSOVNPdnA3UW5vbEZSbmxBRnl2eTd4WjlvRzJaNHBUcEQzTS0zc1FFUmZDUGY1ZERJMW1ET1FjQldmOFZKekktcGFpNTZTbDV6ai1BRE5PUlprZlYzQTBJdGpSSjNNczlpSkltOUp3SXMzN1d5bmFuZUtpd3o1Rm1Wcw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선의 뉴한화] 한화갤러리아 부동산 수집, 계열분리 지렛대 포석? : 네이버 블로그 Naver Blog",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -736,22 +829,26 @@
           "title": "[김동선의 뉴한화] 한화갤러리아 부동산 수집, 계열분리 지렛대 포석?",
           "source": "딜사이트",
           "publishedAt": "2026-07-21T22:00:00.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE84YTduWHhwZ1U2UnVLUnJ6eWhvS1pfbTIwM2FPdjd4QUgydll6OWtNdnJ0cWR3dUZmVmdMc3dSWmx4Y2tpYjI4QlpTMVZlNGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE84YTduWHhwZ1U2UnVLUnJ6eWhvS1pfbTIwM2FPdjd4QUgydll6OWtNdnJ0cWR3dUZmVmdMc3dSWmx4Y2tpYjI4QlpTMVZlNGc?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "[김동선의 뉴한화] 한화갤러리아 부동산 수집, 계열분리 지렛대 포석? 딜사이트",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 1
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-AV6lp7kuQYYV3hPlrZHnPX8u",
+      "id": "domestic-i9wLJwutJuP3u6AMzN7H6KSk",
       "title": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제",
       "titleKo": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제",
       "source": "크리스천투데이",
       "publishedAt": "2026-07-23T07:20:26.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9WMm0zVUg5c2FRQTI2NWZZak0xQ28xODRNVFdid3hRa29Qdmt2d0sxS0N6Z2dLWVJOcFZGa2trX1FSUU51UjZFRTFsbWZjZnNXaHBoMzVibw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9WMm0zVUg5c2FRQTI2NWZZak0xQ28xODRNVFdid3hRa29Qdmt2d0sxS0N6Z2dLWVJOcFZGa2trX1FSUU51UjZFRTFsbWZjZnNXaHBoMzVibw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제 크리스천투데이",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -761,17 +858,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-A3fNeddn4ZsrHcO-jV3FrE5O",
+      "id": "domestic-vszE-BZgYTKOUDAkNpoEf2JN",
       "title": "[속보] 美미사일, 이란의 이라크국경 샬람체 터미널 폭격 2명 사망",
       "titleKo": "[속보] 美미사일, 이란의 이라크국경 샬람체 터미널 폭격 2명 사망",
       "source": "뉴시스",
       "publishedAt": "2026-07-23T00:50:37.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83b3M0UlZjd0hUOTlQZ2ZVQVRPY0FjSEVJdkxnVTBWT2p1ZGgtUUdpNkxMVEFPV2t4UjgzOXl6RlZaUERpQkNEQ0p6N2JCUEo0bVR6V1lWQWhNTHlRdi1wUNIBeEFVX3lxTE5Vc1BKcGowblFPOXp5QTZDbnVtWHFKZXRFcjhBVXBIdklvYkpMT2ZyYUVuWE9yRnhuM0c5QVB0X3hBTzU1M0piRDF5dmN5NFRNdU1HTzl6cUVmdDRoWHh5bkd5Ml9RakNkSXlaVWZFdVRkdll4aWVCMA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83b3M0UlZjd0hUOTlQZ2ZVQVRPY0FjSEVJdkxnVTBWT2p1ZGgtUUdpNkxMVEFPV2t4UjgzOXl6RlZaUERpQkNEQ0p6N2JCUEo0bVR6V1lWQWhNTHlRdi1wUNIBeEFVX3lxTE5Vc1BKcGowblFPOXp5QTZDbnVtWHFKZXRFcjhBVXBIdklvYkpMT2ZyYUVuWE9yRnhuM0c5QVB0X3hBTzU1M0piRDF5dmN5NFRNdU1HTzl6cUVmdDRoWHh5bkd5Ml9RakNkSXlaVWZFdVRkdll4aWVCMA?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[속보] 美미사일, 이란의 이라크국경 샬람체 터미널 폭격 2명 사망 뉴시스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -781,17 +881,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-jFnABw5E0jazyCDvTcJsqMh1",
+      "id": "domestic-QdLDWyzfS3Ec275G6_ssUDlW",
       "title": "[한화 김동선 개발사업 ] 라이프 선명한데…테크 비전 '물음표'",
       "titleKo": "[한화 김동선 개발사업 ] 라이프 선명한데…테크 비전 '물음표'",
       "source": "DealSite경제TV",
       "publishedAt": "2026-07-22T23:10:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12N2VoVEVmbFhZeTd6bEdnUThORUpzbEltdjdJWU5UQkEyM1ctcm8zaFNfcnlpeExKSlotRl96X0NHXzZxU1hBQmhtQUxYR1c2OUxnVlB3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12N2VoVEVmbFhZeTd6bEdnUThORUpzbEltdjdJWU5UQkEyM1ctcm8zaFNfcnlpeExKSlotRl96X0NHXzZxU1hBQmhtQUxYR1c2OUxnVlB3?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[한화 김동선 개발사업 ] 라이프 선명한데…테크 비전 '물음표' DealSite경제TV",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -801,17 +904,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-pSPQrE49kNQmR5UWaJZDtaFj",
+      "id": "domestic-4q5nF0a8H3ogy57bzNrFBPQQ",
       "title": "시리아·이라크 이어 레바논과도 정상회담… 트럼프, 이란 고립 작전",
       "titleKo": "시리아·이라크 이어 레바논과도 정상회담… 트럼프, 이란 고립 작전",
       "source": "조선일보",
       "publishedAt": "2026-07-22T15:45:38.000Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYXljeEZWZHpPQ1lERTRVNVM5c1FwWTludzFzYzFIb01KRjlnRzU1X05HSzlqR0hBYU9udFJHb1ZDMGdxTnZxWnBjWkw2WkduM1ExbnVWak0zYnBBR0tyZFZaNTdKNk8wWDVZZDNicmV2M3c4WFlxVk9YQ0I3VnJrLUhRNXhNRzZRX0VtRXI0Sy1ibmYwOF85T2xYY3pwQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYXljeEZWZHpPQ1lERTRVNVM5c1FwWTludzFzYzFIb01KRjlnRzU1X05HSzlqR0hBYU9udFJHb1ZDMGdxTnZxWnBjWkw2WkduM1ExbnVWak0zYnBBR0tyZFZaNTdKNk8wWDVZZDNicmV2M3c4WFlxVk9YQ0I3VnJrLUhRNXhNRzZRX0VtRXI0Sy1ibmYwOF85T2xYY3pwQQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "시리아·이라크 이어 레바논과도 정상회담… 트럼프, 이란 고립 작전 조선일보",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -821,17 +927,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-6zTBx2a8Y0b6EDBiakl-DTEv",
+      "id": "domestic-YtWXZWgfQ_QvPvG8vG6WMS8s",
       "title": "이라크 총리, 내일 이란 방문…가스 협력·중동 정세 논의",
       "titleKo": "이라크 총리, 내일 이란 방문…가스 협력·중동 정세 논의",
       "source": "뉴시스",
       "publishedAt": "2026-07-22T15:45:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04ZnZTSDFldnlhS2tvRDB3TndkQy1kQTFCTjFpaWtLdHBxN3R4THU1OU9wdlJCaUdxZjVYSm5GMDlYNkRITk5VRGN3Qnp5cnpVTFV4U0lNdDBJN18zV3JaLdIBeEFVX3lxTFBuVmo0NTR3VjhfQkstUkNETjJWRlBLaUFnWnBPWGM4a3ZFVV9pSHA3ZzBSTF9KVTlKMVp3blpVUU81NUVNSVNvODNPSEwxbExsNkU5SlhBOGcxckd4WTdXaHhGTGhqT3p3YzFjVWZuQTdxQ2FDeE02YQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04ZnZTSDFldnlhS2tvRDB3TndkQy1kQTFCTjFpaWtLdHBxN3R4THU1OU9wdlJCaUdxZjVYSm5GMDlYNkRITk5VRGN3Qnp5cnpVTFV4U0lNdDBJN18zV3JaLdIBeEFVX3lxTFBuVmo0NTR3VjhfQkstUkNETjJWRlBLaUFnWnBPWGM4a3ZFVV9pSHA3ZzBSTF9KVTlKMVp3blpVUU81NUVNSVNvODNPSEwxbExsNkU5SlhBOGcxckd4WTdXaHhGTGhqT3p3YzFjVWZuQTdxQ2FDeE02YQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크 총리, 내일 이란 방문…가스 협력·중동 정세 논의 뉴시스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -841,17 +950,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-4Zo7At90wsV0vTF6iB4KWuaX",
+      "id": "domestic-QNyybKOp-u538MmSuRIlRrd-",
       "title": "한화 3남 김동선 '독자경영' 중심에 선 한화비전 : AI 영상기술 역량 확보 겨냥하며 계열사 시너지 추진",
       "titleKo": "한화 3남 김동선 '독자경영' 중심에 선 한화비전 : AI 영상기술 역량 확보 겨냥하며 계열사 시너지 추진",
       "source": "허프포스트코리아",
       "publishedAt": "2026-07-22T08:13:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52V2hDcXpXR2R2V3B2a3VIRGRCZzZaUGk2R19mOW1DdEhEZ1U3NGZmQXhwemZ1NUpwcWR0a24ycDA0SWhWa2pDSm92aEZVa0pSTS1USk5DRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52V2hDcXpXR2R2V3B2a3VIRGRCZzZaUGk2R19mOW1DdEhEZ1U3NGZmQXhwemZ1NUpwcWR0a24ycDA0SWhWa2pDSm92aEZVa0pSTS1USk5DRQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "한화 3남 김동선 '독자경영' 중심에 선 한화비전 : AI 영상기술 역량 확보 겨냥하며 계열사 시너지 추진 허프포스트코리아",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -861,17 +973,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-qajEDeHZodnH9xf5TZGT_mni",
+      "id": "domestic-oXjhpdnjEOjILDLxtMNJuIfW",
       "title": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나",
       "titleKo": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나",
       "source": "네이트",
       "publishedAt": "2026-07-22T08:10:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqNVgzbmFIOTFPcXVNUXp2ZUE4cVctZGpuc2ZzWWMwSEVYR1FZYThkenYzcEhQU1lfU09KR2NHWnZ4ZDN6eHVyVml0cWY2WWlzZTE0?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqNVgzbmFIOTFPcXVNUXp2ZUE4cVctZGpuc2ZzWWMwSEVYR1FZYThkenYzcEhQU1lfU09KR2NHWnZ4ZDN6eHVyVml0cWY2WWlzZTE0?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나 네이트",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동관",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -885,22 +1000,26 @@
           "title": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나",
           "source": "쿠키뉴스",
           "publishedAt": "2026-07-22T08:09:45.000Z",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOM0IzbEotdGdTOHhGVHdabHIyU1lJWjR2SVRmNWZhYjUtU1pBaUJIc0E1Q0w4Y3FubmdGX0NHYWc5dGs5eS05V0RvZGlHdFdydTdnOW1SM2xYUm1sZWJoQjNLSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOM0IzbEotdGdTOHhGVHdabHIyU1lJWjR2SVRmNWZhYjUtU1pBaUJIc0E1Q0w4Y3FubmdGX0NHYWc5dGs5eS05V0RvZGlHdFdydTdnOW1SM2xYUm1sZWJoQjNLSQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
           "description": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나 쿠키뉴스",
-          "fullText": ""
+          "fullText": "",
+          "fullTextAvailable": false
         }
       ],
-      "relatedNewsCount": 1
+      "relatedNewsCount": 1,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-aqWNLL-tUmLL2_Lf5A3pzyIU",
+      "id": "domestic-oZk2d41t5jDD5-kg5F0MssYV",
       "title": "현대로템, 이라크 수출 풍문 해명→구체적 계약 미확정",
       "titleKo": "현대로템, 이라크 수출 풍문 해명→구체적 계약 미확정",
       "source": "톱스타뉴스",
       "publishedAt": "2026-07-22T07:43:51.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kR0U0NDExbDEtVzNweHZCVkNrakxnS21icmJUc3NrUkxfOVZfVjk3LVJObEVZZ296ZnNSQWNveHRNWU5HSUQzdmx0QW5Cb082d0xtR1BpUnRvSW13VmxIWVNXMEpoY0M2Rzgwckpwc3NUUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kR0U0NDExbDEtVzNweHZCVkNrakxnS21icmJUc3NrUkxfOVZfVjk3LVJObEVZZ296ZnNSQWNveHRNWU5HSUQzdmx0QW5Cb082d0xtR1BpUnRvSW13VmxIWVNXMEpoY0M2Rzgwckpwc3NUUQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "현대로템, 이라크 수출 풍문 해명→구체적 계약 미확정 톱스타뉴스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -910,17 +1029,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-v5NznZGvWw74C4L5gMicghzH",
+      "id": "domestic-g2PTwaxF51Psw2jpBjtMlnqG",
       "title": "로봇·반도체부터 디벨로퍼까지…‘한화 3남’ 김동선 자금 조달 묘수 찾을까",
       "titleKo": "로봇·반도체부터 디벨로퍼까지…‘한화 3남’ 김동선 자금 조달 묘수 찾을까",
       "source": "일요신문",
       "publishedAt": "2026-07-22T02:37:44.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB0Skp6LTdDeHNvS01Qa2tVUmxUbUNxZ25Na3J1enlTb2Z0R1ZKU25Dc2pQbnk3NnlHUXRMV21pXzlhZUZCZjBTYTRRUHVGdmdiNVQ3QjlMZkpfWGhsdnBRSUJ4QUZRUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB0Skp6LTdDeHNvS01Qa2tVUmxUbUNxZ25Na3J1enlTb2Z0R1ZKU25Dc2pQbnk3NnlHUXRMV21pXzlhZUZCZjBTYTRRUHVGdmdiNVQ3QjlMZkpfWGhsdnBRSUJ4QUZRUQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "로봇·반도체부터 디벨로퍼까지…‘한화 3남’ 김동선 자금 조달 묘수 찾을까 일요신문",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -930,17 +1052,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-s0D-ZdpUKU8bzeDntQb1cH34",
+      "id": "domestic-NVckB1tD7ogzp7rJueVKqN2x",
       "title": "‘독립’ 앞둔 한화 3남 김동선, 두 달 새 4500억 베팅…한화갤러리아 차입부담 'UP’",
       "titleKo": "‘독립’ 앞둔 한화 3남 김동선, 두 달 새 4500억 베팅…한화갤러리아 차입부담 'UP’",
       "source": "파이낸셜리뷰",
       "publishedAt": "2026-07-22T01:50:19.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5rR1BLNERodGJwdG1yQ2lidk5aN0FmcHo1MEtIYzk5VllUMkZxbmRIX3lzRG14WWtzMkRtLUNfS1I3VXAwX0dIa192Q19JczJ5cDZ0d1ppb05fMzRnOGpPc0RJaldPMG53LS1DM1hPTlZkZFlR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5rR1BLNERodGJwdG1yQ2lidk5aN0FmcHo1MEtIYzk5VllUMkZxbmRIX3lzRG14WWtzMkRtLUNfS1I3VXAwX0dIa192Q19JczJ5cDZ0d1ppb05fMzRnOGpPc0RJaldPMG53LS1DM1hPTlZkZFlR?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "‘독립’ 앞둔 한화 3남 김동선, 두 달 새 4500억 베팅…한화갤러리아 차입부담 'UP’ 파이낸셜리뷰",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -950,17 +1075,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-t3zX_3Ucoh8a7svty9OChhbi",
+      "id": "domestic-0Ik3yruALsFtrcp0REkT3y15",
       "title": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장",
       "titleKo": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장",
       "source": "이코노미톡뉴스",
       "publishedAt": "2026-07-21T23:46:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uOElYWmc2VjZyNTZ4bS12dHZKRkY2MHpieHRKcnBZaHUzZks4UU95NE5JNEwxZ0hYNGNzTVNhaGFlNlBJRlBsaUFndVVGVjJ5eTBfM0ZnbFMwRUNMaVE4Ym5yMmxhSVppSU9iYQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uOElYWmc2VjZyNTZ4bS12dHZKRkY2MHpieHRKcnBZaHUzZks4UU95NE5JNEwxZ0hYNGNzTVNhaGFlNlBJRlBsaUFndVVGVjJ5eTBfM0ZnbFMwRUNMaVE4Ym5yMmxhSVppSU9iYQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장 이코노미톡뉴스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "비스마야",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -970,17 +1098,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-CAFOhiPnDUBccWi2CCjjXMM9",
+      "id": "domestic-1d0QOr6SxpK8MW1k9-QCG2nt",
       "title": "한화 김동선·SK 최윤정 초고속 승진의 비밀?…100대 기업 30대 임원 대부분은 오너가",
       "titleKo": "한화 김동선·SK 최윤정 초고속 승진의 비밀?…100대 기업 30대 임원 대부분은 오너가",
       "source": "한경매거진&북",
       "publishedAt": "2026-07-21T23:21:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CdUJEbU00ZHhNVWQxXzhyLW1LOFQ0QU96dzEzbFhMOEx3M1V4M202Mk4yT0Z2T3R4MjFTR2JxZ3FtQVc2UHZEdDFHbVNYa0lCY09IWTZsY04tTzRyczZJQWliLTFYRDNBT1ZsYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CdUJEbU00ZHhNVWQxXzhyLW1LOFQ0QU96dzEzbFhMOEx3M1V4M202Mk4yT0Z2T3R4MjFTR2JxZ3FtQVc2UHZEdDFHbVNYa0lCY09IWTZsY04tTzRyczZJQWliLTFYRDNBT1ZsYw?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "한화 김동선·SK 최윤정 초고속 승진의 비밀?…100대 기업 30대 임원 대부분은 오너가 한경매거진&북",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -990,17 +1121,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-UoOvWs1q0XaYHIaPHv51maUP",
+      "id": "domestic-t4zHTrfnn2vVzoovEzq2jvQ-",
       "title": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다",
       "titleKo": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다",
       "source": "딜사이트",
       "publishedAt": "2026-07-21T23:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QUXV3WWtMSFhoTUI3anMyMTFVaWJYblFnblpOYnVqVGVTWjU0cDJxOTF0bDVjcG53VVVBRklmUFFzZElqRGZYdkU0LTJMRzQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QUXV3WWtMSFhoTUI3anMyMTFVaWJYblFnblpOYnVqVGVTWjU0cDJxOTF0bDVjcG53VVVBRklmUFFzZElqRGZYdkU0LTJMRzQ?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[김동선의 뉴한화] 두 명의 키맨…한화갤러리아 부동산 판 키운다 딜사이트",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1010,17 +1144,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-R5mWVx1YhZVEtICRn-F83rxK",
+      "id": "domestic-BW5USf8wbea-KtJ_FB3XLcrz",
       "title": "이라크 에르빌의 미 영사관에서 드론 4대 공격 막아내",
       "titleKo": "이라크 에르빌의 미 영사관에서 드론 4대 공격 막아내",
       "source": "뉴시스",
       "publishedAt": "2026-07-21T21:53:49.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvUGRlYlItbzdtb1ZUclBZcWxCOUkyc2hVekRTejI4MDM0WnRVN0NoUWNBRUVFeU4tYk5PcTFXWl9FTWhfZUd0LXlXY0Utd1ppeEdzbU9uRkJxS0Y0SDJJVdIBeEFVX3lxTE56d182UE1EdVE3RTBVbEU4bEE0QWZmNm1WWEZwUUZ2NlJxeVNoRlpnbE4wd2M3Sm9WLU54elRXeWRlQTlDSkRhS2xsSmdUZUxzTU4zaUZCMTk0U3YwN2RNNXI1SFNGR05qOExPSXRFQjFuR3lQcjNsTg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvUGRlYlItbzdtb1ZUclBZcWxCOUkyc2hVekRTejI4MDM0WnRVN0NoUWNBRUVFeU4tYk5PcTFXWl9FTWhfZUd0LXlXY0Utd1ppeEdzbU9uRkJxS0Y0SDJJVdIBeEFVX3lxTE56d182UE1EdVE3RTBVbEU4bEE0QWZmNm1WWEZwUUZ2NlJxeVNoRlpnbE4wd2M3Sm9WLU54elRXeWRlQTlDSkRhS2xsSmdUZUxzTU4zaUZCMTk0U3YwN2RNNXI1SFNGR05qOExPSXRFQjFuR3lQcjNsTg?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "이라크 에르빌의 미 영사관에서 드론 4대 공격 막아내 뉴시스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1030,17 +1167,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-SzC4wOMw08erW99YPcxEs-oz",
+      "id": "domestic-srUQpFH6kM7Z2RJ7FH8D_JP2",
       "title": "대우건설, 이라크 알포 신항만 첫 공사 수주",
       "titleKo": "대우건설, 이라크 알포 신항만 첫 공사 수주",
       "source": "스트레이트뉴스",
       "publishedAt": "2026-07-21T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0xelZ6ZFljYmFUNjk1a29oaUlUMERKVEJGVlMtNUtjZVFPbk9tUDEwUGF0TnRISHllRXgzc2R6M0tFcXVjcWxjT0VHMzVVZkkwXzU3cW4zYXpqQnVPTWdYdnVjMHRUTzFmVmNXRzBYek9YQdIBdkFVX3lxTE1WcUNubGFxUWVMcVVUUDVVVFIwc0tBWmJjMzBEMllrUDhvdmt1WlVNTnRvZnFRM2puSW1OTzZzTUdDV2RXS3ZzWnhqQmg5VXA4d0prTzU0eTZxYllqLWI2QUpCNE5hZnBtc0VvWThYVDR0X005MFE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0xelZ6ZFljYmFUNjk1a29oaUlUMERKVEJGVlMtNUtjZVFPbk9tUDEwUGF0TnRISHllRXgzc2R6M0tFcXVjcWxjT0VHMzVVZkkwXzU3cW4zYXpqQnVPTWdYdnVjMHRUTzFmVmNXRzBYek9YQdIBdkFVX3lxTE1WcUNubGFxUWVMcVVUUDVVVFIwc0tBWmJjMzBEMllrUDhvdmt1WlVNTnRvZnFRM2puSW1OTzZzTUdDV2RXS3ZzWnhqQmg5VXA4d0prTzU0eTZxYllqLWI2QUpCNE5hZnBtc0VvWThYVDR0X005MFE?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "대우건설, 이라크 알포 신항만 첫 공사 수주 스트레이트뉴스",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1050,17 +1190,20 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
     },
     {
-      "id": "domestic-9LnhM-erBIGNMNADrKQRktCE",
+      "id": "domestic-H6c7clo0NB9X3CUVKyJNprP2",
       "title": "[한화그룹 3형제 분업 下] 무차입 ‘클린 지주사’ 쥔 김동선…‘푸드테크 실험·규제 돌파’는 과제",
       "titleKo": "[한화그룹 3형제 분업 下] 무차입 ‘클린 지주사’ 쥔 김동선…‘푸드테크 실험·규제 돌파’는 과제",
       "source": "에너지경제신문",
       "publishedAt": "2026-07-21T06:40:14.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE12WFdxUFVyMERYMy1fazVVRE5vTHhpQWp6RlFRMl9tTmJzeGprckNiMkJDLXNQYWEtS3J2MHNRV1l0cjNNVkxRSGFzRl9KcUJGQ2IzWnlYaUVUaUU?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE12WFdxUFVyMERYMy1fazVVRE5vTHhpQWp6RlFRMl9tTmJzeGprckNiMkJDLXNQYWEtS3J2MHNRV1l0cjNNVkxRSGFzRl9KcUJGQ2IzWnlYaUVUaUU?oc=5&hl=ko&gl=KR&ceid=KR:ko",
       "description": "[한화그룹 3형제 분업 下] 무차입 ‘클린 지주사’ 쥔 김동선…‘푸드테크 실험·규제 돌파’는 과제 에너지경제신문",
       "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "한화 김동선",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1070,7 +1213,75 @@
       "reportUsefulness": "include",
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집",
       "relatedNews": [],
-      "relatedNewsCount": 0
+      "relatedNewsCount": 0,
+      "previewText": "기사의 주요 내용은 원문에서 확인할 수 있습니다."
+    },
+    {
+      "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
+      "title": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار - قناة ومنصة المشهد - أخبار العالم اليوم",
+      "titleKo": "이라크, Anbar에서 IS의 자금 거점 중 하나를 표적 삼아",
+      "summaryKo": "이라크가 Anbar에서 IS의 자금 거점 중 하나를 표적 삼았다.",
+      "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
+      "publishedAt": "2026-07-28T03:58:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
+      "query": "\"الأنبار\" \"داعش\"",
+      "queryGroup": "arabic_iraq_security_protests",
+      "collectionLane": "arabic_iraq_security",
+      "forcedCategory3": "terror_security",
+      "description": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار قناة ومنصة المشهد - أخبار العالم اليوم",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 92,
+      "reportBullet": "이라크, Anbar에서 IS의 자금 거점 중 하나를 표적 삼아",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크"
+      ],
+      "location": "Anbar",
+      "securityEventType": "other",
+      "securityEventCount": 1,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "이라크가 안바르에서 ISIS의 자금 거점 중 하나를 표적 삼았다.",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "이라크",
+          "roleKo": "",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-28T04:59:44.755Z",
+      "entityNormalizationApplied": true,
+      "entityNormalizedAt": "2026-07-28T04:59:44.826Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "eventId": "event-2026-07-28-g2sfyx",
+      "eventTitleKo": "이라크, Anbar에서 IS의 자금 거점 중 하나를 표적 삼아",
+      "eventSummaryKo": "이라크가 Anbar에서 IS의 자금 거점 중 하나를 표적 삼았다.",
+      "eventArticleCount": 1,
+      "eventSources": [],
+      "eventRepresentativeId": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
+      "eventRepresentative": true
     },
     {
       "id": "rss-tJ66Y3Al6mJDkMpwYPuD-vCp",
@@ -9046,7 +9257,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 10
+        "count": 11
       },
       {
         "query": "\"رئيس الوزراء\" \"اجتماع\" \"العراق\"",
@@ -9067,21 +9278,21 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 13
+        "count": 14
       },
       {
         "query": "\"مجلس النواب\" \"جلسة\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 17
+        "count": 16
       },
       {
         "query": "\"مجلس النواب\" \"قانون\" \"العراق\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 13
+        "count": 14
       },
       {
         "query": "\"مجلس النواب\" \"تصويت\" \"العراق\"",
@@ -9095,7 +9306,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 7
+        "count": 5
       },
       {
         "query": "\"مجلس النواب\" \"إعفاء\" \"العراق\"",
@@ -9116,7 +9327,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 8
+        "count": 7
       },
       {
         "query": "\"الإطار التنسيقي\" \"اجتماع\"",
@@ -9214,14 +9425,14 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 12
+        "count": 11
       },
       {
         "query": "\"الهيئة الوطنية للاستثمار\" \"رئيس\"",
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 13
+        "count": 12
       },
       {
         "query": "\"الهيئة الوطنية للاستثمار\" \"إعفاء\"",
@@ -9242,7 +9453,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 5
+        "count": 4
       },
       {
         "query": "\"بسماية\" \"مجلس الوزراء\"",
@@ -9284,7 +9495,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 19
+        "count": 18
       },
       {
         "query": "\"رئيس الوزراء\" \"طهران\" \"العراق\"",
@@ -9312,7 +9523,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 2
+        "count": 3
       },
       {
         "query": "\"وزارة الخارجية العراقية\" \"بيان\"",
@@ -9382,7 +9593,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 19
+        "count": 20
       },
       {
         "query": "\"العراق\" \"هجوم إرهابي\"",
@@ -9396,14 +9607,14 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 21
+        "count": 22
       },
       {
         "query": "\"العراق\" \"عبوة ناسفة\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 13
+        "count": 15
       },
       {
         "query": "\"العراق\" \"اغتيال\"",
@@ -9424,7 +9635,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 11
+        "count": 10
       },
       {
         "query": "\"العراق\" \"صاروخ\"",
@@ -9438,7 +9649,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 8
+        "count": 7
       },
       {
         "query": "\"بغداد\" \"خطف\"",
@@ -9515,7 +9726,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 2
+        "count": 1
       },
       {
         "query": "\"العراق\" \"الحدود التركية\"",
@@ -9704,7 +9915,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 5
+        "count": 4
       },
       {
         "query": "\"Iraq\" \"drone attack\"",
@@ -9753,7 +9964,7 @@
         "group": "english_middle_east_fallback",
         "lane": "regional_context",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"Iraq\" \"airport suspension\"",
@@ -10193,7 +10404,7 @@
           {
             "url": "https://shafaq.com/",
             "type": "html",
-            "count": 3,
+            "count": 2,
             "ok": true
           }
         ]
@@ -10345,20 +10556,20 @@
     ],
     "evidence": {
       "fulltext": 29,
-      "rssDescription": 236,
+      "rssDescription": 159,
       "insufficient": 0,
       "aiEligible": 120
     },
     "archive": {
-      "previous": 170,
-      "carriedForward": 170
+      "previous": 102,
+      "carriedForward": 102
     },
-    "elapsedSeconds": 36
+    "elapsedSeconds": 24
   },
   "regionalIraqExposure": {
-    "inputRegional": 82,
-    "keptRegional": 22,
-    "removedRegional": 60,
+    "inputRegional": 84,
+    "keptRegional": 23,
+    "removedRegional": 61,
     "removed": [
       {
         "id": "rss-2l7KYG0TliIcgXr11btk352L",
@@ -10368,11 +10579,6 @@
       {
         "id": "rss-cqvQCMc1Zl1hJE01_70XKIH0",
         "title": "Saudi says groups in Iraq targeted territory, Houthis claim drone attacks - The Hindu",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-0iertV6yZLxU-8JK7NQsvfQK",
-        "title": "Riyadh demands Baghdad curb attacks by Iran-aligned militias in Iraq - Rudaw",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -10401,18 +10607,8 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss--xGhV1_74IHgShFIApGE6XOp",
-        "title": "Iraq signs pipeline deal with Syria to reroute oil exports through the Mediterranean - Crypto Briefing",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
         "id": "rss-na3RPXC11r0a9wkGP1LQbPzG",
         "title": "Iran Rejected a U.S. Cease-Fire Offer Delivered by Iraq, Officials Say - The New York Times",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
-      },
-      {
-        "id": "rss-rXARu2rUHPQWukzw_2q_5NvO",
-        "title": "Houthis say hit Saudi Arabia as Trump weighs harder Iran strikes - Iraqi News",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -10451,9 +10647,19 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
+        "id": "rss-3hflbkOwEGxiB6rNEJiDzO2N",
+        "title": "Explosions are heard near a US base in northern Iraq as US-Iran fighting escalates - WWAYTV3",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-XiQuo2QuerxkkXDkfhnGYvu5",
         "title": "US military says it fired on another merchant vessel trying to breach blockade of Iranian ports - WFSB",
         "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-yQInKx31yQeXKh4Ep2VrO4pe",
+        "title": "Explosions Reported Near US Base In Northern Iraq As Iran Conflict Escalates - Outlook India",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss-CmC7tWH4pxiihnlYRh-TWrzC",
@@ -10474,6 +10680,11 @@
         "id": "rss-ipCIpKGOC3ggj1FuBXhBfnhm",
         "title": "US imports first fuel oil cargoes shipped via Syria as Iraq leverages new export route - Reuters",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-n3iVNmj991Ju2ccOpJO2lQV-",
+        "title": "Iran sends commanders, missile equipment to Yemen’s Houthis: sources - Crypto Briefing",
+        "reason": "원문에 이라크 직접 연결 없음"
       },
       {
         "id": "rss-BQQ2DUEZrQ502V8y6Xaa0XzC",
@@ -10501,7 +10712,7 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-vaD_bsBE4rMu_Rz3Cm0cJRWi",
+        "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
       },
@@ -10519,11 +10730,6 @@
         "id": "rss-yfWqgGDikgDmDdM9mfyPxEi5",
         "title": "To Base or Not to Base: The Iran War Exposes Flaws of U.S. Basing in the Middle East - Council on Foreign Relations",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-f7KBmD4o5unYWTtN3C66sfUG",
-        "title": "U.S. soldier killed in Iraq during controlled explosion of Iranian drone named as Sgt. Michael Emmanuel Swinton - CBS News",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
@@ -10606,6 +10812,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-2m3a6pTBt94uSNqXZKOK8rc8",
+        "title": "Vessel hijacked off Yemen as satellite images show Iranian missile hit US Patriot battery - Ynetnews",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-PC7SzZ_PrpqtSS-GcfJZlN-x",
         "title": "Iran Targets US Military Bases Across 3 Countries in Retaliatory Attack - IranWire",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -10623,6 +10834,11 @@
       {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
+        "id": "rss-RXSndJmdfwZLG3_O0ZAd51m8",
+        "title": "Khamenei funeral procession crosses into Iraq amid 2026 Iran war tensions - Crypto Briefing",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
@@ -10661,18 +10877,18 @@
         "reason": "원문에 이라크 직접 연결 없음"
       }
     ],
-    "completedAt": "2026-07-28T04:13:39.054Z"
+    "completedAt": "2026-07-28T04:59:26.371Z"
   },
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
     "requestedModel": "gpt-5.4",
     "model": "gpt-5.4",
-    "candidates": 198,
-    "reused": 170,
-    "requested": 28,
-    "extracted": 28,
+    "candidates": 119,
+    "reused": 102,
+    "requested": 17,
+    "extracted": 17,
     "failed": 0,
-    "removedBeforeAi": 7,
+    "removedBeforeAi": 8,
     "overflow": 0,
     "removed": [
       {
@@ -10706,48 +10922,51 @@
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       },
       {
+        "id": "rss-qSHrGafZfSh1q-hWM7MoRERy",
+        "title": "Riyadh demands Baghdad curb attacks by Iran-aligned militias in Iraq - Rudaw",
+        "reason": "주간보고서 정치·치안 범위 밖 기사"
+      },
+      {
         "id": "direct-wX2AHA29F5OqV81kVSBtSXzS",
         "title": "ترامب: أوقفت القصف وسأعود بقوة إذا فشلت المفاوضات يا طهران",
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       }
     ],
-    "completedAt": "2026-07-28T04:14:08.580Z"
-  },
-  "reportWriting": {
-    "model": "gpt-5.4-mini",
-    "reasoning": "medium",
-    "minScore": 70,
-    "maxItems": 20,
-    "refined": 20,
-    "version": "weekly-report-v15-final-editor-quality-gate-refinement"
+    "completedAt": "2026-07-28T04:59:44.756Z"
   },
   "entityNormalization": {
-    "correctedCount": 75,
-    "completedAt": "2026-07-28T04:14:57.329Z"
+    "correctedCount": 76,
+    "completedAt": "2026-07-28T04:59:44.833Z"
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-28T04:14:57.521Z",
+    "appliedAt": "2026-07-28T04:59:45.058Z",
     "termCount": 29,
-    "changedCount": 28
+    "changedCount": 27
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T04:14:57.580Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T04:59:45.116Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T04:14:57.631Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T04:59:45.176Z",
   "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T04:14:57.718Z",
+  "untranslatedFilteredAt": "2026-07-28T04:59:45.269Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T04:14:57.777Z",
+  "datelineLocationCorrectedAt": "2026-07-28T04:59:45.330Z",
   "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-28T04:14:57.836Z",
+  "aiHallucinationFilteredAt": "2026-07-28T04:59:45.395Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T04:14:57.889Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T04:59:45.453Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T04:14:57.955Z",
-    "removedCount": 15,
+    "appliedAt": "2026-07-28T04:59:45.520Z",
+    "removedCount": 16,
     "correctedCount": 1,
     "removed": [
+      {
+        "id": "rss-CWsFKJB-wpfhAMpdO7j12Ysw",
+        "title": "레바논, 호르무즈 해협 우회를 위한 이라크 원유 수송 경로 제안",
+        "category3": "regional",
+        "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
+      },
       {
         "id": "rss-MzoX9Sa8hFpx63qTmUVqrAUi",
         "title": "단독: 이라크, 호르무즈를 통한 석유의 안전한 통과 모색",
@@ -10756,7 +10975,7 @@
       },
       {
         "id": "rss-FiE6bMC75C4fWsqIEwfEGLB0",
-        "title": "이라크, 호르무즈 해협 의존을 줄이기 위해 튀르키예·시리아 송유관 검토",
+        "title": "이라크, 호르무즈 해협 의존 줄이기 위해 튀르키예·시리아 송유관 검토",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -10768,13 +10987,13 @@
       },
       {
         "id": "rss-e4XU__UNWt6FccUJxYL8pBKE",
-        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 통해 이라크 석유를 운송한다",
+        "title": "호르무즈의 여파 속에 수천 대의 트럭이 시리아를 통해 이라크 석유를 운반",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-dlNwKO39ujSvak0_AiPN-Tcb",
-        "title": "호르무즈의 여파 속에 수천 대의 트럭이 시리아를 거쳐 이라크 석유를 운송",
+        "title": "호르무즈의 여파 속에 수천 대의 트럭이 시리아를 거쳐 이라크의 석유를 운송 - 블룸버그",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -10786,13 +11005,13 @@
       },
       {
         "id": "rss-JwpbF__DhmDgmt65ab-x-6RA",
-        "title": "미국 석유회사들, 대체 운송로 개발 위해 이라크와 계약 체결",
+        "title": "미국 석유 기업들, 대체 운송로 개발 위해 이라크와 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-biLB2LUcp0cdTfSWyZF6yBVu",
-        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대체 경로 조성 방안 검토 예정 - WSJ",
+        "title": "셰브론, 이라크 석유를 위한 호르무즈 해협 대체 경로 조성 방안 검토 - WSJ",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -10804,13 +11023,13 @@
       },
       {
         "id": "rss-g1gbX16_99tC9TFh0Hg0bkMA",
-        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니아스 송유관 재건 추진",
+        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니야스 송유관 재건 추진",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-boFw9WCK2gW0rZ6YEr0VyVu2",
-        "title": "단독: 시리아·이라크·미국, 호르무즈 해협 우회를 위한 지중해 송유관 합의 공개 계획",
+        "title": "단독: 시리아·이라크·미국, 호르무즈 해협 우회를 위한 지중해 파이프라인 합의 공개 계획",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -10822,7 +11041,7 @@
       },
       {
         "id": "rss-7jZ5-TM3tPitYtS_TmuFBdHc",
-        "title": "EU, 지역 긴장 고조 속 이란·이라크·레바논 영공 회피 권고",
+        "title": "EU, 지역 긴장 속 이란·이라크·레바논 영공 회피 권고",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -10841,18 +11060,20 @@
     ]
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T04:14:58.001Z",
+    "appliedAt": "2026-07-28T04:59:45.572Z",
     "removedCount": 0,
     "removed": []
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T04:14:58.055Z",
-  "eventCount": 94,
-  "eventDuplicateArticleCount": 89,
-  "eventGroupedAt": "2026-07-28T04:14:58.502Z",
+  "duplicateCollapsedAt": "2026-07-28T04:59:45.628Z",
+  "eventCount": 63,
+  "eventDuplicateArticleCount": 40,
+  "eventGroupedAt": "2026-07-28T04:59:46.031Z",
   "domesticMedia": {
     "count": 44,
-    "rawCount": 65,
+    "rawCount": 64,
+    "fullTextCount": 0,
+    "fullTextFailedCount": 64,
     "queries": [
       "비스마야",
       "한화 이라크",
@@ -10860,7 +11081,11 @@
       "한화 김동관",
       "한화 김동선"
     ],
-    "generatedAt": "2026-07-28T04:15:02.818Z",
+    "generatedAt": "2026-07-28T04:59:50.049Z",
     "aiUsed": false
+  },
+  "domesticPreviewNormalization": {
+    "updated": 44,
+    "generatedAt": "2026-07-28T04:59:53.737Z"
   }
 }
