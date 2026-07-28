@@ -8,10 +8,9 @@ import { isRegionalIraqExposure, regionalIraqExposureReason } from "./filter-reg
 
 const ROOT = process.cwd();
 const keywords = JSON.parse(await fs.readFile(path.join(ROOT, "data", "search-keywords.json"), "utf8"));
-const regionalQueries = [
-  ...(keywords.korean_middle_east || []),
-  ...(keywords.english_middle_east_fallback || [])
-];
+const koreanRegionalQueries = keywords.korean_middle_east || [];
+const englishRegionalQueries = keywords.english_middle_east_fallback || [];
+const regionalQueries = [...koreanRegionalQueries, ...englishRegionalQueries];
 
 for (const forbidden of ["Lebanon", "Hezbollah", "레바논", "헤즈볼라", "civil nuclear", "원자력 협력"]) {
   if (regionalQueries.some((query) => String(query).toLowerCase().includes(forbidden.toLowerCase()))) {
@@ -21,11 +20,27 @@ for (const forbidden of ["Lebanon", "Hezbollah", "레바논", "헤즈볼라", "c
 
 for (const required of [
   "\"이라크\" \"영공 폐쇄\"",
-  "\"이라크\" \"시리아 국경\" \"ISIS\"",
+  "\"이라크\" \"공항 운항 중단\"",
+  "\"이라크\" \"호르무즈\" \"원유 수출\"",
   "\"Iraq\" \"airspace closure\"",
   "\"Iraq\" \"Hormuz\" \"oil exports\""
 ]) {
   if (!regionalQueries.includes(required)) throw new Error(`Required Iraq operational query missing: ${required}`);
+}
+
+const forbiddenKoreanPoliticsSecurityTerms = [
+  "ISIS", "테러", "미군기지", "공격", "시리아 국경", "이란 국경", "국경 폐쇄", "시위", "의회", "총리", "정부"
+];
+for (const term of forbiddenKoreanPoliticsSecurityTerms) {
+  if (koreanRegionalQueries.some((query) => String(query).includes(term))) {
+    throw new Error(`Korean politics/security query must remain excluded from regional collection: ${term}`);
+  }
+}
+
+for (const query of regionalQueries) {
+  if (!/(?:Iraq|이라크)/i.test(String(query))) {
+    throw new Error(`Regional query must explicitly mention Iraq: ${query}`);
+  }
 }
 
 const shouldReject = [
