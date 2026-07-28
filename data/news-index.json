@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-28T06:22:02.170Z",
+  "generatedAt": "2026-07-28T06:40:49.970Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 104,
+    "total": 93,
     "politics": 7,
-    "terror_security": 90,
+    "terror_security": 79,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "archive": {
-    "previous": 103,
-    "carriedForward": 103
+    "previous": 104,
+    "carriedForward": 104
   },
-  "elapsedSeconds": 37,
-  "count": 104,
+  "elapsedSeconds": 33,
+  "count": 93,
   "regionalIraqExposure": {
-    "inputRegional": 83,
+    "inputRegional": 84,
     "keptRegional": 23,
-    "removedRegional": 60,
+    "removedRegional": 61,
     "removed": [
       {
         "id": "rss-2l7KYG0TliIcgXr11btk352L",
@@ -289,6 +289,11 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
+        "id": "rss-RXSndJmdfwZLG3_O0ZAd51m8",
+        "title": "Khamenei funeral procession crosses into Iraq amid 2026 Iran war tensions - Crypto Briefing",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-V-KSwkIe9Q8niLvdrQDrVyd_",
         "title": "Designed in Israel, Made in Kurdistan, Smuggled via Jordan: The Mysterious Firearms Flooding Israel - Haaretz",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -309,13 +314,13 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
-        "id": "rss-Lv3l_rC8EwGPnzEXvlNtcSIR",
-        "title": "Iran says it struck US bases in Kuwait, Bahrain after American attacks - The New Region",
+        "id": "rss-1cPdKdpw7f_y6FhklwGSvnTs",
+        "title": "Iran attacks Bahrain and Kuwait following U.S. strikes, threatens to halt talks to end war - CBC",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
-        "id": "rss-1cPdKdpw7f_y6FhklwGSvnTs",
-        "title": "Iran attacks Bahrain and Kuwait following U.S. strikes, threatens to halt talks to end war - CBC",
+        "id": "rss-Lv3l_rC8EwGPnzEXvlNtcSIR",
+        "title": "Iran says it struck US bases in Kuwait, Bahrain after American attacks - The New Region",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -324,46 +329,46 @@
         "reason": "원문에 이라크 직접 연결 없음"
       }
     ],
-    "completedAt": "2026-07-28T06:22:02.251Z"
+    "completedAt": "2026-07-28T06:40:50.063Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
-    "reused": 103,
+    "reused": 104,
     "requested": 17,
     "extracted": 17,
     "failed": 0,
-    "removedCount": 8
+    "removedCount": 6
   },
   "entityNormalization": {
-    "correctedCount": 77,
-    "completedAt": "2026-07-28T06:22:23.097Z"
+    "correctedCount": 78,
+    "completedAt": "2026-07-28T06:41:09.490Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T06:22:23.319Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-28T06:41:09.778Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T06:22:23.366Z",
-  "untranslatedFilteredCount": 0,
-  "untranslatedFilteredAt": "2026-07-28T06:22:23.442Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-28T06:41:09.841Z",
+  "untranslatedFilteredCount": 12,
+  "untranslatedFilteredAt": "2026-07-28T06:41:09.939Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T06:22:23.493Z",
+  "datelineLocationCorrectedAt": "2026-07-28T06:41:10.010Z",
   "aiHallucinationFilteredCount": 0,
-  "aiHallucinationFilteredAt": "2026-07-28T06:22:23.545Z",
+  "aiHallucinationFilteredAt": "2026-07-28T06:41:10.080Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T06:22:23.598Z",
+  "irrelevantForeignFilteredAt": "2026-07-28T06:41:10.139Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T06:22:23.657Z",
-    "removedCount": 16,
+    "appliedAt": "2026-07-28T06:41:10.213Z",
+    "removedCount": 28,
     "correctedCount": 1
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T06:22:23.698Z",
+    "appliedAt": "2026-07-28T06:41:10.268Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T06:22:23.743Z",
-  "eventCount": 63,
-  "eventDuplicateArticleCount": 41,
-  "eventGroupedAt": "2026-07-28T06:22:24.061Z"
+  "duplicateCollapsedAt": "2026-07-28T06:41:10.324Z",
+  "eventCount": 60,
+  "eventDuplicateArticleCount": 33,
+  "eventGroupedAt": "2026-07-28T06:41:10.689Z"
 }
