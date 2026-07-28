@@ -7,9 +7,13 @@ const ROOT = process.cwd();
 const readJson = async (file) => JSON.parse(await fs.readFile(path.join(ROOT, file), "utf8"));
 
 const keywords = await readJson("data/search-keywords.json");
+const domesticKeywords = await readJson("data/domestic-search-keywords.json");
 const expectedKorean = ["비스마야", "한화 이라크", "이라크", "한화 김동관", "한화 김동선"];
-if (JSON.stringify(keywords.korean_domestic_media || []) !== JSON.stringify(expectedKorean)) {
+if (JSON.stringify(domesticKeywords.queries || []) !== JSON.stringify(expectedKorean)) {
   throw new Error(`Korean domestic queries must be exactly: ${expectedKorean.join(", ")}`);
+}
+if (Object.prototype.hasOwnProperty.call(keywords, "korean_domestic_media")) {
+  throw new Error("Korean domestic queries must stay outside the AI keyword file");
 }
 
 const allQueries = Object.entries(keywords).filter(([key]) => !key.startsWith("_")).flatMap(([, values]) => Array.isArray(values) ? values : []);
@@ -71,4 +75,4 @@ for (const file of syntaxFiles) {
   const result = spawnSync(process.execPath, ["--check", file], { stdio: "inherit" });
   if (result.status !== 0) process.exit(result.status || 1);
 }
-console.log(`Validated ${allQueries.length} queries, separate no-AI domestic RSS collection, and ${syntaxFiles.length} JavaScript files.`);
+console.log(`Validated ${allQueries.length} AI queries, ${expectedKorean.length} no-AI domestic RSS queries, and ${syntaxFiles.length} JavaScript files.`);
