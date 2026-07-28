@@ -16,6 +16,7 @@ const INDEX_FILE = path.join(ROOT, "data", "news-index.json");
 const IRAQ_DIRECT_RE = /العراق|عراقي|العراقية|بغداد|البصرة|أربيل|اربيل|كركوك|الأنبار|الانبار|ديالى|الموصل|نينوى|إقليم كردستان|اقليم كردستان|iraq|iraqi|baghdad|basra|erbil|kirkuk|anbar|diyala|mosul|nineveh|iraqi kurdistan|kurdistan region of iraq|이라크|바그다드|바스라|에르빌|아르빌|키르쿠크|안바르|디얄라|모술|니나와|쿠르드 자치정부/iu;
 const BISMAYAH_RE = /بسماية|بسمايه|بسمایه|bismayah|bismaya|bncp|비스마야/iu;
 const HANWHA_RE = /شركة هانوا|هانوا|hanwha|한화/iu;
+const NEGATED_RELEVANCE_RE = /(?:unrelated|not\s+(?:directly\s+)?related|no\s+(?:direct\s+)?connection|without\s+(?:an?\s+)?(?:iraq|bismayah|bncp)\s+connection).{0,45}(?:iraq|iraqi|bismayah|bismaya|bncp|hanwha)|(?:iraq|iraqi|bismayah|bismaya|bncp|hanwha).{0,45}(?:unrelated|not\s+(?:directly\s+)?related|no\s+(?:direct\s+)?connection)|(?:이라크|비스마야|한화).{0,30}(?:무관|관련\s*없|직접\s*연계\s*없)|(?:무관|관련\s*없|직접\s*연계\s*없).{0,30}(?:이라크|비스마야|한화)|(?:غير\s+مرتبط|لا\s+علاقة|ليس\s+له\s+علاقة).{0,40}(?:العراق|بسماية|هانوا)|(?:العراق|بسماية|هانوا).{0,40}(?:غير\s+مرتبط|لا\s+علاقة|ليس\s+له\s+علاقة)/iu;
 
 const BORDER_RE = /الحدود|معبر حدودي|منفذ حدودي|إغلاق الحدود|غلق الحدود|تسلل|تهريب|لاجئ|نازح|انتشار حدودي|border|border crossing|cross-border|frontier|closure|closed crossing|infiltration|smuggling|refugee|displaced|border deployment|국경|국경검문소|국경 통제|국경 폐쇄|월경|침투|밀수|난민|피란민/iu;
 const AIR_RE = /المجال الجوي|إغلاق الأجواء|المطار|الرحلات الجوية|تعليق الرحلات|إلغاء الرحلات|نوتام|airspace|airport|flight suspension|flight cancellation|aviation|notam|영공|공항|항공편|운항 중단|결항|비행금지/iu;
@@ -47,13 +48,18 @@ function sourceSegments(article = {}) {
     .map((value) => value.slice(0, 1200));
 }
 
+function segmentHasPositiveIraqSignal(segment = "") {
+  return IRAQ_DIRECT_RE.test(segment) && !NEGATED_RELEVANCE_RE.test(segment);
+}
+
 function hasLinkedIraqSignal(article = {}, signalRe) {
-  return sourceSegments(article).some((segment) => IRAQ_DIRECT_RE.test(segment) && signalRe.test(segment));
+  return sourceSegments(article).some((segment) => segmentHasPositiveIraqSignal(segment) && signalRe.test(segment));
 }
 
 export function regionalIraqExposureReason(article = {}) {
   const raw = articleSourceText(article);
   if (!raw.trim()) return "원문 근거 없음";
+  if (NEGATED_RELEVANCE_RE.test(raw)) return "원문이 이라크·비스마야 직접 관련성을 부정함";
   if (BISMAYAH_RE.test(raw) || (HANWHA_RE.test(raw) && IRAQ_DIRECT_RE.test(raw))) return "비스마야·한화 직접 관련";
   if (!IRAQ_DIRECT_RE.test(raw)) return "원문에 이라크 직접 연결 없음";
   if (hasLinkedIraqSignal(article, BORDER_RE)) return "이라크 국경·통관·침투 리스크";
@@ -66,7 +72,7 @@ export function regionalIraqExposureReason(article = {}) {
 
 export function isRegionalIraqExposure(article = {}) {
   const reason = regionalIraqExposureReason(article);
-  return !/없음|부족$/.test(reason);
+  return !/없음|부족$|부정함$/.test(reason);
 }
 
 async function main() {
