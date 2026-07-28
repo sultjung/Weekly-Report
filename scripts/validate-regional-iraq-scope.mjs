@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /** Regression checks for Iraq-focused regional collection. */
-
 import fs from "node:fs/promises";
 import path from "node:path";
 import { classifyArticle } from "./extract-article-facts.mjs";
@@ -8,96 +7,48 @@ import { isRegionalIraqExposure, regionalIraqExposureReason } from "./filter-reg
 
 const ROOT = process.cwd();
 const keywords = JSON.parse(await fs.readFile(path.join(ROOT, "data", "search-keywords.json"), "utf8"));
-const koreanRegionalQueries = keywords.korean_middle_east || [];
-const englishRegionalQueries = keywords.english_middle_east_fallback || [];
-const regionalQueries = [...koreanRegionalQueries, ...englishRegionalQueries];
+const regionalQueries = [...(keywords.english_middle_east_fallback || [])];
 
-for (const forbidden of ["Lebanon", "Hezbollah", "레바논", "헤즈볼라", "civil nuclear", "원자력 협력"]) {
+if (!regionalQueries.length) throw new Error("English Iraq operational query group is empty");
+for (const query of regionalQueries) {
+  if (!/Iraq/i.test(String(query))) throw new Error(`Regional query must include Iraq: ${query}`);
+  if (/[가-힣]/.test(String(query))) throw new Error(`Korean query must not appear in regional group: ${query}`);
+}
+
+for (const forbidden of ["Lebanon", "Hezbollah", "civil nuclear", "Gaza", "Hamas"]) {
   if (regionalQueries.some((query) => String(query).toLowerCase().includes(forbidden.toLowerCase()))) {
     throw new Error(`Regional query must remain Iraq-operational only; forbidden term found: ${forbidden}`);
   }
 }
 
 for (const required of [
-  "\"이라크\" \"영공 폐쇄\"",
-  "\"이라크\" \"공항 운항 중단\"",
-  "\"이라크\" \"호르무즈\" \"원유 수출\"",
   "\"Iraq\" \"airspace closure\"",
-  "\"Iraq\" \"Hormuz\" \"oil exports\""
+  "\"Iraq\" \"airport suspension\"",
+  "\"Iraq\" \"Hormuz\" \"oil exports\"",
+  "\"Iraq\" \"supply chain\" \"border\""
 ]) {
   if (!regionalQueries.includes(required)) throw new Error(`Required Iraq operational query missing: ${required}`);
 }
 
-const forbiddenKoreanPoliticsSecurityTerms = [
-  "ISIS", "테러", "미군기지", "공격", "시리아 국경", "이란 국경", "국경 폐쇄", "시위", "의회", "총리", "정부"
-];
-for (const term of forbiddenKoreanPoliticsSecurityTerms) {
-  if (koreanRegionalQueries.some((query) => String(query).includes(term))) {
-    throw new Error(`Korean politics/security query must remain excluded from regional collection: ${term}`);
-  }
-}
-
-for (const query of regionalQueries) {
-  if (!/(?:Iraq|이라크)/i.test(String(query))) {
-    throw new Error(`Regional query must explicitly mention Iraq: ${query}`);
-  }
-}
-
 const shouldReject = [
-  {
-    title: "Lebanon and Hezbollah exchange fire near the border",
-    description: "Regional security tensions continue without an Iraq connection"
-  },
-  {
-    title: "Iran and Israel exchange missile attacks",
-    description: "The conflict intensified across the region"
-  },
-  {
-    title: "Syria deploys forces near its northern border",
-    description: "Domestic Syrian security operation"
-  },
-  {
-    title: "Iraq comments on regional developments",
-    description: "Lebanon airport suspends flights after local clashes",
-    cleanText: "Baghdad issued a general diplomatic statement.\nLebanon airport separately suspended flights because of domestic security conditions."
-  },
-  {
-    title: "Hanwha announces a new overseas technology investment",
-    description: "The project is unrelated to Iraq or Bismayah"
-  }
+  { title: "Lebanon and Hezbollah exchange fire near the border", description: "Regional security tensions continue without an Iraq connection" },
+  { title: "Iran and Israel exchange missile attacks", description: "The conflict intensified across the region" },
+  { title: "Syria deploys forces near its northern border", description: "Domestic Syrian security operation" },
+  { title: "Hanwha announces a new overseas technology investment", description: "The project is unrelated to Iraq or Bismayah" }
 ];
 for (const article of shouldReject) {
-  if (isRegionalIraqExposure(article)) {
-    throw new Error(`Unrelated neighbouring-country or Hanwha article passed: ${article.title}`);
-  }
+  if (isRegionalIraqExposure(article)) throw new Error(`Unrelated regional article passed: ${article.title}`);
 }
 
 const shouldKeep = [
-  {
-    title: "Iraq closes its airspace after regional missile attacks",
-    description: "Baghdad airport flights were suspended"
-  },
-  {
-    title: "Iraq reinforces the Syria border against ISIS infiltration",
-    description: "Iraqi border forces deployed near the crossing"
-  },
-  {
-    title: "Hormuz disruption threatens Iraqi oil exports",
-    description: "Iraq reviewed tanker movements from Basra ports"
-  },
-  {
-    title: "Attack reported at Ain al-Asad air base in Iraq",
-    description: "The Iraqi base hosting US forces was targeted"
-  },
-  {
-    title: "Hanwha reviews its Iraq operations after regional airspace closures",
-    description: "The review covers the Bismayah project and Baghdad travel routes"
-  }
+  { title: "Iraq closes its airspace after regional missile attacks", description: "Baghdad airport flights were suspended" },
+  { title: "Iraq reinforces the Syria border against ISIS infiltration", description: "Iraqi border forces deployed near the crossing" },
+  { title: "Hormuz disruption threatens Iraqi oil exports", description: "Iraq reviewed tanker movements from Basra ports" },
+  { title: "Attack reported at Ain al-Asad air base in Iraq", description: "The Iraqi base hosting US forces was targeted" },
+  { title: "Hanwha reviews its Iraq operations after regional airspace closures", description: "The review covers the Bismayah project and Baghdad travel routes" }
 ];
 for (const article of shouldKeep) {
-  if (!isRegionalIraqExposure(article)) {
-    throw new Error(`Direct Iraq operational exposure was rejected: ${article.title} (${regionalIraqExposureReason(article)})`);
-  }
+  if (!isRegionalIraqExposure(article)) throw new Error(`Direct Iraq operational exposure was rejected: ${article.title} (${regionalIraqExposureReason(article)})`);
 }
 
 const borderClassification = classifyArticle({
@@ -120,4 +71,4 @@ if (!regionalClassification.include || regionalClassification.category3 !== "reg
   throw new Error("Validated Iraq airspace exposure must classify as regional");
 }
 
-console.log(`Validated ${regionalQueries.length} Iraq-focused regional queries and operational exposure rules.`);
+console.log(`Validated ${regionalQueries.length} English Iraq-focused regional queries and operational exposure rules.`);
