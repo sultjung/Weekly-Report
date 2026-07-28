@@ -9,16 +9,14 @@
   const isDomestic=a=>a.domesticMedia===true||String(a.queryGroup||'')==='korean_domestic_media'||String(a.collectionLane||'')==='korean_domestic_media'||String(a.category3||'')==='domestic_media';
   const title=a=>isDomestic(a)?(a.title||a.titleKo||'제목 없음'):(a.translatedTitle||a.titleKo||a.title||'제목 없음');
   function articleUrl(a={}){
-    const candidates=[a.resolvedUrl,a.canonicalUrl,a.articleUrl,a.sourceUrl,a.link,a.url];
+    const candidates=[a.resolvedUrl,a.canonicalUrl,a.articleUrl,a.link,a.url];
     for(const value of candidates){
       const raw=String(value||'').trim();
       if(!/^https?:\/\//i.test(raw))continue;
       try{
         const u=new URL(raw),host=u.hostname.toLowerCase(),path=u.pathname.toLowerCase();
-        if(/(^|\.)lh\d*\.googleusercontent\.com$/.test(host))continue;
-        if(/(^|\.)gstatic\.com$/.test(host))continue;
-        if(host==='news.google.com'&&/^\/(search|topics|topstories)(\/|$)/i.test(path))continue;
-        if(/(^|\.)google\.[a-z.]+$/.test(host)&&/^\/search(\/|$)/i.test(path))continue;
+        if(host==='news.google.com'||/(^|\.)google\.[a-z.]+$/.test(host))continue;
+        if(/(^|\.)lh\d*\.googleusercontent\.com$/.test(host)||/(^|\.)gstatic\.com$/.test(host))continue;
         if(/\.(?:jpg|jpeg|png|gif|webp|svg|ico)(?:$|[?#])/i.test(path))continue;
         if(/(?:^|[?&])(w|h|sz)=\d+(?:&|$)/i.test(u.search)&&/googleusercontent\.com$/.test(host))continue;
         return u.toString();
