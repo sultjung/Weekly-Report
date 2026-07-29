@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-28T23:39:13.519Z",
+  "generatedAt": "2026-07-29T00:15:10.362Z",
   "source": "collect-news.mjs",
   "files": {
     "news": "data/news.json"
   },
   "counts": {
-    "total": 112,
+    "total": 113,
     "politics": 7,
-    "terror_security": 98,
+    "terror_security": 99,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
@@ -16,12 +16,12 @@
     "previous": 112,
     "carriedForward": 112
   },
-  "elapsedSeconds": 40,
-  "count": 112,
+  "elapsedSeconds": 31,
+  "count": 113,
   "regionalIraqExposure": {
-    "inputRegional": 78,
+    "inputRegional": 80,
     "keptRegional": 24,
-    "removedRegional": 54,
+    "removedRegional": 56,
     "removed": [
       {
         "id": "rss-E8MHJZ9nvFcQewdtS54aVnPy",
@@ -51,6 +51,11 @@
       {
         "id": "rss-daCA4O38pUYy5YUwJfX12j20",
         "title": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-BVGtE60tmRDCuBNVcjCIezuV",
+        "title": "Iran Ground Offensive Against U.S. Bases Inconceivable, Analysts Say - Forbes",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -144,6 +149,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-Lazntp0wRwYQ7YiPQNw7yxh2",
+        "title": "U.S., Pakistan condemn Houthi Red Sea threats to shipping and Saudi Arabia - The Tribune-Democrat",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -162,11 +172,6 @@
         "id": "rss-yfWqgGDikgDmDdM9mfyPxEi5",
         "title": "To Base or Not to Base: The Iran War Exposes Flaws of U.S. Basing in the Middle East - Council on Foreign Relations",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-f7KBmD4o5unYWTtN3C66sfUG",
-        "title": "U.S. soldier killed in Iraq during controlled explosion of Iranian drone named as Sgt. Michael Emmanuel Swinton - CBS News",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
@@ -264,6 +269,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
+        "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -294,7 +304,7 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T23:39:13.614Z"
+    "completedAt": "2026-07-29T00:15:10.464Z"
   },
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
@@ -304,36 +314,36 @@
     "requested": 20,
     "extracted": 20,
     "failed": 0,
-    "removedCount": 14
+    "removedCount": 13
   },
   "entityNormalization": {
     "correctedCount": 88,
-    "completedAt": "2026-07-28T23:39:36.017Z"
+    "completedAt": "2026-07-29T00:15:32.802Z"
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:39:36.307Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-29T00:15:33.122Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T23:39:36.363Z",
-  "untranslatedFilteredCount": 1,
-  "untranslatedFilteredAt": "2026-07-28T23:39:36.458Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-29T00:15:33.196Z",
+  "untranslatedFilteredCount": 0,
+  "untranslatedFilteredAt": "2026-07-29T00:15:33.310Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T23:39:36.586Z",
+  "datelineLocationCorrectedAt": "2026-07-29T00:15:33.382Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T23:39:36.649Z",
+  "aiHallucinationFilteredAt": "2026-07-29T00:15:33.461Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T23:39:36.845Z",
+  "irrelevantForeignFilteredAt": "2026-07-29T00:15:33.528Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T23:39:36.911Z",
-    "removedCount": 20,
+    "appliedAt": "2026-07-29T00:15:33.607Z",
+    "removedCount": 19,
     "correctedCount": 2
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T23:39:36.962Z",
+    "appliedAt": "2026-07-29T00:15:33.667Z",
     "removedCount": 0
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T23:39:37.268Z",
+  "duplicateCollapsedAt": "2026-07-29T00:15:33.735Z",
   "eventCount": 69,
-  "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T23:39:37.724Z"
+  "eventDuplicateArticleCount": 44,
+  "eventGroupedAt": "2026-07-29T00:15:34.320Z"
 }

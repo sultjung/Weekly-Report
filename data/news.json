@@ -1,33 +1,63 @@
 {
   "category": "iraq-weekly-report-news",
-  "generatedAt": "2026-07-28T23:39:13.519Z",
+  "generatedAt": "2026-07-29T00:15:10.362Z",
   "lookbackDays": 30,
-  "count": 156,
+  "count": 157,
   "cacheHits": 0,
   "model": "gpt-5.4",
   "requestedModel": "gpt-5.4",
   "counts": {
-    "total": 112,
+    "total": 113,
     "politics": 7,
-    "terror_security": 98,
+    "terror_security": 99,
     "oil_economy": 0,
     "regional": 7,
     "exclude": 0
   },
   "articles": [
     {
-      "id": "domestic--MVSPmTlrukyCRHYJttodlV1",
-      "title": "'친이란' 후티·이라크 민병대, 사우디 유조선·석유시설 또 공격",
-      "titleKo": "'친이란' 후티·이라크 민병대, 사우디 유조선·석유시설 또 공격",
-      "source": "뉴스1",
-      "sourceUrl": "https://www.news1.kr/",
-      "publishedAt": "2026-07-28T20:15:45.000Z",
-      "url": "https://www.news1.kr/world/middleeast-africa/6242009",
-      "resolvedUrl": "https://www.news1.kr/world/middleeast-africa/6242009",
-      "canonicalUrl": "https://www.news1.kr/world/middleeast-africa/6242009",
-      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPSzJaNUxqQXRkZ2RDSlV4ejBjTEE2NkdRcFUzaS1pRTAyVVJXWURUQ0YtcVJKWjZaNE5neXlEZk9fNVBWVmJqREl0blhuLWltTHJRR3lZUlIxMVJkUlE2M0p3?oc=5",
-      "linkResolutionStatus": "google-batchexecute-content-failed",
-      "description": "'친이란' 후티·이라크 민병대, 사우디 유조선·석유시설 또 공격 뉴스1",
+      "id": "domestic-BTMQLooznLLP7olJc94qVryg",
+      "title": "사우디 \"이틀째 이라크발 공격받아...석유시설 겨냥\"",
+      "titleKo": "사우디 \"이틀째 이라크발 공격받아...석유시설 겨냥\"",
+      "source": "뉴스핌",
+      "sourceUrl": "https://www.newspim.com/",
+      "publishedAt": "2026-07-28T23:42:00.000Z",
+      "url": "https://gam.newspim.com/",
+      "resolvedUrl": "https://gam.newspim.com/",
+      "canonicalUrl": "https://gam.newspim.com/",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9VTC1ud1BrY2pCU000MlZnWTAtNF9oRlBFbzlodVlJNEp6a1M3ME1Jc2hGdmhra0NvaVhVS2drNVhtYVA1ZURvZHVVT1pjZmNPQzBYcjA4QTdaTkd6?oc=5",
+      "linkResolutionStatus": "google-batchexecute",
+      "description": "[서울=뉴스핌] 최원진 친이란 성향의 이라크 내 민병대가 28일(현지시간) 이틀 연속으로 사우디아라비아의 석유 시설을 겨냥해 드론 공격을 감행했다고 사우디 국방부가 밝혔다.로이터 통신에 따르면 투르키 알말리키 사우디 국방부 대변인은 소셜미디어 엑스(X)를 통해",
+      "fullText": "사진 \n\n 29일부터 SK하닉 본주·ADR 전환 허용 \n [서울=뉴스핌] 이정아 오는 29일부터 SK하이닉스 미국주식예탁증서(ADR)와 SK하이닉스 국내 보통주(본주) 간 상호 전환이 허용된다. 그동안 차익거래가 막혀 유지됐던 국내 본주와 ADR 간 가격 차가 조정받을 수 있는 여건이 마련되는 것이다.\r\n다만 시장에서는 전환이 시작되더라도 실제 차익거래는 제한적일 가능성이 크다는 분석이 나온다. ADR 발행 한도가 대부분 소진된 것으로 알려진 데다, 기존 ADR 투자자가 먼저 원주로 전환해야 새로운 ADR 발행이 가능하기 때문이다.\r\n27일 금융투자업계에 따르면, 오는 29일 SK하이닉스 ADR 기초주식 1779만주가 국내 증시에 추가 상장된다. 이후 국내 SK하이닉스 원주를 ADR로, ADR을 다시 원주로 바꾸는 상호 전환이 허용된다.\r\n\nSK하이닉스.[이미지=로이터 뉴스핌] 2026.07.09 mj72284@newspim.com\r\n\nADR은 미국 투자자가 달러로 국내 기업 주식을 거래할 수 있도록 만든 예탁증서다. 그동안은 국내 주식을 ADR로 바꾸거나 ADR을 본주로 교환할 수 없었기 때문에 두 시장의 가격이 크게 벌어져도 이를 이용한 차익거래는 불가능했다.\r\n하지만 앞으로는 국내 시장에서 본주를 매입해 ADR로 전환한 뒤 미국 시장에서 매도하는 거래가 가능해지면서 양 시장 간 가격 차를 활용한 차익거래도 가능해진다. 반대로 ADR 가격이 낮아질 경우 ADR을 본주로 교환하는 거래도 가능하다.\r\n본주와 ADR 간 전환이 원활하게 이뤄질 경우 국내에서는 원주 매수세가 유입되고, 미국에서는 ADR 공급이 늘어나면서 양 시장의 가격 차가 점진적으로 좁혀질 수 있다는 분석이 나온다.\r\n그간 국내 본주와 미국 ADR의 주가 흐름은 계속 엇갈렸다. SK하이닉스 ADR이 미국 나스닥에 상장한 지난 10일부터 27일까지 SK하이닉스 본주는 218만원에서 181만6000원으로 16.69% 하락했다. 반면 ADR은 168.01달러에서 154.57달러로 8.0% 하락하는 데 그쳤다.\r\n이 기간 국내 증시 변동성이 심화하면서 이른바 '삼전닉스' 레버리지 ETF에서 탈출해 서학개미로 전환한 개미 투자자들의 SK하이닉스 ADR 구매세도 상당하다. 한국예탁결제원에 따르면, SK하이닉스 ADR이 미국 나스닥에 상장한 지난 10일부터 27일까지 국내 투자자는 6억7555만달러(약 9900억원)를 순매수했다. 미국 주식 가운데 순매수 1위를 기록한 것이다.\r\n서학개미의 행동에 제임스 매킨토시 월스트리트저널 선임 시장 칼럼니스트는 \"2주 전 SK하이닉스 ADR이 상장된 이후 프리미엄은 16~51%까지 치솟았다\"라며 \"미국 투자자들은 한국 기업의 주식을 직접 거래해줄 증권사를 찾는 수고를 덜기 위해 엄청나게 높은 가격을 지불하고 있다\"고 경고했다.\r\n그는 \"일반적인 ADR이라면 금요일에 나타난 29% 수준의 프리미엄은 헤지펀드들이 한국에서 주식을 사서 ADR로 바꾸는 동시에 미국에서 ADR을 공매도하게 만드는 요인\"이라며 \"하지만 본주를 ADR로 전환하는 것이 원천적으로 불가능하기 때문에 프리미엄이 더 커질 경우 투자자들은 큰 손실을 입을 수 있다\"고 경고한 것이다.\r\n시장에서도 본주와 ADR 간 실제 전환이 얼마나 이뤄질지를 관건으로 꼽고 있다. 핵심 변수는 ADR 발행 한도다. 본주를 ADR로 전환하려면 새로운 ADR을 발행해야 한다. 그러나 ADR은 정해진 발행 한도 내에서만 추가 발행이 가능하다. 현재는 상당수 한도가 이미 사용된 상태다.\r\n또 기존 ADR 투자자가 본주 전환을 선택할 유인이 크지 않다는 점도 고려해야 한다. 현재 미국 시장에서는 ADR이 국내 본주보다 높은 가격에 거래되고 있기 때문에, 굳이 저평가된 원주로 교환할 이유가 많지 않다.\r\n\n경기 이천시 SK하이닉스 본사의 모습 [사진 = 뉴스핌DB]\r\n\n다만 일각에서는 시장 상황에 따라 시나리오는 달라질 수 있다고 보고 있다. 기존 ADR 투자자의 원주 전환이 예상보다 늘어나 발행 여력이 확보될 경우 국내 본주를 ADR로 전환하는 거래도 활발해질 수 있다. 이 경우 국내 본주 수요 증가와 함께 국내외 가격 차가 빠르게 축소될 가능성이 있다.\r\n이정빈 신한투자증권 연구원은 \"29일부터 본주와 ADR 간 상호전환 신청 절차가 시작되지만 실제 가격 괴리 조정 강도는 ADR 신규 발행 규모와 시장 수급에 따라 결정될 것\"이라며 \"전환 절차와 행정적 마찰이 존재하는 만큼 프리미엄이 즉시 축소되기는 쉽지 않다\"고 분석했다.\r\n그러면서 \"ADR 프리미엄은 장기적으로 0으로 수렴하기보다 일정 수준 유지되는 특성이 있지만, 과도하게 확대된 구간에서는 축소될 가능성이 높다\"며 \"프리미엄이 조정되는 과정에서는 ADR 가격 하락보다 국내 본주 상승이 상당 부분을 차지할 가능성이 높다\"고 전망했다.\r\n정민희 아리스 연구원도 \"ADR의 단기 강세는 상장 초기 공급이 제한된 상황에서 프리미엄이 반영된 결과일 수 있다\"며 \"장기적으로는 차익거래를 통해 ADR과 원주 가격이 점차 수렴하는 특징을 보일 것\"이라고 내다봤다.\r\n이어 \"결국 주가 방향을 결정하는 것은 ADR 자체가 아니라 기업의 실적과 성장 모멘텀\"이라며 \"ADR 프리미엄보다 실적과 인공지능(AI) 메모리 시장 성장성이 중장기 주가를 좌우할 것\"이라고 진단했다.\r\nplum@newspim.com \n 2026-07-28 06:00",
+      "fullTextAvailable": true,
+      "fullTextChars": 2619,
+      "query": "이라크",
+      "queryGroup": "korean_domestic_media",
+      "collectionLane": "korean_domestic_media",
+      "collectionMethod": "google-news-rss-publisher-resolved",
+      "category3": "domestic_media",
+      "domesticMedia": true,
+      "importanceScore": 70,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
+      "relatedNews": [],
+      "relatedNewsCount": 0,
+      "previewText": "사진 \n 29일부터 SK하닉 본주·ADR 전환 허용 \n [서울=뉴스핌] 이정아 오는 29일부터 SK하이닉스 미국주식예탁증서(ADR)와 SK하이닉스 국내 보통주(본주) 간 상호 전환이 허용된다. 그동안 차익거래가 막혀 유지됐던 국내 본주와 ADR 간 가격 차가 조정받을 수 있는 여건이 마련되는 것이다.\r\n다만 시장에서는 전환이 시작되더라도 실제 차익거래는 제한적일 가능성이 크다는 분석이 나온다. ADR 발행 한도가 대부분 소진된 것으로 알려진 데다, 기존 ADR 투자자가 먼저 원주로 전환해야 새로운 ADR 발행이 가능하기 때문이다.\r\n27일 금융투자업계에 따르면, 오는 29일 SK하이닉스 ADR 기초주식 1779만주가 국내 증시에 추가 상장된다. 이후 국내 SK하이닉스 원주를 ADR로, ADR을 다시 원주로 바꾸는 상호 전환이 허용된다.\r\nSK하이닉스.[이미지=로이터 뉴스핌] 2026.07.09 mj72284@newspim.com\r\nADR은 미국 투자자가 달러로 국내 기업 주식을 거래할 수 있도록 만든 예탁증서다. 그동",
+      "previewAvailable": true
+    },
+    {
+      "id": "domestic-SyrNh-eosO-ch1yprtoiYrIy",
+      "title": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" |",
+      "titleKo": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" |",
+      "source": "연합인포맥스",
+      "sourceUrl": "https://news.einfomax.co.kr/",
+      "publishedAt": "2026-07-27T14:28:44.000Z",
+      "url": "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno",
+      "resolvedUrl": "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno",
+      "canonicalUrl": "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiREF5a3BiTExWdmtnUjJKZTJmTkJ3SzZTczl3N2NmMTY4SVN0WWNKeXlVV0V4bmNQdWdJVmZUOFdjQTJQVXV0XzBwNVVZeExzM1R3MThSQU00dHBYZ1o4QXVjdGtqME12ZXJ4eFRDV25WdzhL?oc=5",
+      "linkResolutionStatus": "google-batchexecute",
+      "description": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" | 연합인포맥스",
       "fullText": "",
       "fullTextAvailable": false,
       "fullTextChars": 0,
@@ -42,16 +72,16 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
       "relatedNews": [
         {
-          "title": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" |",
-          "source": "연합인포맥스",
-          "publishedAt": "2026-07-27T14:28:44.000Z",
-          "url": "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno",
-          "resolvedUrl": "https://news.einfomax.co.kr/news/articleViewAmp.html?idxno",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiREF5a3BiTExWdmtnUjJKZTJmTkJ3SzZTczl3N2NmMTY4SVN0WWNKeXlVV0V4bmNQdWdJVmZUOFdjQTJQVXV0XzBwNVVZeExzM1R3MThSQU00dHBYZ1o4QXVjdGtqME12ZXJ4eFRDV25WdzhL?oc=5",
-          "description": "사우디 \"자국 석유시설 목표로 한 친이란 이라크 민병대 드론 요격·격추\" | 연합인포맥스",
+          "title": "'친이란' 후티·이라크 민병대, 사우디 유조선·석유시설 또 공격",
+          "source": "뉴스1",
+          "publishedAt": "2026-07-28T20:15:45.000Z",
+          "url": "",
+          "resolvedUrl": "",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPSzJaNUxqQXRkZ2RDSlV4ejBjTEE2NkdRcFUzaS1pRTAyVVJXWURUQ0YtcVJKWjZaNE5neXlEZk9fNVBWVmJqREl0blhuLWltTHJRR3lZUlIxMVJkUlE2M0p3?oc=5",
+          "description": "'친이란' 후티·이라크 민병대, 사우디 유조선·석유시설 또 공격 뉴스1",
           "fullText": "",
           "fullTextAvailable": false,
-          "linkResolutionStatus": "google-batchexecute"
+          "linkResolutionStatus": "failed"
         }
       ],
       "relatedNewsCount": 1,
@@ -119,17 +149,17 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-njvo1AMAhk3kjZ6T5aK07rQE",
+      "id": "domestic-Gx0BV7q7-prJl6GqdXunDH5S",
       "title": "튀르키예, 이라크와 에너지 협약 조만간 마무리 목표 – 에르도안",
       "titleKo": "튀르키예, 이라크와 에너지 협약 조만간 마무리 목표 – 에르도안",
       "source": "Investing.com 한국어",
       "sourceUrl": "https://kr.investing.com/",
       "publishedAt": "2026-07-28T17:04:00.000Z",
-      "url": "https://kr.investing.com/news/economy-news/article-93CH-2032754",
-      "resolvedUrl": "https://kr.investing.com/news/economy-news/article-93CH-2032754",
-      "canonicalUrl": "https://kr.investing.com/news/economy-news/article-93CH-2032754",
+      "url": "",
+      "resolvedUrl": "",
+      "canonicalUrl": "",
       "googleNewsUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wT245eXZlakVZZmhXOGpmb1FBOWJsMmM1SGo3Z0JGd1FnRWkyM2ZDZExKV2ViVzJtem1iUm1ONXcxSXJPeGNQU3JfMFhlY3UyajRpb29IVk1udWFKUjY1cUx6Y1hDUnFqRHdGbmZxOWc?oc=5",
-      "linkResolutionStatus": "google-batchexecute-content-failed",
+      "linkResolutionStatus": "failed",
       "description": "튀르키예, 이라크와 에너지 협약 조만간 마무리 목표 – 에르도안 Investing.com 한국어",
       "fullText": "",
       "fullTextAvailable": false,
@@ -546,13 +576,13 @@
           "title": "사우디 \"이라크발 드론 요격…이란 지원받는 민병대 소행\"",
           "source": "연합뉴스",
           "publishedAt": "2026-07-27T13:25:07.000Z",
-          "url": "https://join.yna.co.kr/ko/login",
-          "resolvedUrl": "https://join.yna.co.kr/ko/login",
+          "url": "",
+          "resolvedUrl": "",
           "googleNewsUrl": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TcTBnTmhKajVoRkxTTjJvWFdtc0VVbmE5UTkta3pqcldBYm03NGx4djFZaXhIaWVhUzROaHFtSE4yaGlyYlBwZXRuZEpCbXoyWFZtZnFTeXZoUnfSAWBBVV95cUxQSm1DX1FobllqUmNXZlZCaFRDOFQ3RlFTWUNLN1FKbUdsQjVJRklvaEI0Q3JBOVpyMklhY3hpNWhXOGdza0lKZGNkWFhaWHZjczhXaXZpWjBFZFN6MFJCVUQ?oc=5",
-          "description": "(카이로=연합뉴스) 김상훈 사우디아라비아가 이라크발 드론 공격을 막아냈다며 공격의 배후로 이란의 지원을 받는 민병대를 지목했다.",
-          "fullText": "김상훈 기자\n\n 구독 \n 구독중 \n\n 이전 \n 다음 \n\n 후티 반군 \"사우디 동부와 얀부 잇는 원유 운송 시설 타격\" \n\n 이미지 확대 \n\n 미사일 공격 후 연기가 치솟는 사우디 정유 시설. 기사 내용과 직접 관련 없음. \n [AFP 연합뉴스 자료사진. 재판매 및 DB 금지]\n\n (카이로=연합뉴스) 김상훈 사우디아라비아가 이라크발 드론 공격을 막아냈다며 공격의 배후로 이란의 지원을 받는 민병대를 지목했다.\n\n 투르키 알말리키 사우디 국방부 대변인은 27일(현지시간) 소셜미디어 엑스(X)에 \"지난 수 시간 동안 방공망을 가동해 동부 지역과 수도 리야드의 석유 시설을 노린 다수의 무인기를 요격, 파괴했다\"고 썼다.\n\n 알말리키 대변인은 \"테러 시도에 쓰인 드론은 이라크 영토에서 발진했으며, 이란의 지원을 받는 테러 민병대에 의해 자행되었다\"고 부연했다.\n\n 그는 이어 \"사우디는 국가와 국부 자산을 방어할 합법적이고 정당한 권리가 있다\"면서 \"적절한 시기와 장소에 상응하는 대응 조처를 할 권리가 있다\"고 경고했다.\n\n 또 사우디아라비아 국영 방송이 보도한 성명에 따르면, 사우디 측은 \"이라크 정부는 자국 영토가 공격을 위한 발진 기지로 이용되는 것을 막기 위해 필요한 모든 조처를 해야 한다\"고 촉구했다.\n\n 한편, 사우디와 무력 공방 중인 예멘의 친이란 반군 후티는 이날 사우디의 동부와 홍해 연안 도시 얀부를 잇는 다수의 주요 원유 공급 및 운송 시설을 타격했다고 밝혔다.\n\n 야히야 사리 후티 반군 군사 대변인은 \"이번 군사 작전은 사우디 무인기의 예멘 영공 침범에 대한 보복 대응\"이라고 말했다.\n\n meolakim@yna.co.kr\n\n 제보는 카카오톡 okjebo \n\n < \n 무단 전재- \n\n 2026/07/27 22:25 송고 \n 2026년07월27일 22시25분 송고 \n\n #사우디 \n\n #이라크발 \n\n #드론 \n\n #후티 \n\n 댓글 \n\n 좋아요 \n\n 슬퍼요 \n\n 화나요 \n\n 후속요청 \n\n국내 최대 원스톱 콘텐츠 제공 플랫폼 \n\n 함께 보면 좋은 콘텐츠 \n\n by \n 데이블 \n\n 광고 \n\n 함께 읽기 좋은 콘텐츠 \n\n Taboola 후원링크 \n\n 광고 \n\n 광고 \n\n 광고 \n\n 연합 마이뉴스 \n 다양한 주제별 맞춤 추천 뉴스를 제공합니다. \n\n 북마크 \n\n 공유 \n\n 공유하기 \n\n 카카오톡 \n\n 페이스북 \n\n X \n\n 페이스북 메신저 \n\n 네이버 밴드 \n\n URL 복사 \n\n 닫기 \n\n URL이 복사되었습니다. \n\n 댓글 \n\n 글자크기 \n\n 본문 글자 크기 조정 \n\n 폰트 1단계 13px \n\n 폰트 2단계 16px \n\n 폰트 3단계 18px \n\n 폰트 4단계 20px \n\n 폰트 5단계 22px \n\n 닫기 \n\n 프린트 \n\n 제보",
-          "fullTextAvailable": true,
-          "linkResolutionStatus": "google-batchexecute"
+          "description": "사우디 \"이라크발 드론 요격…이란 지원받는 민병대 소행\" 연합뉴스",
+          "fullText": "",
+          "fullTextAvailable": false,
+          "linkResolutionStatus": "failed"
         }
       ],
       "relatedNewsCount": 1,
@@ -990,21 +1020,21 @@
       "previewAvailable": true
     },
     {
-      "id": "domestic-Vf3d75h32SPeGRUoueKHde2v",
+      "id": "domestic-IxdMexdv_Z_hHtCO82DEKIwe",
       "title": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "titleKo": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\"",
       "source": "v.daum.net",
       "sourceUrl": "https://v.daum.net/",
       "publishedAt": "2026-07-24T11:54:39.000Z",
-      "url": "",
-      "resolvedUrl": "",
-      "canonicalUrl": "",
+      "url": "https://kakao.ai/",
+      "resolvedUrl": "https://kakao.ai/",
+      "canonicalUrl": "https://kakao.ai/",
       "googleNewsUrl": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9vOVhsbm10M3FqX0R0V0oxcXdNR3NibzI4OHlweFpFaTVTM0VJTUwxUTVLTDlIcXRMUEx2S2FDNGp1Nnp6V1E?oc=5",
-      "linkResolutionStatus": "failed",
-      "description": "쿠웨이트·이라크 등 연쇄 공습⋯이란, \"미군 반경 500m 밖 대피하라\" v.daum.net",
-      "fullText": "",
-      "fullTextAvailable": false,
-      "fullTextChars": 0,
+      "linkResolutionStatus": "google-batchexecute",
+      "description": "이란군은 쿠웨이트의 미군기지를 타격했다고 밝혔고, 이라크·바레인에서도 미군 관련 시설을 공습당한 것으로 전해졌습니다. 이란군은 미국과의 무력 충돌 14일째인 현지 시각 24일 성명을 통해 \"",
+      "fullText": "최민성 2026. 7. 24. 20:54 \n\n 음성으로 듣기 \n\n 음성재생 설정 이동 통신망에서 음성 재생 시 데이터 요금이 발생할 수 있습니다. 글자 수 10,000자 초과 시 일부만 음성으로 제공합니다. \n\n 남성 \n\n 여성 \n\n 느림 \n\n 보통 \n\n 빠름 \n\n 음성 재생하기 \n\n 닫기 \n\n 음성 재생 중지 \n\n 번역 설정 \n\n 번역 beta Translated by kaka i \n\n 한국어 - \n\n English 영어 \n\n 日本語 일본어 \n\n 简体中文 중국어 \n\n Nederlands 네델란드어 \n\n Deutsch 독일어 \n\n Русский 러시아어 \n\n Malaysia 말레이시아어 \n\n বাঙ্গোল ভাষা 벵골어 \n\n tiếng Việt 베트남어 \n\n Español 스페인어 \n\n اللغة العربية 아랍어 \n\n Italiano 이탈리아어 \n\n bahasa Indonesia 인도네시아어 \n\n ภาษาไทย 태국어 \n\n Türkçe 튀르키에어 \n\n Português 포르투갈어 \n\n Français 프랑스어 \n\n हिन्दी 힌디어 \n\n 닫기 \n\n 번역중 Now in translation \n\n 글씨크기 조절하기 \n\n 글자크기 설정 파란원을 좌우로 움직이시면 글자크기가 변경 됩니다. \n\n 가 \n\n 매우 작은 폰트 \n\n 작은 폰트 \n\n 보통 폰트 \n\n 큰 폰트 \n\n 매우 큰 폰트 \n\n 가 \n\n 이 글자크기로 변경됩니다.\n\n (예시) 가장 빠른 뉴스가 있고 다양한 정보, 쌍방향 소통이 숨쉬는 다음뉴스를 만나보세요. 다음뉴스는 국내외 주요이슈와 실시간 속보, 문화생활 및 다양한 분야의 뉴스를 입체적으로 전달하고 있습니다.\n\n 닫기 \n\n 인쇄하기 \n\n 24일 미군 주도 국제동맹군이 주둔한 이라크 쿠르드 자치지역 내 에르빌 공항 인근에서 폭발음과 함께 연기가 목격됐다 / 사진 = 연합뉴스\n\n이란군은 쿠웨이트의 미군기지를 타격했다고 밝혔고, 이라크·바레인에서도 미군 관련 시설을 공습당한 것으로 전해졌습니다.\n\n 이란군은 미국과의 무력 충돌 14일째인 현지 시각 24일 성명을 통해 \"'우레' 작전 25단계의 하나로 알 두하, 알 아디레, 오레이프잔 등 쿠웨이트에 위치한 주요 미군 기지들을 드론으로 타격했다\"고 밝혔습니다.\n\n 이란군은 이날 작전에 '아라시(Arash)' 드론을 동원했으며, 알 아디레 기지 내 미군 장비 보관 시설, 알 두하 기지의 미군 병력 주둔지, 오레이프잔 캠프의 주둔지를 정밀 타격했다고 설명했습니다.\n\n 아라시 드론은 이란 육군이 지난 2020년 실전 배치한 장거리 자폭 드론으로 최대 비행거리는 2,000㎞, 최대 탄두 중량은 150㎏인 것으로 알려졌습니다.\n\n 이란군은 \"미국 대통령이 가하는 위협은 이란 국민과 군 무장력의 결의와 의지를 더욱 굳건하게 만들 뿐\"이라며 \"무모한 모험주의나 새로운 전선을 열려는 시도는 적의 전략적 실수를 반복하고 연장하는 것에 불과하다\"고 말했습니다.\n\n 또 이날 미군 주도 국제동맹군이 주둔 중인 이라크 쿠르드 자치 지역 내 에르빌 공항 인근에서도 여러 차례의 폭발음이 들렸다고 AFP 통신이 보도했습니다.\n\n 현장에 있던 기자는 방공망이 가동된 직후 폭발음이 들렸으며, 도시 상공을 선회하는 무인기(드론)들과 공항 일대에서 피어오르는 연기를 직접 목격했다고 전했습니다.\n\n AP 통신에 따르면 이날 오전 9시 30분쯤 최소 7차례 폭발음이 들렸고, 최소 4곳에서 검은 연기가 치솟았습니다.\n\n 외신들은 안보 소식통을 인용해 이날 정체불명의 드론 6대가 격추됐으며, 1대가 공항 인근에 떨어지면서 항공기 운항이 한동안 중단됐다고 전했습니다.\n\n 그 밖에 이날 오전 바레인에서는 두 차례에 걸쳐 미사일 공습경보가 울렸습니다.\n\n 바레인군 총사령부는 성명을 통해 \"이란이 민간인을 표적으로 삼아 공격을 계속하고 있다\"면서 \"방공망을 가동해 이를 막아냈다\"고 밝혔습니다.\n\n 이란 이슬람혁명수비대는 이후 별도의 성명을 통해 \"우리 전사들이 알 아디레 미군 기지 내 탄약 및 장비 보관 창고 3곳을 화염에 휩싸이게 했고, 바레인에 있는 미 해군 제5함대의 감시탑을 타격해 막대한 피해를 입혔다\"고 주장했습니다.\n\n 혁명수비대는 또 미군 기지 소재 국가의 주민들을 향한 메시지에서 \"미군 장교와 병사들은 도시 내 일반 건물을 은신처로 삼아 범죄 행위를 이어가고 있다\"면서 \"미군이 주둔하는 국가의 일반 시민은 안전을 위해 미군 병력이 있는 장소의 반경 500ｍ 이내에서 즉시 대피하라\"고 권고했습니다.\n\n 앞서 미군 중부사령부는 이날 새벽 약 2시간 15분에 걸쳐 이란에 대한 13일째 야간 공습을 진행했다고 밝혔습니다.\n\n [ 최민성 기자 choi.minsung@mbn.co.kr ]\n\n < \n\n MBN에서 직접 확인하세요. 해당 언론사로 이동합니다. \n\n ″그룹 지배력 유지하며 대출·배당 활용″…9440억 어떻게 마련? \n\n 이 대통령, 미국·남미 순방…젠슨 황·이재용·최태원 등 AI 거물 총집결 \n\n '신천지 공방' 전면전…친석 ″당이 규명″ vs 친청 ″근거 대라″ \n\n [단독] ″커플 싸우는 줄 알았는데″…알고 보니 필로폰 투약 \n\n 민주당, ″위헌″ 당내 반대에도 보완수사 폐지 당론 확정 \n\n ″최종투표율이 중요한 거 아닌가요″ 선관위의 안일한 인식 \n\n '눈 번쩍' 김영훈 영상 공유한 이 대통령…″미안합니다″ 왜? \n\n 하정우, 재산 1년새 15억 늘어 44억…장한나 첼로만 13.7억 \n\n ″이 대통령이 만남 요청한다면?″…유시민 ″만날 생각 없다″ \n\n 뉴발란스 ‘엉터리 태극기’ 티셔츠…논란에 판매 중단·환불",
+      "fullTextAvailable": true,
+      "fullTextChars": 2696,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1016,8 +1046,8 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
       "relatedNews": [],
       "relatedNewsCount": 0,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
+      "previewText": "최민성 2026. 7. 24. 20:54 \n 음성으로 듣기 \n 음성재생 설정 이동 통신망에서 음성 재생 시 데이터 요금이 발생할 수 있습니다. 글자 수 10,000자 초과 시 일부만 음성으로 제공합니다. \n 남성 \n 여성 \n 느림 \n 보통 \n 빠름 \n 음성 재생하기 \n 닫기 \n 음성 재생 중지 \n 번역 설정 \n 번역 beta Translated by kaka i \n 한국어 - \n English 영어 \n 日本語 일본어 \n 简体中文 중국어 \n Nederlands 네델란드어 \n Deutsch 독일어 \n Русский 러시아어 \n Malaysia 말레이시아어 \n বাঙ্গোল ভাষা 벵골어 \n tiếng Việt 베트남어 \n Español 스페인어 \n اللغة العربية 아랍어 \n Italiano 이탈리아어 \n bahasa Indonesia 인도네시아어 \n ภาษาไทย 태국어 \n Türkçe 튀르키에어 \n Português 포르투갈어 \n Français 프랑스어 \n हिन्दी 힌디어 \n 닫기 \n 번역중 Now in",
+      "previewAvailable": true
     },
     {
       "id": "domestic-PpcF5tP6y-SYACFyEvpI_Qpr",
@@ -1176,13 +1206,13 @@
           "title": "이란, 쿠웨이트 등에 보복 계속…이라크 공항 근처 드론 추락(종합)",
           "source": "뉴스1",
           "publishedAt": "2026-07-24T09:26:12.000Z",
-          "url": "https://www.news1.kr/world/middleeast-africa/6238510",
-          "resolvedUrl": "https://www.news1.kr/world/middleeast-africa/6238510",
+          "url": "",
+          "resolvedUrl": "",
           "googleNewsUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Xbm5INHNBbVBhM1VTUUM5SWtDOVRWeG9wUDl2NEFDcHBtNVhNMFNSbmhGZW42TzhudUtVTjk5RmxLcjR6UXB6SXU4VHlHSnF3YTd5VlNCQ1h4VDFLYkNKdnhB?oc=5",
           "description": "이란, 쿠웨이트 등에 보복 계속…이라크 공항 근처 드론 추락(종합) 뉴스1",
           "fullText": "",
           "fullTextAvailable": false,
-          "linkResolutionStatus": "google-batchexecute-content-failed"
+          "linkResolutionStatus": "failed"
         }
       ],
       "relatedNewsCount": 2,
@@ -1310,21 +1340,21 @@
       "previewAvailable": false
     },
     {
-      "id": "domestic-xLmVYhYQ5220uqaahjiSbuMs",
+      "id": "domestic-4-laDIIx0jqiGhzMOBjp06a2",
       "title": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제",
       "titleKo": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제",
       "source": "크리스천투데이",
       "sourceUrl": "https://www.christiantoday.co.kr/",
       "publishedAt": "2026-07-23T07:20:26.000Z",
-      "url": "https://www.youtube.com/user/christiantodaynews",
-      "resolvedUrl": "https://www.youtube.com/user/christiantodaynews",
-      "canonicalUrl": "https://www.youtube.com/user/christiantodaynews",
+      "url": "",
+      "resolvedUrl": "",
+      "canonicalUrl": "",
       "googleNewsUrl": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9WMm0zVUg5c2FRQTI2NWZZak0xQ28xODRNVFdid3hRa29Qdmt2d0sxS0N6Z2dLWVJOcFZGa2trX1FSUU51UjZFRTFsbWZjZnNXaHBoMzVibw?oc=5",
-      "linkResolutionStatus": "google-batchexecute",
-      "description": "2003년 미국 주도 연합군의 이라크 침공과 이어진 무장 단체들의 폭력 사태로 수많은 기독교인이 고국을 떠난 가운데, 이라크 정부가 최근 해외 체류 기독교인들을 향해 귀환을 권유하고 나섰다.\r\r그러나 근본적인 안보 부재와 사회적 차별 문제가 해결되지 않아 현지 교계는 깊은 회의론을 제기하고 있다.\r\r붕괴된 이라크 기독교 공동체2003년 사담 후세인 정권 축출 이후 이라크…",
-      "fullText": "-->\n\n 가 \n\n 재산 반환·신변 안전 보장 우선돼야 \r\n\n ▲이라크 기독교인들. ⓒ오픈도어 \r\n\n 이라크에서 2003년 미국 주도 연합군의 침공과 이어진 무장단체들의 폭력 사태로 수많은 기독교인이 떠난 가운데, 이라크 정부가 최근 해외 체류 기독교인들에게 귀환을 권유하고 나섰다. 그러나 근본적인 안보 부재와 사회적 차별 문제가 해결되지 않아 현지 교계는 깊은 회의론을 제기하고 있다.\n\n 붕괴된 이라크 기독교 공동체 \n\n 이라크는 2003년 사담 후세인 정권 축출 이후 악명 높은 ISIS를 비롯한 극단주의 무장단체들의 주요 표적이 됐다. 수십 년간 이어진 분쟁과 박해로, 한때 약 150만 명에 달했던 이라크 내 기독교인 수는 현재 25만 명 미만으로 급감한 상태다.\n\n 최근 알리 알 자이디(Ali al-Zaidi) 이라크 총리는 해외에 거주하는 기독교인들의 귀환을 촉구하며 보건&middot;교육 분야 투자와 토지 분배 사업 등 다양한 인센티브를 약속했다.\n\n 현지 교계의 불만과 회의론 \n\n 그러나 언론단체 니리지(Nirij)가 발표한 보고서에 따르면, 이러한 이라크 정부의 약속은 기독교인들을 설득하기에 역부족인 것으로 나타났다. 기독교인들이 피난을 떠날 수밖에 없었던 근본 원인인 정부의 안보 및 법치주의 부재와 지속적인 정치적 소외 문제가 전혀 해결되지 않았기 때문이다.\n\n 니리지와의 인터뷰에 응한 기독교 활동가들은 폭력적 극단주의자들로부터의 신변 보호는 물론, 불법적으로 몰수되거나 점유된 재산과 토지의 즉각적인 반환을 요구했다. 또한 무슬림 다수 사회에서 일상화된 기독교인 차별과 실질적인 정치적 대표성의 부재를 주요 불만으로 꼽았다.\n\n 모술과 케르케슬로흐(키르쿠크), 쿠르디스탄 지역의 시리아 정교회 대주교인 모르 니코데무스 다우드 마티 샤라프(Mor Nicodemus Daoud Matti Sharaf)는 니리지와의 인터뷰에서 &ldquo;기독교인들이 이주할 수밖에 없었던 근본적인 이유를 해결하지 않고 귀환을 촉구하는 것은 아무런 결과도 가져오지 못할 것&rdquo;이라고 지적했다.\n\n 니리지는 이라크 정부의 이번 기독교인 회유책이 도널드 트럼프(Donald Trump) 미국 대통령의 환심을 사기 위한 정치적 시도일 가능성도 제기했다. 복음주의 기독교인들의 강력한 지지를 바탕으로 재집권한 트럼프 대통령은 해외에서 박해받는 기독교인에 대한 지지를 지속적으로 표명해 왔으며, 최근에는 나이지리아 기독교인 보호를 강조한 바 있다.\n\n 이러한 강대국 지도자의 기독교인 보호 기조는 다른 국가들에도 영향을 미치고 있다. 중국 당국 역시 9개월간 자의적으로 구금했던 목사를 이달 초 석방했다. 현지 보도에 따르면 이번 석방은 시진핑 국가주석이 미국 독립기념일(7월 4일)을 맞아 미국과의 관계 개선을 염두에 두고 취한 우호적 제스처로 분석된다.\n\n 구독신청",
-      "fullTextAvailable": true,
-      "fullTextChars": 1389,
+      "linkResolutionStatus": "failed",
+      "description": "이라크 정부 “해외 기독교인 돌아오라” 권유… 현지 교계 “안보·차별 해결 없어 회의적” : 국제 크리스천투데이",
+      "fullText": "",
+      "fullTextAvailable": false,
+      "fullTextChars": 0,
       "query": "이라크",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
@@ -1336,8 +1366,8 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
       "relatedNews": [],
       "relatedNewsCount": 0,
-      "previewText": "-->\n 가 \n 재산 반환·신변 안전 보장 우선돼야 \r\n ▲이라크 기독교인들. ⓒ오픈도어 \r\n 이라크에서 2003년 미국 주도 연합군의 침공과 이어진 무장단체들의 폭력 사태로 수많은 기독교인이 떠난 가운데, 이라크 정부가 최근 해외 체류 기독교인들에게 귀환을 권유하고 나섰다. 그러나 근본적인 안보 부재와 사회적 차별 문제가 해결되지 않아 현지 교계는 깊은 회의론을 제기하고 있다.\n 붕괴된 이라크 기독교 공동체 \n 이라크는 2003년 사담 후세인 정권 축출 이후 악명 높은 ISIS를 비롯한 극단주의 무장단체들의 주요 표적이 됐다. 수십 년간 이어진 분쟁과 박해로, 한때 약 150만 명에 달했던 이라크 내 기독교인 수는 현재 25만 명 미만으로 급감한 상태다.\n 최근 알리 알 자이디(Ali al-Zaidi) 이라크 총리는 해외에 거주하는 기독교인들의 귀환을 촉구하며 보건&middot;교육 분야 투자와 토지 분배 사업 등 다양한 인센티브를 약속했다.\n 현지 교계의 불만과 회의론 \n 그러나 언론단체 니리지(Nirij)가 발표",
-      "previewAvailable": true
+      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
+      "previewAvailable": false
     },
     {
       "id": "domestic-WxdmkplifxejaHfjrkMH-zDY",
@@ -1491,17 +1521,17 @@
     },
     {
       "id": "domestic-2MRnqW3_G40eGAzy2sSfTOjK",
-      "title": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나",
-      "titleKo": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나",
-      "source": "쿠키뉴스",
-      "sourceUrl": "https://www.kukinews.com/",
-      "publishedAt": "2026-07-22T08:09:45.000Z",
+      "title": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나",
+      "titleKo": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나",
+      "source": "네이트",
+      "sourceUrl": "https://news.nate.com/",
+      "publishedAt": "2026-07-22T08:10:00.000Z",
       "url": "https://www.kukinews.com/article/view/kuk202607220158",
       "resolvedUrl": "https://www.kukinews.com/article/view/kuk202607220158",
       "canonicalUrl": "https://www.kukinews.com/article/view/kuk202607220158",
-      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOM0IzbEotdGdTOHhGVHdabHIyU1lJWjR2SVRmNWZhYjUtU1pBaUJIc0E1Q0w4Y3FubmdGX0NHYWc5dGs5eS05V0RvZGlHdFdydTdnOW1SM2xYUm1sZWJoQjNLSQ?oc=5",
-      "linkResolutionStatus": "google-batchexecute-content-failed",
-      "description": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나 쿠키뉴스",
+      "googleNewsUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqNVgzbmFIOTFPcXVNUXp2ZUE4cVctZGpuc2ZzWWMwSEVYR1FZYThkenYzcEhQU1lfU09KR2NHWnZ4ZDN6eHVyVml0cWY2WWlzZTE0?oc=5",
+      "linkResolutionStatus": "google-batchexecute",
+      "description": "�Ѵ��� ���� ���� : ���� - ���� : ��¿� ��ȭ�׷� ȸ��(���)�� �赿�� ��ȸ��(����)�� ���� �� ��ȭ�ý��� ���ֿ��ּ��͸� ã�� �ػ� 15cm�� ��VLEO(Very Low Earth Orbit) UHR(Ultra High Resolution) SAR(Synthetic Aperture",
       "fullText": "",
       "fullTextAvailable": false,
       "fullTextChars": 0,
@@ -1516,21 +1546,21 @@
       "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
       "relatedNews": [
         {
-          "title": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나",
-          "source": "네이트",
-          "publishedAt": "2026-07-22T08:10:00.000Z",
-          "url": "",
-          "resolvedUrl": "",
-          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqNVgzbmFIOTFPcXVNUXp2ZUE4cVctZGpuc2ZzWWMwSEVYR1FZYThkenYzcEhQU1lfU09KR2NHWnZ4ZDN6eHVyVml0cWY2WWlzZTE0?oc=5",
-          "description": "김동관의 큰 그림…한화 '육·해·공 밸류체인' 어디까지 왔나 네이트",
+          "title": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나",
+          "source": "쿠키뉴스",
+          "publishedAt": "2026-07-22T08:09:45.000Z",
+          "url": "https://www.kukinews.com/article/view/kuk202607220158",
+          "resolvedUrl": "https://www.kukinews.com/article/view/kuk202607220158",
+          "googleNewsUrl": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOM0IzbEotdGdTOHhGVHdabHIyU1lJWjR2SVRmNWZhYjUtU1pBaUJIc0E1Q0w4Y3FubmdGX0NHYWc5dGs5eS05V0RvZGlHdFdydTdnOW1SM2xYUm1sZWJoQjNLSQ?oc=5",
+          "description": "김동관의 큰 그림…한화 ‘육·해·공 밸류체인’ 어디까지 왔나 쿠키뉴스",
           "fullText": "",
           "fullTextAvailable": false,
-          "linkResolutionStatus": "failed"
+          "linkResolutionStatus": "google-batchexecute-content-failed"
         }
       ],
       "relatedNewsCount": 1,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
+      "previewText": "�Ѵ��� ���� ���� : ���� - ���� : ��¿� ��ȭ�׷� ȸ��(���)�� �赿�� ��ȸ��(����)�� ���� �� ��ȭ�ý��� ���ֿ��ּ��͸� ã�� �ػ� 15cm�� ��VLEO(Very Low Earth Orbit) UHR(Ultra High Resolution) SAR(Synthetic Aperture",
+      "previewAvailable": true
     },
     {
       "id": "domestic-BW2l_ye292dlRpHUEpNp_cZS",
@@ -1579,36 +1609,6 @@
       "fullTextAvailable": false,
       "fullTextChars": 0,
       "query": "한화 김동선",
-      "queryGroup": "korean_domestic_media",
-      "collectionLane": "korean_domestic_media",
-      "collectionMethod": "google-news-rss-publisher-resolved",
-      "category3": "domestic_media",
-      "domesticMedia": true,
-      "importanceScore": 70,
-      "reportUsefulness": "include",
-      "weeklyReportReason": "Google News RSS 국내 언론 키워드 수집·언론사 원문 URL 확정",
-      "relatedNews": [],
-      "relatedNewsCount": 0,
-      "previewText": "기사의 상세 내용은 원문 보기에서 확인할 수 있습니다.",
-      "previewAvailable": false
-    },
-    {
-      "id": "domestic-wpoGnmQY5gSQXIF6fegz2kIN",
-      "title": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장",
-      "titleKo": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장",
-      "source": "이코노미톡뉴스",
-      "sourceUrl": "http://www.economytalk.kr/",
-      "publishedAt": "2026-07-21T23:46:31.000Z",
-      "url": "http://www.economytalk.kr/news/articleView.html?idxno",
-      "resolvedUrl": "http://www.economytalk.kr/news/articleView.html?idxno",
-      "canonicalUrl": "http://www.economytalk.kr/news/articleView.html?idxno",
-      "googleNewsUrl": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uOElYWmc2VjZyNTZ4bS12dHZKRkY2MHpieHRKcnBZaHUzZks4UU95NE5JNEwxZ0hYNGNzTVNhaGFlNlBJRlBsaUFndVVGVjJ5eTBfM0ZnbFMwRUNMaVE4Ym5yMmxhSVppSU9iYQ?oc=5",
-      "linkResolutionStatus": "google-batchexecute",
-      "description": "[사회공헌 특집(169)] 한화 건설부문's 15년 CSR…‘포레나 도서관→비스마야→ESG 상생모델’ 확장 이코노미톡뉴스",
-      "fullText": "",
-      "fullTextAvailable": false,
-      "fullTextChars": 0,
-      "query": "비스마야",
       "queryGroup": "korean_domestic_media",
       "collectionLane": "korean_domestic_media",
       "collectionMethod": "google-news-rss-publisher-resolved",
@@ -2391,7 +2391,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 - Al Daee News",
       "translatedBody": "안바르 서부 라와 지구에서 “داعش의 보안 지휘관” 체포 Al Daee News",
@@ -2704,8 +2704,8 @@
       "factExtractedAt": "2026-07-28T22:24:05.993Z",
       "entityNormalizationApplied": true,
       "entityNormalizedAt": "2026-07-28T22:24:13.129Z",
-      "eventId": "event-2026-07-28-1g7yacd",
-      "eventTitleKo": "이라크 북부 코르 모르 가스전, 드론 공격 표적 돼",
+      "eventId": "event-2026-07-28-1cyamgm",
+      "eventTitleKo": "드론 공격이 이라크 북부 Khor Mor 가스전을 겨냥하다 - Iraqi News",
       "eventSummaryKo": "드론 공격이 이라크 북부의 코르 모르 가스전을 표적으로 삼았다.",
       "eventArticleCount": 1,
       "eventSources": [],
@@ -3115,7 +3115,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "linkRepairStatus": "publisher-url-not-found"
     },
@@ -3192,6 +3192,80 @@
       "linkRepairStatus": "publisher-url-not-found"
     },
     {
+      "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
+      "title": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار - قناة ومنصة المشهد - أخبار العالم اليوم",
+      "titleKo": "이라크, 안바르에서 ‘داع시’의 금융 본부 중 하나를 목표로 삼아 - 알마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "summaryKo": "이라크가 Anbar에서 IS의 금융 거점 중 하나를 표적화했다.",
+      "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
+      "publishedAt": "2026-07-28T03:58:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
+      "query": "\"الأنبار\" \"داعش\"",
+      "queryGroup": "arabic_iraq_security_protests",
+      "collectionLane": "arabic_iraq_security",
+      "forcedCategory3": "terror_security",
+      "description": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار قناة ومنصة المشهد - أخبار العالم اليوم",
+      "collectionMethod": "google-news-rss",
+      "sourceType": "google-news-rss",
+      "category1": "domestic",
+      "category2": "politics_security",
+      "category3": "terror_security",
+      "importanceScore": 82,
+      "reportUsefulness": "include",
+      "weeklyReportReason": "이라크 테러·치안·시위·국경안보 후보",
+      "aiCacheHit": false,
+      "sourceEvidenceLevel": "rss-description",
+      "sourceEvidenceChars": 92,
+      "reportBullet": "이라크, Anbar에서 IS의 금융 거점 중 하나를 표적화",
+      "reportSubBullets": [],
+      "reportImplication": "",
+      "actors": [
+        "이라크"
+      ],
+      "location": "Anbar",
+      "securityEventType": "other",
+      "securityEventCount": 1,
+      "sourceReliability": "RSS 제목·설명 기반",
+      "extractedFacts": [
+        {
+          "sentenceKo": "이라크가 안바르에서 ISIS의 금융 거점 중 하나를 표적화했다.",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        }
+      ],
+      "extractedActors": [
+        {
+          "nameKo": "이라크",
+          "roleKo": "",
+          "evidenceQuote": "العراق يستهدف أحد المقرات المالية لـ\"داعش\" في الأنبار"
+        }
+      ],
+      "articleStructure": "single_event",
+      "selected": false,
+      "translationFailed": false,
+      "aiSummaryVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionVersion": "weekly-report-v16-evidence-facts-only",
+      "factExtractionFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
+      "factExtractionModel": "gpt-5.4",
+      "factExtractedAt": "2026-07-29T00:15:32.715Z",
+      "entityNormalizationApplied": true,
+      "entityNormalizedAt": "2026-07-29T00:15:32.794Z",
+      "glossaryApplied": true,
+      "glossaryVersion": "weekly-report-translation-glossary-v1",
+      "eventId": "event-2026-07-27-6vfeki",
+      "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
+      "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
+      "eventArticleCount": 8,
+      "eventRepresentative": false,
+      "linkRepairStatus": "publisher-url-not-found",
+      "translatedTitle": "이라크, 안바르에서 ‘داع시’의 금융 본부 중 하나를 목표로 삼아 - 알마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "translatedBody": "이라크는 안바르에서 ‘داع시’의 금융 본부 중 하나를 목표로 삼았다. 알마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "fullTranslation": "이라크는 안바르에서 ‘داع시’의 금융 본부 중 하나를 목표로 삼았다. 알마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "translationPreview": "이라크는 안바르에서 ‘داع시’의 금융 본부 중 하나를 목표로 삼았다. 알마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
+      "fullTranslationVersion": "weekly-report-full-translation-v1",
+      "fullTranslationFingerprint": "bok0hfeF7WLggLNH8xYNwWWr",
+      "fullTranslationModel": "gpt-5.4-mini",
+      "fullTranslatedAt": "2026-07-29T00:15:42.027Z"
+    },
+    {
       "id": "rss-tJ66Y3Al6mJDkMpwYPuD-vCp",
       "title": "الاستخبارات العسكرية :القبض على خمسة من عناصر داعش في الانبار - الوكالة الوطنية العراقية للأنباء| نينا",
       "titleKo": "군사정보국: Anbar에서 IS(IS) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
@@ -3259,7 +3333,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
       "translatedBody": "군사정보국: 안바르에서 داعش(داعش) 조직원 5명 체포 이라크 국립통신사 | 니나",
@@ -3339,7 +3413,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "이라크, 안바르에서 ISIS의 ‘금고’를 급습해 테러 조직원들을 체포 - 에람 뉴스",
       "translatedBody": "이라크는 안바르에서 ISIS의 ‘금고’를 급습하는 동안 테러 조직원들을 체포했다. 에람 뉴스",
@@ -3751,7 +3825,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 - video-agencyia.iq",
       "translatedBody": "안바르.. داعش의 이른바 \"바이툴 말 알무슬리민\"을 급습하고 그 안에 있던 피의자 5명을 체포 video-agencyia.iq",
@@ -3825,7 +3899,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventRepresentative": false,
       "translatedTitle": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 - 이라크 뉴스 통신사(INA)",
       "translatedBody": "군사정보부: 안바르에서 이라크 레반트 이슬람국가(IS) 소속 소위 ‘무슬림의 재정’에 대한 급습 중 테러리스트 5명 체포 이라크 뉴스 통신사(INA)",
@@ -4001,7 +4075,7 @@
       "eventId": "event-2026-07-27-6vfeki",
       "eventTitleKo": "첩보국, Anbar에서 IS의 “무슬림 재정 사무소” 급습해 피의자 5명 체포",
       "eventSummaryKo": "군사정보국은 Anbar주 라와 지구에서 IS가 사용하던 ‘무슬림 재정 창고’로 불린 거점을 급습했다. 작전으로 그 집을 사용하던 용의자 5명이 체포됐다. 당국은 현금, 수표, 무기, 탄약, 극단주의 종교 서적과 식료품·의약품을 압수했다.",
-      "eventArticleCount": 7,
+      "eventArticleCount": 8,
       "eventSources": [
         {
           "source": "964media",
@@ -4032,6 +4106,12 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aTWJpbFZob0t2OVQ2aU1VaUlpcGZERUZ4b2dVRGNCT3Z4dE5iYmlmV1dUMGxLSTJKdFRRY2xuSFFLU1F0ZTFNdF9LcmhUNnhpTWk1eUNuclY2OXQyZU0wOW9Vcw?oc=5",
           "titleKo": "군사정보국: Anbar에서 IS(IS) 조직원 5명 체포 - 이라크 국립통신사 | 니나",
           "summaryKo": "군사정보부가 Anbar에서 IS 조직원 5명을 체포했다."
+        },
+        {
+          "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
+          "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxQcTdqOGVEVXVtcE5tTF9oczRYZExMak1qXzRNeXVaZFBSMXBCWkRMSWpkU0w5MDd2aWtSWENSd1g3dGhUMXVVTkljdTB4d3p0dExHMldWOTR0X3hScXBkN1BfQzVWbU8wN1ExZkM0b1Fxdl9zNG13ai1yQjJCUHJrMU1xLVdYNjJTLU54VUZweG5fWVJBeXFrM2FfcWtpV1J3dTlyamZGR1RQeVVwaS1kV0g4T2N0NkVndXUxZld5MVZZMDdjUGRlS05IWkpDdFhGNTV5S3QtVGI2N2dVc2tDZHd2WTBzYlRjQTFIZFlwSVoxZnRlZ2tNWExodExsTUEtMC0zblRqaTFfYlRsX2dxWE9Lam1ySXdtdEFrRTJadkFqOGVtSXhURUZsVlU0Qzg0dkszSHhoTGlLQ2wwZ2trbGZ6enVROWFISDhsQl96NXJKQ1hNN0kwNW9iNG5PRDl2NVk0aGdQTUdpb0Fwdk03OFF4R3JvRVhadnQ0bFJlak9ZUFA2TVBLM1VLVVY1QnNFeEIwd2oxc1JLNHlEZmZTa1BBcElIZHlJRUpjVm5POFNfOWJRdnlwUjlaOWdRNzZvZmVBYWltYjF0Q1pVdkF3WDEtLW9EYXp6cXhYZWJtQWF2ZUx4OHfSAesDQVVfeXFMUGF0bTBySW01bG82MHJBdEd1bEduOGdRNUJFVHd1SjB2T0NMWklyTTkxMjZFUy0tZXpMV0F5MlIyY1BUWEVCUkxEdG9jQkt4MGVWQnIyQ1NDd3hhcUlwQ0tNTWkzR1YwbG5fR2E5UGNnMWo5RWZtcXB1bDV1RUJOcUFZVzdRNERWVWswczdOSXVlZ2VBZXBCNFVKMThxdmhnMFFKdFhMdGk4MlJEMkFIZXRDNjhkR1gzeV9VNTdNMHJDZ0Vwd0JZcFZyeGo4MzNITW5DZkFrcVQyRDM1Y0dJRy1VR1hxUW1STkcwWHlNTUJuZHUwZjU1bXEtallvZERtOU43MHNmZmNSQ0huSW95YTRlTDZqU1duOUEzNFppYlpMTXotWVV0T2drczJSUVE2TTB0MGRlTVRRYmRYSUxvUTN4S1E3cndnYV96ZjdaanJ0ZXZyWldHQjZEVGZsMTZOTE9ZbmlTTkRGX05rQklKYXdtMnJFNW9OMWZUNW0zZE4tZ2JSY3RxMXladUhPRURSRV9UVm1iOFRXVzVpMUJxc1BqUUlzRkRpdlpmd19QZlE4OG1nbDVBdlFjRWtyVXhiVGI0SXB4amwyZU5ZeTVPNV9paU1DQnNXblZEdWRpSWNsSUtJSDFXRjhxWEk?oc=5",
+          "titleKo": "이라크, Anbar에서 IS의 금융 거점 중 하나를 표적화",
+          "summaryKo": "이라크가 Anbar에서 IS의 금융 거점 중 하나를 표적화했다."
         },
         {
           "source": "هذا اليوم",
@@ -11305,7 +11385,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 12
+        "count": 13
       },
       {
         "query": "\"مجلس النواب\" \"تصويت\" \"العراق\"",
@@ -11396,7 +11476,7 @@
         "group": "arabic_iraq_politics",
         "lane": "arabic_iraq_politics",
         "ok": true,
-        "count": 18
+        "count": 19
       },
       {
         "query": "\"القضاء العراقي\" \"فساد\"",
@@ -11627,14 +11707,14 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 15
+        "count": 16
       },
       {
         "query": "\"العراق\" \"اغتيال\"",
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 20
+        "count": 21
       },
       {
         "query": "\"العراق\" \"إطلاق نار\"",
@@ -11655,7 +11735,7 @@
         "group": "arabic_iraq_security_protests",
         "lane": "arabic_iraq_security",
         "ok": true,
-        "count": 3
+        "count": 4
       },
       {
         "query": "\"العراق\" \"طائرة مسيرة\"",
@@ -11921,7 +12001,7 @@
         "group": "english_iraq_politics_security",
         "lane": "iraq_politics_security",
         "ok": true,
-        "count": 5
+        "count": 6
       },
       {
         "query": "\"Iraq\" \"rocket attack\"",
@@ -11977,7 +12057,7 @@
         "group": "english_middle_east_fallback",
         "lane": "regional_context",
         "ok": true,
-        "count": 7
+        "count": 8
       },
       {
         "query": "\"Iraq\" \"airport suspension\"",
@@ -12012,7 +12092,7 @@
         "group": "english_middle_east_fallback",
         "lane": "regional_context",
         "ok": true,
-        "count": 20
+        "count": 21
       },
       {
         "query": "\"Iraq\" \"supply chain\" \"border\"",
@@ -12089,8 +12169,9 @@
           },
           {
             "url": "https://ina.iq/security",
-            "ok": false,
-            "error": "HTTP 403 Forbidden"
+            "type": "html",
+            "count": 11,
+            "ok": true
           },
           {
             "url": "https://ina.iq/economy",
@@ -12567,8 +12648,8 @@
       }
     ],
     "evidence": {
-      "fulltext": 40,
-      "rssDescription": 160,
+      "fulltext": 39,
+      "rssDescription": 162,
       "insufficient": 0,
       "aiEligible": 120
     },
@@ -12576,12 +12657,12 @@
       "previous": 112,
       "carriedForward": 112
     },
-    "elapsedSeconds": 40
+    "elapsedSeconds": 31
   },
   "regionalIraqExposure": {
-    "inputRegional": 78,
+    "inputRegional": 80,
     "keptRegional": 24,
-    "removedRegional": 54,
+    "removedRegional": 56,
     "removed": [
       {
         "id": "rss-E8MHJZ9nvFcQewdtS54aVnPy",
@@ -12611,6 +12692,11 @@
       {
         "id": "rss-daCA4O38pUYy5YUwJfX12j20",
         "title": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
+        "id": "rss-BVGtE60tmRDCuBNVcjCIezuV",
+        "title": "Iran Ground Offensive Against U.S. Bases Inconceivable, Analysts Say - Forbes",
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
@@ -12704,6 +12790,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-Lazntp0wRwYQ7YiPQNw7yxh2",
+        "title": "U.S., Pakistan condemn Houthi Red Sea threats to shipping and Saudi Arabia - The Tribune-Democrat",
+        "reason": "원문에 이라크 직접 연결 없음"
+      },
+      {
         "id": "rss-DxU0grQjob9brDpIbM8mlZzc",
         "title": "Who were the 4 US soldiers killed in Iranian attacks over the weekend? - ABC News - Breaking News, Latest News and Videos",
         "reason": "원문에 이라크 직접 연결 없음"
@@ -12722,11 +12813,6 @@
         "id": "rss-yfWqgGDikgDmDdM9mfyPxEi5",
         "title": "To Base or Not to Base: The Iran War Exposes Flaws of U.S. Basing in the Middle East - Council on Foreign Relations",
         "reason": "원문에 이라크 직접 연결 없음"
-      },
-      {
-        "id": "rss-f7KBmD4o5unYWTtN3C66sfUG",
-        "title": "U.S. soldier killed in Iraq during controlled explosion of Iranian drone named as Sgt. Michael Emmanuel Swinton - CBS News",
-        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       },
       {
         "id": "rss--vHD8gxh3ROCaZIar27LmjIc",
@@ -12824,6 +12910,11 @@
         "reason": "원문에 이라크 직접 연결 없음"
       },
       {
+        "id": "rss-0r7oAkgNwVVSH3wFaKfB9VcP",
+        "title": "Iranian drone spotted in Basra, Iraq, possibly heading to Kuwait - Crypto Briefing",
+        "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
+      },
+      {
         "id": "rss-dFqHOtYvVGIEXukgp5k-T3QK",
         "title": "Turkey and Iraq Move to Keep Critical Oil Export Route Alive - Crude Oil Prices Today | OilPrice.com",
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
@@ -12854,7 +12945,7 @@
         "reason": "비스마야 운영에 연결되는 국경·영공·공항·기지·물류 근거 부족"
       }
     ],
-    "completedAt": "2026-07-28T23:39:13.614Z"
+    "completedAt": "2026-07-29T00:15:10.464Z"
   },
   "factExtraction": {
     "version": "weekly-report-v16-evidence-facts-only",
@@ -12865,7 +12956,7 @@
     "requested": 20,
     "extracted": 20,
     "failed": 0,
-    "removedBeforeAi": 14,
+    "removedBeforeAi": 13,
     "overflow": 0,
     "removed": [
       {
@@ -12896,11 +12987,6 @@
       {
         "id": "direct-Jog9_C1Pyd1ETbrq5m3Tu0Ab",
         "title": "بسجون إسرائيل.. جرائم أكثر تنظيما وقسوة ومدنيون يُعتقلون كرهائن",
-        "reason": "원문에 이라크·BNCP 직접 연계 없음"
-      },
-      {
-        "id": "direct-mxhYVfqtBk4NGskyEZQLdj6B",
-        "title": "مؤتمر الأمن القومي.. إسرائيل تخشى نفسها أكثر من أعدائها",
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       },
       {
@@ -12939,38 +13025,38 @@
         "reason": "원문에 이라크·BNCP 직접 연계 없음"
       }
     ],
-    "completedAt": "2026-07-28T23:39:35.948Z"
+    "completedAt": "2026-07-29T00:15:32.716Z"
   },
   "entityNormalization": {
     "correctedCount": 88,
-    "completedAt": "2026-07-28T23:39:36.017Z"
+    "completedAt": "2026-07-29T00:15:32.802Z"
   },
   "glossary": {
     "version": "weekly-report-translation-glossary-v1",
-    "appliedAt": "2026-07-28T23:39:36.200Z",
+    "appliedAt": "2026-07-29T00:15:33.052Z",
     "termCount": 29,
     "changedCount": 32
   },
   "recursiveGlossaryArtifactFixedCount": 0,
-  "recursiveGlossaryArtifactFixedAt": "2026-07-28T23:39:36.307Z",
+  "recursiveGlossaryArtifactFixedAt": "2026-07-29T00:15:33.122Z",
   "knownPoliticalSummaryFixedCount": 1,
-  "knownPoliticalSummaryFixedAt": "2026-07-28T23:39:36.363Z",
-  "untranslatedFilteredCount": 1,
-  "untranslatedFilteredAt": "2026-07-28T23:39:36.458Z",
+  "knownPoliticalSummaryFixedAt": "2026-07-29T00:15:33.196Z",
+  "untranslatedFilteredCount": 0,
+  "untranslatedFilteredAt": "2026-07-29T00:15:33.310Z",
   "datelineLocationCorrectedCount": 0,
-  "datelineLocationCorrectedAt": "2026-07-28T23:39:36.586Z",
+  "datelineLocationCorrectedAt": "2026-07-29T00:15:33.382Z",
   "aiHallucinationFilteredCount": 1,
-  "aiHallucinationFilteredAt": "2026-07-28T23:39:36.649Z",
+  "aiHallucinationFilteredAt": "2026-07-29T00:15:33.461Z",
   "irrelevantForeignFilteredCount": 0,
-  "irrelevantForeignFilteredAt": "2026-07-28T23:39:36.845Z",
+  "irrelevantForeignFilteredAt": "2026-07-29T00:15:33.528Z",
   "strictQualityGate": {
-    "appliedAt": "2026-07-28T23:39:36.911Z",
-    "removedCount": 20,
+    "appliedAt": "2026-07-29T00:15:33.607Z",
+    "removedCount": 19,
     "correctedCount": 2,
     "removed": [
       {
         "id": "direct-bnlg2k_uFQufCYU4riIsT3x8",
-        "title": "북코르도판에서 군과 신속지원군의 힘의 균형은 어떻게 바뀌었나?",
+        "title": "북코르도판에서 군과 신속지원군 사이의 힘의 균형은 어떻게 바뀌었나?",
         "category3": "terror_security",
         "reason": "원문상 이라크 내 실제 테러·치안·시위 사건이 확인되지 않은 기사"
       },
@@ -12981,14 +13067,8 @@
         "reason": "원문 또는 본문 핵심 내용에 없는 Al-Zaidi 총리/내각/의회 맥락이 AI 요약에 삽입되어 제외. 관련기사·사이드바 텍스트 혼입 가능성 있음."
       },
       {
-        "id": "rss-QDzvqxjRDCCA0q_-cSDY-El0",
-        "title": "이라크, Anbar에서 \"داع시\"의 금융 본부 중 하나를 겨냥하다 - 알-마샤드 채널 및 플랫폼 - 오늘의 세계 뉴스",
-        "category3": "exclude",
-        "reason": "AI 번역/요약 실패로 보고서 후보에서 제외"
-      },
-      {
         "id": "rss-CWsFKJB-wpfhAMpdO7j12Ysw",
-        "title": "레바논, 호르무즈 해협 우회를 위해 이라크에 원유 운송 경로 제공",
+        "title": "레바논, 호르무즈 해협 우회를 위한 이라크 원유 운송 경로 제안",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -13000,61 +13080,61 @@
       },
       {
         "id": "rss-FiE6bMC75C4fWsqIEwfEGLB0",
-        "title": "이라크, 호르무즈 해협 의존을 줄이기 위해 튀르키예·시리아 파이프라인 검토",
+        "title": "이라크, 호르무즈 해협 의존 완화를 위해 튀르키예·시리아 송유관 검토",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-U5fsLjz6Vzkp4v2dTnhWKUQa",
-        "title": "이라크, 호르무즈 해협 딜레마의 해결책을 시리아에서 모색",
+        "title": "이라크, 호르무즈 해협 딜레마의 해법을 시리아에서 모색",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-e4XU__UNWt6FccUJxYL8pBKE",
-        "title": "호르무즈 여파 속 시리아를 통해 이라크 석유를 운반하는 수천 대의 트럭",
+        "title": "호르무즈의 여파 속에 수천 대의 트럭이 시리아를 통해 이라크 석유를 운송",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-dlNwKO39ujSvak0_AiPN-Tcb",
-        "title": "수천 대의 트럭이 호르무즈의 여파 속에 시리아를 거쳐 이라크산 석유를 운송한다",
+        "title": "호르무즈 여파 속 수천 대의 트럭이 시리아를 통해 이라크의 석유를 운반",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss--ZNtYqwdThEzJthx_hjRIF-9",
-        "title": "이란, 이라크·요르단·오만·시리아의 미군 기지 표적화",
+        "title": "이란, 이라크·요르단·오만·시리아의 미군 기지를 겨냥",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-JwpbF__DhmDgmt65ab-x-6RA",
-        "title": "미국 석유 기업들, 대체 운송로 개발 위해 이라크와 계약 체결",
+        "title": "미국 석유회사들, 대체 운송로 개발 위해 이라크와 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-OSJ7c6ukoMYATY4qRAKxTrVW",
-        "title": "미국 석유 기업들, 이라크와 대체 운송로 개발 계약 체결",
+        "title": "미국 석유 기업들, 대체 운송 경로 개발 위해 이라크와 계약 체결",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-biLB2LUcp0cdTfSWyZF6yBVu",
-        "title": "셰브런, 이라크 원유의 호르무즈 해협 대안 경로 조성 검토 - WSJ",
+        "title": "셰브런, 이라크산 원유를 위한 호르무즈 해협 대안 마련 방안 검토 - WSJ",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-Ho_lgdp7_WFDLhTGO5F2ifDQ",
-        "title": "미국, 호르무즈 해협 우회를 위해 이라크-시리아 송유관 지지",
+        "title": "미국, 호르무즈 해협 우회를 위한 이라크-시리아 송유관 지지",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-g1gbX16_99tC9TFh0Hg0bkMA",
-        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니야스 파이프라인 재건 추진",
+        "title": "이라크·시리아·미국, 호르무즈 우회를 위해 Kirkuk-바니아스 송유관 재건 추진",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -13072,13 +13152,13 @@
       },
       {
         "id": "rss-7jZ5-TM3tPitYtS_TmuFBdHc",
-        "title": "EU, 지역 긴장 속 이란·이라크·레바논 영공 회피 권고",
+        "title": "EU, 지역 긴장 고조 속 이란·이라크·레바논 영공 회피 권고",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
       {
         "id": "rss-aIicXailZ_0ek1uuSpVn00Ko",
-        "title": "이라크는 새로운 해상 함대로 호르무즈 딜레마를 헤쳐 나갈 수 있을까?",
+        "title": "이라크는 새로운 해상 함대로 호르무즈 딜레마를 헤쳐나갈 수 있을까?",
         "category3": "regional",
         "reason": "이라크 현장 안전·항공·해운·원유·공급망에 영향을 줄 중동 핵심 정세 근거가 없는 일반 해외기사"
       },
@@ -13091,26 +13171,26 @@
     ]
   },
   "gazaRegionalFilter": {
-    "appliedAt": "2026-07-28T23:39:36.962Z",
+    "appliedAt": "2026-07-29T00:15:33.667Z",
     "removedCount": 0,
     "removed": []
   },
   "duplicateCollapsedCount": 0,
-  "duplicateCollapsedAt": "2026-07-28T23:39:37.268Z",
+  "duplicateCollapsedAt": "2026-07-29T00:15:33.735Z",
   "eventCount": 69,
-  "eventDuplicateArticleCount": 43,
-  "eventGroupedAt": "2026-07-28T23:39:37.724Z",
+  "eventDuplicateArticleCount": 44,
+  "eventGroupedAt": "2026-07-29T00:15:34.320Z",
   "fullTranslation": {
     "version": "weekly-report-full-translation-v1",
-    "processed": 112,
-    "generatedAt": "2026-07-28T23:39:49.696Z",
+    "processed": 113,
+    "generatedAt": "2026-07-29T00:15:42.802Z",
     "model": "gpt-5.4-mini"
   },
   "domesticMedia": {
     "count": 44,
     "rawCount": 67,
-    "directUrlCount": 64,
-    "unresolvedUrlCount": 3,
+    "directUrlCount": 61,
+    "unresolvedUrlCount": 6,
     "fullTextCount": 23,
     "fullTextFailedCount": 44,
     "queries": [
@@ -13120,14 +13200,14 @@
       "한화 김동관",
       "한화 김동선"
     ],
-    "generatedAt": "2026-07-28T23:40:15.654Z",
+    "generatedAt": "2026-07-29T00:16:11.977Z",
     "aiUsed": false
   },
   "domesticPreviewNormalization": {
     "updated": 44,
     "resolved": 3,
-    "usefulCount": 23,
-    "failed": 14,
-    "generatedAt": "2026-07-28T23:40:58.481Z"
+    "usefulCount": 25,
+    "failed": 12,
+    "generatedAt": "2026-07-29T00:16:53.564Z"
   }
 }
