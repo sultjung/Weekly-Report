@@ -1,67 +1,14 @@
 name: Collect Iraq Weekly News
+
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 21 * * *"
+
 permissions:
-  contents: write
-concurrency:
-  group: collect-iraq-weekly-news
-  cancel-in-progress: false
+  contents: read
+
 jobs:
-  collect-news:
+  ai-token-usage-disabled:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-    timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
-        with: {ref: main, fetch-depth: 0}
-      - run: git fetch origin main && git checkout main && git reset --hard origin/main
-      - uses: actions/setup-node@v4
-        with: {node-version: "24", cache: npm}
-      - run: npm ci && npm run validate
-      - name: Collect and hydrate Iraq source articles
-        env:
-          NEWS_LOOKBACK_DAYS: "30"
-          MAX_PER_QUERY: "30"
-          MAX_TOTAL: "320"
-          FETCH_TIMEOUT_MS: "12000"
-          ARTICLE_FETCH_CONCURRENCY: "4"
-        run: npm run collect
-      - name: Filter regional news
-        run: node scripts/filter-regional-iraq-exposure.mjs
-      - name: Score and classify Iraq articles
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_FACT_MODEL: "gpt-5.4"
-          OPENAI_FACT_FALLBACK_MODEL: "gpt-5.4-mini"
-          FACT_EXTRACTION_MAX_ITEMS: "180"
-          FACT_AI_CONCURRENCY: "4"
-          FACT_MAX_EVIDENCE_CHARS: "12000"
-          SCORING_POLICY_FILE: "data/news-scoring-policy.json"
-        run: node scripts/extract-article-facts.mjs
-      - name: Normalize Iraq entities and post-process
-        run: node scripts/normalize-extracted-entities.mjs && npm run postprocess
-      - name: Translate full Iraq article bodies
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_FULL_TRANSLATION_MODEL: "gpt-5.4-mini"
-          OPENAI_FULL_TRANSLATION_FALLBACK_MODEL: "gpt-5.4"
-          FULL_TRANSLATION_MAX_ITEMS: "180"
-          FULL_TRANSLATION_CONCURRENCY: "3"
-          FULL_TRANSLATION_MAX_SOURCE_CHARS: "14000"
-        run: node scripts/translate-full-articles.mjs
-      - name: Collect Korean domestic news without AI
-        env:
-          DOMESTIC_NEWS_DAYS: "7"
-          DOMESTIC_MAX_PER_QUERY: "50"
-          DOMESTIC_FETCH_TIMEOUT_MS: "12000"
-        run: node scripts/collect-domestic-news.mjs
-      - name: Build Korean domestic two-line previews
-        env:
-          DOMESTIC_PREVIEW_TIMEOUT_MS: "10000"
-        run: node scripts/normalize-domestic-previews.mjs
-      - run: git config pull.rebase true && git pull --rebase --autostash origin main
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update Iraq and Korean domestic news"
-          file_pattern: "data/*.json"
+      - run: echo "AI token usage is disabled for this repository. Use sultjung/WR only."
